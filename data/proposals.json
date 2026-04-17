@@ -1,0 +1,40 @@
+{
+  "proposals": [
+    {
+      "id": "P-20250416-002",
+      "name": "game-1024",
+      "description": "经典1024玩法（4×4滑动合并，目标1024）+ PWA可安装到安卓主屏幕 + 存档/继续游戏 + 皮肤系统",
+      "type": "package",
+      "status": "active",
+      "url": "https://yeluo45.github.io/game-1024/",
+      "packageUrl": "",
+      "tags": ["游戏", "PWA", "1024"],
+      "createdAt": "2026-04-16",
+      "updatedAt": "2026-04-17"
+    },
+    {
+      "id": "P-20250416-001",
+      "name": "todo-app",
+      "description": "Web版 TodoList（含 Windows 客户端扩展）",
+      "type": "web",
+      "status": "active",
+      "url": "https://yeluo45.github.io/hermes-agent/",
+      "packageUrl": "",
+      "tags": ["TodoList", "Web", "PWA"],
+      "createdAt": "2026-04-16",
+      "updatedAt": "2026-04-16"
+    },
+    {
+      "id": "P-20250416-003",
+      "name": "calculator-app",
+      "description": "React Native 安卓计算器 — 科学计算 + 单位转换 + 汇率换算",
+      "type": "app",
+      "status": "in_dev",
+      "url": "",
+      "packageUrl": "",
+      "tags": ["React Native", "Android", "计算器"],
+      "createdAt": "2026-04-16",
+      "updatedAt": "2026-04-16"
+    }
+  ]
+}
