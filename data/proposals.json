@@ -12,7 +12,8 @@
         "提案"
       ],
       "createdAt": "2026-04-17",
-      "updatedAt": "2026-04-17"
+      "updatedAt": "2026-04-17",
+      "gitRepo": "https://github.com/YeLuo45/proposals-manager"
     },
     {
       "id": "P-20250417-002",
@@ -26,7 +27,8 @@
         "Android"
       ],
       "createdAt": "2026-04-17",
-      "updatedAt": "2026-04-17"
+      "updatedAt": "2026-04-17",
+      "gitRepo": "https://github.com/YeLuo45/android-hello"
     },
     {
       "id": "P-20250416-003",
@@ -40,7 +42,8 @@
         "提案"
       ],
       "createdAt": "2026-04-16",
-      "updatedAt": "2026-04-17"
+      "updatedAt": "2026-04-17",
+      "gitRepo": ""
     },
     {
       "id": "P-20250416-001",
@@ -55,7 +58,8 @@
         "Windows"
       ],
       "createdAt": "2026-04-16",
-      "updatedAt": "2026-04-17"
+      "updatedAt": "2026-04-17",
+      "gitRepo": "https://github.com/YeLuo45/todo-list"
     },
     {
       "id": "P-20250416-002",
@@ -71,7 +75,8 @@
         "游戏"
       ],
       "createdAt": "2026-04-16",
-      "updatedAt": "2026-04-17"
+      "updatedAt": "2026-04-17",
+      "gitRepo": "https://github.com/YeLuo45/game-1024"
     }
   ]
 }
