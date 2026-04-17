@@ -48,7 +48,7 @@
       "description": "已迁移至独立仓库 todo-list；Web + Windows扩展；Windows客户端（Electron）；本地部署",
       "type": "package",
       "status": "active",
-      "url": "https://yeluo45.github.io/hermes-agent/",
+      "url": "https://yeluo45.github.io/todo-list/",
       "packageUrl": "https://github.com/YeLuo45/todo-app/archive/refs/heads/main.zip",
       "tags": [
         "Web",
