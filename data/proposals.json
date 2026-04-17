@@ -108,10 +108,10 @@
     {
       "id": "P-20260412-009",
       "name": "ai-stock-simulation",
-      "description": "AI驱动的股票模拟交易平台，支持AI智能选股、策略回测、模拟交易、技术分析；多模型支持（MiniMax/智谱/Claude/Gemini）；全栈FastAPI+React，需本地启动",
+      "description": "AI驱动的股票模拟交易平台，支持AI智能选股、策略回测、模拟交易、技术分析；多模型支持（MiniMax/智谱/Claude/Gemini）；已部署 GitHub Pages（Demo模式）",
       "type": "package",
       "status": "active",
-      "url": "",
+      "url": "https://yeluo45.github.io/ai-stock-simulation/",
       "packageUrl": "https://github.com/YeLuo45/ai-stock-simulation/archive/refs/heads/master.zip",
       "tags": [
         "全栈",
@@ -121,7 +121,7 @@
         "AI"
       ],
       "createdAt": "2026-04-12",
-      "updatedAt": "2026-04-12"
+      "updatedAt": "2026-04-18"
     }
   ]
 }
