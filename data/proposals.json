@@ -1,0 +1,40 @@
+{
+  "proposals": [
+    {
+      "id": "P-20250416-002",
+      "name": "game-1024",
+      "description": "经典1024玩法",
+      "type": "package",
+      "status": "active",
+      "url": "https://yeluo45.github.io/game-1024/",
+      "packageUrl": "",
+      "tags": ["game", "1024", "休闲"],
+      "createdAt": "2025-04-16",
+      "updatedAt": "2025-04-16"
+    },
+    {
+      "id": "P-20250416-001",
+      "name": "todo-app",
+      "description": "Web版 TodoList",
+      "type": "web",
+      "status": "active",
+      "url": "https://yeluo45.github.io/hermes-agent/",
+      "packageUrl": "",
+      "tags": ["todo", "web", "效率"],
+      "createdAt": "2025-04-16",
+      "updatedAt": "2025-04-16"
+    },
+    {
+      "id": "P-20250416-003",
+      "name": "calculator-app",
+      "description": "React Native计算器",
+      "type": "app",
+      "status": "in_dev",
+      "url": "",
+      "packageUrl": "",
+      "tags": ["calculator", "react-native", "app"],
+      "createdAt": "2025-04-16",
+      "updatedAt": "2025-04-16"
+    }
+  ]
+}
