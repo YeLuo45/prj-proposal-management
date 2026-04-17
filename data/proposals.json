@@ -1,6 +1,22 @@
 {
   "proposals": [
     {
+      "id": "P-20250418-001",
+      "name": "pixel-pal-web",
+      "description": "Electron + React Web 应用；功能：PixelPal 宠物、任务管理、日历、邮件(Gmail)、AI聊天、文档解析；已部署 GitHub Pages",
+      "type": "package",
+      "status": "active",
+      "url": "https://YeLuo45.github.io/pixel-pal-web",
+      "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/master.zip",
+      "tags": [
+        "Electron",
+        "React",
+        "Web"
+      ],
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18"
+    },
+    {
       "id": "P-20250417-001",
       "name": "proposals-manager",
       "description": "新建独立仓库 proposals-manager；完整CRUD；GitHub API操作JSON数据；已与提案管理系统单向同步（提案系统→网站）",
