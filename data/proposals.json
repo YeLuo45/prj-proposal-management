@@ -16,12 +16,12 @@
     },
     {
       "id": "P-20250417-002",
-      "name": "P-20250417-002",
+      "name": "android-hello",
       "description": "Android Kotlin Hello World；包名 com.hello.android；minSdk 24, targetSdk 36；已有 debug APK；待上传 GitHub",
       "type": "app",
       "status": "active",
       "url": "- `GitHub Repo`:",
-      "packageUrl": "",
+      "packageUrl": "https://github.com/YeLuo45/android-hello/archive/refs/heads/main.zip",
       "tags": [
         "Android"
       ],
@@ -30,7 +30,7 @@
     },
     {
       "id": "P-20250416-003",
-      "name": "P-20250416-003",
+      "name": "react-native-安卓计算器",
       "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算；已与提案网站同步（type=app, status=in_dev）",
       "type": "package",
       "status": "in_dev",
