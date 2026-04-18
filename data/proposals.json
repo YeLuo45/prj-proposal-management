@@ -215,6 +215,21 @@
       ],
       "createdAt": "2026-04-19",
       "updatedAt": "2026-04-19"
+    },
+    {
+      "id": "P-20260419-001",
+      "name": "神庙大逃亡",
+      "description": "类Temple Run无尽跑酷游戏；2.5D侧视角；3条跑道左右切换；跳跃/下滑操作；金币收集；React 18 + Vite 5 + PWA",
+      "type": "package",
+      "status": "active",
+      "url": "https://yeluo45.github.io/temple-run/",
+      "gitRepo": "https://github.com/YeLuo45/temple-run",
+      "tags": [
+        "Web",
+        "PWA"
+      ],
+      "createdAt": "2026-04-19",
+      "updatedAt": "2026-04-19"
     }
   ]
 }
