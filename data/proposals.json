@@ -1,51 +1,173 @@
 {
   "proposals": [
     {
-      "id": "P-20260419-003",
-      "name": "dont-step-white",
-      "description": "经典钢琴块玩法；4列8行网格；←→移动+点击踩黑块；失败条件：踩白块/漏踩黑块；React 18 + Vite 5 + PWA；分数/速度递增/历史最高分/PWA离线/音效；已部署 gh-pages",
-      "type": "package",
-      "status": "in_dev",
-      "url": "https://yeluo45.github.io/dont-step-white/ (gh-pages)",
-      "packageUrl": "https://github.com/YeLuo45/dont-step-white/archive/refs/heads/main.zip",
-      "gitRepo": "https://github.com/YeLuo45/dont-step-white",
-      "tags": [
-        "Web",
-        "PWA"
-      ],
-      "createdAt": "2026-04-19",
-      "updatedAt": "2026-04-19"
-    },
-    {
-      "id": "P-20260419-001",
-      "name": "temple-run",
-      "description": "类Temple Run无尽跑酷，2.5D侧视角，Web+PWA+安装版三端一次性开发",
-      "type": "package",
-      "status": "in_dev",
-      "url": "",
-      "packageUrl": "https://github.com/YeLuo45/temple-run/archive/refs/heads/main.zip",
-      "gitRepo": "",
-      "tags": [
-        "Web",
-        "PWA"
-      ],
-      "createdAt": "2026-04-19",
-      "updatedAt": "2026-04-19"
-    },
-    {
-      "id": "P-20260419-004",
-      "name": "TradingAgents-CN",
-      "description": "AI 量化交易代理系统；Python 3.10+；混合许可证（Apache 2.0 开源 + 专有前端后端需商业授权）；包含 FastAPI 后端 + Vue 前端 + Docker 部署；基于 TauricResearch/TradingAgents",
+      "id": "P-20250418-001",
+      "name": "monopoly3d",
+      "description": "Vite + React + Three.js + @react-three/fiber + Tailwind CSS 3；3D 大富翁桌游；Node 18 兼容性问题修复（Tailwind v4→v3，Vite v8→v5）；已部署 GitHub Pages；项目文件（含构建产物）推送至 gh-pages 分支",
       "type": "package",
       "status": "active",
-      "url": "",
-      "packageUrl": "https://github.com/YeLuo45/TradingAgents-CN/archive/refs/heads/main.zip",
-      "gitRepo": "https://github.com/YeLuo45/TradingAgents-CN",
+      "url": "https://YeLuo45.github.io/pixel-pal-web",
+      "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/master.zip",
+      "gitRepo": "https://github.com/YeLuo45/monopoly3d",
       "tags": [
         "提案"
       ],
-      "createdAt": "2026-04-19",
-      "updatedAt": "2026-04-19"
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18"
+    },
+    {
+      "id": "P-20260412-007",
+      "name": "ai-creator-h5 (H5)",
+      "description": "微信小程序 Phase 1 MVP 骨架 + H5 版本已完成并部署；H5 采用 Vite + Hash SPA 架构；Web API 适配层（localStorage/fetch/Audio）；4页面：首页/生成/历史/我的；支持图片生成、音乐生成、TTS 语音合成",
+      "type": "package",
+      "status": "active",
+      "url": "https://yeluo45.github.io/ai-creator-h5/",
+      "packageUrl": "https://github.com/YeLuo45/ai-creator-h5 (H5)/archive/refs/heads/main.zip",
+      "gitRepo": "https://github.com/YeLuo45/ai-creator-miniprogram (小程序) / https://github.com/YeLuo45/ai-creator-h5 (H5)",
+      "tags": [
+        "Web"
+      ],
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18"
+    },
+    {
+      "id": "P-20260412-008",
+      "name": "ai-subscription",
+      "description": "多端独立应用（Web + 小程序 + PC + Android）；Web 已部署 GitHub Pages；AI 摘要、RSS订阅、GitHub Trending 爬取；四端数据各自独立存储",
+      "type": "package",
+      "status": "active",
+      "url": "https://yeluo45.github.io/ai-subscription/",
+      "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
+      "gitRepo": "https://github.com/YeLuo45/ai-subscription",
+      "tags": [
+        "Web",
+        "Android"
+      ],
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18"
+    },
+    {
+      "id": "P-20250417-001",
+      "name": "proposals-manager",
+      "description": "新建独立仓库 proposals-manager；完整CRUD；GitHub API操作JSON数据；已与提案管理系统单向同步（提案系统→网站）",
+      "type": "package",
+      "status": "active",
+      "url": "https://yeluo45.github.io/proposals-manager/",
+      "packageUrl": "https://github.com/YeLuo45/proposals-manager/archive/refs/heads/main.zip",
+      "gitRepo": "https://github.com/YeLuo45/proposals-manager",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-17",
+      "updatedAt": "2026-04-17"
+    },
+    {
+      "id": "P-20250417-002",
+      "name": "android-hello",
+      "description": "Android Kotlin Hello World；包名 com.hello.android；minSdk 24, targetSdk 36；APK 已上传 GitHub Releases (v1.0.0)；源码已推送 GitHub",
+      "type": "app",
+      "status": "active",
+      "url": "https://github.com/YeLuo45/android-hello/releases/download/v1.0.0/app-debug.apk",
+      "packageUrl": "https://github.com/YeLuo45/android-hello/releases/download/v1.0.0/app-debug.apk",
+      "gitRepo": "https://github.com/YeLuo45/android-hello",
+      "tags": [
+        "Android"
+      ],
+      "createdAt": "2026-04-17",
+      "updatedAt": "2026-04-17"
+    },
+    {
+      "id": "P-20250416-003",
+      "name": "calculator-app.git",
+      "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算；已与提案网站同步（type=app, status=in_dev）",
+      "type": "package",
+      "status": "in_dev",
+      "url": "",
+      "packageUrl": "https://github.com/YeLuo45/calculator-app/archive/refs/heads/main.zip",
+      "gitRepo": "https://github.com/YeLuo45/calculator-app.git",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-17",
+      "updatedAt": "2026-04-17"
+    },
+    {
+      "id": "P-20250416-001",
+      "name": "todo-list",
+      "description": "已迁移至独立仓库 todo-list；Web + Windows扩展；Windows客户端（Electron）；本地部署",
+      "type": "package",
+      "status": "active",
+      "url": "https://yeluo45.github.io/todo-list/",
+      "packageUrl": "https://github.com/YeLuo45/todo-list/archive/refs/heads/main.zip",
+      "gitRepo": "https://github.com/YeLuo45/todo-list",
+      "tags": [
+        "Web",
+        "Windows"
+      ],
+      "createdAt": "2026-04-17",
+      "updatedAt": "2026-04-17"
+    },
+    {
+      "id": "P-20250416-002",
+      "name": "game-1024",
+      "description": "经典1024玩法（4×4滑动合并，目标1024）+ PWA可安装到安卓主屏幕 + 存档/继续游戏 + 皮肤系统 + 已部署至GitHub Pages；已与提案网站同步",
+      "type": "package",
+      "status": "active",
+      "url": "https://yeluo45.github.io/game-1024/",
+      "packageUrl": "https://github.com/YeLuo45/game-1024/archive/refs/heads/main.zip",
+      "gitRepo": "https://github.com/YeLuo45/game-1024",
+      "tags": [
+        "Web",
+        "PWA",
+        "游戏"
+      ],
+      "createdAt": "2026-04-17",
+      "updatedAt": "2026-04-17"
+    },
+    {
+      "id": "P-20260412-009",
+      "name": "ai-stock-simulation",
+      "description": "全栈FastAPI+React项目；前端端口3100，后端端口8000；需本地启动后端服务",
+      "type": "package",
+      "status": "active",
+      "url": "",
+      "packageUrl": "https://github.com/YeLuo45/ai-stock-simulation/archive/refs/heads/main.zip",
+      "gitRepo": "https://github.com/YeLuo45/ai-stock-simulation",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-12",
+      "updatedAt": "2026-04-12"
+    },
+    {
+      "id": "P-20250418-003",
+      "name": "harness-desktop",
+      "description": "Electron + React + Vite + TypeScript 桌面应用；修复 tsconfig.json baseUrl deprecation；electronDist 指向缓存的 v28.3.3 win-x64；二进制包已上传 GitHub Releases (v1.0.0)；wsrun build 需跳过 tsc 直接 vite build；wine 未安装时需用 --dir target",
+      "type": "package",
+      "status": "active",
+      "url": "https://github.com/YeLuo45/harness-desktop/releases/tag/v1.0.1",
+      "packageUrl": "https://github.com/YeLuo45/harness-desktop/releases/download/v1.0.1/Harness.Desktop.1.0.1.exe",
+      "gitRepo": "https://github.com/YeLuo45/harness-desktop",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18"
+    },
+    {
+      "id": "P-20250418-004",
+      "name": "future-little-leaders",
+      "description": "uni-app 多平台项目（H5 构建）；克隆自 GitHub 私有仓库；本地构建 H5 成功（pinia 2.1.7 兼容）；GitHub Actions workflow 部署遇阻，改用 Git Data API 直接推送 dist 到 gh-pages；Pages 配置 build_type=legacy，source=gh-pages/；部署后端需同步到提案网站",
+      "type": "package",
+      "status": "active",
+      "url": "https://yeluo45.github.io/future-little-leaders/",
+      "packageUrl": "https://github.com/YeLuo45/future-little-leaders/archive/refs/heads/main.zip",
+      "gitRepo": "https://github.com/YeLuo45/future-little-leaders",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18"
     }
   ]
 }
