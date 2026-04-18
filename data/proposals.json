@@ -136,8 +136,8 @@
       "description": "uni-app 多平台项目（H5 构建）；克隆自 GitHub 私有仓库；本地构建 H5 成功（pinia 2.1.7 兼容）；GitHub Actions workflow 部署遇阻，改用 Git Data API 直接推送 dist 到 gh-pages；Pages 配置 build_type=legacy，source=gh-pages/；部署后端需同步到提案网站",
       "type": "package",
       "status": "active",
-      "url": "https://github.com/YeLuo45/harness-desktop/releases/tag/v1.0.0",
-      "packageUrl": "https://github.com/YeLuo45/harness-desktop/releases/download/v1.0.0/Harness.Desktop.1.0.0.exe",
+      "url": "https://github.com/YeLuo45/harness-desktop/releases/tag/untagged-9506e93e81c6b4f78126",
+      "packageUrl": "https://github.com/YeLuo45/harness-desktop/releases/download/untagged-9506e93e81c6b4f78126/Harness.Desktop.1.0.0.exe",
       "tags": [
         "提案"
       ],
