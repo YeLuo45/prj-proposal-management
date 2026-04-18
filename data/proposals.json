@@ -132,8 +132,8 @@
     },
     {
       "id": "P-20250418-003",
-      "name": "harness-desktop",
-      "description": "Electron + React + Vite + TypeScript 桌面应用；修复 tsconfig.json baseUrl deprecation；electronDist 指向缓存的 v28.3.3 win-x64；二进制包已上传 GitHub Releases (v1.0.0)；wsrun build 需跳过 tsc 直接 vite build；wine 未安装时需用 --dir target",
+      "name": "future-little-leaders",
+      "description": "uni-app 多平台项目（H5 构建）；克隆自 GitHub 私有仓库；本地构建 H5 成功（pinia 2.1.7 兼容）；GitHub Actions workflow 部署遇阻，改用 Git Data API 直接推送 dist 到 gh-pages；Pages 配置 build_type=legacy，source=gh-pages/；部署后端需同步到提案网站",
       "type": "package",
       "status": "active",
       "url": "https://github.com/YeLuo45/harness-desktop/releases/tag/v1.0.0",
