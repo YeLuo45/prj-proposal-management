@@ -78,13 +78,13 @@
     },
     {
       "id": "P-20250416-003",
-      "name": "calculator-app",
+      "name": "calculator-app.git",
       "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算；已与提案网站同步（type=app, status=in_dev）",
       "type": "package",
       "status": "in_dev",
       "url": "",
       "packageUrl": "https://github.com/YeLuo45/calculator-app/archive/refs/heads/main.zip",
-      "gitRepo": "",
+      "gitRepo": "https://github.com/YeLuo45/calculator-app.git",
       "tags": [
         "提案"
       ],
