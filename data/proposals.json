@@ -136,8 +136,8 @@
       "description": "Electron + React + Vite + TypeScript 桌面应用；修复 tsconfig.json baseUrl deprecation；electronDist 指向缓存的 v28.3.3 win-x64；二进制包已上传 GitHub Releases (v1.0.0)；wsrun build 需跳过 tsc 直接 vite build；wine 未安装时需用 --dir target",
       "type": "package",
       "status": "active",
-      "url": "https://github.com/YeLuo45/harness-desktop/releases/tag/untagged-9506e93e81c6b4f78126",
-      "packageUrl": "https://github.com/YeLuo45/harness-desktop/releases/download/untagged-9506e93e81c6b4f78126/Harness.Desktop.1.0.0.exe",
+      "url": "https://github.com/YeLuo45/harness-desktop/releases/tag/v1.0.0",
+      "packageUrl": "https://github.com/YeLuo45/harness-desktop/releases/download/v1.0.0/Harness.Desktop.1.0.0.exe",
       "tags": [
         "提案"
       ],
