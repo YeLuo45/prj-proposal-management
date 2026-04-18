@@ -3,123 +3,146 @@
     {
       "id": "P-20250418-001",
       "name": "monopoly3d",
-      "description": "Vite + React + Three.js + @react-three/fiber + Tailwind CSS 3",
+      "description": "Vite + React + Three.js + @react-three/fiber + Tailwind CSS 3；3D 大富翁桌游；Node 18 兼容性问题修复（Tailwind v4→v3，Vite v8→v5）；已部署 GitHub Pages；项目文件（含构建产物）推送至 gh-pages 分支",
       "type": "package",
       "status": "active",
       "url": "https://YeLuo45.github.io/pixel-pal-web",
       "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/master.zip",
       "tags": [
         "提案"
-      ]
+      ],
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18"
     },
     {
       "id": "P-20260412-007",
-      "name": "ai-creator",
-      "description": "微信小程序 + H5",
+      "name": "ai-creator-h5 (H5)",
+      "description": "微信小程序 Phase 1 MVP 骨架 + H5 版本已完成并部署；H5 采用 Vite + Hash SPA 架构；Web API 适配层（localStorage/fetch/Audio）；4页面：首页/生成/历史/我的；支持图片生成、音乐生成、TTS 语音合成",
       "type": "package",
       "status": "active",
       "url": "https://yeluo45.github.io/ai-creator-h5/",
-      "packageUrl": "",
+      "packageUrl": "https://github.com/YeLuo45/ai-creator-h5 (H5)/archive/refs/heads/main.zip",
       "tags": [
-        "提案"
-      ]
+        "Web"
+      ],
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18"
     },
     {
       "id": "P-20260412-008",
       "name": "ai-subscription",
-      "description": "AI 订阅内容聚合",
+      "description": "多端独立应用（Web + 小程序 + PC + Android）；Web 已部署 GitHub Pages；AI 摘要、RSS订阅、GitHub Trending 爬取；四端数据各自独立存储",
       "type": "package",
       "status": "active",
       "url": "https://yeluo45.github.io/ai-subscription/",
-      "packageUrl": "",
+      "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
       "tags": [
-        "提案"
-      ]
+        "Web",
+        "Android"
+      ],
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18"
     },
     {
       "id": "P-20250417-001",
       "name": "proposals-manager",
-      "description": "提案包与访问链接管理系统",
+      "description": "新建独立仓库 proposals-manager；完整CRUD；GitHub API操作JSON数据；已与提案管理系统单向同步（提案系统→网站）",
       "type": "package",
       "status": "active",
       "url": "https://yeluo45.github.io/proposals-manager/",
-      "packageUrl": "",
+      "packageUrl": "https://github.com/YeLuo45/proposals-manager/archive/refs/heads/main.zip",
       "tags": [
         "提案"
-      ]
+      ],
+      "createdAt": "2026-04-17",
+      "updatedAt": "2026-04-17"
     },
     {
       "id": "P-20250417-002",
       "name": "android-hello",
-      "description": "Android Hello",
-      "type": "package",
+      "description": "Android Kotlin Hello World；包名 com.hello.android；minSdk 24, targetSdk 36；APK 已上传 GitHub Releases (v1.0.0)；源码已推送 GitHub",
+      "type": "app",
       "status": "active",
       "url": "https://github.com/YeLuo45/android-hello/releases/download/v1.0.0/app-debug.apk",
       "packageUrl": "https://github.com/YeLuo45/android-hello/releases/download/v1.0.0/app-debug.apk",
       "tags": [
-        "提案"
-      ]
+        "Android"
+      ],
+      "createdAt": "2026-04-17",
+      "updatedAt": "2026-04-17"
     },
     {
       "id": "P-20250416-003",
       "name": "calculator-app",
-      "description": "React Native 安卓计算器",
-      "type": "app",
+      "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算；已与提案网站同步（type=app, status=in_dev）",
+      "type": "package",
       "status": "in_dev",
       "url": "",
-      "packageUrl": "",
+      "packageUrl": "https://github.com/YeLuo45/calculator-app/archive/refs/heads/main.zip",
       "tags": [
         "提案"
-      ]
+      ],
+      "createdAt": "2026-04-17",
+      "updatedAt": "2026-04-17"
     },
     {
       "id": "P-20250416-001",
       "name": "todo-list",
-      "description": "Web 版 TodoList",
+      "description": "已迁移至独立仓库 todo-list；Web + Windows扩展；Windows客户端（Electron）；本地部署",
       "type": "package",
       "status": "active",
       "url": "https://yeluo45.github.io/todo-list/",
-      "packageUrl": "",
+      "packageUrl": "https://github.com/YeLuo45/todo-list/archive/refs/heads/main.zip",
       "tags": [
-        "提案"
-      ]
+        "Web",
+        "Windows"
+      ],
+      "createdAt": "2026-04-17",
+      "updatedAt": "2026-04-17"
     },
     {
       "id": "P-20250416-002",
       "name": "game-1024",
-      "description": "1024 游戏",
+      "description": "经典1024玩法（4×4滑动合并，目标1024）+ PWA可安装到安卓主屏幕 + 存档/继续游戏 + 皮肤系统 + 已部署至GitHub Pages；已与提案网站同步",
       "type": "package",
       "status": "active",
       "url": "https://yeluo45.github.io/game-1024/",
-      "packageUrl": "",
+      "packageUrl": "https://github.com/YeLuo45/game-1024/archive/refs/heads/main.zip",
       "tags": [
-        "提案"
-      ]
+        "Web",
+        "PWA",
+        "游戏"
+      ],
+      "createdAt": "2026-04-17",
+      "updatedAt": "2026-04-17"
     },
     {
       "id": "P-20260412-009",
       "name": "ai-stock-simulation",
-      "description": "AI 模拟炒股",
+      "description": "全栈FastAPI+React项目；前端端口3100，后端端口8000；需本地启动后端服务",
       "type": "package",
       "status": "active",
       "url": "",
-      "packageUrl": "",
+      "packageUrl": "https://github.com/YeLuo45/ai-stock-simulation/archive/refs/heads/main.zip",
       "tags": [
         "提案"
-      ]
+      ],
+      "createdAt": "2026-04-12",
+      "updatedAt": "2026-04-12"
     },
     {
       "id": "P-20250418-003",
       "name": "harness-desktop",
-      "description": "Electron + React + Vite + TypeScript 桌面应用；AI 编程工具客户端",
+      "description": "Electron + React + Vite + TypeScript 桌面应用；修复 tsconfig.json baseUrl deprecation；electronDist 指向缓存的 v28.3.3 win-x64；二进制包已上传 GitHub Releases (v1.0.0)；wsrun build 需跳过 tsc 直接 vite build；wine 未安装时需用 --dir target",
       "type": "package",
       "status": "active",
       "url": "https://github.com/YeLuo45/harness-desktop/releases/tag/v1.0.0",
       "packageUrl": "https://github.com/YeLuo45/harness-desktop/releases/download/v1.0.0/Harness.Desktop.1.0.0.exe",
-      "gitRepo": "https://github.com/YeLuo45/harness-desktop",
       "tags": [
         "提案"
-      ]
+      ],
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18"
     }
   ]
 }
