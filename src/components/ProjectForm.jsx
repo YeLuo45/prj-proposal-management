@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react'
 
-const emptyForm = { name: '', description: '', url: '', gitRepo: '' }
+const emptyForm = { name: '', description: '', url: '', gitRepo: '', domain: '' }
+
+const DOMAIN_OPTIONS = [
+  '游戏', 'AI', '量化交易', '工具', 'Web应用', '移动应用', '数据分析',
+  '效率工具', '娱乐', '教育', '社交', '电商', '物联网', '区块链', '其他'
+]
 
 export default function ProjectForm({ project, onSave, onClose }) {
   const [form, setForm] = useState(emptyForm)
@@ -12,6 +17,7 @@ export default function ProjectForm({ project, onSave, onClose }) {
         description: project.description || '',
         url: project.url || '',
         gitRepo: project.gitRepo || '',
+        domain: project.domain || '',
       })
     }
   }, [project])
@@ -51,6 +57,16 @@ export default function ProjectForm({ project, onSave, onClose }) {
               <input value={form.gitRepo} onChange={e => setForm(f => ({ ...f, gitRepo: e.target.value }))}
                 className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="https://github.com/YeLuo45/..." />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">业务领域</label>
+              <select value={form.domain} onChange={e => setForm(f => ({ ...f, domain: e.target.value }))}
+                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                <option value="">请选择领域（可选）</option>
+                {DOMAIN_OPTIONS.map(opt => (
+                  <option key={opt} value={opt}>{opt}</option>
+                ))}
+              </select>
             </div>
             <div className="flex gap-3 pt-2">
               <button type="submit" className="flex-1 bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700">

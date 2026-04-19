@@ -3,6 +3,7 @@ import Header from './components/Header'
 import SearchBar from './components/SearchBar'
 import FilterBar from './components/FilterBar'
 import ProjectCard from './components/ProjectCard'
+import ProjectProposalList from './components/ProjectProposalList'
 import ProjectForm from './components/ProjectForm'
 import ProposalForm from './components/ProposalForm'
 import { useGitHub } from './hooks/useGitHub'
@@ -29,6 +30,7 @@ export default function App() {
   const [editingProposal, setEditingProposal] = useState(null)
   const [editingProposalProjectId, setEditingProposalProjectId] = useState(null)
   const [showTokenInput, setShowTokenInput] = useState(false)
+  const [selectedProjectId, setSelectedProjectId] = useState(null)
 
   const PAGE_SIZE = 12
 
@@ -149,6 +151,10 @@ export default function App() {
     navigator.clipboard.writeText(text)
   }, [])
 
+  const handleSelectProject = useCallback((projectId) => {
+    setSelectedProjectId(projectId)
+  }, [])
+
   if (!token) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -204,7 +210,16 @@ export default function App() {
           </div>
         )}
 
-        {viewMode === 'table' ? (
+        {selectedProjectId ? (
+          <ProjectProposalList
+            project={projects.find(p => p.id === selectedProjectId)}
+            onBack={() => setSelectedProjectId(null)}
+            onAddProposal={handleAddProposal}
+            onEditProposal={handleEditProposal}
+            onDeleteProposal={handleDeleteProposal}
+            onCopy={handleCopy}
+          />
+        ) : viewMode === 'table' ? (
           <table className="w-full bg-white rounded shadow mb-6">
             <thead>
               <tr className="bg-gray-50 border-b">
@@ -222,6 +237,7 @@ export default function App() {
                   key={prj.id}
                   project={prj}
                   viewMode="table"
+                  onSelectProject={handleSelectProject}
                   onEditProject={(p) => { setEditingProject(p); setShowProjectForm(true) }}
                   onDeleteProject={handleDeleteProject}
                   onAddProposal={handleAddProposal}
@@ -242,6 +258,7 @@ export default function App() {
                 key={prj.id}
                 project={prj}
                 viewMode="card"
+                onSelectProject={handleSelectProject}
                 onEditProject={(p) => { setEditingProject(p); setShowProjectForm(true) }}
                 onDeleteProject={handleDeleteProject}
                 onAddProposal={handleAddProposal}
@@ -266,6 +283,7 @@ export default function App() {
           </div>
         )}
 
+        {!selectedProjectId && (
         <div className="flex justify-between items-center mb-4">
           <p className="text-gray-600 text-sm">共 {filtered.length} 个项目</p>
           <button
@@ -275,6 +293,7 @@ export default function App() {
             + 新增项目
           </button>
         </div>
+        )}
       </div>
 
       {showProjectForm && (
