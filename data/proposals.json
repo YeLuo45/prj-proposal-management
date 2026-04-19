@@ -188,12 +188,12 @@
     {
       "id": "P-20260419-001",
       "name": "temple-run",
-      "description": "类Temple Run无尽跑酷，2.5D侧视角，Web+PWA+安装版三端一次性开发",
+      "description": "类Temple Run无尽跑酷；2.5D侧视角；3条跑道左右切换；跳跃/下滑操作；金币收集；React 18 + Vite 5 + PWA；Web版已部署",
       "type": "package",
-      "status": "in_dev",
-      "url": "",
+      "status": "active",
+      "url": "https://yeluo45.github.io/temple-run/",
       "packageUrl": "https://github.com/YeLuo45/temple-run/archive/refs/heads/main.zip",
-      "gitRepo": "",
+      "gitRepo": "https://github.com/YeLuo45/temple-run",
       "tags": [
         "Web",
         "PWA"
@@ -212,21 +212,6 @@
       "gitRepo": "https://github.com/YeLuo45/TradingAgents-CN",
       "tags": [
         "提案"
-      ],
-      "createdAt": "2026-04-19",
-      "updatedAt": "2026-04-19"
-    },
-    {
-      "id": "P-20260419-001",
-      "name": "神庙大逃亡",
-      "description": "类Temple Run无尽跑酷游戏；2.5D侧视角；3条跑道左右切换；跳跃/下滑操作；金币收集；React 18 + Vite 5 + PWA",
-      "type": "package",
-      "status": "active",
-      "url": "https://yeluo45.github.io/temple-run/",
-      "gitRepo": "https://github.com/YeLuo45/temple-run",
-      "tags": [
-        "Web",
-        "PWA"
       ],
       "createdAt": "2026-04-19",
       "updatedAt": "2026-04-19"
