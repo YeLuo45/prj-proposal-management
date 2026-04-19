@@ -4,23 +4,23 @@
     {
       "id": "PRJ-20250418-001",
       "name": "monopoly3d",
-      "description": "Vite + React + Three.js + @react-three/fiber + Tailwind CSS 3；3D 大富翁桌游；Node 18 兼容性问题修复（Tailwind v4→v3，Vite v8→v5）；已部署 GitHub Pages；项目文件（含构建产物）推送至 gh-pages 分支",
-      "url": "https://YeLuo45.github.io/pixel-pal-web",
+      "description": "Vite + React + Three.js + @react-three/fiber + Tailwind CSS 3；3D 大富翁桌游；Node 18 兼容性问题修复（Tailwind v4→v3，Vite v8→v5）；已部署 GitHub Pages",
+      "url": "https://yeluo45.github.io/monopoly3d/",
       "gitRepo": "https://github.com/YeLuo45/monopoly3d",
       "createdAt": "2026-04-18",
-      "updatedAt": "2026-04-18",
+      "updatedAt": "2026-04-19",
       "proposals": [
         {
           "id": "P-20250418-001",
           "name": "monopoly3d",
-          "description": "Vite + React + Three.js + @react-three/fiber + Tailwind CSS 3；3D 大富翁桌游；Node 18 兼容性问题修复（Tailwind v4→v3，Vite v8→v5）；已部署 GitHub Pages；项目文件（含构建产物）推送至 gh-pages 分支",
+          "description": "Vite + React + Three.js + @react-three/fiber + Tailwind CSS 3；3D 大富翁桌游；Node 18 兼容性问题修复（Tailwind v4→v3，Vite v8→v5）；已部署 GitHub Pages",
           "type": "package",
           "status": "active",
-          "url": "https://YeLuo45.github.io/pixel-pal-web",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/master.zip",
-          "tags": ["提案"],
+          "url": "https://yeluo45.github.io/monopoly3d/",
+          "packageUrl": "https://github.com/YeLuo45/monopoly3d/archive/refs/heads/main.zip",
+          "tags": ["游戏", "3D", "Web"],
           "createdAt": "2026-04-18",
-          "updatedAt": "2026-04-18"
+          "updatedAt": "2026-04-19"
         }
       ]
     },
@@ -90,6 +90,29 @@
           "tags": ["提案"],
           "createdAt": "2026-04-17",
           "updatedAt": "2026-04-17"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260419-004",
+      "name": "pixel-pal-web",
+      "description": "AI 虚拟角色陪伴 Web 应用；基于MiniMax API；用户创建虚拟角色进行对话互动",
+      "url": "https://yeluo45.github.io/pixel-pal-web/",
+      "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
+      "createdAt": "2026-04-19",
+      "updatedAt": "2026-04-19",
+      "proposals": [
+        {
+          "id": "P-20260419-005",
+          "name": "pixel-pal-web",
+          "description": "AI 虚拟角色陪伴 Web 应用；基于MiniMax API；用户创建虚拟角色进行对话互动；已部署 GitHub Pages",
+          "type": "web",
+          "status": "active",
+          "url": "https://yeluo45.github.io/pixel-pal-web/",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "tags": ["Web", "AI"],
+          "createdAt": "2026-04-19",
+          "updatedAt": "2026-04-19"
         }
       ]
     },
