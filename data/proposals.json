@@ -349,7 +349,7 @@
       "id": "PRJ-20260419-005",
       "name": "hermes-agent",
       "description": "Python asyncio + websockets/FastAPI；工作区CRUD、Agent Profile、任务生命周期（pending→claimed→in_progress→completed/failed/blocked）、WebSocket实时推送、技能系统、CLI命令；独立Web协作面板；数据存储在~/.hermes/workspaces/；验收发现并修复5处CLI bug（TaskManager别名缺失、AgentStatus.ONLINE不存在、TaskStatus.CANCELLED不存在、Task字段名不匹配等）；Web UI在hermes-collab-web/dist",
-      "url": "",
+      "url": "https://yeluo45.github.io/hermes-agent-collab/",
       "gitRepo": "https://github.com/YeLuo45/hermes-agent",
       "createdAt": "2026-04-20",
       "updatedAt": "2026-04-20",
@@ -360,7 +360,7 @@
           "description": "Python asyncio + websockets/FastAPI；工作区CRUD、Agent Profile、任务生命周期（pending→claimed→in_progress→completed/failed/blocked）、WebSocket实时推送、技能系统、CLI命令；独立Web协作面板；数据存储在~/.hermes/workspaces/；验收发现并修复5处CLI bug（TaskManager别名缺失、AgentStatus.ONLINE不存在、TaskStatus.CANCELLED不存在、Task字段名不匹配等）；Web UI在hermes-collab-web/dist",
           "type": "package",
           "status": "in_dev",
-          "url": "",
+          "url": "https://yeluo45.github.io/hermes-agent-collab/",
           "packageUrl": "https://github.com/YeLuo45/hermes-agent/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/hermes-agent",
           "tags": [
