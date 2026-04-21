@@ -12,13 +12,13 @@
       "proposals": [
         {
           "id": "P-20260422-001",
-          "name": "待创建",
-          "description": "2.5D侧视角射击+单人剧情；引擎Godot 4；WSL网络受限，需确认HTML5导出方案",
+          "name": "room-escape-puzzle",
+          "description": "解谜游戏：房间逃脱 - Godot 4 原型验证项目；5个关卡、物品系统、存档系统；已部署 GitHub Pages",
           "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/待创建/archive/refs/heads/main.zip",
-          "gitRepo": "",
+          "status": "active",
+          "url": "https://yeluo45.github.io/room-escape-puzzle/",
+          "packageUrl": "https://github.com/YeLuo45/room-escape-puzzle/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/room-escape-puzzle",
           "tags": [
             "提案"
           ],
