@@ -30,21 +30,21 @@
     {
       "id": "PRJ-20250421-001",
       "name": "card-game-prototype",
-      "description": "DBG类卡牌（杀戮尖塔-like）；原型验证核心战斗循环+卡牌构筑；技术方案已确认转dev",
-      "url": "",
-      "gitRepo": "",
+      "description": "DBG类卡牌（杀戮尖塔-like）；原型验证核心战斗循环+卡牌构筑；本地化中文；已交付",
+      "url": "https://yeluo45.github.io/card-game-prototype/",
+      "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
       "createdAt": "2026-04-21",
       "updatedAt": "2026-04-21",
       "proposals": [
         {
           "id": "P-20250421-001",
           "name": "card-game-prototype",
-          "description": "DBG类卡牌（杀戮尖塔-like）；原型验证核心战斗循环+卡牌构筑；技术方案已确认转dev",
+          "description": "DBG类卡牌（杀戮尖塔-like）；原型验证核心战斗循环+卡牌构筑；本地化中文；已交付",
           "type": "package",
-          "status": "in_dev",
-          "url": "",
+          "status": "active",
+          "url": "https://yeluo45.github.io/card-game-prototype/",
           "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
-          "gitRepo": "",
+          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
           "tags": [
             "提案"
           ],
