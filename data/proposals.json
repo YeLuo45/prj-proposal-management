@@ -2,6 +2,32 @@
   "version": 2,
   "projects": [
     {
+      "id": "PRJ-20260422-001",
+      "name": "待创建",
+      "description": "2.5D侧视角射击+单人剧情；引擎Godot 4；WSL网络受限，需确认HTML5导出方案",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-04-22",
+      "updatedAt": "2026-04-22",
+      "proposals": [
+        {
+          "id": "P-20260422-001",
+          "name": "待创建",
+          "description": "2.5D侧视角射击+单人剧情；引擎Godot 4；WSL网络受限，需确认HTML5导出方案",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/待创建/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-22",
+          "updatedAt": "2026-04-22"
+        }
+      ]
+    },
+    {
       "id": "PRJ-20250421-001",
       "name": "card-game-prototype",
       "description": "DBG类卡牌（杀戮尖塔-like）；原型验证核心战斗循环+卡牌构筑；技术方案已确认转dev",
