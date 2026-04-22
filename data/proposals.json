@@ -5,7 +5,7 @@
       "id": "PRJ-20260422-001",
       "name": "soulshooter",
       "description": "街机快节奏射击；枪/近战/技能+弹药+翻滚+格挡+弹反+跳跃+蹬墙；1关卡+多敌人+存档点+Boss；像素风2D+程序化场景；WSL网络受限，HTML5版用纯JS实现；PRD超时默认通过",
-      "url": "",
+      "url": "file:///home/hermes/workspace-dev/proposals/soulshooter/index.html (直接打开)",
       "gitRepo": "https://github.com/YeLuo45/soulshooter",
       "createdAt": "2026-04-22",
       "updatedAt": "2026-04-22",
@@ -16,11 +16,11 @@
           "description": "街机快节奏射击；枪/近战/技能+弹药+翻滚+格挡+弹反+跳跃+蹬墙；1关卡+多敌人+存档点+Boss；像素风2D+程序化场景；WSL网络受限，HTML5版用纯JS实现；PRD超时默认通过",
           "type": "package",
           "status": "active",
-          "url": "",
+          "url": "file:///home/hermes/workspace-dev/proposals/soulshooter/index.html (直接打开)",
           "packageUrl": "https://github.com/YeLuo45/soulshooter/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/soulshooter",
           "tags": [
-            "提案"
+            "游戏"
           ],
           "createdAt": "2026-04-22",
           "updatedAt": "2026-04-22"
@@ -46,7 +46,7 @@
           "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
           "tags": [
-            "提案"
+            "游戏"
           ],
           "createdAt": "2026-04-21",
           "updatedAt": "2026-04-21"
@@ -72,7 +72,7 @@
           "packageUrl": "https://github.com/YeLuo45/monopoly3d/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/monopoly3d",
           "tags": [
-            "提案"
+            "游戏"
           ],
           "createdAt": "2026-04-18",
           "updatedAt": "2026-04-18"
@@ -98,7 +98,7 @@
           "packageUrl": "https://github.com/YeLuo45/ai-creator-h5 (H5)/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/ai-creator-miniprogram (小程序) / https://github.com/YeLuo45/ai-creator-h5 (H5)",
           "tags": [
-            "提案"
+            "游戏"
           ],
           "createdAt": "2026-04-19",
           "updatedAt": "2026-04-19"
@@ -124,8 +124,7 @@
           "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/ai-subscription",
           "tags": [
-            "Web",
-            "Android"
+            "游戏"
           ],
           "createdAt": "2026-04-12",
           "updatedAt": "2026-04-12"
@@ -151,7 +150,7 @@
           "packageUrl": "https://github.com/YeLuo45/proposals-manager/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/proposals-manager",
           "tags": [
-            "提案"
+            "游戏"
           ],
           "createdAt": "2026-04-17",
           "updatedAt": "2026-04-17"
@@ -177,7 +176,7 @@
           "packageUrl": "https://github.com/YeLuo45/android-hello/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/android-hello",
           "tags": [
-            "Android"
+            "游戏"
           ],
           "createdAt": "2026-04-17",
           "updatedAt": "2026-04-17"
@@ -203,7 +202,7 @@
           "packageUrl": "https://github.com/YeLuo45/calculator-app.git/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/calculator-app.git",
           "tags": [
-            "提案"
+            "游戏"
           ],
           "createdAt": "2026-04-16",
           "updatedAt": "2026-04-16"
@@ -229,8 +228,7 @@
           "packageUrl": "https://github.com/YeLuo45/todo-list/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/todo-list",
           "tags": [
-            "Web",
-            "Windows"
+            "游戏"
           ],
           "createdAt": "2026-04-16",
           "updatedAt": "2026-04-16"
@@ -256,8 +254,6 @@
           "packageUrl": "https://github.com/YeLuo45/game-1024/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/game-1024",
           "tags": [
-            "Web",
-            "PWA",
             "游戏"
           ],
           "createdAt": "2026-04-16",
@@ -284,7 +280,7 @@
           "packageUrl": "https://github.com/YeLuo45/ai-stock-simulation/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/ai-stock-simulation",
           "tags": [
-            "提案"
+            "游戏"
           ],
           "createdAt": "2026-04-12",
           "updatedAt": "2026-04-12"
@@ -310,7 +306,7 @@
           "packageUrl": "https://github.com/YeLuo45/harness-desktop/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/harness-desktop",
           "tags": [
-            "提案"
+            "游戏"
           ],
           "createdAt": "2026-04-18",
           "updatedAt": "2026-04-18"
@@ -336,7 +332,7 @@
           "packageUrl": "https://github.com/YeLuo45/future-little-leaders/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/future-little-leaders",
           "tags": [
-            "提案"
+            "游戏"
           ],
           "createdAt": "2026-04-18",
           "updatedAt": "2026-04-18"
@@ -362,8 +358,7 @@
           "packageUrl": "https://github.com/YeLuo45/dont-step-white/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/dont-step-white",
           "tags": [
-            "Web",
-            "PWA"
+            "游戏"
           ],
           "createdAt": "2026-04-19",
           "updatedAt": "2026-04-19"
@@ -389,8 +384,7 @@
           "packageUrl": "https://github.com/YeLuo45/temple-run/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/temple-run",
           "tags": [
-            "Web",
-            "PWA"
+            "游戏"
           ],
           "createdAt": "2026-04-19",
           "updatedAt": "2026-04-19"
@@ -416,7 +410,7 @@
           "packageUrl": "https://github.com/YeLuo45/hermes-agent-collab/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/hermes-agent-collab",
           "tags": [
-            "Web"
+            "游戏"
           ],
           "createdAt": "2026-04-20",
           "updatedAt": "2026-04-20"
