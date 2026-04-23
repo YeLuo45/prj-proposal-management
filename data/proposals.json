@@ -4,26 +4,26 @@
     {
       "id": "PRJ-20260422-001",
       "name": "room-escape-puzzle",
-      "description": "解谜游戏原型验证；目标平台PC+移动+浏览器；Godot 4 HTML5导出",
-      "url": "https://yeluo45.github.io/room-escape-puzzle/",
+      "description": "解谜游戏原型验证；目标平台PC+移动+浏览器；Godot 4 HTML5导出；因SharedArrayBuffer依赖改用Netlify部署",
+      "url": "https://resonant-frangipane-46af83.netlify.app/",
       "gitRepo": "https://github.com/YeLuo45/room-escape-puzzle",
-      "createdAt": "2026-04-22",
-      "updatedAt": "2026-04-22",
+      "createdAt": "2026-04-23",
+      "updatedAt": "2026-04-23",
       "proposals": [
         {
           "id": "P-20260422-001",
           "name": "room-escape-puzzle",
-          "description": "解谜游戏原型验证；目标平台PC+移动+浏览器；Godot 4 HTML5导出",
+          "description": "解谜游戏原型验证；目标平台PC+移动+浏览器；Godot 4 HTML5导出；因SharedArrayBuffer依赖改用Netlify部署",
           "type": "package",
           "status": "active",
-          "url": "https://yeluo45.github.io/room-escape-puzzle/",
+          "url": "https://resonant-frangipane-46af83.netlify.app/",
           "packageUrl": "https://github.com/YeLuo45/room-escape-puzzle/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/room-escape-puzzle",
           "tags": [
             "游戏"
           ],
-          "createdAt": "2026-04-22",
-          "updatedAt": "2026-04-22"
+          "createdAt": "2026-04-23",
+          "updatedAt": "2026-04-23"
         }
       ]
     },
