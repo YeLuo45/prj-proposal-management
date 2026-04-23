@@ -426,16 +426,16 @@
     {
       "id": "PRJ-20260419-005",
       "name": "hermes-agent-collab",
-      "description": "Python asyncio + websockets/FastAPI；工作区CRUD、Agent Profile、任务生命周期（pending→claimed→in_progress→completed/failed/blocked）、WebSocket实时推送、技能系统、CLI命令；独立Web协作面板；数据存储在~/.hermes/workspaces/；验收发现并修复5处CLI bug（TaskManager别名缺失、AgentStatus.ONLINE不存在、TaskStatus.CANCELLED不存在、Task字段名不匹配等）；Web UI部署于GitHub Pages: https://yeluo45.github.io/hermes-agent-collab/",
+      "description": "Phase 1-3 核心功能已验收通过（工作区CRUD、Agent Profile、任务生命周期、WebSocket实时推送、技能系统、CLI命令）。Phase 4 UI 功能已完成开发，待验收。Web UI 部署于 GitHub Pages: https://yeluo45.github.io/hermes-agent-collab/",
       "url": "",
       "gitRepo": "https://github.com/YeLuo45/hermes-agent-collab",
-      "createdAt": "2026-04-22",
-      "updatedAt": "2026-04-22",
+      "createdAt": "2026-04-23",
+      "updatedAt": "2026-04-23",
       "proposals": [
         {
           "id": "P-20260419-005",
           "name": "hermes-agent-collab",
-          "description": "Python asyncio + websockets/FastAPI；工作区CRUD、Agent Profile、任务生命周期（pending→claimed→in_progress→completed/failed/blocked）、WebSocket实时推送、技能系统、CLI命令；独立Web协作面板；数据存储在~/.hermes/workspaces/；验收发现并修复5处CLI bug（TaskManager别名缺失、AgentStatus.ONLINE不存在、TaskStatus.CANCELLED不存在、Task字段名不匹配等）；Web UI部署于GitHub Pages: https://yeluo45.github.io/hermes-agent-collab/",
+          "description": "Phase 1-3 核心功能已验收通过（工作区CRUD、Agent Profile、任务生命周期、WebSocket实时推送、技能系统、CLI命令）。Phase 4 UI 功能已完成开发，待验收。Web UI 部署于 GitHub Pages: https://yeluo45.github.io/hermes-agent-collab/",
           "type": "package",
           "status": "in_dev",
           "url": "",
@@ -444,8 +444,8 @@
           "tags": [
             "Web"
           ],
-          "createdAt": "2026-04-22",
-          "updatedAt": "2026-04-22"
+          "createdAt": "2026-04-23",
+          "updatedAt": "2026-04-23"
         }
       ]
     },
@@ -507,23 +507,23 @@
       "description": "育儿游戏（3-12岁）；养成照顾类（宠物+种植）；纯HTML5/JS；完整GDD + 可运行游戏",
       "url": "https://yeluo45.github.io/little-garden/",
       "gitRepo": "https://github.com/YeLuo45/little-garden",
-      "createdAt": "2026-04-22",
-      "updatedAt": "2026-04-22",
+      "createdAt": "2026-04-23",
+      "updatedAt": "2026-04-23",
       "proposals": [
         {
           "id": "P-20260422-005",
           "name": "little-garden",
           "description": "育儿游戏（3-12岁）；养成照顾类（宠物+种植）；纯HTML5/JS；完整GDD + 可运行游戏",
           "type": "package",
-          "status": "in_dev",
+          "status": "active",
           "url": "https://yeluo45.github.io/little-garden/",
           "packageUrl": "https://github.com/YeLuo45/little-garden/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/little-garden",
           "tags": [
             "游戏"
           ],
-          "createdAt": "2026-04-22",
-          "updatedAt": "2026-04-22"
+          "createdAt": "2026-04-23",
+          "updatedAt": "2026-04-23"
         }
       ]
     }
