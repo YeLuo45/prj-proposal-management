@@ -397,6 +397,295 @@
       ]
     },
     {
+      "id": "PRJ-20250421-002",
+      "name": "ai-novel-assistant",
+      "description": "AI小说助手；React + Vite + Dexie (IndexedDB) + Zustand + react-beautiful-dnd + react-router-dom；功能待确认",
+      "url": "",
+      "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
+      "createdAt": "2026-04-22",
+      "updatedAt": "2026-04-22",
+      "proposals": [
+        {
+          "id": "P-20250421-002",
+          "name": "ai-novel-assistant",
+          "description": "AI小说助手；React + Vite + Dexie (IndexedDB) + Zustand + react-beautiful-dnd + react-router-dom；功能待确认",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-22",
+          "updatedAt": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20250418-002",
+      "name": "creative-drawing-board",
+      "description": "儿童创意画板；纯HTML5单文件(745行)；自由画画/10色配色盘/3种笔刷/橡皮擦/泡泡游戏/音效反馈；完全离线可用",
+      "url": "https://yeluo45.github.io/creative-drawing-board/",
+      "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18",
+      "proposals": [
+        {
+          "id": "P-20250418-002",
+          "name": "creative-drawing-board",
+          "description": "儿童创意画板；纯HTML5单文件(745行)；自由画画/10色配色盘/3种笔刷/橡皮擦/泡泡游戏/音效反馈；完全离线可用",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/creative-drawing-board/",
+          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
+          "tags": [
+            "游戏"
+          ],
+          "createdAt": "2026-04-18",
+          "updatedAt": "2026-04-18"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20250420-001",
+      "name": "snake-battle",
+      "description": "贪吃蛇大作战；经典模式(单蛇吃食物)+AI对战(1玩家+3AI蛇,3分钟倒计时)；3套皮肤(Classic/Neon/Candy)；localStorage存档",
+      "url": "https://yeluo45.github.io/snake-battle/",
+      "gitRepo": "https://github.com/YeLuo45/snake-battle",
+      "createdAt": "2026-04-20",
+      "updatedAt": "2026-04-20",
+      "proposals": [
+        {
+          "id": "P-20250420-001",
+          "name": "snake-battle",
+          "description": "贪吃蛇大作战；经典模式(单蛇吃食物)+AI对战(1玩家+3AI蛇,3分钟倒计时)；3套皮肤(Classic/Neon/Candy)；localStorage存档",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/snake-battle/",
+          "packageUrl": "https://github.com/YeLuo45/snake-battle/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/snake-battle",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-20",
+          "updatedAt": "2026-04-20"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20250419-002",
+      "name": "tank-battle",
+      "description": "坦克大战；13x13网格；WASD/方向键移动+空格射击；4种地形(砖块/钢铁/草丛/河流)；AI巡逻+追击；保护老鹰基地；3分钟倒计时",
+      "url": "https://yeluo45.github.io/tank-battle/",
+      "gitRepo": "https://github.com/YeLuo45/tank-battle",
+      "createdAt": "2026-04-19",
+      "updatedAt": "2026-04-19",
+      "proposals": [
+        {
+          "id": "P-20250419-002",
+          "name": "tank-battle",
+          "description": "坦克大战；13x13网格；WASD/方向键移动+空格射击；4种地形(砖块/钢铁/草丛/河流)；AI巡逻+追击；保护老鹰基地；3分钟倒计时",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/tank-battle/",
+          "packageUrl": "https://github.com/YeLuo45/tank-battle/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/tank-battle",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-19",
+          "updatedAt": "2026-04-19"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20250418-005",
+      "name": "todo-app",
+      "description": "Todo应用；Web版+Vite构建+Electron桌面客户端(electron-builder打包)；NSIS安装包+便携版",
+      "url": "",
+      "gitRepo": "https://github.com/YeLuo45/todo-app",
+      "createdAt": "2026-04-18",
+      "updatedAt": "2026-04-18",
+      "proposals": [
+        {
+          "id": "P-20250418-005",
+          "name": "todo-app",
+          "description": "Todo应用；Web版+Vite构建+Electron桌面客户端(electron-builder打包)；NSIS安装包+便携版",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/todo-app/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/todo-app",
+          "tags": [
+            "Web"
+          ],
+          "createdAt": "2026-04-18",
+          "updatedAt": "2026-04-18"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20250420-002",
+      "name": "pixel-pal-web",
+      "description": "AI伴侣桌面应用；Electron + React 19 + MUI + Zustand；PDF解析(xlsx/pdfjs)+文档导入(mammoth)+笔记管理；需打包Windows exe",
+      "url": "https://YeLuo45.github.io/pixel-pal-web",
+      "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
+      "createdAt": "2026-04-20",
+      "updatedAt": "2026-04-20",
+      "proposals": [
+        {
+          "id": "P-20250420-002",
+          "name": "pixel-pal-web",
+          "description": "AI伴侣桌面应用；Electron + React 19 + MUI + Zustand；PDF解析(xlsx/pdfjs)+文档导入(mammoth)+笔记管理；需打包Windows exe",
+          "type": "web",
+          "status": "active",
+          "url": "https://YeLuo45.github.io/pixel-pal-web",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
+          "tags": [
+            "Windows"
+          ],
+          "createdAt": "2026-04-20",
+          "updatedAt": "2026-04-20"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20250421-003",
+      "name": "personalClaw",
+      "description": "OpenClaw PC控制平台；Electron + React 18 + Ant Design + node-cron；桌面管理功能",
+      "url": "",
+      "gitRepo": "https://github.com/YeLuo45/personalClaw",
+      "createdAt": "2026-04-21",
+      "updatedAt": "2026-04-21",
+      "proposals": [
+        {
+          "id": "P-20250421-003",
+          "name": "personalClaw",
+          "description": "OpenClaw PC控制平台；Electron + React 18 + Ant Design + node-cron；桌面管理功能",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/personalClaw/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/personalClaw",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-21",
+          "updatedAt": "2026-04-21"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20250425-001",
+      "name": "dsw-debug",
+      "description": "DSW调试临时构建产物；PWA；sw.js + workbox缓存；非正式项目",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-04-25",
+      "updatedAt": "2026-04-25",
+      "proposals": [
+        {
+          "id": "P-20250425-001",
+          "name": "dsw-debug",
+          "description": "DSW调试临时构建产物；PWA；sw.js + workbox缓存；非正式项目",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/dsw-debug/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "Web",
+            "PWA"
+          ],
+          "createdAt": "2026-04-25",
+          "updatedAt": "2026-04-25"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20250425-002",
+      "name": "dsw-deploy",
+      "description": "DSW部署临时构建产物；PWA；sw.js + workbox缓存；非正式项目",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-04-25",
+      "updatedAt": "2026-04-25",
+      "proposals": [
+        {
+          "id": "P-20250425-002",
+          "name": "dsw-deploy",
+          "description": "DSW部署临时构建产物；PWA；sw.js + workbox缓存；非正式项目",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/dsw-deploy/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "Web",
+            "PWA"
+          ],
+          "createdAt": "2026-04-25",
+          "updatedAt": "2026-04-25"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20250425-003",
+      "name": "dsw-fresh",
+      "description": "DSW新部署临时项目；含dist/源码/src/node_modules；非正式项目",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-04-25",
+      "updatedAt": "2026-04-25",
+      "proposals": [
+        {
+          "id": "P-20250425-003",
+          "name": "dsw-fresh",
+          "description": "DSW新部署临时项目；含dist/源码/src/node_modules；非正式项目",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/dsw-fresh/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-25",
+          "updatedAt": "2026-04-25"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20250425-004",
+      "name": "dsw-new-deploy",
+      "description": "DSW新部署临时构建产物；PWA；sw.js + workbox缓存；非正式项目",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-04-25",
+      "updatedAt": "2026-04-25",
+      "proposals": [
+        {
+          "id": "P-20250425-004",
+          "name": "dsw-new-deploy",
+          "description": "DSW新部署临时构建产物；PWA；sw.js + workbox缓存；非正式项目",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/dsw-new-deploy/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "Web",
+            "PWA"
+          ],
+          "createdAt": "2026-04-25",
+          "updatedAt": "2026-04-25"
+        }
+      ]
+    },
+    {
       "id": "PRJ-20260419-001",
       "name": "temple-run",
       "description": "类Temple Run无尽跑酷；2.5D侧视角；3条跑道左右切换；跳跃/下滑操作；金币收集；React 18 + Vite 5 + PWA；Web版已部署",
