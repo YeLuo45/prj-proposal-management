@@ -579,33 +579,6 @@
       ]
     },
     {
-      "id": "PRJ-20250425-001",
-      "name": "dsw-debug",
-      "description": "DSW调试临时构建产物；PWA；sw.js + workbox缓存；非正式项目",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-25",
-      "updatedAt": "2026-04-25",
-      "proposals": [
-        {
-          "id": "P-20250425-001",
-          "name": "dsw-debug",
-          "description": "DSW调试临时构建产物；PWA；sw.js + workbox缓存；非正式项目",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/dsw-debug/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Web",
-            "PWA"
-          ],
-          "createdAt": "2026-04-25",
-          "updatedAt": "2026-04-25"
-        }
-      ]
-    },
-    {
       "id": "PRJ-20260419-001",
       "name": "temple-run",
       "description": "类Temple Run无尽跑酷；2.5D侧视角；3条跑道左右切换；跳跃/下滑操作；金币收集；React 18 + Vite 5 + PWA；Web版已部署",
