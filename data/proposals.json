@@ -213,26 +213,26 @@
     {
       "id": "PRJ-20250416-003",
       "name": "calculator-app.git",
-      "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算",
+      "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算（Web 已交付，APK 因 NDK 损坏阻塞）",
       "url": "",
       "gitRepo": "https://github.com/YeLuo45/calculator-app.git",
-      "createdAt": "2026-04-16",
-      "updatedAt": "2026-04-16",
+      "createdAt": "2026-04-26",
+      "updatedAt": "2026-04-26",
       "proposals": [
         {
           "id": "P-20250416-003",
           "name": "calculator-app.git",
-          "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算",
+          "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算（Web 已交付，APK 因 NDK 损坏阻塞）",
           "type": "package",
-          "status": "in_dev",
+          "status": "active",
           "url": "",
           "packageUrl": "https://github.com/YeLuo45/calculator-app.git/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/calculator-app.git",
           "tags": [
-            "提案"
+            "Web"
           ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "2026-04-16"
+          "createdAt": "2026-04-26",
+          "updatedAt": "2026-04-26"
         }
       ]
     },
@@ -550,6 +550,32 @@
           ],
           "createdAt": "2026-04-24",
           "updatedAt": "2026-04-24"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260426-001",
+      "name": "preschool-puzzle",
+      "description": "益智解谜；纯HTML5 Canvas+JS；3-6岁幼儿；形状匹配+颜色分类+简单迷宫3种独立玩法；卡通彩色美术风格；背景音乐+操作音效；localStorage进度保存",
+      "url": "https://yeluo45.github.io/preschool-puzzle/ (gh-pages)",
+      "gitRepo": "https://github.com/YeLuo45/preschool-puzzle",
+      "createdAt": "2026-04-27",
+      "updatedAt": "2026-04-27",
+      "proposals": [
+        {
+          "id": "P-20260426-001",
+          "name": "preschool-puzzle",
+          "description": "益智解谜；纯HTML5 Canvas+JS；3-6岁幼儿；形状匹配+颜色分类+简单迷宫3种独立玩法；卡通彩色美术风格；背景音乐+操作音效；localStorage进度保存",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/preschool-puzzle/ (gh-pages)",
+          "packageUrl": "https://github.com/YeLuo45/preschool-puzzle/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/preschool-puzzle",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-27",
+          "updatedAt": "2026-04-27"
         }
       ]
     },
