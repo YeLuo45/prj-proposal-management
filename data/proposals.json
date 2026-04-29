@@ -8,7 +8,7 @@
       "url": "https://yeluo45.github.io/whack-a-mole-3d/",
       "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
       "createdAt": "2026-04-28",
-      "updatedAt": "2026-04-28",
+      "updatedAt": "2026-04-29",
       "proposals": [
         {
           "id": "P-20260428-001",
@@ -24,6 +24,23 @@
           ],
           "createdAt": "2026-04-28",
           "updatedAt": "2026-04-28"
+        },
+        {
+          "id": "P-20260429-001",
+          "name": "3D打地鼠 V2 — 道具/关卡/皮肤系统",
+          "description": "V2迭代；M1关卡系统(3世界×10关+星级)+M2道具系统(3即时+3被动+金币体力)+M3皮肤系统(5地鼠+4锤子+盲盒)",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/whack-a-mole-3d/",
+          "packageUrl": "https://github.com/YeLuo45/whack-a-mole-3d/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+          "tags": [
+            "Web",
+            "Game",
+            "V2"
+          ],
+          "createdAt": "2026-04-29",
+          "updatedAt": "2026-04-29"
         }
       ]
     },
