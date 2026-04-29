@@ -962,6 +962,27 @@
           "updatedAt": "2026-04-24"
         }
       ]
+    },
+    {
+      "id": "PRJ-20260430-001",
+      "name": "BabyGuard 宝贝护卫队",
+      "description": "育儿主题塔防策略游戏 - 5种防御塔+4种敌人+10波次",
+      "category": "game",
+      "status": "delivered",
+      "proposals": [
+        {
+          "id": "P-20260430-001",
+          "title": "BabyGuard 宝贝护卫队 MVP",
+          "status": "delivered",
+          "engine": "Godot 4 + GDScript",
+          "target": "HTML5 (Web), Desktop",
+          "githubRepo": "https://github.com/YeLuo45/tower-baby-guard",
+          "deploymentUrl": "",
+          "notes": "育儿主题塔防；5种防御塔(Mom/Dad/Grandma/Doctor/Chef)+4种敌人(Tantrum/Bedtime/Veggie/ScreenTime)+10波次"
+        }
+      ],
+      "lastUpdate": "2026-04-30"
     }
-  ]
+  ],
+  "lastSync": "2026-04-30"
 }
