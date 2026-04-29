@@ -30,26 +30,26 @@
     {
       "id": "PRJ-20260427-001",
       "name": "flight-chess-3d",
-      "description": "3D卡通飞行棋；React Three Fiber 3D渲染；传统模式+事件模式(幸运/厄运/传送/交换)；2-4人本地对战；Roblox风格卡通渲染；60FPS目标",
+      "description": "3D卡通飞行棋；React Three Fiber 3D渲染；传统模式+事件模式(幸运/厄运/传送/交换)；2-4人本地对战；Roblox风格卡通渲染；60FPS目标；workflow修复id-token权限后部署成功",
       "url": "https://yeluo45.github.io/flight-chess-3d/",
       "gitRepo": "https://github.com/YeLuo45/flight-chess-3d",
-      "createdAt": "2026-04-27",
-      "updatedAt": "2026-04-27",
+      "createdAt": "2026-04-28",
+      "updatedAt": "2026-04-28",
       "proposals": [
         {
           "id": "P-20260427-001",
           "name": "flight-chess-3d",
-          "description": "3D卡通飞行棋；React Three Fiber 3D渲染；传统模式+事件模式(幸运/厄运/传送/交换)；2-4人本地对战；Roblox风格卡通渲染；60FPS目标",
+          "description": "3D卡通飞行棋；React Three Fiber 3D渲染；传统模式+事件模式(幸运/厄运/传送/交换)；2-4人本地对战；Roblox风格卡通渲染；60FPS目标；workflow修复id-token权限后部署成功",
           "type": "package",
-          "status": "in_dev",
+          "status": "active",
           "url": "https://yeluo45.github.io/flight-chess-3d/",
           "packageUrl": "https://github.com/YeLuo45/flight-chess-3d/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/flight-chess-3d",
           "tags": [
             "提案"
           ],
-          "createdAt": "2026-04-27",
-          "updatedAt": "2026-04-27"
+          "createdAt": "2026-04-28",
+          "updatedAt": "2026-04-28"
         }
       ]
     },
@@ -307,7 +307,8 @@
           "packageUrl": "https://github.com/YeLuo45/todo-list/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/todo-list",
           "tags": [
-            "Web"
+            "Web",
+            "Windows"
           ],
           "createdAt": "2026-04-16",
           "updatedAt": "2026-04-16"
@@ -333,6 +334,7 @@
           "packageUrl": "https://github.com/YeLuo45/game-1024/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/game-1024",
           "tags": [
+            "Web",
             "PWA",
             "游戏"
           ],
@@ -438,6 +440,7 @@
           "packageUrl": "https://github.com/YeLuo45/dont-step-white/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/dont-step-white",
           "tags": [
+            "Web",
             "PWA"
           ],
           "createdAt": "2026-04-19",
@@ -594,7 +597,7 @@
           "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
           "tags": [
-            "提案"
+            "Windows"
           ],
           "createdAt": "2026-04-20",
           "updatedAt": "2026-04-20"
@@ -646,6 +649,7 @@
           "packageUrl": "https://github.com/YeLuo45/dsw-debug/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
+            "Web",
             "PWA"
           ],
           "createdAt": "2026-04-25",
@@ -672,6 +676,7 @@
           "packageUrl": "https://github.com/YeLuo45/dsw-deploy/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
+            "Web",
             "PWA"
           ],
           "createdAt": "2026-04-25",
@@ -724,6 +729,7 @@
           "packageUrl": "https://github.com/YeLuo45/dsw-new-deploy/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
+            "Web",
             "PWA"
           ],
           "createdAt": "2026-04-25",
@@ -916,7 +922,7 @@
     },
     {
       "id": "PRJ-20260424-002",
-      "name": "P-20260424-002",
+      "name": "hermes-协作服务器消息转发机制重构",
       "description": "协作服务器消息转发机制重构；通过 DirectAgentClient (subprocess) 调用 Hermes AIAgent，显式传递 ANTHROPIC_API_KEY 环境变量解决凭证问题；3次连续测试100%成功响应；修复了 .env 加载问题和 API key 传递问题（commit 74469db → 51ef8f8）",
       "url": "",
       "gitRepo": "",
@@ -925,12 +931,12 @@
       "proposals": [
         {
           "id": "P-20260424-002",
-          "name": "P-20260424-002",
+          "name": "hermes-协作服务器消息转发机制重构",
           "description": "协作服务器消息转发机制重构；通过 DirectAgentClient (subprocess) 调用 Hermes AIAgent，显式传递 ANTHROPIC_API_KEY 环境变量解决凭证问题；3次连续测试100%成功响应；修复了 .env 加载问题和 API key 传递问题（commit 74469db → 51ef8f8）",
           "type": "package",
           "status": "active",
           "url": "",
-          "packageUrl": "",
+          "packageUrl": "https://github.com/YeLuo45/hermes-协作服务器消息转发机制重构/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
             "提案"
