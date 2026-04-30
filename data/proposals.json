@@ -8,7 +8,7 @@
       "url": "https://yeluo45.github.io/whack-a-mole-3d/",
       "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
       "createdAt": "2026-04-28",
-      "updatedAt": "2026-04-29",
+      "updatedAt": "2026-04-28",
       "proposals": [
         {
           "id": "P-20260428-001",
@@ -24,20 +24,29 @@
           ],
           "createdAt": "2026-04-28",
           "updatedAt": "2026-04-28"
-        },
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260429-001",
+      "name": "whack-a-mole-3d",
+      "description": "V2迭代已完成交付；M1关卡系统(3世界×10关+星级)+M2道具系统(3即时+3被动+金币体力)+M3皮肤系统(5地鼠+4锤子+盲盒)；index.html 1490→2545行；合并远程master冲突已解决；分支feature/v2-progression已合并到master；localStorage存档key: whackamole_v2_save",
+      "url": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+      "createdAt": "2026-04-29",
+      "updatedAt": "2026-04-29",
+      "proposals": [
         {
           "id": "P-20260429-001",
-          "name": "3D打地鼠 V2 — 道具/关卡/皮肤系统",
-          "description": "V2迭代；M1关卡系统(3世界×10关+星级)+M2道具系统(3即时+3被动+金币体力)+M3皮肤系统(5地鼠+4锤子+盲盒)",
+          "name": "whack-a-mole-3d",
+          "description": "V2迭代已完成交付；M1关卡系统(3世界×10关+星级)+M2道具系统(3即时+3被动+金币体力)+M3皮肤系统(5地鼠+4锤子+盲盒)；index.html 1490→2545行；合并远程master冲突已解决；分支feature/v2-progression已合并到master；localStorage存档key: whackamole_v2_save",
           "type": "package",
           "status": "active",
           "url": "https://yeluo45.github.io/whack-a-mole-3d/",
           "packageUrl": "https://github.com/YeLuo45/whack-a-mole-3d/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
           "tags": [
-            "Web",
-            "Game",
-            "V2"
+            "提案"
           ],
           "createdAt": "2026-04-29",
           "updatedAt": "2026-04-29"
@@ -755,6 +764,32 @@
       ]
     },
     {
+      "id": "PRJ-20260430-001",
+      "name": "tower-baby-guard",
+      "description": "育儿主题塔防；5种防御塔(Mom/Dad/Grandma/Doctor/Chef)+4种敌人(Tantrum/Bedtime/Veggie/ScreenTime)+10波次；Godot 4 HTML5导出",
+      "url": "",
+      "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
+      "createdAt": "2026-04-30",
+      "updatedAt": "2026-04-30",
+      "proposals": [
+        {
+          "id": "P-20260430-001",
+          "name": "tower-baby-guard",
+          "description": "育儿主题塔防；5种防御塔(Mom/Dad/Grandma/Doctor/Chef)+4种敌人(Tantrum/Bedtime/Veggie/ScreenTime)+10波次；Godot 4 HTML5导出",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/tower-baby-guard/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-30",
+          "updatedAt": "2026-04-30"
+        }
+      ]
+    },
+    {
       "id": "PRJ-20260419-001",
       "name": "temple-run",
       "description": "类Temple Run无尽跑酷；2.5D侧视角；3条跑道左右切换；跳跃/下滑操作；金币收集；React 18 + Vite 5 + PWA；Web版已部署",
@@ -939,68 +974,29 @@
     },
     {
       "id": "PRJ-20260424-002",
-      "name": "hermes-协作服务器消息转发机制重构",
-      "description": "协作服务器消息转发机制重构；通过 DirectAgentClient (subprocess) 调用 Hermes AIAgent，显式传递 ANTHROPIC_API_KEY 环境变量解决凭证问题；3次连续测试100%成功响应；修复了 .env 加载问题和 API key 传递问题（commit 74469db → 51ef8f8）",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-24",
-      "updatedAt": "2026-04-24",
+      "name": "doc-editor",
+      "description": "富文本编辑器(加粗/斜体/下划线/删除线/标题/列表/引用/代码块/链接/图片)+文档管理(侧边栏列表/新建/删除/重命名)+自动保存(2秒防抖)+历史版本(30秒快照)+导出(MD/HTML/打印PDF)+主题切换(亮/暗)+本地化中文；IndexedDB持久化；网络故障用GitHub API直接推送源码",
+      "url": "https://yeluo45.github.io/doc-editor/",
+      "gitRepo": "https://github.com/YeLuo45/doc-editor",
+      "createdAt": "2026-04-30",
+      "updatedAt": "2026-04-30",
       "proposals": [
         {
           "id": "P-20260424-002",
-          "name": "hermes-协作服务器消息转发机制重构",
-          "description": "协作服务器消息转发机制重构；通过 DirectAgentClient (subprocess) 调用 Hermes AIAgent，显式传递 ANTHROPIC_API_KEY 环境变量解决凭证问题；3次连续测试100%成功响应；修复了 .env 加载问题和 API key 传递问题（commit 74469db → 51ef8f8）",
+          "name": "doc-editor",
+          "description": "富文本编辑器(加粗/斜体/下划线/删除线/标题/列表/引用/代码块/链接/图片)+文档管理(侧边栏列表/新建/删除/重命名)+自动保存(2秒防抖)+历史版本(30秒快照)+导出(MD/HTML/打印PDF)+主题切换(亮/暗)+本地化中文；IndexedDB持久化；网络故障用GitHub API直接推送源码",
           "type": "package",
           "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/hermes-协作服务器消息转发机制重构/archive/refs/heads/main.zip",
-          "gitRepo": "",
+          "url": "https://yeluo45.github.io/doc-editor/",
+          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/doc-editor",
           "tags": [
             "提案"
           ],
-          "createdAt": "2026-04-24",
-          "updatedAt": "2026-04-24"
+          "createdAt": "2026-04-30",
+          "updatedAt": "2026-04-30"
         }
-      ]
-    },
-    {
-      "id": "PRJ-20260430-001",
-      "name": "BabyGuard 宝贝护卫队",
-      "description": "育儿主题塔防策略游戏 - 5种防御塔+4种敌人+10波次",
-      "category": "game",
-      "status": "delivered",
-      "proposals": [
-        {
-          "id": "P-20260430-001",
-          "title": "BabyGuard 宝贝护卫队 MVP",
-          "status": "delivered",
-          "engine": "Godot 4 + GDScript",
-          "target": "HTML5 (Web), Desktop",
-          "githubRepo": "https://github.com/YeLuo45/tower-baby-guard",
-          "deploymentUrl": "",
-          "notes": "育儿主题塔防；5种防御塔(Mom/Dad/Grandma/Doctor/Chef)+4种敌人(Tantrum/Bedtime/Veggie/ScreenTime)+10波次"
-        }
-      ],
-      "lastUpdate": "2026-04-30"
-    },
-    {
-      "id": "PRJ-20260430-002",
-      "name": "文档编辑器",
-      "slug": "doc-editor",
-      "description": "React + Tiptap 富文本编辑器，支持文档管理、自动保存、历史版本、Markdown/HTML/PDF 导出",
-      "repository": "https://github.com/YeLuo45/doc-editor",
-      "deployment": "https://yeluo45.github.io/doc-editor/",
-      "stage": "MVP",
-      "tags": [
-        "React",
-        "TypeScript",
-        "富文本编辑器",
-        "IndexedDB"
-      ],
-      "proposals": [
-        "P-20260430-002"
       ]
     }
-  ],
-  "lastSync": "2026-04-30"
+  ]
 }
