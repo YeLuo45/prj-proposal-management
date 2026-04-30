@@ -54,6 +54,58 @@
       ]
     },
     {
+      "id": "PRJ-20260430-001",
+      "name": "tower-baby-guard",
+      "description": "育儿主题塔防；5种防御塔(Mom/Dad/Grandma/Doctor/Chef)+4种敌人(Tantrum/Bedtime/Veggie/ScreenTime)+10波次；Godot 4 HTML5导出",
+      "url": "",
+      "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
+      "createdAt": "2026-04-30",
+      "updatedAt": "2026-04-30",
+      "proposals": [
+        {
+          "id": "P-20260430-001",
+          "name": "tower-baby-guard",
+          "description": "育儿主题塔防；5种防御塔(Mom/Dad/Grandma/Doctor/Chef)+4种敌人(Tantrum/Bedtime/Veggie/ScreenTime)+10波次；Godot 4 HTML5导出",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/tower-baby-guard/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-30",
+          "updatedAt": "2026-04-30"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260430-002",
+      "name": "whack-a-mole-3d",
+      "description": "世界4熔岩(第31-40关)+火焰Boss巨人(血条+连续击中机制)+熔岩视觉效果",
+      "url": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+      "createdAt": "2026-04-30",
+      "updatedAt": "2026-04-30",
+      "proposals": [
+        {
+          "id": "P-20260430-002",
+          "name": "whack-a-mole-3d",
+          "description": "世界4熔岩(第31-40关)+火焰Boss巨人(血条+连续击中机制)+熔岩视觉效果",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/whack-a-mole-3d/",
+          "packageUrl": "https://github.com/YeLuo45/whack-a-mole-3d/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-30",
+          "updatedAt": "2026-04-30"
+        }
+      ]
+    },
+    {
       "id": "PRJ-20260427-001",
       "name": "flight-chess-3d",
       "description": "3D卡通飞行棋；React Three Fiber 3D渲染；传统模式+事件模式(幸运/厄运/传送/交换)；2-4人本地对战；Roblox风格卡通渲染；60FPS目标；workflow修复id-token权限后部署成功",
@@ -760,32 +812,6 @@
           ],
           "createdAt": "2026-04-25",
           "updatedAt": "2026-04-25"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260430-001",
-      "name": "tower-baby-guard",
-      "description": "育儿主题塔防；5种防御塔(Mom/Dad/Grandma/Doctor/Chef)+4种敌人(Tantrum/Bedtime/Veggie/ScreenTime)+10波次；Godot 4 HTML5导出",
-      "url": "",
-      "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
-      "createdAt": "2026-04-30",
-      "updatedAt": "2026-04-30",
-      "proposals": [
-        {
-          "id": "P-20260430-001",
-          "name": "tower-baby-guard",
-          "description": "育儿主题塔防；5种防御塔(Mom/Dad/Grandma/Doctor/Chef)+4种敌人(Tantrum/Bedtime/Veggie/ScreenTime)+10波次；Godot 4 HTML5导出",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/tower-baby-guard/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-30",
-          "updatedAt": "2026-04-30"
         }
       ]
     },
