@@ -82,7 +82,7 @@
     {
       "id": "PRJ-20260430-002",
       "name": "whack-a-mole-3d",
-      "description": "世界4熔岩(第31-40关)+火焰Boss巨人(血条+连续击中机制)+熔岩视觉效果",
+      "description": "React + Tiptap 富文本编辑器，支持文件夹分类、标签管理、自动保存、历史版本、Markdown/HTML/PDF 导出",
       "url": "https://yeluo45.github.io/whack-a-mole-3d/",
       "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
       "createdAt": "2026-04-30",
@@ -102,6 +102,21 @@
           ],
           "createdAt": "2026-04-30",
           "updatedAt": "2026-04-30"
+        }
+      ],
+      "tags": [
+        "React",
+        "TypeScript",
+        "富文本编辑器",
+        "IndexedDB",
+        "文件夹",
+        "标签"
+      ],
+      "iterations": [
+        {
+          "id": "P-20260430-002-iteration-1",
+          "name": "文件夹与标签分类系统",
+          "status": "delivered"
         }
       ]
     },
