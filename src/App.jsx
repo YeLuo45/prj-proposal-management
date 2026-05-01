@@ -5,6 +5,7 @@ import FilterBar from './components/FilterBar'
 import ProjectCard from './components/ProjectCard'
 import ProjectProposalList from './components/ProjectProposalList'
 import ProjectForm from './components/ProjectForm'
+import ProjectOverview from './components/ProjectOverview'
 import ProposalForm from './components/ProposalForm'
 import KanbanBoard from './components/KanbanBoard'
 import { useGitHub } from './hooks/useGitHub'
@@ -56,6 +57,7 @@ export default function App() {
   const [showTokenInput, setShowTokenInput] = useState(false)
   const [selectedProjectId, setSelectedProjectId] = useState(null)
   const [selectedProposals, setSelectedProposals] = useState([])
+  const [showProjectOverview, setShowProjectOverview] = useState(null) // null = not shown, object = project data
 
   // Advanced filter states
   const [dateRange, setDateRange] = useState({ start: '', end: '' })
@@ -66,6 +68,7 @@ export default function App() {
     } catch { return [] }
   })
   const [showAdvanced, setShowAdvanced] = useState(false)
+  const [sortBy, setSortBy] = useState('updated')
 
   const PAGE_SIZE = 12
 
@@ -95,6 +98,17 @@ export default function App() {
       selectedTags.every(tag => p.tags?.includes(tag))
     )
     return matchSearch && matchType && matchStatus && matchDate && matchTags
+  }).sort((a, b) => {
+    if (sortBy === 'updated') {
+      return (b.updatedAt > a.updatedAt ? 1 : -1)
+    } else if (sortBy === 'created') {
+      return (a.createdAt > b.createdAt ? 1 : -1)
+    } else if (sortBy === 'proposals') {
+      return ((b.proposals?.length || 0) - (a.proposals?.length || 0))
+    } else if (sortBy === 'name') {
+      return a.name.localeCompare(b.name, 'zh-CN')
+    }
+    return 0
   })
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
@@ -252,6 +266,38 @@ export default function App() {
     setShowProposalForm(true)
   }, [])
 
+  // Copy project (creates a new project with all proposals)
+  const handleCopyProject = useCallback(async (project) => {
+    const today = new Date().toISOString().split('T')[0].replace(/-/g, '')
+    const existingProjects = data?.projects || []
+    const todayProjects = existingProjects.filter(p => p.id.startsWith(`PRJ-${today}`))
+    const seq = String(todayProjects.length + 1).padStart(3, '0')
+    const newProjectId = `PRJ-${today}-${seq}`
+
+    // Copy all proposals with new IDs
+    const copiedProposals = (project.proposals || []).map((p, idx) => {
+      const pSeq = String(idx + 1).padStart(3, '0')
+      return {
+        ...p,
+        id: `P-${today}-${seq}-${pSeq}`,
+        createdAt: new Date().toISOString().split('T')[0],
+        updatedAt: new Date().toISOString().split('T')[0],
+      }
+    })
+
+    const newProject = {
+      ...project,
+      id: newProjectId,
+      name: `复制-${project.name}`,
+      proposals: copiedProposals,
+      createdAt: new Date().toISOString().split('T')[0],
+      updatedAt: new Date().toISOString().split('T')[0],
+    }
+
+    const projects = [newProject, ...existingProjects]
+    await saveData({ version: 2, projects })
+  }, [data, saveData])
+
   // Batch operations
   const handleBatchArchive = useCallback(async () => {
     if (!window.confirm(`确定归档选中的 ${selectedProposals.length} 个提案？`)) return
@@ -282,6 +328,23 @@ export default function App() {
     await saveData({ version: 2, projects })
     setSelectedProposals([])
   }, [data, selectedProposals, saveData])
+
+  // Reorder proposals within a project
+  const handleReorderProposals = useCallback(async (projectId, fromIndex, toIndex) => {
+    const projects = (data?.projects || []).map(prj => {
+      if (prj.id !== projectId) return prj
+      const proposals = [...(prj.proposals || [])]
+      const [moved] = proposals.splice(fromIndex, 1)
+      proposals.splice(toIndex, 0, moved)
+      return { ...prj, proposals, updatedAt: new Date().toISOString().split('T')[0] }
+    })
+    await saveData({ version: 2, projects })
+  }, [data, saveData])
+
+  // Show project overview
+  const handleShowOverview = useCallback((project) => {
+    setShowProjectOverview(project)
+  }, [])
 
   // Toggle proposal selection
   const toggleProposalSelection = useCallback((projectId, proposal, forceDeselect = false) => {
@@ -447,6 +510,8 @@ export default function App() {
             onExportJSON={handleExportJSON}
             onExportCSV={handleExportCSV}
             onImportCSV={handleImportCSV}
+            sortBy={sortBy}
+            onSortChange={setSortBy}
           />
         </div>
 
@@ -456,6 +521,14 @@ export default function App() {
             <button className="float-right" onClick={clearError}>x</button>
             {error}
           </div>
+        )}
+
+        {/* Project Overview Panel */}
+        {showProjectOverview && (
+          <ProjectOverview
+            project={showProjectOverview}
+            onClose={() => setShowProjectOverview(null)}
+          />
         )}
 
         {selectedProjectId ? (
@@ -471,6 +544,7 @@ export default function App() {
             onToggleSelect={toggleProposalSelection}
             onBatchArchive={handleBatchArchive}
             onBatchTag={handleBatchTag}
+            onReorderProposals={handleReorderProposals}
           />
         ) : viewMode === 'kanban' ? (
           <KanbanBoard
@@ -506,6 +580,8 @@ export default function App() {
                   onEditProposal={handleEditProposal}
                   onDeleteProposal={handleDeleteProposal}
                   onCopy={handleCopy}
+                  onCopyProject={handleCopyProject}
+                  onShowOverview={handleShowOverview}
                 />
               ))}
               {paginated.length === 0 && (
@@ -527,6 +603,8 @@ export default function App() {
                 onEditProposal={handleEditProposal}
                 onDeleteProposal={handleDeleteProposal}
                 onCopy={handleCopy}
+                onCopyProject={handleCopyProject}
+                onShowOverview={handleShowOverview}
               />
             ))}
             {paginated.length === 0 && !loading && (

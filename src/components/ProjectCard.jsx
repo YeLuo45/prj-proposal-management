@@ -11,7 +11,7 @@ const STATUS_LABELS = {
   accepted: '✅ 已验收',
 }
 
-export default function ProjectCard({ project: prj, viewMode, onSelectProject, onEditProject, onDeleteProject, onAddProposal, onEditProposal, onDeleteProposal, onCopy }) {
+export default function ProjectCard({ project: prj, viewMode, onSelectProject, onEditProject, onDeleteProject, onAddProposal, onEditProposal, onDeleteProposal, onCopy, onCopyProject, onShowOverview }) {
   // Latest proposal (most recent by updatedAt)
   const latestProposal = prj.proposals?.length
     ? [...prj.proposals].sort((a, b) => (b.updatedAt > a.updatedAt ? 1 : -1))[0]
@@ -121,6 +121,12 @@ export default function ProjectCard({ project: prj, viewMode, onSelectProject, o
       <div className="flex gap-2 mt-3">
         <button onClick={() => onAddProposal(prj)} className="flex-1 text-green-600 dark:text-green-400 border border-green-300 dark:border-green-700 rounded px-3 py-1.5 text-sm hover:bg-green-50 dark:hover:bg-green-900/30">
           + 提案
+        </button>
+        <button onClick={() => onCopyProject(prj)} className="flex-1 text-purple-600 dark:text-purple-400 border border-purple-300 dark:border-purple-700 rounded px-3 py-1.5 text-sm hover:bg-purple-50 dark:hover:bg-purple-900/30">
+          复制
+        </button>
+        <button onClick={() => onShowOverview(prj)} className="flex-1 text-orange-600 dark:text-orange-400 border border-orange-300 dark:border-orange-700 rounded px-3 py-1.5 text-sm hover:bg-orange-50 dark:hover:bg-orange-900/30">
+          概览
         </button>
         <button onClick={() => onEditProject(prj)} className="flex-1 text-blue-600 dark:text-blue-400 border border-blue-300 dark:border-blue-700 rounded px-3 py-1.5 text-sm hover:bg-blue-50 dark:hover:bg-blue-900/30">
           编辑

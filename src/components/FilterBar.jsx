@@ -18,6 +18,8 @@ export default function FilterBar({
   onExportJSON,
   onExportCSV,
   onImportCSV,
+  // Sort
+  sortBy, onSortChange,
 }) {
   const [filterName, setFilterName] = useState('')
   const [showTagDropdown, setShowTagDropdown] = useState(false)
@@ -36,6 +38,13 @@ export default function FilterBar({
     { value: 'in_acceptance', label: '验收中' },
     { value: 'accepted', label: '已验收' },
     { value: 'archived', label: '已归档' },
+  ]
+
+  const sortOptions = [
+    { value: 'updated', label: '最近更新' },
+    { value: 'created', label: '最早创建' },
+    { value: 'proposals', label: '最多提案' },
+    { value: 'name', label: '名称排序' },
   ]
 
   const toggleTag = (tag) => {
@@ -106,6 +115,14 @@ export default function FilterBar({
           看板
         </button>
       </div>
+
+      {/* Sort dropdown */}
+      <select value={sortBy} onChange={e => onSortChange(e.target.value)}
+        className="border border-gray-300 dark:border-gray-600 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm">
+        {sortOptions.map(opt => (
+          <option key={opt.value} value={opt.value}>{opt.label}</option>
+        ))}
+      </select>
 
       {/* Advanced filter toggle */}
       <button

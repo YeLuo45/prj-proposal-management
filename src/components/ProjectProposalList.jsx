@@ -1,3 +1,5 @@
+import { useState, useCallback } from 'react'
+
 const TYPE_LABELS = { web: '🌐', app: '📱', package: '📦' }
 const STATUS_LABELS = {
   active: '✅ Active',
@@ -11,7 +13,7 @@ const STATUS_LABELS = {
   accepted: '✅ 已验收',
 }
 
-export default function ProjectProposalList({ project, onBack, onAddProposal, onEditProposal, onDeleteProposal, onCopy, onCopyProposal, selectedProposals, onToggleSelect, onBatchArchive, onBatchTag }) {
+export default function ProjectProposalList({ project, onBack, onAddProposal, onEditProposal, onDeleteProposal, onCopy, onCopyProposal, selectedProposals, onToggleSelect, onBatchArchive, onBatchTag, onReorderProposals }) {
   if (!project) {
     return (
       <div className="text-center py-8 text-gray-500 dark:text-gray-400">
@@ -21,12 +23,46 @@ export default function ProjectProposalList({ project, onBack, onAddProposal, on
     )
   }
 
-  const sortedProposals = [...(project.proposals || [])].sort((a, b) =>
-    (b.updatedAt > a.updatedAt ? 1 : -1)
-  )
+  const [dragIndex, setDragIndex] = useState(null)
+  const [dragOverIndex, setDragOverIndex] = useState(null)
+
+  // Use project.proposals directly for display and reordering
+  const sortedProposals = [...(project.proposals || [])]
 
   const selectedSet = new Set(selectedProposals.map(p => p.id))
   const allSelected = sortedProposals.length > 0 && sortedProposals.every(p => selectedSet.has(p.id))
+
+  const handleDragStart = useCallback((e, index) => {
+    setDragIndex(index)
+    e.dataTransfer.effectAllowed = 'move'
+    e.dataTransfer.setData('text/plain', String(index))
+  }, [])
+
+  const handleDragOver = useCallback((e, index) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setDragOverIndex(index)
+  }, [])
+
+  const handleDragLeave = useCallback((e) => {
+    if (!e.currentTarget.contains(e.relatedTarget)) {
+      setDragOverIndex(null)
+    }
+  }, [])
+
+  const handleDrop = useCallback((e, dropIndex) => {
+    e.preventDefault()
+    if (dragIndex !== null && dragIndex !== dropIndex) {
+      onReorderProposals(project.id, dragIndex, dropIndex)
+    }
+    setDragIndex(null)
+    setDragOverIndex(null)
+  }, [dragIndex, project.id, onReorderProposals])
+
+  const handleDragEnd = useCallback(() => {
+    setDragIndex(null)
+    setDragOverIndex(null)
+  }, [])
 
   return (
     <div>
@@ -89,11 +125,28 @@ export default function ProjectProposalList({ project, onBack, onAddProposal, on
           暂无提案
         </div>
       ) : (
-        <div className="space-y-4">
-          {sortedProposals.map(p => (
-            <div key={p.id} className={`bg-white dark:bg-gray-800 rounded shadow hover:shadow-md transition-shadow p-4 border border-gray-200 dark:border-gray-700 ${selectedSet.has(p.id) ? 'ring-2 ring-blue-500' : ''}`}>
+        <div className="space-y-2">
+          {sortedProposals.map((p, index) => (
+            <div
+              key={p.id}
+              draggable
+              onDragStart={(e) => handleDragStart(e, index)}
+              onDragEnd={handleDragEnd}
+              onDragOver={(e) => handleDragOver(e, index)}
+              onDragLeave={handleDragLeave}
+              onDrop={(e) => handleDrop(e, index)}
+              className={`
+                bg-white dark:bg-gray-800 rounded shadow-sm hover:shadow-md transition-all p-4 border-2
+                ${selectedSet.has(p.id) ? 'ring-2 ring-blue-500 border-blue-300 dark:border-blue-600' : 'border-transparent'}
+                ${dragIndex === index ? 'opacity-50 scale-98' : ''}
+                ${dragOverIndex === index && dragIndex !== index ? 'border-t-4 border-blue-500' : ''}
+                cursor-grab active:cursor-grabbing
+              `}
+            >
               <div className="flex items-start justify-between mb-2">
                 <div className="flex items-center gap-3 flex-wrap">
+                  {/* Drag handle */}
+                  <span className="text-gray-300 dark:text-gray-600 cursor-grab select-none" title="拖拽排序">☰</span>
                   <input
                     type="checkbox"
                     checked={selectedSet.has(p.id)}
