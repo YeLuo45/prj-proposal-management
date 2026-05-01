@@ -28,40 +28,42 @@ export default function ProjectForm({ project, onSave, onClose }) {
     onSave(form)
   }
 
+  const inputClass = "w-full border border-gray-300 dark:border-gray-600 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg shadow-xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
         <div className="p-6">
-          <h2 className="text-xl font-bold mb-4">{project ? '编辑项目' : '新增项目'}</h2>
+          <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">{project ? '编辑项目' : '新增项目'}</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">项目名称 *</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">项目名称 *</label>
               <input value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={inputClass}
                 placeholder="如: my-awesome-project" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">描述</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">描述</label>
               <textarea value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))}
-                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={inputClass}
                 rows={2} placeholder="项目简介..." />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">访问链接 (URL)</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">访问链接 (URL)</label>
               <input value={form.url} onChange={e => setForm(f => ({ ...f, url: e.target.value }))}
-                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={inputClass}
                 placeholder="https://..." />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">GitHub 仓库链接</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">GitHub 仓库链接</label>
               <input value={form.gitRepo} onChange={e => setForm(f => ({ ...f, gitRepo: e.target.value }))}
-                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={inputClass}
                 placeholder="https://github.com/YeLuo45/..." />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">业务领域</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">业务领域</label>
               <select value={form.domain} onChange={e => setForm(f => ({ ...f, domain: e.target.value }))}
-                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                className={inputClass}>
                 <option value="">请选择领域（可选）</option>
                 {DOMAIN_OPTIONS.map(opt => (
                   <option key={opt} value={opt}>{opt}</option>
@@ -72,7 +74,7 @@ export default function ProjectForm({ project, onSave, onClose }) {
               <button type="submit" className="flex-1 bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700">
                 保存
               </button>
-              <button type="button" onClick={onClose} className="flex-1 border border-gray-300 rounded px-4 py-2 hover:bg-gray-50">
+              <button type="button" onClick={onClose} className="flex-1 border border-gray-300 dark:border-gray-600 rounded px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300">
                 取消
               </button>
             </div>

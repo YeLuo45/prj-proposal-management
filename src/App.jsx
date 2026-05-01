@@ -6,6 +6,7 @@ import ProjectCard from './components/ProjectCard'
 import ProjectProposalList from './components/ProjectProposalList'
 import ProjectForm from './components/ProjectForm'
 import ProposalForm from './components/ProposalForm'
+import KanbanBoard from './components/KanbanBoard'
 import { useGitHub } from './hooks/useGitHub'
 
 const OWNER = 'YeLuo45'
@@ -18,6 +19,28 @@ export default function App() {
     repo: REPO,
     path: FILE_PATH,
   })
+
+  // Theme state
+  const [theme, setTheme] = useState(() => {
+    const saved = localStorage.getItem('theme')
+    if (saved) return saved
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  })
+
+  // Apply theme class to root element
+  useEffect(() => {
+    const root = document.documentElement
+    if (theme === 'dark') {
+      root.classList.add('dark')
+    } else {
+      root.classList.remove('dark')
+    }
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  const toggleTheme = useCallback(() => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark')
+  }, [])
 
   const [search, setSearch] = useState('')
   const [typeFilter, setTypeFilter] = useState('all')
@@ -32,10 +55,25 @@ export default function App() {
   const [showTokenInput, setShowTokenInput] = useState(false)
   const [selectedProjectId, setSelectedProjectId] = useState(null)
 
+  // Advanced filter states
+  const [dateRange, setDateRange] = useState({ start: '', end: '' })
+  const [selectedTags, setSelectedTags] = useState([])
+  const [savedFilters, setSavedFilters] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem('savedFilters') || '[]')
+    } catch { return [] }
+  })
+  const [showAdvanced, setShowAdvanced] = useState(false)
+
   const PAGE_SIZE = 12
 
   // Project-level data (flattened for filtering)
   const projects = data?.projects || []
+
+  // Collect all unique tags from all proposals
+  const allTags = [...new Set(
+    projects.flatMap(prj => prj.proposals?.flatMap(p => p.tags || []) || [])
+  )].sort()
 
   const filtered = projects.filter(prj => {
     const matchSearch =
@@ -49,13 +87,45 @@ export default function App() {
       )
     const matchType = typeFilter === 'all' || prj.proposals?.some(p => p.type === typeFilter)
     const matchStatus = statusFilter === 'all' || prj.proposals?.some(p => p.status === statusFilter)
-    return matchSearch && matchType && matchStatus
+    const matchDate = (!dateRange.start || prj.proposals?.some(p => p.createdAt >= dateRange.start)) &&
+                      (!dateRange.end || prj.proposals?.some(p => p.createdAt <= dateRange.end))
+    const matchTags = selectedTags.length === 0 || prj.proposals?.some(p =>
+      selectedTags.every(tag => p.tags?.includes(tag))
+    )
+    return matchSearch && matchType && matchStatus && matchDate && matchTags
   })
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
 
-  useEffect(() => { setPage(1) }, [search, typeFilter, statusFilter])
+  // Flatten all proposals for kanban view
+  const allProposals = filtered.flatMap(prj =>
+    (prj.proposals || []).map(p => ({ ...p, projectName: prj.name, projectId: prj.id }))
+  )
+
+  useEffect(() => { setPage(1) }, [search, typeFilter, statusFilter, dateRange, selectedTags])
+
+  // Save filter to localStorage
+  const saveFilter = useCallback((name) => {
+    const filter = { name, search, typeFilter, statusFilter, dateRange, selectedTags }
+    const updated = [...savedFilters.filter(f => f.name !== name), filter]
+    setSavedFilters(updated)
+    localStorage.setItem('savedFilters', JSON.stringify(updated))
+  }, [savedFilters, search, typeFilter, statusFilter, dateRange, selectedTags])
+
+  const loadFilter = useCallback((filter) => {
+    setSearch(filter.search || '')
+    setTypeFilter(filter.typeFilter || 'all')
+    setStatusFilter(filter.statusFilter || 'all')
+    setDateRange(filter.dateRange || { start: '', end: '' })
+    setSelectedTags(filter.selectedTags || [])
+  }, [])
+
+  const deleteFilter = useCallback((name) => {
+    const updated = savedFilters.filter(f => f.name !== name)
+    setSavedFilters(updated)
+    localStorage.setItem('savedFilters', JSON.stringify(updated))
+  }, [savedFilters])
 
   // Project CRUD
   const handleSaveProject = useCallback(async (projectData) => {
@@ -147,6 +217,23 @@ export default function App() {
     await saveData({ version: 2, projects })
   }, [data, saveData])
 
+  // Handle kanban status change (drag & drop)
+  const handleStatusChange = useCallback(async (proposalId, projectId, newStatus) => {
+    const projects = (data?.projects || []).map(prj =>
+      prj.id === projectId
+        ? {
+            ...prj,
+            proposals: prj.proposals.map(p =>
+              p.id === proposalId
+                ? { ...p, status: newStatus, updatedAt: new Date().toISOString().split('T')[0] }
+                : p
+            )
+          }
+        : prj
+    )
+    await saveData({ version: 2, projects })
+  }, [data, saveData])
+
   const handleCopy = useCallback((text) => {
     navigator.clipboard.writeText(text)
   }, [])
@@ -157,15 +244,15 @@ export default function App() {
 
   if (!token) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
-          <h1 className="text-2xl font-bold mb-4 text-center">项目管理系统</h1>
-          <p className="text-gray-600 mb-4 text-sm">请输入 GitHub Personal Access Token 以访问数据</p>
+      <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
+        <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md max-w-md w-full">
+          <h1 className="text-2xl font-bold mb-4 text-center text-gray-800 dark:text-white">项目管理系统</h1>
+          <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">请输入 GitHub Personal Access Token 以访问数据</p>
           <input
             type="password"
             id="token-input"
             placeholder="***"
-            className="w-full border border-gray-300 rounded px-3 py-2 mb-3"
+            className="w-full border border-gray-300 dark:border-gray-600 rounded px-3 py-2 mb-3 bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
           />
           <button
             className="w-full bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700"
@@ -185,11 +272,13 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors">
       <Header
         onConfig={() => setShowTokenInput(!showTokenInput)}
         showTokenInput={showTokenInput}
         onTokenSave={(t) => { setToken(t); setShowTokenInput(false) }}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       <div className="max-w-7xl mx-auto px-4 py-6">
@@ -199,12 +288,20 @@ export default function App() {
             typeFilter={typeFilter} onTypeChange={setTypeFilter}
             statusFilter={statusFilter} onStatusChange={setStatusFilter}
             viewMode={viewMode} onViewChange={setViewMode}
+            dateRange={dateRange} onDateRangeChange={setDateRange}
+            selectedTags={selectedTags} onTagsChange={setSelectedTags}
+            allTags={allTags}
+            savedFilters={savedFilters}
+            onSaveFilter={saveFilter}
+            onLoadFilter={loadFilter}
+            onDeleteFilter={deleteFilter}
+            showAdvanced={showAdvanced} onToggleAdvanced={() => setShowAdvanced(!showAdvanced)}
           />
         </div>
 
-        {loading && <p className="text-center py-8 text-gray-500">加载中...</p>}
+        {loading && <p className="text-center py-8 text-gray-500 dark:text-gray-400">加载中...</p>}
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+          <div className="bg-red-100 dark:bg-red-900 border border-red-400 text-red-700 dark:text-red-200 px-4 py-3 rounded mb-4">
             <button className="float-right" onClick={clearError}>x</button>
             {error}
           </div>
@@ -219,16 +316,24 @@ export default function App() {
             onDeleteProposal={handleDeleteProposal}
             onCopy={handleCopy}
           />
+        ) : viewMode === 'kanban' ? (
+          <KanbanBoard
+            proposals={allProposals}
+            onStatusChange={handleStatusChange}
+            onEditProposal={handleEditProposal}
+            onDeleteProposal={handleDeleteProposal}
+            onCopy={handleCopy}
+          />
         ) : viewMode === 'table' ? (
-          <table className="w-full bg-white rounded shadow mb-6">
+          <table className="w-full bg-white dark:bg-gray-800 rounded shadow mb-6">
             <thead>
-              <tr className="bg-gray-50 border-b">
-                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600">ID</th>
-                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600">项目名称</th>
-                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600">描述</th>
-                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600">提案</th>
-                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600">操作</th>
-                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600">管理</th>
+              <tr className="bg-gray-50 dark:bg-gray-700 border-b border-gray-200 dark:border-gray-600">
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600 dark:text-gray-300">ID</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600 dark:text-gray-300">项目名称</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600 dark:text-gray-300">描述</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600 dark:text-gray-300">提案</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600 dark:text-gray-300">操作</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-600 dark:text-gray-300">管理</th>
               </tr>
             </thead>
             <tbody>
@@ -247,7 +352,7 @@ export default function App() {
                 />
               ))}
               {paginated.length === 0 && (
-                <tr><td colSpan={6} className="text-center py-8 text-gray-500">暂无项目</td></tr>
+                <tr><td colSpan={6} className="text-center py-8 text-gray-500 dark:text-gray-400">暂无项目</td></tr>
               )}
             </tbody>
           </table>
@@ -268,7 +373,7 @@ export default function App() {
               />
             ))}
             {paginated.length === 0 && !loading && (
-              <p className="col-span-full text-center text-gray-500 py-8">暂无项目</p>
+              <p className="col-span-full text-center text-gray-500 dark:text-gray-400 py-8">暂无项目</p>
             )}
           </div>
         )}
@@ -276,16 +381,16 @@ export default function App() {
         {totalPages > 1 && (
           <div className="flex justify-center gap-2 mb-6">
             <button disabled={page === 1} onClick={() => setPage(p => p - 1)}
-              className="px-3 py-1 border rounded disabled:opacity-50">上一页</button>
-            <span className="px-3 py-1">{page} / {totalPages}</span>
+              className="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded disabled:opacity-50 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">上一页</button>
+            <span className="px-3 py-1 text-gray-700 dark:text-gray-300">{page} / {totalPages}</span>
             <button disabled={page === totalPages} onClick={() => setPage(p => p + 1)}
-              className="px-3 py-1 border rounded disabled:opacity-50">下一页</button>
+              className="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded disabled:opacity-50 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">下一页</button>
           </div>
         )}
 
         {!selectedProjectId && (
         <div className="flex justify-between items-center mb-4">
-          <p className="text-gray-600 text-sm">共 {filtered.length} 个项目</p>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">共 {filtered.length} 个项目</p>
           <button
             onClick={() => { setEditingProject(null); setShowProjectForm(true) }}
             className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
