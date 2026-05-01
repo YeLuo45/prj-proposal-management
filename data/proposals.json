@@ -82,7 +82,7 @@
     {
       "id": "PRJ-20260430-002",
       "name": "whack-a-mole-3d",
-      "description": "React + Tiptap 富文本编辑器，支持文件夹分类、标签管理、自动保存、历史版本、Markdown/HTML/PDF 导出",
+      "description": "世界4熔岩(第31-40关)+火焰Boss巨人(血条+连续击中机制)+熔岩视觉效果",
       "url": "https://yeluo45.github.io/whack-a-mole-3d/",
       "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
       "createdAt": "2026-04-30",
@@ -103,20 +103,83 @@
           "createdAt": "2026-04-30",
           "updatedAt": "2026-04-30"
         }
-      ],
-      "tags": [
-        "React",
-        "TypeScript",
-        "富文本编辑器",
-        "IndexedDB",
-        "文件夹",
-        "标签"
-      ],
-      "iterations": [
+      ]
+    },
+    {
+      "id": "PRJ-20260430-003",
+      "name": "whack-a-mole-3d",
+      "description": "无尽模式+60秒倒计时+难度递进+连击加成+本地Top5排行榜；技术方案联合P-004/P-005；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+      "url": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+      "createdAt": "2026-05-01",
+      "updatedAt": "2026-05-01",
+      "proposals": [
         {
-          "id": "P-20260430-002-iteration-1",
-          "name": "文件夹与标签分类系统",
-          "status": "delivered"
+          "id": "P-20260430-003",
+          "name": "whack-a-mole-3d",
+          "description": "无尽模式+60秒倒计时+难度递进+连击加成+本地Top5排行榜；技术方案联合P-004/P-005；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+          "type": "package",
+          "status": "in_dev",
+          "url": "https://yeluo45.github.io/whack-a-mole-3d/",
+          "packageUrl": "https://github.com/YeLuo45/whack-a-mole-3d/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-01",
+          "updatedAt": "2026-05-01"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260430-004",
+      "name": "whack-a-mole-3d",
+      "description": "成就系统+13个成就+解锁提示+金币奖励；技术方案联合P-003/P-005；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+      "url": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+      "createdAt": "2026-05-01",
+      "updatedAt": "2026-05-01",
+      "proposals": [
+        {
+          "id": "P-20260430-004",
+          "name": "whack-a-mole-3d",
+          "description": "成就系统+13个成就+解锁提示+金币奖励；技术方案联合P-003/P-005；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+          "type": "package",
+          "status": "in_dev",
+          "url": "https://yeluo45.github.io/whack-a-mole-3d/",
+          "packageUrl": "https://github.com/YeLuo45/whack-a-mole-3d/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-01",
+          "updatedAt": "2026-05-01"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260430-005",
+      "name": "whack-a-mole-3d",
+      "description": "Web Audio API合成音效+震动反馈+音效开关；技术方案联合P-003/P-004；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+      "url": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+      "createdAt": "2026-05-01",
+      "updatedAt": "2026-05-01",
+      "proposals": [
+        {
+          "id": "P-20260430-005",
+          "name": "whack-a-mole-3d",
+          "description": "Web Audio API合成音效+震动反馈+音效开关；技术方案联合P-003/P-004；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+          "type": "package",
+          "status": "in_dev",
+          "url": "https://yeluo45.github.io/whack-a-mole-3d/",
+          "packageUrl": "https://github.com/YeLuo45/whack-a-mole-3d/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+          "tags": [
+            "Web"
+          ],
+          "createdAt": "2026-05-01",
+          "updatedAt": "2026-05-01"
         }
       ]
     },
@@ -1016,7 +1079,7 @@
     {
       "id": "PRJ-20260424-002",
       "name": "doc-editor",
-      "description": "富文本编辑器(加粗/斜体/下划线/删除线/标题/列表/引用/代码块/链接/图片)+文档管理(侧边栏列表/新建/删除/重命名)+自动保存(2秒防抖)+历史版本(30秒快照)+导出(MD/HTML/打印PDF)+主题切换(亮/暗)+本地化中文；IndexedDB持久化；网络故障用GitHub API直接推送源码",
+      "description": "顶部搜索框实时搜索文档标题和内容(300ms防抖)，显示标题+内容片段+文件夹，最多10条结果，点击跳转",
       "url": "https://yeluo45.github.io/doc-editor/",
       "gitRepo": "https://github.com/YeLuo45/doc-editor",
       "createdAt": "2026-04-30",
@@ -1025,7 +1088,7 @@
         {
           "id": "P-20260424-002",
           "name": "doc-editor",
-          "description": "富文本编辑器(加粗/斜体/下划线/删除线/标题/列表/引用/代码块/链接/图片)+文档管理(侧边栏列表/新建/删除/重命名)+自动保存(2秒防抖)+历史版本(30秒快照)+导出(MD/HTML/打印PDF)+主题切换(亮/暗)+本地化中文；IndexedDB持久化；网络故障用GitHub API直接推送源码",
+          "description": "顶部搜索框实时搜索文档标题和内容(300ms防抖)，显示标题+内容片段+文件夹，最多10条结果，点击跳转",
           "type": "package",
           "status": "active",
           "url": "https://yeluo45.github.io/doc-editor/",
