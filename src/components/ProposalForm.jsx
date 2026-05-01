@@ -14,7 +14,7 @@ const STATUS_OPTIONS = [
   { value: 'archived', label: '📁 已归档' },
 ]
 
-export default function ProposalForm({ proposal, projectId, onSave, onClose, isCopy }) {
+export default function ProposalForm({ proposal, projectId, onSave, onClose, isCopy, defaultStatus }) {
   const [form, setForm] = useState(emptyForm)
 
   useEffect(() => {
@@ -30,9 +30,9 @@ export default function ProposalForm({ proposal, projectId, onSave, onClose, isC
         tags: (proposal.tags || []).join(', '),
       })
     } else {
-      setForm(emptyForm)
+      setForm({ ...emptyForm, status: defaultStatus || 'intake' })
     }
-  }, [proposal, isCopy])
+  }, [proposal, isCopy, defaultStatus])
 
   const handleSubmit = (e) => {
     e.preventDefault()

@@ -13,12 +13,13 @@ const STATUS_CONFIG = {
 
 const ALL_STATUSES = Object.keys(STATUS_CONFIG)
 
-export default function KanbanBoard({ proposals, onStatusChange, onEditProposal, onDeleteProposal, onCopy, onCopyProposal }) {
+export default function KanbanBoard({ proposals, onStatusChange, onEditProposal, onDeleteProposal, onCopy, onCopyProposal, onQuickAddProposal }) {
   const [draggedProposal, setDraggedProposal] = useState(null)
   const [dragOverColumn, setDragOverColumn] = useState(null)
   const [dragOverIndex, setDragOverIndex] = useState(null)
   const [collapsedColumns, setCollapsedColumns] = useState({})
   const [hoveredCard, setHoveredCard] = useState(null)
+  const [addingToStatus, setAddingToStatus] = useState(null)
 
   const toggleCollapse = useCallback((status) => {
     setCollapsedColumns(prev => ({ ...prev, [status]: !prev[status] }))
@@ -51,9 +52,6 @@ export default function KanbanBoard({ proposals, onStatusChange, onEditProposal,
     setDragOverIndex(null)
     if (draggedProposal && draggedProposal.status !== newStatus) {
       onStatusChange(draggedProposal.id, draggedProposal.projectId, newStatus)
-    } else if (draggedProposal && draggedProposal.status === newStatus) {
-      // Same column reorder - could be implemented later
-      setDraggedProposal(null)
     }
     setDraggedProposal(null)
   }, [draggedProposal, onStatusChange])
@@ -75,13 +73,16 @@ export default function KanbanBoard({ proposals, onStatusChange, onEditProposal,
     }
   })
 
-  // Show all columns (with collapse support)
-  const visibleStatuses = ALL_STATUSES
+  const handleQuickAdd = useCallback((status) => {
+    setAddingToStatus(status)
+    // Trigger the quick add through callback with the status
+    onQuickAddProposal(status)
+  }, [onQuickAddProposal])
 
   return (
     <div className="overflow-x-auto pb-4">
       <div className="flex gap-3 min-w-max">
-        {visibleStatuses.map(status => {
+        {ALL_STATUSES.map(status => {
           const config = STATUS_CONFIG[status]
           const cards = grouped[status]
           const isOver = dragOverColumn === status
@@ -105,6 +106,16 @@ export default function KanbanBoard({ proposals, onStatusChange, onEditProposal,
                 </div>
                 <span className="bg-white/20 text-white text-xs px-2 py-0.5 rounded-full">{cards.length}</span>
               </div>
+
+              {/* Quick add button */}
+              {!isCollapsed && (
+                <button
+                  onClick={() => handleQuickAdd(status)}
+                  className={`${config.headerBg} bg-opacity-90 hover:bg-opacity-100 text-white text-xs py-1 px-2 transition-colors`}
+                >
+                  + 快速添加
+                </button>
+              )}
 
               {/* Cards container */}
               {!isCollapsed && (
@@ -156,7 +167,7 @@ export default function KanbanBoard({ proposals, onStatusChange, onEditProposal,
                           </div>
                           <p className="text-xs text-gray-400 mb-2">项目: {p.projectName}</p>
 
-                          {/* Action buttons - visible on hover or always in small screens */}
+                          {/* Action buttons */}
                           <div className="flex gap-1 flex-wrap">
                             <button
                               onClick={(e) => { e.stopPropagation(); onEditProposal(p.projectId, p) }}
@@ -195,7 +206,7 @@ export default function KanbanBoard({ proposals, onStatusChange, onEditProposal,
                   )}
                 </div>
               )}
-              {/* Collapsed state shows count only */}
+              {/* Collapsed state */}
               {isCollapsed && (
                 <div className={`${config.color} rounded-b-lg p-2 min-h-[60px] flex items-center justify-center`}>
                   <span className={`text-xs ${config.text} writing-mode-vertical`}>

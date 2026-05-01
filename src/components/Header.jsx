@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function Header({ onConfig, showTokenInput, onTokenSave, theme, onToggleTheme }) {
+export default function Header({ onConfig, showTokenInput, onTokenSave, theme, onToggleTheme, onToggleDashboard, showDashboard }) {
   const [tokenInput, setTokenInput] = useState('')
 
   return (
@@ -8,6 +8,13 @@ export default function Header({ onConfig, showTokenInput, onTokenSave, theme, o
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <h1 className="text-xl font-bold text-gray-800 dark:text-white">📦 项目管理系统</h1>
         <div className="flex items-center gap-3">
+          <button
+            onClick={onToggleDashboard}
+            className={`text-sm px-3 py-1 rounded transition-colors ${showDashboard ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
+            title="数据分析仪表板"
+          >
+            📊 仪表板
+          </button>
           <button
             onClick={onToggleTheme}
             className="text-xl hover:bg-gray-100 dark:hover:bg-gray-700 rounded px-2 py-1 transition-colors"

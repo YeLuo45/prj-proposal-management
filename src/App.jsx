@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import Header from './components/Header'
-import SearchBar from './components/SearchBar'
+import SearchBar, { fuzzyMatch } from './components/SearchBar'
 import FilterBar from './components/FilterBar'
 import ProjectCard from './components/ProjectCard'
 import ProjectProposalList from './components/ProjectProposalList'
@@ -8,6 +8,7 @@ import ProjectForm from './components/ProjectForm'
 import ProjectOverview from './components/ProjectOverview'
 import ProposalForm from './components/ProposalForm'
 import KanbanBoard from './components/KanbanBoard'
+import Dashboard from './components/Dashboard'
 import { useGitHub } from './hooks/useGitHub'
 
 const OWNER = 'YeLuo45'
@@ -54,10 +55,13 @@ export default function App() {
   const [editingProposal, setEditingProposal] = useState(null)
   const [editingProposalProjectId, setEditingProposalProjectId] = useState(null)
   const [isCopyProposal, setIsCopyProposal] = useState(false)
+  const [defaultProposalStatus, setDefaultProposalStatus] = useState('intake')
   const [showTokenInput, setShowTokenInput] = useState(false)
   const [selectedProjectId, setSelectedProjectId] = useState(null)
   const [selectedProposals, setSelectedProposals] = useState([])
-  const [showProjectOverview, setShowProjectOverview] = useState(null) // null = not shown, object = project data
+  const [showProjectOverview, setShowProjectOverview] = useState(null)
+  const [showDashboard, setShowDashboard] = useState(false)
+  const [fuzzySearch, setFuzzySearch] = useState('') // null = not shown, object = project data
 
   // Advanced filter states
   const [dateRange, setDateRange] = useState({ start: '', end: '' })
@@ -81,6 +85,16 @@ export default function App() {
   )].sort()
 
   const filtered = projects.filter(prj => {
+    // Fuzzy match - checks if all chars appear in order
+    const matchFuzzy = !fuzzySearch ||
+      fuzzyMatch(prj.name, fuzzySearch) ||
+      fuzzyMatch(prj.description || '', fuzzySearch) ||
+      prj.proposals?.some(p =>
+        fuzzyMatch(p.name, fuzzySearch) ||
+        fuzzyMatch(p.description || '', fuzzySearch) ||
+        p.tags?.some(t => fuzzyMatch(t, fuzzySearch))
+      )
+    // Exact match (original search)
     const matchSearch =
       !search ||
       prj.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -97,7 +111,7 @@ export default function App() {
     const matchTags = selectedTags.length === 0 || prj.proposals?.some(p =>
       selectedTags.every(tag => p.tags?.includes(tag))
     )
-    return matchSearch && matchType && matchStatus && matchDate && matchTags
+    return (matchSearch || matchFuzzy) && matchType && matchStatus && matchDate && matchTags
   }).sort((a, b) => {
     if (sortBy === 'updated') {
       return (b.updatedAt > a.updatedAt ? 1 : -1)
@@ -175,9 +189,11 @@ export default function App() {
   }, [data, saveData])
 
   // Proposal CRUD
-  const handleAddProposal = useCallback((project) => {
+  const handleAddProposal = useCallback((project, defaultStatus = 'intake') => {
     setEditingProposal(null)
-    setEditingProposalProjectId(project.id)
+    setEditingProposalProjectId(project?.id || null)
+    setIsCopyProposal(false)
+    setDefaultProposalStatus(defaultStatus)
     setShowProposalForm(true)
   }, [])
 
@@ -485,12 +501,20 @@ export default function App() {
         showTokenInput={showTokenInput}
         onTokenSave={(t) => { setToken(t); setShowTokenInput(false) }}
         theme={theme}
-        onToggleTheme={toggleTheme}
+        onToggleTheme={() => setTheme(t => t === 'dark' ? 'light' : 'dark')}
+        onToggleDashboard={() => setShowDashboard(d => !d)}
+        showDashboard={showDashboard}
       />
+
+      {showDashboard && !selectedProjectId && (
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <Dashboard projects={projects} />
+        </div>
+      )}
 
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row gap-4 mb-6">
-          <SearchBar value={search} onChange={setSearch} />
+          <SearchBar value={search} onChange={setSearch} onFuzzyMatch={setFuzzySearch} />
           <FilterBar
             typeFilter={typeFilter} onTypeChange={setTypeFilter}
             statusFilter={statusFilter} onStatusChange={setStatusFilter}
@@ -554,6 +578,7 @@ export default function App() {
             onDeleteProposal={handleDeleteProposal}
             onCopy={handleCopy}
             onCopyProposal={handleCopyProposal}
+            onQuickAddProposal={(status) => { handleAddProposal(null, status) }}
           />
         ) : viewMode === 'table' ? (
           <table className="w-full bg-white dark:bg-gray-800 rounded shadow mb-6">
@@ -649,8 +674,9 @@ export default function App() {
           proposal={editingProposal}
           projectId={editingProposalProjectId}
           onSave={handleSaveProposal}
-          onClose={() => { setShowProposalForm(false); setEditingProposal(null); setEditingProposalProjectId(null); setIsCopyProposal(false) }}
+          onClose={() => { setShowProposalForm(false); setEditingProposal(null); setEditingProposalProjectId(null); setIsCopyProposal(false); setDefaultProposalStatus('intake') }}
           isCopy={isCopyProposal}
+          defaultStatus={editingProposal ? undefined : defaultProposalStatus}
         />
       )}
     </div>
