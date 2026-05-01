@@ -108,7 +108,7 @@
     {
       "id": "PRJ-20260430-003",
       "name": "whack-a-mole-3d",
-      "description": "无尽模式+60秒倒计时+难度递进+连击加成+本地Top5排行榜；技术方案联合P-004/P-005；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+      "description": "无尽模式+60秒倒计时+难度递进+连击加成+本地Top5排行榜；技术方案联合P-004/P-005；已验收通过（README.md记录）。无尽模式入口+60秒倒计时+难度递进（间隔/停留/双鼠）+连击加分+Top5排行榜+localStorage存档已实现。",
       "url": "https://yeluo45.github.io/whack-a-mole-3d/",
       "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
       "createdAt": "2026-05-01",
@@ -117,9 +117,9 @@
         {
           "id": "P-20260430-003",
           "name": "whack-a-mole-3d",
-          "description": "无尽模式+60秒倒计时+难度递进+连击加成+本地Top5排行榜；技术方案联合P-004/P-005；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+          "description": "无尽模式+60秒倒计时+难度递进+连击加成+本地Top5排行榜；技术方案联合P-004/P-005；已验收通过（README.md记录）。无尽模式入口+60秒倒计时+难度递进（间隔/停留/双鼠）+连击加分+Top5排行榜+localStorage存档已实现。",
           "type": "package",
-          "status": "in_dev",
+          "status": "active",
           "url": "https://yeluo45.github.io/whack-a-mole-3d/",
           "packageUrl": "https://github.com/YeLuo45/whack-a-mole-3d/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
@@ -134,7 +134,7 @@
     {
       "id": "PRJ-20260430-004",
       "name": "whack-a-mole-3d",
-      "description": "成就系统+13个成就+解锁提示+金币奖励；技术方案联合P-003/P-005；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+      "description": "成就系统+13个成就+解锁提示+金币奖励；技术方案联合P-003/P-005；已验收通过（README.md记录）。13个成就（first_hit/combo/score/皮肤收集/签到/无尽/Boss/通关）+ 检测点散布各节点 + 成就按钮/列表/解锁提示已实现。",
       "url": "https://yeluo45.github.io/whack-a-mole-3d/",
       "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
       "createdAt": "2026-05-01",
@@ -143,9 +143,9 @@
         {
           "id": "P-20260430-004",
           "name": "whack-a-mole-3d",
-          "description": "成就系统+13个成就+解锁提示+金币奖励；技术方案联合P-003/P-005；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+          "description": "成就系统+13个成就+解锁提示+金币奖励；技术方案联合P-003/P-005；已验收通过（README.md记录）。13个成就（first_hit/combo/score/皮肤收集/签到/无尽/Boss/通关）+ 检测点散布各节点 + 成就按钮/列表/解锁提示已实现。",
           "type": "package",
-          "status": "in_dev",
+          "status": "active",
           "url": "https://yeluo45.github.io/whack-a-mole-3d/",
           "packageUrl": "https://github.com/YeLuo45/whack-a-mole-3d/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
@@ -160,7 +160,7 @@
     {
       "id": "PRJ-20260430-005",
       "name": "whack-a-mole-3d",
-      "description": "Web Audio API合成音效+震动反馈+音效开关；技术方案联合P-003/P-004；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+      "description": "Web Audio API合成音效+震动反馈+音效开关；技术方案联合P-003/P-004；已验收通过（README.md记录）。AudioManager（10种Web Audio API合成音效）+ Navigator.vibrate + 音效开关 + 音效调用链路（beat/miss/click/levelup）已全部接入。",
       "url": "https://yeluo45.github.io/whack-a-mole-3d/",
       "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
       "createdAt": "2026-05-01",
@@ -169,9 +169,9 @@
         {
           "id": "P-20260430-005",
           "name": "whack-a-mole-3d",
-          "description": "Web Audio API合成音效+震动反馈+音效开关；技术方案联合P-003/P-004；代码已推送至远程分支feature/v4-endless-achievements-sfx（2 commits待PR）；PR待创建；【阶段更新：2026-05-01技术方案已确认→进入approved_for_dev阶段】；【2026-05-01 cron处理：PRD确认超时，默认通过】",
+          "description": "Web Audio API合成音效+震动反馈+音效开关；技术方案联合P-003/P-004；已验收通过（README.md记录）。AudioManager（10种Web Audio API合成音效）+ Navigator.vibrate + 音效开关 + 音效调用链路（beat/miss/click/levelup）已全部接入。",
           "type": "package",
-          "status": "in_dev",
+          "status": "active",
           "url": "https://yeluo45.github.io/whack-a-mole-3d/",
           "packageUrl": "https://github.com/YeLuo45/whack-a-mole-3d/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
