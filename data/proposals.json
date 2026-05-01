@@ -127,7 +127,8 @@
             "提案"
           ],
           "createdAt": "2026-05-01",
-          "updatedAt": "2026-05-01"
+          "updatedAt": "2026-05-01T18:01:00+08:00",
+          "prdConfirmation": "timeout-approved"
         }
       ]
     },
@@ -153,7 +154,8 @@
             "提案"
           ],
           "createdAt": "2026-05-01",
-          "updatedAt": "2026-05-01"
+          "updatedAt": "2026-05-01T18:01:00+08:00",
+          "prdConfirmation": "timeout-approved"
         }
       ]
     },
@@ -179,7 +181,8 @@
             "Web"
           ],
           "createdAt": "2026-05-01",
-          "updatedAt": "2026-05-01"
+          "updatedAt": "2026-05-01T18:01:00+08:00",
+          "prdConfirmation": "timeout-approved"
         }
       ]
     },
