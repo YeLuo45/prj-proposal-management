@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 export default function FilterBar({
   typeFilter, onTypeChange,
@@ -8,11 +8,23 @@ export default function FilterBar({
   selectedTags, onTagsChange,
   allTags,
   savedFilters, onSaveFilter, onLoadFilter, onDeleteFilter,
-  showAdvanced, onToggleAdvanced
+  showAdvanced, onToggleAdvanced,
+  // Batch operations
+  onBatchArchive,
+  onBatchTag,
+  hasSelectedProposals,
+  selectedCount,
+  // Import/Export
+  onExportJSON,
+  onExportCSV,
+  onImportCSV,
 }) {
   const [filterName, setFilterName] = useState('')
   const [showTagDropdown, setShowTagDropdown] = useState(false)
   const [showSavedDropdown, setShowSavedDropdown] = useState(false)
+  const [showBatchTagModal, setShowBatchTagModal] = useState(false)
+  const [batchTagInput, setBatchTagInput] = useState('')
+  const fileInputRef = useRef(null)
 
   const statusOptions = [
     { value: 'all', label: '全状态' },
@@ -38,6 +50,27 @@ export default function FilterBar({
     if (filterName.trim()) {
       onSaveFilter(filterName.trim())
       setFilterName('')
+    }
+  }
+
+  const handleBatchTagApply = () => {
+    if (batchTagInput.trim()) {
+      const tags = batchTagInput.split(',').map(t => t.trim()).filter(Boolean)
+      onBatchTag(tags)
+      setBatchTagInput('')
+      setShowBatchTagModal(false)
+    }
+  }
+
+  const handleImportClick = () => {
+    fileInputRef.current?.click()
+  }
+
+  const handleFileChange = (e) => {
+    const file = e.target.files?.[0]
+    if (file) {
+      onImportCSV(file)
+      e.target.value = ''
     }
   }
 
@@ -81,6 +114,92 @@ export default function FilterBar({
       >
         {showAdvanced ? '收起筛选' : '高级筛选'}
       </button>
+
+      {/* Batch operations - only show when proposals are selected */}
+      {hasSelectedProposals && (
+        <div className="flex items-center gap-2 px-3 py-2 bg-blue-50 dark:bg-blue-900/30 rounded border border-blue-200 dark:border-blue-700">
+          <span className="text-sm text-blue-700 dark:text-blue-300">
+            已选 {selectedCount} 个提案
+          </span>
+          <button
+            onClick={onBatchArchive}
+            className="text-xs bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded px-2 py-1"
+          >
+            批量归档
+          </button>
+          <button
+            onClick={() => setShowBatchTagModal(true)}
+            className="text-xs bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded px-2 py-1"
+          >
+            批量打标签
+          </button>
+        </div>
+      )}
+
+      {/* Import/Export buttons */}
+      <div className="flex gap-2">
+        <div className="relative">
+          <button
+            onClick={handleImportClick}
+            className="px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600"
+          >
+            📥 导入 CSV
+          </button>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept=".csv"
+            onChange={handleFileChange}
+            className="hidden"
+          />
+        </div>
+        <button
+          onClick={onExportJSON}
+          className="px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600"
+        >
+          📤 导出 JSON
+        </button>
+        <button
+          onClick={onExportCSV}
+          className="px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600"
+        >
+          📊 导出 CSV
+        </button>
+      </div>
+
+      {/* Batch tag modal */}
+      {showBatchTagModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-96">
+            <h3 className="text-lg font-bold mb-4 text-gray-800 dark:text-white">批量添加标签</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+              为选中的 {selectedCount} 个提案添加标签（逗号分隔）
+            </p>
+            <input
+              type="text"
+              value={batchTagInput}
+              onChange={e => setBatchTagInput(e.target.value)}
+              placeholder="react, pwa, 游戏"
+              className="w-full border border-gray-300 dark:border-gray-600 rounded px-3 py-2 mb-4 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+              onKeyDown={e => e.key === 'Enter' && handleBatchTagApply()}
+            />
+            <div className="flex gap-3">
+              <button
+                onClick={handleBatchTagApply}
+                className="flex-1 bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700"
+              >
+                应用
+              </button>
+              <button
+                onClick={() => setShowBatchTagModal(false)}
+                className="flex-1 border border-gray-300 dark:border-gray-600 rounded px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300"
+              >
+                取消
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Advanced filters panel */}
       {showAdvanced && (

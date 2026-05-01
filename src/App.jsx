@@ -52,8 +52,10 @@ export default function App() {
   const [editingProject, setEditingProject] = useState(null)
   const [editingProposal, setEditingProposal] = useState(null)
   const [editingProposalProjectId, setEditingProposalProjectId] = useState(null)
+  const [isCopyProposal, setIsCopyProposal] = useState(false)
   const [showTokenInput, setShowTokenInput] = useState(false)
   const [selectedProjectId, setSelectedProjectId] = useState(null)
+  const [selectedProposals, setSelectedProposals] = useState([])
 
   // Advanced filter states
   const [dateRange, setDateRange] = useState({ start: '', end: '' })
@@ -242,6 +244,148 @@ export default function App() {
     setSelectedProjectId(projectId)
   }, [])
 
+  // Copy proposal (creates a new proposal with copied data)
+  const handleCopyProposal = useCallback((projectId, proposal) => {
+    setEditingProposal(proposal)
+    setEditingProposalProjectId(projectId)
+    setIsCopyProposal(true)
+    setShowProposalForm(true)
+  }, [])
+
+  // Batch operations
+  const handleBatchArchive = useCallback(async () => {
+    if (!window.confirm(`确定归档选中的 ${selectedProposals.length} 个提案？`)) return
+    const selectedSet = new Set(selectedProposals.map(p => `${p.projectId}:${p.id}`))
+    const projects = (data?.projects || []).map(prj => ({
+      ...prj,
+      proposals: prj.proposals.map(p =>
+        selectedSet.has(`${prj.id}:${p.id}`)
+          ? { ...p, status: 'archived', updatedAt: new Date().toISOString().split('T')[0] }
+          : p
+      )
+    }))
+    await saveData({ version: 2, projects })
+    setSelectedProposals([])
+  }, [data, selectedProposals, saveData])
+
+  const handleBatchTag = useCallback(async (tags) => {
+    if (!window.confirm(`确定为选中的 ${selectedProposals.length} 个提案添加标签 [${tags.join(', ')}]？`)) return
+    const selectedSet = new Set(selectedProposals.map(p => `${p.projectId}:${p.id}`))
+    const projects = (data?.projects || []).map(prj => ({
+      ...prj,
+      proposals: prj.proposals.map(p =>
+        selectedSet.has(`${prj.id}:${p.id}`)
+          ? { ...p, tags: [...new Set([...(p.tags || []), ...tags])], updatedAt: new Date().toISOString().split('T')[0] }
+          : p
+      )
+    }))
+    await saveData({ version: 2, projects })
+    setSelectedProposals([])
+  }, [data, selectedProposals, saveData])
+
+  // Toggle proposal selection
+  const toggleProposalSelection = useCallback((projectId, proposal, forceDeselect = false) => {
+    const key = `${projectId}:${proposal.id}`
+    setSelectedProposals(prev => {
+      const exists = prev.some(p => `${p.projectId}:${p.id}` === key)
+      if (exists || forceDeselect) {
+        return prev.filter(p => `${p.projectId}:${p.id}` !== key)
+      } else {
+        return [...prev, { ...proposal, projectId }]
+      }
+    })
+  }, [])
+
+  // Export JSON
+  const handleExportJSON = useCallback(() => {
+    const json = JSON.stringify(data, null, 2)
+    const blob = new Blob([json], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `proposals-${new Date().toISOString().split('T')[0]}.json`
+    a.click()
+    URL.revokeObjectURL(url)
+  }, [data])
+
+  // Export CSV
+  const handleExportCSV = useCallback(() => {
+    const headers = ['项目ID', '项目名称', '提案ID', '提案名称', '描述', '类型', '状态', '标签', '访问链接', '创建日期', '更新日期']
+    const rows = []
+    ;(data?.projects || []).forEach(prj => {
+      ;(prj.proposals || []).forEach(p => {
+        rows.push([
+          prj.id, prj.name, p.id, p.name, p.description || '', p.type || '',
+          p.status || '', (p.tags || []).join(';'), p.url || '',
+          p.createdAt || '', p.updatedAt || ''
+        ].map(v => `"${String(v).replace(/"/g, '""')}"`).join(','))
+      })
+    })
+    const csv = [headers.join(','), ...rows].join('\n')
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `proposals-${new Date().toISOString().split('T')[0]}.csv`
+    a.click()
+    URL.revokeObjectURL(url)
+  }, [data])
+
+  // Import CSV
+  const handleImportCSV = useCallback(async (file) => {
+    try {
+      const text = await file.text()
+      const lines = text.split('\n').filter(l => l.trim())
+      if (lines.length < 2) {
+        alert('CSV 文件格式错误或为空')
+        return
+      }
+      const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim())
+      const projectsMap = {}
+      for (let i = 1; i < lines.length; i++) {
+        const values = lines[i].match(/("([^"]|"")*")|[^,]+/g) || []
+        const row = values.map(v => v.replace(/^"|"$/g, '').replace(/""/g, '"').trim())
+        const projectId = row[0]
+        const projectName = row[1]
+        const proposalId = row[2]
+        const proposalName = row[3]
+        const description = row[4]
+        const type = row[5] || 'web'
+        const status = row[6] || 'intake'
+        const tags = row[7] ? row[7].split(';') : []
+        const url = row[8] || ''
+        const createdAt = row[9] || new Date().toISOString().split('T')[0]
+        const updatedAt = row[10] || createdAt
+        if (!projectsMap[projectId]) {
+          projectsMap[projectId] = {
+            id: projectId, name: projectName, description: '',
+            proposals: [], createdAt, updatedAt
+          }
+        }
+        projectsMap[projectId].proposals.push({
+          id: proposalId, name: proposalName, description, type, status,
+          tags, url, createdAt, updatedAt
+        })
+      }
+      // Merge with existing data
+      const existingProjects = data?.projects || []
+      const merged = [...existingProjects]
+      Object.values(projectsMap).forEach(newPrj => {
+        const exists = merged.find(p => p.id === newPrj.id)
+        if (exists) {
+          exists.proposals = [...exists.proposals, ...newPrj.proposals]
+          exists.updatedAt = new Date().toISOString().split('T')[0]
+        } else {
+          merged.push(newPrj)
+        }
+      })
+      await saveData({ version: 2, projects: merged })
+      alert('导入成功')
+    } catch (err) {
+      alert('导入失败: ' + err.message)
+    }
+  }, [data, saveData])
+
   if (!token) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
@@ -296,6 +440,13 @@ export default function App() {
             onLoadFilter={loadFilter}
             onDeleteFilter={deleteFilter}
             showAdvanced={showAdvanced} onToggleAdvanced={() => setShowAdvanced(!showAdvanced)}
+            onBatchArchive={handleBatchArchive}
+            onBatchTag={handleBatchTag}
+            hasSelectedProposals={selectedProposals.length > 0}
+            selectedCount={selectedProposals.length}
+            onExportJSON={handleExportJSON}
+            onExportCSV={handleExportCSV}
+            onImportCSV={handleImportCSV}
           />
         </div>
 
@@ -315,6 +466,11 @@ export default function App() {
             onEditProposal={handleEditProposal}
             onDeleteProposal={handleDeleteProposal}
             onCopy={handleCopy}
+            onCopyProposal={handleCopyProposal}
+            selectedProposals={selectedProposals}
+            onToggleSelect={toggleProposalSelection}
+            onBatchArchive={handleBatchArchive}
+            onBatchTag={handleBatchTag}
           />
         ) : viewMode === 'kanban' ? (
           <KanbanBoard
@@ -323,6 +479,7 @@ export default function App() {
             onEditProposal={handleEditProposal}
             onDeleteProposal={handleDeleteProposal}
             onCopy={handleCopy}
+            onCopyProposal={handleCopyProposal}
           />
         ) : viewMode === 'table' ? (
           <table className="w-full bg-white dark:bg-gray-800 rounded shadow mb-6">
@@ -414,7 +571,8 @@ export default function App() {
           proposal={editingProposal}
           projectId={editingProposalProjectId}
           onSave={handleSaveProposal}
-          onClose={() => { setShowProposalForm(false); setEditingProposal(null); setEditingProposalProjectId(null) }}
+          onClose={() => { setShowProposalForm(false); setEditingProposal(null); setEditingProposalProjectId(null); setIsCopyProposal(false) }}
+          isCopy={isCopyProposal}
         />
       )}
     </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const emptyForm = { name: '', description: '', type: 'web', status: 'active', url: '', packageUrl: '', gitRepo: '', tags: '' }
+const emptyForm = { name: '', description: '', type: 'web', status: 'intake', url: '', packageUrl: '', gitRepo: '', tags: '' }
 
 const STATUS_OPTIONS = [
   { value: 'intake', label: '📥 待 intake' },
@@ -14,16 +14,16 @@ const STATUS_OPTIONS = [
   { value: 'archived', label: '📁 已归档' },
 ]
 
-export default function ProposalForm({ proposal, projectId, onSave, onClose }) {
+export default function ProposalForm({ proposal, projectId, onSave, onClose, isCopy }) {
   const [form, setForm] = useState(emptyForm)
 
   useEffect(() => {
     if (proposal) {
       setForm({
-        name: proposal.name || '',
+        name: isCopy ? `复制-${proposal.name}` : proposal.name || '',
         description: proposal.description || '',
         type: proposal.type || 'web',
-        status: proposal.status || 'active',
+        status: proposal.status || 'intake',
         url: proposal.url || '',
         packageUrl: proposal.packageUrl || '',
         gitRepo: proposal.gitRepo || '',
@@ -32,7 +32,7 @@ export default function ProposalForm({ proposal, projectId, onSave, onClose }) {
     } else {
       setForm(emptyForm)
     }
-  }, [proposal])
+  }, [proposal, isCopy])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -49,7 +49,9 @@ export default function ProposalForm({ proposal, projectId, onSave, onClose }) {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
         <div className="p-6">
-          <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">{proposal ? '编辑提案' : '新增提案'}{projectId ? ` (${projectId})` : ''}</h2>
+          <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">
+            {isCopy ? '复制提案' : proposal ? '编辑提案' : '新增提案'}{projectId ? ` (${projectId})` : ''}
+          </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">提案名称 *</label>

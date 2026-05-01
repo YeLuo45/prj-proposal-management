@@ -11,7 +11,7 @@ const STATUS_LABELS = {
   accepted: '✅ 已验收',
 }
 
-export default function ProjectProposalList({ project, onBack, onAddProposal, onEditProposal, onDeleteProposal, onCopy }) {
+export default function ProjectProposalList({ project, onBack, onAddProposal, onEditProposal, onDeleteProposal, onCopy, onCopyProposal, selectedProposals, onToggleSelect, onBatchArchive, onBatchTag }) {
   if (!project) {
     return (
       <div className="text-center py-8 text-gray-500 dark:text-gray-400">
@@ -24,6 +24,9 @@ export default function ProjectProposalList({ project, onBack, onAddProposal, on
   const sortedProposals = [...(project.proposals || [])].sort((a, b) =>
     (b.updatedAt > a.updatedAt ? 1 : -1)
   )
+
+  const selectedSet = new Set(selectedProposals.map(p => p.id))
+  const allSelected = sortedProposals.length > 0 && sortedProposals.every(p => selectedSet.has(p.id))
 
   return (
     <div>
@@ -42,6 +45,44 @@ export default function ProjectProposalList({ project, onBack, onAddProposal, on
         </button>
       </div>
 
+      {/* Batch operations toolbar */}
+      {sortedProposals.length > 0 && (
+        <div className="flex items-center gap-3 mb-4 p-3 bg-gray-50 dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-700">
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={allSelected}
+              onChange={() => {
+                if (allSelected) {
+                  sortedProposals.forEach(p => onToggleSelect(project.id, p, true))
+                } else {
+                  sortedProposals.forEach(p => onToggleSelect(project.id, p, false))
+                }
+              }}
+              className="rounded"
+            />
+            <span className="text-sm text-gray-700 dark:text-gray-300">全选</span>
+          </label>
+          {selectedProposals.length > 0 && (
+            <>
+              <span className="text-sm text-blue-600 dark:text-blue-400">已选 {selectedProposals.length} 个</span>
+              <button
+                onClick={onBatchArchive}
+                className="text-xs bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded px-2 py-1"
+              >
+                批量归档
+              </button>
+              <button
+                onClick={onBatchTag}
+                className="text-xs bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded px-2 py-1"
+              >
+                批量打标签
+              </button>
+            </>
+          )}
+        </div>
+      )}
+
       {/* Proposals */}
       {sortedProposals.length === 0 ? (
         <div className="bg-white dark:bg-gray-800 rounded shadow p-8 text-center text-gray-500 dark:text-gray-400">
@@ -50,9 +91,15 @@ export default function ProjectProposalList({ project, onBack, onAddProposal, on
       ) : (
         <div className="space-y-4">
           {sortedProposals.map(p => (
-            <div key={p.id} className="bg-white dark:bg-gray-800 rounded shadow hover:shadow-md transition-shadow p-4 border border-gray-200 dark:border-gray-700">
+            <div key={p.id} className={`bg-white dark:bg-gray-800 rounded shadow hover:shadow-md transition-shadow p-4 border border-gray-200 dark:border-gray-700 ${selectedSet.has(p.id) ? 'ring-2 ring-blue-500' : ''}`}>
               <div className="flex items-start justify-between mb-2">
                 <div className="flex items-center gap-3 flex-wrap">
+                  <input
+                    type="checkbox"
+                    checked={selectedSet.has(p.id)}
+                    onChange={() => onToggleSelect(project.id, p)}
+                    className="rounded"
+                  />
                   <span className="font-mono text-sm text-gray-500 dark:text-gray-400">{p.id}</span>
                   <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">{p.name}</span>
                   {p.type && (
@@ -95,6 +142,7 @@ export default function ProjectProposalList({ project, onBack, onAddProposal, on
 
               <div className="flex gap-2 mt-3 border-t border-gray-200 dark:border-gray-700 pt-3">
                 <button onClick={() => onEditProposal(project.id, p)} className="text-blue-600 hover:underline text-sm dark:text-blue-400">编辑</button>
+                <button onClick={() => onCopyProposal(project.id, p)} className="text-green-600 hover:underline text-sm dark:text-green-400">复制</button>
                 <button onClick={() => onDeleteProposal(project.id, p.id)} className="text-red-600 hover:underline text-sm dark:text-red-400">删除</button>
                 <span className="text-xs text-gray-400 ml-auto dark:text-gray-500">
                   更新于 {p.updatedAt}
