@@ -1,47 +1,33 @@
-import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
-export default function Header({ onConfig, showTokenInput, onTokenSave, theme, onToggleTheme, onToggleDashboard, showDashboard }) {
-  const [tokenInput, setTokenInput] = useState('')
-
+function Header({ onAdd, onSettings }) {
   return (
-    <header className="bg-white dark:bg-gray-800 shadow">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <h1 className="text-xl font-bold text-gray-800 dark:text-white">📦 项目管理系统</h1>
-        <div className="flex items-center gap-3">
-          <button
-            onClick={onToggleDashboard}
-            className={`text-sm px-3 py-1 rounded transition-colors ${showDashboard ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
-            title="数据分析仪表板"
+    <header className="bg-white shadow">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-gray-800">提案管理系统</h1>
+        <div className="flex gap-4">
+          <Link
+            to="/todos"
+            className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 flex items-center gap-2"
           >
-            📊 仪表板
+            看板视图
+          </Link>
+          <button
+            onClick={onAdd}
+            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 flex items-center gap-2"
+          >
+            <span>+</span> 添加提案
           </button>
           <button
-            onClick={onToggleTheme}
-            className="text-xl hover:bg-gray-100 dark:hover:bg-gray-700 rounded px-2 py-1 transition-colors"
-            title={theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'}
+            onClick={onSettings}
+            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600"
           >
-            {theme === 'dark' ? '☀️' : '🌙'}
-          </button>
-          <button onClick={onConfig} className="text-sm text-blue-600 hover:underline dark:text-blue-400">
-            {showTokenInput ? '收起' : '⚙️ 配置'}
+            设置
           </button>
         </div>
       </div>
-      {showTokenInput && (
-        <div className="max-w-7xl mx-auto px-4 pb-4 flex gap-2">
-          <input
-            type="password"
-            value={tokenInput}
-            onChange={e => setTokenInput(e.target.value)}
-            placeholder="GitHub PAT (ghp_...)"
-            className="flex-1 border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-sm bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
-            onKeyDown={e => e.key === 'Enter' && onTokenSave(tokenInput)}
-          />
-          <button onClick={() => onTokenSave(tokenInput)} className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
-            保存
-          </button>
-        </div>
-      )}
     </header>
-  )
+  );
 }
+
+export default Header;
