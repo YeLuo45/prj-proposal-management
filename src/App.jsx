@@ -113,14 +113,20 @@ export default function App() {
     )
     return (matchSearch || matchFuzzy) && matchType && matchStatus && matchDate && matchTags
   }).sort((a, b) => {
-    if (sortBy === 'updated') {
+    if (sortBy === 'updated-desc') {
       return (b.updatedAt > a.updatedAt ? 1 : -1)
-    } else if (sortBy === 'created') {
-      return (a.createdAt > b.createdAt ? 1 : -1)
-    } else if (sortBy === 'proposals') {
+    } else if (sortBy === 'updated-asc') {
+      return (b.updatedAt < a.updatedAt ? 1 : -1)
+    } else if (sortBy === 'created-desc') {
+      return (b.createdAt > a.createdAt ? 1 : -1)
+    } else if (sortBy === 'created-asc') {
+      return (b.createdAt < a.createdAt ? 1 : -1)
+    } else if (sortBy === 'proposals-desc') {
       return ((b.proposals?.length || 0) - (a.proposals?.length || 0))
-    } else if (sortBy === 'name') {
+    } else if (sortBy === 'name-asc') {
       return a.name.localeCompare(b.name, 'zh-CN')
+    } else if (sortBy === 'name-desc') {
+      return b.name.localeCompare(a.name, 'zh-CN')
     }
     return 0
   })

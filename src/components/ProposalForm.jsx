@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const emptyForm = { name: '', description: '', type: 'web', status: 'intake', url: '', packageUrl: '', gitRepo: '', tags: '' }
+const emptyForm = { name: '', description: '', type: 'web', status: 'intake', priority: 'medium', milestone: '', url: '', packageUrl: '', gitRepo: '', tags: '' }
 
 const STATUS_OPTIONS = [
   { value: 'intake', label: '📥 待 intake' },
@@ -14,6 +14,13 @@ const STATUS_OPTIONS = [
   { value: 'archived', label: '📁 已归档' },
 ]
 
+const PRIORITY_OPTIONS = [
+  { value: 'low', label: '🔵 低' },
+  { value: 'medium', label: '🟡 中' },
+  { value: 'high', label: '🟠 高' },
+  { value: 'urgent', label: '🔴 紧急' },
+]
+
 export default function ProposalForm({ proposal, projectId, onSave, onClose, isCopy, defaultStatus }) {
   const [form, setForm] = useState(emptyForm)
 
@@ -24,6 +31,8 @@ export default function ProposalForm({ proposal, projectId, onSave, onClose, isC
         description: proposal.description || '',
         type: proposal.type || 'web',
         status: proposal.status || 'intake',
+        priority: proposal.priority || 'medium',
+        milestone: proposal.milestone || '',
         url: proposal.url || '',
         packageUrl: proposal.packageUrl || '',
         gitRepo: proposal.gitRepo || '',
@@ -83,6 +92,23 @@ export default function ProposalForm({ proposal, projectId, onSave, onClose, isC
                     <option key={opt.value} value={opt.value}>{opt.label}</option>
                   ))}
                 </select>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">优先级</label>
+                <select value={form.priority} onChange={e => setForm(f => ({ ...f, priority: e.target.value }))}
+                  className={inputClass}>
+                  {PRIORITY_OPTIONS.map(opt => (
+                    <option key={opt.value} value={opt.value}>{opt.label}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">里程碑</label>
+                <input value={form.milestone} onChange={e => setForm(f => ({ ...f, milestone: e.target.value }))}
+                  className={inputClass}
+                  placeholder="如: v1.0" />
               </div>
             </div>
             <div>

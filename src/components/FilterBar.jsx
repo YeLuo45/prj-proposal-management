@@ -41,10 +41,13 @@ export default function FilterBar({
   ]
 
   const sortOptions = [
-    { value: 'updated', label: '最近更新' },
-    { value: 'created', label: '最早创建' },
-    { value: 'proposals', label: '最多提案' },
-    { value: 'name', label: '名称排序' },
+    { value: 'updated-desc', label: '最近更新' },
+    { value: 'updated-asc', label: '最早更新' },
+    { value: 'created-desc', label: '最新创建' },
+    { value: 'created-asc', label: '最早创建' },
+    { value: 'proposals-desc', label: '最多提案' },
+    { value: 'name-asc', label: '名称 A-Z' },
+    { value: 'name-desc', label: '名称 Z-A' },
   ]
 
   const toggleTag = (tag) => {

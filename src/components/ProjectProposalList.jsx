@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react'
+import ProposalTimeline from './ProposalTimeline'
 
 const TYPE_LABELS = { web: '🌐', app: '📱', package: '📦' }
 const STATUS_LABELS = {
@@ -11,6 +12,12 @@ const STATUS_LABELS = {
   approved_for_dev: '🚀 已批准开发',
   in_acceptance: '🔍 验收中',
   accepted: '✅ 已验收',
+}
+const PRIORITY_LABELS = {
+  low: '🔵 低',
+  medium: '🟡 中',
+  high: '🟠 高',
+  urgent: '🔴 紧急',
 }
 
 export default function ProjectProposalList({ project, onBack, onAddProposal, onEditProposal, onDeleteProposal, onCopy, onCopyProposal, selectedProposals, onToggleSelect, onBatchArchive, onBatchTag, onReorderProposals }) {
@@ -25,6 +32,7 @@ export default function ProjectProposalList({ project, onBack, onAddProposal, on
 
   const [dragIndex, setDragIndex] = useState(null)
   const [dragOverIndex, setDragOverIndex] = useState(null)
+  const [expandedProposal, setExpandedProposal] = useState(null)
 
   // Use project.proposals directly for display and reordering
   const sortedProposals = [...(project.proposals || [])]
@@ -62,6 +70,10 @@ export default function ProjectProposalList({ project, onBack, onAddProposal, on
   const handleDragEnd = useCallback(() => {
     setDragIndex(null)
     setDragOverIndex(null)
+  }, [])
+
+  const toggleExpand = useCallback((proposalId) => {
+    setExpandedProposal(prev => prev === proposalId ? null : proposalId)
   }, [])
 
   return (
@@ -127,80 +139,128 @@ export default function ProjectProposalList({ project, onBack, onAddProposal, on
       ) : (
         <div className="space-y-2">
           {sortedProposals.map((p, index) => (
-            <div
-              key={p.id}
-              draggable
-              onDragStart={(e) => handleDragStart(e, index)}
-              onDragEnd={handleDragEnd}
-              onDragOver={(e) => handleDragOver(e, index)}
-              onDragLeave={handleDragLeave}
-              onDrop={(e) => handleDrop(e, index)}
-              className={`
-                bg-white dark:bg-gray-800 rounded shadow-sm hover:shadow-md transition-all p-4 border-2
-                ${selectedSet.has(p.id) ? 'ring-2 ring-blue-500 border-blue-300 dark:border-blue-600' : 'border-transparent'}
-                ${dragIndex === index ? 'opacity-50 scale-98' : ''}
-                ${dragOverIndex === index && dragIndex !== index ? 'border-t-4 border-blue-500' : ''}
-                cursor-grab active:cursor-grabbing
-              `}
-            >
-              <div className="flex items-start justify-between mb-2">
-                <div className="flex items-center gap-3 flex-wrap">
-                  {/* Drag handle */}
-                  <span className="text-gray-300 dark:text-gray-600 cursor-grab select-none" title="拖拽排序">☰</span>
-                  <input
-                    type="checkbox"
-                    checked={selectedSet.has(p.id)}
-                    onChange={() => onToggleSelect(project.id, p)}
-                    className="rounded"
-                  />
-                  <span className="font-mono text-sm text-gray-500 dark:text-gray-400">{p.id}</span>
-                  <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">{p.name}</span>
-                  {p.type && (
-                    <span className="text-xl">{TYPE_LABELS[p.type] || '📦'}</span>
-                  )}
-                  <span className={`px-2 py-0.5 rounded text-xs ${
-                    p.status === 'active' ? 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300' :
-                    p.status === 'in_dev' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/50 dark:text-yellow-300' :
-                    p.status === 'accepted' ? 'bg-teal-100 text-teal-700 dark:bg-teal-900/50 dark:text-teal-300' :
-                    p.status === 'in_acceptance' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300' :
-                    p.status === 'approved_for_dev' ? 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300' :
-                    'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
-                  }`}>
-                    {STATUS_LABELS[p.status] || p.status}
+            <div key={p.id}>
+              <div
+                draggable
+                onDragStart={(e) => handleDragStart(e, index)}
+                onDragEnd={handleDragEnd}
+                onDragOver={(e) => handleDragOver(e, index)}
+                onDragLeave={handleDragLeave}
+                onDrop={(e) => handleDrop(e, index)}
+                className={`
+                  bg-white dark:bg-gray-800 rounded shadow-sm hover:shadow-md transition-all p-4 border-2
+                  ${selectedSet.has(p.id) ? 'ring-2 ring-blue-500 border-blue-300 dark:border-blue-600' : 'border-transparent'}
+                  ${dragIndex === index ? 'opacity-50 scale-98' : ''}
+                  ${dragOverIndex === index && dragIndex !== index ? 'border-t-4 border-blue-500' : ''}
+                  cursor-grab active:cursor-grabbing
+                `}
+              >
+                <div className="flex items-start justify-between mb-2">
+                  <div className="flex items-center gap-3 flex-wrap">
+                    {/* Drag handle */}
+                    <span className="text-gray-300 dark:text-gray-600 cursor-grab select-none" title="拖拽排序">☰</span>
+                    <input
+                      type="checkbox"
+                      checked={selectedSet.has(p.id)}
+                      onChange={() => onToggleSelect(project.id, p)}
+                      className="rounded"
+                    />
+                    <span className="font-mono text-sm text-gray-500 dark:text-gray-400">{p.id}</span>
+                    <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">{p.name}</span>
+                    {p.type && (
+                      <span className="text-xl">{TYPE_LABELS[p.type] || '📦'}</span>
+                    )}
+                    <span className={`px-2 py-0.5 rounded text-xs ${
+                      p.status === 'active' ? 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300' :
+                      p.status === 'in_dev' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/50 dark:text-yellow-300' :
+                      p.status === 'accepted' ? 'bg-teal-100 text-teal-700 dark:bg-teal-900/50 dark:text-teal-300' :
+                      p.status === 'in_acceptance' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300' :
+                      p.status === 'approved_for_dev' ? 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300' :
+                      'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
+                    }`}>
+                      {STATUS_LABELS[p.status] || p.status}
+                    </span>
+                    {p.priority && (
+                      <span className={`px-2 py-0.5 rounded text-xs ${
+                        p.priority === 'urgent' ? 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300' :
+                        p.priority === 'high' ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/50 dark:text-orange-300' :
+                        p.priority === 'medium' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/50 dark:text-yellow-300' :
+                        'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'
+                      }`}>
+                        {PRIORITY_LABELS[p.priority] || p.priority}
+                      </span>
+                    )}
+                    {p.milestone && (
+                      <span className="text-xs bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 px-1.5 py-0.5 rounded">
+                        🎯 {p.milestone}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => toggleExpand(p.id)}
+                      className={`text-xs px-2 py-1 rounded ${expandedProposal === p.id ? 'bg-gray-200 dark:bg-gray-700' : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'} text-gray-600 dark:text-gray-300`}
+                      title="查看详情"
+                    >
+                      {expandedProposal === p.id ? '收起 ▲' : '详情 ▼'}
+                    </button>
+                    {p.url && (
+                      <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-xs bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 px-2 py-1 rounded text-gray-600 dark:text-gray-300">
+                        🔗 访问
+                      </a>
+                    )}
+                    {p.packageUrl && (
+                      <a href={p.packageUrl} target="_blank" rel="noopener noreferrer" className="text-xs bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 px-2 py-1 rounded text-gray-600 dark:text-gray-300">
+                        📥 下载
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                <p className="text-gray-600 text-sm mb-3 dark:text-gray-400">{p.description || '无描述'}</p>
+
+                {p.tags && p.tags.length > 0 && (
+                  <div className="flex gap-1 mb-3 flex-wrap">
+                    {p.tags.map(tag => (
+                      <span key={tag} className="text-xs bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 px-1.5 py-0.5 rounded">{tag}</span>
+                    ))}
+                  </div>
+                )}
+
+                <div className="flex gap-2 mt-3 border-t border-gray-200 dark:border-gray-700 pt-3">
+                  <button onClick={() => onEditProposal(project.id, p)} className="text-blue-600 hover:underline text-sm dark:text-blue-400">编辑</button>
+                  <button onClick={() => onCopyProposal(project.id, p)} className="text-green-600 hover:underline text-sm dark:text-green-400">复制</button>
+                  <button onClick={() => onDeleteProposal(project.id, p.id)} className="text-red-600 hover:underline text-sm dark:text-red-400">删除</button>
+                  <span className="text-xs text-gray-400 ml-auto dark:text-gray-500">
+                    更新于 {p.updatedAt}
                   </span>
                 </div>
-                <div className="flex gap-2">
-                  {p.url && (
-                    <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-xs bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 px-2 py-1 rounded text-gray-600 dark:text-gray-300">
-                      🔗 访问
-                    </a>
-                  )}
-                  {p.packageUrl && (
-                    <a href={p.packageUrl} target="_blank" rel="noopener noreferrer" className="text-xs bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 px-2 py-1 rounded text-gray-600 dark:text-gray-300">
-                      📥 下载
-                    </a>
-                  )}
-                </div>
               </div>
 
-              <p className="text-gray-600 text-sm mb-3 dark:text-gray-400">{p.description || '无描述'}</p>
-
-              {p.tags && p.tags.length > 0 && (
-                <div className="flex gap-1 mb-3 flex-wrap">
-                  {p.tags.map(tag => (
-                    <span key={tag} className="text-xs bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 px-1.5 py-0.5 rounded">{tag}</span>
-                  ))}
+              {/* Expanded detail panel */}
+              {expandedProposal === p.id && (
+                <div className="bg-gray-50 dark:bg-gray-800/50 rounded-b-lg -mt-2 mb-2 p-4 border border-t-0 border-gray-200 dark:border-gray-700">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Info */}
+                    <div className="space-y-2">
+                      <div className="text-sm">
+                        <span className="text-gray-500 dark:text-gray-400">创建时间：</span>
+                        <span className="text-gray-700 dark:text-gray-300">{p.createdAt || '未知'}</span>
+                      </div>
+                      {p.gitRepo && (
+                        <div className="text-sm">
+                          <span className="text-gray-500 dark:text-gray-400">代码仓库：</span>
+                          <a href={p.gitRepo} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline dark:text-blue-400">{p.gitRepo}</a>
+                        </div>
+                      )}
+                    </div>
+                    {/* Timeline */}
+                    <div>
+                      <ProposalTimeline proposal={p} />
+                    </div>
+                  </div>
                 </div>
               )}
-
-              <div className="flex gap-2 mt-3 border-t border-gray-200 dark:border-gray-700 pt-3">
-                <button onClick={() => onEditProposal(project.id, p)} className="text-blue-600 hover:underline text-sm dark:text-blue-400">编辑</button>
-                <button onClick={() => onCopyProposal(project.id, p)} className="text-green-600 hover:underline text-sm dark:text-green-400">复制</button>
-                <button onClick={() => onDeleteProposal(project.id, p.id)} className="text-red-600 hover:underline text-sm dark:text-red-400">删除</button>
-                <span className="text-xs text-gray-400 ml-auto dark:text-gray-500">
-                  更新于 {p.updatedAt}
-                </span>
-              </div>
             </div>
           ))}
         </div>
