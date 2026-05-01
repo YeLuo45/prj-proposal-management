@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function ProposalForm({ proposal, onSave, onClose }) {
+function ProposalForm({ proposal, projectId, projects, onSave, onClose }) {
   const [formData, setFormData] = useState({
     name: '',
     description: '',
@@ -9,6 +9,7 @@ function ProposalForm({ proposal, onSave, onClose }) {
     url: '',
     packageUrl: '',
     tags: [],
+    projectId: '',
   });
   const [tagsInput, setTagsInput] = useState('');
 
@@ -16,8 +17,10 @@ function ProposalForm({ proposal, onSave, onClose }) {
     if (proposal) {
       setFormData(proposal);
       setTagsInput(proposal.tags?.join(', ') || '');
+    } else if (projectId) {
+      setFormData(prev => ({ ...prev, projectId }));
     }
-  }, [proposal]);
+  }, [proposal, projectId]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -70,6 +73,23 @@ function ProposalForm({ proposal, onSave, onClose }) {
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
+
+          {projects && projects.length > 0 && (
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">所属项目</label>
+              <select
+                name="projectId"
+                value={formData.projectId}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="">未分类</option>
+                {projects.map(p => (
+                  <option key={p.id} value={p.id}>{p.name}</option>
+                ))}
+              </select>
+            </div>
+          )}
 
           <div className="grid grid-cols-2 gap-4">
             <div>

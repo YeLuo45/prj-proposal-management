@@ -1,15 +1,19 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
+import { BrowserRouter, Routes, Route, useNavigate, useParams } from 'react-router-dom';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import FilterBar from './components/FilterBar';
 import ProposalCard from './components/ProposalCard';
 import ProposalForm from './components/ProposalForm';
+import ProjectCard from './components/ProjectCard';
+import ProjectForm from './components/ProjectForm';
 import { useGitHub } from './hooks/useGitHub';
+import ProjectDetailPage from './pages/ProjectDetailPage';
 
 const ITEMS_PER_PAGE = 12;
 
-function App() {
-  const [proposals, setProposals] = useState([]);
+function HomePage() {
+  const [data, setData] = useState({ projects: [], proposals: [] });
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
   const [filterStatus, setFilterStatus] = useState('all');
@@ -17,27 +21,30 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [showForm, setShowForm] = useState(false);
   const [editingProposal, setEditingProposal] = useState(null);
-  const [token, setToken] = useState('');
+  const [showProjectForm, setShowProjectForm] = useState(false);
+  const [editingProject, setEditingProject] = useState(null);
   const [showTokenInput, setShowTokenInput] = useState(false);
+  const [token, setToken] = useState('');
 
-  const { loading, error, fetchProposals, saveProposals } = useGitHub();
+  const navigate = useNavigate();
+  const { fetchData, saveData, loading, error } = useGitHub();
 
   useEffect(() => {
     const savedToken = localStorage.getItem('github_token');
     if (savedToken) {
       setToken(savedToken);
-      loadProposals();
+      loadData();
     } else {
       setShowTokenInput(true);
     }
   }, []);
 
-  const loadProposals = async () => {
+  const loadData = async () => {
     try {
-      const data = await fetchProposals();
-      setProposals(data.proposals || []);
+      const loadedData = await fetchData();
+      setData(loadedData);
     } catch (err) {
-      console.error('Failed to load proposals:', err);
+      console.error('Failed to load data:', err);
     }
   };
 
@@ -45,37 +52,63 @@ function App() {
     localStorage.setItem('github_token', newToken);
     setToken(newToken);
     setShowTokenInput(false);
-    loadProposals();
+    loadData();
   };
 
-  const filteredProposals = useMemo(() => {
-    return proposals.filter((p) => {
-      const matchesSearch =
-        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+  const handleSelectProject = (projectId) => {
+    navigate(`/project/${encodeURIComponent(projectId)}`);
+  };
 
-      const matchesType = filterType === 'all' || p.type === filterType;
-      const matchesStatus = filterStatus === 'all' || p.status === filterStatus;
+  const handleAddProject = async (newProject) => {
+    const today = new Date().toISOString().split('T')[0];
+    const existingToday = data.projects.filter(p => p.id.startsWith(`PRJ-${today.replace(/-/g, '')}`));
+    const seqNum = String(existingToday.length + 1).padStart(3, '0');
+    const id = `PRJ-${today.replace(/-/g, '')}-${seqNum}`;
 
-      return matchesSearch && matchesType && matchesStatus;
-    });
-  }, [proposals, searchQuery, filterType, filterStatus]);
+    const project = {
+      ...newProject,
+      id,
+      createdAt: today,
+      updatedAt: today,
+      milestones: []
+    };
 
-  const paginatedProposals = useMemo(() => {
-    const start = (currentPage - 1) * ITEMS_PER_PAGE;
-    return filteredProposals.slice(start, start + ITEMS_PER_PAGE);
-  }, [filteredProposals, currentPage]);
+    const newData = {
+      ...data,
+      projects: [...data.projects, project]
+    };
+    await saveData(newData);
+    setData(newData);
+    setShowProjectForm(false);
+  };
 
-  const totalPages = Math.ceil(filteredProposals.length / ITEMS_PER_PAGE);
+  const handleEditProject = async (updatedProject) => {
+    const today = new Date().toISOString().split('T')[0];
+    const newData = {
+      ...data,
+      projects: data.projects.map(p =>
+        p.id === updatedProject.id ? { ...updatedProject, updatedAt: today } : p
+      )
+    };
+    await saveData(newData);
+    setData(newData);
+    setEditingProject(null);
+    setShowProjectForm(false);
+  };
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, filterType, filterStatus]);
+  const handleDeleteProject = async (id) => {
+    if (!confirm('确定要删除这个项目吗？')) return;
+    const newData = {
+      ...data,
+      projects: data.projects.filter(p => p.id !== id)
+    };
+    await saveData(newData);
+    setData(newData);
+  };
 
   const handleAddProposal = async (newProposal) => {
     const today = new Date().toISOString().split('T')[0];
-    const existingToday = proposals.filter((p) => p.id.startsWith(`P-${today.replace(/-/g, '')}`));
+    const existingToday = data.proposals.filter(p => p.id.startsWith(`P-${today.replace(/-/g, '')}`));
     const seqNum = String(existingToday.length + 1).padStart(3, '0');
     const id = `P-${today.replace(/-/g, '')}-${seqNum}`;
 
@@ -86,34 +119,63 @@ function App() {
       updatedAt: today,
     };
 
-    const newProposals = [...proposals, proposal];
-    await saveProposals({ proposals: newProposals });
-    setProposals(newProposals);
+    const newData = {
+      ...data,
+      proposals: [...data.proposals, proposal]
+    };
+    await saveData(newData);
+    setData(newData);
     setShowForm(false);
   };
 
   const handleEditProposal = async (updatedProposal) => {
     const today = new Date().toISOString().split('T')[0];
-    const newProposals = proposals.map((p) =>
-      p.id === updatedProposal.id ? { ...updatedProposal, updatedAt: today } : p
-    );
-    await saveProposals({ proposals: newProposals });
-    setProposals(newProposals);
+    const newData = {
+      ...data,
+      proposals: data.proposals.map(p =>
+        p.id === updatedProposal.id ? { ...updatedProposal, updatedAt: today } : p
+      )
+    };
+    await saveData(newData);
+    setData(newData);
     setEditingProposal(null);
     setShowForm(false);
   };
 
   const handleDeleteProposal = async (id) => {
     if (!confirm('确定要删除这个提案吗？')) return;
-    const newProposals = proposals.filter((p) => p.id !== id);
-    await saveProposals({ proposals: newProposals });
-    setProposals(newProposals);
+    const newData = {
+      ...data,
+      proposals: data.proposals.filter(p => p.id !== id)
+    };
+    await saveData(newData);
+    setData(newData);
   };
 
   const handleCopyUrl = (url) => {
     navigator.clipboard.writeText(url);
     alert('链接已复制到剪贴板');
   };
+
+  // 过滤项目
+  const filteredProjects = useMemo(() => {
+    return data.projects.filter(p => {
+      const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (p.description || '').toLowerCase().includes(searchQuery.toLowerCase());
+      return matchesSearch;
+    });
+  }, [data.projects, searchQuery]);
+
+  const paginatedProjects = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredProjects.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredProjects, currentPage]);
+
+  const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery]);
 
   if (showTokenInput) {
     return (
@@ -149,6 +211,10 @@ function App() {
           setShowForm(true);
         }}
         onSettings={() => setShowTokenInput(true)}
+        onAddProject={() => {
+          setEditingProject(null);
+          setShowProjectForm(true);
+        }}
       />
 
       <div className="container mx-auto px-4 py-6">
@@ -169,18 +235,39 @@ function App() {
 
         {!loading && (
           <>
+            <div className="mb-6 flex items-center justify-between">
+              <h2 className="text-xl font-semibold text-gray-800">项目列表</h2>
+              <button
+                onClick={() => setShowProjectForm(true)}
+                className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+              >
+                + 新建项目
+              </button>
+            </div>
+
             {viewMode === 'card' ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {paginatedProposals.map((proposal) => (
-                  <ProposalCard
-                    key={proposal.id}
-                    proposal={proposal}
-                    onEdit={() => {
-                      setEditingProposal(proposal);
+                {paginatedProjects.map((project) => (
+                  <ProjectCard
+                    key={project.id}
+                    project={project}
+                    viewMode={viewMode}
+                    onSelectProject={handleSelectProject}
+                    onEditProject={(p) => {
+                      setEditingProject(p);
+                      setShowProjectForm(true);
+                    }}
+                    onDeleteProject={handleDeleteProject}
+                    onAddProposal={(p) => {
+                      setEditingProject(p);
                       setShowForm(true);
                     }}
-                    onDelete={() => handleDeleteProposal(proposal.id)}
-                    onCopyUrl={handleCopyUrl}
+                    onEditProposal={(p) => {
+                      setEditingProposal(p);
+                      setShowForm(true);
+                    }}
+                    onDeleteProposal={handleDeleteProposal}
+                    onCopy={handleCopyUrl}
                   />
                 ))}
               </div>
@@ -191,52 +278,28 @@ function App() {
                     <tr>
                       <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">ID</th>
                       <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">名称</th>
-                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">类型</th>
-                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">状态</th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">描述</th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">提案数</th>
                       <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">操作</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
-                    {paginatedProposals.map((proposal) => (
-                      <tr key={proposal.id}>
-                        <td className="px-4 py-3 text-sm">{proposal.id}</td>
-                        <td className="px-4 py-3 text-sm">{proposal.name}</td>
-                        <td className="px-4 py-3 text-sm">
-                          <span className={`px-2 py-1 rounded text-xs ${
-                            proposal.type === 'web' ? 'bg-blue-100 text-blue-800' :
-                            proposal.type === 'app' ? 'bg-green-100 text-green-800' :
-                            'bg-purple-100 text-purple-800'
-                          }`}>
-                            {proposal.type}
-                          </span>
-                        </td>
-                        <td className="px-4 py-3 text-sm">
-                          <span className={`px-2 py-1 rounded text-xs ${
-                            proposal.status === 'active' ? 'bg-green-100 text-green-800' :
-                            proposal.status === 'archived' ? 'bg-gray-100 text-gray-800' :
-                            'bg-yellow-100 text-yellow-800'
-                          }`}>
-                            {proposal.status}
-                          </span>
-                        </td>
-                        <td className="px-4 py-3 text-sm">
-                          <button
-                            onClick={() => {
-                              setEditingProposal(proposal);
-                              setShowForm(true);
-                            }}
-                            className="text-blue-500 hover:text-blue-700 mr-3"
-                          >
-                            编辑
-                          </button>
-                          <button
-                            onClick={() => handleDeleteProposal(proposal.id)}
-                            className="text-red-500 hover:text-red-700"
-                          >
-                            删除
-                          </button>
-                        </td>
-                      </tr>
+                    {paginatedProjects.map((project) => (
+                      <ProjectCard
+                        key={project.id}
+                        project={project}
+                        viewMode={viewMode}
+                        onSelectProject={handleSelectProject}
+                        onEditProject={(p) => {
+                          setEditingProject(p);
+                          setShowProjectForm(true);
+                        }}
+                        onDeleteProject={handleDeleteProject}
+                        onAddProposal={() => {}}
+                        onEditProposal={() => {}}
+                        onDeleteProposal={() => {}}
+                        onCopy={handleCopyUrl}
+                      />
                     ))}
                   </tbody>
                 </table>
@@ -265,9 +328,9 @@ function App() {
               </div>
             )}
 
-            {filteredProposals.length === 0 && (
+            {filteredProjects.length === 0 && (
               <div className="text-center py-12 text-gray-500">
-                没有找到匹配的提案
+                没有找到匹配的项目
               </div>
             )}
           </>
@@ -277,15 +340,46 @@ function App() {
       {showForm && (
         <ProposalForm
           proposal={editingProposal}
+          projectId={editingProject?.id}
+          projects={data.projects}
           onSave={editingProposal ? handleEditProposal : handleAddProposal}
           onClose={() => {
             setShowForm(false);
             setEditingProposal(null);
+            setEditingProject(null);
+          }}
+        />
+      )}
+
+      {showProjectForm && (
+        <ProjectForm
+          project={editingProject}
+          onSave={editingProject ? handleEditProject : handleAddProject}
+          onClose={() => {
+            setShowProjectForm(false);
+            setEditingProject(null);
           }}
         />
       )}
     </div>
   );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/project/:id" element={<ProjectDetailPageWrapper />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+function ProjectDetailPageWrapper() {
+  const { id } = useParams();
+  const decodedId = decodeURIComponent(id);
+  return <ProjectDetailPage projectId={decodedId} />;
 }
 
 export default App;
