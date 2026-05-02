@@ -93,16 +93,16 @@
     {
       "id": "PRJ-20260416-002",
       "name": "game-1024",
-      "description": "经典1024玩法（4×4滑动合并，目标1024）+ PWA可安装到安卓主屏幕 + 存档/继续游戏 + 皮肤系统 + 已部署至GitHub Pages",
+      "description": "经典1024玩法（4×4滑动合并，目标1024）+ PWA可安装到安卓主屏幕 + 存档/继续游戏 + 皮肤系统；V2迭代(2048模式/无限模式/每日挑战/成就系统)已交付部署",
       "url": "https://yeluo45.github.io/game-1024/",
       "gitRepo": "https://github.com/YeLuo45/game-1024",
       "createdAt": "2026-04-16",
-      "updatedAt": "2026-04-16",
+      "updatedAt": "2026-05-02",
       "proposals": [
         {
           "id": "P-20250416-002",
           "name": "game-1024",
-          "description": "经典1024玩法（4×4滑动合并，目标1024）+ PWA可安装到安卓主屏幕 + 存档/继续游戏 + 皮肤系统 + 已部署至GitHub Pages",
+          "description": "经典1024玩法（4×4滑动合并，目标1024）+ PWA可安装到安卓主屏幕 + 存档/继续游戏 + 皮肤系统；V2迭代(2048模式/无限模式/每日挑战/成就系统)已交付部署",
           "type": "package",
           "status": "active",
           "url": "https://yeluo45.github.io/game-1024/",
@@ -443,6 +443,35 @@
       ]
     },
     {
+      "id": "PRJ-20260419-004",
+      "name": "TradingAgents-CN",
+      "description": "AI 量化交易代理系统；Python 3.10+；混合许可证（Apache 2.0 开源 + 专有前端后端需商业授权）；包含 FastAPI 后端 + Vue 前端 + Docker 部署；基于 TauricResearch/TradingAgents",
+      "url": "",
+      "gitRepo": "https://github.com/YeLuo45/TradingAgents-CN",
+      "createdAt": "2026-04-19",
+      "updatedAt": "2026-04-19",
+      "proposals": [
+        {
+          "id": "P-20260419-004",
+          "name": "TradingAgents-CN",
+          "description": "AI 量化交易代理系统；Python 3.10+；混合许可证（Apache 2.0 开源 + 专有前端后端需商业授权）；包含 FastAPI 后端 + Vue 前端 + Docker 部署；基于 TauricResearch/TradingAgents",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/TradingAgents-CN/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/TradingAgents-CN",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-19",
+          "updatedAt": "2026-04-19",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        }
+      ]
+    },
+    {
       "id": "PRJ-20260420-001",
       "name": "snake-battle",
       "description": "贪吃蛇大作战；经典模式(单蛇吃食物)+AI对战(1玩家+3AI蛇,3分钟倒计时)；3套皮肤(Classic/Neon/Candy)；localStorage存档",
@@ -503,11 +532,11 @@
     {
       "id": "PRJ-20260421-001",
       "name": "card-game-prototype",
-      "description": "DBG类卡牌（杀戮尖塔-like）；原型验证核心战斗循环+卡牌构筑；本地化中文；已交付",
+      "description": "V2迭代：13张初始牌（4打击+4防御+2硬撑+2连续打击+1痛击）+12张新卡牌+5种debuff+5敌人+1Boss+战斗日志+胜利选牌",
       "url": "https://yeluo45.github.io/card-game-prototype/",
       "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
       "createdAt": "2026-04-21",
-      "updatedAt": "2026-04-21",
+      "updatedAt": "2026-05-02",
       "proposals": [
         {
           "id": "P-20250421-001",
@@ -523,6 +552,24 @@
           ],
           "createdAt": "2026-04-21",
           "updatedAt": "2026-04-21",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260502-003",
+          "name": "card-game-prototype",
+          "description": "V2迭代：13张初始牌（4打击+4防御+2硬撑+2连续打击+1痛击）+12张新卡牌+5种debuff+5敌人+1Boss+战斗日志+胜利选牌",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/card-game-prototype/",
+          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
@@ -590,11 +637,11 @@
     {
       "id": "PRJ-20260422-002",
       "name": "ai-novel-assistant",
-      "description": "AI小说助手；React + Vite + Dexie (IndexedDB) + Zustand + react-beautiful-dnd + react-router-dom；功能待确认",
+      "description": "迭代方向A：正文编辑页 + 大纲双向联动 + AI辅助（续写/润色/扩写/缩写/语法检查）",
       "url": "",
       "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
       "createdAt": "2026-04-22",
-      "updatedAt": "2026-04-22",
+      "updatedAt": "2026-05-02",
       "proposals": [
         {
           "id": "P-20250421-002",
@@ -612,6 +659,24 @@
           "updatedAt": "2026-04-22",
           "prdConfirmation": "",
           "techExpectations": "",
+          "acceptance": ""
+        },
+        {
+          "id": "P-20260502-001",
+          "name": "ai-novel-assistant",
+          "description": "迭代方向A：正文编辑页 + 大纲双向联动 + AI辅助（续写/润色/扩写/缩写/语法检查）",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
           "acceptance": ""
         }
       ]
@@ -729,6 +794,24 @@
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
           "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260422-003",
+          "name": "match3-puzzle",
+          "description": "8x8三消游戏原型验证，纯HTML5 Canvas；5种颜色圆块、点击交换、3+连消、下落填补、分数系统、游戏结束判定",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/match3-puzzle/",
+          "packageUrl": "https://github.com/YeLuo45/match3-puzzle/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/match3-puzzle",
+          "tags": [
+            "游戏"
+          ],
+          "createdAt": "2026-04-24",
+          "updatedAt": "2026-04-24",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
         }
       ]
     },
@@ -787,6 +870,35 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260424-002",
+      "name": "hermes-协作服务器消息转发机制重构",
+      "description": "协作服务器消息转发机制重构；通过 DirectAgentClient (subprocess) 调用 Hermes AIAgent，显式传递 ANTHROPIC_API_KEY 环境变量解决凭证问题；3次连续测试100%成功响应；修复了 .env 加载问题和 API key 传递问题（commit 74469db → 51ef8f8）",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24",
+      "proposals": [
+        {
+          "id": "P-20260424-002",
+          "name": "hermes-协作服务器消息转发机制重构",
+          "description": "协作服务器消息转发机制重构；通过 DirectAgentClient (subprocess) 调用 Hermes AIAgent，显式传递 ANTHROPIC_API_KEY 环境变量解决凭证问题；3次连续测试100%成功响应；修复了 .env 加载问题和 API key 传递问题（commit 74469db → 51ef8f8）",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/hermes-协作服务器消息转发机制重构/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-24",
+          "updatedAt": "2026-04-24",
+          "prdConfirmation": "timeout-approved",
+          "techExpectations": "",
+          "acceptance": ""
         }
       ]
     },
@@ -988,11 +1100,11 @@
     {
       "id": "PRJ-20260428-001",
       "name": "flight-chess-3d",
-      "description": "3D卡通飞行棋；React Three Fiber 3D渲染；传统模式+事件模式(幸运/厄运/传送/交换)；2-4人本地对战；Roblox风格卡通渲染；60FPS目标；workflow修复id-token权限后部署成功",
+      "description": "AI三种难度（Easy随机/Medium策略/Hard最优）；自动投骰+选子；可选纯AI对战或混合模式；原人类模式不受影响；已实现难度选择UI和AI Thinking动画",
       "url": "https://yeluo45.github.io/flight-chess-3d/",
       "gitRepo": "https://github.com/YeLuo45/flight-chess-3d",
       "createdAt": "2026-04-28",
-      "updatedAt": "2026-04-28",
+      "updatedAt": "2026-05-02",
       "proposals": [
         {
           "id": "P-20260427-001",
@@ -1008,6 +1120,24 @@
           ],
           "createdAt": "2026-04-28",
           "updatedAt": "2026-04-28",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260502-004",
+          "name": "flight-chess-3d",
+          "description": "AI三种难度（Easy随机/Medium策略/Hard最优）；自动投骰+选子；可选纯AI对战或混合模式；原人类模式不受影响；已实现难度选择UI和AI Thinking动画",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/flight-chess-3d/",
+          "packageUrl": "https://github.com/YeLuo45/flight-chess-3d/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/flight-chess-3d",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
           "acceptance": "accepted"
@@ -1040,13 +1170,31 @@
           "prdConfirmation": "N/A (direct to dev)",
           "techExpectations": "N/A (direct to dev)",
           "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260430-006",
+          "name": "tower-baby-guard",
+          "description": "育儿主题塔防；5种防御塔(Mom/Dad/Grandma/Doctor/Chef)+4种敌人(Tantrum/Bedtime/Veggie/ScreenTime)+10波次；Godot 4 HTML5导出",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/tower-baby-guard/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-30",
+          "updatedAt": "2026-04-30",
+          "prdConfirmation": "N/A (direct to dev)",
+          "techExpectations": "N/A (direct to dev)",
+          "acceptance": "accepted"
         }
       ]
     },
     {
       "id": "PRJ-20260430-002",
       "name": "doc-editor",
-      "description": "顶部搜索框实时搜索文档标题和内容(300ms防抖)，显示标题+内容片段+文件夹，最多10条结果，点击跳转",
+      "description": "富文本编辑器(加粗/斜体/下划线/删除线/标题/列表/引用/代码块/链接/图片)+文档管理(侧边栏列表/新建/删除/重命名)+自动保存(2秒防抖)+历史版本(30秒快照)+导出(MD/HTML/打印PDF)+主题切换(亮/暗)+本地化中文；IndexedDB持久化；网络故障用GitHub API直接推送源码",
       "url": "https://yeluo45.github.io/doc-editor/",
       "gitRepo": "https://github.com/YeLuo45/doc-editor",
       "createdAt": "2026-04-30",
@@ -1068,6 +1216,285 @@
           "updatedAt": "2026-04-30",
           "prdConfirmation": "timeout-approved (快速启动)",
           "techExpectations": "confirmed (默认最优)",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260430-007",
+          "name": "doc-editor",
+          "description": "富文本编辑器(加粗/斜体/下划线/删除线/标题/列表/引用/代码块/链接/图片)+文档管理(侧边栏列表/新建/删除/重命名)+自动保存(2秒防抖)+历史版本(30秒快照)+导出(MD/HTML/打印PDF)+主题切换(亮/暗)+本地化中文；IndexedDB持久化；网络故障用GitHub API直接推送源码",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/doc-editor/",
+          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/doc-editor",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-30",
+          "updatedAt": "2026-04-30",
+          "prdConfirmation": "timeout-approved (快速启动)",
+          "techExpectations": "confirmed (默认最优)",
+          "acceptance": "accepted"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260502-001",
+      "name": "proposals-manager-项目管理增强",
+      "description": "项目详情页（独立路由 /project/:id）+ 里程碑管理（CRUD + 时间线 + 提案关联）; PRD 倒计时到期(2026-05-02)，默认通过处理; 技术期望倒计时到期(2026-05-02)，默认通过处理",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-02",
+      "updatedAt": "2026-05-02",
+      "proposals": [
+        {
+          "id": "P-20260502-001",
+          "name": "proposals-manager-项目管理增强",
+          "description": "项目详情页（独立路由 /project/:id）+ 里程碑管理（CRUD + 时间线 + 提案关联）; PRD 倒计时到期(2026-05-02)，默认通过处理; 技术期望倒计时到期(2026-05-02)，默认通过处理",
+          "type": "package",
+          "status": "in_dev",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/proposals-manager-项目管理增强/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
+          "prdConfirmation": "timeout-approved",
+          "techExpectations": "timeout-approved",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260502-002",
+      "name": "todolist-迭代增强-轻量化-看板视图",
+      "description": "V2轻量化增强已完成（优先级P0/P1/P2+标签筛选+截止日期排序+搜索过滤），部署于 https://yeluo45.github.io/todo-list/；V3看板视图已集成到todo-list项目（列表/看板视图切换，三列看板+原生拖拽），URL不变；看板使用HTML5原生Drag and Drop API实现，不需要额外依赖",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-02",
+      "updatedAt": "2026-05-02",
+      "proposals": [
+        {
+          "id": "P-20260502-002",
+          "name": "todolist-迭代增强-轻量化-看板视图",
+          "description": "V2轻量化增强已完成（优先级P0/P1/P2+标签筛选+截止日期排序+搜索过滤），部署于 https://yeluo45.github.io/todo-list/；V3看板视图已集成到todo-list项目（列表/看板视图切换，三列看板+原生拖拽），URL不变；看板使用HTML5原生Drag and Drop API实现，不需要额外依赖",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/todolist-迭代增强-轻量化-看板视图/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
+          "prdConfirmation": "timeout-approved",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260502-006",
+      "name": "dbg卡牌游戏-v3-地图-进度系统",
+      "description": "DBG卡牌游戏 V3 — 地图/进度系统",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-02",
+      "updatedAt": "2026-05-02",
+      "proposals": [
+        {
+          "id": "P-20260502-006",
+          "name": "dbg卡牌游戏-v3-地图-进度系统",
+          "description": "DBG卡牌游戏 V3 — 地图/进度系统",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/dbg卡牌游戏-v3-地图-进度系统/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
+          "prdConfirmation": "timeout-approved",
+          "techExpectations": "confirmed",
+          "acceptance": "boss于2026-05-02验收通过（抽卡功能修复）"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260502-011",
+      "name": "dbg卡牌游戏-v4-诅咒牌与特殊牌系统",
+      "description": "DBG卡牌游戏 V4 — 诅咒牌与特殊牌系统",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-02",
+      "updatedAt": "2026-05-02",
+      "proposals": [
+        {
+          "id": "P-20260502-011",
+          "name": "dbg卡牌游戏-v4-诅咒牌与特殊牌系统",
+          "description": "DBG卡牌游戏 V4 — 诅咒牌与特殊牌系统",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/dbg卡牌游戏-v4-诅咒牌与特殊牌系统/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "boss于2026-05-02验收通过"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260502-005",
+      "name": "3d飞行棋-玩家颜色选择-战绩统计",
+      "description": "玩家可选颜色；战绩统计（胜率/连胜）；localStorage持久化",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-02",
+      "updatedAt": "2026-05-02",
+      "proposals": [
+        {
+          "id": "P-20260502-005",
+          "name": "3d飞行棋-玩家颜色选择-战绩统计",
+          "description": "玩家可选颜色；战绩统计（胜率/连胜）；localStorage持久化",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/3d飞行棋-玩家颜色选择-战绩统计/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260502-007",
+      "name": "game-1024-v2-2048-无限模式切换",
+      "description": "2048模式+无限模式切换；各自独立存档；无限模式不设目标上限；npm run build成功；已部署至gh-pages",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-02",
+      "updatedAt": "2026-05-02",
+      "proposals": [
+        {
+          "id": "P-20260502-007",
+          "name": "game-1024-v2-2048-无限模式切换",
+          "description": "2048模式+无限模式切换；各自独立存档；无限模式不设目标上限；npm run build成功；已部署至gh-pages",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/game-1024-v2-2048-无限模式切换/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260502-009",
+      "name": "game-1024-v3-视觉动画增强",
+      "description": "方块移动动画(150ms ease-out)+合并动画(scale爆开)+新方块出现动画(scale放大)+分数飘字",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-02",
+      "updatedAt": "2026-05-02",
+      "proposals": [
+        {
+          "id": "P-20260502-009",
+          "name": "game-1024-v3-视觉动画增强",
+          "description": "方块移动动画(150ms ease-out)+合并动画(scale爆开)+新方块出现动画(scale放大)+分数飘字",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/game-1024-v3-视觉动画增强/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260502-010",
+      "name": "game-1024-v3-音效系统",
+      "description": "Web Audio API合成音效(滑动/合并/胜利/失败)+音效开关+AudioManager封装",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-02",
+      "updatedAt": "2026-05-02",
+      "proposals": [
+        {
+          "id": "P-20260502-010",
+          "name": "game-1024-v3-音效系统",
+          "description": "Web Audio API合成音效(滑动/合并/胜利/失败)+音效开关+AudioManager封装",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/game-1024-v3-音效系统/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "Web"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260502-008",
+      "name": "game-1024-v2-每日挑战-成就系统",
+      "description": "每日挑战(固定初始盘面+得分排名)+10个成就(解锁弹窗+奖励)；参考3D打地鼠V4实现",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-02",
+      "updatedAt": "2026-05-02",
+      "proposals": [
+        {
+          "id": "P-20260502-008",
+          "name": "game-1024-v2-每日挑战-成就系统",
+          "description": "每日挑战(固定初始盘面+得分排名)+10个成就(解锁弹窗+奖励)；参考3D打地鼠V4实现",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/game-1024-v2-每日挑战-成就系统/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
       ]
