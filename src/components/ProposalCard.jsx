@@ -45,20 +45,40 @@ function ProposalCard({ proposal, onEdit, onDelete, onCopyUrl }) {
       </div>
 
       <div className="flex gap-2">
+        <button
+          onClick={() => {
+            navigator.clipboard.writeText(proposal.id);
+            alert(`项目编号 ${proposal.id} 已复制`);
+          }}
+          className="flex-1 bg-blue-500 text-white py-2 rounded hover:bg-blue-600 text-sm"
+        >
+          复制编号
+        </button>
+        <button
+          onClick={() => {
+            navigator.clipboard.writeText(proposal.name);
+            alert(`项目名称 ${proposal.name} 已复制`);
+          }}
+          className="flex-1 bg-green-500 text-white py-2 rounded hover:bg-green-600 text-sm"
+        >
+          复制名称
+        </button>
+      </div>
+      <div className="flex gap-2 mt-2">
         {proposal.url && (
           <button
-            onClick={() => onCopyUrl(proposal.url)}
+            onClick={() => window.open(proposal.url, '_blank')}
             className="flex-1 bg-blue-500 text-white py-2 rounded hover:bg-blue-600 text-sm"
           >
-            复制链接
+            访问
           </button>
         )}
         {proposal.packageUrl && (
           <button
-            onClick={() => onCopyUrl(proposal.packageUrl)}
+            onClick={() => window.open(proposal.packageUrl, '_blank')}
             className="flex-1 bg-purple-500 text-white py-2 rounded hover:bg-purple-600 text-sm"
           >
-            复制包链接
+            仓库
           </button>
         )}
       </div>
