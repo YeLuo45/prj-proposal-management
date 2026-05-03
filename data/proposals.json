@@ -29,7 +29,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260412-009",
@@ -58,7 +59,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260416-001",
@@ -178,7 +180,8 @@
           "createdAt": "2026-05-03",
           "updatedAt": "2026-05-03"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260417-001",
@@ -315,7 +318,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-001",
@@ -344,7 +348,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-003",
@@ -388,7 +393,8 @@
           "createdAt": "2026-05-03",
           "updatedAt": "2026-05-03"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-004",
@@ -417,7 +423,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-002",
@@ -446,7 +453,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-005",
@@ -475,7 +483,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-007",
@@ -504,7 +513,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-003",
@@ -534,7 +544,8 @@
           "techExpectations": "confirmed",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-002",
@@ -563,7 +574,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-001",
@@ -593,7 +605,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "TradingAgents-CN",
@@ -622,7 +635,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260420-001",
@@ -651,7 +665,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260420-002",
@@ -698,7 +713,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260421-001",
@@ -922,7 +938,8 @@
           "createdAt": "2026-05-03",
           "updatedAt": "2026-05-03"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260421-003",
@@ -951,7 +968,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260422-002",
@@ -980,7 +998,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260422-001",
@@ -1078,7 +1097,8 @@
           "createdAt": "2026-05-03",
           "updatedAt": "2026-05-03"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-001",
@@ -1107,7 +1127,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-005",
@@ -1151,7 +1172,8 @@
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-002",
@@ -1180,7 +1202,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-004",
@@ -1224,7 +1247,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-002",
@@ -1253,7 +1277,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-001",
@@ -1282,7 +1307,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "hermes-协作服务器消息转发机制重构",
@@ -1311,7 +1337,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260426-003",
@@ -1340,7 +1367,8 @@
           "techExpectations": "",
           "acceptance": "accepted (2026-04-26)"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "preschool-puzzle",
@@ -1369,7 +1397,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260428-001",
@@ -1488,7 +1517,8 @@
           "createdAt": "2026-05-01",
           "updatedAt": "2026-05-01"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260428-002",
@@ -1535,7 +1565,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260430-006",
@@ -1561,7 +1592,8 @@
           "createdAt": "2026-04-30",
           "updatedAt": "2026-04-30"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260430-001",
@@ -1605,7 +1637,8 @@
           "techExpectations": "confirmed (默认最优)",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260502-002",
@@ -1741,7 +1774,8 @@
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250416-001",
@@ -2005,7 +2039,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "3d飞行棋-玩家颜色选择-战绩统计",
@@ -2034,7 +2069,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250416-002",
@@ -2189,7 +2225,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "prj-proposals-manager-项目管理增强",
@@ -2218,7 +2255,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "future-little-leaders-v2-成长激励-亲子互动",
@@ -2247,7 +2285,8 @@
           "techExpectations": "pending",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250418-003",
@@ -2294,7 +2333,8 @@
           "techExpectations": "timeout-approved",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     }
   ]
 }
