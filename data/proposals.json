@@ -96,7 +96,7 @@
           "type": "package",
           "status": "active",
           "url": "https://yeluo45.github.io/prj-proposal-management/",
-          "packageUrl": "https://github.com/YeLuo45/proposals-manager/archive/refs/heads/main.zip",
+          "packageUrl": "https://github.com/YeLuo45/prj-proposal-management/archive/refs/heads/master.zip",
           "gitRepo": "https://github.com/YeLuo45/prj-proposal-management",
           "tags": [
             "提案"
