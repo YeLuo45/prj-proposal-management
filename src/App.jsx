@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import FilterBar from './components/FilterBar';
@@ -266,7 +267,9 @@ function App() {
                         <div className="flex justify-between items-start mb-3">
                           <div className="flex-1 min-w-0">
                             <span className="text-xs text-gray-400 dark:text-gray-500">{project.id}</span>
-                            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 truncate">{project.name}</h3>
+                            <Link to={`/project/${project.id}`} className="block">
+                              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 truncate hover:text-blue-500 dark:hover:text-blue-400">{project.name}</h3>
+                            </Link>
                           </div>
                           <span className="ml-2 px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded text-xs whitespace-nowrap">
                             {project.proposals.length} 提案

@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import GanttChart from '../components/GanttChart';
-import { useGanttData } from '../hooks/useGanttData';
+import GanttChart from '../components/GanttChart/index.jsx';
+import { useGanttData } from '../hooks/useGanttData.js';
 
 const STATUS_LABELS = {
   pending: '待开始',

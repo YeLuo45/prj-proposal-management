@@ -5,6 +5,7 @@ import App from './App.jsx'
 import KanbanBoard from './pages/KanbanBoard.jsx'
 import GanttView from './pages/GanttView.jsx'
 import DashboardView from './pages/DashboardView.jsx'
+import ProjectDetailPage from './pages/ProjectDetailPage.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <HashRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/project/:id" element={<ProjectDetailPage />} />
         <Route path="/kanban" element={<KanbanBoard />} />
         <Route path="/gantt" element={<GanttView />} />
         <Route path="/dashboard" element={<DashboardView />} />

@@ -1,0 +1,59 @@
+{
+  "milestones": [
+    {
+      "id": "ms-001",
+      "projectId": "PRJ-20260417-001",
+      "name": "V3 甘特图上线",
+      "startDate": "2026-05-01",
+      "endDate": "2026-05-15",
+      "status": "in_progress",
+      "proposalIds": ["P-20260503-018"],
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03"
+    },
+    {
+      "id": "ms-002",
+      "projectId": "PRJ-20260417-001",
+      "name": "看板视图优化",
+      "startDate": "2026-05-10",
+      "endDate": "2026-05-25",
+      "status": "pending",
+      "proposalIds": ["P-20260502-001"],
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03"
+    },
+    {
+      "id": "ms-003",
+      "projectId": "PRJ-20260417-002",
+      "name": "移动端适配",
+      "startDate": "2026-04-20",
+      "endDate": "2026-05-10",
+      "status": "completed",
+      "proposalIds": [],
+      "createdAt": "2026-04-20",
+      "updatedAt": "2026-05-10"
+    },
+    {
+      "id": "ms-004",
+      "projectId": "PRJ-20260417-002",
+      "name": "性能优化",
+      "startDate": "2026-05-15",
+      "endDate": "2026-05-30",
+      "status": "in_progress",
+      "proposalIds": [],
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03"
+    },
+    {
+      "id": "ms-005",
+      "projectId": "PRJ-20260417-003",
+      "name": "API 重构",
+      "startDate": "2026-04-01",
+      "endDate": "2026-04-20",
+      "status": "completed",
+      "proposalIds": [],
+      "createdAt": "2026-04-01",
+      "updatedAt": "2026-04-20"
+    }
+  ]
+}

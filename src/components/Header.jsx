@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 
-function Header({ onAdd, onSettings, darkMode, onToggleDarkMode }) {
+function Header({ onAdd, onSettings, darkMode, onToggleDarkMode, projectName }) {
   const location = useLocation();
 
   const isActive = (path) => {
@@ -19,7 +19,15 @@ function Header({ onAdd, onSettings, darkMode, onToggleDarkMode }) {
   return (
     <header className="bg-white dark:bg-gray-800 shadow">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">项目提案管理</h1>
+        <div className="flex items-center gap-4">
+          {projectName ? (
+            <span className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              {projectName}
+            </span>
+          ) : (
+            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">项目提案管理</h1>
+          )}
+        </div>
         <div className="flex gap-4 items-center">
           <Link to="/" className={navLinkClass('/')}>
             列表
