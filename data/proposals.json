@@ -172,7 +172,7 @@
     },
     {
       "id": "PRJ-20260417-001",
-      "name": "proposals-manager",
+      "name": "prj-proposals-manager",
       "description": "提案管理系统；完整CRUD；GitHub API操作JSON数据；已与提案管理系统单向同步",
       "url": "https://yeluo45.github.io/proposals-manager/",
       "gitRepo": "https://github.com/YeLuo45/proposals-manager",
