@@ -82,22 +82,22 @@
     },
     {
       "id": "PRJ-20260417-001",
-      "name": "proposals-manager",
+      "name": "prj-proposal-management",
       "description": "提案管理系统；完整CRUD；GitHub API操作JSON数据；已与提案管理系统单向同步",
-      "url": "https://yeluo45.github.io/proposals-manager/",
-      "gitRepo": "https://github.com/YeLuo45/proposals-manager",
+      "url": "https://yeluo45.github.io/prj-proposal-management/",
+      "gitRepo": "https://github.com/YeLuo45/prj-proposal-management",
       "createdAt": "2026-04-17",
       "updatedAt": "2026-04-17",
       "proposals": [
         {
           "id": "P-20250417-001",
-          "name": "proposals-manager",
+          "name": "prj-proposal-management",
           "description": "提案管理系统；完整CRUD；GitHub API操作JSON数据；已与提案管理系统单向同步",
           "type": "package",
           "status": "active",
-          "url": "https://yeluo45.github.io/proposals-manager/",
+          "url": "https://yeluo45.github.io/prj-proposal-management/",
           "packageUrl": "https://github.com/YeLuo45/proposals-manager/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/proposals-manager",
+          "gitRepo": "https://github.com/YeLuo45/prj-proposal-management",
           "tags": [
             "提案"
           ],
