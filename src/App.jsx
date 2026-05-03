@@ -18,6 +18,7 @@ import { useValidation } from './hooks/useDataValidator';
 import ValidationAlert from './components/ValidationAlert';
 import UndoToast from './components/UndoToast';
 import OperationHistoryDrawer from './components/OperationHistoryDrawer';
+import OfflineIndicator from './components/OfflineIndicator';
 import { validateProjects } from './utils/dataValidator';
 import { exportProjectsToCSV, downloadFile } from './utils/csvExporter';
 import { parseCSV, validateCSVImport, executeCSVImport } from './utils/csvImporter';
@@ -802,6 +803,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors">
+      <OfflineIndicator />
       <Header
         onAdd={() => {
           setEditingProposal(null);
