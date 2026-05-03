@@ -1,16 +1,37 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header({ onAdd, onSettings, darkMode, onToggleDarkMode }) {
+  const location = useLocation();
+
+  const isActive = (path) => {
+    if (path === '/' && location.pathname === '/') return true;
+    if (path !== '/' && location.pathname.startsWith(path)) return true;
+    return false;
+  };
+
+  const navLinkClass = (path) => {
+    const base = 'px-4 py-2 rounded-lg flex items-center gap-2 transition-colors';
+    return isActive(path)
+      ? `${base} bg-blue-500 text-white`
+      : `${base} bg-gray-500 text-white hover:bg-gray-600`;
+  };
+
   return (
     <header className="bg-white dark:bg-gray-800 shadow">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">项目提案管理</h1>
         <div className="flex gap-4 items-center">
-          <Link
-            to="/todos"
-            className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 flex items-center gap-2"
-          >
-            看板视图
+          <Link to="/" className={navLinkClass('/')}>
+            列表
+          </Link>
+          <Link to="/kanban" className={navLinkClass('/kanban')}>
+            看板
+          </Link>
+          <Link to="/gantt" className={navLinkClass('/gantt')}>
+            甘特图
+          </Link>
+          <Link to="/dashboard" className={navLinkClass('/dashboard')}>
+            统计
           </Link>
           <button
             onClick={onToggleDarkMode}
