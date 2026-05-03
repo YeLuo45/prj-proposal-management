@@ -7,14 +7,15 @@ const STATUS_COLORS = {
   overdue: { bg: 'bg-red-400', border: 'border-red-500', text: 'text-red-900' },
 };
 
-function GanttBar({ milestone, left, width, pixelsPerDay, onUpdate, status }) {
+function GanttBar({ milestone, left, width, pixelsPerDay, onUpdate, status, zoom = 'day' }) {
   const [isDragging, setIsDragging] = useState(false);
-  const [dragMode, setDragMode] = useState(null); // 'left' | 'right' | 'move'
+  const [dragMode, setDragMode] = useState(null); // 'left' | 'right' | 'move' | 'progress'
   const [tooltip, setTooltip] = useState(null);
   const barRef = useRef(null);
   const startXRef = useRef(0);
   const originalStartRef = useRef(null);
   const originalEndRef = useRef(null);
+  const originalProgressRef = useRef(null);
 
   const colors = STATUS_COLORS[status] || STATUS_COLORS.pending;
 
@@ -26,6 +27,7 @@ function GanttBar({ milestone, left, width, pixelsPerDay, onUpdate, status }) {
     startXRef.current = e.clientX;
     originalStartRef.current = milestone.startDate;
     originalEndRef.current = milestone.endDate;
+    originalProgressRef.current = milestone.progress || 0;
   };
 
   useEffect(() => {
@@ -35,17 +37,28 @@ function GanttBar({ milestone, left, width, pixelsPerDay, onUpdate, status }) {
       const deltaX = e.clientX - startXRef.current;
       const deltaDays = Math.round(deltaX / pixelsPerDay);
 
-      if (deltaDays === 0) return;
-
-      const newStart = addDays(originalStartRef.current, deltaDays);
-      const newEnd = addDays(originalEndRef.current, deltaDays);
-
       if (dragMode === 'left') {
-        onUpdate(milestone.id, { startDate: newStart });
+        const newStart = addDays(originalStartRef.current, deltaDays);
+        if (newStart <= milestone.endDate) {
+          onUpdate(milestone.id, { startDate: newStart });
+        }
       } else if (dragMode === 'right') {
-        onUpdate(milestone.id, { endDate: newEnd });
+        const newEnd = addDays(originalEndRef.current, deltaDays);
+        if (newEnd >= milestone.startDate) {
+          onUpdate(milestone.id, { endDate: newEnd });
+        }
       } else if (dragMode === 'move') {
-        onUpdate(milestone.id, { startDate: newStart, endDate: newEnd });
+        if (deltaDays !== 0) {
+          const newStart = addDays(originalStartRef.current, deltaDays);
+          const newEnd = addDays(originalEndRef.current, deltaDays);
+          onUpdate(milestone.id, { startDate: newStart, endDate: newEnd });
+        }
+      } else if (dragMode === 'progress') {
+        // Drag to change progress percentage
+        const barWidth = barRef.current?.offsetWidth || width;
+        const progressDelta = Math.round((deltaX / barWidth) * 100);
+        const newProgress = Math.max(0, Math.min(100, originalProgressRef.current + progressDelta));
+        onUpdate(milestone.id, { progress: newProgress });
       }
     };
 
@@ -61,7 +74,7 @@ function GanttBar({ milestone, left, width, pixelsPerDay, onUpdate, status }) {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [isDragging, dragMode, milestone.id, pixelsPerDay, onUpdate]);
+  }, [isDragging, dragMode, milestone.id, milestone.startDate, milestone.endDate, milestone.progress, pixelsPerDay, width, onUpdate]);
 
   const handleMouseEnter = (e) => {
     if (!isDragging) {
@@ -78,6 +91,9 @@ function GanttBar({ milestone, left, width, pixelsPerDay, onUpdate, status }) {
       setTooltip({ x: e.clientX, y: e.clientY });
     }
   };
+
+  const progress = milestone.progress || 0;
+  const progressWidth = `${progress}%`;
 
   return (
     <div className="relative">
@@ -104,9 +120,27 @@ function GanttBar({ milestone, left, width, pixelsPerDay, onUpdate, status }) {
           onMouseDown={(e) => handleMouseDown(e, 'right')}
         />
 
+        {/* Progress fill */}
+        <div
+          className="absolute left-0 top-0 bottom-0 bg-black/20 rounded-l pointer-events-none"
+          style={{ width: progressWidth }}
+        />
+
+        {/* Progress drag handle */}
+        {progress > 0 && progress < 100 && (
+          <div
+            className="absolute top-0 bottom-0 cursor-ew-resize hover:bg-white/30"
+            style={{ left: progressWidth, width: 4, marginLeft: -2 }}
+            onMouseDown={(e) => handleMouseDown(e, 'progress')}
+          />
+        )}
+
         {/* Label */}
         <div className={`px-2 h-full flex items-center text-xs font-medium ${colors.text} overflow-hidden whitespace-nowrap`}>
           {width > 60 && milestone.name}
+          {width > 100 && (
+            <span className="ml-auto pr-1 text-xs opacity-75">{progress}%</span>
+          )}
         </div>
       </div>
 

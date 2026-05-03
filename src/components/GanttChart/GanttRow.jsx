@@ -1,6 +1,6 @@
 import GanttBar from './GanttBar';
 
-function GanttRow({ project, milestones, startDate, pixelsPerDay, onUpdate, getMilestoneStatus }) {
+function GanttRow({ project, milestones, startDate, pixelsPerDay, onUpdate, getMilestoneStatus, zoom = 'day' }) {
   return (
     <div className="flex border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
       <div className="w-40 flex-shrink-0 px-2 py-2 font-medium text-sm text-gray-700 dark:text-gray-200 border-r border-gray-200 dark:border-gray-700 bg-gray-25 dark:bg-gray-800">
@@ -28,6 +28,7 @@ function GanttRow({ project, milestones, startDate, pixelsPerDay, onUpdate, getM
               pixelsPerDay={pixelsPerDay}
               onUpdate={onUpdate}
               status={status}
+              zoom={zoom}
             />
           );
         })}

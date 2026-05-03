@@ -17,6 +17,12 @@ const STATUS_COLORS = {
   overdue: 'bg-red-500',
 };
 
+const ZOOM_OPTIONS = [
+  { id: 'day', label: '日', icon: '📅' },
+  { id: 'week', label: '周', icon: '📆' },
+  { id: 'month', label: '月', icon: '📆' },
+];
+
 function GanttView() {
   const {
     milestones,
@@ -34,6 +40,8 @@ function GanttView() {
   const [selectedStatuses, setSelectedStatuses] = useState(['pending', 'in_progress', 'overdue']);
   const [showCompleted, setShowCompleted] = useState(false);
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem('darkMode') === 'true');
+  const [zoom, setZoom] = useState('day');
+  const [viewMode, setViewMode] = useState('gantt'); // 'gantt' or 'kanban'
 
   useEffect(() => {
     loadMilestones();
@@ -127,9 +135,58 @@ function GanttView() {
           </Link>
         </div>
 
-        {/* Filter Bar */}
+        {/* View Mode Switcher + Zoom Controls */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4 mb-4">
           <div className="flex flex-wrap gap-6">
+            {/* View Mode Switcher */}
+            <div>
+              <div className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">视图模式</div>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setViewMode('gantt')}
+                  className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${
+                    viewMode === 'gantt'
+                      ? 'bg-blue-500 text-white border-blue-500'
+                      : 'bg-gray-50 dark:bg-gray-700 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'
+                  }`}
+                >
+                  甘特图
+                </button>
+                <button
+                  onClick={() => setViewMode('kanban')}
+                  className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${
+                    viewMode === 'kanban'
+                      ? 'bg-blue-500 text-white border-blue-500'
+                      : 'bg-gray-50 dark:bg-gray-700 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'
+                  }`}
+                >
+                  看板
+                </button>
+              </div>
+            </div>
+
+            {/* Zoom Controls - Only show in Gantt view */}
+            {viewMode === 'gantt' && (
+              <div>
+                <div className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">时间缩放</div>
+                <div className="flex gap-1">
+                  {ZOOM_OPTIONS.map(option => (
+                    <button
+                      key={option.id}
+                      onClick={() => setZoom(option.id)}
+                      className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${
+                        zoom === option.id
+                          ? 'bg-blue-500 text-white border-blue-500'
+                          : 'bg-gray-50 dark:bg-gray-700 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'
+                      }`}
+                    >
+                      {option.icon} {option.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Project Filter */}
             <div>
               <div className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">项目筛选</div>
@@ -197,20 +254,57 @@ function GanttView() {
           </div>
         )}
 
-        {/* Gantt Chart */}
+        {/* Loading indicator */}
         {loading && milestones.length > 0 && (
           <div className="text-center py-4 text-gray-500 dark:text-gray-400">保存中...</div>
         )}
 
-        <GanttChart
-          projects={groupedProjects}
-          onUpdateMilestone={handleUpdateMilestone}
-          getMilestoneStatus={getMilestoneStatus}
-        />
+        {/* Gantt Chart */}
+        {viewMode === 'gantt' && (
+          <GanttChart
+            projects={groupedProjects}
+            onUpdateMilestone={handleUpdateMilestone}
+            getMilestoneStatus={getMilestoneStatus}
+            zoom={zoom}
+          />
+        )}
+
+        {/* Kanban View - Simple kanban by status */}
+        {viewMode === 'kanban' && (
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {['pending', 'in_progress', 'overdue', 'completed'].map(status => {
+              const statusMilestones = filteredMilestones.filter(ms => getMilestoneStatus(ms) === status);
+              return (
+                <div key={status} className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+                  <div className="flex items-center gap-2 mb-3 pb-2 border-b border-gray-200 dark:border-gray-700">
+                    <span className={`w-3 h-3 rounded-full ${STATUS_COLORS[status]}`}></span>
+                    <h3 className="font-semibold text-gray-700 dark:text-gray-200">{STATUS_LABELS[status]}</h3>
+                    <span className="ml-auto text-xs text-gray-500 dark:text-gray-400">({statusMilestones.length})</span>
+                  </div>
+                  <div className="space-y-2">
+                    {statusMilestones.map(ms => (
+                      <div key={ms.id} className="bg-gray-50 dark:bg-gray-700 rounded p-2 text-sm">
+                        <div className="font-medium text-gray-700 dark:text-gray-200 truncate">{ms.name}</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                          {ms.startDate} ~ {ms.endDate}
+                        </div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">{ms.projectId}</div>
+                      </div>
+                    ))}
+                    {statusMilestones.length === 0 && (
+                      <div className="text-center text-gray-400 dark:text-gray-500 text-sm py-4">暂无</div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
 
         {/* Hint */}
         <div className="mt-4 text-xs text-gray-500 dark:text-gray-400 text-center">
-          提示：拖拽条形图左边缘调整开始日期，右边缘调整结束日期，中间移动整条里程碑
+          {viewMode === 'gantt' && '提示：拖拽条形图左边缘调整开始日期，右边缘调整结束日期，中间移动整条里程碑，拖拽进度条调整进度'}
+          {viewMode === 'kanban' && '提示：切换到甘特图视图进行时间范围拖拽调整'}
         </div>
       </div>
     </div>

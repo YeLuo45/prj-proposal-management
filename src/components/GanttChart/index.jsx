@@ -7,9 +7,16 @@ import GanttTooltip from './GanttTooltip.jsx';
 const PADDING_DAYS = 7;
 const PIXELS_PER_DAY = 40;
 
-function GanttChart({ projects, onUpdateMilestone, getMilestoneStatus }) {
+const ZOOM_PIXELS_PER_DAY = {
+  day: 40,
+  week: 17,
+  month: 3.3,
+};
+
+function GanttChart({ projects, onUpdateMilestone, getMilestoneStatus, zoom = 'day' }) {
   const containerRef = useRef(null);
   const [tooltip, setTooltip] = useState(null);
+  const pixelsPerDay = ZOOM_PIXELS_PER_DAY[zoom] || ZOOM_PIXELS_PER_DAY.day;
 
   const { startDate, endDate } = useMemo(() => {
     const today = new Date();
@@ -35,8 +42,6 @@ function GanttChart({ projects, onUpdateMilestone, getMilestoneStatus }) {
     return { startDate: start.toISOString().split('T')[0], endDate: end.toISOString().split('T')[0] };
   }, [projects]);
 
-  const pixelsPerDay = PIXELS_PER_DAY;
-
   const totalDays = useMemo(() => {
     const start = new Date(startDate);
     const end = new Date(endDate);
@@ -55,7 +60,7 @@ function GanttChart({ projects, onUpdateMilestone, getMilestoneStatus }) {
 
   return (
     <div className="gantt-container bg-white dark:bg-gray-900 rounded-lg shadow overflow-hidden" ref={containerRef}>
-      <GanttHeader startDate={startDate} endDate={endDate} pixelsPerDay={pixelsPerDay} />
+      <GanttHeader startDate={startDate} endDate={endDate} pixelsPerDay={pixelsPerDay} zoom={zoom} />
 
       <div className="overflow-x-auto">
         <div style={{ minWidth: totalWidth }}>
@@ -73,6 +78,7 @@ function GanttChart({ projects, onUpdateMilestone, getMilestoneStatus }) {
                   pixelsPerDay={pixelsPerDay}
                   onUpdate={onUpdateMilestone}
                   getMilestoneStatus={getMilestoneStatus}
+                  zoom={zoom}
                 />
               </div>
             ))}
@@ -95,3 +101,4 @@ function GanttChart({ projects, onUpdateMilestone, getMilestoneStatus }) {
 }
 
 export default GanttChart;
+export { ZOOM_PIXELS_PER_DAY };
