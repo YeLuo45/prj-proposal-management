@@ -1,6 +1,17 @@
 import { useState, useEffect } from 'react';
+import { getAPIKey } from '../utils/aiService';
 
-function ProposalForm({ proposal, onSave, onClose }) {
+function ProposalForm({
+  proposal,
+  onSave,
+  onClose,
+  aiRecommendations,
+  setAiRecommendations,
+  duplicateWarnings,
+  setDuplicateWarnings,
+  loadingAI,
+  handleAIClassify
+}) {
   const [formData, setFormData] = useState({
     name: '',
     description: '',
@@ -37,6 +48,18 @@ function ProposalForm({ proposal, onSave, onClose }) {
     onSave({ ...formData, tags });
   };
 
+  const handleForceSave = () => {
+    // Force save ignoring duplicate warnings
+    setDuplicateWarnings([]);
+    const tags = tagsInput
+      .split(',')
+      .map((t) => t.trim())
+      .filter((t) => t);
+    onSave({ ...formData, tags });
+  };
+
+  const apiKey = getAPIKey();
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-lg max-h-[90vh] overflow-y-auto">
@@ -69,6 +92,83 @@ function ProposalForm({ proposal, onSave, onClose }) {
               rows="3"
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
             />
+
+            {/* V10: AI Classification Button */}
+            {apiKey && (
+              <div className="mt-2">
+                <button
+                  type="button"
+                  onClick={() => handleAIClassify(formData.description)}
+                  disabled={loadingAI || !formData.description}
+                  className="text-xs text-blue-500 hover:text-blue-600 flex items-center gap-1"
+                >
+                  {loadingAI ? '🤖 分析中...' : '🤖 AI 推荐分类'}
+                </button>
+              </div>
+            )}
+
+            {/* V10: AI Recommendations */}
+            {aiRecommendations.type && (
+              <div className="mt-2 p-2 bg-blue-50 dark:bg-blue-900/20 rounded text-xs">
+                <div className="flex items-center gap-2 mb-1">
+                  <span>推荐类型：</span>
+                  <button
+                    type="button"
+                    onClick={() => setFormData(f => ({ ...f, type: aiRecommendations.type }))}
+                    className="bg-blue-500 text-white px-2 py-0.5 rounded"
+                  >
+                    {aiRecommendations.type}
+                  </button>
+                  <span className="text-gray-400">（点击采纳）</span>
+                </div>
+                {aiRecommendations.tags.length > 0 && (
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span>推荐标签：</span>
+                    {aiRecommendations.tags.map(tag => (
+                      <button
+                        type="button"
+                        key={tag}
+                        onClick={() => setFormData(f => ({ ...f, tags: [...new Set([...f.tags, tag])] }))}
+                        className="bg-green-100 text-green-700 px-2 py-0.5 rounded hover:bg-green-200"
+                      >
+                        {tag}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* V10: Duplicate Warnings */}
+            {duplicateWarnings.length > 0 && (
+              <div className="mt-2 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 rounded text-xs">
+                <div className="font-medium text-yellow-700 mb-2">⚠️ 检测到相似提案</div>
+                {duplicateWarnings.slice(0, 3).map(d => (
+                  <div key={d.proposal.id} className="mb-1">
+                    <span className="font-mono">{d.proposal.id}</span>
+                    <span className="mx-1">"</span>
+                    <span>{d.proposal.name}</span>
+                    <span className="ml-1 text-yellow-600">（相似度 {d.similarity}%）</span>
+                  </div>
+                ))}
+                <div className="flex gap-2 mt-2">
+                  <button
+                    type="button"
+                    onClick={handleForceSave}
+                    className="text-xs bg-yellow-500 text-white px-3 py-1 rounded"
+                  >
+                    仍然保存
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setDuplicateWarnings([])}
+                    className="text-xs text-gray-500"
+                  >
+                    取消
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="grid grid-cols-2 gap-4">

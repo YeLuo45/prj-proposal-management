@@ -11,6 +11,7 @@ import MilestoneSelectModal from './components/MilestoneSelectModal';
 import KanbanSwimlanes from './pages/KanbanSwimlanes';
 import ImportExportPanel from './components/ImportExportPanel';
 import CsvPreviewTable from './components/CsvPreviewTable';
+import AISettings from './components/AISettings';
 import { useGitHub } from './hooks/useGitHub';
 import { useOperationHistory } from './hooks/useOperationHistory';
 import { useValidation } from './hooks/useDataValidator';
@@ -21,6 +22,8 @@ import { validateProjects } from './utils/dataValidator';
 import { exportProjectsToCSV, downloadFile } from './utils/csvExporter';
 import { parseCSV, validateCSVImport, executeCSVImport } from './utils/csvImporter';
 import { generateBackup, restoreFromBackup, downloadJSONBackup } from './utils/jsonBackup';
+import { classifyProposal, generateSummary, getAPIKey } from './utils/aiService';
+import { findDuplicates } from './utils/duplicateDetector';
 
 const ITEMS_PER_PAGE = 12;
 const RECENT_PROPOSALS_PER_PROJECT = 3;
@@ -60,6 +63,11 @@ function App() {
   const [tagLogic, setTagLogic] = useState('OR');
   // V9: 选中的模板ID
   const [selectedTemplateId, setSelectedTemplateId] = useState(null);
+
+  // V10: AI 功能状态
+  const [aiRecommendations, setAiRecommendations] = useState({ type: null, tags: [] });
+  const [duplicateWarnings, setDuplicateWarnings] = useState([]);
+  const [loadingAI, setLoadingAI] = useState(false);
 
   // 导入/导出状态
   const [importMode, setImportMode] = useState('skip');
@@ -454,6 +462,53 @@ function App() {
     setDateRange(filters.dateRange || { field: 'createdAt', start: '', end: '' });
   };
 
+  // V10: AI handlers
+  const handleAIClassify = async (description) => {
+    const apiKey = getAPIKey();
+    if (!apiKey || !description) return;
+    setLoadingAI(true);
+    try {
+      const result = await classifyProposal(description, apiKey);
+      setAiRecommendations({ type: result.type, tags: result.tags || [] });
+    } finally {
+      setLoadingAI(false);
+    }
+  };
+
+  const handleDuplicateCheck = (proposal) => {
+    const dupes = findDuplicates(proposal, flatProposals);
+    setDuplicateWarnings(dupes);
+    return dupes;
+  };
+
+  const handleSaveWithAI = async (updated) => {
+    // Check duplicates first
+    const dupes = handleDuplicateCheck(updated);
+    if (dupes.length > 0) return; // show warnings, block save
+
+    // Normal save
+    await saveProposals(updated);
+
+    // Generate summary if description > 50 chars
+    const apiKey = getAPIKey();
+    if (updated.description?.length > 50 && apiKey) {
+      setLoadingAI(true);
+      try {
+        const summary = await generateSummary(updated.description, apiKey);
+        if (summary) {
+          // Update proposal with aiSummary field
+          const updatedWithSummary = {
+            ...updated,
+            aiSummary: summary,
+          };
+          await saveProposals(updatedWithSummary);
+        }
+      } finally {
+        setLoadingAI(false);
+      }
+    }
+  };
+
   const handleAddProposal = async (newProposal) => {
     const today = new Date().toISOString().split('T')[0];
     const existingToday = flatProposals.filter((p) => p.id.startsWith(`P-${today.replace(/-/g, '')}`));
@@ -494,6 +549,14 @@ function App() {
 
   const handleEditProposal = async (updatedProposal) => {
     const today = new Date().toISOString().split('T')[0];
+
+    // V10: Check duplicates first (skip self)
+    const dupes = findDuplicates(updatedProposal, flatProposals);
+    if (dupes.length > 0) {
+      setDuplicateWarnings(dupes);
+      return; // block save, show warnings
+    }
+
     // Find original proposal for history
     const originalProposal = flatProposals.find(p => p.id === updatedProposal.id);
     const newProjects = projects.map(project => ({
@@ -521,6 +584,34 @@ function App() {
       before: originalProposal,
       after: { ...updatedProposal, updatedAt: today },
     });
+
+    // V10: Generate AI summary if description > 50 chars
+    const apiKey = getAPIKey();
+    if (updatedProposal.description?.length > 50 && apiKey) {
+      setLoadingAI(true);
+      try {
+        const summary = await generateSummary(updatedProposal.description, apiKey);
+        if (summary) {
+          const updatedWithSummary = {
+            ...updatedProposal,
+            aiSummary: summary,
+            updatedAt: today,
+          };
+          await saveProposals({ version: 3, projects: newProjects.map(project => ({
+            ...project,
+            proposals: project.proposals.map(p =>
+              p.id === updatedProposal.id ? updatedWithSummary : p
+            )
+          }))});
+          setFlatProposals(newFlat.map(p =>
+            p.id === updatedProposal.id ? { ...p, aiSummary: summary } : p
+          ));
+        }
+      } finally {
+        setLoadingAI(false);
+      }
+    }
+
     setLastOperationDesc(`更新提案 ${updatedProposal.name}`);
     setShowUndoToast(true);
   };
@@ -1080,7 +1171,15 @@ function App() {
           onClose={() => {
             setShowForm(false);
             setEditingProposal(null);
+            setAiRecommendations({ type: null, tags: [] });
+            setDuplicateWarnings([]);
           }}
+          aiRecommendations={aiRecommendations}
+          setAiRecommendations={setAiRecommendations}
+          duplicateWarnings={duplicateWarnings}
+          setDuplicateWarnings={setDuplicateWarnings}
+          loadingAI={loadingAI}
+          handleAIClassify={handleAIClassify}
         />
       )}
 
@@ -1140,6 +1239,9 @@ function App() {
                   保存 Token
                 </button>
               </div>
+
+              {/* AI Settings */}
+              <AISettings />
 
               {/* Import/Export Panel */}
               <ImportExportPanel
