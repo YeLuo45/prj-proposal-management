@@ -199,7 +199,7 @@
           "name": "P-20260502-001",
           "description": "项目详情页（独立路由 /project/:id）+ 里程碑管理（CRUD + 时间线 + 提案关联）; PRD 倒计时到期(2026-05-02)，默认通过处理; 技术期望倒计时到期(2026-05-02)，默认通过处理",
           "type": "package",
-          "status": "in_dev",
+          "status": "accepted",
           "url": "",
           "packageUrl": "",
           "gitRepo": "",
@@ -208,6 +208,36 @@
           ],
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260503-018",
+          "name": "P-20260503-018",
+          "description": "甘特图视图；独立路由 /gantt；自研 CSS 实现；支持拖拽调整日期；看板/甘特图视图切换",
+          "type": "package",
+          "status": "approved_for_dev",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-019",
+          "name": "P-20260503-019",
+          "description": "数据统计仪表板；Chart.js 折线图/环形图/时间线；提案数量趋势+项目进度+里程碑完成率",
+          "type": "package",
+          "status": "approved_for_dev",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
         }
       ]
     },
