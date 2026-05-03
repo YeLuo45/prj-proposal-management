@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 
 const GITHUB_API = 'https://api.github.com';
 const OWNER = 'YeLuo45';
-const REPO = 'prj-proposal-management';
+const REPO = 'prj-proposals-manager';
 const BRANCH = 'master';
 
 export function useGitHub() {
