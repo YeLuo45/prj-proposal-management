@@ -54,6 +54,13 @@ function App() {
   // M3: 专注模式状态
   const [focusMode, setFocusMode] = useState({ projectId: null, status: null });
 
+  // V9: 日期范围筛选
+  const [dateRange, setDateRange] = useState({ field: 'createdAt', start: '', end: '' });
+  // V9: 标签匹配逻辑
+  const [tagLogic, setTagLogic] = useState('OR');
+  // V9: 选中的模板ID
+  const [selectedTemplateId, setSelectedTemplateId] = useState(null);
+
   // 导入/导出状态
   const [importMode, setImportMode] = useState('skip');
   const [parsedCSV, setParsedCSV] = useState(null);
@@ -323,8 +330,11 @@ function App() {
         advancedFilters.statuses.includes(p.status);
       const matchesType = advancedFilters.types.length === 0 ||
         advancedFilters.types.includes(p.type);
+      // V9: Tag logic (AND/OR)
       const matchesTags = advancedFilters.tags.length === 0 ||
-        advancedFilters.tags.some(t => p.tags?.includes(t));
+        (tagLogic === 'AND'
+          ? advancedFilters.tags.every(t => p.tags?.includes(t))
+          : advancedFilters.tags.some(t => p.tags?.includes(t)));
       const matchesProject = !advancedFilters.projectId ||
         p.projectId === advancedFilters.projectId;
       const matchesDate = (!advancedFilters.dateFrom ||
@@ -334,17 +344,33 @@ function App() {
       return matchesSearch && matchesStatus && matchesType &&
              matchesTags && matchesProject && matchesDate;
     });
-  }, [flatProposals, searchQuery, advancedFilters]);
+  }, [flatProposals, searchQuery, advancedFilters, tagLogic]);
+
+  // V9: Date range filtering (after tag filtering)
+  const dateFiltered = useMemo(() => {
+    if (!dateRange.start && !dateRange.end) return filteredProposals;
+    return filteredProposals.filter(p => {
+      const dateStr = p[dateRange.field];
+      if (!dateStr) return false;
+      const date = new Date(dateStr);
+      const start = dateRange.start ? new Date(dateRange.start) : null;
+      const end = dateRange.end ? new Date(dateRange.end) : null;
+      if (start && date < start) return false;
+      if (end && date > end) return false;
+      return true;
+    });
+  }, [filteredProposals, dateRange]);
 
   const filteredProjects = useMemo(() => {
     if (advancedFilters.statuses.length === 0 && advancedFilters.types.length === 0 &&
         advancedFilters.tags.length === 0 && !advancedFilters.projectId &&
-        !advancedFilters.dateFrom && !advancedFilters.dateTo && !searchQuery) {
+        !advancedFilters.dateFrom && !advancedFilters.dateTo && !searchQuery &&
+        !dateRange.start && !dateRange.end) {
       return projects;
     }
-    const matchedIds = new Set(filteredProposals.map(p => p.projectId));
+    const matchedIds = new Set(dateFiltered.map(p => p.projectId));
     return projects.filter(p => matchedIds.has(p.id));
-  }, [projects, filteredProposals, searchQuery, advancedFilters]);
+  }, [projects, dateFiltered, searchQuery, advancedFilters, dateRange]);
 
   // M3: Focus mode filtered projects
   const focusFilteredProjects = useMemo(() => {
@@ -373,14 +399,14 @@ function App() {
 
   const paginatedProposals = useMemo(() => {
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
-    return filteredProposals.slice(start, start + ITEMS_PER_PAGE);
-  }, [filteredProposals, currentPage]);
+    return dateFiltered.slice(start, start + ITEMS_PER_PAGE);
+  }, [dateFiltered, currentPage]);
 
-  const totalPages = Math.ceil(filteredProposals.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(dateFiltered.length / ITEMS_PER_PAGE);
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, advancedFilters]);
+  }, [searchQuery, advancedFilters, dateRange, tagLogic]);
 
   const handleAdvancedApply = () => {
     updateUrl(advancedFilters);
@@ -391,6 +417,41 @@ function App() {
     const cleared = { statuses: [], types: [], tags: [], projectId: '', dateFrom: '', dateTo: '' };
     setAdvancedFilters(cleared);
     updateUrl(cleared);
+  };
+
+  // V9: Date range quick presets
+  const setDateRangeQuick = (preset) => {
+    const now = new Date();
+    const toDateStr = (d) => d.toISOString().split('T')[0];
+    const start = new Date();
+    if (preset === '7d') { start.setDate(now.getDate() - 7); setDateRange({ field: dateRange.field, start: toDateStr(start), end: toDateStr(now) }); }
+    else if (preset === '30d') { start.setDate(now.getDate() - 30); setDateRange({ field: dateRange.field, start: toDateStr(start), end: toDateStr(now) }); }
+    else if (preset === 'month') { start.setDate(1); setDateRange({ field: dateRange.field, start: toDateStr(start), end: toDateStr(now) }); }
+    else if (preset === 'lastMonth') {
+      const last = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+      const lastEnd = new Date(now.getFullYear(), now.getMonth(), 0);
+      setDateRange({ field: dateRange.field, start: toDateStr(last), end: toDateStr(lastEnd) });
+    }
+  };
+
+  // V9: Export filtered proposals
+  const handleExportFiltered = () => {
+    const csv = exportProjectsToCSV(dateFiltered);
+    downloadFile(csv, `filtered-proposals-${Date.now()}.csv`, 'text/csv');
+  };
+
+  // V9: Apply filters from template
+  const setFiltersFromTemplate = (filters) => {
+    setSearchQuery(filters.query || '');
+    setAdvancedFilters(prev => ({
+      ...prev,
+      statuses: filters.status ? [filters.status] : [],
+      types: filters.type ? [filters.type] : [],
+      projectId: filters.projectId || '',
+      tags: filters.tags || [],
+    }));
+    setTagLogic(filters.tagLogic || 'OR');
+    setDateRange(filters.dateRange || { field: 'createdAt', start: '', end: '' });
   };
 
   const handleAddProposal = async (newProposal) => {
@@ -682,6 +743,19 @@ function App() {
             onViewModeChange={setViewMode}
             focusMode={focusMode}
             onFocusModeChange={setFocusMode}
+            dateRange={dateRange}
+            setDateRange={setDateRange}
+            setDateRangeQuick={setDateRangeQuick}
+            tagLogic={tagLogic}
+            setTagLogic={setTagLogic}
+            onExportFiltered={handleExportFiltered}
+            filteredCount={dateFiltered.length}
+            query={searchQuery}
+            status={advancedFilters.statuses[0] || ''}
+            type={advancedFilters.types[0] || ''}
+            projectId={advancedFilters.projectId}
+            tags={advancedFilters.tags}
+            onApplyTemplate={setFiltersFromTemplate}
           />
         </div>
 
@@ -691,7 +765,7 @@ function App() {
             onFiltersChange={setAdvancedFilters}
             allTags={allTags}
             projects={projects}
-            matchCount={filteredProposals.length}
+            matchCount={dateFiltered.length}
             onApply={handleAdvancedApply}
             onCancel={() => setShowAdvanced(false)}
             onClear={handleAdvancedClear}
@@ -706,9 +780,9 @@ function App() {
             {viewMode === 'projects' && (
               <>
                 <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-                  {searchQuery || advancedFilters.statuses.length > 0 || advancedFilters.types.length > 0
-                    ? `找到 ${filteredProposals.length} 个提案`
-                    : `共 ${filteredProjects.length} 个项目，${filteredProposals.length} 个提案`}
+                  {searchQuery || advancedFilters.statuses.length > 0 || advancedFilters.types.length > 0 || dateRange.start || dateRange.end
+                    ? `找到 ${dateFiltered.length} 个提案`
+                    : `共 ${filteredProjects.length} 个项目，${dateFiltered.length} 个提案`}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredProjects.map((project) => {
@@ -817,7 +891,7 @@ function App() {
             {viewMode === 'card' && (
               <>
                 <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-                  找到 <span className="font-semibold text-blue-500">{filteredProposals.length}</span> 个提案
+                  找到 <span className="font-semibold text-blue-500">{dateFiltered.length}</span> 个提案
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {paginatedProposals.map((proposal) => (
@@ -859,7 +933,7 @@ function App() {
                   </div>
                 )}
 
-                {filteredProposals.length === 0 && (
+                {dateFiltered.length === 0 && (
                   <div className="text-center py-12 text-gray-500 dark:text-gray-400">
                     没有找到匹配的提案
                   </div>
