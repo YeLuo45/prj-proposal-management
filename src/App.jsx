@@ -1,10 +1,14 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import FilterBar from './components/FilterBar';
+import AdvancedFilter from './components/AdvancedFilter';
 import ProposalCard from './components/ProposalCard';
 import ProposalForm from './components/ProposalForm';
+import BatchActionBar from './components/BatchActionBar';
+import MilestoneSelectModal from './components/MilestoneSelectModal';
+import KanbanSwimlanes from './pages/KanbanSwimlanes';
 import { useGitHub } from './hooks/useGitHub';
 
 const ITEMS_PER_PAGE = 12;
@@ -13,10 +17,9 @@ const RECENT_PROPOSALS_PER_PROJECT = 3;
 function App() {
   const [projects, setProjects] = useState([]);
   const [flatProposals, setFlatProposals] = useState([]);
+  const [milestones, setMilestones] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [filterType, setFilterType] = useState('all');
-  const [filterStatus, setFilterStatus] = useState('all');
-  const [viewMode, setViewMode] = useState('projects'); // 'projects' | 'card' | 'table'
+  const [viewMode, setViewMode] = useState('projects');
   const [currentPage, setCurrentPage] = useState(1);
   const [showForm, setShowForm] = useState(false);
   const [editingProposal, setEditingProposal] = useState(null);
@@ -25,8 +28,35 @@ function App() {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem('darkMode') === 'true';
   });
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // 批量操作状态
+  const [selectedIds, setSelectedIds] = useState(new Set());
+  const [showMilestoneModal, setShowMilestoneModal] = useState(false);
 
   const { loading, error, fetchProposals, saveProposals } = useGitHub();
+
+  // 高级筛选状态
+  const [advancedFilters, setAdvancedFilters] = useState({
+    statuses: [],
+    types: [],
+    tags: [],
+    projectId: '',
+    dateFrom: '',
+    dateTo: '',
+  });
+
+  // 从 URL 同步筛选状态
+  useEffect(() => {
+    const statuses = searchParams.get('status')?.split(',').filter(Boolean) || [];
+    const types = searchParams.get('type')?.split(',').filter(Boolean) || [];
+    const tags = searchParams.get('tag')?.split(',').filter(Boolean) || [];
+    const projectId = searchParams.get('project') || '';
+    const dateFrom = searchParams.get('from') || '';
+    const dateTo = searchParams.get('to') || '';
+    setAdvancedFilters({ statuses, types, tags, projectId, dateFrom, dateTo });
+  }, [searchParams]);
 
   // 初始化暗色模式
   useEffect(() => {
@@ -51,11 +81,8 @@ function App() {
   const loadProposals = async () => {
     try {
       const data = await fetchProposals();
-      // 支持 v1 扁平格式 {proposals: [...]} 和 v2 嵌套格式 {version: 2, projects: [{proposals: [...]}]}
       if (data.projects && Array.isArray(data.projects)) {
-        // v2 嵌套格式：保留完整项目结构
         setProjects(data.projects);
-        // 同时生成扁平提案列表供搜索过滤用
         const flat = data.projects.flatMap(project =>
           (project.proposals || []).map(p => ({
             ...p,
@@ -69,6 +96,16 @@ function App() {
       } else if (data.proposals && Array.isArray(data.proposals)) {
         setProjects([]);
         setFlatProposals(data.proposals);
+      }
+      // 加载里程碑
+      try {
+        const milestonesRes = await fetch('/data/milestones.json');
+        if (milestonesRes.ok) {
+          const milestonesData = await milestonesRes.json();
+          setMilestones(milestonesData.milestones || []);
+        }
+      } catch (e) {
+        console.warn('Failed to load milestones:', e);
       }
     } catch (err) {
       console.error('Failed to load proposals:', err);
@@ -86,29 +123,68 @@ function App() {
     setDarkMode(prev => !prev);
   };
 
+  // 更新 URL
+  const updateUrl = useCallback((filters) => {
+    const params = new URLSearchParams();
+    if (filters.statuses.length) params.set('status', filters.statuses.join(','));
+    if (filters.types.length) params.set('type', filters.types.join(','));
+    if (filters.tags.length) params.set('tag', filters.tags.join(','));
+    if (filters.projectId) params.set('project', filters.projectId);
+    if (filters.dateFrom) params.set('from', filters.dateFrom);
+    if (filters.dateTo) params.set('to', filters.dateTo);
+    setSearchParams(params);
+  }, [setSearchParams]);
+
+  // 获取所有标签
+  const allTags = useMemo(() => {
+    const tagSet = new Set();
+    flatProposals.forEach(p => {
+      if (p.tags) p.tags.forEach(t => tagSet.add(t));
+    });
+    return Array.from(tagSet).sort();
+  }, [flatProposals]);
+
+  // 扩展搜索范围：ID、GitHub仓库URL、部署URL、负责人
   const filteredProposals = useMemo(() => {
     return flatProposals.filter((p) => {
-      const matchesSearch =
-        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (p.description && p.description.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        (p.tags && p.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))) ||
-        (p.projectName && p.projectName.toLowerCase().includes(searchQuery.toLowerCase()));
+      const q = (searchQuery || '').toLowerCase();
+      const matchesSearch = !q || (
+        p.id.toLowerCase().includes(q) ||
+        p.name.toLowerCase().includes(q) ||
+        (p.description && p.description.toLowerCase().includes(q)) ||
+        (p.tags && p.tags.some((tag) => tag.toLowerCase().includes(q))) ||
+        (p.projectName && p.projectName.toLowerCase().includes(q)) ||
+        (p.gitRepo && p.gitRepo.toLowerCase().includes(q)) ||
+        (p.url && p.url.toLowerCase().includes(q)) ||
+        (p.owner && p.owner.toLowerCase().includes(q))
+      );
 
-      const matchesType = filterType === 'all' || p.type === filterType;
-      const matchesStatus = filterStatus === 'all' || p.status === filterStatus;
+      const matchesStatus = advancedFilters.statuses.length === 0 ||
+        advancedFilters.statuses.includes(p.status);
+      const matchesType = advancedFilters.types.length === 0 ||
+        advancedFilters.types.includes(p.type);
+      const matchesTags = advancedFilters.tags.length === 0 ||
+        advancedFilters.tags.some(t => p.tags?.includes(t));
+      const matchesProject = !advancedFilters.projectId ||
+        p.projectId === advancedFilters.projectId;
+      const matchesDate = (!advancedFilters.dateFrom ||
+        p.createdAt >= advancedFilters.dateFrom) &&
+        (!advancedFilters.dateTo || p.createdAt <= advancedFilters.dateTo);
 
-      return matchesSearch && matchesType && matchesStatus;
+      return matchesSearch && matchesStatus && matchesType &&
+             matchesTags && matchesProject && matchesDate;
     });
-  }, [flatProposals, searchQuery, filterType, filterStatus]);
+  }, [flatProposals, searchQuery, advancedFilters]);
 
   const filteredProjects = useMemo(() => {
-    if (filterType === 'all' && filterStatus === 'all' && !searchQuery) {
+    if (advancedFilters.statuses.length === 0 && advancedFilters.types.length === 0 &&
+        advancedFilters.tags.length === 0 && !advancedFilters.projectId &&
+        !advancedFilters.dateFrom && !advancedFilters.dateTo && !searchQuery) {
       return projects;
     }
-    // 当有过滤条件时，保留有匹配提案的项目
     const matchedIds = new Set(filteredProposals.map(p => p.projectId));
     return projects.filter(p => matchedIds.has(p.id));
-  }, [projects, filteredProposals, searchQuery, filterType, filterStatus]);
+  }, [projects, filteredProposals, searchQuery, advancedFilters]);
 
   const paginatedProposals = useMemo(() => {
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -119,7 +195,18 @@ function App() {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, filterType, filterStatus]);
+  }, [searchQuery, advancedFilters]);
+
+  const handleAdvancedApply = () => {
+    updateUrl(advancedFilters);
+    setShowAdvanced(false);
+  };
+
+  const handleAdvancedClear = () => {
+    const cleared = { statuses: [], types: [], tags: [], projectId: '', dateFrom: '', dateTo: '' };
+    setAdvancedFilters(cleared);
+    updateUrl(cleared);
+  };
 
   const handleAddProposal = async (newProposal) => {
     const today = new Date().toISOString().split('T')[0];
@@ -134,7 +221,6 @@ function App() {
       updatedAt: today,
     };
 
-    // 新增提案添加到第一个项目（ai-subscription）或新建一个默认项目
     const newProjects = projects.length > 0 ? [...projects] : [];
     if (newProjects.length > 0) {
       newProjects[0].proposals.push(proposal);
@@ -142,7 +228,7 @@ function App() {
     }
 
     const newFlat = [...flatProposals, proposal];
-    await saveProposals({ version: 2, projects: newProjects.length > 0 ? newProjects : [{ id: `PRJ-${today.replace(/-/g, '')}-999`, name: '未分类', proposals: [proposal] }] });
+    await saveProposals({ version: 3, projects: newProjects.length > 0 ? newProjects : [{ id: `PRJ-${today.replace(/-/g, '')}-999`, name: '未分类', proposals: [proposal] }] });
     setProjects(newProjects.length > 0 ? newProjects : [{ id: `PRJ-${today.replace(/-/g, '')}-999`, name: '未分类', proposals: [proposal] }]);
     setFlatProposals(newFlat);
     setShowForm(false);
@@ -160,7 +246,7 @@ function App() {
     const newFlat = flatProposals.map(p =>
       p.id === updatedProposal.id ? { ...updatedProposal, updatedAt: today } : p
     );
-    await saveProposals({ version: 2, projects: newProjects });
+    await saveProposals({ version: 3, projects: newProjects });
     setProjects(newProjects);
     setFlatProposals(newFlat);
     setEditingProposal(null);
@@ -174,7 +260,7 @@ function App() {
       proposals: project.proposals.filter(p => p.id !== id),
     })).filter(project => project.proposals.length > 0);
     const newFlat = flatProposals.filter(p => p.id !== id);
-    await saveProposals({ version: 2, projects: newProjects });
+    await saveProposals({ version: 3, projects: newProjects });
     setProjects(newProjects);
     setFlatProposals(newFlat);
   };
@@ -182,6 +268,91 @@ function App() {
   const handleCopyUrl = (url) => {
     navigator.clipboard.writeText(url);
     alert('链接已复制到剪贴板');
+  };
+
+  // 批量选择切换
+  const handleToggleSelect = useCallback((id) => {
+    setSelectedIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }, []);
+
+  // 全选当前页
+  const handleSelectAll = useCallback(() => {
+    if (selectedIds.size === paginatedProposals.length) {
+      // 取消全选
+      setSelectedIds(prev => {
+        const next = new Set(prev);
+        paginatedProposals.forEach(p => next.delete(p.id));
+        return next;
+      });
+    } else {
+      // 全选
+      setSelectedIds(prev => {
+        const next = new Set(prev);
+        paginatedProposals.forEach(p => next.add(p.id));
+        return next;
+      });
+    }
+  }, [paginatedProposals, selectedIds.size]);
+
+  // 批量移动状态
+  const handleBatchStatusChange = async (newStatus) => {
+    if (!newStatus) return;
+    const today = new Date().toISOString().split('T')[0];
+    const updatedProjects = projects.map(project => ({
+      ...project,
+      proposals: project.proposals.map(p =>
+        selectedIds.has(p.id) ? { ...p, status: newStatus, updatedAt: today } : p
+      )
+    }));
+    const updatedFlat = flatProposals.map(p =>
+      selectedIds.has(p.id) ? { ...p, status: newStatus, updatedAt: today } : p
+    );
+    await saveProposals({ version: 3, projects: updatedProjects });
+    setProjects(updatedProjects);
+    setFlatProposals(updatedFlat);
+    setSelectedIds(new Set());
+    alert(`已将 ${selectedIds.size} 个提案移动到${newStatus === 'active' ? '待办' : newStatus === 'in_dev' ? '进行中' : '已完成'}`);
+  };
+
+  // 批量删除
+  const handleBatchDelete = async () => {
+    if (!confirm(`确定删除 ${selectedIds.size} 个提案？此操作不可恢复。`)) return;
+    const updatedProjects = projects
+      .map(project => ({
+        ...project,
+        proposals: project.proposals.filter(p => !selectedIds.has(p.id))
+      }))
+      .filter(project => project.proposals.length > 0);
+    const updatedFlat = flatProposals.filter(p => !selectedIds.has(p.id));
+    await saveProposals({ version: 3, projects: updatedProjects });
+    setProjects(updatedProjects);
+    setFlatProposals(updatedFlat);
+    setSelectedIds(new Set());
+  };
+
+  // 批量关联里程碑
+  const handleBatchMilestone = async (milestoneId, milestoneName) => {
+    const today = new Date().toISOString().split('T')[0];
+    const updatedProjects = projects.map(project => ({
+      ...project,
+      proposals: project.proposals.map(p =>
+        selectedIds.has(p.id) ? { ...p, milestoneId, updatedAt: today } : p
+      )
+    }));
+    const updatedFlat = flatProposals.map(p =>
+      selectedIds.has(p.id) ? { ...p, milestoneId, updatedAt: today } : p
+    );
+    await saveProposals({ version: 3, projects: updatedProjects });
+    setProjects(updatedProjects);
+    setFlatProposals(updatedFlat);
+    setSelectedIds(new Set());
+    setShowMilestoneModal(false);
+    alert(`已将 ${selectedIds.size} 个提案关联到「${milestoneName}」`);
   };
 
   if (showTokenInput) {
@@ -224,16 +395,30 @@ function App() {
 
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row gap-4 mb-6">
-          <SearchBar value={searchQuery} onChange={setSearchQuery} />
+          <SearchBar
+            value={searchQuery}
+            onChange={setSearchQuery}
+            onAdvancedClick={() => setShowAdvanced(prev => !prev)}
+            showAdvanced={showAdvanced}
+          />
           <FilterBar
-            filterType={filterType}
-            filterStatus={filterStatus}
             viewMode={viewMode}
-            onTypeChange={setFilterType}
-            onStatusChange={setFilterStatus}
             onViewModeChange={setViewMode}
           />
         </div>
+
+        {showAdvanced && (
+          <AdvancedFilter
+            filters={advancedFilters}
+            onFiltersChange={setAdvancedFilters}
+            allTags={allTags}
+            projects={projects}
+            matchCount={filteredProposals.length}
+            onApply={handleAdvancedApply}
+            onCancel={() => setShowAdvanced(false)}
+            onClear={handleAdvancedClear}
+          />
+        )}
 
         {loading && <div className="text-center py-8 text-gray-600 dark:text-gray-300">加载中...</div>}
         {error && <div className="text-red-500 text-center py-4">{error}</div>}
@@ -243,19 +428,26 @@ function App() {
             {viewMode === 'projects' && (
               <>
                 <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-                  共 {filteredProjects.length} 个项目，{filteredProposals.length} 个提案
+                  {searchQuery || advancedFilters.statuses.length > 0 || advancedFilters.types.length > 0
+                    ? `找到 ${filteredProposals.length} 个提案`
+                    : `共 ${filteredProjects.length} 个项目，${filteredProposals.length} 个提案`}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredProjects.map((project) => {
                     const recentProposals = project.proposals
                       .filter(p => {
-                        if (filterType !== 'all' && p.type !== filterType) return false;
-                        if (filterStatus !== 'all' && p.status !== filterStatus) return false;
+                        if (advancedFilters.statuses.length > 0 && !advancedFilters.statuses.includes(p.status)) return false;
+                        if (advancedFilters.types.length > 0 && !advancedFilters.types.includes(p.type)) return false;
+                        if (advancedFilters.tags.length > 0 && !advancedFilters.tags.some(t => p.tags?.includes(t))) return false;
                         if (searchQuery) {
                           const q = searchQuery.toLowerCase();
-                          return p.name.toLowerCase().includes(q) ||
+                          return p.id.toLowerCase().includes(q) ||
+                            p.name.toLowerCase().includes(q) ||
                             (p.description && p.description.toLowerCase().includes(q)) ||
-                            (p.tags && p.tags.some(t => t.toLowerCase().includes(q)));
+                            (p.tags && p.tags.some(t => t.toLowerCase().includes(q))) ||
+                            (p.gitRepo && p.gitRepo.toLowerCase().includes(q)) ||
+                            (p.url && p.url.toLowerCase().includes(q)) ||
+                            (p.owner && p.owner.toLowerCase().includes(q));
                         }
                         return true;
                       })
@@ -346,11 +538,17 @@ function App() {
 
             {viewMode === 'card' && (
               <>
+                <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
+                  找到 <span className="font-semibold text-blue-500">{filteredProposals.length}</span> 个提案
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {paginatedProposals.map((proposal) => (
                     <ProposalCard
                       key={proposal.id}
                       proposal={proposal}
+                      searchQuery={searchQuery}
+                      selectedIds={selectedIds}
+                      onToggleSelect={handleToggleSelect}
                       onEdit={() => {
                         setEditingProposal(proposal);
                         setShowForm(true);
@@ -391,11 +589,28 @@ function App() {
               </>
             )}
 
+            {viewMode === 'swimlane' && (
+              <KanbanSwimlanes
+                projects={projects}
+                proposals={flatProposals}
+                onUpdateProposal={handleEditProposal}
+                searchQuery={searchQuery}
+              />
+            )}
+
             {viewMode === 'table' && (
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
                 <table className="min-w-full">
                   <thead className="bg-gray-50 dark:bg-gray-700">
                     <tr>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase w-12">
+                        <input
+                          type="checkbox"
+                          checked={selectedIds.size === paginatedProposals.length && paginatedProposals.length > 0}
+                          onChange={handleSelectAll}
+                          className="w-4 h-4 text-blue-500 rounded border-gray-300 dark:border-gray-600 focus:ring-blue-500"
+                        />
+                      </th>
                       <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">ID</th>
                       <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">名称</th>
                       <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">项目</th>
@@ -405,48 +620,59 @@ function App() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                    {paginatedProposals.map((proposal) => (
-                      <tr key={proposal.id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                        <td className="px-4 py-3 text-sm text-gray-500 dark:text-gray-400">{proposal.id}</td>
-                        <td className="px-4 py-3 text-sm text-gray-800 dark:text-gray-200">{proposal.name}</td>
-                        <td className="px-4 py-3 text-sm text-indigo-600 dark:text-indigo-400">{proposal.projectName || '-'}</td>
-                        <td className="px-4 py-3 text-sm">
-                          <span className={`px-2 py-1 rounded text-xs ${
-                            proposal.type === 'web' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300' :
-                            proposal.type === 'app' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' :
-                            'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
-                          }`}>
-                            {proposal.type}
-                          </span>
-                        </td>
-                        <td className="px-4 py-3 text-sm">
-                          <span className={`px-2 py-1 rounded text-xs ${
-                            proposal.status === 'active' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' :
-                            proposal.status === 'archived' ? 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300' :
-                            'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
-                          }`}>
-                            {proposal.status}
-                          </span>
-                        </td>
-                        <td className="px-4 py-3 text-sm">
-                          <button
-                            onClick={() => {
-                              setEditingProposal(proposal);
-                              setShowForm(true);
-                            }}
-                            className="text-blue-500 hover:text-blue-700 mr-3 dark:text-blue-400"
-                          >
-                            编辑
-                          </button>
-                          <button
-                            onClick={() => handleDeleteProposal(proposal.id)}
-                            className="text-red-500 hover:text-red-700 dark:text-red-400"
-                          >
-                            删除
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
+                    {paginatedProposals.map((proposal) => {
+                      const isSelected = selectedIds.has(proposal.id);
+                      return (
+                        <tr key={proposal.id} className={`hover:bg-gray-50 dark:hover:bg-gray-700 ${isSelected ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}>
+                          <td className="px-4 py-3">
+                            <input
+                              type="checkbox"
+                              checked={isSelected}
+                              onChange={() => handleToggleSelect(proposal.id)}
+                              className="w-4 h-4 text-blue-500 rounded border-gray-300 dark:border-gray-600 focus:ring-blue-500"
+                            />
+                          </td>
+                          <td className="px-4 py-3 text-sm text-gray-500 dark:text-gray-400">{proposal.id}</td>
+                          <td className="px-4 py-3 text-sm text-gray-800 dark:text-gray-200">{proposal.name}</td>
+                          <td className="px-4 py-3 text-sm text-indigo-600 dark:text-indigo-400">{proposal.projectName || '-'}</td>
+                          <td className="px-4 py-3 text-sm">
+                            <span className={`px-2 py-1 rounded text-xs ${
+                              proposal.type === 'web' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300' :
+                              proposal.type === 'app' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' :
+                              'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
+                            }`}>
+                              {proposal.type}
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 text-sm">
+                            <span className={`px-2 py-1 rounded text-xs ${
+                              proposal.status === 'active' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' :
+                              proposal.status === 'archived' ? 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300' :
+                              'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
+                            }`}>
+                              {proposal.status}
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 text-sm">
+                            <button
+                              onClick={() => {
+                                setEditingProposal(proposal);
+                                setShowForm(true);
+                              }}
+                              className="text-blue-500 hover:text-blue-700 mr-3 dark:text-blue-400"
+                            >
+                              编辑
+                            </button>
+                            <button
+                              onClick={() => handleDeleteProposal(proposal.id)}
+                              className="text-red-500 hover:text-red-700 dark:text-red-400"
+                            >
+                              删除
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
 
@@ -476,6 +702,24 @@ function App() {
           </>
         )}
       </div>
+
+      {/* 批量操作栏 */}
+      <BatchActionBar
+        selectedCount={selectedIds.size}
+        onBatchStatusChange={handleBatchStatusChange}
+        onBatchMilestone={() => setShowMilestoneModal(true)}
+        onBatchDelete={handleBatchDelete}
+        onCancelSelect={() => setSelectedIds(new Set())}
+      />
+
+      {/* 里程碑选择弹窗 */}
+      {showMilestoneModal && (
+        <MilestoneSelectModal
+          milestones={milestones}
+          onSelect={handleBatchMilestone}
+          onClose={() => setShowMilestoneModal(false)}
+        />
+      )}
 
       {showForm && (
         <ProposalForm
