@@ -51,6 +51,9 @@ function App() {
   const [selectedIds, setSelectedIds] = useState(new Set());
   const [showMilestoneModal, setShowMilestoneModal] = useState(false);
 
+  // M3: 专注模式状态
+  const [focusMode, setFocusMode] = useState({ projectId: null, status: null });
+
   // 导入/导出状态
   const [importMode, setImportMode] = useState('skip');
   const [parsedCSV, setParsedCSV] = useState(null);
@@ -342,6 +345,31 @@ function App() {
     const matchedIds = new Set(filteredProposals.map(p => p.projectId));
     return projects.filter(p => matchedIds.has(p.id));
   }, [projects, filteredProposals, searchQuery, advancedFilters]);
+
+  // M3: Focus mode filtered projects
+  const focusFilteredProjects = useMemo(() => {
+    if (!focusMode.projectId && !focusMode.status) return filteredProjects;
+    return filteredProjects.map(project => ({
+      ...project,
+      proposals: project.proposals.filter(p =>
+        (!focusMode.projectId || p.projectId === focusMode.projectId) &&
+        (!focusMode.status || p.status === focusMode.status)
+      )
+    })).filter(p => p.proposals.length > 0);
+  }, [filteredProjects, focusMode]);
+
+  // M3: Focus mode flat proposals
+  const focusFilteredProposals = useMemo(() => {
+    return focusFilteredProjects.flatMap(project =>
+      project.proposals.map(p => ({
+        ...p,
+        projectName: project.name,
+        projectUrl: project.url,
+        projectGitRepo: project.gitRepo,
+        projectId: project.id,
+      }))
+    );
+  }, [focusFilteredProjects]);
 
   const paginatedProposals = useMemo(() => {
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -652,6 +680,8 @@ function App() {
           <FilterBar
             viewMode={viewMode}
             onViewModeChange={setViewMode}
+            focusMode={focusMode}
+            onFocusModeChange={setFocusMode}
           />
         </div>
 
@@ -839,9 +869,10 @@ function App() {
 
             {viewMode === 'swimlane' && (
               <KanbanSwimlanes
-                projects={filteredProjects}
-                proposals={filteredProposals}
+                projects={focusFilteredProjects}
+                proposals={focusFilteredProposals}
                 onUpdateProposal={handleEditProposal}
+                focusMode={focusMode}
               />
             )}
 

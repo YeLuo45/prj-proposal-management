@@ -27,7 +27,7 @@ const STATUS_COLUMNS = [
 ];
 
 // embeddedMode: 当作为 App.jsx 嵌入式组件使用时，接收外部数据和回调
-function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onUpdateProposal }) {
+function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onUpdateProposal, focusMode }) {
   const { projectId } = useParams();
   
   // 判断是否为嵌入式模式（有外部传入数据）
@@ -50,6 +50,12 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
     try {
       return new Set(JSON.parse(localStorage.getItem('swimlanes_collapsed') || '[]'));
     } catch { return new Set(); }
+  });
+  
+  // M1: Column collapse state
+  const [collapsedColumns, setCollapsedColumns] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('kanban_column_collapsed') || '{}'); }
+    catch { return {}; }
   });
   const [loading, setLoading] = useState(!isEmbedded);
   const [error, setError] = useState(null);
@@ -267,6 +273,11 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
   useEffect(() => {
     localStorage.setItem('swimlanes_collapsed', JSON.stringify([...collapsedLaneIds]));
   }, [collapsedLaneIds]);
+  
+  // M1: 持久化列折叠状态
+  useEffect(() => {
+    localStorage.setItem('kanban_column_collapsed', JSON.stringify(collapsedColumns));
+  }, [collapsedColumns]);
 
   const handleToggleCollapse = (projectId) => {
     setCollapsedLaneIds(prev => {
@@ -278,6 +289,25 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
       }
       return next;
     });
+  };
+
+  // M1: Toggle column collapse
+  const toggleColumnCollapse = (projectId, status) => {
+    const key = `${projectId}:${status}`;
+    setCollapsedColumns(prev => {
+      const next = { ...prev };
+      if (next[key]) {
+        delete next[key];
+      } else {
+        next[key] = true;
+      }
+      return next;
+    });
+  };
+
+  // M1: Check if column is collapsed
+  const isColumnCollapsed = (projectId, status) => {
+    return !!collapsedColumns[`${projectId}:${status}`];
   };
 
   const handleCardClick = (proposal) => {
@@ -434,6 +464,8 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
                     onCardClick={handleCardClick}
                     overId={overId}
                     activeId={activeId}
+                    isColumnCollapsed={isColumnCollapsed}
+                    onToggleColumnCollapse={toggleColumnCollapse}
                   />
                 ))
               )}
