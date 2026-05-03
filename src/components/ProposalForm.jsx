@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getAPIKey } from '../utils/aiService';
+import MarkdownRenderer from './MarkdownRenderer';
 
 function ProposalForm({
   proposal,
@@ -22,6 +23,8 @@ function ProposalForm({
     tags: [],
   });
   const [tagsInput, setTagsInput] = useState('');
+  // V11: Markdown 编辑/预览切换
+  const [descriptionMode, setDescriptionMode] = useState('edit');
 
   useEffect(() => {
     if (proposal) {
@@ -85,13 +88,40 @@ function ProposalForm({
 
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">描述</label>
-            <textarea
-              name="description"
-              value={formData.description}
-              onChange={handleChange}
-              rows="3"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
-            />
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-xs text-gray-400">支持 Markdown 语法</span>
+              <div className="flex bg-gray-100 dark:bg-gray-700 rounded overflow-hidden">
+                <button
+                  type="button"
+                  onClick={() => setDescriptionMode('edit')}
+                  className={`text-xs px-3 py-1 ${descriptionMode === 'edit' ? 'bg-blue-500 text-white' : 'text-gray-600 dark:text-gray-300'}`}
+                >
+                  源码
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setDescriptionMode('preview')}
+                  className={`text-xs px-3 py-1 ${descriptionMode === 'preview' ? 'bg-blue-500 text-white' : 'text-gray-600 dark:text-gray-300'}`}
+                >
+                  预览
+                </button>
+              </div>
+            </div>
+
+            {descriptionMode === 'edit' ? (
+              <textarea
+                name="description"
+                value={formData.description}
+                onChange={handleChange}
+                rows="6"
+                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 font-mono text-sm"
+                placeholder="支持 Markdown 语法（GFM）..."
+              />
+            ) : (
+              <div className="border rounded p-3 min-h-[120px] bg-gray-50 dark:bg-gray-800">
+                <MarkdownRenderer content={formData.description} />
+              </div>
+            )}
 
             {/* V10: AI Classification Button */}
             {apiKey && (
