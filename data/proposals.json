@@ -1070,7 +1070,7 @@
       "name": "tower-baby-guard",
       "description": "顶部搜索框实时搜索文档标题和内容(300ms防抖)，显示标题+内容片段+文件夹，最多10条结果，点击跳转",
       "url": "https://yeluo45.github.io/doc-editor/",
-      "gitRepo": "https://github.com/YeLuo45/doc-editor",
+      "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
       "createdAt": "2025-01-01",
       "updatedAt": "2025-05-03",
       "proposals": [
@@ -1082,7 +1082,7 @@
           "status": "active",
           "url": "https://yeluo45.github.io/doc-editor/",
           "packageUrl": "https://github.com/YeLuo45/tower-baby-guard/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/doc-editor",
+          "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
           "tags": [
             "提案"
           ],
