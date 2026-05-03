@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import FilterBar from './components/FilterBar';
@@ -30,6 +31,7 @@ const ITEMS_PER_PAGE = 12;
 const RECENT_PROPOSALS_PER_PROJECT = 3;
 
 function App() {
+  const { t } = useTranslation();
   const [projects, setProjects] = useState([]);
   const [flatProposals, setFlatProposals] = useState([]);
   const [milestones, setMilestones] = useState([]);
@@ -779,22 +781,22 @@ function App() {
     return (
       <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
         <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md w-96">
-          <h1 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">设置 GitHub Token</h1>
+          <h1 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">{t('token.title')}</h1>
           <p className="text-gray-600 dark:text-gray-300 mb-4">
-            请输入 GitHub Personal Access Token 以访问和修改提案数据。
+            {t('token.description')}
           </p>
           <input
             type="password"
             value={token}
             onChange={(e) => setToken(e.target.value)}
-            placeholder="输入 GitHub Token"
+            placeholder={t('token.placeholder')}
             className="w-full px-4 py-2 border rounded-lg mb-4 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
           />
           <button
             onClick={() => handleSaveToken(token)}
             className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
           >
-            保存 Token
+            {t('token.save')}
           </button>
         </div>
       </div>
@@ -865,7 +867,7 @@ function App() {
           />
         )}
 
-        {loading && <div className="text-center py-8 text-gray-600 dark:text-gray-300">加载中...</div>}
+        {loading && <div className="text-center py-8 text-gray-600 dark:text-gray-300">{t('common.loading')}</div>}
         {error && <div className="text-red-500 text-center py-4">{error}</div>}
 
         {!loading && (

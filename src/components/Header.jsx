@@ -1,7 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import DataHealthIndicator from './DataHealthIndicator';
+import LanguageSwitcher from './LanguageSwitcher';
 
 function Header({ onAdd, onSettings, darkMode, onToggleDarkMode, projectName, onShowHistory, dataHealth }) {
+  const { t } = useTranslation();
   const { errors = [], warnings = [] } = dataHealth || {};
   const location = useLocation();
 
@@ -27,26 +30,29 @@ function Header({ onAdd, onSettings, darkMode, onToggleDarkMode, projectName, on
               {projectName}
             </span>
           ) : (
-            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">项目提案管理</h1>
+            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{t('app.title')}</h1>
           )}
         </div>
         <div className="flex gap-4 items-center">
           <Link to="/" className={navLinkClass('/')}>
-            列表
+            {t('app.list')}
           </Link>
           <Link to="/kanban" className={navLinkClass('/kanban')}>
-            看板
+            {t('app.kanban')}
           </Link>
           <Link to="/gantt" className={navLinkClass('/gantt')}>
-            甘特图
+            {t('app.gantt')}
           </Link>
           <Link to="/dashboard" className={navLinkClass('/dashboard')}>
-            统计
+            {t('app.dashboard')}
           </Link>
+          
+          <LanguageSwitcher />
+          
           <button
             onClick={onToggleDarkMode}
             className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 flex items-center gap-2"
-            title={darkMode ? '切换到亮色模式' : '切换到暗色模式'}
+            title={darkMode ? t('app.switchToLight') : t('app.switchToDark')}
           >
             {darkMode ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,7 +65,7 @@ function Header({ onAdd, onSettings, darkMode, onToggleDarkMode, projectName, on
             )}
           </button>
           {errors.length > 0 && (
-            <div title={`${errors.length} 个错误，${warnings.length} 个警告`}>
+            <div title={`${errors.length} ${t('dataHealth.errors')}，${warnings.length} ${t('dataHealth.warnings')}`}>
               <div className="flex items-center gap-2">
                 <DataHealthIndicator errors={errors} warnings={warnings} errorDetails={errors} />
               </div>
@@ -68,24 +74,24 @@ function Header({ onAdd, onSettings, darkMode, onToggleDarkMode, projectName, on
           <button
             onClick={onShowHistory}
             className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 flex items-center gap-2"
-            title="操作历史"
+            title={t('operationHistory.title')}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span className="hidden sm:inline">历史</span>
+            <span className="hidden sm:inline">{t('app.history')}</span>
           </button>
           <button
             onClick={onAdd}
             className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 flex items-center gap-2"
           >
-            <span>+</span> 添加提案
+            <span>+</span> {t('app.addProposal')}
           </button>
           <button
             onClick={onSettings}
             className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600"
           >
-            设置
+            {t('app.settings')}
           </button>
         </div>
       </div>

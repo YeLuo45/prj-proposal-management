@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function UndoToast({ visible, description, onUndo, onDismiss }) {
+  const { t } = useTranslation();
   useEffect(() => {
     if (visible) {
       const timer = setTimeout(() => {
@@ -16,7 +18,7 @@ function UndoToast({ visible, description, onUndo, onDismiss }) {
     <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
       <div className="bg-gray-800 dark:bg-gray-700 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-4">
         <div className="flex-1">
-          <div className="font-medium">操作已完成</div>
+          <div className="font-medium">{t('undo.operationCompleted') || 'Operation Completed'}</div>
           {description && (
             <div className="text-sm text-gray-300 mt-1">{description}</div>
           )}
@@ -26,13 +28,13 @@ function UndoToast({ visible, description, onUndo, onDismiss }) {
             onClick={onUndo}
             className="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-sm font-medium transition-colors"
           >
-            撤销
+            {t('undo.revoke') || '撤销'}
           </button>
           <button
             onClick={onDismiss}
             className="px-4 py-2 bg-gray-600 hover:bg-gray-500 rounded-lg text-sm font-medium transition-colors"
           >
-            忽略
+            {t('undo.dismiss') || '忽略'}
           </button>
         </div>
       </div>

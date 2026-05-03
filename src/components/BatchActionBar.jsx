@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 function BatchActionBar({
   selectedCount,
   onBatchStatusChange,
@@ -5,13 +7,14 @@ function BatchActionBar({
   onBatchDelete,
   onCancelSelect
 }) {
+  const { t } = useTranslation();
   if (selectedCount === 0) return null;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-300 dark:border-gray-700 p-4 shadow-lg z-50">
       <div className="container mx-auto flex items-center justify-between">
         <span className="text-gray-700 dark:text-gray-200">
-          已选择 <strong className="text-blue-500">{selectedCount}</strong> 项
+          {t('batch.selectedCount', { count: selectedCount })}
         </span>
         <div className="flex gap-2 items-center flex-wrap">
           <select
@@ -24,28 +27,28 @@ function BatchActionBar({
             className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             defaultValue=""
           >
-            <option value="">批量移动到...</option>
-            <option value="active">待办</option>
-            <option value="in_dev">进行中</option>
-            <option value="archived">已完成</option>
+            <option value="">{t('batch.moveTo') || '批量移动到...'}</option>
+            <option value="active">{t('status.active')}</option>
+            <option value="in_dev">{t('status.in_dev')}</option>
+            <option value="archived">{t('status.archived')}</option>
           </select>
           <button
             onClick={onBatchMilestone}
             className="px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 text-sm"
           >
-            关联里程碑
+            {t('batch.setMilestone')}
           </button>
           <button
             onClick={onBatchDelete}
             className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 text-sm"
           >
-            批量删除
+            {t('batch.delete')}
           </button>
           <button
             onClick={onCancelSelect}
             className="px-4 py-2 bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500 text-sm"
           >
-            取消选择
+            {t('batch.cancelSelect') || '取消选择'}
           </button>
         </div>
       </div>

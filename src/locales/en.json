@@ -1,0 +1,224 @@
+{
+  "app": {
+    "title": "Project Proposal Manager",
+    "list": "List",
+    "kanban": "Kanban",
+    "gantt": "Gantt",
+    "dashboard": "Dashboard",
+    "addProposal": "Add Proposal",
+    "settings": "Settings",
+    "history": "History",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "filterBar": {
+    "projects": "Projects",
+    "cards": "Cards",
+    "swimlanes": "Swimlanes",
+    "table": "Table",
+    "focus": "Focus",
+    "allProjects": "All Projects",
+    "allStatuses": "All Statuses",
+    "clearFilter": "Clear Filter",
+    "currentFilter": "Current Filter",
+    "templateName": "Template Name",
+    "save": "Save",
+    "cancel": "Cancel",
+    "deleteTemplate": "Delete Template",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At",
+    "last7Days": "Last 7 Days",
+    "last30Days": "Last 30 Days",
+    "thisMonth": "This Month",
+    "lastMonth": "Last Month",
+    "clear": "Clear",
+    "matchAny": "Match Any (OR)",
+    "matchAll": "Match All (AND)",
+    "filterResults": "Filter Results",
+    "exportCsv": "Export CSV",
+    "status": {
+      "active": "Todo",
+      "in_dev": "In Progress",
+      "archived": "Done"
+    },
+    "type": {
+      "web": "Web",
+      "app": "App",
+      "package": "Package"
+    }
+  },
+  "searchBar": {
+    "placeholder": "Search name, description, tags, ID, URL or owner...",
+    "searchHistory": "Search History",
+    "clear": "Clear"
+  },
+  "advancedFilter": {
+    "status": "Status",
+    "type": "Type",
+    "tags": "Tags",
+    "project": "Project",
+    "createdDate": "Created Date",
+    "match": "Match",
+    "results": "results",
+    "clear": "Clear",
+    "apply": "Apply"
+  },
+  "proposalForm": {
+    "editProposal": "Edit Proposal",
+    "addProposal": "Add Proposal",
+    "name": "Name",
+    "description": "Description",
+    "markdownSupport": "Supports Markdown syntax",
+    "source": "Source",
+    "preview": "Preview",
+    "aiRecommend": "AI Recommend",
+    "aiAnalyzing": "Analyzing...",
+    "aiRecommendType": "Recommended Type",
+    "clickToApply": "Click to apply",
+    "aiRecommendTags": "Recommended Tags",
+    "duplicateDetected": "Duplicate Proposal Detected",
+    "similarity": "Similarity",
+    "saveAnyway": "Save Anyway",
+    "type": "Type",
+    "status": "Status",
+    "url": "URL",
+    "packageUrl": "Package URL",
+    "tags": "Tags (comma separated)",
+    "tagsPlaceholder": "tag1, tag2, ...",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "proposalCard": {
+    "createdAt": "Created",
+    "updatedAt": "Updated"
+  },
+  "importExport": {
+    "importCsv": "Import CSV",
+    "exportAll": "Export All",
+    "exportFiltered": "Export Filtered",
+    "restore": "Restore",
+    "importPreview": "Import Preview",
+    "skip": "Skip",
+    "overwrite": "Overwrite",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "imported": "Imported",
+    "skipped": "Skipped",
+    "updated": "Updated",
+    "errors": "Errors"
+  },
+  "validation": {
+    "errors": "errors",
+    "warnings": "warnings",
+    "errorCount": "{{count}} errors",
+    "warningCount": "{{count}} warnings",
+    "cannotSave": "Cannot save due to validation errors",
+    "hasWarnings": "Has validation warnings"
+  },
+  "operationHistory": {
+    "title": "Operation History",
+    "create": "Create",
+    "update": "Update",
+    "delete": "Delete",
+    "batchUpdate": "Batch Update",
+    "batchDelete": "Batch Delete",
+    "noOperations": "No operations",
+    "undone": "Undone",
+    "cannotUndo": "Cannot undo",
+    "revoke": "Revoke"
+  },
+  "undo": {
+    "lastOperation": "Last operation",
+    "cannotUndo": "Cannot undo",
+    "operationCompleted": "Operation Completed",
+    "revoke": "Revoke",
+    "dismiss": "Dismiss"
+  },
+  "token": {
+    "title": "GitHub Token Settings",
+    "description": "Please enter your GitHub Personal Access Token to access and modify proposal data.",
+    "placeholder": "Enter GitHub Token",
+    "save": "Save Token"
+  },
+  "empty": {
+    "noProposals": "No proposals yet",
+    "noResults": "No results found",
+    "goBack": "Go Back"
+  },
+  "batch": {
+    "moveStatus": "Move to {{status}}",
+    "delete": "Delete",
+    "setMilestone": "Set Milestone",
+    "selectedCount": "{{count}} selected"
+  },
+  "gantt": {
+    "today": "Today",
+    "loading": "Loading...",
+    "noData": "No data"
+  },
+  "projectDetail": {
+    "allProposals": "All Proposals",
+    "filterByStatus": "Filter by Status",
+    "filterByType": "Filter by Type",
+    "reset": "Reset"
+  },
+  "status": {
+    "active": "Active",
+    "in_dev": "In Dev",
+    "archived": "Archived"
+  },
+  "type": {
+    "web": "Web",
+    "app": "App",
+    "package": "Package"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "save": "Save",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "projectInfo": {
+    "project": "Project",
+    "proposals": "Proposals",
+    "ratio": "Ratio"
+  },
+  "dataHealth": {
+    "errors": "errors",
+    "warnings": "warnings"
+  },
+  "duplicate": {
+    "title": "Similar Proposals Detected",
+    "similarity": "Similarity"
+  },
+  "milestone": {
+    "associate": "Associate with Milestone",
+    "select": "Select Milestone",
+    "confirm": "Confirm"
+  },
+  "csv": {
+    "preview": "CSV Preview",
+    "validRows": "Valid Rows",
+    "invalidRows": "Invalid Rows",
+    "importMode": "Import Mode",
+    "skip": "Skip duplicates",
+    "overwrite": "Overwrite duplicates"
+  },
+  "ai": {
+    "apiKey": "API Key",
+    "save": "Save",
+    "analyzing": "Analyzing...",
+    "title": "AI Settings",
+    "description": "Use MiniMax API Key to enable AI features. Key is stored locally only.",
+    "placeholder": "Enter MiniMax API Key",
+    "saved": "Saved",
+    "configured": "Configured"
+  }
+}

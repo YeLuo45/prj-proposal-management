@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const SEARCH_HISTORY_KEY = 'proposal_search_history';
 const MAX_HISTORY = 5;
 
 function SearchBar({ value, onChange, onAdvancedClick, showAdvanced }) {
+  const { t } = useTranslation();
   const [localValue, setLocalValue] = useState(value);
   const [showHistory, setShowHistory] = useState(false);
   const [history, setHistory] = useState([]);
@@ -71,7 +73,7 @@ function SearchBar({ value, onChange, onAdvancedClick, showAdvanced }) {
           value={localValue}
           onChange={(e) => setLocalValue(e.target.value)}
           onFocus={() => setShowHistory(true)}
-          placeholder="搜索名称、描述、标签、ID、URL或负责人..."
+          placeholder={t('searchBar.placeholder')}
           className="w-full px-4 py-2 pr-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400"
         />
         {localValue && (
@@ -93,9 +95,9 @@ function SearchBar({ value, onChange, onAdvancedClick, showAdvanced }) {
           className="absolute top-full left-0 mt-1 w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50"
         >
           <div className="flex justify-between items-center px-3 py-2 border-b border-gray-100 dark:border-gray-700">
-            <span className="text-xs text-gray-500 dark:text-gray-400">搜索历史</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400">{t('searchBar.searchHistory')}</span>
             <button onClick={clearHistory} className="text-xs text-blue-500 hover:text-blue-600">
-              清空
+              {t('searchBar.clear')}
             </button>
           </div>
           {history.map((item, i) => (
@@ -118,7 +120,7 @@ function SearchBar({ value, onChange, onAdvancedClick, showAdvanced }) {
             : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'
         }`}
       >
-        高级
+        {t('advancedFilter.title') || '高级'}
       </button>
     </div>
   );

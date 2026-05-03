@@ -1,0 +1,224 @@
+{
+  "app": {
+    "title": "项目提案管理",
+    "list": "列表",
+    "kanban": "看板",
+    "gantt": "甘特图",
+    "dashboard": "统计",
+    "addProposal": "添加提案",
+    "settings": "设置",
+    "history": "历史",
+    "switchToLight": "切换到亮色模式",
+    "switchToDark": "切换到暗色模式"
+  },
+  "filterBar": {
+    "projects": "项目",
+    "cards": "卡片",
+    "swimlanes": "泳道",
+    "table": "列表",
+    "focus": "专注",
+    "allProjects": "全部项目",
+    "allStatuses": "全部状态",
+    "clearFilter": "清除筛选",
+    "currentFilter": "当前筛选",
+    "templateName": "模板名称",
+    "save": "保存",
+    "cancel": "取消",
+    "deleteTemplate": "删除模板",
+    "createdAt": "创建时间",
+    "updatedAt": "更新时间",
+    "last7Days": "近7天",
+    "last30Days": "近30天",
+    "thisMonth": "本月",
+    "lastMonth": "上月",
+    "clear": "清除",
+    "matchAny": "任意匹配(OR)",
+    "matchAll": "全部匹配(AND)",
+    "filterResults": "筛选结果",
+    "exportCsv": "导出 CSV",
+    "status": {
+      "active": "待办",
+      "in_dev": "进行中",
+      "archived": "已完成"
+    },
+    "type": {
+      "web": "Web",
+      "app": "App",
+      "package": "Package"
+    }
+  },
+  "searchBar": {
+    "placeholder": "搜索名称、描述、标签、ID、URL或负责人...",
+    "searchHistory": "搜索历史",
+    "clear": "清空"
+  },
+  "advancedFilter": {
+    "status": "状态",
+    "type": "类型",
+    "tags": "标签",
+    "project": "项目",
+    "createdDate": "创建日期",
+    "match": "匹配",
+    "results": "条结果",
+    "clear": "清空",
+    "apply": "应用"
+  },
+  "proposalForm": {
+    "editProposal": "编辑提案",
+    "addProposal": "添加提案",
+    "name": "名称",
+    "description": "描述",
+    "markdownSupport": "支持 Markdown 语法",
+    "source": "源码",
+    "preview": "预览",
+    "aiRecommend": "AI 推荐分类",
+    "aiAnalyzing": "分析中...",
+    "aiRecommendType": "推荐类型",
+    "clickToApply": "点击采纳",
+    "aiRecommendTags": "推荐标签",
+    "duplicateDetected": "检测到相似提案",
+    "similarity": "相似度",
+    "saveAnyway": "仍然保存",
+    "type": "类型",
+    "status": "状态",
+    "url": "访问链接",
+    "packageUrl": "包下载链接",
+    "tags": "标签 (逗号分隔)",
+    "tagsPlaceholder": "标签1, 标签2, ...",
+    "cancel": "取消",
+    "save": "保存"
+  },
+  "proposalCard": {
+    "createdAt": "创建于",
+    "updatedAt": "更新于"
+  },
+  "importExport": {
+    "importCsv": "导入 CSV",
+    "exportAll": "导出全部",
+    "exportFiltered": "导出筛选",
+    "restore": "恢复",
+    "importPreview": "导入预览",
+    "skip": "跳过",
+    "overwrite": "覆盖",
+    "cancel": "取消",
+    "confirm": "确认",
+    "imported": "已导入",
+    "skipped": "已跳过",
+    "updated": "已更新",
+    "errors": "错误"
+  },
+  "validation": {
+    "errors": "个错误",
+    "warnings": "个警告",
+    "errorCount": "{{count}} 个错误",
+    "warningCount": "{{count}} 个警告",
+    "cannotSave": "由于验证错误无法保存",
+    "hasWarnings": "存在验证警告"
+  },
+  "operationHistory": {
+    "title": "操作历史",
+    "create": "创建",
+    "update": "更新",
+    "delete": "删除",
+    "batchUpdate": "批量更新",
+    "batchDelete": "批量删除",
+    "noOperations": "暂无操作",
+    "undone": "已撤销",
+    "cannotUndo": "无法撤销",
+    "revoke": "撤销"
+  },
+  "undo": {
+    "lastOperation": "最近操作",
+    "cannotUndo": "无法撤销",
+    "operationCompleted": "操作已完成",
+    "revoke": "撤销",
+    "dismiss": "忽略"
+  },
+  "token": {
+    "title": "设置 GitHub Token",
+    "description": "请输入 GitHub Personal Access Token 以访问和修改提案数据。",
+    "placeholder": "输入 GitHub Token",
+    "save": "保存 Token"
+  },
+  "empty": {
+    "noProposals": "暂无提案",
+    "noResults": "未找到结果",
+    "goBack": "返回"
+  },
+  "batch": {
+    "moveStatus": "移动到 {{status}}",
+    "delete": "删除",
+    "setMilestone": "设置里程碑",
+    "selectedCount": "已选择 {{count}} 个"
+  },
+  "gantt": {
+    "today": "今天",
+    "loading": "加载中...",
+    "noData": "暂无数据"
+  },
+  "projectDetail": {
+    "allProposals": "所有提案",
+    "filterByStatus": "按状态筛选",
+    "filterByType": "按类型筛选",
+    "reset": "重置"
+  },
+  "status": {
+    "active": "待办",
+    "in_dev": "进行中",
+    "archived": "已完成"
+  },
+  "type": {
+    "web": "Web",
+    "app": "App",
+    "package": "Package"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "confirm": "确认",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "save": "保存",
+    "close": "关闭",
+    "yes": "是",
+    "no": "否"
+  },
+  "projectInfo": {
+    "project": "项目",
+    "proposals": "提案",
+    "ratio": "比例"
+  },
+  "dataHealth": {
+    "errors": "个错误",
+    "warnings": "个警告"
+  },
+  "duplicate": {
+    "title": "检测到相似提案",
+    "similarity": "相似度"
+  },
+  "milestone": {
+    "associate": "关联到里程碑",
+    "select": "选择里程碑",
+    "confirm": "确认"
+  },
+  "csv": {
+    "preview": "CSV 预览",
+    "validRows": "有效行",
+    "invalidRows": "无效行",
+    "importMode": "导入模式",
+    "skip": "跳过重复",
+    "overwrite": "覆盖重复"
+  },
+  "ai": {
+    "apiKey": "API Key",
+    "save": "保存",
+    "analyzing": "分析中...",
+    "title": "AI 功能设置",
+    "description": "使用 MiniMax API Key 启用 AI 功能。Key 仅存储在本地浏览器，不会上传任何服务器。",
+    "placeholder": "输入 MiniMax API Key",
+    "saved": "已保存",
+    "configured": "已配置"
+  }
+}
