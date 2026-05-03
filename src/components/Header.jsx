@@ -1,6 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
+import DataHealthIndicator from './DataHealthIndicator';
 
-function Header({ onAdd, onSettings, darkMode, onToggleDarkMode, projectName }) {
+function Header({ onAdd, onSettings, darkMode, onToggleDarkMode, projectName, onShowHistory, dataHealth }) {
+  const { errors = [], warnings = [] } = dataHealth || {};
   const location = useLocation();
 
   const isActive = (path) => {
@@ -55,6 +57,23 @@ function Header({ onAdd, onSettings, darkMode, onToggleDarkMode, projectName }) 
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
               </svg>
             )}
+          </button>
+          {errors.length > 0 && (
+            <div title={`${errors.length} 个错误，${warnings.length} 个警告`}>
+              <div className="flex items-center gap-2">
+                <DataHealthIndicator errors={errors} warnings={warnings} errorDetails={errors} />
+              </div>
+            </div>
+          )}
+          <button
+            onClick={onShowHistory}
+            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 flex items-center gap-2"
+            title="操作历史"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span className="hidden sm:inline">历史</span>
           </button>
           <button
             onClick={onAdd}

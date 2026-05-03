@@ -10,6 +10,12 @@ import BatchActionBar from './components/BatchActionBar';
 import MilestoneSelectModal from './components/MilestoneSelectModal';
 import KanbanSwimlanes from './pages/KanbanSwimlanes';
 import { useGitHub } from './hooks/useGitHub';
+import { useOperationHistory } from './hooks/useOperationHistory';
+import { useValidation } from './hooks/useDataValidator';
+import ValidationAlert from './components/ValidationAlert';
+import UndoToast from './components/UndoToast';
+import OperationHistoryDrawer from './components/OperationHistoryDrawer';
+import { validateProjects } from './utils/dataValidator';
 
 const ITEMS_PER_PAGE = 12;
 const RECENT_PROPOSALS_PER_PROJECT = 3;
@@ -30,12 +36,19 @@ function App() {
   });
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [showHistoryDrawer, setShowHistoryDrawer] = useState(false);
+  const [showUndoToast, setShowUndoToast] = useState(false);
+  const [lastOperationDesc, setLastOperationDesc] = useState('');
+  const [validationErrors, setValidationErrors] = useState([]);
+  const [validationWarnings, setValidationWarnings] = useState([]);
 
   // 批量操作状态
   const [selectedIds, setSelectedIds] = useState(new Set());
   const [showMilestoneModal, setShowMilestoneModal] = useState(false);
 
   const { loading, error, fetchProposals, saveProposals } = useGitHub();
+  const { history, pushRecord, updateRecord, undoLast, canUndo, refreshHistory } = useOperationHistory();
+  const { errors: validatorErrors, warnings: validatorWarnings } = useValidation(projects, milestones);
 
   // 高级筛选状态
   const [advancedFilters, setAdvancedFilters] = useState({
@@ -78,6 +91,35 @@ function App() {
     }
   }, []);
 
+  // Run validation after projects/milestones load
+  useEffect(() => {
+    if (projects.length > 0) {
+      const result = validateProjects(projects, milestones);
+      setValidationErrors(result.errors);
+      setValidationWarnings(result.warnings);
+    }
+  }, [projects, milestones]);
+
+  // Ctrl+Z undo handler
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'z' && canUndo) {
+        e.preventDefault();
+        handleUndo();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [canUndo]);
+
+  // Undo toast timer
+  useEffect(() => {
+    if (showUndoToast) {
+      const timer = setTimeout(() => setShowUndoToast(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showUndoToast]);
+
   const loadProposals = async () => {
     try {
       const data = await fetchProposals();
@@ -118,6 +160,46 @@ function App() {
     setShowTokenInput(false);
     loadProposals();
   };
+
+  // Handle undo operation
+  const handleUndo = useCallback(async () => {
+    const lastRecord = undoLast();
+    if (!lastRecord) return;
+
+    // For create: delete the proposal
+    // For update/batch_update: restore before state
+    // For delete: cannot easily undo (skip)
+    try {
+      if (lastRecord.action === 'create') {
+        // Undo create = delete
+        const newProjects = projects.map(project => ({
+          ...project,
+          proposals: project.proposals.filter(p => p.id !== lastRecord.targetId)
+        })).filter(project => project.proposals.length > 0);
+        await saveProposals({ version: 3, projects: newProjects });
+        setProjects(newProjects);
+        setFlatProposals(flatProposals.filter(p => p.id !== lastRecord.targetId));
+      } else if (lastRecord.action === 'update' && lastRecord.before) {
+        // Restore before state
+        const restoredProjects = projects.map(project => ({
+          ...project,
+          proposals: project.proposals.map(p =>
+            p.id === lastRecord.targetId ? { ...lastRecord.before, updatedAt: new Date().toISOString().split('T')[0] } : p
+          )
+        }));
+        await saveProposals({ version: 3, projects: restoredProjects });
+        setProjects(restoredProjects);
+        setFlatProposals(flatProposals.map(p =>
+          p.id === lastRecord.targetId ? { ...lastRecord.before, updatedAt: new Date().toISOString().split('T')[0] } : p
+        ));
+      }
+      refreshHistory();
+    } catch (err) {
+      console.error('Undo failed:', err);
+      alert('撤销失败：' + err.message);
+    }
+    setShowUndoToast(false);
+  }, [projects, flatProposals, undoLast, saveProposals, refreshHistory]);
 
   const toggleDarkMode = () => {
     setDarkMode(prev => !prev);
@@ -232,10 +314,24 @@ function App() {
     setProjects(newProjects.length > 0 ? newProjects : [{ id: `PRJ-${today.replace(/-/g, '')}-999`, name: '未分类', proposals: [proposal] }]);
     setFlatProposals(newFlat);
     setShowForm(false);
+    // Push history record
+    pushRecord({
+      timestamp: new Date().toISOString(),
+      action: 'create',
+      target: 'proposal',
+      targetId: proposal.id,
+      description: `创建提案 ${proposal.name}`,
+      before: null,
+      after: proposal,
+    });
+    setLastOperationDesc(`创建提案 ${proposal.name}`);
+    setShowUndoToast(true);
   };
 
   const handleEditProposal = async (updatedProposal) => {
     const today = new Date().toISOString().split('T')[0];
+    // Find original proposal for history
+    const originalProposal = flatProposals.find(p => p.id === updatedProposal.id);
     const newProjects = projects.map(project => ({
       ...project,
       proposals: project.proposals.map(p =>
@@ -251,10 +347,24 @@ function App() {
     setFlatProposals(newFlat);
     setEditingProposal(null);
     setShowForm(false);
+    // Push history record
+    pushRecord({
+      timestamp: new Date().toISOString(),
+      action: 'update',
+      target: 'proposal',
+      targetId: updatedProposal.id,
+      description: `更新提案 ${updatedProposal.name}`,
+      before: originalProposal,
+      after: { ...updatedProposal, updatedAt: today },
+    });
+    setLastOperationDesc(`更新提案 ${updatedProposal.name}`);
+    setShowUndoToast(true);
   };
 
   const handleDeleteProposal = async (id) => {
-    if (!confirm('确定要删除这个提案吗？')) return;
+    if (!confirm('确定要删除这个提案吗？此操作不可恢复。')) return;
+    // Find proposal for history
+    const deletedProposal = flatProposals.find(p => p.id === id);
     const newProjects = projects.map(project => ({
       ...project,
       proposals: project.proposals.filter(p => p.id !== id),
@@ -263,6 +373,18 @@ function App() {
     await saveProposals({ version: 3, projects: newProjects });
     setProjects(newProjects);
     setFlatProposals(newFlat);
+    // Push history record (delete cannot be undone easily)
+    if (deletedProposal) {
+      pushRecord({
+        timestamp: new Date().toISOString(),
+        action: 'delete',
+        target: 'proposal',
+        targetId: id,
+        description: `删除提案 ${deletedProposal.name}`,
+        before: deletedProposal,
+        after: null,
+      });
+    }
   };
 
   const handleCopyUrl = (url) => {
@@ -303,6 +425,8 @@ function App() {
   const handleBatchStatusChange = async (newStatus) => {
     if (!newStatus) return;
     const today = new Date().toISOString().split('T')[0];
+    // Get selected proposals for history
+    const selectedProposals = flatProposals.filter(p => selectedIds.has(p.id));
     const updatedProjects = projects.map(project => ({
       ...project,
       proposals: project.proposals.map(p =>
@@ -316,12 +440,26 @@ function App() {
     setProjects(updatedProjects);
     setFlatProposals(updatedFlat);
     setSelectedIds(new Set());
+    // Push history record for batch
+    pushRecord({
+      timestamp: new Date().toISOString(),
+      action: 'batch_update',
+      target: 'proposal',
+      targetId: `${selectedIds.size} 个提案`,
+      description: `批量修改 ${selectedIds.size} 个提案状态为 ${newStatus}`,
+      before: selectedProposals,
+      after: updatedFlat.filter(p => selectedIds.has(p.id)),
+    });
+    setLastOperationDesc(`批量修改 ${selectedIds.size} 个提案状态`);
+    setShowUndoToast(true);
     alert(`已将 ${selectedIds.size} 个提案移动到${newStatus === 'active' ? '待办' : newStatus === 'in_dev' ? '进行中' : '已完成'}`);
   };
 
   // 批量删除
   const handleBatchDelete = async () => {
     if (!confirm(`确定删除 ${selectedIds.size} 个提案？此操作不可恢复。`)) return;
+    // Get selected proposals for history
+    const selectedProposals = flatProposals.filter(p => selectedIds.has(p.id));
     const updatedProjects = projects
       .map(project => ({
         ...project,
@@ -333,11 +471,25 @@ function App() {
     setProjects(updatedProjects);
     setFlatProposals(updatedFlat);
     setSelectedIds(new Set());
+    // Push history record for batch delete
+    pushRecord({
+      timestamp: new Date().toISOString(),
+      action: 'batch_delete',
+      target: 'proposal',
+      targetId: `${selectedIds.size} 个提案`,
+      description: `批量删除 ${selectedIds.size} 个提案`,
+      before: selectedProposals,
+      after: null,
+    });
+    setLastOperationDesc(`批量删除 ${selectedIds.size} 个提案`);
+    setShowUndoToast(true);
   };
 
   // 批量关联里程碑
   const handleBatchMilestone = async (milestoneId, milestoneName) => {
     const today = new Date().toISOString().split('T')[0];
+    // Get selected proposals for history
+    const selectedProposals = flatProposals.filter(p => selectedIds.has(p.id));
     const updatedProjects = projects.map(project => ({
       ...project,
       proposals: project.proposals.map(p =>
@@ -352,6 +504,18 @@ function App() {
     setFlatProposals(updatedFlat);
     setSelectedIds(new Set());
     setShowMilestoneModal(false);
+    // Push history record
+    pushRecord({
+      timestamp: new Date().toISOString(),
+      action: 'batch_update',
+      target: 'proposal',
+      targetId: `${selectedIds.size} 个提案`,
+      description: `批量关联 ${selectedIds.size} 个提案到「${milestoneName}」`,
+      before: selectedProposals,
+      after: updatedFlat.filter(p => selectedIds.has(p.id)),
+    });
+    setLastOperationDesc(`批量关联 ${selectedIds.size} 个提案到里程碑`);
+    setShowUndoToast(true);
     alert(`已将 ${selectedIds.size} 个提案关联到「${milestoneName}」`);
   };
 
@@ -391,9 +555,18 @@ function App() {
         onSettings={() => setShowTokenInput(true)}
         darkMode={darkMode}
         onToggleDarkMode={toggleDarkMode}
+        onShowHistory={() => setShowHistoryDrawer(true)}
+        dataHealth={{ errors: validationErrors, warnings: validationWarnings }}
       />
 
       <div className="container mx-auto px-4 py-6">
+        {validationErrors.length > 0 && (
+          <ValidationAlert
+            errors={validationErrors}
+            onDismiss={() => setValidationErrors([])}
+          />
+        )}
+
         <div className="flex flex-col md:flex-row gap-4 mb-6">
           <SearchBar
             value={searchQuery}
@@ -730,6 +903,26 @@ function App() {
           }}
         />
       )}
+
+      <UndoToast
+        visible={showUndoToast}
+        description={lastOperationDesc}
+        onUndo={handleUndo}
+        onDismiss={() => setShowUndoToast(false)}
+      />
+
+      <OperationHistoryDrawer
+        isOpen={showHistoryDrawer}
+        onClose={() => setShowHistoryDrawer(false)}
+        history={history}
+        onUndo={(recordId) => {
+          // Mark as undone in history
+          const record = history.find(r => r.id === recordId);
+          if (record && !record.undone) {
+            updateRecord(recordId, { undone: true });
+          }
+        }}
+      />
     </div>
   );
 }
