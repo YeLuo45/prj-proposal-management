@@ -426,37 +426,217 @@
       "url": "https://yeluo45.github.io/card-game-prototype/",
       "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
       "createdAt": "2026-04-21",
-      "updatedAt": "2026-04-21",
+      "updatedAt": "2026-05-03",
       "proposals": [
         {
           "id": "P-20250421-001",
-          "name": "card-game-prototype",
-          "description": "DBG类卡牌（杀戮尖塔-like）；原型验证核心战斗循环+卡牌构筑；本地化中文；已交付",
+          "name": "DBG卡牌游戏原型验证",
+          "description": "",
           "type": "package",
           "status": "active",
           "url": "https://yeluo45.github.io/card-game-prototype/",
-          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
           "tags": [
-            "提案"
+            "DBG卡牌游戏"
           ],
-          "createdAt": "2026-04-21",
+          "createdAt": "20-25-04",
           "updatedAt": "2026-04-21"
         },
         {
           "id": "P-20260502-003",
-          "name": "card-game-prototype",
-          "description": "V2迭代：13张初始牌（4打击+4防御+2硬撑+2连续打击+1痛击）+12张新卡牌+5种debuff+5敌人+1Boss+战斗日志+胜利选牌",
+          "name": "DBG卡牌游戏 V2 — 卡牌扩充 + 敌人扩充",
+          "description": "",
           "type": "package",
           "status": "active",
           "url": "https://yeluo45.github.io/card-game-prototype/",
-          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
           "tags": [
-            "提案"
+            "DBG卡牌游戏"
           ],
-          "createdAt": "2026-05-02",
+          "createdAt": "20-26-05",
           "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260502-015",
+          "name": "DBG卡牌游戏 V7 — 敌人与Boss扩充",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260503-008",
+          "name": "DBG卡牌游戏 V16 — 卡组辅助系统",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-009",
+          "name": "DBG卡牌游戏 V17 — 牌组管理系统 + 卡牌升级扩展",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-007",
+          "name": "DBG卡牌游戏 V15 — 更多卡牌",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-006",
+          "name": "DBG卡牌游戏 V14 — 卡牌商店重做",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-005",
+          "name": "DBG卡牌游戏 V13 — 牌组构建核心（Critical Bugfix）",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-004",
+          "name": "DBG卡牌游戏 V12 — 音效与特效",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-003",
+          "name": "DBG卡牌游戏 V11 — 更多遗物效果",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-002",
+          "name": "DBG卡牌游戏 V10 — 章节扩展",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-001",
+          "name": "DBG卡牌游戏 V9 — 成就系统",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260502-016",
+          "name": "DBG卡牌游戏 V8 — 卡牌升级系统",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260502-013",
+          "name": "DBG卡牌游戏 V6 — 遗物/神器系统",
+          "description": "",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260502-012",
+          "name": "DBG卡牌游戏 V5 — 战斗奖励卡牌选择系统",
+          "description": "",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "gitRepo": "",
+          "tags": [
+            "DBG卡牌游戏"
+          ],
+          "createdAt": "20-26-05",
+          "updatedAt": "2026-05-03"
         }
       ]
     },
