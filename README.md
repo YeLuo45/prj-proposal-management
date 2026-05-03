@@ -1,7 +1,7 @@
 # 提案管理系统 (Proposals Manager)
 
 ## 访问 URL
-**https://yeluo45.github.io/proposals-manager/**
+**https://yeluo45.github.io/prj-proposals-manager/**
 
 ## 项目描述
 提案包与访问链接管理系统 — 管理提案ID、名称、描述、访问链接和下载包。
@@ -18,7 +18,7 @@
 
 ## 目录结构
 ```
-proposals-manager/
+prj-proposals-manager/
 ├── public/
 ├── src/
 │   ├── components/
