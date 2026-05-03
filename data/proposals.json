@@ -379,6 +379,32 @@
       ]
     },
     {
+      "id": "PRJ-20260412-203",
+      "name": "ai-creator-h5",
+      "description": "AI Creator H5创作工具",
+      "url": "https://yeluo45.github.io/ai-creator-h5/",
+      "gitRepo": "https://github.com/YeLuo45/ai-creator-h5",
+      "createdAt": "2026-04-12",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260412-007",
+          "name": "ai-creator-h5 (H5)",
+          "description": "AI Creator H5创作工具",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/ai-creator-h5/",
+          "packageUrl": "https://github.com/YeLuo45/ai-creator-h5/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/ai-creator-h5",
+          "tags": [
+            "Web"
+          ],
+          "createdAt": "2026-04-12",
+          "updatedAt": "2026-04-12"
+        }
+      ]
+    },
+    {
       "id": "PRJ-20260419-216",
       "name": "hermes-agent-collab",
       "description": "Hermes Agent Collab 团队协作增强",
@@ -712,6 +738,32 @@
       ]
     },
     {
+      "id": "PRJ-20260422-200",
+      "name": "room-escape-puzzle",
+      "description": "解谜游戏原型验证 — room escape puzzle game",
+      "url": "https://resonant-frangipane-46af83.netlify.app/",
+      "gitRepo": "https://github.com/YeLuo45/room-escape-puzzle",
+      "createdAt": "2026-04-22",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260422-001",
+          "name": "解谜游戏原型验证",
+          "description": "解谜游戏原型验证 — room escape puzzle game",
+          "type": "package",
+          "status": "active",
+          "url": "https://resonant-frangipane-46af83.netlify.app/",
+          "packageUrl": "https://github.com/YeLuo45/room-escape-puzzle/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/room-escape-puzzle",
+          "tags": [
+            "Game"
+          ],
+          "createdAt": "2026-04-22",
+          "updatedAt": "2026-04-22"
+        }
+      ]
+    },
+    {
       "id": "PRJ-20260422-201",
       "name": "ash-echoes",
       "description": "2.5D 侧视角射击游戏",
@@ -734,6 +786,110 @@
           ],
           "createdAt": "20-26-04",
           "updatedAt": "20-26-04"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260422-218",
+      "name": "animal-forest",
+      "description": "动物森林 - 儿童教育游戏",
+      "url": "https://yeluo45.github.io/animal-forest/",
+      "gitRepo": "https://github.com/YeLuo45/animal-forest",
+      "createdAt": "2026-04-22",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260422-004",
+          "name": "动物森林 - 儿童教育游戏",
+          "description": "动物森林 - 儿童教育游戏",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/animal-forest/",
+          "packageUrl": "https://github.com/YeLuo45/animal-forest/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/animal-forest",
+          "tags": [
+            "Game"
+          ],
+          "createdAt": "2026-04-22",
+          "updatedAt": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260422-219",
+      "name": "little-garden",
+      "description": "儿童成长陪伴游戏",
+      "url": "https://yeluo45.github.io/little-garden/",
+      "gitRepo": "https://github.com/YeLuo45/little-garden",
+      "createdAt": "2026-04-22",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260422-005",
+          "name": "儿童成长陪伴游戏",
+          "description": "儿童成长陪伴游戏",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/little-garden/",
+          "packageUrl": "https://github.com/YeLuo45/little-garden/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/little-garden",
+          "tags": [
+            "Game"
+          ],
+          "createdAt": "2026-04-22",
+          "updatedAt": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260424-220",
+      "name": "OpenMAIC",
+      "description": "OpenMAIC — AI多智能体协作平台",
+      "url": "",
+      "gitRepo": "https://github.com/YeLuo45/OpenMAIC",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260424-001",
+          "name": "OpenMAIC",
+          "description": "OpenMAIC — AI多智能体协作平台",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/OpenMAIC/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/OpenMAIC",
+          "tags": [
+            "AI"
+          ],
+          "createdAt": "2026-04-24",
+          "updatedAt": "2026-04-24"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260426-221",
+      "name": "preschool-puzzle",
+      "description": "幼儿益智解谜游戏",
+      "url": "https://yeluo45.github.io/preschool-puzzle/",
+      "gitRepo": "https://github.com/YeLuo45/preschool-puzzle",
+      "createdAt": "2026-04-26",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260426-001",
+          "name": "幼儿益智解谜游戏",
+          "description": "幼儿益智解谜游戏",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/preschool-puzzle/",
+          "packageUrl": "https://github.com/YeLuo45/preschool-puzzle/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/preschool-puzzle",
+          "tags": [
+            "Game"
+          ],
+          "createdAt": "2026-04-26",
+          "updatedAt": "2026-04-26"
         }
       ]
     },
@@ -932,32 +1088,6 @@
           ],
           "createdAt": "20-26-04",
           "updatedAt": "20-26-04"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260412-203",
-      "name": "ai-creator-h5",
-      "description": "AI Creator H5创作工具",
-      "url": "https://yeluo45.github.io/ai-creator-h5/",
-      "gitRepo": "https://github.com/YeLuo45/ai-creator-h5",
-      "createdAt": "2026-04-12",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260412-007",
-          "name": "ai-creator-h5 (H5)",
-          "description": "AI Creator H5创作工具",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/ai-creator-h5/",
-          "packageUrl": "https://github.com/YeLuo45/ai-creator-h5/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ai-creator-h5",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-04-12",
-          "updatedAt": "2026-04-12"
         }
       ]
     }
