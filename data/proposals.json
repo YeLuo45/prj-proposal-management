@@ -77,6 +77,96 @@
           ],
           "createdAt": "2026-04-16",
           "updatedAt": "2026-04-16"
+        },
+        {
+          "id": "P-20260502-002",
+          "name": "P-20260502-002",
+          "description": "V2轻量化增强已完成（优先级P0/P1/P2+标签筛选+截止日期排序+搜索过滤），部署于 https://yeluo45.github.io/todo-list/；V3看板视图已集成到todo-list项目（列表/看板视图切换，三列看板+原生拖拽），URL不变；看板使用HTML5原生Drag and Drop API实现，不需要额外依赖",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260502-019",
+          "name": "P-20260502-019",
+          "description": "甘特图时间线视图 + 循环任务自动生成下一周期",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260503-023",
+          "name": "P-20260503-023",
+          "description": "PWA manifest+ServiceWorker离线缓存 + 甘特图周/月视图切换(7天/30天时间轴)",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "PWA"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-027",
+          "name": "P-20260503-027",
+          "description": "泳道独立WIP限制+看板设置弹窗+逾期高亮角标 + Todoist/Notion/CSV智能导入",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-021",
+          "name": "P-20260503-021",
+          "description": "仪表板首页(KPI卡片+今日到期+四象限分布) + 甘特图泳道分组(按状态/优先级)",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-020",
+          "name": "P-20260503-020",
+          "description": "重要性×紧急度评分+四象限徽章 + GitHub Gist多设备同步",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
         }
       ]
     },
@@ -103,6 +193,21 @@
           ],
           "createdAt": "2026-04-17",
           "updatedAt": "2026-04-17"
+        },
+        {
+          "id": "P-20260502-001",
+          "name": "P-20260502-001",
+          "description": "项目详情页（独立路由 /project/:id）+ 里程碑管理（CRUD + 时间线 + 提案关联）; PRD 倒计时到期(2026-05-02)，默认通过处理; 技术期望倒计时到期(2026-05-02)，默认通过处理",
+          "type": "package",
+          "status": "in_dev",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02"
         }
       ]
     },
@@ -181,6 +286,21 @@
           ],
           "createdAt": "2026-04-18",
           "updatedAt": "2026-04-18"
+        },
+        {
+          "id": "P-20260502-004",
+          "name": "P-20260502-004",
+          "description": "TDD 测试用例已生成（src/__tests__/modelRouting.test.ts + llmBridge.test.ts）；Vitest 1.x 需要 Node 20+，当前环境 Node 18.19.1；测试文件语法正确，待升级 Node 后可运行；建议后续开发环境升级 Node 20+",
+          "type": "package",
+          "status": "in_dev",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
         }
       ]
     },
@@ -457,6 +577,186 @@
           ],
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260502-015",
+          "name": "P-20260502-015",
+          "description": "DBG卡牌游戏 V7 — 敌人与Boss扩充",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260503-001",
+          "name": "P-20260503-001",
+          "description": "DBG卡牌游戏 V9 — 成就系统",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260502-016",
+          "name": "P-20260502-016",
+          "description": "DBG卡牌游戏 V8 — 卡牌升级系统",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260502-013",
+          "name": "P-20260502-013",
+          "description": "DBG卡牌游戏 V6 — 遗物/神器系统",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260503-008",
+          "name": "P-20260503-008",
+          "description": "DBG卡牌游戏 V16 — 卡组辅助系统",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-007",
+          "name": "P-20260503-007",
+          "description": "DBG卡牌游戏 V15 — 更多卡牌",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-006",
+          "name": "P-20260503-006",
+          "description": "DBG卡牌游戏 V14 — 卡牌商店重做",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-005",
+          "name": "P-20260503-005",
+          "description": "DBG卡牌游戏 V13 — 牌组构建核心（Critical Bugfix）",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-004",
+          "name": "P-20260503-004",
+          "description": "DBG卡牌游戏 V12 — 音效与特效",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-003",
+          "name": "P-20260503-003",
+          "description": "DBG卡牌游戏 V11 — 更多遗物效果",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260503-002",
+          "name": "P-20260503-002",
+          "description": "DBG卡牌游戏 V10 — 章节扩展",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        },
+        {
+          "id": "P-20260502-012",
+          "name": "P-20260502-012",
+          "description": "DBG卡牌游戏 V5 — 战斗奖励卡牌选择系统",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
         }
       ]
     },
@@ -513,7 +813,7 @@
       ]
     },
     {
-      "id": "PRJ-20260422-002",
+      "id": "PRJ-20260422-001",
       "name": "ai-novel-assistant",
       "description": "AI小说助手；React + Vite + Dexie (IndexedDB) + Zustand + react-beautiful-dnd + react-router-dom；功能待确认",
       "url": "",
@@ -580,6 +880,21 @@
           ],
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260502-017",
+          "name": "P-20260502-017",
+          "description": "Provider架构升级 + AI SDK集成 + 流式摘要 + Thinking配置；技术栈：ai SDK + @ai-sdk/openai + @ai-sdk/anthropic + @ai-sdk/google + partial-json + jsonrepair；技术期望倒计时(2026-05-02)已触发，当前进入 in_dev 阶段",
+          "type": "package",
+          "status": "in_dev",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
         }
       ]
     },
@@ -632,11 +947,26 @@
           ],
           "createdAt": "2026-04-23",
           "updatedAt": "2026-04-23"
+        },
+        {
+          "id": "P-20260502-003",
+          "name": "P-20260502-003",
+          "description": "v2 迭代已完成交付：①Sub Agent（共享KV Cache + 任务队列 + 依赖管理）②Verification Hooks后台分类器（strict/loose/disabled三档 + auto-retry）③4个新工具（edit_code/project_tree/web_search/task_plan）；llmBridge.ts MVP_TOOLS→V2_TOOLS 已修复；Vite build成功；electron-builder打包受限WSL环境（需Windows本机执行）",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02"
         }
       ]
     },
     {
-      "id": "PRJ-20260423-005",
+      "id": "PRJ-20260423-002",
       "name": "little-garden",
       "description": "育儿游戏（3-12岁）；养成照顾类（宠物+种植）；纯HTML5/JS；完整GDD + 可运行游戏",
       "url": "https://yeluo45.github.io/little-garden/",
@@ -688,7 +1018,7 @@
       ]
     },
     {
-      "id": "PRJ-20260424-004",
+      "id": "PRJ-20260424-002",
       "name": "animal-forest",
       "description": "教育类/动物森林主题/卡通风格/双模式(3-6岁幼儿+7-12岁儿童)/家长面板；纯HTML5单文件，浏览器直接运行",
       "url": "https://yeluo45.github.io/animal-forest/",
@@ -882,7 +1212,7 @@
       ]
     },
     {
-      "id": "PRJ-20260428-001",
+      "id": "PRJ-20260428-002",
       "name": "flight-chess-3d",
       "description": "3D卡通飞行棋；React Three Fiber 3D渲染；传统模式+事件模式(幸运/厄运/传送/交换)；2-4人本地对战；Roblox风格卡通渲染；60FPS目标；workflow修复id-token权限后部署成功",
       "url": "https://yeluo45.github.io/flight-chess-3d/",
@@ -975,233 +1305,6 @@
       ]
     },
     {
-      "id": "PRJ-20260502-001",
-      "name": "P-20260502-001",
-      "description": "项目详情页（独立路由 /project/:id）+ 里程碑管理（CRUD + 时间线 + 提案关联）; PRD 倒计时到期(2026-05-02)，默认通过处理; 技术期望倒计时到期(2026-05-02)，默认通过处理",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
-        {
-          "id": "P-20260502-001",
-          "name": "P-20260502-001",
-          "description": "项目详情页（独立路由 /project/:id）+ 里程碑管理（CRUD + 时间线 + 提案关联）; PRD 倒计时到期(2026-05-02)，默认通过处理; 技术期望倒计时到期(2026-05-02)，默认通过处理",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-002",
-      "name": "P-20260502-002",
-      "description": "V2轻量化增强已完成（优先级P0/P1/P2+标签筛选+截止日期排序+搜索过滤），部署于 https://yeluo45.github.io/todo-list/；V3看板视图已集成到todo-list项目（列表/看板视图切换，三列看板+原生拖拽），URL不变；看板使用HTML5原生Drag and Drop API实现，不需要额外依赖",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
-        {
-          "id": "P-20260502-002",
-          "name": "P-20260502-002",
-          "description": "V2轻量化增强已完成（优先级P0/P1/P2+标签筛选+截止日期排序+搜索过滤），部署于 https://yeluo45.github.io/todo-list/；V3看板视图已集成到todo-list项目（列表/看板视图切换，三列看板+原生拖拽），URL不变；看板使用HTML5原生Drag and Drop API实现，不需要额外依赖",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-015",
-      "name": "P-20260502-015",
-      "description": "DBG卡牌游戏 V7 — 敌人与Boss扩充",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
-        {
-          "id": "P-20260502-015",
-          "name": "P-20260502-015",
-          "description": "DBG卡牌游戏 V7 — 敌人与Boss扩充",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        },
-        {
-          "id": "P-20260502-015",
-          "name": "P-20260502-015",
-          "description": "TodoList V7 — 批量操作",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-001",
-      "name": "P-20260503-001",
-      "description": "DBG卡牌游戏 V9 — 成就系统",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
-        {
-          "id": "P-20260503-001",
-          "name": "P-20260503-001",
-          "description": "DBG卡牌游戏 V9 — 成就系统",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-016",
-      "name": "P-20260502-016",
-      "description": "DBG卡牌游戏 V8 — 卡牌升级系统",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
-        {
-          "id": "P-20260502-016",
-          "name": "P-20260502-016",
-          "description": "DBG卡牌游戏 V8 — 卡牌升级系统",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        },
-        {
-          "id": "P-20260502-016",
-          "name": "P-20260502-016",
-          "description": "暗色模式 + 看板泳道 + CSV/iCal 导出",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-013",
-      "name": "P-20260502-013",
-      "description": "DBG卡牌游戏 V6 — 遗物/神器系统",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
-        {
-          "id": "P-20260502-013",
-          "name": "P-20260502-013",
-          "description": "DBG卡牌游戏 V6 — 遗物/神器系统",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        },
-        {
-          "id": "P-20260502-013",
-          "name": "P-20260502-013",
-          "description": "节日皮肤(春节/圣诞/万圣节)+暗黑模式+成就解锁皮肤(彩虹/钻石/星空/复古)",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-005",
-      "name": "P-20260502-005",
-      "description": "玩家可选颜色；战绩统计（胜率/连胜）；localStorage持久化",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
-        {
-          "id": "P-20260502-005",
-          "name": "P-20260502-005",
-          "description": "玩家可选颜色；战绩统计（胜率/连胜）；localStorage持久化",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
       "id": "PRJ-20260502-002",
       "name": "game-1024",
       "description": "经典1024玩法（4×4滑动合并，目标1024）+ PWA可安装到安卓主屏幕 + 存档/继续游戏 + 皮肤系统；V2迭代(2048模式/无限模式/每日挑战/成就系统)已交付部署",
@@ -1225,18 +1328,22 @@
           ],
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-007",
-      "name": "P-20260502-007",
-      "description": "2048模式+无限模式切换；各自独立存档；无限模式不设目标上限；npm run build成功；已部署至gh-pages",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
+        },
+        {
+          "id": "P-20260502-005",
+          "name": "P-20260502-005",
+          "description": "玩家可选颜色；战绩统计（胜率/连胜）；localStorage持久化",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-02",
+          "updatedAt": "2026-05-02"
+        },
         {
           "id": "P-20260502-007",
           "name": "P-20260502-007",
@@ -1251,18 +1358,7 @@
           ],
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-009",
-      "name": "P-20260502-009",
-      "description": "方块移动动画(150ms ease-out)+合并动画(scale爆开)+新方块出现动画(scale放大)+分数飘字",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
+        },
         {
           "id": "P-20260502-009",
           "name": "P-20260502-009",
@@ -1277,18 +1373,7 @@
           ],
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-010",
-      "name": "P-20260502-010",
-      "description": "Web Audio API合成音效(滑动/合并/胜利/失败)+音效开关+AudioManager封装",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
+        },
         {
           "id": "P-20260502-010",
           "name": "P-20260502-010",
@@ -1303,18 +1388,7 @@
           ],
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-011",
-      "name": "P-20260502-011",
-      "description": "历史快照栈(最多10步)+撤销按钮+重试按钮；每日挑战撤销不影响seed状态",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
+        },
         {
           "id": "P-20260502-011",
           "name": "P-20260502-011",
@@ -1329,18 +1403,7 @@
           ],
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-014",
-      "name": "P-20260502-014",
-      "description": "棋盘尺寸切换(4×4/5×5/6×6)+进阶/地狱难度+初始方块数递增+每日挑战仅支持4×4",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
+        },
         {
           "id": "P-20260502-014",
           "name": "P-20260502-014",
@@ -1357,47 +1420,6 @@
           "updatedAt": "2026-05-02"
         },
         {
-          "id": "P-20260502-014",
-          "name": "P-20260502-014",
-          "description": "TodoList V5 — 搜索增强 + 快捷键",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        },
-        {
-          "id": "P-20260502-014",
-          "name": "P-20260502-014",
-          "description": "TodoList V5 — 搜索增强 + 快捷键",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": ""
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-008",
-      "name": "P-20260502-008",
-      "description": "每日挑战(固定初始盘面+得分排名)+10个成就(解锁弹窗+奖励)；参考3D打地鼠V4实现",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
-        {
           "id": "P-20260502-008",
           "name": "P-20260502-008",
           "description": "每日挑战(固定初始盘面+得分排名)+10个成就(解锁弹窗+奖励)；参考3D打地鼠V4实现",
@@ -1411,452 +1433,6 @@
           ],
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-003",
-      "name": "P-20260502-003",
-      "description": "v2 迭代已完成交付：①Sub Agent（共享KV Cache + 任务队列 + 依赖管理）②Verification Hooks后台分类器（strict/loose/disabled三档 + auto-retry）③4个新工具（edit_code/project_tree/web_search/task_plan）；llmBridge.ts MVP_TOOLS→V2_TOOLS 已修复；Vite build成功；electron-builder打包受限WSL环境（需Windows本机执行）",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
-        {
-          "id": "P-20260502-003",
-          "name": "P-20260502-003",
-          "description": "v2 迭代已完成交付：①Sub Agent（共享KV Cache + 任务队列 + 依赖管理）②Verification Hooks后台分类器（strict/loose/disabled三档 + auto-retry）③4个新工具（edit_code/project_tree/web_search/task_plan）；llmBridge.ts MVP_TOOLS→V2_TOOLS 已修复；Vite build成功；electron-builder打包受限WSL环境（需Windows本机执行）",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260502-019",
-      "name": "P-20260502-019",
-      "description": "甘特图时间线视图 + 循环任务自动生成下一周期",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": [
-        {
-          "id": "P-20260502-019",
-          "name": "P-20260502-019",
-          "description": "甘特图时间线视图 + 循环任务自动生成下一周期",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-008",
-      "name": "P-20260503-008",
-      "description": "DBG卡牌游戏 V16 — 卡组辅助系统",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260503-008",
-          "name": "P-20260503-008",
-          "description": "DBG卡牌游戏 V16 — 卡组辅助系统",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-007",
-      "name": "P-20260503-007",
-      "description": "DBG卡牌游戏 V15 — 更多卡牌",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260503-007",
-          "name": "P-20260503-007",
-          "description": "DBG卡牌游戏 V15 — 更多卡牌",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-006",
-      "name": "P-20260503-006",
-      "description": "DBG卡牌游戏 V14 — 卡牌商店重做",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260503-006",
-          "name": "P-20260503-006",
-          "description": "DBG卡牌游戏 V14 — 卡牌商店重做",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-005",
-      "name": "P-20260503-005",
-      "description": "DBG卡牌游戏 V13 — 牌组构建核心（Critical Bugfix）",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260503-005",
-          "name": "P-20260503-005",
-          "description": "DBG卡牌游戏 V13 — 牌组构建核心（Critical Bugfix）",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-004",
-      "name": "P-20260503-004",
-      "description": "DBG卡牌游戏 V12 — 音效与特效",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260503-004",
-          "name": "P-20260503-004",
-          "description": "DBG卡牌游戏 V12 — 音效与特效",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-003",
-      "name": "P-20260503-003",
-      "description": "DBG卡牌游戏 V11 — 更多遗物效果",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260503-003",
-          "name": "P-20260503-003",
-          "description": "DBG卡牌游戏 V11 — 更多遗物效果",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-002",
-      "name": "P-20260503-002",
-      "description": "DBG卡牌游戏 V10 — 章节扩展",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260503-002",
-          "name": "P-20260503-002",
-          "description": "DBG卡牌游戏 V10 — 章节扩展",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-012",
-      "name": "P-20260502-012",
-      "description": "DBG卡牌游戏 V5 — 战斗奖励卡牌选择系统",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260502-012",
-          "name": "P-20260502-012",
-          "description": "DBG卡牌游戏 V5 — 战斗奖励卡牌选择系统",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        },
-        {
-          "id": "P-20260502-012",
-          "name": "P-20260502-012",
-          "description": "成就页面Tab切换(成就/统计)+各模式分别统计(场次/胜率/最高分/平均分)+localStorage持久化",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        },
-        {
-          "id": "P-20260502-012",
-          "name": "P-20260502-012",
-          "description": "GitHub云同步（PAT认证，数据存data/todos.json，自动push/pull）+ CSV/JSON导入导出",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-017",
-      "name": "P-20260502-017",
-      "description": "Provider架构升级 + AI SDK集成 + 流式摘要 + Thinking配置；技术栈：ai SDK + @ai-sdk/openai + @ai-sdk/anthropic + @ai-sdk/google + partial-json + jsonrepair；技术期望倒计时(2026-05-02)已触发，当前进入 in_dev 阶段",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260502-017",
-          "name": "P-20260502-017",
-          "description": "Provider架构升级 + AI SDK集成 + 流式摘要 + Thinking配置；技术栈：ai SDK + @ai-sdk/openai + @ai-sdk/anthropic + @ai-sdk/google + partial-json + jsonrepair；技术期望倒计时(2026-05-02)已触发，当前进入 in_dev 阶段",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-004",
-      "name": "P-20260502-004",
-      "description": "TDD 测试用例已生成（src/__tests__/modelRouting.test.ts + llmBridge.test.ts）；Vitest 1.x 需要 Node 20+，当前环境 Node 18.19.1；测试文件语法正确，待升级 Node 后可运行；建议后续开发环境升级 Node 20+",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260502-004",
-          "name": "P-20260502-004",
-          "description": "TDD 测试用例已生成（src/__tests__/modelRouting.test.ts + llmBridge.test.ts）；Vitest 1.x 需要 Node 20+，当前环境 Node 18.19.1；测试文件语法正确，待升级 Node 后可运行；建议后续开发环境升级 Node 20+",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-023",
-      "name": "P-20260503-023",
-      "description": "PWA manifest+ServiceWorker离线缓存 + 甘特图周/月视图切换(7天/30天时间轴)",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260503-023",
-          "name": "P-20260503-023",
-          "description": "PWA manifest+ServiceWorker离线缓存 + 甘特图周/月视图切换(7天/30天时间轴)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "PWA"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-027",
-      "name": "P-20260503-027",
-      "description": "泳道独立WIP限制+看板设置弹窗+逾期高亮角标 + Todoist/Notion/CSV智能导入",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260503-027",
-          "name": "P-20260503-027",
-          "description": "泳道独立WIP限制+看板设置弹窗+逾期高亮角标 + Todoist/Notion/CSV智能导入",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-021",
-      "name": "P-20260503-021",
-      "description": "仪表板首页(KPI卡片+今日到期+四象限分布) + 甘特图泳道分组(按状态/优先级)",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260503-021",
-          "name": "P-20260503-021",
-          "description": "仪表板首页(KPI卡片+今日到期+四象限分布) + 甘特图泳道分组(按状态/优先级)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260503-020",
-      "name": "P-20260503-020",
-      "description": "重要性×紧急度评分+四象限徽章 + GitHub Gist多设备同步",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260503-020",
-          "name": "P-20260503-020",
-          "description": "重要性×紧急度评分+四象限徽章 + GitHub Gist多设备同步",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
         }
       ]
     }
