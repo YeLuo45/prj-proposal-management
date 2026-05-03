@@ -18,8 +18,10 @@ import {
 import { useTodos } from '../hooks/useTodos';
 import KanbanColumn from '../components/KanbanColumn';
 import KanbanCard from '../components/KanbanCard';
+import TemplateMenu from '../components/TemplateMenu';
+import { getTemplateById, PRESET_TEMPLATES } from '../services/templateService';
 
-const COLUMNS = [
+const DEFAULT_COLUMNS = [
   { id: 'todo', title: '待办 (Todo)', color: 'bg-gray-500' },
   { id: 'inProgress', title: '进行中 (In Progress)', color: 'bg-blue-500' },
   { id: 'done', title: '已完成 (Done)', color: 'bg-green-500' },
@@ -36,6 +38,18 @@ function KanbanBoard() {
   const [isMobile, setIsMobile] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem('darkMode') === 'true';
+  });
+  // V15: Template state
+  const [columns, setColumns] = useState(() => {
+    const savedTemplateId = localStorage.getItem('kanban_current_template');
+    if (savedTemplateId) {
+      const template = getTemplateById(savedTemplateId);
+      if (template) return template.columns;
+    }
+    return DEFAULT_COLUMNS;
+  });
+  const [currentTemplateId, setCurrentTemplateId] = useState(() => {
+    return localStorage.getItem('kanban_current_template') || PRESET_TEMPLATES[1].id;
   });
 
   const { fetchTodos, saveTodos } = useTodos();
@@ -92,6 +106,42 @@ function KanbanBoard() {
     setDarkMode(prev => !prev);
   };
 
+  // V15: Handle template selection
+  const handleTemplateSelect = (template) => {
+    setColumns(template.columns);
+    setCurrentTemplateId(template.id);
+    localStorage.setItem('kanban_current_template', template.id);
+    // Optionally reset tasks based on template
+    // setTodos(template.tasks || []);
+  };
+
+  // V15: Get current board state for saving
+  const getCurrentBoardState = () => {
+    return {
+      columns,
+      tasks: todos,
+    };
+  };
+
+  // V15: Get column todos
+  const getTodosByColumn = (columnId) => {
+    return todos.filter((todo) => todo.column === columnId);
+  };
+
+  // V15: Get column by id
+  const getColumn = (columnId) => {
+    return columns.find(c => c.id === columnId) || columns[0];
+  };
+
+  // V15: Handle column change for a task
+  const handleColumnChange = async (taskId, newColumnId) => {
+    const updatedTodos = todos.map((t) =>
+      t.id === taskId ? { ...t, column: newColumnId } : t
+    );
+    setTodos(updatedTodos);
+    await saveTodos({ todos: updatedTodos });
+  };
+
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
@@ -107,7 +157,7 @@ function KanbanBoard() {
     if (todos.find((t) => t.id === id)) {
       return todos.find((t) => t.id === id).column;
     }
-    return id;
+    return getColumn(id)?.id || columns[0]?.id;
   };
 
   const handleDragStart = (event) => {
@@ -186,13 +236,13 @@ function KanbanBoard() {
     const task = todos.find((t) => t.id === taskId);
     if (!task) return;
 
-    const currentColumnIndex = COLUMNS.findIndex((c) => c.id === task.column);
+    const currentColumnIndex = columns.findIndex((c) => c.id === task.column);
     let targetColumn;
 
     if (direction === 'left' && currentColumnIndex > 0) {
-      targetColumn = COLUMNS[currentColumnIndex - 1].id;
-    } else if (direction === 'right' && currentColumnIndex < COLUMNS.length - 1) {
-      targetColumn = COLUMNS[currentColumnIndex + 1].id;
+      targetColumn = columns[currentColumnIndex - 1].id;
+    } else if (direction === 'right' && currentColumnIndex < columns.length - 1) {
+      targetColumn = columns[currentColumnIndex + 1].id;
     } else {
       return;
     }
@@ -238,6 +288,13 @@ function KanbanBoard() {
         <div className="mb-6 flex justify-between items-center">
           <div className="flex items-center gap-4">
             <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">看板视图</h1>
+            <TemplateMenu
+              currentTemplateId={currentTemplateId}
+              onTemplateSelect={handleTemplateSelect}
+              onSaveCurrentBoard={getCurrentBoardState}
+              columns={columns}
+              tasks={todos}
+            />
             <button
               onClick={toggleDarkMode}
               className="bg-gray-600 text-white px-3 py-2 rounded-lg hover:bg-gray-700"
@@ -274,7 +331,7 @@ function KanbanBoard() {
             onDragEnd={handleDragEnd}
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {COLUMNS.map((column) => (
+              {columns.map((column) => (
                 <KanbanColumn
                   key={column.id}
                   column={column}
