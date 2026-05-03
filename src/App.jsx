@@ -9,6 +9,8 @@ import ProposalForm from './components/ProposalForm';
 import BatchActionBar from './components/BatchActionBar';
 import MilestoneSelectModal from './components/MilestoneSelectModal';
 import KanbanSwimlanes from './pages/KanbanSwimlanes';
+import ImportExportPanel from './components/ImportExportPanel';
+import CsvPreviewTable from './components/CsvPreviewTable';
 import { useGitHub } from './hooks/useGitHub';
 import { useOperationHistory } from './hooks/useOperationHistory';
 import { useValidation } from './hooks/useDataValidator';
@@ -16,6 +18,9 @@ import ValidationAlert from './components/ValidationAlert';
 import UndoToast from './components/UndoToast';
 import OperationHistoryDrawer from './components/OperationHistoryDrawer';
 import { validateProjects } from './utils/dataValidator';
+import { exportProjectsToCSV, downloadFile } from './utils/csvExporter';
+import { parseCSV, validateCSVImport, executeCSVImport } from './utils/csvImporter';
+import { generateBackup, restoreFromBackup, downloadJSONBackup } from './utils/jsonBackup';
 
 const ITEMS_PER_PAGE = 12;
 const RECENT_PROPOSALS_PER_PROJECT = 3;
@@ -45,6 +50,12 @@ function App() {
   // 批量操作状态
   const [selectedIds, setSelectedIds] = useState(new Set());
   const [showMilestoneModal, setShowMilestoneModal] = useState(false);
+
+  // 导入/导出状态
+  const [importMode, setImportMode] = useState('skip');
+  const [parsedCSV, setParsedCSV] = useState(null);
+  const [showImportPreview, setShowImportPreview] = useState(false);
+  const [showSettingsModal, setShowSettingsModal] = useState(false);
 
   const { loading, error, fetchProposals, saveProposals } = useGitHub();
   const { history, pushRecord, updateRecord, undoLast, canUndo, refreshHistory } = useOperationHistory();
@@ -159,6 +170,70 @@ function App() {
     setToken(newToken);
     setShowTokenInput(false);
     loadProposals();
+  };
+
+  // 导入/导出处理函数
+  const flattenProposals = (projectsData) => {
+    return projectsData.flatMap(project =>
+      (project.proposals || []).map(p => ({
+        ...p,
+        projectName: project.name,
+        projectUrl: project.url,
+        projectGitRepo: project.gitRepo,
+        projectId: project.id,
+      }))
+    );
+  };
+
+  const handleCSVExport = () => {
+    const csv = exportProjectsToCSV(projects);
+    downloadFile(csv, `proposals-${Date.now()}.csv`, 'text/csv');
+  };
+
+  const handleJSONExport = () => {
+    downloadJSONBackup(projects, milestones);
+  };
+
+  const handleCSVFileSelect = (file) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const { rows } = parseCSV(e.target.result);
+      const result = validateCSVImport(rows, projects);
+      setParsedCSV({ rows, ...result });
+      setShowImportPreview(true);
+    };
+    reader.readAsText(file);
+  };
+
+  const handleCSVImportConfirm = async () => {
+    if (!parsedCSV) return;
+    const { projects: updated, imported, skipped, updated: updatedCount } = executeCSVImport(parsedCSV.validRows, projects, importMode);
+    setProjects(updated);
+    setFlatProposals(flattenProposals(updated));
+    await saveProposals(updated);
+    setShowImportPreview(false);
+    setParsedCSV(null);
+    return { imported, skipped, updated: updatedCount, errors: [] };
+  };
+
+  const handleJSONRestore = async (file) => {
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+      try {
+        const data = JSON.parse(e.target.result);
+        const { projects: restored, error } = restoreFromBackup(data);
+        if (error) { alert(error); return; }
+        // 自动备份当前数据
+        handleJSONExport();
+        setProjects(restored);
+        setFlatProposals(flattenProposals(restored));
+        await saveProposals(restored);
+        alert('恢复成功！');
+      } catch (err) {
+        alert('恢复失败：' + err.message);
+      }
+    };
+    reader.readAsText(file);
   };
 
   // Handle undo operation
@@ -552,7 +627,7 @@ function App() {
           setEditingProposal(null);
           setShowForm(true);
         }}
-        onSettings={() => setShowTokenInput(true)}
+        onSettings={() => setShowSettingsModal(true)}
         darkMode={darkMode}
         onToggleDarkMode={toggleDarkMode}
         onShowHistory={() => setShowHistoryDrawer(true)}
@@ -923,6 +998,73 @@ function App() {
           }
         }}
       />
+
+      {/* Settings Modal with Import/Export */}
+      {showSettingsModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">设置</h2>
+              <button
+                onClick={() => setShowSettingsModal(false)}
+                className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <div className="space-y-4">
+              {/* GitHub Token Section */}
+              <div className="border-b border-gray-200 dark:border-gray-700 pb-4">
+                <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">GitHub Token</h3>
+                <input
+                  type="password"
+                  value={token}
+                  onChange={(e) => setToken(e.target.value)}
+                  placeholder="输入 GitHub Token"
+                  className="w-full px-4 py-2 border rounded-lg mb-2 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+                />
+                <button
+                  onClick={() => {
+                    handleSaveToken(token);
+                  }}
+                  className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
+                >
+                  保存 Token
+                </button>
+              </div>
+
+              {/* Import/Export Panel */}
+              <ImportExportPanel
+                projects={projects}
+                milestones={milestones}
+                onImport={handleCSVFileSelect}
+                onRestore={handleJSONRestore}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* CSV Import Preview Modal */}
+      {showImportPreview && parsedCSV && (
+        <CsvPreviewTable
+          rows={parsedCSV.rows}
+          errors={parsedCSV.errors}
+          validRows={parsedCSV.validRows}
+          existingIds={parsedCSV.existingIds}
+          newIds={parsedCSV.newIds}
+          importMode={importMode}
+          onImportModeChange={setImportMode}
+          onClose={() => {
+            setShowImportPreview(false);
+            setParsedCSV(null);
+          }}
+          onConfirm={handleCSVImportConfirm}
+        />
+      )}
     </div>
   );
 }
