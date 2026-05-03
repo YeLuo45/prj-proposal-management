@@ -934,6 +934,32 @@
           "updatedAt": "20-26-04"
         }
       ]
+    },
+    {
+      "id": "PRJ-20260412-203",
+      "name": "ai-creator-h5",
+      "description": "AI Creator H5创作工具",
+      "url": "https://yeluo45.github.io/ai-creator-h5/",
+      "gitRepo": "https://github.com/YeLuo45/ai-creator-h5",
+      "createdAt": "2026-04-12",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260412-007",
+          "name": "ai-creator-h5 (H5)",
+          "description": "AI Creator H5创作工具",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/ai-creator-h5/",
+          "packageUrl": "https://github.com/YeLuo45/ai-creator-h5/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/ai-creator-h5",
+          "tags": [
+            "Web"
+          ],
+          "createdAt": "2026-04-12",
+          "updatedAt": "2026-04-12"
+        }
+      ]
     }
   ]
 }
