@@ -802,7 +802,7 @@
     },
     {
       "id": "PRJ-20260412-008",
-      "name": "ai-subscription---大模型调用层升级--ll",
+      "name": "ai-subscription---大模型调用层升级--llm-design-d",
       "description": "多端独立应用（Web + 小程序 + PC + Android）；Web 已部署 GitHub Pages；AI 摘要、RSS订阅、GitHub Trending 爬取",
       "url": "https://yeluo45.github.io/ai-subscription/",
       "gitRepo": "https://github.com/YeLuo45/ai-subscription",
