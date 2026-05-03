@@ -33,8 +33,20 @@ function KanbanBoard() {
   const [error, setError] = useState(null);
   const [newTaskText, setNewTaskText] = useState({});
   const [isMobile, setIsMobile] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('darkMode') === 'true';
+  });
 
   const { fetchTodos, saveTodos } = useTodos();
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('darkMode', darkMode);
+  }, [darkMode]);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -73,6 +85,10 @@ function KanbanBoard() {
     setToken(newToken);
     setShowTokenInput(false);
     loadTodos();
+  };
+
+  const toggleDarkMode = () => {
+    setDarkMode(prev => !prev);
   };
 
   const sensors = useSensors(
@@ -132,7 +148,7 @@ function KanbanBoard() {
         const reordered = arrayMove(columnTodos, activeIndex, overIndex);
         const otherTodos = todos.filter((t) => t.column !== activeColumn);
         const updatedTodos = [...otherTodos, ...reordered];
-        
+
         setTodos(updatedTodos);
         await saveTodos({ todos: updatedTodos });
       }
@@ -191,10 +207,10 @@ function KanbanBoard() {
 
   if (showTokenInput) {
     return (
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-        <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-          <h1 className="text-2xl font-bold mb-4">设置 GitHub Token</h1>
-          <p className="text-gray-600 mb-4">
+      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex items-center justify-center p-4">
+        <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md w-full max-w-md">
+          <h1 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">设置 GitHub Token</h1>
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
             请输入 GitHub Personal Access Token 以访问和修改待办事项数据。
           </p>
           <input
@@ -202,7 +218,7 @@ function KanbanBoard() {
             value={token}
             onChange={(e) => setToken(e.target.value)}
             placeholder="输入 GitHub Token"
-            className="w-full px-4 py-2 border rounded-lg mb-4"
+            className="w-full px-4 py-2 border rounded-lg mb-4 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
           />
           <button
             onClick={() => handleSaveToken(token)}
@@ -216,10 +232,27 @@ function KanbanBoard() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 p-4 transition-colors">
       <div className="max-w-7xl mx-auto">
         <div className="mb-6 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-800">看板视图</h1>
+          <div className="flex items-center gap-4">
+            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">看板视图</h1>
+            <button
+              onClick={toggleDarkMode}
+              className="bg-gray-600 text-white px-3 py-2 rounded-lg hover:bg-gray-700"
+              title={darkMode ? '切换到亮色模式' : '切换到暗色模式'}
+            >
+              {darkMode ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              )}
+            </button>
+          </div>
           <a
             href="/"
             className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600"
@@ -228,7 +261,7 @@ function KanbanBoard() {
           </a>
         </div>
 
-        {loading && <div className="text-center py-8">加载中...</div>}
+        {loading && <div className="text-center py-8 text-gray-600 dark:text-gray-300">加载中...</div>}
         {error && <div className="text-red-500 text-center py-4">{error}</div>}
 
         {!loading && (

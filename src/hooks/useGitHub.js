@@ -39,7 +39,8 @@ export function useGitHub() {
       }
 
       const data = await response.json();
-      const content = atob(data.content);
+      // 修复中文乱码：atob() 返回的是 Latin-1 字符串，需用 escape/ decodeURIComponent 转为 UTF-8
+      const content = decodeURIComponent(escape(atob(data.content)));
       return JSON.parse(content);
     } catch (err) {
       setError(err.message);
@@ -74,7 +75,8 @@ export function useGitHub() {
       const sha = fileData.sha;
 
       // Update file
-      const content = btoa(JSON.stringify(proposalsData, null, 2));
+      // 修复中文乱码：btoa() 无法处理非 Latin-1 字符，需用 encodeURIComponent/unescape 转换
+      const content = btoa(unescape(encodeURIComponent(JSON.stringify(proposalsData, null, 2))));
       const putResponse = await fetch(
         `${GITHUB_API}/repos/${OWNER}/${REPO}/contents/data/proposals.json`,
         {

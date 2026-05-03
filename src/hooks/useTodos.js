@@ -2,8 +2,8 @@ import { useState, useCallback } from 'react';
 
 const GITHUB_API = 'https://api.github.com';
 const OWNER = 'YeLuo45';
-const REPO = 'proposals-manager';
-const BRANCH = 'main';
+const REPO = 'prj-proposal-management';
+const BRANCH = 'master';
 
 export function useTodos() {
   const [loading, setLoading] = useState(false);
@@ -43,7 +43,8 @@ export function useTodos() {
       }
 
       const data = await response.json();
-      const content = atob(data.content);
+      // 修复中文乱码
+      const content = decodeURIComponent(escape(atob(data.content)));
       return JSON.parse(content);
     } catch (err) {
       setError(err.message);
@@ -78,7 +79,8 @@ export function useTodos() {
       }
 
       // Update file
-      const content = btoa(JSON.stringify(todosData, null, 2));
+      // 修复中文乱码
+      const content = btoa(unescape(encodeURIComponent(JSON.stringify(todosData, null, 2))));
       const putResponse = await fetch(
         `${GITHUB_API}/repos/${OWNER}/${REPO}/contents/data/todos.json`,
         {

@@ -17,10 +17,10 @@ function KanbanCard({ task, onDelete, isDragging, isMobile, onMoveLeft, onMoveRi
   };
 
   const cardContent = (
-    <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-300 cursor-grab active:cursor-grabbing">
-      <p className="text-gray-800 text-sm mb-2 break-words">{task.title}</p>
+    <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-sm border border-gray-300 dark:border-gray-600 cursor-grab active:cursor-grabbing">
+      <p className="text-gray-800 dark:text-gray-100 text-sm mb-2 break-words">{task.title}</p>
       <div className="flex justify-between items-center">
-        <span className="text-xs text-gray-400">
+        <span className="text-xs text-gray-400 dark:text-gray-500">
           {new Date(task.createdAt).toLocaleDateString('zh-CN')}
         </span>
         <div className="flex gap-1">
@@ -62,7 +62,7 @@ function KanbanCard({ task, onDelete, isDragging, isMobile, onMoveLeft, onMoveRi
 
   if (isDragging) {
     return (
-      <div className="bg-white rounded-lg p-3 shadow-lg border-2 border-blue-400 opacity-90">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg border-2 border-blue-400 opacity-90">
         {cardContent}
       </div>
     );

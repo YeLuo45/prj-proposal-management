@@ -39,46 +39,46 @@ function ProposalForm({ proposal, onSave, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg p-6 w-full max-w-lg max-h-[90vh] overflow-y-auto">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-lg max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-bold">{proposal ? '编辑提案' : '添加提案'}</h2>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-700 text-2xl">
+          <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">{proposal ? '编辑提案' : '添加提案'}</h2>
+          <button onClick={onClose} className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl">
             &times;
           </button>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">名称</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">名称</label>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">描述</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">描述</label>
             <textarea
               name="description"
               value={formData.description}
               onChange={handleChange}
               rows="3"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
             />
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">类型</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">类型</label>
               <select
                 name="type"
                 value={formData.type}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
               >
                 <option value="web">Web</option>
                 <option value="app">App</option>
@@ -87,12 +87,12 @@ function ProposalForm({ proposal, onSave, onClose }) {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">状态</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">状态</label>
               <select
                 name="status"
                 value={formData.status}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
               >
                 <option value="active">Active</option>
                 <option value="in_dev">In Dev</option>
@@ -102,37 +102,37 @@ function ProposalForm({ proposal, onSave, onClose }) {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">访问链接</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">访问链接</label>
             <input
               type="url"
               name="url"
               value={formData.url}
               onChange={handleChange}
               placeholder="https://..."
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">包下载链接</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">包下载链接</label>
             <input
               type="url"
               name="packageUrl"
               value={formData.packageUrl}
               onChange={handleChange}
               placeholder="https://..."
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">标签 (逗号分隔)</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">标签 (逗号分隔)</label>
             <input
               type="text"
               value={tagsInput}
               onChange={handleTagsChange}
               placeholder="标签1, 标签2, ..."
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
             />
           </div>
 
@@ -140,7 +140,7 @@ function ProposalForm({ proposal, onSave, onClose }) {
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 bg-gray-200 text-gray-700 py-2 rounded-lg hover:bg-gray-300"
+              className="flex-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600"
             >
               取消
             </button>

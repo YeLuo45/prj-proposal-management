@@ -17,7 +17,7 @@ function SearchBar({ value, onChange }) {
         value={localValue}
         onChange={(e) => setLocalValue(e.target.value)}
         placeholder="搜索名称、描述或标签..."
-        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400"
       />
     </div>
   );
