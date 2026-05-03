@@ -26,18 +26,31 @@ const STATUS_COLUMNS = [
   { id: 'done', title: '已完成 (Done)', color: 'bg-green-500' },
 ];
 
-function KanbanSwimlanes() {
+// embeddedMode: 当作为 App.jsx 嵌入式组件使用时，接收外部数据和回调
+function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onUpdateProposal, searchQuery: propSearchQuery }) {
   const { projectId } = useParams();
-  const [projects, setProjects] = useState([]);
-  const [flatProposals, setFlatProposals] = useState([]);
+  
+  // 判断是否为嵌入式模式（有外部传入数据）
+  const isEmbedded = propProjects !== undefined || propProposals !== undefined;
+  
+  // 嵌入式模式：使用外部传入的数据
+  const [internalProjects, setInternalProjects] = useState([]);
+  const [internalProposals, setInternalProposals] = useState([]);
+  
+  // 统一的数据源
+  const projects = isEmbedded ? (propProjects || internalProjects) : internalProjects;
+  const setProjects = isEmbedded ? () => {} : setInternalProjects;
+  const flatProposals = isEmbedded ? (propProposals || internalProposals) : internalProposals;
+  const setFlatProposals = isEmbedded ? () => {} : setInternalProposals;
+  
   const [activeId, setActiveId] = useState(null);
   const [collapsedLaneIds, setCollapsedLaneIds] = useState(new Set());
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!isEmbedded);
   const [error, setError] = useState(null);
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem('darkMode') === 'true';
   });
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(propSearchQuery || '');
   const [showTokenInput, setShowTokenInput] = useState(false);
   const [editingProposal, setEditingProposal] = useState(null);
   const [showForm, setShowForm] = useState(false);
@@ -62,6 +75,13 @@ function KanbanSwimlanes() {
       setLoading(false);
     }
   }, []);
+
+  // 嵌入式模式下，同步外部传入的 searchQuery
+  useEffect(() => {
+    if (isEmbedded && propSearchQuery !== undefined) {
+      setSearchQuery(propSearchQuery);
+    }
+  }, [isEmbedded, propSearchQuery]);
 
   const loadProposals = async () => {
     try {
@@ -198,9 +218,17 @@ function KanbanSwimlanes() {
       return;
     }
 
-    // If status actually changed, save
+    // If status actually changed
     if (proposal.status !== targetStatus) {
       const today = new Date().toISOString().split('T')[0];
+      
+      if (isEmbedded && onUpdateProposal) {
+        // 嵌入式模式：通知外部更新
+        await onUpdateProposal({ ...proposal, status: targetStatus, updatedAt: today });
+        return;
+      }
+      
+      // 独立模式：自己处理保存
       const updatedProjects = projects.map(p => {
         if (p.id === targetProjectId) {
           return {
@@ -220,13 +248,11 @@ function KanbanSwimlanes() {
       try {
         await saveProposals({ version: 2, projects: updatedProjects });
         setProjects(updatedProjects);
-        // Update flat proposals
         setFlatProposals(prev => prev.map(p =>
           p.id === active.id ? { ...p, status: targetStatus, updatedAt: today } : p
         ));
       } catch (err) {
         alert('保存失败: ' + err.message);
-        // Reload to restore original state
         loadProposals();
       }
     }
@@ -251,6 +277,16 @@ function KanbanSwimlanes() {
 
   const handleEditProposal = async (updatedProposal) => {
     const today = new Date().toISOString().split('T')[0];
+    
+    if (isEmbedded && onUpdateProposal) {
+      // 嵌入式模式：通知外部处理保存
+      await onUpdateProposal({ ...updatedProposal, updatedAt: today });
+      setEditingProposal(null);
+      setShowForm(false);
+      return;
+    }
+    
+    // 独立模式：自己处理保存
     const newProjects = projects.map(project => ({
       ...project,
       proposals: project.proposals.map(p =>
@@ -293,19 +329,20 @@ function KanbanSwimlanes() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors">
-      {/* Header */}
-      <header className="bg-white dark:bg-gray-800 shadow">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
-              {projectId ? '项目看板' : '看板泳道'}
-            </h1>
-            {!projectId && (
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                {lanes.length} 个泳道
-              </span>
-            )}
+    <div className={isEmbedded ? 'bg-gray-100 dark:bg-gray-900 transition-colors' : 'min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors'}>
+      {/* Header - only show in standalone mode */}
+      {!isEmbedded && (
+        <header className="bg-white dark:bg-gray-800 shadow">
+          <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div className="flex items-center gap-4">
+              <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                {projectId ? '项目看板' : '看板泳道'}
+              </h1>
+              {!projectId && (
+                <span className="text-sm text-gray-500 dark:text-gray-400">
+                  {lanes.length} 个泳道
+                </span>
+              )}
           </div>
           <div className="flex gap-4 items-center">
             <input
@@ -339,6 +376,7 @@ function KanbanSwimlanes() {
           </div>
         </div>
       </header>
+      )}
 
       {/* Column Headers */}
       {!projectId && (
