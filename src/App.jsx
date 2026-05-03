@@ -591,10 +591,9 @@ function App() {
 
             {viewMode === 'swimlane' && (
               <KanbanSwimlanes
-                projects={projects}
-                proposals={flatProposals}
+                projects={filteredProjects}
+                proposals={filteredProposals}
                 onUpdateProposal={handleEditProposal}
-                searchQuery={searchQuery}
               />
             )}
 

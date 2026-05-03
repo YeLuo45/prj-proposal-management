@@ -27,7 +27,7 @@ const STATUS_COLUMNS = [
 ];
 
 // embeddedMode: 当作为 App.jsx 嵌入式组件使用时，接收外部数据和回调
-function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onUpdateProposal, searchQuery: propSearchQuery }) {
+function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onUpdateProposal }) {
   const { projectId } = useParams();
   
   // 判断是否为嵌入式模式（有外部传入数据）
@@ -44,13 +44,19 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
   const setFlatProposals = isEmbedded ? () => {} : setInternalProposals;
   
   const [activeId, setActiveId] = useState(null);
-  const [collapsedLaneIds, setCollapsedLaneIds] = useState(new Set());
+  const [overId, setOverId] = useState(null); // 用于拖拽高亮
+  const [collapsedLaneIds, setCollapsedLaneIds] = useState(() => {
+    // 从 localStorage 恢复折叠状态
+    try {
+      return new Set(JSON.parse(localStorage.getItem('swimlanes_collapsed') || '[]'));
+    } catch { return new Set(); }
+  });
   const [loading, setLoading] = useState(!isEmbedded);
   const [error, setError] = useState(null);
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem('darkMode') === 'true';
   });
-  const [searchQuery, setSearchQuery] = useState(propSearchQuery || '');
+  const [searchQuery, setSearchQuery] = useState('');
   const [showTokenInput, setShowTokenInput] = useState(false);
   const [editingProposal, setEditingProposal] = useState(null);
   const [showForm, setShowForm] = useState(false);
@@ -75,13 +81,6 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
       setLoading(false);
     }
   }, []);
-
-  // 嵌入式模式下，同步外部传入的 searchQuery
-  useEffect(() => {
-    if (isEmbedded && propSearchQuery !== undefined) {
-      setSearchQuery(propSearchQuery);
-    }
-  }, [isEmbedded, propSearchQuery]);
 
   const loadProposals = async () => {
     try {
@@ -168,7 +167,12 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
 
   const handleDragOver = (event) => {
     const { active, over } = event;
-    if (!over) return;
+    if (!over) {
+      setOverId(null);
+      return;
+    }
+
+    setOverId(over.id);
 
     // over.id format: "projectId:status"
     const [targetProjectId, targetStatus] = over.id.split(':');
@@ -200,6 +204,7 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
 
   const handleDragEnd = async (event) => {
     const { active, over } = event;
+    setOverId(null);
     setActiveId(null);
 
     if (!over) return;
@@ -257,6 +262,11 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
       }
     }
   };
+
+  // 持久化折叠状态到 localStorage
+  useEffect(() => {
+    localStorage.setItem('swimlanes_collapsed', JSON.stringify([...collapsedLaneIds]));
+  }, [collapsedLaneIds]);
 
   const handleToggleCollapse = (projectId) => {
     setCollapsedLaneIds(prev => {
@@ -422,6 +432,8 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
                     collapsedLaneIds={collapsedLaneIds}
                     onToggleCollapse={handleToggleCollapse}
                     onCardClick={handleCardClick}
+                    overId={overId}
+                    activeId={activeId}
                   />
                 ))
               )}

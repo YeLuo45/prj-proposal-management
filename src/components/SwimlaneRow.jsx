@@ -8,7 +8,7 @@ const STATUS_COLUMNS = [
   { id: 'done', title: '已完成 (Done)', color: 'bg-green-500' },
 ];
 
-function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick }) {
+function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick, overId, activeId }) {
   const isCollapsed = collapsedLaneIds.has(project.id);
 
   const getProposalsByStatus = (status) => {
@@ -74,6 +74,7 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick 
                 proposals={columnProposals}
                 droppableId={droppableId}
                 onCardClick={onCardClick}
+                isDropTarget={overId === droppableId && activeId !== droppableId}
               />
             );
           })}
@@ -83,7 +84,7 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick 
   );
 }
 
-function DroppableColumn({ column, proposals, droppableId, onCardClick }) {
+function DroppableColumn({ column, proposals, droppableId, onCardClick, isDropTarget }) {
   const { setNodeRef, isOver } = useDroppable({
     id: droppableId,
   });
@@ -92,8 +93,8 @@ function DroppableColumn({ column, proposals, droppableId, onCardClick }) {
     <div
       ref={setNodeRef}
       className={`p-3 min-h-[120px] transition-colors ${
-        isOver
-          ? 'bg-blue-50 dark:bg-blue-900/20'
+        isOver || isDropTarget
+          ? 'bg-blue-50 dark:bg-blue-900/30 ring-2 ring-blue-400 ring-inset'
           : 'bg-white dark:bg-gray-900'
       }`}
     >
