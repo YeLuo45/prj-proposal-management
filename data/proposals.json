@@ -3,7 +3,7 @@
   "projects": [
     {
       "id": "PRJ-20250416-001",
-      "name": "TodoList 迭代增强（轻量化+看板视图）",
+      "name": "TodoList",
       "description": "TodoList 迭代增强（轻量化+看板视图）",
       "url": "",
       "gitRepo": "",
@@ -272,7 +272,7 @@
     },
     {
       "id": "PRJ-20250417-001",
-      "name": "proposals - manager - 项目管理增强",
+      "name": "proposals-manager",
       "description": "proposals-manager — 项目管理增强",
       "url": "",
       "gitRepo": "https://github.com/YeLuo45/proposals-manager",
@@ -666,7 +666,7 @@
     },
     {
       "id": "PRJ-20260412-203",
-      "name": "ai-creator-miniprogram",
+      "name": "ai-creator-h5",
       "description": "ai-creator-h5 (H5)",
       "url": "https://yeluo45.github.io/ai-creator-h5/",
       "gitRepo": "https://github.com/YeLuo45/ai-creator-miniprogram (小程序) / https://github.com/YeLuo45/ai-creator-h5 (H5)",
