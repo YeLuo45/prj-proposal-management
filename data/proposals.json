@@ -1090,6 +1090,720 @@
           "updatedAt": "20-26-04"
         }
       ]
+    },
+    {
+      "id": "PRJ-20260501",
+      "name": "ai-creator-miniprogram",
+      "description": "AI Creator 微信小程序 - AI图片/音乐/语音生成(MiniMax API)",
+      "url": "https://yeluo45.github.io/ai-creator-miniprogram/",
+      "gitRepo": "https://github.com/YeLuo45/ai-creator-miniprogram",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-300",
+          "name": "AI Creator 微信小程序",
+          "description": "AI Creator 微信小程序 - AI图片/音乐/语音生成(MiniMax API)",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/ai-creator-miniprogram/",
+          "packageUrl": "https://github.com/YeLuo45/ai-creator-miniprogram/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/ai-creator-miniprogram",
+          "tags": [
+            "AI",
+            "MiniApp",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260502",
+      "name": "ai-skills",
+      "description": "AI Skills - 提示词与技能库",
+      "url": "https://yeluo45.github.io/ai-skills/",
+      "gitRepo": "https://github.com/YeLuo45/ai-skills",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-301",
+          "name": "AI Skills",
+          "description": "AI Skills - 提示词与技能库",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/ai-skills/",
+          "packageUrl": "https://github.com/YeLuo45/ai-skills/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/ai-skills",
+          "tags": [
+            "AI",
+            "Tool",
+            "Tool"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260503",
+      "name": "amblyopia-training",
+      "description": "弱视训练Web应用 - 面向家庭的医学级弱视训练平台",
+      "url": "https://yeluo45.github.io/amblyopia-training/",
+      "gitRepo": "https://github.com/YeLuo45/amblyopia-training",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-302",
+          "name": "弱视训练Web应用",
+          "description": "弱视训练Web应用 - 面向家庭的医学级弱视训练平台",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/amblyopia-training/",
+          "packageUrl": "https://github.com/YeLuo45/amblyopia-training/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/amblyopia-training",
+          "tags": [
+            "Web",
+            "AI",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260504",
+      "name": "android-hello",
+      "description": "Android Hello World 示例应用",
+      "url": "https://yeluo45.github.io/android-hello/",
+      "gitRepo": "https://github.com/YeLuo45/android-hello",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-303",
+          "name": "Android Hello World 示例应用",
+          "description": "Android Hello World 示例应用",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/android-hello/",
+          "packageUrl": "https://github.com/YeLuo45/android-hello/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Mobile",
+            "Mobile"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260505",
+      "name": "calculator-app",
+      "description": "计算器应用 - React Native",
+      "url": "https://yeluo45.github.io/calculator-app/",
+      "gitRepo": "https://github.com/YeLuo45/calculator-app",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-304",
+          "name": "计算器应用",
+          "description": "计算器应用 - React Native",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/calculator-app/",
+          "packageUrl": "https://github.com/YeLuo45/calculator-app/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/calculator-app",
+          "tags": [
+            "Web",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260506",
+      "name": "creative-drawing-board",
+      "description": "儿童创意画板 - 面向3-6岁幼儿的HTML5绘画游戏",
+      "url": "https://yeluo45.github.io/creative-drawing-board/",
+      "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-305",
+          "name": "儿童创意画板",
+          "description": "儿童创意画板 - 面向3-6岁幼儿的HTML5绘画游戏",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/creative-drawing-board/",
+          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
+          "tags": [
+            "Game",
+            "Web",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260507",
+      "name": "dont-step-white",
+      "description": "经典钢琴块游戏 Web + PWA 版本",
+      "url": "https://yeluo45.github.io/dont-step-white/",
+      "gitRepo": "https://github.com/YeLuo45/dont-step-white",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-306",
+          "name": "经典钢琴块游戏 Web + PWA 版本",
+          "description": "经典钢琴块游戏 Web + PWA 版本",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/dont-step-white/",
+          "packageUrl": "https://github.com/YeLuo45/dont-step-white/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/dont-step-white",
+          "tags": [
+            "Game",
+            "Web",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260508",
+      "name": "future-little-leaders",
+      "description": "未来小领袖",
+      "url": "https://yeluo45.github.io/future-little-leaders/",
+      "gitRepo": "https://github.com/YeLuo45/future-little-leaders",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-307",
+          "name": "未来小领袖",
+          "description": "未来小领袖",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/future-little-leaders/",
+          "packageUrl": "https://github.com/YeLuo45/future-little-leaders/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/future-little-leaders",
+          "tags": [
+            "Web",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260509",
+      "name": "hermes-collab-web",
+      "description": "Hermes Agent 团队协作 Web UI",
+      "url": "https://yeluo45.github.io/hermes-collab-web/",
+      "gitRepo": "https://github.com/YeLuo45/hermes-collab-web",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-308",
+          "name": "Hermes Agent 团队协作 Web UI",
+          "description": "Hermes Agent 团队协作 Web UI",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/hermes-collab-web/",
+          "packageUrl": "https://github.com/YeLuo45/hermes-collab-web/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/hermes-collab-web",
+          "tags": [
+            "Web",
+            "AI",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260510",
+      "name": "hermes-control-platform",
+      "description": "Hermes的PC控制平台",
+      "url": "https://yeluo45.github.io/hermes-control-platform/",
+      "gitRepo": "https://github.com/YeLuo45/hermes-control-platform",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-309",
+          "name": "Hermes的PC控制平台",
+          "description": "Hermes的PC控制平台",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/hermes-control-platform/",
+          "packageUrl": "https://github.com/YeLuo45/hermes-control-platform/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/hermes-control-platform",
+          "tags": [
+            "Other"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260511",
+      "name": "match3-puzzle",
+      "description": "休闲益智三消游戏原型",
+      "url": "https://yeluo45.github.io/match3-puzzle/",
+      "gitRepo": "https://github.com/YeLuo45/match3-puzzle",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-310",
+          "name": "休闲益智三消游戏原型",
+          "description": "休闲益智三消游戏原型",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/match3-puzzle/",
+          "packageUrl": "https://github.com/YeLuo45/match3-puzzle/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/match3-puzzle",
+          "tags": [
+            "Game",
+            "Web",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260512",
+      "name": "monopoly3d",
+      "description": "Monopoly3D - 3D 大富翁在线游戏",
+      "url": "https://yeluo45.github.io/monopoly3d/",
+      "gitRepo": "https://github.com/YeLuo45/monopoly3d",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-311",
+          "name": "Monopoly3D",
+          "description": "Monopoly3D - 3D 大富翁在线游戏",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/monopoly3d/",
+          "packageUrl": "https://github.com/YeLuo45/monopoly3d/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/monopoly3d",
+          "tags": [
+            "Game",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260513",
+      "name": "paywall-radar",
+      "description": "PaywallRadar - Competitive Research Tool",
+      "url": "https://yeluo45.github.io/paywall-radar/",
+      "gitRepo": "https://github.com/YeLuo45/paywall-radar",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-312",
+          "name": "PaywallRadar",
+          "description": "PaywallRadar - Competitive Research Tool",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/paywall-radar/",
+          "packageUrl": "https://github.com/YeLuo45/paywall-radar/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/paywall-radar",
+          "tags": [
+            "Other",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260514",
+      "name": "personalClaw",
+      "description": "私人定制openclaw控制平台",
+      "url": "https://yeluo45.github.io/personalClaw/",
+      "gitRepo": "https://github.com/YeLuo45/personalClaw",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-313",
+          "name": "私人定制openclaw控制平台",
+          "description": "私人定制openclaw控制平台",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/personalClaw/",
+          "packageUrl": "https://github.com/YeLuo45/personalClaw/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/personalClaw",
+          "tags": [
+            "Other",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260515",
+      "name": "pixel-pal",
+      "description": "PixelPal - AI Desktop Pet & Work Assistant",
+      "url": "https://yeluo45.github.io/pixel-pal/",
+      "gitRepo": "https://github.com/YeLuo45/pixel-pal",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-314",
+          "name": "PixelPal",
+          "description": "PixelPal - AI Desktop Pet & Work Assistant",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/pixel-pal/",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/pixel-pal",
+          "tags": [
+            "Desktop",
+            "AI",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260516",
+      "name": "pixel-pal-web",
+      "description": "PixelPal - AI 桌面宠物与工作助手",
+      "url": "https://yeluo45.github.io/pixel-pal-web/",
+      "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-315",
+          "name": "PixelPal",
+          "description": "PixelPal - AI 桌面宠物与工作助手",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/pixel-pal-web/",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
+          "tags": [
+            "Web",
+            "AI",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260517",
+      "name": "proposals-document",
+      "description": "提案管理系统 - 提案文档与版本管理",
+      "url": "https://yeluo45.github.io/proposals-document/",
+      "gitRepo": "https://github.com/YeLuo45/proposals-document",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-316",
+          "name": "提案管理系统",
+          "description": "提案管理系统 - 提案文档与版本管理",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/proposals-document/",
+          "packageUrl": "https://github.com/YeLuo45/proposals-document/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/proposals-document",
+          "tags": [
+            "Tool",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260518",
+      "name": "snake-battle",
+      "description": "贪吃蛇大作战 - Web + PWA 版，支持经典模式和AI对战",
+      "url": "https://yeluo45.github.io/snake-battle/",
+      "gitRepo": "https://github.com/YeLuo45/snake-battle",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-317",
+          "name": "贪吃蛇大作战",
+          "description": "贪吃蛇大作战 - Web + PWA 版，支持经典模式和AI对战",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/snake-battle/",
+          "packageUrl": "https://github.com/YeLuo45/snake-battle/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/snake-battle",
+          "tags": [
+            "Web",
+            "AI",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260519",
+      "name": "soulshooter",
+      "description": "2.5D 侧视角射击游戏 - 街机快节奏射击游戏",
+      "url": "https://yeluo45.github.io/soulshooter/",
+      "gitRepo": "https://github.com/YeLuo45/soulshooter",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-318",
+          "name": "2.5D 侧视角射击游戏",
+          "description": "2.5D 侧视角射击游戏 - 街机快节奏射击游戏",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/soulshooter/",
+          "packageUrl": "https://github.com/YeLuo45/soulshooter/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/soulshooter",
+          "tags": [
+            "Game",
+            "Web",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260520",
+      "name": "super-mario-3d",
+      "description": "3D版超级玛丽 - Three.js HTML5平台跳跃游戏",
+      "url": "https://yeluo45.github.io/super-mario-3d/",
+      "gitRepo": "https://github.com/YeLuo45/super-mario-3d",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-319",
+          "name": "3D版超级玛丽",
+          "description": "3D版超级玛丽 - Three.js HTML5平台跳跃游戏",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/super-mario-3d/",
+          "packageUrl": "https://github.com/YeLuo45/super-mario-3d/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/super-mario-3d",
+          "tags": [
+            "Game",
+            "Web",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260521",
+      "name": "tank-battle",
+      "description": "坦克大作战 - 经典4399坦克大战Web+PWA游戏",
+      "url": "https://yeluo45.github.io/tank-battle/",
+      "gitRepo": "https://github.com/YeLuo45/tank-battle",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-320",
+          "name": "坦克大作战",
+          "description": "坦克大作战 - 经典4399坦克大战Web+PWA游戏",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/tank-battle/",
+          "packageUrl": "https://github.com/YeLuo45/tank-battle/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/tank-battle",
+          "tags": [
+            "Game",
+            "Web",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260522",
+      "name": "temple-run",
+      "description": "神庙大逃亡 - 无尽跑酷游戏 PWA",
+      "url": "https://yeluo45.github.io/temple-run/",
+      "gitRepo": "https://github.com/YeLuo45/temple-run",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-321",
+          "name": "神庙大逃亡",
+          "description": "神庙大逃亡 - 无尽跑酷游戏 PWA",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/temple-run/",
+          "packageUrl": "https://github.com/YeLuo45/temple-run/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/temple-run",
+          "tags": [
+            "Game",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260523",
+      "name": "todo-app",
+      "description": "TodoList Android App(Flutter)",
+      "url": "https://yeluo45.github.io/todo-app/",
+      "gitRepo": "https://github.com/YeLuo45/todo-app",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-322",
+          "name": "TodoList Android App(Flutter)",
+          "description": "TodoList Android App(Flutter)",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/todo-app/",
+          "packageUrl": "https://github.com/YeLuo45/todo-app/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/todo-app",
+          "tags": [
+            "Mobile",
+            "Mobile"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260524",
+      "name": "todo-list",
+      "description": "Web TodoList 应用",
+      "url": "https://yeluo45.github.io/todo-list/",
+      "gitRepo": "https://github.com/YeLuo45/todo-list",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-323",
+          "name": "Web TodoList 应用",
+          "description": "Web TodoList 应用",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/todo-list/",
+          "packageUrl": "https://github.com/YeLuo45/todo-list/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/todo-list",
+          "tags": [
+            "Web",
+            "Web"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260525",
+      "name": "tower-baby-guard",
+      "description": "A parenting-themed tower defense game for kids - 育儿主题塔防游戏",
+      "url": "https://yeluo45.github.io/tower-baby-guard/",
+      "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-324",
+          "name": "A parenting-themed tower defense game for kids",
+          "description": "A parenting-themed tower defense game for kids - 育儿主题塔防游戏",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/tower-baby-guard/",
+          "packageUrl": "https://github.com/YeLuo45/tower-baby-guard/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
+          "tags": [
+            "Game",
+            "Game"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260526",
+      "name": "ultraman-vs-monsters-3d",
+      "description": "UltraMan vs Monsters 3D - 奥特曼打怪兽3D游戏",
+      "url": "https://yeluo45.github.io/ultraman-vs-monsters-3d/",
+      "gitRepo": "https://github.com/YeLuo45/ultraman-vs-monsters-3d",
+      "createdAt": "2026-05-03",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20260503-325",
+          "name": "UltraMan vs Monsters 3D",
+          "description": "UltraMan vs Monsters 3D - 奥特曼打怪兽3D游戏",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/ultraman-vs-monsters-3d/",
+          "packageUrl": "https://github.com/YeLuo45/ultraman-vs-monsters-3d/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/ultraman-vs-monsters-3d",
+          "tags": [
+            "Game",
+            "Game"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03"
+        }
+      ]
     }
   ]
 }
