@@ -32,6 +32,8 @@ import NotificationCenter from './components/NotificationCenter';
 import { toast } from './hooks/useToast';
 import { useKeyboardShortcuts, KeyboardShortcuts } from './hooks/useKeyboardShortcuts';
 import KeyboardShortcutsModal from './components/KeyboardShortcutsModal';
+import GlobalSearch from './components/GlobalSearch';
+import { useGlobalSearch } from './hooks/useGlobalSearch';
 import { validateProjects } from './utils/dataValidator';
 import { exportProjectsToCSV, downloadFile } from './utils/csvExporter';
 import { parseCSV, validateCSVImport, executeCSVImport } from './utils/csvImporter';
@@ -194,6 +196,9 @@ function App() {
   };
 
   useKeyboardShortcuts(shortcuts, { enabled: true });
+
+  // Global Search (Cmd/Ctrl+K)
+  const globalSearch = useGlobalSearch(flatProposals, milestones);
 
   // Undo toast timer
   useEffect(() => {
@@ -867,6 +872,7 @@ function App() {
         onShowHistory={() => setShowHistoryDrawer(true)}
         onOpenNotifications={() => setShowNotificationCenter(true)}
         onShowShortcuts={() => setShowKeyboardShortcutsModal(true)}
+        onOpenSearch={globalSearch.openSearch}
         notificationCount={0}
         dataHealth={{ errors: validationErrors, warnings: validationWarnings }}
         onOpenExportModal={() => setShowExportBackupModal(true)}
@@ -1399,6 +1405,9 @@ function App() {
       {showKeyboardShortcutsModal && (
         <KeyboardShortcutsModal onClose={() => setShowKeyboardShortcutsModal(false)} />
       )}
+
+      {/* Global Search Modal (Cmd/Ctrl+K) */}
+      <GlobalSearch {...globalSearch} />
     </div>
   );
 }
