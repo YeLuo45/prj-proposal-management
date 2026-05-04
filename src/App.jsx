@@ -16,8 +16,10 @@ import CsvPreviewTable from './components/CsvPreviewTable';
 import AISettings from './components/AISettings';
 import SyncSettings from './components/SyncSettings';
 import ExportPanel from './components/ExportPanel';
+import ExportBackupModal from './components/ExportBackupModal';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import { useGitHub } from './hooks/useGitHub';
+import { githubApi } from './services/githubApi';
 import { useOperationHistory } from './hooks/useOperationHistory';
 import { useValidation } from './hooks/useDataValidator';
 import ValidationAlert from './components/ValidationAlert';
@@ -90,6 +92,7 @@ function App() {
   const [showImportPreview, setShowImportPreview] = useState(false);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
   const [showKeyboardShortcutsModal, setShowKeyboardShortcutsModal] = useState(false);
+  const [showExportBackupModal, setShowExportBackupModal] = useState(false);
 
   // Theme state from context
   const { theme, themeId, setThemeId } = useTheme();
@@ -866,6 +869,7 @@ function App() {
         onShowShortcuts={() => setShowKeyboardShortcutsModal(true)}
         notificationCount={0}
         dataHealth={{ errors: validationErrors, warnings: validationWarnings }}
+        onOpenExportModal={() => setShowExportBackupModal(true)}
       />
 
       <div className="container mx-auto px-4 py-6" ref={exportRef}>
@@ -1345,6 +1349,50 @@ function App() {
       <NotificationCenter
         isOpen={showNotificationCenter}
         onClose={() => setShowNotificationCenter(false)}
+      />
+
+      {/* Export Backup Modal */}
+      <ExportBackupModal
+        isOpen={showExportBackupModal}
+        onClose={() => setShowExportBackupModal(false)}
+        onImport={async (data) => {
+          // Merge imported data with skip duplicates
+          const importedProjects = data.projects || [];
+          const importedMilestones = data.milestones || [];
+          const currentProjectIds = new Set(projects.map(p => p.id));
+          const currentProposalIds = new Set(
+            projects.flatMap(p => p.proposals?.map(prop => prop.id) || [])
+          );
+
+          // Filter out duplicates
+          const newProjects = importedProjects.filter(p => !currentProjectIds.has(p.id));
+          const mergedProjects = [...projects, ...newProjects];
+
+          const newProposals = [];
+          mergedProjects.forEach(p => {
+            if (!currentProposalIds.has(p.id)) {
+              // This is a new project, add all its proposals
+            }
+          });
+
+          // Merge milestones
+          const existingMilestoneIds = new Set(milestones.map(m => m.id));
+          const newMilestones = importedMilestones.filter(m => !existingMilestoneIds.has(m.id));
+          const mergedMilestones = [...milestones, ...newMilestones];
+
+          // Save to GitHub
+          await githubApi.saveProposals({ projects: mergedProjects });
+          await githubApi.saveMilestones({ milestones: mergedMilestones });
+
+          // Update local state
+          setProjects(mergedProjects);
+          setMilestones(mergedMilestones);
+          setFlatProposals(flattenProposals(mergedProjects));
+
+          alert('导入成功！');
+        }}
+        currentProjects={projects}
+        currentMilestones={milestones}
       />
 
       {/* Keyboard Shortcuts Modal */}

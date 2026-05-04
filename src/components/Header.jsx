@@ -5,12 +5,29 @@ import LanguageSwitcher from './LanguageSwitcher';
 import ThemeSwitcher from './ThemeSwitcher';
 import SyncStatusIndicator from './SyncStatusIndicator';
 import { useTheme } from '../contexts/ThemeContext';
+import { useState, useRef, useEffect } from 'react';
+import { githubApi } from '../services/githubApi';
+import JSZip from 'jszip';
 
-function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowShortcuts, notificationCount, dataHealth }) {
+function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowShortcuts, notificationCount, dataHealth, onOpenExportModal }) {
   const { t } = useTranslation();
   const { errors = [], warnings = [] } = dataHealth || {};
   const location = useLocation();
   const { themeId, setThemeId } = useTheme();
+  const [showExportMenu, setShowExportMenu] = useState(false);
+  const [exporting, setExporting] = useState(false);
+  const exportMenuRef = useRef(null);
+
+  // Close menu on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (exportMenuRef.current && !exportMenuRef.current.contains(e.target)) {
+        setShowExportMenu(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const isActive = (path) => {
     if (path === '/' && location.pathname === '/') return true;
@@ -36,6 +53,50 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
 
   const isDark = themeId === 'dark' || themeId === 'forest' || themeId === 'sunset';
 
+  const handleExportBackup = async () => {
+    setShowExportMenu(false);
+    setExporting(true);
+    try {
+      // Fetch latest data from GitHub
+      const [proposalsRes, milestonesRes] = await Promise.all([
+        githubApi.fetchProposals(),
+        githubApi.fetchMilestones()
+      ]);
+
+      const projects = proposalsRes.data?.projects || proposalsRes.data || [];
+      const milestones = milestonesRes.data?.milestones || milestonesRes.data || [];
+
+      // Generate backup JSON with version + exportedAt + data
+      const backupData = {
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        generator: 'prj-proposals-manager',
+        data: { projects, milestones }
+      };
+
+      // Create ZIP using JSZip
+      const zip = new JSZip();
+      zip.file('backup.json', JSON.stringify(backupData, null, 2));
+
+      const blob = await zip.generateAsync({ type: 'blob' });
+
+      // Trigger download
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `proposals-backup-${new Date().toISOString().split('T')[0].replace(/-/g, '')}.zip`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      console.error('Export failed:', e);
+      alert('导出失败：' + e.message);
+    } finally {
+      setExporting(false);
+    }
+  };
+
   return (
     <header className="bg-white dark:bg-gray-800 shadow desktop-header">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -58,7 +119,53 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
           <Link to="/marketplace" className={navLinkClass('/marketplace')}>
             📦 模板市场
           </Link>
-          
+
+          {/* Export Dropdown */}
+          <div className="relative" ref={exportMenuRef}>
+            <button
+              onClick={() => setShowExportMenu(!showExportMenu)}
+              disabled={exporting}
+              className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700 flex items-center gap-2 disabled:opacity-50"
+              title="导出/导入数据"
+            >
+              {exporting ? (
+                <span className="animate-spin">⏳</span>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              )}
+              <span className="hidden sm:inline">导出</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {showExportMenu && (
+              <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-700 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600 z-50">
+                <button
+                  onClick={handleExportBackup}
+                  className="w-full text-left px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-t-lg flex items-center gap-2"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  导出数据备份
+                </button>
+                <div className="border-t border-gray-200 dark:border-gray-600"></div>
+                <button
+                  onClick={() => { setShowExportMenu(false); onOpenExportModal?.(); }}
+                  className="w-full text-left px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-b-lg flex items-center gap-2"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                  </svg>
+                  导入数据
+                </button>
+              </div>
+            )}
+          </div>
+
           <LanguageSwitcher />
           
           {/* Theme Switcher - 4 color themes */}
