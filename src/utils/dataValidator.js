@@ -9,8 +9,8 @@ export function validateProposal(proposal, projects, milestones) {
   const errors = [];
 
   // id 格式校验
-  if (!proposal.id || !/^P-\d{8}-\d{3}$/.test(proposal.id)) {
-    errors.push(`ID 格式错误：${proposal.id}，期望 P-YYYYMMDD-XXX`);
+  if (!proposal.id || !/^P-\d{8}-\d{3,}$/.test(proposal.id)) {
+    errors.push(`ID 格式错误：${proposal.id}，期望 P-YYYYMMDD-XXX（至少3位数字）`);
   }
 
   // name 必填
