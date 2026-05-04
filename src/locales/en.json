@@ -53,15 +53,32 @@
     "clear": "Clear"
   },
   "advancedFilter": {
+    "title": "Advanced Filter",
     "status": "Status",
     "type": "Type",
     "tags": "Tags",
     "project": "Project",
+    "projectSearch": "Search project...",
     "createdDate": "Created Date",
     "match": "Match",
     "results": "results",
     "clear": "Clear",
-    "apply": "Apply"
+    "apply": "Apply",
+    "matchAny": "Match Any",
+    "matchAll": "Match All",
+    "allRequired": "All required",
+    "savePreset": "Save Preset",
+    "savedPresets": "Saved Presets"
+  },
+  "savedFilters": {
+    "title": "Filter Presets",
+    "namePlaceholder": "Enter preset name",
+    "saveCurrent": "Save Current Filter",
+    "empty": "No saved filter presets",
+    "emptyHint": "Set filter criteria and click the button above to save",
+    "confirmDelete": "Are you sure to delete this filter preset?",
+    "rename": "Rename",
+    "noFilters": "No filter criteria"
   },
   "proposalForm": {
     "editProposal": "Edit Proposal",
@@ -149,7 +166,11 @@
     "moveStatus": "Move to {{status}}",
     "delete": "Delete",
     "setMilestone": "Set Milestone",
-    "selectedCount": "{{count}} selected"
+    "setTags": "Set Tags",
+    "exportSelected": "Export Selected",
+    "selectedCount": "{{count}} selected",
+    "moveTo": "Move to...",
+    "cancelSelect": "Cancel Selection"
   },
   "gantt": {
     "today": "Today",

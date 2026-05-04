@@ -13,6 +13,10 @@ function AdvancedFilter({
   onApply,
   onCancel,
   onClear,
+  onSaveFilters,
+  onOpenSavedFilters,
+  filterLogic = 'OR',
+  onFilterLogicChange,
 }) {
   const { t } = useTranslation();
   const [localFilters, setLocalFilters] = useState(filters);
@@ -73,8 +77,44 @@ function AdvancedFilter({
     onClear();
   };
 
+  const handleFilterLogicChange = (logic) => {
+    if (onFilterLogicChange) {
+      onFilterLogicChange(logic);
+    }
+  };
+
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 mb-4">
+      <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
+        <h3 className="font-semibold text-gray-800 dark:text-gray-100">
+          {t('advancedFilter.title') || '高级筛选'}
+        </h3>
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 bg-gray-100 dark:bg-gray-700 rounded-lg p-1">
+            <button
+              onClick={() => handleFilterLogicChange('OR')}
+              className={`px-3 py-1 text-sm rounded-md transition-colors ${
+                filterLogic === 'OR'
+                  ? 'bg-blue-500 text-white'
+                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+              }`}
+            >
+              {t('advancedFilter.matchAny') || '任意匹配'}
+            </button>
+            <button
+              onClick={() => handleFilterLogicChange('AND')}
+              className={`px-3 py-1 text-sm rounded-md transition-colors ${
+                filterLogic === 'AND'
+                  ? 'bg-blue-500 text-white'
+                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+              }`}
+            >
+              {t('advancedFilter.matchAll') || '全部匹配'}
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('advancedFilter.status')}</label>
@@ -111,7 +151,12 @@ function AdvancedFilter({
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('advancedFilter.tags')}</label>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            {t('advancedFilter.tags')}
+            {filterLogic === 'AND' && localFilters.tags.length > 0 && (
+              <span className="ml-1 text-xs text-blue-500">({t('advancedFilter.allRequired') || '需全部匹配'})</span>
+            )}
+          </label>
           <div className="space-y-1 max-h-32 overflow-y-auto">
             {allTags.map(tag => (
               <label key={tag} className="flex items-center gap-2 cursor-pointer">
@@ -134,7 +179,7 @@ function AdvancedFilter({
               type="text"
               value={projectSearch}
               onChange={(e) => setProjectSearch(e.target.value)}
-              placeholder={t('advancedFilter.projectSearch') || 'Search...'}
+              placeholder={t('advancedFilter.projectSearch') || '搜索项目...'}
               className="w-full px-3 py-1.5 border rounded-lg text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
             />
             <select
@@ -171,8 +216,26 @@ function AdvancedFilter({
       </div>
 
       <div className="flex justify-between items-center mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-        <div className="text-sm text-gray-500 dark:text-gray-400">
-          {t('advancedFilter.match')} <span className="font-semibold text-blue-500">{matchCount}</span> {t('advancedFilter.results')}
+        <div className="flex items-center gap-2">
+          <div className="text-sm text-gray-500 dark:text-gray-400">
+            {t('advancedFilter.match')} <span className="font-semibold text-blue-500">{matchCount}</span> {t('advancedFilter.results')}
+          </div>
+          {onSaveFilters && (
+            <button
+              onClick={() => onSaveFilters(localFilters)}
+              className="ml-3 px-3 py-1 text-sm bg-green-500 text-white rounded-lg hover:bg-green-600"
+            >
+              💾 {t('advancedFilter.savePreset') || '保存方案'}
+            </button>
+          )}
+          {onOpenSavedFilters && (
+            <button
+              onClick={onOpenSavedFilters}
+              className="ml-2 px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600"
+            >
+              📋 {t('advancedFilter.savedPresets') || '已存方案'}
+            </button>
+          )}
         </div>
         <div className="flex gap-2">
           <button

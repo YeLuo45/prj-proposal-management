@@ -5,6 +5,7 @@ import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import FilterBar from './components/FilterBar';
 import AdvancedFilter from './components/AdvancedFilter';
+import SavedFilters from './components/SavedFilters';
 import ProposalCard from './components/ProposalCard';
 import ProposalForm from './components/ProposalForm';
 import BatchActionBar from './components/BatchActionBar';
@@ -73,6 +74,10 @@ function App() {
   const [tagLogic, setTagLogic] = useState('OR');
   // V9: 选中的模板ID
   const [selectedTemplateId, setSelectedTemplateId] = useState(null);
+
+  // V24: Saved Filters Modal
+  const [showSavedFilters, setShowSavedFilters] = useState(false);
+  const [filterLogic, setFilterLogic] = useState('OR');
 
   // V10: AI 功能状态
   const [aiRecommendations, setAiRecommendations] = useState({ type: null, tags: [] });
@@ -376,12 +381,17 @@ function App() {
         (p.owner && p.owner.toLowerCase().includes(q))
       );
 
-      const matchesStatus = advancedFilters.statuses.length === 0 ||
-        advancedFilters.statuses.includes(p.status);
-      const matchesType = advancedFilters.types.length === 0 ||
-        advancedFilters.types.includes(p.type);
+      // V24: Filter logic (AND/OR for statuses and types combination)
+      const statusMatch = advancedFilters.statuses.length === 0 ||
+        (filterLogic === 'AND'
+          ? advancedFilters.statuses.every(s => p.status === s)
+          : advancedFilters.statuses.includes(p.status));
+      const typeMatch = advancedFilters.types.length === 0 ||
+        (filterLogic === 'AND'
+          ? advancedFilters.types.every(t => p.type === t)
+          : advancedFilters.types.includes(p.type));
       // V9: Tag logic (AND/OR)
-      const matchesTags = advancedFilters.tags.length === 0 ||
+      const tagMatch = advancedFilters.tags.length === 0 ||
         (tagLogic === 'AND'
           ? advancedFilters.tags.every(t => p.tags?.includes(t))
           : advancedFilters.tags.some(t => p.tags?.includes(t)));
@@ -391,10 +401,10 @@ function App() {
         p.createdAt >= advancedFilters.dateFrom) &&
         (!advancedFilters.dateTo || p.createdAt <= advancedFilters.dateTo);
 
-      return matchesSearch && matchesStatus && matchesType &&
-             matchesTags && matchesProject && matchesDate;
+      return matchesSearch && statusMatch && typeMatch &&
+             tagMatch && matchesProject && matchesDate;
     });
-  }, [flatProposals, searchQuery, advancedFilters, tagLogic]);
+  }, [flatProposals, searchQuery, advancedFilters, tagLogic, filterLogic]);
 
   // V9: Date range filtering (after tag filtering)
   const dateFiltered = useMemo(() => {
@@ -904,6 +914,10 @@ function App() {
             onApply={handleAdvancedApply}
             onCancel={() => setShowAdvanced(false)}
             onClear={handleAdvancedClear}
+            onSaveFilters={() => setShowSavedFilters(true)}
+            onOpenSavedFilters={() => setShowSavedFilters(true)}
+            filterLogic={filterLogic}
+            onFilterLogicChange={setFilterLogic}
           />
         )}
 
@@ -1196,8 +1210,25 @@ function App() {
         onBatchStatusChange={handleBatchStatusChange}
         onBatchMilestone={() => setShowMilestoneModal(true)}
         onBatchDelete={handleBatchDelete}
+        onBatchExport={() => {
+          const selected = flatProposals.filter(p => selectedIds.has(p.id));
+          const csv = exportProjectsToCSV(selected);
+          downloadFile(csv, `selected-proposals-${Date.now()}.csv`, 'text/csv');
+        }}
         onCancelSelect={() => setSelectedIds(new Set())}
       />
+
+      {/* 保存的筛选方案弹窗 */}
+      {showSavedFilters && (
+        <SavedFilters
+          currentFilters={advancedFilters}
+          onApply={(filters) => {
+            setAdvancedFilters(filters);
+            updateUrl(filters);
+          }}
+          onClose={() => setShowSavedFilters(false)}
+        />
+      )}
 
       {/* 里程碑选择弹窗 */}
       {showMilestoneModal && (

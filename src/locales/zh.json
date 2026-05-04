@@ -53,15 +53,32 @@
     "clear": "清空"
   },
   "advancedFilter": {
+    "title": "高级筛选",
     "status": "状态",
     "type": "类型",
     "tags": "标签",
     "project": "项目",
+    "projectSearch": "搜索项目...",
     "createdDate": "创建日期",
     "match": "匹配",
     "results": "条结果",
     "clear": "清空",
-    "apply": "应用"
+    "apply": "应用",
+    "matchAny": "任意匹配",
+    "matchAll": "全部匹配",
+    "allRequired": "需全部匹配",
+    "savePreset": "保存方案",
+    "savedPresets": "已存方案"
+  },
+  "savedFilters": {
+    "title": "筛选方案",
+    "namePlaceholder": "输入方案名称",
+    "saveCurrent": "保存当前筛选",
+    "empty": "暂无保存的筛选方案",
+    "emptyHint": "设置好筛选条件后点击上方按钮保存",
+    "confirmDelete": "确定删除此筛选方案？",
+    "rename": "重命名",
+    "noFilters": "无筛选条件"
   },
   "proposalForm": {
     "editProposal": "编辑提案",
@@ -149,7 +166,11 @@
     "moveStatus": "移动到 {{status}}",
     "delete": "删除",
     "setMilestone": "设置里程碑",
-    "selectedCount": "已选择 {{count}} 个"
+    "setTags": "设置标签",
+    "exportSelected": "导出选中",
+    "selectedCount": "已选择 {{count}} 个",
+    "moveTo": "批量移动到...",
+    "cancelSelect": "取消选择"
   },
   "gantt": {
     "today": "今天",
