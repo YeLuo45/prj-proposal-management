@@ -212,7 +212,7 @@
     "overwrite": "Overwrite duplicates"
   },
   "ai": {
-    "apiKey": "API Key",
+    "apiKey": "***",
     "save": "Save",
     "analyzing": "Analyzing...",
     "title": "AI Settings",
@@ -220,5 +220,34 @@
     "placeholder": "Enter MiniMax API Key",
     "saved": "Saved",
     "configured": "Configured"
+  },
+  "deadline": {
+    "deadline": "Deadline",
+    "overdue": "Overdue by {{days}} days",
+    "today": "Due today",
+    "tomorrow": "Due tomorrow",
+    "daysLeft": "{{days}} days left",
+    "expired": "Expired",
+    "approaching": "Approaching",
+    "normal": "Normal"
+  },
+  "notificationCenter": {
+    "title": "Notifications",
+    "all": "All",
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info",
+    "empty": "No notifications",
+    "clearAll": "Clear All"
+  },
+  "toast": {
+    "saved": "Saved",
+    "deleted": "Deleted",
+    "updated": "Updated",
+    "error": "Operation failed",
+    "proposalCreated": "Proposal created",
+    "proposalUpdated": "Proposal updated",
+    "proposalDeleted": "Proposal deleted"
   }
 }

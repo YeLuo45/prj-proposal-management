@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import ProposalDeadlineBadge from './ProposalDeadlineBadge';
 
 function highlightText(text, query) {
   if (!query || !text) return text;
@@ -53,6 +54,9 @@ function ProposalCard({ proposal, onEdit, onDelete, onCopyUrl, searchQuery, sele
           <span className={`px-2 py-1 rounded text-xs ${statusColors[proposal.status] || ''}`}>
             {t(`status.${proposal.status}`)}
           </span>
+          {proposal.deadline && (
+            <ProposalDeadlineBadge deadline={proposal.deadline} variant="chip" />
+          )}
         </div>
       </div>
 

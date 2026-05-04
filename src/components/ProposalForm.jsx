@@ -23,6 +23,7 @@ function ProposalForm({
     url: '',
     packageUrl: '',
     tags: [],
+    deadline: '',
   });
   const [tagsInput, setTagsInput] = useState('');
   const [descriptionMode, setDescriptionMode] = useState('edit');
@@ -250,6 +251,17 @@ function ProposalForm({
               value={formData.packageUrl}
               onChange={handleChange}
               placeholder="https://..."
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('proposalForm.deadline') || 'Deadline'}</label>
+            <input
+              type="date"
+              name="deadline"
+              value={formData.deadline}
+              onChange={handleChange}
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
             />
           </div>

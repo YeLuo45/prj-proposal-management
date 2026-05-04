@@ -23,6 +23,9 @@ import UndoToast from './components/UndoToast';
 import OperationHistoryDrawer from './components/OperationHistoryDrawer';
 import OfflineIndicator from './components/OfflineIndicator';
 import { useTheme } from './contexts/ThemeContext';
+import Toast, { ToastContainer } from './components/Toast';
+import NotificationCenter from './components/NotificationCenter';
+import { toast } from './hooks/useToast';
 import { validateProjects } from './utils/dataValidator';
 import { exportProjectsToCSV, downloadFile } from './utils/csvExporter';
 import { parseCSV, validateCSVImport, executeCSVImport } from './utils/csvImporter';
@@ -48,6 +51,7 @@ function App() {
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const [showHistoryDrawer, setShowHistoryDrawer] = useState(false);
+  const [showNotificationCenter, setShowNotificationCenter] = useState(false);
   const [showUndoToast, setShowUndoToast] = useState(false);
   const [lastOperationDesc, setLastOperationDesc] = useState('');
   const [validationErrors, setValidationErrors] = useState([]);
@@ -805,6 +809,8 @@ function App() {
         }}
         onSettings={() => setShowSettingsModal(true)}
         onShowHistory={() => setShowHistoryDrawer(true)}
+        onOpenNotifications={() => setShowNotificationCenter(true)}
+        notificationCount={0}
         dataHealth={{ errors: validationErrors, warnings: validationWarnings }}
       />
 
@@ -1273,6 +1279,15 @@ function App() {
           onConfirm={handleCSVImportConfirm}
         />
       )}
+
+      {/* Toast Notifications */}
+      <ToastContainer position="top-right" />
+
+      {/* Notification Center */}
+      <NotificationCenter
+        isOpen={showNotificationCenter}
+        onClose={() => setShowNotificationCenter(false)}
+      />
     </div>
   );
 }

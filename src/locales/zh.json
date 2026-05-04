@@ -212,7 +212,7 @@
     "overwrite": "覆盖重复"
   },
   "ai": {
-    "apiKey": "API Key",
+    "apiKey": "***",
     "save": "保存",
     "analyzing": "分析中...",
     "title": "AI 功能设置",
@@ -220,5 +220,34 @@
     "placeholder": "输入 MiniMax API Key",
     "saved": "已保存",
     "configured": "已配置"
+  },
+  "deadline": {
+    "deadline": "截止日期",
+    "overdue": "已逾期 {{days}} 天",
+    "today": "今天到期",
+    "tomorrow": "明天到期",
+    "daysLeft": "{{days}} 天后到期",
+    "expired": "已过期",
+    "approaching": "即将到期",
+    "normal": "正常"
+  },
+  "notificationCenter": {
+    "title": "通知中心",
+    "all": "全部",
+    "success": "成功",
+    "error": "错误",
+    "warning": "警告",
+    "info": "信息",
+    "empty": "暂无通知",
+    "clearAll": "清空全部"
+  },
+  "toast": {
+    "saved": "已保存",
+    "deleted": "已删除",
+    "updated": "已更新",
+    "error": "操作失败",
+    "proposalCreated": "提案已创建",
+    "proposalUpdated": "提案已更新",
+    "proposalDeleted": "提案已删除"
   }
 }
