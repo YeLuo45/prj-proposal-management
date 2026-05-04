@@ -21,8 +21,8 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
   const navLinkClass = (path) => {
     const base = 'px-4 py-2 rounded-lg flex items-center gap-2 transition-colors';
     return isActive(path)
-      ? `${base} bg-blue-500 text-white`
-      : `${base} bg-gray-500 text-white hover:bg-gray-600`;
+      ? `${base} bg-blue-500 text-white dark:bg-blue-600`
+      : `${base} bg-gray-500 text-white hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700`;
   };
 
   const toggleDarkMode = () => {
@@ -69,7 +69,7 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
           
           <button
             onClick={toggleDarkMode}
-            className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 flex items-center gap-2"
+            className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 flex items-center gap-2"
             title={isDark ? t('app.switchToLight') : t('app.switchToDark')}
           >
             {isDark ? (
@@ -91,7 +91,7 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
           )}
           <button
             onClick={onOpenNotifications}
-            className="relative bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 flex items-center gap-2"
+            className="relative bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700 flex items-center gap-2"
             title={t('notificationCenter.title')}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,7 +105,7 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
           </button>
           <button
             onClick={onShowHistory}
-            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 flex items-center gap-2"
+            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700 flex items-center gap-2"
             title={t('operationHistory.title')}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -115,7 +115,7 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
           </button>
           <button
             onClick={onShowShortcuts}
-            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 flex items-center gap-2"
+            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700 flex items-center gap-2"
             title={t('keyboardShortcuts.title') || 'Keyboard Shortcuts'}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -125,13 +125,13 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
           </button>
           <button
             onClick={onAdd}
-            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 flex items-center gap-2"
+            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 flex items-center gap-2"
           >
             <span>+</span> {t('app.addProposal')}
           </button>
           <button
             onClick={onSettings}
-            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700"
           >
             {t('app.settings')}
           </button>
