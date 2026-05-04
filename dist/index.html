@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,25 +13,47 @@
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <title>项目提案管理</title>
     <script>
+      // Apply saved language direction on page load to prevent FOUC
+      // Use documentElement instead of body (body may not exist yet)
+      (function() {
+        function applyDirection() {
+          var savedLang = localStorage.getItem('i18nextLng');
+          var rtlLangs = ['ar', 'he'];
+          if (savedLang && rtlLangs.indexOf(savedLang) !== -1) {
+            document.documentElement.lang = savedLang;
+            document.documentElement.dir = 'rtl';
+            document.documentElement.classList.add('rtl');
+          } else {
+            document.documentElement.lang = savedLang || 'zh';
+            document.documentElement.dir = 'ltr';
+            document.documentElement.classList.add('ltr');
+          }
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', applyDirection);
+        } else {
+          applyDirection();
+        }
+      })();
       // Register Service Worker
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
+        window.addEventListener('load', function() {
           navigator.serviceWorker.register('./sw.js')
-            .then((registration) => {
+            .then(function(registration) {
               console.log('SW registered:', registration.scope);
             })
-            .catch((error) => {
+            .catch(function(error) {
               console.log('SW registration failed:', error);
             });
         });
       }
     </script>
-    <script type="module" crossorigin src="./assets/index-DW70UA6j.js"></script>
+    <script type="module" crossorigin src="./assets/index-CV6v1duN.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/react-vendor-Dn25rGwS.js">
     <link rel="modulepreload" crossorigin href="./assets/markdown-vendor-BxdLSB01.js">
     <link rel="modulepreload" crossorigin href="./assets/highlight-vendor-BONZ_101.js">
     <link rel="modulepreload" crossorigin href="./assets/dnd-vendor-96mheVXf.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-Dgl5yA9K.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-QNJ36cvd.css">
   </head>
   <body>
     <div id="root"></div>

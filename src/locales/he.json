@@ -417,6 +417,36 @@
     "lastIssuesSync": "סנכרון בעיות אחרון",
     "never": "אף פעם"
   },
+  "draft": {
+    "recovered": "זוהתה טיוטה לא שמורה. האם תרצה לשחזר אותה?",
+    "restore": "שחזר",
+    "dismiss": "התעלם",
+    "autoSaved": "הטיוטה נשמרה אוטומטית",
+    "unsavedChanges": "יש לך שינויים שלא נשמרו"
+  },
+  "versionHistory": {
+    "title": "היסטוריית גרסאות",
+    "versions": "גרסאות",
+    "noVersions": "אין היסטוריית גרסאות",
+    "showMore": "הצג גרסאות נוספות",
+    "preview": "תצוגה מקדימה",
+    "compareWithCurrent": "השווה לנוכחי",
+    "restore": "שחזר",
+    "confirmRestore": "האם אתה בטוח שברצונך לשחזר גרסה זו? השינויים הנוכחיים יאבדו.",
+    "clearAll": "נקה הכל",
+    "confirmClear": "נקה את כל הגרסאות?",
+    "confirmClearMsg": "פעולה זו תמחק לצמיתות את כל היסטוריית הגרסאות.",
+    "version": "גרסה",
+    "current": "נוכחי",
+    "restored": "הגרסה שוחזרה בהצלחה"
+  },
+  "diff": {
+    "added": "נוסף",
+    "removed": "הוסר",
+    "noChanges": "אין שינויים",
+    "addedLines": "שורה",
+    "removedLines": "שורה"
+  },
   "language": {
     "title": "שפה",
     "selectLanguage": "בחר שפה",

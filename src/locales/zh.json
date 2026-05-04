@@ -413,6 +413,36 @@
     "lastIssuesSync": "上次Issues同步",
     "never": "从未"
   },
+  "draft": {
+    "recovered": "检测到未保存的草稿，是否恢复？",
+    "restore": "恢复",
+    "dismiss": "忽略",
+    "autoSaved": "草稿已自动保存",
+    "unsavedChanges": "您有未保存的更改"
+  },
+  "versionHistory": {
+    "title": "版本历史",
+    "versions": "版本",
+    "noVersions": "暂无版本历史",
+    "showMore": "展开更多版本",
+    "preview": "预览",
+    "compareWithCurrent": "与当前对比",
+    "restore": "恢复此版本",
+    "confirmRestore": "确定要恢复到此版本吗？当前更改将丢失。",
+    "clearAll": "清除全部",
+    "confirmClear": "清除所有版本历史？",
+    "confirmClearMsg": "这将永久删除所有版本历史记录。",
+    "version": "版本",
+    "current": "当前",
+    "restored": "版本恢复成功"
+  },
+  "diff": {
+    "added": "新增",
+    "removed": "删除",
+    "noChanges": "无变化",
+    "addedLines": "行",
+    "removedLines": "行"
+  },
   "templateMarketplace": {
     "title": "模板市场",
     "search": "搜索模板名称、描述或标签...",

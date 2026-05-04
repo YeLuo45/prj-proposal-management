@@ -413,6 +413,36 @@
     "lastIssuesSync": "Last issues sync",
     "never": "Never"
   },
+  "draft": {
+    "recovered": "Draft recovered. Would you like to restore it?",
+    "restore": "Restore",
+    "dismiss": "Dismiss",
+    "autoSaved": "Draft auto-saved",
+    "unsavedChanges": "You have unsaved changes"
+  },
+  "versionHistory": {
+    "title": "Version History",
+    "versions": "Versions",
+    "noVersions": "No version history yet",
+    "showMore": "Show more versions",
+    "preview": "Preview",
+    "compareWithCurrent": "Compare",
+    "restore": "Restore",
+    "confirmRestore": "Are you sure you want to restore this version? Current changes will be lost.",
+    "clearAll": "Clear All",
+    "confirmClear": "Clear All Versions?",
+    "confirmClearMsg": "This will permanently delete all version history.",
+    "version": "Version",
+    "current": "Current",
+    "restored": "Version restored successfully"
+  },
+  "diff": {
+    "added": "added",
+    "removed": "removed",
+    "noChanges": "No changes",
+    "addedLines": "+ lines",
+    "removedLines": "- lines"
+  },
   "templateMarketplace": {
     "title": "Template Marketplace",
     "search": "Search templates by name, description or tags...",

@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getAPIKey } from '../utils/aiService';
 import { isRTL } from '../i18n';
 import MarkdownRenderer from './MarkdownRenderer';
+import { useAutoSave } from '../hooks/useAutoSave';
+import VersionHistoryDrawer from './VersionHistoryDrawer';
 
 function ProposalForm({
   proposal,
@@ -33,6 +35,14 @@ function ProposalForm({
   });
   const [tagsInput, setTagsInput] = useState('');
   const [descriptionMode, setDescriptionMode] = useState('edit');
+  
+  // Draft recovery state
+  const [showDraftToast, setShowDraftToast] = useState(false);
+  const [pendingDraft, setPendingDraft] = useState(null);
+  const [draftKey, setDraftKey] = useState(null);
+  
+  // Version history state
+  const [showVersionHistory, setShowVersionHistory] = useState(false);
 
   // Language tabs config
   const langTabs = [
@@ -41,6 +51,20 @@ function ProposalForm({
     { code: 'ar', label: 'ع', name: 'العربية', rtl: true },
     { code: 'he', label: 'ע', name: 'עברית', rtl: true },
   ];
+
+  // Auto-save hook
+  const handleDraftFound = useCallback((draft, key) => {
+    setPendingDraft(draft);
+    setDraftKey(key);
+    setShowDraftToast(true);
+  }, []);
+
+  const { save, saveVersionSnapshot, clearCurrentDraft } = useAutoSave(
+    formData,
+    proposal?.id || null,
+    handleDraftFound,
+    true
+  );
 
   useEffect(() => {
     if (proposal) {
@@ -109,13 +133,51 @@ function ProposalForm({
     setTagsInput(e.target.value);
   };
 
+  // Handle draft recovery
+  const handleRestoreDraft = () => {
+    if (pendingDraft) {
+      setFormData({
+        name: pendingDraft.name || '',
+        nameAr: pendingDraft.nameAr || '',
+        nameHe: pendingDraft.nameHe || '',
+        description: pendingDraft.description || '',
+        descriptionAr: pendingDraft.descriptionAr || '',
+        descriptionHe: pendingDraft.descriptionHe || '',
+        type: pendingDraft.type || 'web',
+        status: pendingDraft.status || 'active',
+        url: pendingDraft.url || '',
+        packageUrl: pendingDraft.packageUrl || '',
+        tags: pendingDraft.tags || [],
+        deadline: pendingDraft.deadline || '',
+      });
+      setTagsInput(pendingDraft.tags?.join(', ') || '');
+    }
+    setShowDraftToast(false);
+    setPendingDraft(null);
+  };
+
+  // Handle dismiss draft
+  const handleDismissDraft = () => {
+    setShowDraftToast(false);
+    setPendingDraft(null);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const tags = tagsInput
       .split(',')
       .map((t) => t.trim())
       .filter((t) => t);
-    onSave({ ...formData, tags });
+    const dataToSave = { ...formData, tags };
+    
+    // Save version snapshot before saving (only for existing proposals)
+    if (proposal?.id) {
+      saveVersionSnapshot();
+    }
+    
+    // Clear draft after successful save
+    clearCurrentDraft();
+    onSave(dataToSave);
   };
 
   const handleForceSave = () => {
@@ -124,7 +186,35 @@ function ProposalForm({
       .split(',')
       .map((t) => t.trim())
       .filter((t) => t);
-    onSave({ ...formData, tags });
+    const dataToSave = { ...formData, tags };
+    
+    // Save version snapshot before saving (only for existing proposals)
+    if (proposal?.id) {
+      saveVersionSnapshot();
+    }
+    
+    // Clear draft after successful save
+    clearCurrentDraft();
+    onSave(dataToSave);
+  };
+
+  // Handle restore from version history
+  const handleRestoreFromVersion = (versionData) => {
+    setFormData({
+      name: versionData.name || '',
+      nameAr: versionData.nameAr || '',
+      nameHe: versionData.nameHe || '',
+      description: versionData.description || '',
+      descriptionAr: versionData.descriptionAr || '',
+      descriptionHe: versionData.descriptionHe || '',
+      type: versionData.type || 'web',
+      status: versionData.status || 'active',
+      url: versionData.url || '',
+      packageUrl: versionData.packageUrl || '',
+      tags: versionData.tags || [],
+      deadline: versionData.deadline || '',
+    });
+    setTagsInput(versionData.tags?.join(', ') || '');
   };
 
   const apiKey = getAPIKey();
@@ -134,13 +224,54 @@ function ProposalForm({
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">
-            {proposal ? t('proposalForm.editProposal') : t('proposalForm.addProposal')}
-          </h2>
+          <div className="flex items-center gap-2">
+            <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">
+              {proposal ? t('proposalForm.editProposal') : t('proposalForm.addProposal')}
+            </h2>
+            {/* Version History Button - only for existing proposals */}
+            {proposal?.id && (
+              <button
+                onClick={() => setShowVersionHistory(true)}
+                className="text-xs text-blue-500 hover:text-blue-600 flex items-center gap-1 px-2 py-1 rounded border border-blue-200 dark:border-blue-700"
+                title={t('versionHistory.title') || 'Version History'}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {t('versionHistory.title') || 'History'}
+              </button>
+            )}
+          </div>
           <button onClick={onClose} className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl">
             &times;
           </button>
         </div>
+
+        {/* Draft Recovery Toast */}
+        {showDraftToast && (
+          <div className="mb-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <span className="text-lg">📝</span>
+              <span className="text-sm text-yellow-700 dark:text-yellow-300">
+                {t('draft.recovered') || 'Draft recovered. Would you like to restore it?'}
+              </span>
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={handleRestoreDraft}
+                className="text-xs bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600"
+              >
+                {t('draft.restore') || 'Restore'}
+              </button>
+              <button
+                onClick={handleDismissDraft}
+                className="text-xs text-gray-500 hover:text-gray-700"
+              >
+                {t('draft.dismiss') || 'Dismiss'}
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Language Tabs for multi-language fields */}
         <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
@@ -445,6 +576,15 @@ function ProposalForm({
           </div>
         </form>
       </div>
+
+      {/* Version History Drawer */}
+      <VersionHistoryDrawer
+        isOpen={showVersionHistory}
+        onClose={() => setShowVersionHistory(false)}
+        proposalId={proposal?.id}
+        currentData={formData}
+        onRestore={handleRestoreFromVersion}
+      />
     </div>
   );
 }

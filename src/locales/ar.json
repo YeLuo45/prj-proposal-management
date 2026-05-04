@@ -417,6 +417,36 @@
     "lastIssuesSync": "آخر مزامنة للمشاكل",
     "never": "أبداً"
   },
+  "draft": {
+    "recovered": "تم اكتشاف مسودة غير محفوظة. هل تريد استعادتها؟",
+    "restore": "استعادة",
+    "dismiss": "تجاهل",
+    "autoSaved": "تم حفظ المسودة تلقائياً",
+    "unsavedChanges": "لديك تغييرات غير محفوظة"
+  },
+  "versionHistory": {
+    "title": "سجل الإصدارات",
+    "versions": "الإصدارات",
+    "noVersions": "لا يوجد سجل إصدارات",
+    "showMore": "عرض المزيد من الإصدارات",
+    "preview": "معاينة",
+    "compareWithCurrent": "مقارنة مع الحالي",
+    "restore": "استعادة",
+    "confirmRestore": "هل أنت متأكد من استعادة هذا الإصدار؟ سيتم فقدان التغييرات الحالية.",
+    "clearAll": "مسح الكل",
+    "confirmClear": "مسح جميع الإصدارات؟",
+    "confirmClearMsg": "سيؤدي هذا إلى حذف سجل الإصدارات نهائياً.",
+    "version": "الإصدار",
+    "current": "الحالي",
+    "restored": "تمت استعادة الإصدار بنجاح"
+  },
+  "diff": {
+    "added": "مضاف",
+    "removed": "محذوف",
+    "noChanges": "لا تغييرات",
+    "addedLines": "سطر",
+    "removedLines": "سطر"
+  },
   "language": {
     "title": "اللغة",
     "selectLanguage": "اختر اللغة",
