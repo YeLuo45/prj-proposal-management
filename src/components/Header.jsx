@@ -55,6 +55,9 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
           <Link to="/dashboard" className={navLinkClass('/dashboard')}>
             {t('app.dashboard')}
           </Link>
+          <Link to="/marketplace" className={navLinkClass('/marketplace')}>
+            📦 模板市场
+          </Link>
           
           <LanguageSwitcher />
           

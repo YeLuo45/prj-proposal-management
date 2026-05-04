@@ -13,6 +13,7 @@ const KanbanSwimlanes = React.lazy(() => import('./pages/KanbanSwimlanes.jsx'));
 const GanttView = React.lazy(() => import('./pages/GanttView.jsx'));
 const DashboardView = React.lazy(() => import('./pages/DashboardView.jsx'));
 const ProjectDetailPage = React.lazy(() => import('./pages/ProjectDetailPage.jsx'));
+const TemplateMarketplace = React.lazy(() => import('./components/TemplateMarketplace.jsx'));
 
 // 懒加载loading组件
 function LoadingFallback() {
@@ -34,6 +35,7 @@ function AppWithBottomNav() {
         <Route path="/kanban/:projectId" element={<KanbanSwimlanes />} />
         <Route path="/gantt" element={<GanttView />} />
         <Route path="/dashboard" element={<DashboardView />} />
+        <Route path="/marketplace" element={<TemplateMarketplace />} />
       </Routes>
     </>
   );
