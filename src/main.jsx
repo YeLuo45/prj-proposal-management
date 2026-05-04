@@ -4,6 +4,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import App from './App.jsx';
 import './index.css'
 import './i18n.js';
+import { ThemeProvider } from './contexts/ThemeContext.jsx';
 
 // 路由懒加载 - 按需加载页面组件，减小首屏JS体积
 const KanbanSwimlanes = React.lazy(() => import('./pages/KanbanSwimlanes.jsx'));
@@ -22,6 +23,7 @@ function LoadingFallback() {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <ThemeProvider>
     <HashRouter>
       <React.Suspense fallback={<LoadingFallback />}>
         <Routes>
@@ -34,5 +36,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Routes>
       </React.Suspense>
     </HashRouter>
+    </ThemeProvider>
   </React.StrictMode>,
 )

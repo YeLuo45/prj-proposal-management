@@ -10,3 +10,35 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Theme-based dark mode overrides */
+.theme-dark {
+  color-scheme: dark;
+}
+
+.theme-forest {
+  color-scheme: dark;
+}
+
+.theme-sunset {
+  color-scheme: dark;
+}
+
+/* Dark backgrounds for export compatibility */
+.theme-dark,
+.theme-forest,
+.theme-sunset {
+  --tw-bg-opacity: 1;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition-property: background-color, border-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Override for elements that should NOT transition */
+.no-transition {
+  transition: none !important;
+}

@@ -2,11 +2,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import DataHealthIndicator from './DataHealthIndicator';
 import LanguageSwitcher from './LanguageSwitcher';
+import ThemeSwitcher from './ThemeSwitcher';
+import { useTheme } from '../contexts/ThemeContext';
 
-function Header({ onAdd, onSettings, darkMode, onToggleDarkMode, projectName, onShowHistory, dataHealth }) {
+function Header({ onAdd, onSettings, onShowHistory, dataHealth }) {
   const { t } = useTranslation();
   const { errors = [], warnings = [] } = dataHealth || {};
   const location = useLocation();
+  const { themeId, setThemeId } = useTheme();
 
   const isActive = (path) => {
     if (path === '/' && location.pathname === '/') return true;
@@ -21,17 +24,22 @@ function Header({ onAdd, onSettings, darkMode, onToggleDarkMode, projectName, on
       : `${base} bg-gray-500 text-white hover:bg-gray-600`;
   };
 
+  const toggleDarkMode = () => {
+    // If currently in a non-light theme, switch to light; otherwise toggle dark
+    if (themeId !== 'light') {
+      setThemeId('light');
+    } else {
+      setThemeId(themeId === 'dark' ? 'light' : 'dark');
+    }
+  };
+
+  const isDark = themeId === 'dark' || themeId === 'forest' || themeId === 'sunset';
+
   return (
     <header className="bg-white dark:bg-gray-800 shadow">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          {projectName ? (
-            <span className="text-2xl font-bold text-gray-800 dark:text-gray-100">
-              {projectName}
-            </span>
-          ) : (
-            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{t('app.title')}</h1>
-          )}
+          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{t('app.title')}</h1>
         </div>
         <div className="flex gap-4 items-center">
           <Link to="/" className={navLinkClass('/')}>
@@ -49,12 +57,15 @@ function Header({ onAdd, onSettings, darkMode, onToggleDarkMode, projectName, on
           
           <LanguageSwitcher />
           
+          {/* Theme Switcher - 4 color themes */}
+          <ThemeSwitcher />
+          
           <button
-            onClick={onToggleDarkMode}
+            onClick={toggleDarkMode}
             className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 flex items-center gap-2"
-            title={darkMode ? t('app.switchToLight') : t('app.switchToDark')}
+            title={isDark ? t('app.switchToLight') : t('app.switchToDark')}
           >
-            {darkMode ? (
+            {isDark ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>

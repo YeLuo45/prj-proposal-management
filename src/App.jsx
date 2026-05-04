@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
@@ -13,6 +13,8 @@ import KanbanSwimlanes from './pages/KanbanSwimlanes';
 import ImportExportPanel from './components/ImportExportPanel';
 import CsvPreviewTable from './components/CsvPreviewTable';
 import AISettings from './components/AISettings';
+import ExportPanel from './components/ExportPanel';
+import ThemeSwitcher from './components/ThemeSwitcher';
 import { useGitHub } from './hooks/useGitHub';
 import { useOperationHistory } from './hooks/useOperationHistory';
 import { useValidation } from './hooks/useDataValidator';
@@ -20,6 +22,7 @@ import ValidationAlert from './components/ValidationAlert';
 import UndoToast from './components/UndoToast';
 import OperationHistoryDrawer from './components/OperationHistoryDrawer';
 import OfflineIndicator from './components/OfflineIndicator';
+import { useTheme } from './contexts/ThemeContext';
 import { validateProjects } from './utils/dataValidator';
 import { exportProjectsToCSV, downloadFile } from './utils/csvExporter';
 import { parseCSV, validateCSVImport, executeCSVImport } from './utils/csvImporter';
@@ -42,9 +45,6 @@ function App() {
   const [editingProposal, setEditingProposal] = useState(null);
   const [token, setToken] = useState('');
   const [showTokenInput, setShowTokenInput] = useState(false);
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem('darkMode') === 'true';
-  });
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const [showHistoryDrawer, setShowHistoryDrawer] = useState(false);
@@ -78,6 +78,12 @@ function App() {
   const [showImportPreview, setShowImportPreview] = useState(false);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
 
+  // Theme state from context
+  const { theme, themeId, setThemeId } = useTheme();
+
+  // Export ref for PNG/PDF
+  const exportRef = useRef(null);
+
   const { loading, error, fetchProposals, saveProposals } = useGitHub();
   const { history, pushRecord, updateRecord, undoLast, canUndo, refreshHistory } = useOperationHistory();
   const { errors: validatorErrors, warnings: validatorWarnings } = useValidation(projects, milestones);
@@ -102,16 +108,6 @@ function App() {
     const dateTo = searchParams.get('to') || '';
     setAdvancedFilters({ statuses, types, tags, projectId, dateFrom, dateTo });
   }, [searchParams]);
-
-  // 初始化暗色模式
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    localStorage.setItem('darkMode', darkMode);
-  }, [darkMode]);
 
   useEffect(() => {
     const savedToken = localStorage.getItem('github_token');
@@ -296,10 +292,6 @@ function App() {
     }
     setShowUndoToast(false);
   }, [projects, flatProposals, undoLast, saveProposals, refreshHistory]);
-
-  const toggleDarkMode = () => {
-    setDarkMode(prev => !prev);
-  };
 
   // 更新 URL
   const updateUrl = useCallback((filters) => {
@@ -812,13 +804,11 @@ function App() {
           setShowForm(true);
         }}
         onSettings={() => setShowSettingsModal(true)}
-        darkMode={darkMode}
-        onToggleDarkMode={toggleDarkMode}
         onShowHistory={() => setShowHistoryDrawer(true)}
         dataHealth={{ errors: validationErrors, warnings: validationWarnings }}
       />
 
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-6" ref={exportRef}>
         {validationErrors.length > 0 && (
           <ValidationAlert
             errors={validationErrors}
@@ -1253,6 +1243,13 @@ function App() {
                 milestones={milestones}
                 onImport={handleCSVFileSelect}
                 onRestore={handleJSONRestore}
+              />
+
+              {/* PNG/PDF Export Panel */}
+              <ExportPanel
+                projects={projects}
+                milestones={milestones}
+                exportRef={exportRef}
               />
             </div>
           </div>
