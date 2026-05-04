@@ -37,7 +37,7 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
   const isDark = themeId === 'dark' || themeId === 'forest' || themeId === 'sunset';
 
   return (
-    <header className="bg-white dark:bg-gray-800 shadow">
+    <header className="bg-white dark:bg-gray-800 shadow desktop-header">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
           <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{t('app.title')}</h1>

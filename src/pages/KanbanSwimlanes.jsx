@@ -372,7 +372,7 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
     <div className={isEmbedded ? 'bg-gray-100 dark:bg-gray-900 transition-colors' : 'min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors'}>
       {/* Header - only show in standalone mode */}
       {!isEmbedded && (
-        <header className="bg-white dark:bg-gray-800 shadow">
+        <header className="bg-white dark:bg-gray-800 shadow desktop-header">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <div className="flex items-center gap-4">
               <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
@@ -415,12 +415,12 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
             </Link>
           </div>
         </div>
-      </header>
+        </header>
       )}
 
-      {/* Column Headers */}
+      {/* Column Headers - Desktop only */}
       {!projectId && (
-        <div className="bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
+        <div className="hidden md:block bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
           <div className="grid grid-cols-1 md:grid-cols-3">
             <div className="px-4 py-3 font-semibold text-gray-600 dark:text-gray-300">
               项目 / 状态

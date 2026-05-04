@@ -1,7 +1,11 @@
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
+import { useRef, useState, useCallback } from 'react';
 
-function SwimlaneCard({ proposal, onClick, isDragging }) {
+const SWIPE_THRESHOLD = 60;
+const ACTION_WIDTH = 70;
+
+function SwimlaneCard({ proposal, onClick, isDragging, onSwipeLeft, onSwipeRight }) {
   const {
     attributes,
     listeners,
@@ -11,10 +15,46 @@ function SwimlaneCard({ proposal, onClick, isDragging }) {
     isDragging: isSortableDragging,
   } = useSortable({ id: proposal.id });
 
+  const [translateX, setTranslateX] = useState(0);
+  const [isDraggingTouch, setIsDraggingTouch] = useState(false);
+  const startXRef = useRef(0);
+
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
   };
+
+  // Touch handlers for swipe actions
+  const handleTouchStart = useCallback((e) => {
+    // Only track horizontal movements
+    startXRef.current = e.touches[0].clientX;
+    setIsDraggingTouch(true);
+  }, []);
+
+  const handleTouchMove = useCallback((e) => {
+    if (!isDraggingTouch) return;
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - startXRef.current;
+    
+    // Limit swipe distance
+    const maxSwipe = ACTION_WIDTH * 1.5;
+    const clampedDiff = Math.max(-maxSwipe, Math.min(maxSwipe, diff));
+    
+    setTranslateX(clampedDiff);
+  }, [isDraggingTouch]);
+
+  const handleTouchEnd = useCallback(() => {
+    if (!isDraggingTouch) return;
+    setIsDraggingTouch(false);
+    
+    if (translateX > SWIPE_THRESHOLD && onSwipeRight) {
+      onSwipeRight(proposal);
+    } else if (translateX < -SWIPE_THRESHOLD && onSwipeLeft) {
+      onSwipeLeft(proposal);
+    }
+    
+    setTranslateX(0);
+  }, [isDraggingTouch, translateX, onSwipeLeft, onSwipeRight, proposal]);
 
   const getStatusColor = (status) => {
     switch (status) {
@@ -41,6 +81,31 @@ function SwimlaneCard({ proposal, onClick, isDragging }) {
       default:
         return 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400';
     }
+  };
+
+  const getActionStyle = (direction) => {
+    const isLeft = direction === 'left';
+    const opacity = Math.min(Math.abs(translateX) / SWIPE_THRESHOLD, 1);
+    const scale = 0.8 + (opacity * 0.2);
+    
+    return {
+      position: 'absolute',
+      top: 0,
+      bottom: 0,
+      width: ACTION_WIDTH,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      [isLeft ? 'right' : 'left']: 0,
+      backgroundColor: isLeft ? '#ef4444' : '#22c55e',
+      color: 'white',
+      fontSize: '11px',
+      fontWeight: 600,
+      opacity,
+      transform: `scale(${scale})`,
+      transition: isDraggingTouch ? 'none' : 'all 0.2s ease-out',
+      pointerEvents: 'none',
+    };
   };
 
   const cardContent = (
@@ -86,6 +151,47 @@ function SwimlaneCard({ proposal, onClick, isDragging }) {
     return (
       <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg border-2 border-blue-400 opacity-90 rotate-2">
         {cardContent}
+      </div>
+    );
+  }
+
+  // Mobile: Show swipe actions
+  const showSwipeActions = onSwipeLeft || onSwipeRight;
+
+  if (showSwipeActions) {
+    return (
+      <div className="relative overflow-hidden">
+        {/* Left Action (swipe right to reveal) */}
+        {onSwipeRight && (
+          <div style={getActionStyle('right')}>
+            <span>编辑</span>
+          </div>
+        )}
+        
+        {/* Right Action (swipe left to reveal) */}
+        {onSwipeLeft && (
+          <div style={getActionStyle('left')}>
+            <span>删除</span>
+          </div>
+        )}
+        
+        {/* Card Content */}
+        <div
+          ref={setNodeRef}
+          {...attributes}
+          {...listeners}
+          onClick={onClick}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          className="bg-white dark:bg-gray-800 transition-transform"
+          style={{
+            transform: `translateX(${translateX}px)`,
+            transition: isDraggingTouch ? 'none' : 'transform 0.2s ease-out',
+          }}
+        >
+          {cardContent}
+        </div>
       </div>
     );
   }

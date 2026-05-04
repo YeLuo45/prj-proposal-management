@@ -6,6 +6,7 @@ import './index.css'
 import './i18n.js';
 import { ThemeProvider } from './contexts/ThemeContext.jsx';
 import { SyncProvider } from './contexts/SyncContext.jsx';
+import BottomNav from './components/BottomNav.jsx';
 
 // 路由懒加载 - 按需加载页面组件，减小首屏JS体积
 const KanbanSwimlanes = React.lazy(() => import('./pages/KanbanSwimlanes.jsx'));
@@ -22,20 +23,29 @@ function LoadingFallback() {
   );
 }
 
+function AppWithBottomNav() {
+  return (
+    <>
+      <BottomNav />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/project/:id" element={<ProjectDetailPage />} />
+        <Route path="/kanban" element={<KanbanSwimlanes />} />
+        <Route path="/kanban/:projectId" element={<KanbanSwimlanes />} />
+        <Route path="/gantt" element={<GanttView />} />
+        <Route path="/dashboard" element={<DashboardView />} />
+      </Routes>
+    </>
+  );
+}
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider>
       <SyncProvider>
         <HashRouter>
           <React.Suspense fallback={<LoadingFallback />}>
-            <Routes>
-              <Route path="/" element={<App />} />
-              <Route path="/project/:id" element={<ProjectDetailPage />} />
-              <Route path="/kanban" element={<KanbanSwimlanes />} />
-              <Route path="/kanban/:projectId" element={<KanbanSwimlanes />} />
-              <Route path="/gantt" element={<GanttView />} />
-              <Route path="/dashboard" element={<DashboardView />} />
-            </Routes>
+            <AppWithBottomNav />
           </React.Suspense>
         </HashRouter>
       </SyncProvider>
