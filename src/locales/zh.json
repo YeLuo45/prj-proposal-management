@@ -270,5 +270,44 @@
     "goToDashboard": "跳转统计",
     "toggleTheme": "切换主题",
     "toggleAdvancedFilter": "切换高级筛选"
+  },
+  "collaboration": {
+    "tabs": {
+      "details": "详情",
+      "timeline": "历史",
+      "comments": "评论"
+    },
+    "history": {
+      "title": "历史记录",
+      "noRecords": "暂无历史记录",
+      "today": "今天",
+      "yesterday": "昨天",
+      "records": "条记录",
+      "expand": "详情",
+      "collapse": "收起",
+      "actions": {
+        "create": "创建",
+        "update": "更新",
+        "delete": "删除"
+      },
+      "entities": {
+        "proposal": "提案",
+        "milestone": "里程碑",
+        "project": "项目"
+      }
+    },
+    "comments": {
+      "title": "项目评论",
+      "noComments": "暂无评论",
+      "beFirst": "成为第一个评论的人",
+      "placeholder": "添加评论...",
+      "send": "发送",
+      "reply": "回复",
+      "delete": "删除",
+      "cancel": "取消",
+      "edited": "已编辑",
+      "viewReplies": "查看 {{count}} 条回复",
+      "collapseReplies": "收起"
+    }
   }
 }

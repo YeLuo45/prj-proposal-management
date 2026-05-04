@@ -270,5 +270,44 @@
     "goToDashboard": "Go to Dashboard",
     "toggleTheme": "Toggle Theme",
     "toggleAdvancedFilter": "Toggle Advanced Filter"
+  },
+  "collaboration": {
+    "tabs": {
+      "details": "Details",
+      "timeline": "History",
+      "comments": "Comments"
+    },
+    "history": {
+      "title": "History Records",
+      "noRecords": "No history records",
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "records": "records",
+      "expand": "Details",
+      "collapse": "Collapse",
+      "actions": {
+        "create": "Created",
+        "update": "Updated",
+        "delete": "Deleted"
+      },
+      "entities": {
+        "proposal": "Proposal",
+        "milestone": "Milestone",
+        "project": "Project"
+      }
+    },
+    "comments": {
+      "title": "Project Comments",
+      "noComments": "No comments",
+      "beFirst": "Be the first to comment",
+      "placeholder": "Add a comment...",
+      "send": "Send",
+      "reply": "Reply",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "edited": "Edited",
+      "viewReplies": "View {{count}} replies",
+      "collapseReplies": "Collapse"
+    }
   }
 }
