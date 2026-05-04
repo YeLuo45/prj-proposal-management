@@ -129,9 +129,9 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick,
         </div>
       )}
 
-      {/* Swimlane Content - Columns */}
+      {/* Swimlane Content - Columns - Horizontal scroll on mobile */}
       {!isCollapsed && (
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-gray-200 dark:divide-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-gray-200 dark:divide-gray-700 kanban-scroll-container">
           {STATUS_COLUMNS.map(column => {
             const columnProposals = getProposalsByStatus(column.id);
             const droppableId = `${project.id}:${column.id}`;
