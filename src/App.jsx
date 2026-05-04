@@ -953,7 +953,7 @@ function App() {
                         return true;
                       })
                       .slice(0, RECENT_PROPOSALS_PER_PROJECT);
-                    const hasMore = project.proposals.length > RECENT_PROPOSALS_PER_PROJECT;
+                    const hasMore = (project.proposals?.length || 0) > RECENT_PROPOSALS_PER_PROJECT;
 
                     return (
                       <div key={project.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-700">
@@ -965,7 +965,7 @@ function App() {
                             </Link>
                           </div>
                           <span className="ml-2 px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded text-xs whitespace-nowrap">
-                            {project.proposals.length} 提案
+                            {project.proposals?.length || 0} 提案
                           </span>
                         </div>
 
@@ -1021,7 +1021,7 @@ function App() {
                             }}
                             className="flex-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 py-1.5 rounded hover:bg-gray-200 dark:hover:bg-gray-600 text-sm"
                           >
-                            {hasMore ? `查看全部 (${project.proposals.length})` : '编辑'}
+                            {hasMore ? `查看全部 (${project.proposals?.length || 0})` : '编辑'}
                           </button>
                         </div>
                       </div>

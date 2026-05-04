@@ -125,7 +125,7 @@ function ToastContainer({ toasts, onDismiss, position = 'top-right' }) {
     'bottom-center': 'bottom-4 left-1/2 transform -translate-x-1/2',
   };
 
-  if (toasts.length === 0) return null;
+  if (!toasts || toasts.length === 0) return null;
 
   return (
     <div

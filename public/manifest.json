@@ -2,20 +2,20 @@
   "name": "项目提案管理系统",
   "short_name": "提案管理",
   "description": "管理和跟踪项目提案、里程碑和待办事项",
-  "start_url": "/",
+  "start_url": "/prj-proposals-manager/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3b82f6",
   "orientation": "any",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
+      "src": "./icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/icon-512.png",
+      "src": "./icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
