@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "projects": [
     {
       "id": "PRJ-20260412-008",
@@ -29,7 +29,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260412-009",
@@ -58,7 +59,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260416-001",
@@ -178,7 +180,8 @@
           "createdAt": "2026-05-03",
           "updatedAt": "2026-05-03"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1002",
@@ -225,7 +228,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260417-002",
@@ -254,7 +258,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-001",
@@ -283,7 +288,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-003",
@@ -327,7 +333,8 @@
           "createdAt": "2026-05-03",
           "updatedAt": "2026-05-03"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-004",
@@ -356,7 +363,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-005",
@@ -385,7 +393,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-007",
@@ -414,7 +423,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-003",
@@ -751,7 +761,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-002",
@@ -780,7 +791,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-001",
@@ -810,7 +822,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "TradingAgents-CN",
@@ -839,7 +852,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1004",
@@ -868,7 +882,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260420-002",
@@ -951,7 +966,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1006",
@@ -1175,7 +1191,8 @@
           "createdAt": "2026-05-03",
           "updatedAt": "2026-05-03"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260421-003",
@@ -1204,7 +1221,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260422-002",
@@ -1233,7 +1251,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260422-001",
@@ -1331,7 +1350,8 @@
           "createdAt": "2026-05-03",
           "updatedAt": "2026-05-03"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-001",
@@ -1360,7 +1380,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-005",
@@ -1404,7 +1425,8 @@
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-002",
@@ -1433,7 +1455,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-004",
@@ -1477,7 +1500,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-002",
@@ -1506,7 +1530,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-001",
@@ -1535,7 +1560,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "hermes-协作服务器消息转发机制重构",
@@ -1564,7 +1590,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260426-003",
@@ -1593,7 +1620,8 @@
           "techExpectations": "",
           "acceptance": "accepted (2026-04-26)"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "preschool-puzzle",
@@ -1622,7 +1650,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260428-002",
@@ -1741,7 +1770,8 @@
           "techExpectations": "timeout-approved（继承V1技术栈）",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260428-001",
@@ -1878,7 +1908,8 @@
           "techExpectations": "timeout-approved（技术栈继承V3：Three.js 0.160.0 CDN + Vanilla JS 单文件）",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1009",
@@ -1997,7 +2028,8 @@
           "techExpectations": "timeout-approved（技术栈继承V3：Three.js 0.160.0 CDN + Vanilla JS 单文件）",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1010",
@@ -2026,7 +2058,8 @@
           "techExpectations": "N/A (direct to dev)",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260430-001",
@@ -2070,7 +2103,8 @@
           "techExpectations": "confirmed (默认最优)",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1011",
@@ -2099,7 +2133,8 @@
           "techExpectations": "N/A (direct to dev)",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260502-002",
@@ -2235,7 +2270,8 @@
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250416-001",
@@ -2499,7 +2535,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "3d飞行棋-玩家颜色选择-战绩统计",
@@ -2528,7 +2565,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250416-002",
@@ -2683,7 +2721,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1005",
@@ -3270,7 +3309,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1012",
@@ -3534,7 +3574,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260421-001",
@@ -4319,7 +4360,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1013",
@@ -4474,7 +4516,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260417-001",
@@ -4539,7 +4582,8 @@
           "techExpectations": "timeout-approved（技术栈继承V3）",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1015",
@@ -4840,7 +4884,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "prj-proposals-manager-项目管理增强",
@@ -4869,7 +4914,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "future-little-leaders-v2-成长激励-亲子互动",
@@ -4898,7 +4944,8 @@
           "techExpectations": "pending",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250418-003",
@@ -4945,7 +4992,8 @@
           "techExpectations": "timeout-approved",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260420-001",
@@ -5010,7 +5058,8 @@
           "techExpectations": "timeout-approved（技术栈继承V1-V3：Canvas + Vanilla JS + React/Vite，localStorage持久化）",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1000",
@@ -5039,7 +5088,8 @@
           "techExpectations": "timeout-approved",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v4-model-ui-thinking",
@@ -5068,7 +5118,8 @@
           "techExpectations": "",
           "acceptance": "小墨于2026-05-03验收通过"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v5-multi-persona-collaboration",
@@ -5097,7 +5148,8 @@
           "techExpectations": "",
           "acceptance": "小墨于2026-05-03验收通过"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v6-rag-knowledge-base",
@@ -5126,7 +5178,8 @@
           "techExpectations": "",
           "acceptance": "小墨于2026-05-03验收通过"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v7-voice-语音交互",
@@ -5155,7 +5208,8 @@
           "techExpectations": "",
           "acceptance": "小墨于2026-05-03验收通过"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v8-mobile-pwa-移动端优化",
@@ -5185,7 +5239,8 @@
           "techExpectations": "",
           "acceptance": "小墨于2026-05-03验收通过"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v9-plugin-system-插件系统",
@@ -5214,7 +5269,8 @@
           "techExpectations": "",
           "acceptance": "小墨于2026-05-03验收通过"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v10-advanced-memory-高级记忆系统",
@@ -5243,7 +5299,8 @@
           "techExpectations": "",
           "acceptance": "小墨于2026-05-03验收通过"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v11-desktop-electron-桌面版",
@@ -5272,7 +5329,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v12-multi-language-多语言切换",
@@ -5301,7 +5359,8 @@
           "techExpectations": "",
           "acceptance": "小墨于2026-05-03验收通过"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1014",
@@ -5366,7 +5425,8 @@
           "techExpectations": "timeout-approved（技术栈继承V3）",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1003",
@@ -5431,7 +5491,8 @@
           "techExpectations": "timeout-approved（技术栈继承V1-V3：Canvas + Vanilla JS + React/Vite，localStorage持久化）",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-002",
@@ -6038,7 +6099,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1016",
@@ -6085,7 +6147,8 @@
           "techExpectations": "timeout-approved",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1007",
@@ -6114,7 +6177,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v13-高级记忆系统-v2",
@@ -6143,7 +6207,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1008",
@@ -6172,7 +6237,8 @@
           "techExpectations": "confirmed（技术栈继承V2：Phaser 3.60+ CDN + Vanilla JS 单文件HTML）",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "3d飞行棋-v3-ai对手",
@@ -6201,7 +6267,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "3d飞行棋-v3-pwa离线支持",
@@ -6231,7 +6298,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260504-1001",
@@ -6260,7 +6328,8 @@
           "techExpectations": "timeout-approved",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v14-webhook-插件生态",
@@ -6289,7 +6358,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v15-桌面端补全",
@@ -6318,7 +6388,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "pixelpal-v17-数据分析面板",
@@ -6347,7 +6418,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     }
   ]
 }
