@@ -214,6 +214,118 @@ export function useStatsData() {
       }));
   }, [projects]);
 
+  // Burndown chart data (based on milestones)
+  const burndownData = useMemo(() => {
+    if (milestones.length === 0) {
+      return { labels: [], ideal: [], actual: [] };
+    }
+
+    // Get all milestones sorted by start date
+    const sortedMilestones = [...milestones].sort(
+      (a, b) => new Date(a.startDate) - new Date(b.startDate)
+    );
+
+    if (sortedMilestones.length === 0) {
+      return { labels: [], ideal: [], actual: [] };
+    }
+
+    // Use first and last milestone dates as range
+    const startDate = new Date(sortedMilestones[0].startDate);
+    const endDate = new Date(sortedMilestones[sortedMilestones.length - 1].endDate);
+
+    // Generate date labels (weekly intervals)
+    const labels = [];
+    const ideal = [];
+    const actual = [];
+
+    const totalWork = milestones.reduce((sum, ms) => sum + (ms.progress || 0), 0);
+    const totalPoints = 100; // Normalize to 100 points
+
+    // Calculate total duration in weeks
+    const durationMs = endDate - startDate;
+    const durationWeeks = Math.ceil(durationMs / (7 * 24 * 60 * 60 * 1000));
+
+    for (let i = 0; i <= durationWeeks; i++) {
+      const date = new Date(startDate);
+      date.setDate(date.getDate() + i * 7);
+      labels.push(date.toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' }));
+
+      // Ideal burndown (linear from total to 0)
+      const idealRemaining = totalPoints - (totalPoints * i / durationWeeks);
+      ideal.push(Math.max(0, Math.round(idealRemaining)));
+    }
+
+    // Calculate actual burndown based on milestone progress
+    // For simplicity, use completion status as proxy
+    const completedMilestones = milestones.filter(ms => ms.status === 'completed').length;
+    const totalMilestones = milestones.length;
+
+    // Map ideal dates to actual remaining work
+    const actualRemaining = ideal.map((_, idx) => {
+      const progressRatio = completedMilestones / totalMilestones;
+      return Math.round(totalPoints * (1 - progressRatio * idx / durationWeeks));
+    });
+
+    return { labels, ideal, actual: actualRemaining };
+  }, [milestones]);
+
+  // Velocity chart data (monthly completion velocity)
+  const velocityData = useMemo(() => {
+    const flatProposals = projects.length > 0
+      ? projects.flatMap(p => p.proposals || [])
+      : [];
+
+    const now = new Date();
+    const labels = [];
+    const completed = [];
+    const planned = [];
+
+    for (let i = 5; i >= 0; i--) {
+      const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+      const monthKey = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
+      labels.push(d.toLocaleDateString('zh-CN', { month: 'short' }));
+
+      // Count completed proposals in this month
+      const monthCompleted = flatProposals.filter(p => {
+        if (p.status !== 'accepted' && p.status !== 'delivered') return false;
+        const updatedAt = p.updatedAt || '';
+        return updatedAt.startsWith(monthKey);
+      }).length;
+      completed.push(monthCompleted);
+
+      // Count created proposals as planned work
+      const monthPlanned = flatProposals.filter(p => {
+        const createdAt = p.createdAt || '';
+        return createdAt.startsWith(monthKey);
+      }).length;
+      planned.push(monthPlanned);
+    }
+
+    return { labels, completed, planned };
+  }, [projects]);
+
+  // Workload chart data (proposals per project by status)
+  const workloadData = useMemo(() => {
+    if (projects.length === 0) {
+      return { labels: [], active: [], inDev: [], completed: [] };
+    }
+
+    const labels = projects.map(p => p.name);
+    const active = projects.map(p =>
+      (p.proposals || []).filter(proposal => proposal.status === 'active').length
+    );
+    const inDev = projects.map(p =>
+      (p.proposals || []).filter(proposal => proposal.status === 'in_dev').length
+    );
+    const completed = projects.map(p =>
+      (p.proposals || []).filter(proposal =>
+        proposal.status === 'accepted' || proposal.status === 'delivered' || proposal.status === 'archived'
+      ).length
+    );
+
+    return { labels, active, inDev, completed };
+  }, [projects]);
+
   return {
     loading,
     error,
@@ -222,6 +334,9 @@ export function useStatsData() {
     projectProgress,
     milestoneProgress,
     recentActivity,
+    burndownData,
+    velocityData,
+    workloadData,
     refetch: fetchData,
   };
 }

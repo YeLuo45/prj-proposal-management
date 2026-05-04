@@ -4,6 +4,9 @@ import TrendChart from './TrendChart';
 import ProgressChart from './ProgressChart';
 import MilestoneProgress from './MilestoneProgress';
 import ActivityTimeline from './ActivityTimeline';
+import BurndownChart from './BurndownChart';
+import VelocityChart from './VelocityChart';
+import WorkloadChart from './WorkloadChart';
 
 function Dashboard() {
   const {
@@ -14,6 +17,9 @@ function Dashboard() {
     projectProgress,
     milestoneProgress,
     recentActivity,
+    burndownData,
+    velocityData,
+    workloadData,
   } = useStatsData();
 
   if (loading) {
@@ -67,6 +73,15 @@ function Dashboard() {
           <TrendChart data={monthlyTrend} />
           <ProgressChart data={projectProgress} />
         </div>
+
+        {/* New Analytics Charts Row */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <BurndownChart data={burndownData} />
+          <VelocityChart data={velocityData} />
+        </div>
+
+        {/* Workload Distribution Chart */}
+        <WorkloadChart data={workloadData} />
 
         {/* Milestone Progress */}
         <MilestoneProgress data={milestoneProgress} />
