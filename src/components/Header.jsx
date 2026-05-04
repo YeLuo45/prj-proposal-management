@@ -5,7 +5,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 import ThemeSwitcher from './ThemeSwitcher';
 import { useTheme } from '../contexts/ThemeContext';
 
-function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, notificationCount, dataHealth }) {
+function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowShortcuts, notificationCount, dataHealth }) {
   const { t } = useTranslation();
   const { errors = [], warnings = [] } = dataHealth || {};
   const location = useLocation();
@@ -105,6 +105,16 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, notific
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <span className="hidden sm:inline">{t('app.history')}</span>
+          </button>
+          <button
+            onClick={onShowShortcuts}
+            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 flex items-center gap-2"
+            title={t('keyboardShortcuts.title') || 'Keyboard Shortcuts'}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+            </svg>
+            <kbd className="hidden md:inline text-xs border border-gray-400 dark:border-gray-500 rounded px-1">?</kbd>
           </button>
           <button
             onClick={onAdd}

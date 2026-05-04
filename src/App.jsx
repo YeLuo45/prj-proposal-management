@@ -26,6 +26,8 @@ import { useTheme } from './contexts/ThemeContext';
 import Toast, { ToastContainer } from './components/Toast';
 import NotificationCenter from './components/NotificationCenter';
 import { toast } from './hooks/useToast';
+import { useKeyboardShortcuts, KeyboardShortcuts } from './hooks/useKeyboardShortcuts';
+import KeyboardShortcutsModal from './components/KeyboardShortcutsModal';
 import { validateProjects } from './utils/dataValidator';
 import { exportProjectsToCSV, downloadFile } from './utils/csvExporter';
 import { parseCSV, validateCSVImport, executeCSVImport } from './utils/csvImporter';
@@ -81,6 +83,7 @@ function App() {
   const [parsedCSV, setParsedCSV] = useState(null);
   const [showImportPreview, setShowImportPreview] = useState(false);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
+  const [showKeyboardShortcutsModal, setShowKeyboardShortcutsModal] = useState(false);
 
   // Theme state from context
   const { theme, themeId, setThemeId } = useTheme();
@@ -132,17 +135,56 @@ function App() {
     }
   }, [projects, milestones]);
 
-  // Ctrl+Z undo handler
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'z' && canUndo) {
-        e.preventDefault();
-        handleUndo();
+  // Keyboard shortcuts
+  const shortcuts = {
+    [KeyboardShortcuts.NEW_PROPOSAL]: () => {
+      setEditingProposal(null);
+      setShowForm(true);
+    },
+    [KeyboardShortcuts.SEARCH]: () => {
+      document.querySelector('input[type="text"]')?.focus();
+    },
+    [KeyboardShortcuts.SHOW_SHORTCUTS]: () => {
+      setShowKeyboardShortcutsModal(true);
+    },
+    [KeyboardShortcuts.CLOSE_MODAL]: () => {
+      if (showKeyboardShortcutsModal) setShowKeyboardShortcutsModal(false);
+      if (showSettingsModal) setShowSettingsModal(false);
+      if (showForm) setShowForm(false);
+      if (showAdvanced) setShowAdvanced(false);
+      if (showImportPreview) setShowImportPreview(false);
+      if (showMilestoneModal) setShowMilestoneModal(false);
+    },
+    [KeyboardShortcuts.SAVE]: () => {
+      // Save action - trigger form submission if form is open
+      if (showForm) {
+        document.querySelector('form')?.requestSubmit();
       }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [canUndo]);
+    },
+    [KeyboardShortcuts.UNDO]: () => {
+      if (canUndo) handleUndo();
+    },
+    [KeyboardShortcuts.GO_TO_LIST]: () => {
+      window.location.href = '/';
+    },
+    [KeyboardShortcuts.GO_TO_KANBAN]: () => {
+      window.location.href = '/kanban';
+    },
+    [KeyboardShortcuts.GO_TO_GANTT]: () => {
+      window.location.href = '/gantt';
+    },
+    [KeyboardShortcuts.GO_TO_DASHBOARD]: () => {
+      window.location.href = '/dashboard';
+    },
+    [KeyboardShortcuts.TOGGLE_THEME]: () => {
+      setThemeId(themeId === 'dark' ? 'light' : 'dark');
+    },
+    [KeyboardShortcuts.TOGGLE_ADVANCED_FILTER]: () => {
+      setShowAdvanced(prev => !prev);
+    },
+  };
+
+  useKeyboardShortcuts(shortcuts, { enabled: true });
 
   // Undo toast timer
   useEffect(() => {
@@ -810,6 +852,7 @@ function App() {
         onSettings={() => setShowSettingsModal(true)}
         onShowHistory={() => setShowHistoryDrawer(true)}
         onOpenNotifications={() => setShowNotificationCenter(true)}
+        onShowShortcuts={() => setShowKeyboardShortcutsModal(true)}
         notificationCount={0}
         dataHealth={{ errors: validationErrors, warnings: validationWarnings }}
       />
@@ -1288,6 +1331,11 @@ function App() {
         isOpen={showNotificationCenter}
         onClose={() => setShowNotificationCenter(false)}
       />
+
+      {/* Keyboard Shortcuts Modal */}
+      {showKeyboardShortcutsModal && (
+        <KeyboardShortcutsModal onClose={() => setShowKeyboardShortcutsModal(false)} />
+      )}
     </div>
   );
 }

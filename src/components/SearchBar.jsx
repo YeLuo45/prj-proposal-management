@@ -76,17 +76,20 @@ function SearchBar({ value, onChange, onAdvancedClick, showAdvanced }) {
           placeholder={t('searchBar.placeholder')}
           className="w-full px-4 py-2 pr-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400"
         />
-        {localValue && (
-          <button
-            onClick={() => {
-              setLocalValue('');
-              onChange('');
-            }}
-            className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-          >
-            ✕
-          </button>
-        )}
+        <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-2">
+          {localValue && (
+            <button
+              onClick={() => {
+                setLocalValue('');
+                onChange('');
+              }}
+              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+            >
+              ✕
+            </button>
+          )}
+          <kbd className="hidden lg:inline text-xs text-gray-400 border border-gray-300 dark:border-gray-600 rounded px-1.5 py-0.5">Ctrl+F</kbd>
+        </div>
       </div>
 
       {history.length > 0 && showHistory && (

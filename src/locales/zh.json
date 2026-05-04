@@ -249,5 +249,26 @@
     "proposalCreated": "提案已创建",
     "proposalUpdated": "提案已更新",
     "proposalDeleted": "提案已删除"
+  },
+  "keyboardShortcuts": {
+    "title": "键盘快捷键",
+    "hint": "按 Esc 关闭",
+    "categories": {
+      "actions": "操作",
+      "navigation": "导航",
+      "view": "视图"
+    },
+    "newProposal": "新建提案",
+    "search": "搜索",
+    "showShortcuts": "显示快捷键",
+    "closeModal": "关闭弹窗",
+    "save": "保存",
+    "undo": "撤销",
+    "goToList": "跳转列表",
+    "goToKanban": "跳转看板",
+    "goToGantt": "跳转甘特图",
+    "goToDashboard": "跳转统计",
+    "toggleTheme": "切换主题",
+    "toggleAdvancedFilter": "切换高级筛选"
   }
 }

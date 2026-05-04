@@ -249,5 +249,26 @@
     "proposalCreated": "Proposal created",
     "proposalUpdated": "Proposal updated",
     "proposalDeleted": "Proposal deleted"
+  },
+  "keyboardShortcuts": {
+    "title": "Keyboard Shortcuts",
+    "hint": "Press Esc to close",
+    "categories": {
+      "actions": "Actions",
+      "navigation": "Navigation",
+      "view": "View"
+    },
+    "newProposal": "New Proposal",
+    "search": "Search",
+    "showShortcuts": "Show Shortcuts",
+    "closeModal": "Close Modal",
+    "save": "Save",
+    "undo": "Undo",
+    "goToList": "Go to List",
+    "goToKanban": "Go to Kanban",
+    "goToGantt": "Go to Gantt",
+    "goToDashboard": "Go to Dashboard",
+    "toggleTheme": "Toggle Theme",
+    "toggleAdvancedFilter": "Toggle Advanced Filter"
   }
 }
