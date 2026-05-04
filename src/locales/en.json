@@ -271,43 +271,71 @@
     "toggleTheme": "Toggle Theme",
     "toggleAdvancedFilter": "Toggle Advanced Filter"
   },
-  "collaboration": {
-    "tabs": {
-      "details": "Details",
-      "timeline": "History",
-      "comments": "Comments"
+  "history": {
+    "title": "History Records",
+    "noRecords": "No history records",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "records": "records",
+    "expand": "Details",
+    "collapse": "Collapse",
+    "actions": {
+      "create": "Created",
+      "update": "Updated",
+      "delete": "Deleted"
     },
-    "history": {
-      "title": "History Records",
-      "noRecords": "No history records",
-      "today": "Today",
-      "yesterday": "Yesterday",
-      "records": "records",
-      "expand": "Details",
-      "collapse": "Collapse",
-      "actions": {
-        "create": "Created",
-        "update": "Updated",
-        "delete": "Deleted"
-      },
-      "entities": {
-        "proposal": "Proposal",
-        "milestone": "Milestone",
-        "project": "Project"
-      }
-    },
-    "comments": {
-      "title": "Project Comments",
-      "noComments": "No comments",
-      "beFirst": "Be the first to comment",
-      "placeholder": "Add a comment...",
-      "send": "Send",
-      "reply": "Reply",
-      "delete": "Delete",
-      "cancel": "Cancel",
-      "edited": "Edited",
-      "viewReplies": "View {{count}} replies",
-      "collapseReplies": "Collapse"
+    "entities": {
+      "proposal": "Proposal",
+      "milestone": "Milestone",
+      "project": "Project"
     }
+  },
+  "comments": {
+    "title": "Project Comments",
+    "noComments": "No comments",
+    "beFirst": "Be the first to comment",
+    "placeholder": "Add a comment...",
+    "send": "Send",
+    "reply": "Reply",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "edited": "Edited",
+    "viewReplies": "View {{count}} replies",
+    "collapseReplies": "Collapse"
+  },
+  "syncSettings": {
+    "title": "Sync Settings",
+    "githubToken": "GitHub Token",
+    "tokenDescription": "Used to access and modify data in the GitHub repository. Token is stored locally only.",
+    "tokenPlaceholder": "ghp_xxxxxxxxxxxx",
+    "validating": "Validating...",
+    "tokenSaved": "Token saved",
+    "branch": "Branch",
+    "autoSync": "Auto Sync",
+    "autoSyncDescription": "Automatically fetch latest data from GitHub periodically",
+    "syncInterval": "Sync Interval",
+    "manualSync": "Manual Sync",
+    "lastSync": "Last sync",
+    "neverSynced": "Never synced",
+    "syncNow": "Sync Now",
+    "syncing": "Syncing...",
+    "status": "Status",
+    "statusSuccess": "Synced",
+    "statusError": "Sync failed",
+    "statusSyncing": "Syncing...",
+    "statusIdle": "Idle",
+    "statusOffline": "Offline",
+    "offlineWarning": "You are currently offline. Cannot sync data."
+  },
+  "syncStatus": {
+    "offline": "Offline",
+    "notConnected": "Not connected",
+    "syncing": "Syncing",
+    "synced": "Synced",
+    "error": "Error",
+    "idle": "Idle",
+    "lastSync": "Last sync",
+    "autoSyncOn": "Auto sync enabled",
+    "clickToSync": "Click to sync now"
   }
 }

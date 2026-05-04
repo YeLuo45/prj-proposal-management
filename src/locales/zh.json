@@ -271,43 +271,71 @@
     "toggleTheme": "切换主题",
     "toggleAdvancedFilter": "切换高级筛选"
   },
-  "collaboration": {
-    "tabs": {
-      "details": "详情",
-      "timeline": "历史",
-      "comments": "评论"
+  "history": {
+    "title": "历史记录",
+    "noRecords": "暂无历史记录",
+    "today": "今天",
+    "yesterday": "昨天",
+    "records": "条记录",
+    "expand": "详情",
+    "collapse": "收起",
+    "actions": {
+      "create": "创建",
+      "update": "更新",
+      "delete": "删除"
     },
-    "history": {
-      "title": "历史记录",
-      "noRecords": "暂无历史记录",
-      "today": "今天",
-      "yesterday": "昨天",
-      "records": "条记录",
-      "expand": "详情",
-      "collapse": "收起",
-      "actions": {
-        "create": "创建",
-        "update": "更新",
-        "delete": "删除"
-      },
-      "entities": {
-        "proposal": "提案",
-        "milestone": "里程碑",
-        "project": "项目"
-      }
-    },
-    "comments": {
-      "title": "项目评论",
-      "noComments": "暂无评论",
-      "beFirst": "成为第一个评论的人",
-      "placeholder": "添加评论...",
-      "send": "发送",
-      "reply": "回复",
-      "delete": "删除",
-      "cancel": "取消",
-      "edited": "已编辑",
-      "viewReplies": "查看 {{count}} 条回复",
-      "collapseReplies": "收起"
+    "entities": {
+      "proposal": "提案",
+      "milestone": "里程碑",
+      "project": "项目"
     }
+  },
+  "comments": {
+    "title": "项目评论",
+    "noComments": "暂无评论",
+    "beFirst": "成为第一个评论的人",
+    "placeholder": "添加评论...",
+    "send": "发送",
+    "reply": "回复",
+    "delete": "删除",
+    "cancel": "取消",
+    "edited": "已编辑",
+    "viewReplies": "查看 {{count}} 条回复",
+    "collapseReplies": "收起"
+  },
+  "syncSettings": {
+    "title": "同步设置",
+    "githubToken": "GitHub Token",
+    "tokenDescription": "用于访问和修改 GitHub 仓库中的数据。Token 仅存储在本地浏览器。",
+    "tokenPlaceholder": "ghp_xxxxxxxxxxxx",
+    "validating": "验证中...",
+    "tokenSaved": "Token 已保存",
+    "branch": "分支",
+    "autoSync": "自动同步",
+    "autoSyncDescription": "定期自动从 GitHub 拉取最新数据",
+    "syncInterval": "同步间隔",
+    "manualSync": "手动同步",
+    "lastSync": "上次同步",
+    "neverSynced": "从未同步",
+    "syncNow": "立即同步",
+    "syncing": "同步中...",
+    "status": "状态",
+    "statusSuccess": "已同步",
+    "statusError": "同步失败",
+    "statusSyncing": "同步中...",
+    "statusIdle": "空闲",
+    "statusOffline": "离线",
+    "offlineWarning": "当前处于离线模式，无法同步数据"
+  },
+  "syncStatus": {
+    "offline": "离线",
+    "notConnected": "未连接",
+    "syncing": "同步中",
+    "synced": "已同步",
+    "error": "错误",
+    "idle": "空闲",
+    "lastSync": "上次同步",
+    "autoSyncOn": "自动同步已开启",
+    "clickToSync": "点击立即同步"
   }
 }

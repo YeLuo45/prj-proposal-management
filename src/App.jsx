@@ -13,6 +13,7 @@ import KanbanSwimlanes from './pages/KanbanSwimlanes';
 import ImportExportPanel from './components/ImportExportPanel';
 import CsvPreviewTable from './components/CsvPreviewTable';
 import AISettings from './components/AISettings';
+import SyncSettings from './components/SyncSettings';
 import ExportPanel from './components/ExportPanel';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import { useGitHub } from './hooks/useGitHub';
@@ -1263,25 +1264,8 @@ function App() {
             </div>
             
             <div className="space-y-4">
-              {/* GitHub Token Section */}
-              <div className="border-b border-gray-200 dark:border-gray-700 pb-4">
-                <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">GitHub Token</h3>
-                <input
-                  type="password"
-                  value={token}
-                  onChange={(e) => setToken(e.target.value)}
-                  placeholder="输入 GitHub Token"
-                  className="w-full px-4 py-2 border rounded-lg mb-2 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
-                />
-                <button
-                  onClick={() => {
-                    handleSaveToken(token);
-                  }}
-                  className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
-                >
-                  保存 Token
-                </button>
-              </div>
+              {/* Sync Settings */}
+              <SyncSettings />
 
               {/* AI Settings */}
               <AISettings />

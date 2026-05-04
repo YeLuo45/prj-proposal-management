@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import DataHealthIndicator from './DataHealthIndicator';
 import LanguageSwitcher from './LanguageSwitcher';
 import ThemeSwitcher from './ThemeSwitcher';
+import SyncStatusIndicator from './SyncStatusIndicator';
 import { useTheme } from '../contexts/ThemeContext';
 
 function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowShortcuts, notificationCount, dataHealth }) {
@@ -59,6 +60,9 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
           
           {/* Theme Switcher - 4 color themes */}
           <ThemeSwitcher />
+
+          {/* Sync Status Indicator */}
+          <SyncStatusIndicator compact />
           
           <button
             onClick={toggleDarkMode}
