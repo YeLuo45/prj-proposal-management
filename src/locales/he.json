@@ -1,0 +1,429 @@
+{
+  "app": {
+    "title": "מנהל הצעות פרויקט",
+    "list": "רשימה",
+    "kanban": "קנבן",
+    "gantt": "גאנט",
+    "dashboard": "לוח בקרה",
+    "addProposal": "הוסף הצעה",
+    "settings": "הגדרות",
+    "history": "היסטוריה",
+    "switchToLight": "החלף למצב בהיר",
+    "switchToDark": "החלף למצב כהה"
+  },
+  "filterBar": {
+    "projects": "פרויקטים",
+    "cards": "כרטיסים",
+    "swimlanes": "נתיבי שחייה",
+    "table": "טבלה",
+    "focus": "מיקוד",
+    "allProjects": "כל הפרויקטים",
+    "allStatuses": "כל הסטטוסים",
+    "clearFilter": "נקה סינון",
+    "currentFilter": "סינון נוכחי",
+    "templateName": "שם התבנית",
+    "save": "שמור",
+    "cancel": "ביטול",
+    "deleteTemplate": "מחק תבנית",
+    "createdAt": "תאריך יצירה",
+    "updatedAt": "תאריך עדכון",
+    "last7Days": "7 ימים אחרונים",
+    "last30Days": "30 ימים אחרונים",
+    "thisMonth": "החודש",
+    "lastMonth": "חודש קודם",
+    "clear": "נקה",
+    "matchAny": "התאם כל (או)",
+    "matchAll": "התאם הכל (ו)",
+    "filterResults": "תוצאות סינון",
+    "exportCsv": "ייצא CSV",
+    "status": {
+      "active": "לעשות",
+      "in_dev": "בביצוע",
+      "archived": "הושלם"
+    },
+    "type": {
+      "web": "אינטרנט",
+      "app": "אפליקציה",
+      "package": "חבילה"
+    }
+  },
+  "searchBar": {
+    "placeholder": "חפש שם, תיאור, תגיות, מזהה, כתובת או בעלים...",
+    "searchHistory": "היסטוריית חיפוש",
+    "clear": "נקה"
+  },
+  "advancedFilter": {
+    "title": "סינון מתקדם",
+    "status": "סטטוס",
+    "type": "סוג",
+    "tags": "תגיות",
+    "project": "פרויקט",
+    "projectSearch": "חפש פרויקט...",
+    "createdDate": "תאריך יצירה",
+    "match": "התאמה",
+    "results": "תוצאות",
+    "clear": "נקה",
+    "apply": "החל",
+    "matchAny": "התאם כל",
+    "matchAll": "התאם הכל",
+    "allRequired": "כל נדרש",
+    "savePreset": "שמור הגדרה מוגדרת",
+    "savedPresets": "הגדרות שמורות"
+  },
+  "savedFilters": {
+    "title": "הגדרות סינון",
+    "namePlaceholder": "הזן שם הגדרה",
+    "saveCurrent": "שמור סינון נוכחי",
+    "empty": "אין הגדרות סינון שמורות",
+    "emptyHint": "הגדר קריטריונים ולחץ על הכפתור לעיל לשמירה",
+    "confirmDelete": "האם אתה בטוח שברצונך למחוק הגדרה זו?",
+    "rename": "שנה שם",
+    "noFilters": "אין קריטריונים"
+  },
+  "proposalForm": {
+    "editProposal": "ערוך הצעה",
+    "addProposal": "הוסף הצעה",
+    "name": "שם",
+    "nameAr": "שם בערבית",
+    "nameHe": "שם בעברית",
+    "description": "תיאור",
+    "descriptionAr": "תיאור בערבית",
+    "descriptionHe": "תיאור בעברית",
+    "markdownSupport": "תומך בתחביר Markdown",
+    "source": "מקור",
+    "preview": "תצוגה מקדימה",
+    "aiRecommend": "המלצת AI",
+    "aiAnalyzing": "מנתח...",
+    "aiRecommendType": "סוג מומלץ",
+    "clickToApply": "לחץ להחלה",
+    "aiRecommendTags": "תגיות מומלצות",
+    "duplicateDetected": "זוהתה הצעה דומה",
+    "similarity": "דמיון",
+    "saveAnyway": "שמור בכל זאת",
+    "type": "סוג",
+    "status": "סטטוס",
+    "url": "כתובת",
+    "packageUrl": "כתובת חבילה",
+    "tags": "תגיות (מופרדות בפסיקים)",
+    "tagsPlaceholder": "תג1, תג2, ...",
+    "cancel": "ביטול",
+    "save": "שמור"
+  },
+  "proposalCard": {
+    "createdAt": "נוצר",
+    "updatedAt": "עודכן"
+  },
+  "importExport": {
+    "importCsv": "ייבא CSV",
+    "exportAll": "ייצא הכל",
+    "exportFiltered": "ייצא מסונן",
+    "restore": "שחזר",
+    "importPreview": "תצוגה מקדימה של ייבוא",
+    "skip": "דלג",
+    "overwrite": "החלף",
+    "cancel": "ביטול",
+    "confirm": "אישור",
+    "imported": "יובא",
+    "skipped": "נדלג",
+    "updated": "עודכן",
+    "errors": "שגיאות"
+  },
+  "validation": {
+    "errors": "שגיאות",
+    "warnings": "אזהרות",
+    "errorCount": "{{count}} שגיאות",
+    "warningCount": "{{count}} אזהרות",
+    "cannotSave": "לא ניתן לשמור עקב שגיאות אימות",
+    "hasWarnings": "יש אזהרות אימות"
+  },
+  "operationHistory": {
+    "title": "היסטוריית פעולות",
+    "create": "יצירה",
+    "update": "עדכון",
+    "delete": "מחיקה",
+    "batchUpdate": "עדכון מרובה",
+    "batchDelete": "מחיקה מרובה",
+    "noOperations": "אין פעולות",
+    "undone": "בוטל",
+    "cannotUndo": "לא ניתן לבטל",
+    "revoke": "בטל"
+  },
+  "undo": {
+    "lastOperation": "פעולה אחרונה",
+    "cannotUndo": "לא ניתן לבטל",
+    "operationCompleted": "הפעולה הושלמה",
+    "revoke": "בטל",
+    "dismiss": "התעלם"
+  },
+  "token": {
+    "title": "הגדרות GitHub Token",
+    "description": "אנא הזן את GitHub Personal Access Token שלך כדי לגשת ולשנות נתוני הצעות.",
+    "placeholder": "הזן GitHub Token",
+    "save": "שמור Token"
+  },
+  "empty": {
+    "noProposals": "אין הצעות עדיין",
+    "noResults": "לא נמצאו תוצאות",
+    "goBack": "חזור"
+  },
+  "batch": {
+    "moveStatus": "העבר אל {{status}}",
+    "delete": "מחק",
+    "setMilestone": "הגדר אבן דרך",
+    "setTags": "הגדר תגיות",
+    "exportSelected": "ייצא נבחרים",
+    "selectedCount": "{{count}} נבחרו",
+    "moveTo": "העבר אל...",
+    "cancelSelect": "בטל בחירה"
+  },
+  "gantt": {
+    "today": "היום",
+    "loading": "טוען...",
+    "noData": "אין נתונים"
+  },
+  "projectDetail": {
+    "allProposals": "כל ההצעות",
+    "filterByStatus": "סנן לפי סטטוס",
+    "filterByType": "סנן לפי סוג",
+    "reset": "איפוס"
+  },
+  "status": {
+    "active": "פעיל",
+    "in_dev": "בפיתוח",
+    "archived": "מאורכב"
+  },
+  "type": {
+    "web": "אינטרנט",
+    "app": "אפליקציה",
+    "package": "חבילה"
+  },
+  "common": {
+    "loading": "טוען...",
+    "error": "שגיאה",
+    "success": "הצלחה",
+    "confirm": "אישור",
+    "cancel": "ביטול",
+    "delete": "מחק",
+    "edit": "ערוך",
+    "save": "שמור",
+    "close": "סגור",
+    "yes": "כן",
+    "no": "לא"
+  },
+  "projectInfo": {
+    "project": "פרויקט",
+    "proposals": "הצעות",
+    "ratio": "יחס"
+  },
+  "dataHealth": {
+    "errors": "שגיאות",
+    "warnings": "אזהרות"
+  },
+  "duplicate": {
+    "title": "זוהו הצעות דומות",
+    "similarity": "דמיון"
+  },
+  "milestone": {
+    "associate": "שייך לאבן דרך",
+    "select": "בחר אבן דרך",
+    "confirm": "אישור"
+  },
+  "csv": {
+    "preview": "תצוגה מקדימה של CSV",
+    "validRows": "שורות תקינות",
+    "invalidRows": "שורות לא תקינות",
+    "importMode": "מצב ייבוא",
+    "skip": "דלג על כפילויות",
+    "overwrite": "החלף כפילויות"
+  },
+  "ai": {
+    "apiKey": "***",
+    "save": "שמור",
+    "analyzing": "מנתח...",
+    "title": "הגדרות AI",
+    "description": "השתמש במפתח MiniMax API כדי לאפשר תכונות AI. המפתח מאוחסן מקומית בלבד.",
+    "placeholder": "הזן מפתח MiniMax API",
+    "saved": "נשמר",
+    "configured": "מוגדר"
+  },
+  "deadline": {
+    "deadline": "מועד אחרון",
+    "overdue": "באיחור של {{days}} ימים",
+    "today": "מועד היום",
+    "tomorrow": "מועד מחר",
+    "daysLeft": "{{days}} ימים נותרו",
+    "expired": "פג תוקף",
+    "approaching": "מתקרב",
+    "normal": "רגיל"
+  },
+  "notificationCenter": {
+    "title": "מרכז התראות",
+    "all": "הכל",
+    "success": "הצלחה",
+    "error": "שגיאה",
+    "warning": "אזהרה",
+    "info": "מידע",
+    "empty": "אין התראות",
+    "clearAll": "נקה הכל"
+  },
+  "toast": {
+    "saved": "נשמר",
+    "deleted": "נמחק",
+    "updated": "עודכן",
+    "error": "הפעולה נכשלה",
+    "proposalCreated": "ההצעה נוצרה",
+    "proposalUpdated": "ההצעה עודכנה",
+    "proposalDeleted": "ההצעה נמחקה"
+  },
+  "keyboardShortcuts": {
+    "title": "קיצורי מקלדת",
+    "hint": "לחץ Esc לסגירה",
+    "categories": {
+      "actions": "פעולות",
+      "navigation": "ניווט",
+      "view": "תצוגה"
+    },
+    "newProposal": "הצעה חדשה",
+    "search": "חיפוש",
+    "showShortcuts": "הצג קיצורים",
+    "closeModal": "סגור חלון",
+    "save": "שמור",
+    "undo": "בטל",
+    "goToList": "עבור לרשימה",
+    "goToKanban": "עבור לקנבן",
+    "goToGantt": "עבור לגאנט",
+    "goToDashboard": "עבור ללוח בקרה",
+    "toggleTheme": "החלף ערכת נושא",
+    "toggleAdvancedFilter": "החלף סינון מתקדם"
+  },
+  "history": {
+    "title": "רשומות היסטוריה",
+    "noRecords": "אין רשומות",
+    "today": "היום",
+    "yesterday": "אתמול",
+    "records": "רשומות",
+    "expand": "פרטים",
+    "collapse": "כווץ",
+    "actions": {
+      "create": "נוצר",
+      "update": "עודכן",
+      "delete": "נמחק"
+    },
+    "entities": {
+      "proposal": "הצעה",
+      "milestone": "אבן דרך",
+      "project": "פרויקט"
+    }
+  },
+  "comments": {
+    "title": "תגובות פרויקט",
+    "noComments": "אין תגובות",
+    "beFirst": "היה הראשון להגיב",
+    "placeholder": "הוסף תגובה...",
+    "send": "שלח",
+    "reply": "השב",
+    "delete": "מחק",
+    "cancel": "ביטול",
+    "edited": "נערך",
+    "viewReplies": "הצג {{count}} תגובות",
+    "collapseReplies": "כווץ"
+  },
+  "syncSettings": {
+    "title": "הגדרות סנכרון",
+    "githubToken": "GitHub Token",
+    "tokenDescription": "משמש לגישה ולשינוי נתונים במאגר GitHub. ה-Token מאוחסן מקומית בלבד.",
+    "tokenPlaceholder": "***",
+    "validating": "מאמת...",
+    "tokenSaved": "ה-Token נשמר",
+    "branch": "ענף",
+    "autoSync": "סנכרון אוטומטי",
+    "autoSyncDescription": "מיזוג נתונים אחרונים מ-GitHub מעת לעת",
+    "syncInterval": "מרווח סנכרון",
+    "manualSync": "סנכרון ידני",
+    "lastSync": "סנכרון אחרון",
+    "neverSynced": "מעולם לא סונכרן",
+    "syncNow": "סנכרן עכשיו",
+    "syncing": "מסנכרן...",
+    "status": "סטטוס",
+    "statusSuccess": "סונכרן",
+    "statusError": "סנכרון נכשל",
+    "statusSyncing": "מסנכרן...",
+    "statusIdle": "לא פעיל",
+    "statusOffline": "לא מקוון",
+    "offlineWarning": "אתה כרגע לא מקוון. לא ניתן לסנכרן נתונים."
+  },
+  "syncStatus": {
+    "offline": "לא מקוון",
+    "notConnected": "לא מחובר",
+    "syncing": "מסנכרן",
+    "syncingData": "מסנכרן נתונים...",
+    "syncingIssues": "מסנכרן בעיות...",
+    "synced": "סונכרן",
+    "error": "שגיאה",
+    "idle": "לא פעיל",
+    "lastSync": "סנכרון אחרון",
+    "autoSyncOn": "סנכרון אוטומטי מופעל",
+    "clickToSync": "לחץ לסנכרון עכשיו"
+  },
+  "githubIssues": {
+    "title": "בעיות ובקשות משיכה ב-GitHub",
+    "issues": "בעיות",
+    "pullRequests": "בקשות משיכה",
+    "linked": "מקושר",
+    "open": "פתוח",
+    "closed": "סגור",
+    "merged": "מוזג",
+    "newIssue": "בעיה חדשה",
+    "createIssue": "צור בעיה",
+    "issueTitle": "כותרת",
+    "issueDescription": "תיאור",
+    "labels": "תגיות",
+    "linkPR": "קשר PR",
+    "linkPullRequest": "קשר בקשת משיכה",
+    "linkedPRs": "בקשות משיכה מקושרות",
+    "noLinkedPRs": "אין PR מקושר",
+    "selectIssue": "בחר בעיה להצגת פרטים",
+    "selectPR": "בחר PR לקישור",
+    "noOpenPRs": "לא נמצאו בקשות משיכה פתוחות",
+    "refresh": "רענן",
+    "searchIssues": "חפש בעיות...",
+    "searchPRs": "חפש PRs...",
+    "filterAll": "הכל",
+    "filterOpen": "פתוח",
+    "filterClosed": "סגור",
+    "closeIssue": "סגור בעיה",
+    "reopenIssue": "פתח מחדש בעיה",
+    "confirmClose": "האם אתה בטוח שברצונך לסגור בעיה זו?",
+    "confirmReopen": "האם אתה בטוח שברצונך לפתוח מחדש בעיה זו?",
+    "loading": "טוען...",
+    "createSuccess": "הבעיה נוצרה בהצלחה",
+    "updateSuccess": "הבעיה עודכנה בהצלחה",
+    "linkedSuccess": "ה-PR קושר בהצלחה",
+    "error": "כשל בטעינת בעיות",
+    "proposalLinked": "הצעה",
+    "by": "על ידי",
+    "openedBy": "נפתח על ידי"
+  },
+  "autoSync": {
+    "title": "הגדרות סנכרון אוטומטי",
+    "dataFiles": "קבצי נתונים",
+    "issues": "בעיות",
+    "enableDataSync": "אפשר סנכרון אוטומטי עבור קבצי נתונים",
+    "enableIssuesSync": "אפשר סנכרון אוטומטי עבור בעיות",
+    "syncInterval": "מרווח סנכרון",
+    "issuesSyncInterval": "מרווח סנכרון בעיות",
+    "minutes": "דקות",
+    "lastDataSync": "סנכרון נתונים אחרון",
+    "lastIssuesSync": "סנכרון בעיות אחרון",
+    "never": "אף פעם"
+  },
+  "language": {
+    "title": "שפה",
+    "selectLanguage": "בחר שפה",
+    "en": "English",
+    "zh": "中文",
+    "ar": "العربية",
+    "he": "עברית",
+    "direction": "rtl"
+  }
+}

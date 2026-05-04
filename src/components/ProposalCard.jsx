@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import ProposalDeadlineBadge from './ProposalDeadlineBadge';
 import { useRef, useState, useCallback } from 'react';
+import { isRTL } from '../i18n';
 
 const SWIPE_THRESHOLD = 60;
 const ACTION_WIDTH = 70;
@@ -15,7 +16,7 @@ function highlightText(text, query) {
 }
 
 function ProposalCard({ proposal, onEdit, onDelete, onCopyUrl, searchQuery, selectedIds, onToggleSelect }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const typeColors = {
     web: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
     app: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
@@ -86,6 +87,25 @@ function ProposalCard({ proposal, onEdit, onDelete, onCopyUrl, searchQuery, sele
 
   const query = searchQuery || '';
   const isSelected = selectedIds?.has(proposal.id);
+  const rtl = isRTL(i18n.language);
+
+  // Get localized content based on current language
+  const getLocalizedName = () => {
+    const lang = i18n.language?.split('-')[0];
+    if (lang === 'ar' && proposal.nameAr) return proposal.nameAr;
+    if (lang === 'he' && proposal.nameHe) return proposal.nameHe;
+    return proposal.name;
+  };
+
+  const getLocalizedDescription = () => {
+    const lang = i18n.language?.split('-')[0];
+    if (lang === 'ar' && proposal.descriptionAr) return proposal.descriptionAr;
+    if (lang === 'he' && proposal.descriptionHe) return proposal.descriptionHe;
+    return proposal.description;
+  };
+
+  const localizedName = getLocalizedName();
+  const localizedDescription = getLocalizedDescription();
 
   const cardContent = (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 md:p-6 hover:shadow-lg transition-shadow border touch-pan-y ${
@@ -105,7 +125,12 @@ function ProposalCard({ proposal, onEdit, onDelete, onCopyUrl, searchQuery, sele
         />
         <div className="flex-1 min-w-0">
           <span className="text-xs text-gray-500 dark:text-gray-400">{highlightText(proposal.id, query)}</span>
-          <h3 className="text-base md:text-lg font-semibold text-gray-800 dark:text-gray-100">{highlightText(proposal.name, query)}</h3>
+          <h3 className={`text-base md:text-lg font-semibold text-gray-800 dark:text-gray-100 ${rtl ? 'rtl-font-arabic' : ''}`} dir={rtl ? 'rtl' : 'ltr'} lang={i18n.language}>
+            {highlightText(localizedName, query)}
+          </h3>
+          {(proposal.nameAr || proposal.nameHe) && (
+            <span className="text-xs text-gray-400">({proposal.name})</span>
+          )}
         </div>
         <div className="flex gap-1 md:gap-2">
           <span className={`px-1.5 md:px-2 py-0.5 md:py-1 rounded text-xs ${typeColors[proposal.type] || ''}`}>
@@ -120,8 +145,10 @@ function ProposalCard({ proposal, onEdit, onDelete, onCopyUrl, searchQuery, sele
         </div>
       </div>
 
-      {proposal.description && (
-        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm md:text-base">{highlightText(proposal.description, query)}</p>
+      {localizedDescription && (
+        <p className={`text-gray-600 dark:text-gray-300 mb-4 text-sm md:text-base ${rtl ? 'rtl-font-arabic' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
+          {highlightText(localizedDescription, query)}
+        </p>
       )}
 
       {proposal.projectName && (

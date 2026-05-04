@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getAPIKey } from '../utils/aiService';
+import { isRTL } from '../i18n';
 import MarkdownRenderer from './MarkdownRenderer';
 
 function ProposalForm({
@@ -14,10 +15,15 @@ function ProposalForm({
   loadingAI,
   handleAIClassify
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [activeLangTab, setActiveLangTab] = useState(i18n.language || 'en');
   const [formData, setFormData] = useState({
     name: '',
+    nameAr: '',
+    nameHe: '',
     description: '',
+    descriptionAr: '',
+    descriptionHe: '',
     type: 'web',
     status: 'active',
     url: '',
@@ -28,16 +34,75 @@ function ProposalForm({
   const [tagsInput, setTagsInput] = useState('');
   const [descriptionMode, setDescriptionMode] = useState('edit');
 
+  // Language tabs config
+  const langTabs = [
+    { code: 'en', label: 'EN', name: 'English' },
+    { code: 'zh', label: '中', name: '中文' },
+    { code: 'ar', label: 'ع', name: 'العربية', rtl: true },
+    { code: 'he', label: 'ע', name: 'עברית', rtl: true },
+  ];
+
   useEffect(() => {
     if (proposal) {
-      setFormData(proposal);
+      setFormData({
+        name: proposal.name || '',
+        nameAr: proposal.nameAr || '',
+        nameHe: proposal.nameHe || '',
+        description: proposal.description || '',
+        descriptionAr: proposal.descriptionAr || '',
+        descriptionHe: proposal.descriptionHe || '',
+        type: proposal.type || 'web',
+        status: proposal.status || 'active',
+        url: proposal.url || '',
+        packageUrl: proposal.packageUrl || '',
+        tags: proposal.tags || [],
+        deadline: proposal.deadline || '',
+      });
       setTagsInput(proposal.tags?.join(', ') || '');
     }
   }, [proposal]);
 
+  // Reset tab when language changes
+  useEffect(() => {
+    const lang = i18n.language?.split('-')[0] || 'en';
+    if (!langTabs.find(t => t.code === lang)) {
+      setActiveLangTab('en');
+    }
+  }, [i18n.language]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleNameChange = (e) => {
+    const { value } = e.target;
+    const nameField = activeLangTab === 'en' ? 'name' :
+                      activeLangTab === 'zh' ? 'name' :
+                      activeLangTab === 'ar' ? 'nameAr' : 'nameHe';
+    setFormData((prev) => ({ ...prev, [nameField]: value }));
+  };
+
+  const handleDescriptionChange = (e) => {
+    const { value } = e.target;
+    const descField = activeLangTab === 'en' ? 'description' :
+                      activeLangTab === 'zh' ? 'description' :
+                      activeLangTab === 'ar' ? 'descriptionAr' : 'descriptionHe';
+    setFormData((prev) => ({ ...prev, [descField]: value }));
+  };
+
+  const getCurrentName = () => {
+    return activeLangTab === 'en' ? formData.name :
+           activeLangTab === 'zh' ? formData.name :
+           activeLangTab === 'ar' ? formData.nameAr :
+           formData.nameHe;
+  };
+
+  const getCurrentDescription = () => {
+    return activeLangTab === 'en' ? formData.description :
+           activeLangTab === 'zh' ? formData.description :
+           activeLangTab === 'ar' ? formData.descriptionAr :
+           formData.descriptionHe;
   };
 
   const handleTagsChange = (e) => {
@@ -63,10 +128,11 @@ function ProposalForm({
   };
 
   const apiKey = getAPIKey();
+  const isRtlMode = isRTL(activeLangTab);
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-lg max-h-[90vh] overflow-y-auto">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">
             {proposal ? t('proposalForm.editProposal') : t('proposalForm.addProposal')}
@@ -76,21 +142,79 @@ function ProposalForm({
           </button>
         </div>
 
+        {/* Language Tabs for multi-language fields */}
+        <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
+          <div className="flex gap-1">
+            {langTabs.map((lang) => (
+              <button
+                key={lang.code}
+                type="button"
+                onClick={() => setActiveLangTab(lang.code)}
+                className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
+                  activeLangTab === lang.code
+                    ? 'border-blue-500 text-blue-500'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'
+                } ${lang.rtl ? 'rtl-lang-tab-rtl' : ''}`}
+              >
+                <span className={lang.rtl ? 'rtl-font-arabic' : ''}>{lang.label}</span>
+                {lang.rtl && <span className="ml-1 text-xs text-yellow-500">RTL</span>}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Name field with language indicator */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('proposalForm.name')}</label>
+            <label className="flex items-center gap-2 block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <span>{t('proposalForm.name')}</span>
+              <span className={`text-xs px-2 py-0.5 rounded ${
+                activeLangTab === 'ar' || activeLangTab === 'he' 
+                  ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400' 
+                  : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
+              }`}>
+                {langTabs.find(l => l.code === activeLangTab)?.name}
+              </span>
+            </label>
             <input
               type="text"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
+              value={getCurrentName()}
+              onChange={handleNameChange}
               required
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+              dir={isRtlMode ? 'rtl' : 'ltr'}
+              lang={activeLangTab}
+              className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 ${
+                isRtlMode ? 'rtl-input-field' : ''
+              }`}
+              placeholder={activeLangTab === 'ar' ? 'أدخل الاسم بالعربية...' : 
+                           activeLangTab === 'he' ? 'הזן שם בעברית...' : ''}
             />
+            {/* Show available translations */}
+            {(formData.nameAr || formData.nameHe) && (
+              <div className="mt-1 text-xs text-gray-500 flex gap-2 flex-wrap">
+                {formData.nameAr && activeLangTab !== 'ar' && (
+                  <span className="bg-gray-100 dark:bg-gray-700 px-1 rounded">ع: {formData.nameAr}</span>
+                )}
+                {formData.nameHe && activeLangTab !== 'he' && (
+                  <span className="bg-gray-100 dark:bg-gray-700 px-1 rounded">ע: {formData.nameHe}</span>
+                )}
+              </div>
+            )}
           </div>
 
+          {/* Description field with language indicator */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('proposalForm.description')}</label>
+            <label className="flex items-center gap-2 block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <span>{t('proposalForm.description')}</span>
+              <span className={`text-xs px-2 py-0.5 rounded ${
+                activeLangTab === 'ar' || activeLangTab === 'he' 
+                  ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400' 
+                  : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
+              }`}>
+                {langTabs.find(l => l.code === activeLangTab)?.name}
+              </span>
+            </label>
             <div className="flex items-center justify-between mb-1">
               <span className="text-xs text-gray-400">{t('proposalForm.markdownSupport')}</span>
               <div className="flex bg-gray-100 dark:bg-gray-700 rounded overflow-hidden">
@@ -114,15 +238,40 @@ function ProposalForm({
             {descriptionMode === 'edit' ? (
               <textarea
                 name="description"
-                value={formData.description}
-                onChange={handleChange}
+                value={getCurrentDescription()}
+                onChange={handleDescriptionChange}
                 rows="6"
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 font-mono text-sm"
-                placeholder={t('proposalForm.markdownSupport')}
+                dir={isRtlMode ? 'rtl' : 'ltr'}
+                lang={activeLangTab}
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 font-mono text-sm ${
+                  isRtlMode ? 'rtl-textarea-field' : ''
+                }`}
+                placeholder={activeLangTab === 'ar' ? 'أدخل الوصف بالعربية...' : 
+                             activeLangTab === 'he' ? 'הזן תיאור בעברית...' : ''}
               />
             ) : (
-              <div className="border rounded p-3 min-h-[120px] bg-gray-50 dark:bg-gray-800">
-                <MarkdownRenderer content={formData.description} />
+              <div 
+                className="border rounded p-3 min-h-[120px] bg-gray-50 dark:bg-gray-800 rtl-markdown-preview"
+                dir={isRtlMode ? 'rtl' : 'ltr'}
+                lang={activeLangTab}
+              >
+                <MarkdownRenderer content={getCurrentDescription()} />
+              </div>
+            )}
+
+            {/* Show available translations */}
+            {(formData.descriptionAr || formData.descriptionHe) && (
+              <div className="mt-1 text-xs text-gray-500">
+                {formData.descriptionAr && activeLangTab !== 'ar' && (
+                  <div className="bg-gray-100 dark:bg-gray-700 p-1 rounded mb-1 rtl-content-container">
+                    <span className="font-semibold">ع:</span> {formData.descriptionAr.substring(0, 100)}...
+                  </div>
+                )}
+                {formData.descriptionHe && activeLangTab !== 'he' && (
+                  <div className="bg-gray-100 dark:bg-gray-700 p-1 rounded rtl-content-container">
+                    <span className="font-semibold">ע:</span> {formData.descriptionHe.substring(0, 100)}...
+                  </div>
+                )}
               </div>
             )}
 
@@ -130,8 +279,8 @@ function ProposalForm({
               <div className="mt-2">
                 <button
                   type="button"
-                  onClick={() => handleAIClassify(formData.description)}
-                  disabled={loadingAI || !formData.description}
+                  onClick={() => handleAIClassify(getCurrentDescription())}
+                  disabled={loadingAI || !getCurrentDescription()}
                   className="text-xs text-blue-500 hover:text-blue-600 flex items-center gap-1"
                 >
                   {loadingAI ? `🤖 ${t('proposalForm.aiAnalyzing')}` : `🤖 ${t('proposalForm.aiRecommend')}`}
@@ -239,6 +388,7 @@ function ProposalForm({
               value={formData.url}
               onChange={handleChange}
               placeholder="https://..."
+              dir="ltr"
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
             />
           </div>
@@ -251,6 +401,7 @@ function ProposalForm({
               value={formData.packageUrl}
               onChange={handleChange}
               placeholder="https://..."
+              dir="ltr"
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
             />
           </div>

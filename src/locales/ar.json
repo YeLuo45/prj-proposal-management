@@ -1,0 +1,429 @@
+{
+  "app": {
+    "title": "مدير مقترحات المشاريع",
+    "list": "القائمة",
+    "kanban": "كانبان",
+    "gantt": "غانت",
+    "dashboard": "لوحة القيادة",
+    "addProposal": "إضافة مقترح",
+    "settings": "الإعدادات",
+    "history": "السجل",
+    "switchToLight": "التبديل إلى الوضع الفاتح",
+    "switchToDark": "التبديل إلى الوضع الداكن"
+  },
+  "filterBar": {
+    "projects": "المشاريع",
+    "cards": "البطاقات",
+    "swimlanes": "الممرات",
+    "table": "الجدول",
+    "focus": "التركيز",
+    "allProjects": "جميع المشاريع",
+    "allStatuses": "جميع الحالات",
+    "clearFilter": "مسح التصفية",
+    "currentFilter": "التصفية الحالية",
+    "templateName": "اسم القالب",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "deleteTemplate": "حذف القالب",
+    "createdAt": "تاريخ الإنشاء",
+    "updatedAt": "تاريخ التحديث",
+    "last7Days": "آخر 7 أيام",
+    "last30Days": "آخر 30 يوم",
+    "thisMonth": "هذا الشهر",
+    "lastMonth": "الشهر الماضي",
+    "clear": "مسح",
+    "matchAny": "مطابقة أي (أو)",
+    "matchAll": "مطابقة الكل (و)",
+    "filterResults": "نتائج التصفية",
+    "exportCsv": "تصدير CSV",
+    "status": {
+      "active": "للقيام",
+      "in_dev": "قيد التنفيذ",
+      "archived": "منتهي"
+    },
+    "type": {
+      "web": "ويب",
+      "app": "تطبيق",
+      "package": "حزمة"
+    }
+  },
+  "searchBar": {
+    "placeholder": "البحث بالاسم، الوصف، العلامات، المعرف، الرابط...",
+    "searchHistory": "سجل البحث",
+    "clear": "مسح"
+  },
+  "advancedFilter": {
+    "title": "تصفية متقدمة",
+    "status": "الحالة",
+    "type": "النوع",
+    "tags": "العلامات",
+    "project": "المشروع",
+    "projectSearch": "البحث في المشاريع...",
+    "createdDate": "تاريخ الإنشاء",
+    "match": "مطابقة",
+    "results": "نتائج",
+    "clear": "مسح",
+    "apply": "تطبيق",
+    "matchAny": "مطابقة أي",
+    "matchAll": "مطابقة الكل",
+    "allRequired": "الكل مطلوب",
+    "savePreset": "حفظ الإعداد",
+    "savedPresets": "الإعدادات المحفوظة"
+  },
+  "savedFilters": {
+    "title": "إعدادات التصفية",
+    "namePlaceholder": "أدخل اسم الإعداد",
+    "saveCurrent": "حفظ التصفية الحالية",
+    "empty": "لا توجد إعدادات تصفية محفوظة",
+    "emptyHint": "قم بتعيين معايير التصفية ثم انقر فوق الزر أعلاه للحفظ",
+    "confirmDelete": "هل أنت متأكد من حذف هذا الإعداد؟",
+    "rename": "إعادة تسمية",
+    "noFilters": "لا توجد معايير تصية"
+  },
+  "proposalForm": {
+    "editProposal": "تعديل المقترح",
+    "addProposal": "إضافة مقترح",
+    "name": "الاسم",
+    "nameAr": "الاسم بالعربية",
+    "nameHe": "الاسم بالعبرية",
+    "description": "الوصف",
+    "descriptionAr": "الوصف بالعربية",
+    "descriptionHe": "الوصف بالعبرية",
+    "markdownSupport": "يدعم صيغة Markdown",
+    "source": "المصدر",
+    "preview": "معاينة",
+    "aiRecommend": "توصية الذكاء الاصطناعي",
+    "aiAnalyzing": "جارٍ التحليل...",
+    "aiRecommendType": "النوع الموصى به",
+    "clickToApply": "انقر للتطبيق",
+    "aiRecommendTags": "العلامات الموصى بها",
+    "duplicateDetected": "تم اكتشاف مقترح مشابه",
+    "similarity": "التشابه",
+    "saveAnyway": "حفظ على أي حال",
+    "type": "النوع",
+    "status": "الحالة",
+    "url": "الرابط",
+    "packageUrl": "رابط الحزمة",
+    "tags": "العلامات (مفصولة بفواصل)",
+    "tagsPlaceholder": "علامة1، علامة2، ...",
+    "cancel": "إلغاء",
+    "save": "حفظ"
+  },
+  "proposalCard": {
+    "createdAt": "تاريخ الإنشاء",
+    "updatedAt": "تاريخ التحديث"
+  },
+  "importExport": {
+    "importCsv": "استيراد CSV",
+    "exportAll": "تصدير الكل",
+    "exportFiltered": "تصدير المصفى",
+    "restore": "استعادة",
+    "importPreview": "معاينة الاستيراد",
+    "skip": "تخطي",
+    "overwrite": "استبدال",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "imported": "تم الاستيراد",
+    "skipped": "تم التخطي",
+    "updated": "تم التحديث",
+    "errors": "أخطاء"
+  },
+  "validation": {
+    "errors": "أخطاء",
+    "warnings": "تحذيرات",
+    "errorCount": "{{count}} أخطاء",
+    "warningCount": "{{count}} تحذيرات",
+    "cannotSave": "لا يمكن الحفظ بسبب أخطاء التحقق",
+    "hasWarnings": "يوجد تحذيرات تحقق"
+  },
+  "operationHistory": {
+    "title": "سجل العمليات",
+    "create": "إنشاء",
+    "update": "تحديث",
+    "delete": "حذف",
+    "batchUpdate": "تحديث جماعي",
+    "batchDelete": "حذف جماعي",
+    "noOperations": "لا توجد عمليات",
+    "undone": "تم التراجع",
+    "cannotUndo": "لا يمكن التراجع",
+    "revoke": "إلغاء"
+  },
+  "undo": {
+    "lastOperation": "آخر عملية",
+    "cannotUndo": "لا يمكن التراجع",
+    "operationCompleted": "اكتملت العملية",
+    "revoke": "تراجع",
+    "dismiss": "تجاهل"
+  },
+  "token": {
+    "title": "إعدادات رمز GitHub",
+    "description": "يرجى إدخال رمز الوصول الشخصي لـ GitHub للوصول إلى بيانات المقترحات وتعديلها.",
+    "placeholder": "أدخل رمز GitHub",
+    "save": "حفظ الرمز"
+  },
+  "empty": {
+    "noProposals": "لا توجد مقترحات بعد",
+    "noResults": "لم يتم العثور على نتائج",
+    "goBack": "رجوع"
+  },
+  "batch": {
+    "moveStatus": "نقل إلى {{status}}",
+    "delete": "حذف",
+    "setMilestone": "تحديد مرحلة",
+    "setTags": "تحديد العلامات",
+    "exportSelected": "تصدير المحدد",
+    "selectedCount": "{{count}} محدد",
+    "moveTo": "نقل إلى...",
+    "cancelSelect": "إلغاء التحديد"
+  },
+  "gantt": {
+    "today": "اليوم",
+    "loading": "جارٍ التحميل...",
+    "noData": "لا توجد بيانات"
+  },
+  "projectDetail": {
+    "allProposals": "جميع المقترحات",
+    "filterByStatus": "تصفية حسب الحالة",
+    "filterByType": "تصفية حسب النوع",
+    "reset": "إعادة تعيين"
+  },
+  "status": {
+    "active": "نشط",
+    "in_dev": "قيد التطوير",
+    "archived": "مؤرشف"
+  },
+  "type": {
+    "web": "ويب",
+    "app": "تطبيق",
+    "package": "حزمة"
+  },
+  "common": {
+    "loading": "جارٍ التحميل...",
+    "error": "خطأ",
+    "success": "نجاح",
+    "confirm": "تأكيد",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "save": "حفظ",
+    "close": "إغلاق",
+    "yes": "نعم",
+    "no": "لا"
+  },
+  "projectInfo": {
+    "project": "المشروع",
+    "proposals": "المقترحات",
+    "ratio": "النسبة"
+  },
+  "dataHealth": {
+    "errors": "أخطاء",
+    "warnings": "تحذيرات"
+  },
+  "duplicate": {
+    "title": "تم اكتشاف مقترحات مشابهة",
+    "similarity": "التشابه"
+  },
+  "milestone": {
+    "associate": "ربط بمرحلة",
+    "select": "اختر مرحلة",
+    "confirm": "تأكيد"
+  },
+  "csv": {
+    "preview": "معاينة CSV",
+    "validRows": "صفوف صالحة",
+    "invalidRows": "صفوف غير صالحة",
+    "importMode": "وضع الاستيراد",
+    "skip": "تخطي التكرارات",
+    "overwrite": "استبدال التكرارات"
+  },
+  "ai": {
+    "apiKey": "***",
+    "save": "حفظ",
+    "analyzing": "جارٍ التحليل...",
+    "title": "إعدادات الذكاء الاصطناعي",
+    "description": "استخدم مفتاح MiniMax API لتمكين ميزات الذكاء الاصطناعي. المفتاح مخزن محلياً فقط.",
+    "placeholder": "أدخل مفتاح MiniMax API",
+    "saved": "تم الحفظ",
+    "configured": "تم التكوين"
+  },
+  "deadline": {
+    "deadline": "الموعد النهائي",
+    "overdue": "متأخر {{days}} يوم",
+    "today": "موعد اليوم",
+    "tomorrow": "موعد الغد",
+    "daysLeft": "{{days}} يوم متبقي",
+    "expired": "منتهي الصلاحية",
+    "approaching": "اقترب",
+    "normal": "عادي"
+  },
+  "notificationCenter": {
+    "title": "مركز الإشعارات",
+    "all": "الكل",
+    "success": "نجاح",
+    "error": "خطأ",
+    "warning": "تحذير",
+    "info": "معلومات",
+    "empty": "لا توجد إشعارات",
+    "clearAll": "مسح الكل"
+  },
+  "toast": {
+    "saved": "تم الحفظ",
+    "deleted": "تم الحذف",
+    "updated": "تم التحديث",
+    "error": "فشلت العملية",
+    "proposalCreated": "تم إنشاء المقترح",
+    "proposalUpdated": "تم تحديث المقترح",
+    "proposalDeleted": "تم حذف المقترح"
+  },
+  "keyboardShortcuts": {
+    "title": "اختصارات لوحة المفاتيح",
+    "hint": "اضغط Esc للإغلاق",
+    "categories": {
+      "actions": "الإجراءات",
+      "navigation": "التنقل",
+      "view": "عرض"
+    },
+    "newProposal": "مقترح جديد",
+    "search": "بحث",
+    "showShortcuts": "عرض الاختصارات",
+    "closeModal": "إغلاق النافذة",
+    "save": "حفظ",
+    "undo": "تراجع",
+    "goToList": "الذهاب إلى القائمة",
+    "goToKanban": "الذهاب إلى الكانبان",
+    "goToGantt": "الذهاب إلى الغانت",
+    "goToDashboard": "الذهاب إلى لوحة القيادة",
+    "toggleTheme": "تبديل السمة",
+    "toggleAdvancedFilter": "تبديل التصفية المتقدمة"
+  },
+  "history": {
+    "title": "سجلات التاريخ",
+    "noRecords": "لا توجد سجلات",
+    "today": "اليوم",
+    "yesterday": "أمس",
+    "records": "سجلات",
+    "expand": "التفاصيل",
+    "collapse": "طي",
+    "actions": {
+      "create": "تم الإنشاء",
+      "update": "تم التحديث",
+      "delete": "تم الحذف"
+    },
+    "entities": {
+      "proposal": "المقترح",
+      "milestone": "المرحلة",
+      "project": "المشروع"
+    }
+  },
+  "comments": {
+    "title": "تعليقات المشروع",
+    "noComments": "لا توجد تعليقات",
+    "beFirst": "كن أول من يعلق",
+    "placeholder": "أضف تعليقاً...",
+    "send": "إرسال",
+    "reply": "الرد",
+    "delete": "حذف",
+    "cancel": "إلغاء",
+    "edited": "تم التعديل",
+    "viewReplies": "عرض {{count}} ردود",
+    "collapseReplies": "طي"
+  },
+  "syncSettings": {
+    "title": "إعدادات المزامنة",
+    "githubToken": "رمز GitHub",
+    "tokenDescription": "يُستخدم للوصول إلى البيانات في مستودع GitHub وتعديلها. الرمز مخزن محلياً فقط.",
+    "tokenPlaceholder": "***",
+    "validating": "جارٍ التحقق...",
+    "tokenSaved": "تم حفظ الرمز",
+    "branch": "الفرع",
+    "autoSync": "المزامنة التلقائية",
+    "autoSyncDescription": "جلب البيانات تلقائياً من GitHub بشكل دوري",
+    "syncInterval": "فترة المزامنة",
+    "manualSync": "مزامنة يدوية",
+    "lastSync": "آخر مزامنة",
+    "neverSynced": "لم تتم المزامنة أبداً",
+    "syncNow": "مزامنة الآن",
+    "syncing": "جارٍ المزامنة...",
+    "status": "الحالة",
+    "statusSuccess": "تمت المزامنة",
+    "statusError": "فشلت المزامنة",
+    "statusSyncing": "جارٍ المزامنة...",
+    "statusIdle": "خامل",
+    "statusOffline": "غير متصل",
+    "offlineWarning": "أنت غير متصل حالياً. لا يمكن مزامنة البيانات."
+  },
+  "syncStatus": {
+    "offline": "غير متصل",
+    "notConnected": "غير متصل",
+    "syncing": "جارٍ المزامنة",
+    "syncingData": "جارٍ مزامنة البيانات...",
+    "syncingIssues": "جارٍ مزامنة المشاكل...",
+    "synced": "تمت المزامنة",
+    "error": "خطأ",
+    "idle": "خامل",
+    "lastSync": "آخر مزامنة",
+    "autoSyncOn": "المزامنة التلقائية مفعلة",
+    "clickToSync": "انقر للمزامنة الآن"
+  },
+  "githubIssues": {
+    "title": "مشاكل وطلبات السحب في GitHub",
+    "issues": "المشاكل",
+    "pullRequests": "طلبات السحب",
+    "linked": "مرتبط",
+    "open": "مفتوح",
+    "closed": "مغلق",
+    "merged": "تم الدمج",
+    "newIssue": "مشكلة جديدة",
+    "createIssue": "إنشاء مشكلة",
+    "issueTitle": "العنوان",
+    "issueDescription": "الوصف",
+    "labels": "العلامات",
+    "linkPR": "ربط طلب سحب",
+    "linkPullRequest": "ربط طلب سحب",
+    "linkedPRs": "طلبات السحب المرتبطة",
+    "noLinkedPRs": "لا توجد طلبات سحب مرتبطة",
+    "selectIssue": "اختر مشكلة لعرض التفاصيل",
+    "selectPR": "اختر طلب سحب للربط",
+    "noOpenPRs": "لم يتم العثور على طلبات سحب مفتوحة",
+    "refresh": "تحديث",
+    "searchIssues": "البحث في المشاكل...",
+    "searchPRs": "البحث في طلبات السحب...",
+    "filterAll": "الكل",
+    "filterOpen": "مفتوح",
+    "filterClosed": "مغلق",
+    "closeIssue": "إغلاق المشكلة",
+    "reopenIssue": "إعادة فتح المشكلة",
+    "confirmClose": "هل أنت متأكد من إغلاق هذه المشكلة؟",
+    "confirmReopen": "هل أنت متأكد من إعادة فتح هذه المشكلة؟",
+    "loading": "جارٍ التحميل...",
+    "createSuccess": "تم إنشاء المشكلة بنجاح",
+    "updateSuccess": "تم تحديث المشكلة بنجاح",
+    "linkedSuccess": "تم ربط طلب السحب بنجاح",
+    "error": "فشل تحميل المشاكل",
+    "proposalLinked": "المقترح",
+    "by": "بواسطة",
+    "openedBy": "مفتوح بواسطة"
+  },
+  "autoSync": {
+    "title": "إعدادات المزامنة التلقائية",
+    "dataFiles": "ملفات البيانات",
+    "issues": "المشاكل",
+    "enableDataSync": "تمكين المزامنة التلقائية لملفات البيانات",
+    "enableIssuesSync": "تمكين المزامنة التلقائية للمشاكل",
+    "syncInterval": "فترة المزامنة",
+    "issuesSyncInterval": "فترة مزامنة المشاكل",
+    "minutes": "دقائق",
+    "lastDataSync": "آخر مزامنة للبيانات",
+    "lastIssuesSync": "آخر مزامنة للمشاكل",
+    "never": "أبداً"
+  },
+  "language": {
+    "title": "اللغة",
+    "selectLanguage": "اختر اللغة",
+    "en": "English",
+    "zh": "中文",
+    "ar": "العربية",
+    "he": "עברית",
+    "direction": "rtl"
+  }
+}

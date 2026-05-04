@@ -126,3 +126,362 @@ body {
 .no-transition {
   transition: none !important;
 }
+
+/* ============================================
+   RTL (Right-to-Left) Support Styles
+   V26: Multi-language content editing + RTL
+   ============================================ */
+
+/* RTL Arabic/Hebrew font families */
+body.rtl,
+[dir="rtl"] {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body.rtl:lang(ar),
+[dir="rtl"]:lang(ar) {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Noto Sans Arabic', sans-serif;
+}
+
+body.rtl:lang(he),
+[dir="rtl"]:lang(he) {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Segoe UI Hebrew', sans-serif;
+}
+
+/* RTL-specific typography classes */
+.rtl-font-arabic {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Noto Sans Arabic', sans-serif;
+}
+
+.rtl-font-hebrew {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Segoe UI Hebrew', sans-serif;
+}
+
+/* RTL text alignment utilities */
+.rtl-text {
+  text-align: right;
+}
+
+.ltr-text {
+  text-align: left;
+}
+
+/* RTL flex direction */
+.rtl-flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* RTL margins and paddings */
+.rtl-mr-auto {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.rtl-ml-auto {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.rtl-pr-0 {
+  padding-right: 0;
+}
+
+.rtl-pl-0 {
+  padding-left: 0;
+}
+
+/* RTL border utilities for forms */
+.rtl-border-radius {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.rtl-border-radius-reversed {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* RTL input fields - flip the icon position */
+.rtl-input-with-icon {
+  padding-left: 2.5rem;
+  padding-right: 0.75rem;
+}
+
+.ltr-input-with-icon {
+  padding-right: 2.5rem;
+  padding-left: 0.75rem;
+}
+
+/* RTL buttons with icons */
+.rtl-btn-icon {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.rtl-btn-icon svg {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.ltr-btn-icon svg {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+/* RTL navigation */
+.rtl-nav-item {
+  flex-direction: row-reverse;
+}
+
+/* RTL breadcrumbs */
+.rtl-breadcrumb-separator::before {
+  content: "‹";
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* RTL tabs */
+.rtl-tabs {
+  flex-direction: row-reverse;
+}
+
+/* RTL card layouts */
+.rtl-card-header {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.rtl-card-body {
+  text-align: right;
+}
+
+/* RTL modal/dialog positioning */
+.rtl-modal-close {
+  left: 1rem;
+  right: auto;
+}
+
+/* RTL dropdown menus */
+.rtl-dropdown-menu {
+  left: 0;
+  right: auto;
+  text-align: right;
+}
+
+.ltr-dropdown-menu {
+  right: 0;
+  left: auto;
+  text-align: left;
+}
+
+/* RTL progress bars */
+.rtl-progress-bar {
+  transform: scaleX(-1);
+}
+
+/* RTL dividers */
+.rtl-divider {
+  border-left: 0;
+  border-right: 1px solid;
+}
+
+/* RTL shadows - flip horizontal shadow direction */
+.rtl-shadow-left {
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.rtl-shadow-right {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* RTL scrollbar for RTL containers */
+.rtl-scroll-container {
+  direction: rtl;
+}
+
+.rtl-scroll-container::-webkit-scrollbar {
+  direction: ltr;
+}
+
+/* RTL list markers */
+.rtl-list {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+.rtl-list-item::marker {
+  content: "• ";
+}
+
+/* RTL checkboxes and radio buttons */
+.rtl-checkbox,
+.rtl-radio {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+/* RTL status badges */
+.rtl-badge {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+/* RTL tooltips */
+.rtl-tooltip {
+  direction: rtl;
+}
+
+/* RTL code blocks - maintain LTR for code */
+.rtl-code-block {
+  direction: ltr;
+  text-align: left;
+}
+
+/* RTL form validation messages */
+.rtl-validation-message {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+.rtl-validation-message::before {
+  left: auto;
+  right: 0;
+}
+
+/* RTL table headers */
+.rtl-table-header {
+  text-align: right;
+}
+
+.rtl-table-cell {
+  text-align: right;
+}
+
+/* RTL pagination */
+.rtl-pagination {
+  flex-direction: row-reverse;
+}
+
+/* RTL alert/notification positioning */
+.rtl-alert {
+  flex-direction: row-reverse;
+}
+
+/* RTL timeline */
+.rtl-timeline::before {
+  left: auto;
+  right: 1rem;
+}
+
+.rtl-timeline-item {
+  padding-left: 0;
+  padding-right: 2.5rem;
+}
+
+.rtl-timeline-marker {
+  left: auto;
+  right: 0;
+}
+
+/* RTL Kanban specific */
+.rtl-kanban-column {
+  flex-direction: column-reverse;
+}
+
+.rtl-kanban-card {
+  text-align: right;
+}
+
+/* RTL Gantt chart */
+.rtl-gantt-label {
+  text-align: left;
+  direction: ltr;
+}
+
+.rtl-gantt-bar {
+  transform: scaleX(-1);
+}
+
+/* RTL Markdown preview */
+.rtl-markdown-preview {
+  direction: rtl;
+  text-align: right;
+}
+
+.rtl-markdown-preview pre {
+  direction: ltr;
+  text-align: left;
+}
+
+/* RTL editor toolbar */
+.rtl-editor-toolbar {
+  flex-direction: row-reverse;
+}
+
+/* RTL multi-language field labels */
+.rtl-multilang-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rtl-multilang-label span {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.rtl-multilang-label .lang-tag {
+  background: #e5e7eb;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+/* RTL language switcher in forms */
+.rtl-lang-tabs {
+  display: flex;
+  gap: 0.25rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.rtl-lang-tab {
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rtl-lang-tab.active {
+  border-bottom-color: #3b82f6;
+  color: #3b82f6;
+}
+
+/* RTL content area containers */
+.rtl-content-container {
+  direction: rtl;
+}
+
+.rtl-content-container input,
+.rtl-content-container textarea {
+  direction: rtl;
+}
+
+/* Ensure LTR content like URLs and code stays LTR */
+.rtl-content-container [dir="ltr"],
+.rtl-content-container code,
+.rtl-content-container pre,
+.rtl-content-container .ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* RTL responsive utilities */
+@media (max-width: 767px) {
+  .rtl-mobile-nav {
+    flex-direction: column-reverse;
+  }
+  
+  .rtl-mobile-card {
+    text-align: right;
+  }
+}

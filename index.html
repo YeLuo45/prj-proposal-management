@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,6 +25,21 @@
             });
         });
       }
+      
+      // Apply saved language direction on page load to prevent FOUC
+      (function() {
+        const savedLang = localStorage.getItem('i18nextLng');
+        const rtlLangs = ['ar', 'he'];
+        if (savedLang && rtlLangs.includes(savedLang)) {
+          document.documentElement.lang = savedLang;
+          document.documentElement.dir = 'rtl';
+          document.body.classList.add('rtl');
+        } else {
+          document.documentElement.lang = savedLang || 'zh';
+          document.documentElement.dir = 'ltr';
+          document.body.classList.add('ltr');
+        }
+      })();
     </script>
   </head>
   <body>
