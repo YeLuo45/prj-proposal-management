@@ -222,6 +222,7 @@ function App() {
             projectName: project.name,
             projectUrl: project.url,
             projectGitRepo: project.gitRepo,
+            projectGitPages: project.githubPages,
             projectId: project.id,
           }))
         );
@@ -260,6 +261,7 @@ function App() {
         projectName: project.name,
         projectUrl: project.url,
         projectGitRepo: project.gitRepo,
+            projectGitPages: project.githubPages,
         projectId: project.id,
       }))
     );
@@ -462,6 +464,7 @@ function App() {
         projectName: project.name,
         projectUrl: project.url,
         projectGitRepo: project.gitRepo,
+            projectGitPages: project.githubPages,
         projectId: project.id,
       }))
     );
@@ -1009,9 +1012,14 @@ function App() {
                         </div>
 
                         <div className="flex gap-2">
-                          {project.url && (
+   {(project.githubPages || project.url) && (
                             <button
-                              onClick={() => window.open(project.url, '_blank')}
+                              onClick={() => window.open(project.githubPages || project.url, '_blank')}
+                              className="flex-1 bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 text-sm"
+                            >
+                              访问
+                            </button>
+                          )}
                               className="flex-1 bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 text-sm"
                             >
                               访问
