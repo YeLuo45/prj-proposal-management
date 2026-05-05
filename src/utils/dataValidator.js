@@ -16,8 +16,8 @@ export function validateProposal(proposal, projects, milestones) {
   // name 必填
   if (!proposal.name || typeof proposal.name !== 'string' || proposal.name.trim() === '') {
     errors.push('name 必填');
-  } else if (proposal.name.length > 100) {
-    errors.push('name 不能超过 100 字符');
+  } else if (proposal.name.length > 200) {
+    errors.push('name 不能超过 200 字符');
   }
 
   // status 枚举
@@ -39,11 +39,11 @@ export function validateProposal(proposal, projects, milestones) {
     }
   }
 
-  // 日期格式
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(proposal.createdAt)) {
+  // 日期格式（支持 YYYY-MM-DD 和 ISO 格式）
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(proposal.createdAt) && !/^\d{4}-\d{2}-\d{2}T/.test(proposal.createdAt)) {
     errors.push(`createdAt 格式错误：${proposal.createdAt}`);
   }
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(proposal.updatedAt)) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(proposal.updatedAt) && !/^\d{4}-\d{2}-\d{2}T/.test(proposal.updatedAt)) {
     errors.push(`updatedAt 格式错误：${proposal.updatedAt}`);
   }
 
