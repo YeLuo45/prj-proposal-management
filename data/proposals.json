@@ -306,7 +306,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-04-16",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -881,11 +881,11 @@
           "notes": "2026-05-05 验收通过：障碍物系统(4类型)+碰撞检测+GameOver+localStorage 均已实现并正常工作。V1部署版满足P-20260505-001 PRD要求。"
         },
         {
-          "id": "P-20260505-001-B",
+          "id": "P-20260505-081",
           "name": "temple-run 分数系统+角色成长",
           "description": "分数系统（距离计数+金币统计）+ 角色成长（金币解锁皮肤）",
           "type": "package",
-          "status": "delivered",
+          "status": "archived",
           "url": "https://yeluo45.github.io/temple-run/",
           "packageUrl": "https://github.com/YeLuo45/temple-run/archive/refs/heads/main.zip",
           "gitRepo": "https://github.com/YeLuo45/temple-run",
@@ -894,7 +894,7 @@
             "PWA"
           ],
           "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
+          "updatedAt": "2026-04-16",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
           "acceptance": "accepted",
@@ -913,7 +913,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-04-16",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -2682,7 +2682,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-04-16",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
