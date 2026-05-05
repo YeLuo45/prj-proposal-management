@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "projects": [
     {
       "id": "PRJ-20260412-009",
@@ -64,68 +64,7 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ],
-      "milestones": []
-    },
-    {
-      "id": "p-20260505-077",
-      "name": "p-20260505-077",
-      "description": "P-20260505-077",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260505-077",
-          "name": "p-20260505-077",
-          "description": "P-20260505-077",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260505-077/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ],
-      "milestones": []
-    },
-    {
-      "id": "p-20260504-070",
-      "name": "p-20260504-070",
-      "description": "P-20260504-070",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260504-070",
-          "name": "p-20260504-070",
-          "description": "P-20260504-070",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260504-070/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260417-002",
@@ -154,8 +93,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260418-001",
@@ -184,8 +122,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260418-004",
@@ -250,8 +187,7 @@
           "techExpectations": "pending",
           "acceptance": ""
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260418-005",
@@ -280,8 +216,7 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260419-007",
@@ -310,8 +245,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260419-003",
@@ -684,8 +618,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260419-002",
@@ -714,8 +647,7 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260419-001",
@@ -745,8 +677,7 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "TradingAgents-CN",
@@ -793,8 +724,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260421-003",
@@ -823,8 +753,7 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260422-001",
@@ -923,7 +852,7 @@
           "updatedAt": "2026-05-03"
         },
         {
-          "id": "P-20260504-001",
+          "id": "P-20260504-001-2",
           "name": "ai-novel-assistant",
           "description": "章节大纲拖拽排序 + 字数目标追踪(每日/全书) + 写作统计Dashboard(7天柱状图/完成度环形图) + 剧情线颜色标签",
           "type": "package",
@@ -941,7 +870,7 @@
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260504-002",
+          "id": "P-20260504-002-2",
           "name": "ai-novel-assistant",
           "description": "多轮对话上下文(IndexedDB持久化) + 世界观助手Tab(素材卡问答) + 智能写作建议(续写/润色diff展示)",
           "type": "package",
@@ -959,7 +888,7 @@
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260504-003",
+          "id": "P-20260504-003-2",
           "name": "ai-novel-assistant",
           "description": "EPUB封面已有(cover.xhtml) + 目录卷>章>节三级NCX + DC元数据 + PDF排版优化(pdfmake)",
           "type": "package",
@@ -977,7 +906,7 @@
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260504-004",
+          "id": "P-20260504-004-2",
           "name": "ai-novel-assistant",
           "description": "BackupPanel(导出/导入/云端三Tab) + BackupService(JSON.zip导出/导入/冲突处理) + LocalBackupProvider(localStorage快照) + 自动备份提示(30分钟Toast)",
           "type": "package",
@@ -1031,7 +960,7 @@
           "acceptance": ""
         },
         {
-          "id": "P-20260505-001",
+          "id": "P-20260505-001-2",
           "name": "ai-novel-assistant",
           "description": "ViewpointSwitcher(第一人称/第三人称切换) + CharacterAvatar(头像/缩写) + CharacterRelationshipList(关系列表/关系图) + Dashboard角色统计 + WritingEditor集成",
           "type": "package",
@@ -1049,7 +978,7 @@
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260505-002",
+          "id": "P-20260505-002-2",
           "name": "ai-novel-assistant",
           "description": "TimelineView(锯齿布局时间轴) + TimelineCard(章节卡片/剧情线色块) + TimelineControls(缩放50-200%/剧情线筛选) + ProjectEditor时间线Tab + moveOutlineNode跨父节点拖拽修复",
           "type": "package",
@@ -1084,8 +1013,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260423-001",
@@ -1114,8 +1042,7 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260423-005",
@@ -1159,8 +1086,7 @@
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260423-002",
@@ -1189,8 +1115,7 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260424-004",
@@ -1202,7 +1127,7 @@
       "updatedAt": "2026-04-24",
       "proposals": [
         {
-          "id": "P-20260419-004",
+          "id": "P-20260419-004-2",
           "name": "match3-puzzle",
           "description": "8x8三消游戏原型验证，纯HTML5 Canvas；5种颜色圆块、点击交换、3+连消、下落填补、分数系统、游戏结束判定",
           "type": "package",
@@ -1234,8 +1159,7 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260424-001",
@@ -1264,8 +1188,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "hermes-协作服务器消息转发机制重构",
@@ -1294,8 +1217,7 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260426-003",
@@ -1324,8 +1246,7 @@
           "techExpectations": "",
           "acceptance": "accepted (2026-04-26)"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "calculator-app.git",
@@ -1337,7 +1258,7 @@
       "updatedAt": "2026-04-26",
       "proposals": [
         {
-          "id": "P-20250416-003",
+          "id": "P-20250416-003-2",
           "name": "calculator-app.git",
           "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算（Web 已交付，APK 因 NDK 损坏阻塞）",
           "type": "package",
@@ -1354,8 +1275,7 @@
           "techExpectations": "",
           "acceptance": "accepted (2026-04-26)"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "preschool-puzzle",
@@ -1402,8 +1322,7 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260428-002",
@@ -1469,7 +1388,7 @@
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260504-001",
+          "id": "P-20260504-001-3",
           "name": "flight-chess-3d",
           "description": "6种皮肤(Classic/Space/Ocean/Candy/Dinosaur/ChineseNewYear) + 3种地图(Standard/Ring/Hexagonal)；皮肤切换改颜色材质，地图变体改轨道结构；解锁系统：成就/登录/游戏次数",
           "type": "package",
@@ -1487,7 +1406,7 @@
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260504-002",
+          "id": "P-20260504-002-3",
           "name": "3d飞行棋-v3-ai对手",
           "description": "简单/中等/困难三档AI；AI决策评估体系(前进/捕获/安全/事件格)；AI思考动画(2秒/1.5秒/1秒)；AIvsAI演示模式；修复跑道移动逻辑与游戏规则一致性",
           "type": "package",
@@ -1505,7 +1424,7 @@
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260504-003",
+          "id": "P-20260504-003-3",
           "name": "3d飞行棋-v3-pwa离线支持",
           "description": "manifest.json配置 + Service Worker + Cache First策略 + 离线指示器 + 添加到桌面支持；手动PWA方案避免peer-deps冲突",
           "type": "package",
@@ -1524,7 +1443,7 @@
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260504-004",
+          "id": "P-20260504-004-3",
           "name": "flight-chess-3d",
           "description": "15个成就(胜利/技巧/模式/特殊)+金币奖励+通知弹窗+成就面板",
           "type": "package",
@@ -1542,7 +1461,7 @@
           "acceptance": ""
         },
         {
-          "id": "P-20260504-005",
+          "id": "P-20260504-005-2",
           "name": "flight-chess-3d",
           "description": "录像录制(moves序列)+localStorage存储(最多10局)+回放播放器(1x/2x/4x+进度条)",
           "type": "package",
@@ -1560,7 +1479,7 @@
           "acceptance": ""
         },
         {
-          "id": "P-20260504-006",
+          "id": "P-20260504-006-2",
           "name": "flight-chess-3d",
           "description": "房间码+WebSocket实时同步+观众只读视角+主机控制投骰/选棋",
           "type": "package",
@@ -1667,8 +1586,7 @@
           "techExpectations": "timeout-approved（继承V1技术栈）",
           "acceptance": ""
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "3d飞行棋-玩家颜色选择-战绩统计",
@@ -1680,7 +1598,7 @@
       "updatedAt": "2026-05-02",
       "proposals": [
         {
-          "id": "P-20260502-005",
+          "id": "P-20260502-005-2",
           "name": "3d飞行棋-玩家颜色选择-战绩统计",
           "description": "玩家可选颜色；战绩统计（胜率/连胜）；localStorage持久化",
           "type": "package",
@@ -1697,8 +1615,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "prj-proposals-manager-项目管理增强",
@@ -1710,7 +1627,7 @@
       "updatedAt": "2026-05-03",
       "proposals": [
         {
-          "id": "P-20260502-001",
+          "id": "P-20260502-001-2",
           "name": "prj-proposals-manager-项目管理增强",
           "description": "项目详情页（独立路由 /project/:id）+ 里程碑管理（CRUD + 时间线 + 提案关联）; PRD 倒计时到期(2026-05-02)，默认通过处理; 技术期望倒计时到期(2026-05-02)，默认通过处理; 仓库已从 proposals-manager 更名为 prj-proposals-manager; 今日修复：useGitHub.js中REPO名修正为prj-proposals-manager（匹配实际仓库名）；构建时复制data/到dist/确保gh-pages包含proposals.json；GitHub Token验证功能正常；79个提案/34个项目数据已同步",
           "type": "package",
@@ -1727,8 +1644,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "3d飞行棋-v3-ai对手",
@@ -1740,7 +1656,7 @@
       "updatedAt": "2026-05-04",
       "proposals": [
         {
-          "id": "P-20260504-002",
+          "id": "P-20260504-002-4",
           "name": "3d飞行棋-v3-ai对手",
           "description": "简单/中等/困难三档AI；AI决策评估体系(前进/捕获/安全/事件格)；AI思考动画(2秒/1.5秒/1秒)；AIvsAI演示模式；修复跑道移动逻辑与游戏规则一致性",
           "type": "package",
@@ -1757,8 +1673,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "3d飞行棋-v3-pwa离线支持",
@@ -1770,7 +1685,7 @@
       "updatedAt": "2026-05-04",
       "proposals": [
         {
-          "id": "P-20260504-003",
+          "id": "P-20260504-003-4",
           "name": "3d飞行棋-v3-pwa离线支持",
           "description": "manifest.json配置 + Service Worker + Cache First策略 + 离线指示器 + 添加到桌面支持；手动PWA方案避免peer-deps冲突",
           "type": "package",
@@ -1788,8 +1703,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "PRJ-20260422-004",
@@ -1818,8 +1732,248 @@
           "techExpectations": "timeout-approved（技术栈继承V1：HTML5 Canvas + Vanilla JS）",
           "acceptance": "accepted"
         }
+      ]
+    },
+    {
+      "id": "PRJ-20260505-010",
+      "name": "card-game-prototype",
+      "description": "DBG卡牌游戏原型",
+      "url": "https://yeluo45.github.io/card-game-prototype/",
+      "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
+      "tags": [
+        "游戏",
+        "卡牌",
+        "DBG"
       ],
-      "milestones": []
+      "createdAt": "2026-05-05",
+      "updatedAt": "2026-05-05",
+      "proposals": [
+        {
+          "id": "P-20260505-010",
+          "name": "card-game-prototype",
+          "description": "DBG卡牌游戏原型开发",
+          "type": "web",
+          "status": "active",
+          "url": "https://yeluo45.github.io/card-game-prototype/",
+          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
+          "tags": [
+            "游戏",
+            "卡牌",
+            "DBG"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260505-011",
+      "name": "snake-battle",
+      "description": "贪吃蛇大作战 Web + PWA 版",
+      "url": "https://yeluo45.github.io/snake-battle/",
+      "gitRepo": "https://github.com/YeLuo45/snake-battle",
+      "tags": [
+        "游戏",
+        "PWA"
+      ],
+      "createdAt": "2026-05-05",
+      "updatedAt": "2026-05-05",
+      "proposals": [
+        {
+          "id": "P-20260505-011",
+          "name": "snake-battle",
+          "description": "贪吃蛇大作战开发",
+          "type": "web",
+          "status": "active",
+          "url": "https://yeluo45.github.io/snake-battle/",
+          "gitRepo": "https://github.com/YeLuo45/snake-battle",
+          "tags": [
+            "游戏",
+            "PWA"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260505-012",
+      "name": "game-1024",
+      "description": "1024 滑块合并游戏 PWA",
+      "url": "https://yeluo45.github.io/game-1024/",
+      "gitRepo": "https://github.com/YeLuo45/game-1024",
+      "tags": [
+        "游戏",
+        "PWA"
+      ],
+      "createdAt": "2026-05-05",
+      "updatedAt": "2026-05-05",
+      "proposals": [
+        {
+          "id": "P-20260505-012",
+          "name": "game-1024",
+          "description": "1024滑块游戏开发",
+          "type": "web",
+          "status": "active",
+          "url": "https://yeluo45.github.io/game-1024/",
+          "gitRepo": "https://github.com/YeLuo45/game-1024",
+          "tags": [
+            "游戏",
+            "PWA"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260505-013",
+      "name": "ai-subscription",
+      "description": "AI 订阅内容聚合应用",
+      "url": "",
+      "gitRepo": "https://github.com/YeLuo45/ai-subscription",
+      "tags": [
+        "AI",
+        "订阅",
+        "聚合"
+      ],
+      "createdAt": "2026-05-05",
+      "updatedAt": "2026-05-05",
+      "proposals": [
+        {
+          "id": "P-20260505-013",
+          "name": "ai-subscription",
+          "description": "AI订阅内容聚合应用开发",
+          "type": "web",
+          "status": "active",
+          "url": "",
+          "gitRepo": "https://github.com/YeLuo45/ai-subscription",
+          "tags": [
+            "AI",
+            "订阅",
+            "聚合"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260505-014",
+      "name": "pixel-pal-web",
+      "description": "PixelPal AI 桌面宠物与工作助手",
+      "url": "https://yeluo45.github.io/pixel-pal-web/",
+      "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
+      "tags": [
+        "AI",
+        "桌面宠物",
+        "助手"
+      ],
+      "createdAt": "2026-05-05",
+      "updatedAt": "2026-05-05",
+      "proposals": [
+        {
+          "id": "P-20260505-014",
+          "name": "pixel-pal-web",
+          "description": "PixelPal桌面宠物开发",
+          "type": "web",
+          "status": "active",
+          "url": "https://yeluo45.github.io/pixel-pal-web/",
+          "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
+          "tags": [
+            "AI",
+            "桌面宠物",
+            "助手"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260505-015",
+      "name": "plants-vs-zombies",
+      "description": "植物大战僵尸 Python + Pygame 克隆游戏",
+      "url": "",
+      "gitRepo": "https://github.com/YeLuo45/plants-vs-zombies",
+      "tags": [
+        "游戏",
+        "Python",
+        "Pygame"
+      ],
+      "createdAt": "2026-05-05",
+      "updatedAt": "2026-05-05",
+      "proposals": [
+        {
+          "id": "P-20260505-015",
+          "name": "plants-vs-zombies",
+          "description": "植物大战僵尸游戏开发",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "gitRepo": "https://github.com/YeLuo45/plants-vs-zombies",
+          "tags": [
+            "游戏",
+            "Python",
+            "Pygame"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260505-016",
+      "name": "doc-editor",
+      "description": "文档编辑器 Web 应用",
+      "url": "https://yeluo45.github.io/doc-editor/",
+      "gitRepo": "https://github.com/YeLuo45/doc-editor",
+      "tags": [
+        "文档",
+        "编辑器",
+        "Web"
+      ],
+      "createdAt": "2026-05-05",
+      "updatedAt": "2026-05-05",
+      "proposals": [
+        {
+          "id": "P-20260505-016",
+          "name": "doc-editor",
+          "description": "文档编辑器开发",
+          "type": "web",
+          "status": "active",
+          "url": "https://yeluo45.github.io/doc-editor/",
+          "gitRepo": "https://github.com/YeLuo45/doc-editor",
+          "tags": [
+            "文档",
+            "编辑器",
+            "Web"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
     }
   ]
 }
