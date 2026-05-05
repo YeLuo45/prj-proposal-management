@@ -1020,11 +1020,6 @@ function App() {
                               访问
                             </button>
                           )}
-                              className="flex-1 bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 text-sm"
-                            >
-                              访问
-                            </button>
-                          )}
                           {project.gitRepo && (
                             <button
                               onClick={() => window.open(project.gitRepo, '_blank')}
