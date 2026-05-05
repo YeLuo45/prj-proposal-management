@@ -91,6 +91,7 @@ export const KeyboardShortcuts = {
   GO_TO_KANBAN: 'ctrl+2',
   GO_TO_GANTT: 'ctrl+3',
   GO_TO_DASHBOARD: 'ctrl+4',
+  GO_TO_SETTINGS: 'ctrl+comma',
   
   // View shortcuts
   TOGGLE_THEME: 'ctrl+t',
@@ -105,6 +106,7 @@ export function getKeyLabel(keyCombo) {
     'shift': 'Shift',
     'escape': 'Esc',
     'space': 'Space',
+    'comma': ',',
     'n': 'N',
     'f': 'F',
     's': 'S',

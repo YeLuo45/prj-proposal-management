@@ -187,6 +187,9 @@ function App() {
     [KeyboardShortcuts.GO_TO_DASHBOARD]: () => {
       window.location.href = '/dashboard';
     },
+    [KeyboardShortcuts.GO_TO_SETTINGS]: () => {
+      window.location.href = '/settings';
+    },
     [KeyboardShortcuts.TOGGLE_THEME]: () => {
       setThemeId(themeId === 'dark' ? 'light' : 'dark');
     },

@@ -119,6 +119,9 @@ function Header({ onAdd, onSettings, onShowHistory, onOpenNotifications, onShowS
           <Link to="/marketplace" className={navLinkClass('/marketplace')}>
             📦 模板市场
           </Link>
+          <Link to="/settings" className={navLinkClass('/settings')}>
+            ⚙️ {t('app.settings')}
+          </Link>
 
           {/* Export Dropdown */}
           <div className="relative" ref={exportMenuRef}>
