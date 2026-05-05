@@ -922,7 +922,7 @@
       "milestones": []
     },
     {
-      "id": "TradingAgents-CN",
+      "id": "PRJ-20260419-005",
       "name": "TradingAgents-CN",
       "description": "AI 量化交易代理系统；Python 3.10+；混合许可证（Apache 2.0 开源 + 专有前端后端需商业授权）；包含 FastAPI 后端 + Vue 前端 + Docker 部署；基于 TauricResearch/TradingAgents",
       "url": "",
@@ -946,7 +946,8 @@
           "updatedAt": "2026-04-19",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-005"
         },
         {
           "id": "P-20260504-3046",
@@ -964,7 +965,8 @@
           "updatedAt": "2026-04-19",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-005"
         }
       ],
       "milestones": []
@@ -1333,7 +1335,7 @@
       "milestones": []
     },
     {
-      "id": "preschool-puzzle",
+      "id": "PRJ-20260427-001",
       "name": "preschool-puzzle",
       "description": "幼儿益智解谜游戏",
       "url": "https://yeluo45.github.io/preschool-puzzle/ (gh-pages)",
@@ -1357,7 +1359,8 @@
           "updatedAt": "2026-04-27",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260427-001"
         },
         {
           "id": "P-20260504-3096",
@@ -1375,7 +1378,8 @@
           "updatedAt": "2026-04-27",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260427-001"
         }
       ],
       "milestones": []
@@ -1687,7 +1691,7 @@
       "milestones": []
     },
     {
-      "id": "doc-editor",
+      "id": "PRJ-20260430-002",
       "name": "doc-editor",
       "description": "顶部搜索框实时搜索文档标题和内容(300ms防抖)，显示标题+内容片段+文件夹，最多10条结果，点击跳转",
       "url": "https://yeluo45.github.io/doc-editor/",
@@ -1711,7 +1715,8 @@
           "updatedAt": "2026-04-30",
           "prdConfirmation": "timeout-approved (快速启动)",
           "techExpectations": "confirmed (默认最优)",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260430-002"
         }
       ],
       "milestones": []
@@ -2520,7 +2525,7 @@
       "name": "game-1024",
       "description": "每日挑战(固定初始盘面+得分排名)+10个成就(解锁弹窗+奖励)；参考3D打地鼠V4实现",
       "url": "",
-      "gitRepo": "",
+      "gitRepo": "https://github.com/YeLuo45/game-1024",
       "createdAt": "2026-05-02",
       "updatedAt": "2026-05-02",
       "proposals": [
@@ -3506,7 +3511,7 @@
       "name": "harness-desktop",
       "description": "v2 迭代已完成交付：①Sub Agent（共享KV Cache + 任务队列 + 依赖管理）②Verification Hooks后台分类器（strict/loose/disabled三档 + auto-retry）③4个新工具（edit_code/project_tree/web_search/task_plan）；llmBridge.ts MVP_TOOLS→V2_TOOLS 已修复；Vite build成功；electron-builder打包受限WSL环境（需Windows本机执行）",
       "url": "",
-      "gitRepo": "",
+      "gitRepo": "https://github.com/YeLuo45/harness-desktop",
       "createdAt": "2026-05-03",
       "updatedAt": "2026-05-03",
       "proposals": [
