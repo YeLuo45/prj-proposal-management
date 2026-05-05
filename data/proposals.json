@@ -3503,7 +3503,7 @@
     },
     {
       "id": "PRJ-20250418-003",
-      "name": "harness-desktop-v2-sub-agent-verification-hooks-更多工具",
+      "name": "harness-desktop",
       "description": "v2 迭代已完成交付：①Sub Agent（共享KV Cache + 任务队列 + 依赖管理）②Verification Hooks后台分类器（strict/loose/disabled三档 + auto-retry）③4个新工具（edit_code/project_tree/web_search/task_plan）；llmBridge.ts MVP_TOOLS→V2_TOOLS 已修复；Vite build成功；electron-builder打包受限WSL环境（需Windows本机执行）",
       "url": "",
       "gitRepo": "",
@@ -3533,7 +3533,7 @@
     },
     {
       "id": "PRJ-20260412-008",
-      "name": "ai-subscription-多端-ai-层同步-pc-小程序",
+      "name": "ai-subscription",
       "description": "PC端复用shared/(callLLM/streamLLM)；uni-app/Taro小程序调用Web API；已git push (aacf1f2)",
       "url": "",
       "gitRepo": "https://github.com/YeLuo45/ai-subscription",
