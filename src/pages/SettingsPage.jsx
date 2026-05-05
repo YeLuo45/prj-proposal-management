@@ -4,6 +4,9 @@ import SyncSettings from '../components/SyncSettings';
 import AISettings from '../components/AISettings';
 import ImportExportPanel from '../components/ImportExportPanel';
 import ExportPanel from '../components/ExportPanel';
+import ThemeSwitcher from '../components/ThemeSwitcher';
+import LanguageSwitcher from '../components/LanguageSwitcher';
+import KeyboardShortcutsModal from '../components/KeyboardShortcutsModal';
 
 function SettingsPage() {
   const { t } = useTranslation();
@@ -114,6 +117,62 @@ function SettingsPage() {
             projects={localProjects}
             milestones={localMilestones}
           />
+        </section>
+
+        {/* Theme Settings */}
+        <section className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+          <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">
+            主题设置
+          </h2>
+          <div className="flex items-center gap-4">
+            <span className="text-sm text-gray-600 dark:text-gray-400">当前主题：</span>
+            <ThemeSwitcher />
+          </div>
+        </section>
+
+        {/* Language Settings */}
+        <section className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+          <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">
+            语言设置
+          </h2>
+          <LanguageSwitcher />
+        </section>
+
+        {/* Keyboard Shortcuts */}
+        <section className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+          <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">
+            键盘快捷键
+          </h2>
+          <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <div className="flex items-center gap-2">
+              <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">Ctrl</kbd>
+              <span>+</span>
+              <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">,</kbd>
+              <span>打开设置</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">Ctrl</kbd>
+              <span>+</span>
+              <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">?</kbd>
+              <span>快捷键列表</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">Ctrl</kbd>
+              <span>+</span>
+              <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">Z</kbd>
+              <span>撤销</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">Ctrl</kbd>
+              <span>+</span>
+              <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">S</kbd>
+              <span>保存</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs">Esc</kbd>
+              <span>关闭弹窗</span>
+            </div>
+          </div>
         </section>
       </div>
     </div>
