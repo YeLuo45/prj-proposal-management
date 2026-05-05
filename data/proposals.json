@@ -1726,7 +1726,7 @@
       "name": "todolist",
       "description": "甘特图时间线视图 + 循环任务自动生成下一周期",
       "url": "",
-      "gitRepo": "",
+      "gitRepo": "https://github.com/YeLuo45/todo-list",
       "createdAt": "2026-05-02",
       "updatedAt": "2026-05-03",
       "proposals": [
