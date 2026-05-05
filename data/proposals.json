@@ -101,7 +101,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/ai-stock-simulation/"
     },
     {
       "id": "PRJ-20260420-002",
@@ -402,7 +403,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/pixel-pal-web/"
     },
     {
       "id": "PRJ-20260417-002",
@@ -433,7 +435,8 @@
           "version": "v1.6.0"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": ""
     },
     {
       "id": "PRJ-20260418-001",
@@ -463,7 +466,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/monopoly3d/"
     },
     {
       "id": "PRJ-20260418-004",
@@ -511,7 +515,8 @@
           "acceptance": ""
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/future-little-leaders/"
     },
     {
       "id": "PRJ-20260418-005",
@@ -541,7 +546,8 @@
           "acceptance": ""
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": ""
     },
     {
       "id": "PRJ-20260419-007",
@@ -571,7 +577,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/ai-creator-h5/"
     },
     {
       "id": "PRJ-20260419-003",
@@ -819,7 +826,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/dont-step-white/"
     },
     {
       "id": "PRJ-20260419-002",
@@ -849,7 +857,8 @@
           "acceptance": ""
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/tank-battle/"
     },
     {
       "id": "PRJ-20260419-001",
@@ -919,7 +928,8 @@
           "acceptance": ""
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/temple-run/"
     },
     {
       "id": "PRJ-20260419-005",
@@ -969,7 +979,8 @@
           "projectId": "PRJ-20260419-005"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": ""
     },
     {
       "id": "PRJ-20260421-003",
@@ -999,7 +1010,8 @@
           "acceptance": ""
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": ""
     },
     {
       "id": "PRJ-20260422-001",
@@ -1119,7 +1131,8 @@
           "acceptance": ""
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/ai-novel-assistant/"
     },
     {
       "id": "PRJ-20260423-001",
@@ -1149,7 +1162,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/room-escape-puzzle/"
     },
     {
       "id": "PRJ-20260423-005",
@@ -1212,7 +1226,8 @@
           "acceptance": ""
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/hermes-agent-collab/"
     },
     {
       "id": "PRJ-20260423-002",
@@ -1242,7 +1257,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/little-garden/"
     },
     {
       "id": "PRJ-20260424-004",
@@ -1272,7 +1288,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/match3-puzzle/"
     },
     {
       "id": "PRJ-20260424-001",
@@ -1302,7 +1319,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": ""
     },
     {
       "id": "PRJ-20260426-003",
@@ -1332,7 +1350,8 @@
           "acceptance": "accepted (2026-04-26)"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/calculator-app/"
     },
     {
       "id": "PRJ-20260427-001",
@@ -1382,7 +1401,8 @@
           "projectId": "PRJ-20260427-001"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/preschool-puzzle/"
     },
     {
       "id": "PRJ-20260428-002",
@@ -1538,7 +1558,8 @@
           "acceptance": ""
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/flight-chess-3d/"
     },
     {
       "id": "PRJ-20260428-001",
@@ -1658,7 +1679,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/whack-a-mole-3d/"
     },
     {
       "id": "PRJ-20260430-001",
@@ -1688,7 +1710,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": ""
     },
     {
       "id": "PRJ-20260430-002",
@@ -1719,7 +1742,8 @@
           "projectId": "PRJ-20260430-002"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/doc-editor/"
     },
     {
       "id": "PRJ-20250416-001",
@@ -1930,7 +1954,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": ""
     },
     {
       "id": "PRJ-20260421-001",
@@ -2518,7 +2543,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/card-game-prototype/"
     },
     {
       "id": "PRJ-20250416-002",
@@ -2640,7 +2666,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/game-1024/"
     },
     {
       "id": "PRJ-20260417-001",
@@ -2688,7 +2715,8 @@
           "acceptance": ""
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/prj-proposals-manager/"
     },
     {
       "id": "PRJ-20260420-001",
@@ -2772,7 +2800,8 @@
           "acceptance": "pending"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/snake-battle/"
     },
     {
       "id": "PRJ-20260418-002",
@@ -3504,7 +3533,8 @@
           "acceptance": "小墨于2026-05-06自行验收通过"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/creative-drawing-board/"
     },
     {
       "id": "PRJ-20250418-003",
@@ -3534,7 +3564,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": ""
     },
     {
       "id": "PRJ-20260412-008",
@@ -3745,7 +3776,8 @@
           "acceptance": "accepted"
         }
       ],
-      "milestones": []
+      "milestones": [],
+      "githubPages": "https://yeluo45.github.io/ai-subscription/"
     }
   ]
 }
