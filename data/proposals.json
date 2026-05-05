@@ -1718,7 +1718,7 @@
     },
     {
       "id": "PRJ-20250416-001",
-      "name": "todolist-v11-甘特图-循环提醒",
+      "name": "todolist",
       "description": "甘特图时间线视图 + 循环任务自动生成下一周期",
       "url": "",
       "gitRepo": "",
@@ -2517,7 +2517,7 @@
     },
     {
       "id": "PRJ-20250416-002",
-      "name": "game-1024-v2-每日挑战-成就系统",
+      "name": "game-1024",
       "description": "每日挑战(固定初始盘面+得分排名)+10个成就(解锁弹窗+奖励)；参考3D打地鼠V4实现",
       "url": "",
       "gitRepo": "",
@@ -2687,7 +2687,7 @@
     },
     {
       "id": "PRJ-20260420-001",
-      "name": "snake-battle-v4-成就系统-赛季通行证",
+      "name": "snake-battle",
       "description": "M1成就系统(100+成就/4分类/解锁称号头像框)+M2赛季通行证(30天/50级/免费付费区分)+M3每日挑战(每天3个随机/00:00刷新)+继承V1-V3全部功能；dev于2026-05-03交付；M1: AchievementPanel+useAchievements+achievements.js(123成就)；M2: SeasonPassPanel+useSeasonPass+seasonPass.js；M3: DailyChallengePanel+useDailyChallenge+challenges.js(23类型)",
       "url": "https://yeluo45.github.io/snake-battle/",
       "gitRepo": "https://github.com/YeLuo45/snake-battle",
