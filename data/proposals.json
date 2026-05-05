@@ -1693,16 +1693,6 @@
       ]
     },
     {
-      "id": "3d飞行棋-玩家颜色选择-战绩统计",
-      "name": "3d飞行棋-玩家颜色选择-战绩统计",
-      "description": "玩家可选颜色；战绩统计（胜率/连胜）；localStorage持久化",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-02",
-      "updatedAt": "2026-05-02",
-      "proposals": []
-    },
-    {
       "id": "PRJ-20250416-001",
       "name": "todolist-v11-甘特图-循环提醒",
       "description": "甘特图时间线视图 + 循环任务自动生成下一周期",
@@ -2621,16 +2611,6 @@
       ]
     },
     {
-      "id": "prj-proposals-manager-项目管理增强",
-      "name": "prj-proposals-manager-项目管理增强",
-      "description": "项目详情页（独立路由 /project/:id）+ 里程碑管理（CRUD + 时间线 + 提案关联）; PRD 倒计时到期(2026-05-02)，默认通过处理; 技术期望倒计时到期(2026-05-02)，默认通过处理; 仓库已从 proposals-manager 更名为 prj-proposals-manager; 今日修复：useGitHub.js中REPO名修正为prj-proposals-manager（匹配实际仓库名）；构建时复制data/到dist/确保gh-pages包含proposals.json；GitHub Token验证功能正常；79个提案/34个项目数据已同步",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-03",
-      "updatedAt": "2026-05-03",
-      "proposals": []
-    },
-    {
       "id": "PRJ-20260417-001",
       "name": "prj-proposals-manager",
       "description": "提案管理系统；完整CRUD；GitHub API操作JSON数据；已与提案管理系统单向同步；仓库已于2026-05-03从 proposals-manager 更名为 prj-proposals-manager",
@@ -3519,36 +3499,6 @@
           "acceptance": "accepted"
         }
       ]
-    },
-    {
-      "id": "3d飞行棋-v3-ai对手",
-      "name": "3d飞行棋-v3-ai对手",
-      "description": "简单/中等/困难三档AI；AI决策评估体系(前进/捕获/安全/事件格)；AI思考动画(2秒/1.5秒/1秒)；AIvsAI演示模式；修复跑道移动逻辑与游戏规则一致性",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-04",
-      "updatedAt": "2026-05-04",
-      "proposals": []
-    },
-    {
-      "id": "3d飞行棋-v3-pwa离线支持",
-      "name": "3d飞行棋-v3-pwa离线支持",
-      "description": "manifest.json配置 + Service Worker + Cache First策略 + 离线指示器 + 添加到桌面支持；手动PWA方案避免peer-deps冲突",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-04",
-      "updatedAt": "2026-05-04",
-      "proposals": []
-    },
-    {
-      "id": "PRJ-20260422-002",
-      "name": "ash-echoes",
-      "description": "V4内容扩张交付完成。M1新章节(Ch4废墟都市12关+Ch5地下基地12关+Ch6核心区域10关)+M2新敌人(9种)+M3精英系统(每章3个)+M4Boss设计(废墟之王/基地指挥官/核心意志)+M5地图扩展。npm run build成功(151KB JS)。技术栈：Phaser 3.60+ CDN + Vanilla JS。",
-      "url": "",
-      "gitRepo": "https://github.com/YeLuo45/ash-echoes",
-      "createdAt": "2026-05-04",
-      "updatedAt": "2026-05-05",
-      "proposals": []
     },
     {
       "id": "PRJ-20260412-008",
