@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "projects": [
     {
       "id": "PRJ-20260412-009",
@@ -100,7 +100,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260505-077",
@@ -129,7 +130,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260504-070",
@@ -158,7 +160,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260417-002",
@@ -188,7 +191,8 @@
           "acceptance": "accepted",
           "version": "v1.6.0"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-001",
@@ -217,7 +221,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-004",
@@ -282,7 +287,8 @@
           "techExpectations": "pending",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-005",
@@ -311,7 +317,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-007",
@@ -340,7 +347,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-003",
@@ -713,7 +721,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-002",
@@ -742,7 +751,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-001",
@@ -793,7 +803,8 @@
           "acceptance": "accepted",
           "notes": "验收通过：npm run build成功，GitHub Actions部署成功(1m14s)，代码逻辑完整，HUD距离+金币显示，皮肤商店购买/选择，localStorage持久化。"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "TradingAgents-CN",
@@ -840,7 +851,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260421-003",
@@ -869,7 +881,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260422-001",
@@ -1129,7 +1142,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-001",
@@ -1158,7 +1172,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-005",
@@ -1202,7 +1217,8 @@
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-002",
@@ -1231,7 +1247,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-004",
@@ -1275,7 +1292,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-001",
@@ -1304,7 +1322,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "hermes-协作服务器消息转发机制重构",
@@ -1333,7 +1352,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260426-003",
@@ -1362,7 +1382,8 @@
           "techExpectations": "",
           "acceptance": "accepted (2026-04-26)"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "calculator-app.git",
@@ -1391,7 +1412,8 @@
           "techExpectations": "",
           "acceptance": "accepted (2026-04-26)"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "preschool-puzzle",
@@ -1438,7 +1460,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260428-002",
@@ -1702,7 +1725,8 @@
           "techExpectations": "timeout-approved（继承V1技术栈）",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "3d飞行棋-玩家颜色选择-战绩统计",
@@ -1731,7 +1755,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "prj-proposals-manager-项目管理增强",
@@ -1760,7 +1785,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "3d飞行棋-v3-ai对手",
@@ -1789,7 +1815,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "3d飞行棋-v3-pwa离线支持",
@@ -1819,7 +1846,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260422-004",
@@ -1848,7 +1876,8 @@
           "techExpectations": "timeout-approved（技术栈继承V1：HTML5 Canvas + Vanilla JS）",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     }
   ]
 }
