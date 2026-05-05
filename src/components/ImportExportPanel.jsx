@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { exportProjectsToCSV, downloadFile } from '../utils/csvExporter';
+import { downloadAllCSVs } from '../utils/csvExporter';
 import { downloadJSONBackup } from '../utils/jsonBackup';
 import CsvPreviewTable from './CsvPreviewTable';
 
@@ -12,8 +12,7 @@ function ImportExportPanel({ projects, milestones, onImport, onRestore }) {
   const jsonInputRef = useRef(null);
 
   const handleExportCSV = () => {
-    const csv = exportProjectsToCSV(projects);
-    downloadFile(csv, `proposals-${Date.now()}.csv`, 'text/csv');
+    downloadAllCSVs(projects);
   };
 
   const handleExportJSON = () => {

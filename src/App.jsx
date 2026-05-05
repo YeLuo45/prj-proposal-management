@@ -35,7 +35,7 @@ import KeyboardShortcutsModal from './components/KeyboardShortcutsModal';
 import GlobalSearch from './components/GlobalSearch';
 import { useGlobalSearch } from './hooks/useGlobalSearch';
 import { validateProjects } from './utils/dataValidator';
-import { exportProjectsToCSV, downloadFile } from './utils/csvExporter';
+import { downloadAllCSVs, downloadFilteredCSVs, downloadFile } from './utils/csvExporter';
 import { parseCSV, validateCSVImport, executeCSVImport } from './utils/csvImporter';
 import { generateBackup, restoreFromBackup, downloadJSONBackup } from './utils/jsonBackup';
 import { classifyProposal, generateSummary, getAPIKey } from './utils/aiService';
@@ -266,8 +266,7 @@ function App() {
   };
 
   const handleCSVExport = () => {
-    const csv = exportProjectsToCSV(projects);
-    downloadFile(csv, `proposals-${Date.now()}.csv`, 'text/csv');
+    downloadAllCSVs(projects);
   };
 
   const handleJSONExport = () => {
@@ -507,8 +506,7 @@ function App() {
 
   // V9: Export filtered proposals
   const handleExportFiltered = () => {
-    const csv = exportProjectsToCSV(dateFiltered);
-    downloadFile(csv, `filtered-proposals-${Date.now()}.csv`, 'text/csv');
+    downloadFilteredCSVs(dateFiltered, projects);
   };
 
   // V9: Apply filters from template
@@ -1225,8 +1223,7 @@ function App() {
         onBatchDelete={handleBatchDelete}
         onBatchExport={() => {
           const selected = flatProposals.filter(p => selectedIds.has(p.id));
-          const csv = exportProjectsToCSV(selected);
-          downloadFile(csv, `selected-proposals-${Date.now()}.csv`, 'text/csv');
+          downloadFilteredCSVs(selected, projects);
         }}
         onCancelSelect={() => setSelectedIds(new Set())}
       />

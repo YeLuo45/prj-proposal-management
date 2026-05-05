@@ -100,7 +100,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260420-002",
@@ -400,7 +401,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260417-002",
@@ -430,7 +432,8 @@
           "acceptance": "accepted",
           "version": "v1.6.0"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-001",
@@ -459,7 +462,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-004",
@@ -506,7 +510,8 @@
           "techExpectations": "pending",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-005",
@@ -535,7 +540,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-007",
@@ -564,7 +570,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-003",
@@ -811,7 +818,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-002",
@@ -840,7 +848,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-001",
@@ -909,7 +918,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "TradingAgents-CN",
@@ -956,7 +966,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260421-003",
@@ -985,7 +996,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260422-001",
@@ -1104,7 +1116,8 @@
           "techExpectations": "pending",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-001",
@@ -1133,7 +1146,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-005",
@@ -1195,7 +1209,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-002",
@@ -1224,7 +1239,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-004",
@@ -1253,7 +1269,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-001",
@@ -1282,7 +1299,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260426-003",
@@ -1311,7 +1329,8 @@
           "techExpectations": "",
           "acceptance": "accepted (2026-04-26)"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "preschool-puzzle",
@@ -1358,7 +1377,8 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260428-002",
@@ -1513,7 +1533,8 @@
           "techExpectations": "timeout-approved（继承V1技术栈）",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260428-001",
@@ -1632,7 +1653,8 @@
           "techExpectations": "timeout-approved（技术栈继承V3：Three.js 0.160.0 CDN + Vanilla JS 单文件）",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260430-001",
@@ -1661,7 +1683,8 @@
           "techExpectations": "N/A (direct to dev)",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "doc-editor",
@@ -1690,7 +1713,8 @@
           "techExpectations": "confirmed (默认最优)",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250416-001",
@@ -1900,7 +1924,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260421-001",
@@ -2487,7 +2512,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250416-002",
@@ -2608,7 +2634,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260417-001",
@@ -2655,7 +2682,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260420-001",
@@ -2738,7 +2766,8 @@
           "techExpectations": "timeout-approved（技术栈继承V1-V3：Canvas + Vanilla JS + React/Vite，localStorage持久化）",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-002",
@@ -3469,7 +3498,8 @@
           "techExpectations": "",
           "acceptance": "小墨于2026-05-06自行验收通过"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250418-003",
@@ -3498,7 +3528,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260412-008",
@@ -3708,7 +3739,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     }
   ]
 }

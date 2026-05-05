@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { exportToPNG, exportToPDF } from '../utils/exportUtils';
-import { exportProjectsToCSV, downloadFile } from '../utils/csvExporter';
+import { downloadAllCSVs } from '../utils/csvExporter';
 import { downloadJSONBackup } from '../utils/jsonBackup';
 
 function ExportPanel({ projects, milestones, exportRef }) {
@@ -48,8 +48,7 @@ function ExportPanel({ projects, milestones, exportRef }) {
   };
 
   const handleExportCSV = () => {
-    const csv = exportProjectsToCSV(projects);
-    downloadFile(csv, `proposals-${Date.now()}.csv`, 'text/csv');
+    downloadAllCSVs(projects);
   };
 
   const handleExportJSON = () => {

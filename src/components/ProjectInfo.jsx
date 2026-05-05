@@ -13,7 +13,6 @@ function ProjectInfo({ project, onEdit }) {
     e.preventDefault();
     onEdit({
       ...project,
-      name: formData.name,
       description: formData.description,
       url: formData.url,
       gitRepo: formData.gitRepo,
@@ -88,14 +87,13 @@ function ProjectInfo({ project, onEdit }) {
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  项目名称
+                  项目名称 <span className="text-xs text-gray-400">(初始化后不可修改)</span>
                 </label>
                 <input
                   type="text"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
-                  required
+                  disabled
+                  className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-600 cursor-not-allowed"
                 />
               </div>
               <div className="mb-4">
