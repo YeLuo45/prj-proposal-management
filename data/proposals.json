@@ -489,24 +489,6 @@
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260503-020",
-          "name": "future-little-leaders-v2-成长激励-亲子互动",
-          "description": "V2 功能规划：M1成就系统(18徽章)/M2成长报告(周报月报)/M3任务模板(10预设)/M4商城增强/M5宝宝等级/M6任务提醒",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/future-little-leaders-v2-成长激励-亲子互动/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "confirmed",
-          "acceptance": "小墨于2026-05-05验收通过（M6 build成功）"
-        },
-        {
           "id": "P-20260504-3009",
           "name": "future-little-leaders-v2-成长激励-亲子互动",
           "description": "V2 功能规划：M1成就系统(18徽章)/M2成长报告(周报月报)/M3任务模板(10预设)/M4商城增强/M5宝宝等级/M6任务提醒",
@@ -613,60 +595,6 @@
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260504-001",
-          "name": "dont-step-white",
-          "description": "P0无尽模式（命机制+combo计分+速度递增）+P1道具系统（护盾/冰冻/双倍）+游戏结束画面+昵称分数记录",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/dont-step-white/ (gh-pages)",
-          "packageUrl": "https://github.com/YeLuo45/dont-step-white/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/dont-step-white",
-          "tags": [
-            "游戏"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-002",
-          "name": "dont-step-white",
-          "description": "P1金币经济系统+皮肤商店（4套主题：默认/霓虹/简约/赛博朋克）+P2关卡挑战（6关：限时60秒/极速/纯净/生死/巨慢/无限）+CSS变量主题方案",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/dont-step-white/ (gh-pages)",
-          "packageUrl": "https://github.com/YeLuo45/dont-step-white/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/dont-step-white",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-003",
-          "name": "dont-step-white",
-          "description": "纯前端分享式排行榜；URL参数base64编码分享战绩；无需后端；我的战绩历史记录；Web Share API或复制链接；30天过期机制",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/dont-step-white/ (gh-pages)",
-          "packageUrl": "https://github.com/YeLuo45/dont-step-white/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/dont-step-white",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
           "id": "P-20260504-004",
           "name": "dont-step-white",
           "description": "安全区域适配（刘海/灵动岛/底部导航栏）；viewport防缩放；横屏锁定+旋转提示；PWA安装提示；触控优化（48px最小触控区域+touch-action）",
@@ -678,78 +606,6 @@
           "tags": [
             "Web",
             "PWA"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-005",
-          "name": "dont-step-white",
-          "description": "60秒限时挑战；踩黑块+3秒；4档难度递增；连击奖励+时间奖励；结算界面等级系统；限时模式最高分持久化",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/dont-step-white/ (gh-pages)",
-          "packageUrl": "https://github.com/YeLuo45/dont-step-white/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/dont-step-white",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-006",
-          "name": "dont-step-white",
-          "description": "Web Audio API 音效（踩黑/白块音、道具音、按钮音）；80BPM单音钢琴BGM；设置界面音效/BGM开关+音量滑块；倒计时≤10秒警告音",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/dont-step-white/ (gh-pages)",
-          "packageUrl": "https://github.com/YeLuo45/dont-step-white/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/dont-step-white",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-007",
-          "name": "dont-step-white",
-          "description": "8×4可视化关卡编辑器；点击切换空/黑/白；预览播放；Base64分享链接(?level=xxx)；localStorage保存自定义关卡；自定义关卡循环播放",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/dont-step-white/ (gh-pages)",
-          "packageUrl": "https://github.com/YeLuo45/dont-step-white/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/dont-step-white",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-008",
-          "name": "dont-step-white",
-          "description": "30+成就分6类（连击/分数/挑战/收集/特殊/新手）；奖励系统（金币/称号/皮肤）；3秒Toast通知；localStorage持久化；主菜单成就入口",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/dont-step-white/ (gh-pages)",
-          "packageUrl": "https://github.com/YeLuo45/dont-step-white/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/dont-step-white",
-          "tags": [
-            "提案"
           ],
           "createdAt": "2026-05-04",
           "updatedAt": "2026-05-04",
@@ -1213,93 +1069,6 @@
           "acceptance": ""
         },
         {
-          "id": "P-20260502-017",
-          "name": "P-20260502-017",
-          "description": "Provider架构升级 + AI SDK集成 + 流式摘要 + Thinking配置；技术栈：ai SDK + @ai-sdk/openai + @ai-sdk/anthropic + @ai-sdk/google + partial-json + jsonrepair；技术期望倒计时(2026-05-02)已触发，当前进入 in_dev 阶段",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03"
-        },
-        {
-          "id": "P-20260504-001",
-          "name": "ai-novel-assistant",
-          "description": "章节大纲拖拽排序 + 字数目标追踪(每日/全书) + 写作统计Dashboard(7天柱状图/完成度环形图) + 剧情线颜色标签",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "timeout-approved",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-002",
-          "name": "ai-novel-assistant",
-          "description": "多轮对话上下文(IndexedDB持久化) + 世界观助手Tab(素材卡问答) + 智能写作建议(续写/润色diff展示)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-003",
-          "name": "ai-novel-assistant",
-          "description": "EPUB封面已有(cover.xhtml) + 目录卷>章>节三级NCX + DC元数据 + PDF排版优化(pdfmake)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "timeout-approved",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-004",
-          "name": "ai-novel-assistant",
-          "description": "BackupPanel(导出/导入/云端三Tab) + BackupService(JSON.zip导出/导入/冲突处理) + LocalBackupProvider(localStorage快照) + 自动备份提示(30分钟Toast)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
           "id": "P-20260504-3001",
           "name": "ai-novel-assistant",
           "description": "素材卡CRUD + MaterialPanel + CardReference阅读态 + PDF导出；交付完毕",
@@ -1334,60 +1103,6 @@
           "prdConfirmation": "confirmed",
           "techExpectations": "pending",
           "acceptance": ""
-        },
-        {
-          "id": "P-20260505-001",
-          "name": "ai-novel-assistant",
-          "description": "ViewpointSwitcher(第一人称/第三人称切换) + CharacterAvatar(头像/缩写) + CharacterRelationshipList(关系列表/关系图) + Dashboard角色统计 + WritingEditor集成",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260505-002",
-          "name": "ai-novel-assistant",
-          "description": "TimelineView(锯齿布局时间轴) + TimelineCard(章节卡片/剧情线色块) + TimelineControls(缩放50-200%/剧情线筛选) + ProjectEditor时间线Tab + moveOutlineNode跨父节点拖拽修复",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260505-003",
-          "name": "ai-novel-assistant",
-          "description": "M1章节版本历史(chapterVersions表+版本列表+diff对比+恢复) + M2敏感词检测(5类敏感词+高亮标记+替换建议)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
-          "prdConfirmation": "timeout-approved",
-          "techExpectations": "",
-          "acceptance": "accepted"
         }
       ]
     },
@@ -1520,21 +1235,6 @@
       "createdAt": "2026-04-24",
       "updatedAt": "2026-04-24",
       "proposals": [
-        {
-          "id": "P-20260419-004",
-          "name": "match3-puzzle",
-          "description": "8x8三消游戏原型验证，纯HTML5 Canvas；5种颜色圆块、点击交换、3+连消、下落填补、分数系统、游戏结束判定",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/match3-puzzle/",
-          "packageUrl": "https://github.com/YeLuo45/match3-puzzle/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/match3-puzzle",
-          "tags": [
-            "游戏"
-          ],
-          "createdAt": "2026-04-24",
-          "updatedAt": "2026-04-24"
-        },
         {
           "id": "P-20260422-003",
           "name": "match3-puzzle",
@@ -1722,115 +1422,6 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-001",
-          "name": "flight-chess-3d",
-          "description": "6种皮肤(Classic/Space/Ocean/Candy/Dinosaur/ChineseNewYear) + 3种地图(Standard/Ring/Hexagonal)；皮肤切换改颜色材质，地图变体改轨道结构；解锁系统：成就/登录/游戏次数",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/flight-chess-3d/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/flight-chess-3d",
-          "tags": [
-            "游戏"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-002",
-          "name": "3d飞行棋-v3-ai对手",
-          "description": "简单/中等/困难三档AI；AI决策评估体系(前进/捕获/安全/事件格)；AI思考动画(2秒/1.5秒/1秒)；AIvsAI演示模式；修复跑道移动逻辑与游戏规则一致性",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/3d飞行棋-v3-ai对手/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "游戏"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-003",
-          "name": "3d飞行棋-v3-pwa离线支持",
-          "description": "manifest.json配置 + Service Worker + Cache First策略 + 离线指示器 + 添加到桌面支持；手动PWA方案避免peer-deps冲突",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/3d飞行棋-v3-pwa离线支持/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Web",
-            "PWA"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-004",
-          "name": "flight-chess-3d",
-          "description": "15个成就(胜利/技巧/模式/特殊)+金币奖励+通知弹窗+成就面板",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/flight-chess-3d/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/flight-chess-3d",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "timeout-approved（继承V1技术栈）",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-005",
-          "name": "flight-chess-3d",
-          "description": "录像录制(moves序列)+localStorage存储(最多10局)+回放播放器(1x/2x/4x+进度条)",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/flight-chess-3d/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/flight-chess-3d",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "timeout-approved（继承V1技术栈）",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-006",
-          "name": "flight-chess-3d",
-          "description": "房间码+WebSocket实时同步+观众只读视角+主机控制投骰/选棋",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/flight-chess-3d/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/flight-chess-3d",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "timeout-approved（继承V1技术栈）",
-          "acceptance": ""
         },
         {
           "id": "P-20260504-3032",
@@ -2109,26 +1700,7 @@
       "gitRepo": "",
       "createdAt": "2026-05-02",
       "updatedAt": "2026-05-02",
-      "proposals": [
-        {
-          "id": "P-20260502-005",
-          "name": "3d飞行棋-玩家颜色选择-战绩统计",
-          "description": "玩家可选颜色；战绩统计（胜率/连胜）；localStorage持久化",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/3d飞行棋-玩家颜色选择-战绩统计/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        }
-      ]
+      "proposals": []
     },
     {
       "id": "PRJ-20250416-001",
@@ -2156,24 +1728,6 @@
           "updatedAt": "2026-04-16",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260502-002",
-          "name": "todolist-迭代增强-轻量化-看板视图",
-          "description": "V2轻量化增强已完成（优先级P0/P1/P2+标签筛选+截止日期排序+搜索过滤），部署于 https://yeluo45.github.io/todo-list/；V3看板视图已集成到todo-list项目（列表/看板视图切换，三列看板+原生拖拽），URL不变；看板使用HTML5原生Drag and Drop API实现，不需要额外依赖",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/todolist-迭代增强-轻量化-看板视图/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02",
-          "prdConfirmation": "timeout-approved",
-          "techExpectations": "confirmed",
           "acceptance": "accepted"
         },
         {
@@ -2285,61 +1839,6 @@
           "acceptance": "pending"
         },
         {
-          "id": "P-20260503-021",
-          "name": "todolist-v13-仪表板首页-泳道甘特图",
-          "description": "仪表板首页(KPI卡片+今日到期+四象限分布) + 甘特图泳道分组(按状态/优先级)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/todolist-v13-仪表板首页-泳道甘特图/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260503-022",
-          "name": "todolist-v14-看板wip优化-数据导入增强",
-          "description": "泳道独立WIP限制+看板设置弹窗+逾期高亮角标 + Todoist/Notion/CSV智能导入",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/todolist-v14-看板wip优化-数据导入增强/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260503-023",
-          "name": "todolist-v15-pwa离线支持-周视图日历",
-          "description": "PWA manifest+ServiceWorker离线缓存 + 甘特图周/月视图切换(7天/30天时间轴)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/todolist-v15-pwa离线支持-周视图日历/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Web",
-            "PWA"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
           "id": "P-20260503-024",
           "name": "todolist-v16-定时自动备份到-gist-一键恢复",
           "description": "自动备份开关+间隔配置+备份历史列表 + 一键恢复预览确认",
@@ -2423,42 +1922,6 @@
       "updatedAt": "2026-05-09",
       "proposals": [
         {
-          "id": "P-20260502-003",
-          "name": "card-game-prototype",
-          "description": "V2迭代：13张初始牌（4打击+4防御+2硬撑+2连续打击+1痛击）+12张新卡牌+5种debuff+5敌人+1Boss+战斗日志+胜利选牌",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/card-game-prototype/",
-          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02",
-          "prdConfirmation": "timeout-approved",
-          "techExpectations": "timeout-approved（技术栈继承 v1：HTML5 Canvas + Vanilla JS 单文件）",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260502-012",
-          "name": "dbg卡牌游戏-v5-战斗奖励卡牌选择系统",
-          "description": "DBG卡牌游戏 V5 — 战斗奖励卡牌选择系统",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/dbg卡牌游戏-v5-战斗奖励卡牌选择系统/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "**NOT ACCEPTED** - 功能未集成到游戏流程，showRewardScreen/selectReward缺失"
-        },
-        {
           "id": "P-20260502-013",
           "name": "dbg卡牌游戏-v6-遗物-神器系统",
           "description": "DBG卡牌游戏 V6 — 遗物/神器系统",
@@ -2466,42 +1929,6 @@
           "status": "active",
           "url": "",
           "packageUrl": "https://github.com/YeLuo45/dbg卡牌游戏-v6-遗物-神器系统/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "boss于2026-05-02验收通过"
-        },
-        {
-          "id": "P-20260502-015",
-          "name": "dbg卡牌游戏-v7-敌人与boss扩充",
-          "description": "DBG卡牌游戏 V7 — 敌人与Boss扩充",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/dbg卡牌游戏-v7-敌人与boss扩充/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "boss于2026-05-02验收通过"
-        },
-        {
-          "id": "P-20260502-016",
-          "name": "dbg卡牌游戏-v8-卡牌升级系统",
-          "description": "DBG卡牌游戏 V8 — 卡牌升级系统",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/dbg卡牌游戏-v8-卡牌升级系统/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
             "提案"
@@ -2855,132 +2282,6 @@
           "acceptance": "小墨于2026-05-03自行验收通过"
         },
         {
-          "id": "P-20260503-020",
-          "name": "card-game-prototype",
-          "description": "一次性新手教程(战斗基础/卡组构建/遗物宠物三阶段)+卡牌使用率追踪(按攻击/防御/技能/力量/诅咒类型统计)+统计面板新增卡牌使用统计页面",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "小墨于2026-05-03验收通过（gameState.tutorial + statistics.cardUsageByType 确认存在）"
-        },
-        {
-          "id": "P-20260503-021",
-          "name": "dbg卡牌游戏-v39-combo系统-bossrush-宠物技能树",
-          "description": "Combo系统(同回合/连锁卡牌组合触发额外效果)+BossRush(连续挑战所有章节Boss)+宠物技能树(被动→可主动释放技能)",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/dbg卡牌游戏-v39-combo系统-bossrush-宠物技能树/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "",
-          "acceptance": "pending"
-        },
-        {
-          "id": "P-20260504-001",
-          "name": "card-game-prototype",
-          "description": "开始游戏时，开始画面淡出过渡效果；战斗牌组选择系统 - 3个预设牌组（基础/攻击/防御）",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
-          "tags": [
-            "游戏"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "delivered"
-        },
-        {
-          "id": "P-20260504-003",
-          "name": "card-game-prototype",
-          "description": "累计能量石/胜场解锁新卡牌，永久成就奖励，localStorage持久化",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "pending"
-        },
-        {
-          "id": "P-20260504-004",
-          "name": "card-game-prototype",
-          "description": "宠物技能树激活，宠物助战主动/被动技能，4种宠物（史莱姆/火精灵/冰霜巨人/雷龙）",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "pending"
-        },
-        {
-          "id": "P-20260504-007",
-          "name": "dbg卡牌游戏-v47-卡牌升级-卡牌出售",
-          "description": "DBG卡牌游戏 V47 — 卡牌升级 + 卡牌出售",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/dbg卡牌游戏-v47-卡牌升级-卡牌出售/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "pending"
-        },
-        {
-          "id": "P-20260504-008",
-          "name": "dbg卡牌游戏-v48-卡组预览面板",
-          "description": "DBG卡牌游戏 V48 — 卡组预览面板",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/dbg卡牌游戏-v48-卡组预览面板/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
           "id": "P-20260508-001",
           "name": "card-game-prototype",
           "description": "终局结算(统计/卡组评价/隐藏结局徽章)+新游戏+(继承宠物/遗物)+4难度(hard/hell/extreme)+6隐藏结局+统计面板+图鉴；文件8654行",
@@ -3316,60 +2617,6 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260502-012",
-          "name": "game-1024-v4-数据统计面板",
-          "description": "成就页面Tab切换(成就/统计)+各模式分别统计(场次/胜率/最高分/平均分)+localStorage持久化",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/game-1024-v4-数据统计面板/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260502-013",
-          "name": "game-1024-v5-更多皮肤",
-          "description": "节日皮肤(春节/圣诞/万圣节)+暗黑模式+成就解锁皮肤(彩虹/钻石/星空/复古)",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/game-1024-v5-更多皮肤/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260502-014",
-          "name": "game-1024-v5-自定义棋盘",
-          "description": "棋盘尺寸切换(4×4/5×5/6×6)+进阶/地狱难度+初始方块数递增+每日挑战仅支持4×4",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/game-1024-v5-自定义棋盘/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
         }
       ]
     },
@@ -3381,26 +2628,7 @@
       "gitRepo": "",
       "createdAt": "2026-05-03",
       "updatedAt": "2026-05-03",
-      "proposals": [
-        {
-          "id": "P-20260502-001",
-          "name": "prj-proposals-manager-项目管理增强",
-          "description": "项目详情页（独立路由 /project/:id）+ 里程碑管理（CRUD + 时间线 + 提案关联）; PRD 倒计时到期(2026-05-02)，默认通过处理; 技术期望倒计时到期(2026-05-02)，默认通过处理; 仓库已从 proposals-manager 更名为 prj-proposals-manager; 今日修复：useGitHub.js中REPO名修正为prj-proposals-manager（匹配实际仓库名）；构建时复制data/到dist/确保gh-pages包含proposals.json；GitHub Token验证功能正常；79个提案/34个项目数据已同步",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/prj-proposals-manager-项目管理增强/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        }
-      ]
+      "proposals": []
     },
     {
       "id": "PRJ-20260417-001",
@@ -3428,42 +2656,6 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260503-018",
-          "name": "prj-proposals-manager-v3-甘特图视图",
-          "description": "里程碑时间线可视化；自研甘特图（CSS + React）；支持拖拽调整日期；看板/甘特图视图切换；React Router 路由集成；Header 导航 Tab",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/prj-proposals-manager-v3-甘特图视图/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "小墨于2026-05-03验收通过"
-        },
-        {
-          "id": "P-20260503-019",
-          "name": "prj-proposals-manager-v4-批量操作",
-          "description": "多选复选框+批量移动状态+批量删除+批量关联里程碑；多选状态存储在App state",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/prj-proposals-manager-v4-批量操作/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "timeout-approved（倒计时5分钟自动通过）",
-          "techExpectations": "timeout-approved（技术栈继承V3）",
-          "acceptance": "pending"
         },
         {
           "id": "P-20260505-077",
@@ -3532,21 +2724,21 @@
         },
         {
           "id": "P-20260503-022",
-          "name": "snake-battle",
-          "description": "M1新道具6种(Invisible/Clone/Mine/Portal/Shrink/Reverse)+M2 BOSS战(10血量/冲刺AI)+M3地图变化(5种地图/障碍物/安全区/传送门)+M4新AI人格(Aggressive/Random)",
+          "name": "creative-drawing-board",
+          "description": "M1贴纸印章(24个SVG)/M2描红模板(8张)/M3区域填色(扫描线算法)/M4背景场景(6种)/M5涂色游戏(4张)+Undo/Redo/Save；V1单文件745行→V2 1981行；gh-pages强制更新部署",
           "type": "package",
           "status": "active",
-          "url": "https://yeluo45.github.io/snake-battle/",
-          "packageUrl": "https://github.com/YeLuo45/snake-battle/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/snake-battle",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
           "tags": [
-            "提案"
+            "游戏"
           ],
           "createdAt": "2026-05-03",
           "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "小墨于2026-05-03验收通过"
+          "prdConfirmation": "confirmed",
+          "techExpectations": "timeout-approved（技术栈继承 V1：HTML5 Canvas + Vanilla JS 单文件，零外部依赖）",
+          "acceptance": "小墨于2026-05-03自行验收通过"
         },
         {
           "id": "P-20260503-023",
@@ -3578,60 +2770,6 @@
       "updatedAt": "2026-05-06",
       "proposals": [
         {
-          "id": "P-20260503-022",
-          "name": "creative-drawing-board",
-          "description": "M1贴纸印章(24个SVG)/M2描红模板(8张)/M3区域填色(扫描线算法)/M4背景场景(6种)/M5涂色游戏(4张)+Undo/Redo/Save；V1单文件745行→V2 1981行；gh-pages强制更新部署",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "游戏"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "timeout-approved（技术栈继承 V1：HTML5 Canvas + Vanilla JS 单文件，零外部依赖）",
-          "acceptance": "小墨于2026-05-03自行验收通过"
-        },
-        {
-          "id": "P-20260503-025",
-          "name": "creative-drawing-board",
-          "description": "M1音效引擎(Web Audio API程序化生成，11种音效)+M2贴纸扩展(24→56个)+M3描红扩展(8→20张)+M4涂色扩展(4→10张)+M5背景扩展(6→10种)+全局静音开关；V2 1981行→V3 2401行",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260503-027",
-          "name": "creative-drawing-board",
-          "description": "P0学习记录系统(localStorage统计+12成就徽章+画廊)+P1贴纸编辑(选中/拖拽/缩放/旋转/层级)；V3 2401行→V4 3547行",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "pending",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
           "id": "P-20260503-028",
           "name": "creative-drawing-board",
           "description": "气泡积分系统(普通1分/金色5分/彩虹5分/星星触发奖励)+连击加成+每50分奖励随机贴纸+每200分奖励稀有贴纸+本地排行榜(历史最高+最近10场)+新纪录庆祝动画；V4 3547行→V5 3966行",
@@ -3646,170 +2784,6 @@
           "createdAt": "2026-05-03",
           "updatedAt": "2026-05-03",
           "prdConfirmation": "pending",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260503-029",
-          "name": "creative-drawing-board",
-          "description": "P0引导教学模式(8跟画模板/逐笔画演示/年龄分级3-4-5岁/步骤完成检测/跳过退出)+P1 PWA离线支持(manifest.json+ServiceWorker)+打印功能(白底高清A4)；V5 3966行→V6 5305行",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "Web",
-            "PWA"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "pending",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260503-030",
-          "name": "creative-drawing-board",
-          "description": "自定义贴纸创作(200x200绘制面板+画笔/橡皮/颜色+保存到我的贴纸)+颜色替换(选中贴纸🎨换主色)+翻转镜像(↔↕)+重绘编辑(✏️)+最多20个+localStorage持久化；V6 5305行→V7 6324行",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "pending",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260503-031",
-          "name": "creative-drawing-board",
-          "description": "4套节日主题包(万圣节10月/圣诞节12月/春节1-2月/复活节4月)+每套8贴纸+2背景+专属tab+自动检测+手动切换+飘落动画(CSS keyframes)；V7 6324行→V8 6878行",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260503-032",
-          "name": "creative-drawing-board",
-          "description": "每日挑战系统(🔔任务+7种类型+进度追踪+奖励领取)+连续打卡(7/14/30天)+打卡日历+成就进化(⭐/⭐⭐/⭐⭐⭐三级)+限定成就(challenge/early_bird/night_owl/streak)+奖励(积分+限定贴纸)；V8 6878行→V9 7896行",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260503-033",
-          "name": "creative-drawing-board",
-          "description": "🧩拼图(3×3/4×3/4×4+画廊图片+完成动画)+🔗连线游戏(6模板+数字顺序连线+成图显示)+🧭迷宫(递归回溯算法+7×7/11×11/15×11+碰墙检测+终点庆祝)；V9 7896行→V10 9444行",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "游戏"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260503-034",
-          "name": "creative-drawing-board",
-          "description": "📥PNG导出(文件名日期时间+2x分辨率)+日期水印+作品名称水印+画廊管理(查看/下载/重命名/删除/批量)+🔗分享面板(Web Share API+原生分享)+设为拼图素材；V10 9444行→V11 10418行",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260503-035",
-          "name": "creative-drawing-board",
-          "description": "涂色模板从10增至30(蝴蝶/火箭/恐龙/独角兽等)+分类浏览(动物/食物/人物/风景/交通)+难度标记(🐣🐥🔥)+年龄推荐+混色效果+荧光笔刷(5色+彩虹)+粒子爆发动画(30色粒子)+星星飘落+C-E-G-C合成旋律；V11 10418行→V12 11091行",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260503-036",
-          "name": "creative-drawing-board",
-          "description": "🎵背景音乐(Web Audio API合成5首:happy/peaciful/playful/dreamy/festive)+场景自动切换(绘画→happy/涂色→peaceful/游戏→playful/画廊→dreamy)+独立音量滑块+记忆偏好+500ms渐变切换+页面隐藏降速；V12 11091行→V13 11548行",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "Web",
-            "游戏"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260503-037",
-          "name": "creative-drawing-board",
-          "description": "⏰时长限制(15-120分钟/超时锁定绘画)+使用时间追踪+周报柱状图(CSS)+数据导出(CSV/JSON)+内容解锁(5规则+锁定遮罩+解锁动画)+家长入口(数学题验证)；V13 11548行→V14 12412行",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
         },
@@ -4543,42 +3517,6 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260502-003",
-          "name": "harness-desktop-v2-sub-agent-verification-hooks-更多工具",
-          "description": "v2 迭代已完成交付：①Sub Agent（共享KV Cache + 任务队列 + 依赖管理）②Verification Hooks后台分类器（strict/loose/disabled三档 + auto-retry）③4个新工具（edit_code/project_tree/web_search/task_plan）；llmBridge.ts MVP_TOOLS→V2_TOOLS 已修复；Vite build成功；electron-builder打包受限WSL环境（需Windows本机执行）",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/harness-desktop-v2-sub-agent-verification-hooks-更多工具/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Windows"
-          ],
-          "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "pending",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260502-004",
-          "name": "harness-desktop-v3-多模型路由",
-          "description": "TDD 测试用例已生成（src/__tests__/modelRouting.test.ts + llmBridge.test.ts）；Vitest 1.x 需要 Node 20+，当前环境 Node 18.19.1；测试文件语法正确，待升级 Node 后可运行；建议后续开发环境升级 Node 20+",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/harness-desktop-v3-多模型路由/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "timeout-approved",
-          "acceptance": ""
         }
       ]
     },
@@ -4590,26 +3528,7 @@
       "gitRepo": "",
       "createdAt": "2026-05-04",
       "updatedAt": "2026-05-04",
-      "proposals": [
-        {
-          "id": "P-20260504-002",
-          "name": "3d飞行棋-v3-ai对手",
-          "description": "简单/中等/困难三档AI；AI决策评估体系(前进/捕获/安全/事件格)；AI思考动画(2秒/1.5秒/1秒)；AIvsAI演示模式；修复跑道移动逻辑与游戏规则一致性",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/3d飞行棋-v3-ai对手/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "游戏"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        }
-      ]
+      "proposals": []
     },
     {
       "id": "3d飞行棋-v3-pwa离线支持",
@@ -4619,27 +3538,7 @@
       "gitRepo": "",
       "createdAt": "2026-05-04",
       "updatedAt": "2026-05-04",
-      "proposals": [
-        {
-          "id": "P-20260504-003",
-          "name": "3d飞行棋-v3-pwa离线支持",
-          "description": "manifest.json配置 + Service Worker + Cache First策略 + 离线指示器 + 添加到桌面支持；手动PWA方案避免peer-deps冲突",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/3d飞行棋-v3-pwa离线支持/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Web",
-            "PWA"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        }
-      ]
+      "proposals": []
     },
     {
       "id": "PRJ-20260422-002",
@@ -4649,44 +3548,7 @@
       "gitRepo": "https://github.com/YeLuo45/ash-echoes",
       "createdAt": "2026-05-04",
       "updatedAt": "2026-05-05",
-      "proposals": [
-        {
-          "id": "P-20260503-028",
-          "name": "ash-echoes",
-          "description": "V3 base骨架已部署。三名角色(艾文/莲/熔)+独立技能树+角色剧情线+专属武器；BossRush/SpeedRun/Suffering/NoHit硬核挑战模式均已打包。构建+部署通过。技术栈：Phaser 3.60+ CDN + Vanilla JS 单文件HTML。",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ash-echoes/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ash-echoes",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "timeout-approved",
-          "techExpectations": "confirmed（技术栈继承V2：Phaser 3.60+ CDN + Vanilla JS 单文件HTML）",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260505-001",
-          "name": "ash-echoes",
-          "description": "V4内容扩张交付完成。M1新章节(Ch4废墟都市12关+Ch5地下基地12关+Ch6核心区域10关)+M2新敌人(9种)+M3精英系统(每章3个)+M4Boss设计(废墟之王/基地指挥官/核心意志)+M5地图扩展。npm run build成功(151KB JS)。技术栈：Phaser 3.60+ CDN + Vanilla JS。",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ash-echoes/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ash-echoes",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        }
-      ]
+      "proposals": []
     },
     {
       "id": "PRJ-20260412-008",
@@ -4713,240 +3575,6 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "timeout-approved",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-001",
-          "name": "ai-subscription-tool-use-能力接入-agentic-ai",
-          "description": "Tool-use能力：web_search/fetch_rss/calculate；与llm-design-dev的Action System衔接；仅Web端；已git push (1f18f68)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-tool-use-能力接入-agentic-ai/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-002",
-          "name": "ai-subscription-内容变换输出-摘要-推文-newsletter-思维导图",
-          "description": "TransformBar 4格式切换；/api/transform 端点；已git push (6fd61e8)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-内容变换输出-摘要-推文-newsletter-思维导图/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-003",
-          "name": "ai-subscription-多端-ai-层同步-pc-小程序",
-          "description": "PC端复用shared/(callLLM/streamLLM)；uni-app/Taro小程序调用Web API；已git push (aacf1f2)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-多端-ai-层同步-pc-小程序/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-004",
-          "name": "ai-subscription-实时监控-推送-webhook-邮件-cron",
-          "description": "Webhook/邮件/Cron端点；P0=Webhook，P1=邮件，P2=Cron端点；web端实现",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-实时监控-推送-webhook-邮件-cron/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-005",
-          "name": "ai-subscription-高级内容变换-可视化思维导图-pdf-幻灯片",
-          "description": "SVG思维导图(可折叠/缩放/导出PNG)+PDF导出(Print)+幻灯片Viewer(键盘翻页/导出PNG)；零新增大型依赖；web端",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-高级内容变换-可视化思维导图-pdf-幻灯片/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-006",
-          "name": "ai-subscription-数据导入-导出-opml-json备份",
-          "description": "OPML导入/导出+JSON全量备份/恢复；纯前端；settings面板集成",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-数据导入-导出-opml-json备份/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-007",
-          "name": "ai-subscription-pwa-离线支持",
-          "description": "SW缓存策略+IndexedDB离线+Manifest完善+安装提示+离线徽章；web端",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-pwa-离线支持/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-008",
-          "name": "ai-subscription-历史摘要管理-搜索-标签-收藏",
-          "description": "Summary历史页+全文搜索+标签管理+收藏⭐；纯前端IndexedDB；web端",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-历史摘要管理-搜索-标签-收藏/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-009",
-          "name": "ai-subscription-阅读列表-稍后读",
-          "description": "ai-subscription — 阅读列表 + 稍后读",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-阅读列表-稍后读/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260505-001",
-          "name": "ai-subscription-pub-sub-实时推送-websocket",
-          "description": "WebSocket客户端+服务端点+自动重连+实时通知UI；dev模式；web端",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-pub-sub-实时推送-websocket/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
-          "prdConfirmation": "timeout-approved",
-          "techExpectations": "timeout-approved（技术栈继承V3：React 18 + Vite 5 + TypeScript + WebSocket）",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260505-002",
-          "name": "ai-subscription-订阅源分组管理",
-          "description": "分组CRUD+折叠视图+拖拽排序+移动到分组；纯前端；web端",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-订阅源分组管理/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260505-003",
-          "name": "ai-subscription-文章评论-笔记",
-          "description": "ai-subscription — 文章评论/笔记",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-文章评论-笔记/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260505-004",
-          "name": "ai-subscription-智能摘要推荐",
-          "description": "用户画像+推荐算法+推荐列表页+一键订阅；纯前端；web端",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-智能摘要推荐/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
-          "prdConfirmation": "",
-          "techExpectations": "",
           "acceptance": ""
         },
         {
