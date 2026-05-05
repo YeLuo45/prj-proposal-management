@@ -1643,6 +1643,25 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260505-077",
+          "name": "prj-proposals-manager设置落地页",
+          "description": "将导出、主题选择、键盘快捷键、语言选择器等收拢到设置中，点击设置进入设置落地页（二级落地页）",
+          "type": "web",
+          "status": "active",
+          "url": "https://yeluo45.github.io/prj-proposals-manager/",
+          "gitRepo": "https://github.com/YeLuo45/prj-proposals-manager",
+          "tags": [
+            "Web",
+            "提案",
+            "prj-proposals-manager"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "pending",
+          "techExpectations": "",
+          "acceptance": ""
         }
       ]
     },
