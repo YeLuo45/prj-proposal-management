@@ -103,94 +103,6 @@
       ]
     },
     {
-      "id": "ai-subscription",
-      "name": "ai-subscription",
-      "description": "多端独立应用（Web + 小程序 + PC + Android）；Web 已部署 GitHub Pages；AI 摘要、RSS订阅、GitHub Trending 爬取",
-      "url": "https://yeluo45.github.io/ai-subscription/",
-      "gitRepo": "https://github.com/YeLuo45/ai-subscription",
-      "createdAt": "2026-04-12",
-      "updatedAt": "2026-04-12",
-      "proposals": [
-        {
-          "id": "P-20260412-008",
-          "name": "ai-subscription",
-          "description": "多端独立应用（Web + 小程序 + PC + Android）；Web 已部署 GitHub Pages；AI 摘要、RSS订阅、GitHub Trending 爬取",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/ai-subscription/",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ai-subscription",
-          "tags": [
-            "Web",
-            "Android"
-          ],
-          "createdAt": "2026-04-12",
-          "updatedAt": "2026-04-12",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "p-20260505-077",
-      "name": "p-20260505-077",
-      "description": "P-20260505-077",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260505-077",
-          "name": "p-20260505-077",
-          "description": "P-20260505-077",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260505-077/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260504-070",
-      "name": "p-20260504-070",
-      "description": "P-20260504-070",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260504-070",
-          "name": "p-20260504-070",
-          "description": "P-20260504-070",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260504-070/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
       "id": "PRJ-20260420-002",
       "name": "pixel-pal-web",
       "description": "P0—人格创建(名称/头像/简介/语气标签)、人格切换(Selector)、人格独立记忆(personaId隔离)、人格独立对话上下文；P1—预设人格模板(朋友/老师/教练/恋人)、人格删除、人格拖拽排序",
@@ -1122,6 +1034,24 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted",
           "notes": "验收通过：npm run build成功，GitHub Actions部署成功(1m14s)，代码逻辑完整，HUD距离+金币显示，皮肤商店购买/选择，localStorage持久化。"
+        },
+        {
+          "id": "P-20260504-070",
+          "name": "p-20260504-070",
+          "description": "P-20260504-070",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/p-20260504-070/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-16",
+          "updatedAt": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
         }
       ]
     },
@@ -1531,6 +1461,24 @@
           ],
           "createdAt": "2026-05-02",
           "updatedAt": "2026-05-02"
+        },
+        {
+          "id": "P-20260424-002",
+          "name": "hermes-协作服务器消息转发机制重构",
+          "description": "协作服务器消息转发机制重构；通过 DirectAgentClient (subprocess) 调用 Hermes AIAgent，显式传递 ANTHROPIC_API_KEY 环境变量解决凭证问题；3次连续测试100%成功响应；修复了 .env 加载问题和 API key 传递问题（commit 74469db → 51ef8f8）",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/hermes-协作服务器消息转发机制重构/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-24",
+          "updatedAt": "2026-04-24",
+          "prdConfirmation": "timeout-approved",
+          "techExpectations": "",
+          "acceptance": ""
         }
       ]
     },
@@ -1637,66 +1585,8 @@
       ]
     },
     {
-      "id": "hermes-协作服务器消息转发机制重构",
-      "name": "hermes-协作服务器消息转发机制重构",
-      "description": "协作服务器消息转发机制重构；通过 DirectAgentClient (subprocess) 调用 Hermes AIAgent，显式传递 ANTHROPIC_API_KEY 环境变量解决凭证问题；3次连续测试100%成功响应；修复了 .env 加载问题和 API key 传递问题（commit 74469db → 51ef8f8）",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-24",
-      "updatedAt": "2026-04-24",
-      "proposals": [
-        {
-          "id": "P-20260424-002",
-          "name": "hermes-协作服务器消息转发机制重构",
-          "description": "协作服务器消息转发机制重构；通过 DirectAgentClient (subprocess) 调用 Hermes AIAgent，显式传递 ANTHROPIC_API_KEY 环境变量解决凭证问题；3次连续测试100%成功响应；修复了 .env 加载问题和 API key 传递问题（commit 74469db → 51ef8f8）",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/hermes-协作服务器消息转发机制重构/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-24",
-          "updatedAt": "2026-04-24",
-          "prdConfirmation": "timeout-approved",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
       "id": "PRJ-20260426-003",
       "name": "calculator-app",
-      "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算（Web 已交付，APK 因 NDK 损坏阻塞）",
-      "url": "",
-      "gitRepo": "https://github.com/YeLuo45/calculator-app.git",
-      "createdAt": "2026-04-26",
-      "updatedAt": "2026-04-26",
-      "proposals": [
-        {
-          "id": "P-20250416-003",
-          "name": "calculator-app.git",
-          "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算（Web 已交付，APK 因 NDK 损坏阻塞）",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/calculator-app.git/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/calculator-app.git",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-04-26",
-          "updatedAt": "2026-04-26",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted (2026-04-26)"
-        }
-      ]
-    },
-    {
-      "id": "calculator-app.git",
-      "name": "calculator-app.git",
       "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算（Web 已交付，APK 因 NDK 损坏阻塞）",
       "url": "",
       "gitRepo": "https://github.com/YeLuo45/calculator-app.git",
@@ -3574,6 +3464,24 @@
           "prdConfirmation": "timeout-approved（倒计时5分钟自动通过）",
           "techExpectations": "timeout-approved（技术栈继承V3）",
           "acceptance": "pending"
+        },
+        {
+          "id": "P-20260505-077",
+          "name": "p-20260505-077",
+          "description": "P-20260505-077",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/p-20260505-077/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-16",
+          "updatedAt": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
         }
       ]
     },
@@ -5200,6 +5108,25 @@
           "createdAt": "2026-05-06",
           "updatedAt": "2026-05-06",
           "prdConfirmation": "timeout-approved",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260412-008",
+          "name": "ai-subscription",
+          "description": "多端独立应用（Web + 小程序 + PC + Android）；Web 已部署 GitHub Pages；AI 摘要、RSS订阅、GitHub Trending 爬取",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/ai-subscription/",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/ai-subscription",
+          "tags": [
+            "Web",
+            "Android"
+          ],
+          "createdAt": "2026-04-12",
+          "updatedAt": "2026-04-12",
+          "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
         }
