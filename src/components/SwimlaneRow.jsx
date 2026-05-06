@@ -9,8 +9,14 @@ const STATUS_COLUMNS = [
   { id: 'done', title: '已完成 (Done)', color: 'bg-green-500' },
 ];
 
-function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick, overId, activeId, isColumnCollapsed, onToggleColumnCollapse, selectedProposalIds, onToggleSelectProposal, filteredColumns }) {
+function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick, onQuickCreate, overId, activeId, isColumnCollapsed, onToggleColumnCollapse, selectedProposalIds, onToggleSelectProposal, filteredColumns }) {
   const isCollapsed = collapsedLaneIds.has(project.id);
+  
+  // V7: Double-click to toggle collapse
+  const handleHeaderDoubleClick = (e) => {
+    e.stopPropagation();
+    onToggleCollapse(project.id);
+  };
   
   // M2: Lane filter state
   const [laneFilter, setLaneFilter] = useState({ query: '', type: '' });
@@ -59,6 +65,8 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick,
       <div
         className="flex items-center gap-3 px-4 py-3 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer select-none"
         onClick={() => onToggleCollapse(project.id)}
+        onDoubleClick={handleHeaderDoubleClick}
+        title="双击折叠/展开"
       >
         <button className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
           <svg
@@ -79,6 +87,17 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick,
             {project.id}
           </span>
         </div>
+        {/* V7: Quick create button */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            if (onQuickCreate) onQuickCreate(project.id, project.name, 'active');
+          }}
+          className="px-2 py-1 bg-green-500 text-white rounded hover:bg-green-600 text-sm font-medium"
+          title="快速创建提案"
+        >
+          + 新提案
+        </button>
         <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
           {STATUS_COLUMNS.map(col => {
             const count = getProposalsByStatus(col.id).length;
@@ -234,7 +253,7 @@ function DroppableColumn({ column, proposals, droppableId, onCardClick, isDropTa
             ? 'border-blue-400 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' 
             : 'border-gray-200 dark:border-gray-700 text-gray-400 dark:text-gray-600'
         }`}>
-          拖拽提案到这里
+          {isDropTarget ? '拖放到这里' : '暂无提案 - 点击上方"+ 新提案"创建'}
         </div>
       )}
     </div>

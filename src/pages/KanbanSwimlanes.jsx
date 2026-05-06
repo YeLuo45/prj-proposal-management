@@ -52,6 +52,21 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
       return new Set(JSON.parse(localStorage.getItem('swimlanes_collapsed') || '[]'));
     } catch { return new Set(); }
   });
+
+  // V7: 泳道排序状态 (按名称或提案数量)
+  const [swimlaneSortBy, setSwimlaneSortBy] = useState(() => {
+    try {
+      return localStorage.getItem('swimlane_sort_by') || 'name';
+    } catch { return 'name'; }
+  });
+  const [swimlaneSortOrder, setSwimlaneSortOrder] = useState(() => {
+    try {
+      return localStorage.getItem('swimlane_sort_order') || 'asc';
+    } catch { return 'asc'; }
+  });
+
+  // V7: 快速创建提案状态
+  const [quickCreateData, setQuickCreateData] = useState(null); // { projectId, projectName, status }
   
   // M1: Column collapse state
   const [collapsedColumns, setCollapsedColumns] = useState(() => {
@@ -153,7 +168,7 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
       );
     }
 
-    return filteredProjects.map(project => ({
+    let laneData = filteredProjects.map(project => ({
       project,
       columns: {
         active: project.proposals.filter(p => p.status === 'active'),
@@ -161,7 +176,20 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
         done: project.proposals.filter(p => p.status === 'archived' || p.status === 'completed'),
       },
     }));
-  }, [projects, projectId, searchQuery]);
+
+    // V7: 泳道排序
+    laneData.sort((a, b) => {
+      let comparison = 0;
+      if (swimlaneSortBy === 'name') {
+        comparison = a.project.name.localeCompare(b.project.name);
+      } else if (swimlaneSortBy === 'count') {
+        comparison = a.project.proposals.length - b.project.proposals.length;
+      }
+      return swimlaneSortOrder === 'asc' ? comparison : -comparison;
+    });
+
+    return laneData;
+  }, [projects, projectId, searchQuery, swimlaneSortBy, swimlaneSortOrder]);
 
   // Filter proposals across all swimlanes by swimlane search query (name, ID, tags)
   // This filters individual proposals but keeps the swimlane row visible
@@ -428,6 +456,12 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
   useEffect(() => {
     localStorage.setItem('swimlanes_collapsed', JSON.stringify([...collapsedLaneIds]));
   }, [collapsedLaneIds]);
+
+  // V7: 持久化泳道排序状态
+  useEffect(() => {
+    localStorage.setItem('swimlane_sort_by', swimlaneSortBy);
+    localStorage.setItem('swimlane_sort_order', swimlaneSortOrder);
+  }, [swimlaneSortBy, swimlaneSortOrder]);
   
   // M1: 持久化列折叠状态
   useEffect(() => {
@@ -537,6 +571,13 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
     setShowForm(true);
   };
 
+  // V7: 快速创建提案
+  const handleQuickCreate = (projectId, projectName, status = 'active') => {
+    setQuickCreateData({ projectId, projectName, status });
+    setEditingProposal(null);
+    setShowForm(true);
+  };
+
   const handleEditProposal = async (updatedProposal) => {
     const today = new Date().toISOString().split('T')[0];
     
@@ -606,8 +647,27 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
                 </span>
               )}
           </div>
-          <div className="flex gap-4 items-center">
-            <input
+            <div className="flex items-center gap-4">
+              {/* V7: 泳道排序切换 */}
+              <div className="flex items-center gap-2 text-sm">
+                <span className="text-gray-500 dark:text-gray-400">排序:</span>
+                <select
+                  value={swimlaneSortBy}
+                  onChange={(e) => setSwimlaneSortBy(e.target.value)}
+                  className="px-2 py-1 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 text-sm"
+                >
+                  <option value="name">按名称</option>
+                  <option value="count">按提案数</option>
+                </select>
+                <button
+                  onClick={() => setSwimlaneSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
+                  className="px-2 py-1 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
+                  title={swimlaneSortOrder === 'asc' ? '升序' : '降序'}
+                >
+                  {swimlaneSortOrder === 'asc' ? '↑' : '↓'}
+                </button>
+              </div>
+              <input
               type="text"
               value={swimlaneSearchQuery}
               onChange={(e) => setSwimlaneSearchQuery(e.target.value)}
@@ -694,6 +754,7 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
                     collapsedLaneIds={collapsedLaneIds}
                     onToggleCollapse={handleToggleCollapse}
                     onCardClick={handleCardClick}
+                    onQuickCreate={handleQuickCreate}
                     overId={overId}
                     activeId={activeId}
                     isColumnCollapsed={isColumnCollapsed}
@@ -725,11 +786,16 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
 
         {showForm && (
           <ProposalForm
-            proposal={editingProposal}
+            proposal={editingProposal || (quickCreateData ? {
+              projectId: quickCreateData.projectId,
+              projectName: quickCreateData.projectName,
+              status: quickCreateData.status,
+            } : null)}
             onSave={handleEditProposal}
             onClose={() => {
               setShowForm(false);
               setEditingProposal(null);
+              setQuickCreateData(null);
             }}
           />
         )}
