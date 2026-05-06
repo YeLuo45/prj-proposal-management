@@ -1,5 +1,5 @@
 // Service Worker for PWA Offline Support
-const CACHE_NAME = 'proposals-manager-v15';
+const CACHE_NAME = 'proposals-manager-v16';
 
 // Use relative paths so SW works regardless of deployment subdirectory
 const STATIC_ASSETS = [
