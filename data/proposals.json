@@ -100,9 +100,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/ai-stock-simulation/"
+      ]
     },
     {
       "id": "PRJ-20260420-002",
@@ -402,9 +400,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/pixel-pal-web/"
+      ]
     },
     {
       "id": "PRJ-20260417-002",
@@ -434,9 +430,7 @@
           "acceptance": "accepted",
           "version": "v1.6.0"
         }
-      ],
-      "milestones": [],
-      "githubPages": ""
+      ]
     },
     {
       "id": "PRJ-20260418-001",
@@ -465,18 +459,16 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/monopoly3d/"
+      ]
     },
     {
       "id": "PRJ-20260418-004",
       "name": "future-little-leaders",
-      "description": "uni-app 多平台项目（H5 构建）；宝宝管理+每日任务+周期性任务+积分系统+商城+社区；feature/hermes20260503 分支已完善 README/CHANGELOG/manifest.json",
+      "description": "家庭成员角色系统 + 任务归属 + 家庭共享任务池 + 宝宝头像优化 + 家庭数据概览",
       "url": "https://yeluo45.github.io/future-little-leaders/",
       "gitRepo": "https://github.com/YeLuo45/future-little-leaders",
       "createdAt": "2026-04-18",
-      "updatedAt": "2026-05-03",
+      "updatedAt": "2026-05-05",
       "proposals": [
         {
           "id": "P-20250418-004",
@@ -513,10 +505,26 @@
           "prdConfirmation": "confirmed",
           "techExpectations": "pending",
           "acceptance": ""
+        },
+        {
+          "id": "P-20260505-012",
+          "name": "future-little-leaders",
+          "description": "家庭成员角色系统 + 任务归属 + 家庭共享任务池 + 宝宝头像优化 + 家庭数据概览",
+          "type": "package",
+          "status": "in_dev",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/future-little-leaders/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "pending",
+          "acceptance": ""
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/future-little-leaders/"
+      ]
     },
     {
       "id": "PRJ-20260418-005",
@@ -545,9 +553,7 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ],
-      "milestones": [],
-      "githubPages": ""
+      ]
     },
     {
       "id": "PRJ-20260419-007",
@@ -576,9 +582,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/ai-creator-h5/"
+      ]
     },
     {
       "id": "PRJ-20260419-003",
@@ -825,9 +829,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/dont-step-white/"
+      ]
     },
     {
       "id": "PRJ-20260419-002",
@@ -856,9 +858,7 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/tank-battle/"
+      ]
     },
     {
       "id": "PRJ-20260419-001",
@@ -927,9 +927,7 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/temple-run/"
+      ]
     },
     {
       "id": "PRJ-20260419-005",
@@ -978,9 +976,7 @@
           "acceptance": "accepted",
           "projectId": "PRJ-20260419-005"
         }
-      ],
-      "milestones": [],
-      "githubPages": ""
+      ]
     },
     {
       "id": "PRJ-20260421-003",
@@ -1009,9 +1005,7 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ],
-      "milestones": [],
-      "githubPages": ""
+      ]
     },
     {
       "id": "PRJ-20260422-001",
@@ -1130,9 +1124,7 @@
           "techExpectations": "pending",
           "acceptance": ""
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/ai-novel-assistant/"
+      ]
     },
     {
       "id": "PRJ-20260423-001",
@@ -1161,9 +1153,7 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/room-escape-puzzle/"
+      ]
     },
     {
       "id": "PRJ-20260423-005",
@@ -1225,9 +1215,7 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/hermes-agent-collab/"
+      ]
     },
     {
       "id": "PRJ-20260423-002",
@@ -1256,9 +1244,7 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/little-garden/"
+      ]
     },
     {
       "id": "PRJ-20260424-004",
@@ -1287,9 +1273,7 @@
           "techExpectations": "confirmed",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/match3-puzzle/"
+      ]
     },
     {
       "id": "PRJ-20260424-001",
@@ -1318,9 +1302,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": ""
+      ]
     },
     {
       "id": "PRJ-20260426-003",
@@ -1349,9 +1331,7 @@
           "techExpectations": "",
           "acceptance": "accepted (2026-04-26)"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/calculator-app/"
+      ]
     },
     {
       "id": "PRJ-20260427-001",
@@ -1400,9 +1380,7 @@
           "acceptance": "accepted",
           "projectId": "PRJ-20260427-001"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/preschool-puzzle/"
+      ]
     },
     {
       "id": "PRJ-20260428-002",
@@ -1557,9 +1535,7 @@
           "techExpectations": "timeout-approved（继承V1技术栈）",
           "acceptance": ""
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/flight-chess-3d/"
+      ]
     },
     {
       "id": "PRJ-20260428-001",
@@ -1678,9 +1654,7 @@
           "techExpectations": "timeout-approved（技术栈继承V3：Three.js 0.160.0 CDN + Vanilla JS 单文件）",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/whack-a-mole-3d/"
+      ]
     },
     {
       "id": "PRJ-20260430-001",
@@ -1709,9 +1683,7 @@
           "techExpectations": "N/A (direct to dev)",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": ""
+      ]
     },
     {
       "id": "PRJ-20260430-002",
@@ -1741,9 +1713,7 @@
           "acceptance": "accepted",
           "projectId": "PRJ-20260430-002"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/doc-editor/"
+      ]
     },
     {
       "id": "PRJ-20250416-001",
@@ -1953,9 +1923,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/todo-list/"
+      ]
     },
     {
       "id": "PRJ-20260421-001",
@@ -2542,9 +2510,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/card-game-prototype/"
+      ]
     },
     {
       "id": "PRJ-20250416-002",
@@ -2665,9 +2631,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/game-1024/"
+      ]
     },
     {
       "id": "PRJ-20260417-001",
@@ -2714,9 +2678,7 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/prj-proposals-manager/"
+      ]
     },
     {
       "id": "PRJ-20260420-001",
@@ -2799,9 +2761,7 @@
           "techExpectations": "timeout-approved（技术栈继承V1-V3：Canvas + Vanilla JS + React/Vite，localStorage持久化）",
           "acceptance": "pending"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/snake-battle/"
+      ]
     },
     {
       "id": "PRJ-20260418-002",
@@ -3532,9 +3492,7 @@
           "techExpectations": "",
           "acceptance": "小墨于2026-05-06自行验收通过"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/creative-drawing-board/"
+      ]
     },
     {
       "id": "PRJ-20250418-003",
@@ -3563,19 +3521,36 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": ""
+      ]
     },
     {
       "id": "PRJ-20260412-008",
       "name": "ai-subscription",
-      "description": "PC端复用shared/(callLLM/streamLLM)；uni-app/Taro小程序调用Web API；已git push (aacf1f2)",
+      "description": "commit 0572d8b - API Key管理+REST端点+DeveloperPanel+apiDB",
       "url": "",
       "gitRepo": "https://github.com/YeLuo45/ai-subscription",
       "createdAt": "2026-05-05",
       "updatedAt": "2026-05-06",
       "proposals": [
+        {
+          "id": "P-20260412-008",
+          "name": "ai-subscription",
+          "description": "多端独立应用（Web + 小程序 + PC + Android）；Web 已部署 GitHub Pages；AI 摘要、RSS订阅、GitHub Trending 爬取",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/ai-subscription/",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
+          "gitRepo": "https://github.com/YeLuo45/ai-subscription",
+          "tags": [
+            "Web",
+            "Android"
+          ],
+          "createdAt": "2026-04-12",
+          "updatedAt": "2026-04-12",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
         {
           "id": "P-20260502-017",
           "name": "ai-subscription-大模型调用层升级-llm-design-dev",
@@ -3757,27 +3732,161 @@
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260412-008",
+          "id": "P-20260506-001",
           "name": "ai-subscription",
-          "description": "多端独立应用（Web + 小程序 + PC + Android）；Web 已部署 GitHub Pages；AI 摘要、RSS订阅、GitHub Trending 爬取",
+          "description": "commit 1da65a8 - TagBadge/TagManager/TagFilterSidebar + IndexedDB tags表 + AI生成标签 + 多维筛选",
           "type": "package",
           "status": "active",
-          "url": "https://yeluo45.github.io/ai-subscription/",
+          "url": "",
           "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ai-subscription",
+          "gitRepo": "",
           "tags": [
-            "Web",
-            "Android"
+            "提案"
           ],
-          "createdAt": "2026-04-12",
-          "updatedAt": "2026-04-12",
-          "prdConfirmation": "",
-          "techExpectations": "",
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "boss-selected-P0",
+          "techExpectations": "pending",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-002",
+          "name": "ai-subscription",
+          "description": "commit 43b7fa5 - Readwise API同步 + Instapaper一键保存 + syncIndexedDB",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "boss-selected-P0",
+          "techExpectations": "pending",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-003",
+          "name": "ai-subscription",
+          "description": "commit 07ed1acd - 语言检测+翻译按钮+TranslationSettings+translationDB",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "boss-selected-P0",
+          "techExpectations": "pending",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-004",
+          "name": "ai-subscription",
+          "description": "commit 333e42c - AI实体提取+SVG力导向图谱+EntityCard+knowledgeGraphDB",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "boss-selected-P1",
+          "techExpectations": "pending",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-005",
+          "name": "ai-subscription",
+          "description": "commit 2300dbe - RSS/Atom生成+publicListDB+PublicListEditor",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "boss-selected-P2",
+          "techExpectations": "pending",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-006",
+          "name": "ai-subscription",
+          "description": "commit e294592 - 订阅者管理+邮件模板+批量发送+emailSubscriptionDB",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "boss-selected-P2",
+          "techExpectations": "pending",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-007",
+          "name": "ai-subscription",
+          "description": "commit 0572d8b - API Key管理+REST端点+DeveloperPanel+apiDB",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "boss-selected-P2",
+          "techExpectations": "pending",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": [],
-      "githubPages": "https://yeluo45.github.io/ai-subscription/"
+      ]
+    },
+    {
+      "id": "proposals",
+      "name": "proposals",
+      "description": "倒计时到期(2026-05-02)，默认通过处理",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-05",
+      "updatedAt": "2026-05-05",
+      "proposals": [
+        {
+          "id": "P-20260502-017",
+          "name": "proposals",
+          "description": "倒计时到期(2026-05-02)，默认通过处理",
+          "type": "package",
+          "status": "in_dev",
+          "url": "(待部署)",
+          "packageUrl": "https://github.com/YeLuo45/proposals/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "timeout-approved",
+          "techExpectations": "timeout-approved",
+          "acceptance": "-"
+        }
+      ]
     }
   ]
 }
