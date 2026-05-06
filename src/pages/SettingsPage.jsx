@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import PageHeader from '../components/PageHeader';
 import SyncSettings from '../components/SyncSettings';
 import AISettings from '../components/AISettings';
 import ImportExportPanel from '../components/ImportExportPanel';
@@ -29,10 +30,10 @@ function SettingsPage() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-6 max-w-4xl">
-      <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6">
-        ⚙️ {t('app.settings') || '设置'}
-      </h1>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <PageHeader title="设置" />
+
+      <div className="container mx-auto px-4 py-6 max-w-4xl">
 
       <div className="space-y-6">
         {/* Sync Settings */}
@@ -174,6 +175,7 @@ function SettingsPage() {
             </div>
           </div>
         </section>
+      </div>
       </div>
     </div>
   );
