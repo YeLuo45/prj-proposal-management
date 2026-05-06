@@ -229,7 +229,11 @@ function DroppableColumn({ column, proposals, droppableId, onCardClick, isDropTa
         </div>
       </SortableContext>
       {proposals.length === 0 && (
-        <div className="text-center py-4 text-gray-400 dark:text-gray-600 text-sm border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-lg">
+        <div className={`text-center py-4 text-sm border-2 border-dashed rounded-lg transition-all ${
+          isDropTarget 
+            ? 'border-blue-400 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' 
+            : 'border-gray-200 dark:border-gray-700 text-gray-400 dark:text-gray-600'
+        }`}>
           拖拽提案到这里
         </div>
       )}

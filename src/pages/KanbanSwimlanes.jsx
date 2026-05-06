@@ -237,12 +237,20 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
 
     setOverId(over.id);
 
-    // over.id format: "projectId:status"
-    const [targetProjectId, targetStatus] = over.id.split(':');
     const proposal = flatProposals.find(p => p.id === active.id);
     if (!proposal) return;
 
-    // Check if proposal is in a different project or status changed
+    // Check if over.id is a proposal ID (same-lane) or "projectId:status" (column drop)
+    const isOverProposal = !over.id.includes(':');
+    
+    if (isOverProposal) {
+      // Same-lane: no need to update status during drag over
+      // The actual reorder happens on dragEnd
+      return;
+    }
+
+    // over.id format: "projectId:status"
+    const [targetProjectId, targetStatus] = over.id.split(':');
     const sourceProject = findProjectByProposalId(active.id);
     if (!sourceProject) return;
 
@@ -272,57 +280,147 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
 
     if (!over) return;
 
-    // over.id format: "projectId:status"
-    const [targetProjectId, targetStatus] = over.id.split(':');
-    const proposal = flatProposals.find(p => p.id === active.id);
-    if (!proposal) return;
+    const activeProposal = flatProposals.find(p => p.id === active.id);
+    if (!activeProposal) return;
 
     const sourceProject = findProjectByProposalId(active.id);
     if (!sourceProject) return;
 
-    // Don't allow cross-project moves
-    if (sourceProject.id !== targetProjectId) {
-      alert('暂不支持跨项目移动提案');
-      return;
-    }
-
-    // If status actually changed
-    if (proposal.status !== targetStatus) {
-      const today = new Date().toISOString().split('T')[0];
+    // Check if over.id is a proposal ID (same-lane reorder) or "projectId:status" (cross-lane move)
+    const isOverProposal = over.id.includes(':') === false;
+    
+    if (isOverProposal) {
+      // Same-lane reordering: over.id is a proposal ID
+      const overProposal = flatProposals.find(p => p.id === over.id);
+      if (!overProposal || active.id === over.id) return;
       
-      if (isEmbedded && onUpdateProposal) {
-        // 嵌入式模式：通知外部更新
-        await onUpdateProposal({ ...proposal, status: targetStatus, updatedAt: today });
+      // Both proposals must be in the same project and status for same-lane reorder
+      if (activeProposal.projectId !== overProposal.projectId || 
+          activeProposal.status !== overProposal.status) {
+        // Cross-lane move via proposal hover - treat as status change
+        const targetStatus = overProposal.status;
+        const targetProjectId = overProposal.projectId;
+        
+        if (sourceProject.id !== targetProjectId) {
+          alert('暂不支持跨项目移动提案');
+          return;
+        }
+        
+        if (activeProposal.status !== targetStatus) {
+          await handleStatusChange(active.id, targetProjectId, targetStatus);
+        }
         return;
       }
+
+      // Same-lane reorder: find the column and reorder
+      const today = new Date().toISOString().split('T')[0];
+      const project = projects.find(p => p.id === activeProposal.projectId);
+      if (!project) return;
+
+      const columnKey = activeProposal.status === 'archived' || activeProposal.status === 'completed' 
+        ? 'done' 
+        : activeProposal.status;
+      const columnProposals = project.proposals.filter(p => {
+        if (columnKey === 'done') {
+          return p.status === 'archived' || p.status === 'completed';
+        }
+        return p.status === columnKey;
+      });
+
+      const oldIndex = columnProposals.findIndex(p => p.id === active.id);
+      const newIndex = columnProposals.findIndex(p => p.id === over.id);
+
+      if (oldIndex === -1 || newIndex === -1) return;
+
+      // Reorder proposals within the column
+      const reorderedProposals = arrayMove(columnProposals, oldIndex, newIndex);
       
-      // 独立模式：自己处理保存
+      // Build updated project with new order
+      const otherProposals = project.proposals.filter(p => {
+        if (columnKey === 'done') {
+          return p.status !== 'archived' && p.status !== 'completed';
+        }
+        return p.status !== columnKey;
+      });
+      
+      const updatedProjectProposals = [...otherProposals, ...reorderedProposals];
       const updatedProjects = projects.map(p => {
-        if (p.id === targetProjectId) {
-          return {
-            ...p,
-            updatedAt: today,
-            proposals: p.proposals.map(prop => {
-              if (prop.id === active.id) {
-                return { ...prop, status: targetStatus, updatedAt: today };
-              }
-              return prop;
-            }),
-          };
+        if (p.id === project.id) {
+          return { ...p, proposals: updatedProjectProposals, updatedAt: today };
         }
         return p;
       });
 
+      // Save to localStorage and GitHub
+      localStorage.setItem('proposals_order', JSON.stringify({
+        projectId: project.id,
+        status: columnKey,
+        order: reorderedProposals.map(p => p.id)
+      }));
+
       try {
         await saveProposals({ version: 2, projects: updatedProjects });
         setProjects(updatedProjects);
-        setFlatProposals(prev => prev.map(p =>
-          p.id === active.id ? { ...p, status: targetStatus, updatedAt: today } : p
-        ));
+        setFlatProposals(prev => prev.map(p => {
+          const reordered = reorderedProposals.find(rp => rp.id === p.id);
+          return reordered || p;
+        }));
       } catch (err) {
         alert('保存失败: ' + err.message);
         loadProposals();
       }
+    } else {
+      // Cross-lane move: over.id is "projectId:status"
+      const [targetProjectId, targetStatus] = over.id.split(':');
+      
+      if (sourceProject.id !== targetProjectId) {
+        alert('暂不支持跨项目移动提案');
+        return;
+      }
+
+      if (activeProposal.status !== targetStatus) {
+        await handleStatusChange(active.id, targetProjectId, targetStatus);
+      }
+    }
+  };
+
+  // Helper function to handle status change
+  const handleStatusChange = async (proposalId, targetProjectId, targetStatus) => {
+    const proposal = flatProposals.find(p => p.id === proposalId);
+    if (!proposal) return;
+    
+    const today = new Date().toISOString().split('T')[0];
+    
+    if (isEmbedded && onUpdateProposal) {
+      await onUpdateProposal({ ...proposal, status: targetStatus, updatedAt: today });
+      return;
+    }
+    
+    const updatedProjects = projects.map(p => {
+      if (p.id === targetProjectId) {
+        return {
+          ...p,
+          updatedAt: today,
+          proposals: p.proposals.map(prop => {
+            if (prop.id === proposalId) {
+              return { ...prop, status: targetStatus, updatedAt: today };
+            }
+            return prop;
+          }),
+        };
+      }
+      return p;
+    });
+
+    try {
+      await saveProposals({ version: 2, projects: updatedProjects });
+      setProjects(updatedProjects);
+      setFlatProposals(prev => prev.map(p =>
+        p.id === proposalId ? { ...p, status: targetStatus, updatedAt: today } : p
+      ));
+    } catch (err) {
+      alert('保存失败: ' + err.message);
+      loadProposals();
     }
   };
 
