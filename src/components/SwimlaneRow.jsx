@@ -68,7 +68,11 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick,
         onDoubleClick={handleHeaderDoubleClick}
         title="双击折叠/展开"
       >
-        <button className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+        <button 
+          className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+          onClick={(e) => { e.stopPropagation(); onToggleCollapse(project.id); }}
+          title={isCollapsed ? '展开' : '折叠'}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={`h-5 w-5 transition-transform ${isCollapsed ? '-rotate-90' : ''}`}
