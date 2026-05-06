@@ -9,7 +9,7 @@ const STATUS_COLUMNS = [
   { id: 'done', title: '已完成 (Done)', color: 'bg-green-500' },
 ];
 
-function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick, overId, activeId, isColumnCollapsed, onToggleColumnCollapse }) {
+function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick, overId, activeId, isColumnCollapsed, onToggleColumnCollapse, selectedProposalIds, onToggleSelectProposal, filteredColumns }) {
   const isCollapsed = collapsedLaneIds.has(project.id);
   
   // M2: Lane filter state
@@ -29,7 +29,17 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick,
     });
   }, [project.proposals, laneFilter]);
 
+  // Use external filtered columns if provided (from global swimlane search), otherwise use internal filter
   const getProposalsByStatus = (status) => {
+    // If filteredColumns is provided by parent (global swimlane search), use it
+    if (filteredColumns) {
+      if (status === 'done') {
+        return filteredColumns.done;
+      }
+      return filteredColumns[status] || [];
+    }
+    
+    // Otherwise use internal lane filter
     const sourceProposals = laneFilter.query || laneFilter.type ? filteredProposals : project.proposals;
     if (status === 'done') {
       return sourceProposals.filter(p => p.status === 'archived' || p.status === 'completed');
@@ -212,6 +222,8 @@ function DroppableColumn({ column, proposals, droppableId, onCardClick, isDropTa
               key={proposal.id}
               proposal={proposal}
               onClick={() => onCardClick(proposal)}
+              selected={selectedProposalIds?.includes(proposal.id)}
+              onToggleSelect={onToggleSelectProposal}
             />
           ))}
         </div>

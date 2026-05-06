@@ -5,7 +5,7 @@ import { useRef, useState, useCallback } from 'react';
 const SWIPE_THRESHOLD = 60;
 const ACTION_WIDTH = 70;
 
-function SwimlaneCard({ proposal, onClick, isDragging, onSwipeLeft, onSwipeRight }) {
+function SwimlaneCard({ proposal, onClick, isDragging, onSwipeLeft, onSwipeRight, selected, onSelect, onToggleSelect }) {
   const {
     attributes,
     listeners,
@@ -16,6 +16,14 @@ function SwimlaneCard({ proposal, onClick, isDragging, onSwipeLeft, onSwipeRight
   } = useSortable({ id: proposal.id });
 
   const [translateX, setTranslateX] = useState(0);
+
+  // Handle checkbox click
+  const handleCheckboxClick = (e) => {
+    e.stopPropagation();
+    if (onToggleSelect) {
+      onToggleSelect(proposal.id);
+    }
+  };
   const [isDraggingTouch, setIsDraggingTouch] = useState(false);
   const startXRef = useRef(0);
 
@@ -109,11 +117,19 @@ function SwimlaneCard({ proposal, onClick, isDragging, onSwipeLeft, onSwipeRight
   };
 
   const cardContent = (
-    <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab active:cursor-grabbing hover:shadow-md transition-shadow">
+    <div className={`bg-white dark:bg-gray-800 rounded-lg p-3 shadow-sm border cursor-grab active:cursor-grabbing hover:shadow-md transition-shadow ${selected ? 'ring-2 ring-blue-500 border-blue-500' : 'border-gray-200 dark:border-gray-700'}`}>
       <div className="flex items-start justify-between gap-2 mb-2">
-        <h4 className="text-sm font-medium text-gray-800 dark:text-gray-100 flex-1 break-words">
-          {proposal.name}
-        </h4>
+        <div className="flex items-center gap-2">
+          <input
+            type="checkbox"
+            checked={selected || false}
+            onChange={handleCheckboxClick}
+            className="w-4 h-4 text-blue-500 rounded border-gray-300 dark:border-gray-600 focus:ring-blue-500"
+          />
+          <h4 className="text-sm font-medium text-gray-800 dark:text-gray-100 flex-1 break-words">
+            {proposal.name}
+          </h4>
+        </div>
         <span className={`px-1.5 py-0.5 rounded text-xs whitespace-nowrap ${getStatusColor(proposal.status)}`}>
           {proposal.status === 'active' ? '待办' : proposal.status === 'in_dev' ? '进行中' : proposal.status === 'archived' ? '已归档' : '完成'}
         </span>

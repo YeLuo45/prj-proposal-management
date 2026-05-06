@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import {
   DndContext,
@@ -19,6 +19,7 @@ import { useGitHub } from '../hooks/useGitHub';
 import SwimlaneRow from '../components/SwimlaneRow';
 import SwimlaneCard from '../components/SwimlaneCard';
 import ProposalForm from '../components/ProposalForm';
+import BatchActionBar from '../components/BatchActionBar';
 
 const STATUS_COLUMNS = [
   { id: 'active', title: '待办 (Todo)', color: 'bg-gray-500' },
@@ -63,6 +64,10 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
     return localStorage.getItem('darkMode') === 'true';
   });
   const [searchQuery, setSearchQuery] = useState('');
+  // Swimlane-level search filter (filters proposals across all swimlanes)
+  const [swimlaneSearchQuery, setSwimlaneSearchQuery] = useState('');
+  // Batch selection state
+  const [selectedProposalIds, setSelectedProposalIds] = useState([]);
   const [showTokenInput, setShowTokenInput] = useState(false);
   const [editingProposal, setEditingProposal] = useState(null);
   const [showForm, setShowForm] = useState(false);
@@ -157,6 +162,58 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
       },
     }));
   }, [projects, projectId, searchQuery]);
+
+  // Filter proposals across all swimlanes by swimlane search query (name, ID, tags)
+  // This filters individual proposals but keeps the swimlane row visible
+  const filteredLanes = useMemo(() => {
+    if (!swimlaneSearchQuery) return lanes;
+    
+    const q = swimlaneSearchQuery.toLowerCase();
+    return lanes.map(lane => ({
+      ...lane,
+      columns: {
+        active: lane.columns.active.filter(p => 
+          p.name.toLowerCase().includes(q) || 
+          p.id.toLowerCase().includes(q) ||
+          (p.tags && p.tags.some(tag => tag.toLowerCase().includes(q))) ||
+          (p.type && p.type.toLowerCase().includes(q))
+        ),
+        in_dev: lane.columns.in_dev.filter(p => 
+          p.name.toLowerCase().includes(q) || 
+          p.id.toLowerCase().includes(q) ||
+          (p.tags && p.tags.some(tag => tag.toLowerCase().includes(q))) ||
+          (p.type && p.type.toLowerCase().includes(q))
+        ),
+        done: lane.columns.done.filter(p => 
+          p.name.toLowerCase().includes(q) || 
+          p.id.toLowerCase().includes(q) ||
+          (p.tags && p.tags.some(tag => tag.toLowerCase().includes(q))) ||
+          (p.type && p.type.toLowerCase().includes(q))
+        ),
+      },
+      // Track if this swimlane has any matching proposals
+      hasMatches: (
+        lane.columns.active.some(p => 
+          p.name.toLowerCase().includes(q) || 
+          p.id.toLowerCase().includes(q) ||
+          (p.tags && p.tags.some(tag => tag.toLowerCase().includes(q))) ||
+          (p.type && p.type.toLowerCase().includes(q))
+        ) ||
+        lane.columns.in_dev.some(p => 
+          p.name.toLowerCase().includes(q) || 
+          p.id.toLowerCase().includes(q) ||
+          (p.tags && p.tags.some(tag => tag.toLowerCase().includes(q))) ||
+          (p.type && p.type.toLowerCase().includes(q))
+        ) ||
+        lane.columns.done.some(p => 
+          p.name.toLowerCase().includes(q) || 
+          p.id.toLowerCase().includes(q) ||
+          (p.tags && p.tags.some(tag => tag.toLowerCase().includes(q))) ||
+          (p.type && p.type.toLowerCase().includes(q))
+        )
+      ),
+    }));
+  }, [lanes, swimlaneSearchQuery]);
 
   const activeProposal = useMemo(() => {
     if (!activeId) return null;
@@ -310,6 +367,73 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
     return !!collapsedColumns[`${projectId}:${status}`];
   };
 
+  // Batch selection handlers
+  const handleToggleSelectProposal = useCallback((proposalId) => {
+    setSelectedProposalIds(prev => {
+      if (prev.includes(proposalId)) {
+        return prev.filter(id => id !== proposalId);
+      }
+      return [...prev, proposalId];
+    });
+  }, []);
+
+  const handleClearSelection = useCallback(() => {
+    setSelectedProposalIds([]);
+  }, []);
+
+  // Batch status change (move to different swimlane/status)
+  const handleBatchStatusChange = useCallback(async (newStatus) => {
+    if (!newStatus || selectedProposalIds.length === 0) return;
+
+    const today = new Date().toISOString().split('T')[0];
+    
+    const updatedProjects = projects.map(project => {
+      const updatedProposals = project.proposals.map(p => {
+        if (selectedProposalIds.includes(p.id)) {
+          return { ...p, status: newStatus, updatedAt: today };
+        }
+        return p;
+      });
+      // Only update project.updatedAt if any proposal in this project was changed
+      const projectWasUpdated = project.proposals.some(p => selectedProposalIds.includes(p.id));
+      return {
+        ...project,
+        proposals: updatedProposals,
+        updatedAt: projectWasUpdated ? today : project.updatedAt,
+      };
+    });
+
+    try {
+      await saveProposals({ version: 2, projects: updatedProjects });
+      setProjects(updatedProjects);
+      setFlatProposals(prev => prev.map(p => 
+        selectedProposalIds.includes(p.id) ? { ...p, status: newStatus, updatedAt: today } : p
+      ));
+      handleClearSelection();
+    } catch (err) {
+      alert('批量更新失败: ' + err.message);
+    }
+  }, [selectedProposalIds, projects, saveProposals]);
+
+  const handleBatchDelete = useCallback(async () => {
+    if (selectedProposalIds.length === 0) return;
+    if (!confirm(`确定要删除选中的 ${selectedProposalIds.length} 个提案吗？`)) return;
+
+    const updatedProjects = projects.map(project => ({
+      ...project,
+      proposals: project.proposals.filter(p => !selectedProposalIds.includes(p.id)),
+    }));
+
+    try {
+      await saveProposals({ version: 2, projects: updatedProjects });
+      setProjects(updatedProjects);
+      setFlatProposals(prev => prev.filter(p => !selectedProposalIds.includes(p.id)));
+      handleClearSelection();
+    } catch (err) {
+      alert('批量删除失败: ' + err.message);
+    }
+  }, [selectedProposalIds, projects, saveProposals]);
+
   const handleCardClick = (proposal) => {
     setEditingProposal(proposal);
     setShowForm(true);
@@ -380,18 +504,23 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
               </h1>
               {!projectId && (
                 <span className="text-sm text-gray-500 dark:text-gray-400">
-                  {lanes.length} 个泳道
+                  {filteredLanes.length} 个泳道
                 </span>
               )}
           </div>
           <div className="flex gap-4 items-center">
             <input
               type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="搜索泳道..."
+              value={swimlaneSearchQuery}
+              onChange={(e) => setSwimlaneSearchQuery(e.target.value)}
+              placeholder="搜索提案名称、ID、标签..."
               className="px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 text-sm"
             />
+            {selectedProposalIds.length > 0 && (
+              <span className="px-2 py-1 bg-blue-500 text-white text-xs rounded-full">
+                已选 {selectedProposalIds.length} 项
+              </span>
+            )}
             <button
               onClick={toggleDarkMode}
               className="bg-gray-600 text-white px-3 py-2 rounded-lg hover:bg-gray-700"
@@ -450,12 +579,17 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
             onDragEnd={handleDragEnd}
           >
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
-              {lanes.length === 0 ? (
+              {filteredLanes.length === 0 ? (
                 <div className="text-center py-12 text-gray-500 dark:text-gray-400">
                   没有找到匹配的项目
                 </div>
               ) : (
-                lanes.map(lane => (
+                filteredLanes.map(lane => {
+                  // Hide swimlane row if search query exists and no matches
+                  if (swimlaneSearchQuery && !lane.hasMatches) {
+                    return null;
+                  }
+                  return (
                   <SwimlaneRow
                     key={lane.project.id}
                     project={lane.project}
@@ -466,8 +600,12 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
                     activeId={activeId}
                     isColumnCollapsed={isColumnCollapsed}
                     onToggleColumnCollapse={toggleColumnCollapse}
+                    selectedProposalIds={selectedProposalIds}
+                    onToggleSelectProposal={handleToggleSelectProposal}
+                    filteredColumns={swimlaneSearchQuery ? lane.columns : null}
                   />
-                ))
+                  );
+                })
               )}
             </div>
 
@@ -497,6 +635,15 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
             }}
           />
         )}
+
+        {/* Batch Action Bar */}
+        <BatchActionBar
+          selectedCount={selectedProposalIds.length}
+          onBatchStatusChange={handleBatchStatusChange}
+          onBatchDelete={handleBatchDelete}
+          onCancelSelect={handleClearSelection}
+          visible={selectedProposalIds.length > 0}
+        />
       </div>
     </div>
   );
