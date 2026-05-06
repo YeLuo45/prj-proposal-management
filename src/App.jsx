@@ -872,7 +872,7 @@ function App() {
           setEditingProposal(null);
           setShowForm(true);
         }}
-        onSettings={() => setShowSettingsModal(true)}
+        onOpenSearch={globalSearch.openSearch}
         onShowHistory={() => setShowHistoryDrawer(true)}
         onOpenNotifications={() => setShowNotificationCenter(true)}
         onShowShortcuts={() => setShowKeyboardShortcutsModal(true)}
