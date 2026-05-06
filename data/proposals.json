@@ -103,306 +103,6 @@
       ]
     },
     {
-      "id": "PRJ-20260420-002",
-      "name": "pixel-pal-web",
-      "description": "P0—人格创建(名称/头像/简介/语气标签)、人格切换(Selector)、人格独立记忆(personaId隔离)、人格独立对话上下文；P1—预设人格模板(朋友/老师/教练/恋人)、人格删除、人格拖拽排序",
-      "url": "",
-      "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
-      "createdAt": "2026-04-16",
-      "updatedAt": "2026-05-05",
-      "proposals": [
-        {
-          "id": "P-20260503-029",
-          "name": "pixelpal-v4-model-ui-thinking",
-          "description": "AI思考过程可视化 + Thinking Panel + Model Status Indicator + 推理步骤展示",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v4-model-ui-thinking/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "小墨于2026-05-03验收通过"
-        },
-        {
-          "id": "P-20260503-030",
-          "name": "pixelpal-v5-multi-persona-collaboration",
-          "description": "多Persona协作系统 + Team管理 + 角色分工(primary/contributor/observer) + 协作讨论面板 + 5个预设Persona(小墨/小皮/小博/小柔/小机)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v5-multi-persona-collaboration/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "小墨于2026-05-03验收通过"
-        },
-        {
-          "id": "P-20260503-031",
-          "name": "pixelpal-v6-rag-knowledge-base",
-          "description": "RAG知识库系统 + 文档上传/分块(BM25)/检索 + 上下文注入 + IndexedDB持久化 + Knowledge面板 + ChatPanel RAG增强",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v6-rag-knowledge-base/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "小墨于2026-05-03验收通过"
-        },
-        {
-          "id": "P-20260503-032",
-          "name": "pixelpal-v7-voice-语音交互",
-          "description": "TTS语音输出(SpeechSynthesis API) + ASR语音输入(SpeechRecognition API) + VoiceSettings面板(Settings页) + VoiceInputButton(Chat页麦克风按钮) + VoiceService(VoiceService.ts) + 语音开关+语速/音调/音量/音色配置",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v7-voice-语音交互/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "小墨于2026-05-03验收通过"
-        },
-        {
-          "id": "P-20260503-033",
-          "name": "pixelpal-v8-mobile-pwa-移动端优化",
-          "description": "移动端响应式布局 + Hamburger侧边抽屉导航 + PWA manifest + meta标签(apple-mobile-web-app) + 固定底部输入框(Chat) + 触控优化 + 响应式断点适配",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v8-mobile-pwa-移动端优化/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Web",
-            "PWA"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "小墨于2026-05-03验收通过"
-        },
-        {
-          "id": "P-20260503-034",
-          "name": "pixelpal-v9-plugin-system-插件系统",
-          "description": "插件架构核心(PluginService+PluginRegistry)+Todo插件(CRUD+筛选+IndexedDB)+Calendar插件(月视图)+Email插件(Gmail OAuth)+PluginHub+PluginPanel+导航Badge",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v9-plugin-system-插件系统/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "小墨于2026-05-03验收通过"
-        },
-        {
-          "id": "P-20260503-035",
-          "name": "pixelpal-v10-advanced-memory-高级记忆系统",
-          "description": "AI对话摘要(Summarization)+实体抽取与关系图谱(entityGraph)+智能检索(时间衰减+频率加权)+Memory面板(4 tabs: All/Entities/Timeline/Insights)+Pin/Forget/Export",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v10-advanced-memory-高级记忆系统/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "小墨于2026-05-03验收通过"
-        },
-        {
-          "id": "P-20260503-036",
-          "name": "pixelpal-v11-desktop-electron-桌面版",
-          "description": "Electron桌面应用(main.ts+preload.ts)+系统托盘(右键菜单+双击)+原生通知+窗口管理(置顶+记忆位置)+electron-builder打包Windows exe",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v11-desktop-electron-桌面版/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Windows"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260503-037",
-          "name": "pixelpal-v12-multi-language-多语言切换",
-          "description": "i18next+react-i18next国际化框架+中英文翻译文件(locales/en.json/zh.json)+i18n服务初始化+Store语言状态+Settings语言切换器+Sidebar/ChatPanel/Calendar/Tasks/Knowledge/PluginHub/PluginPanel/Email/MemoryPanel/MultiPersonaCollaboration已完成i18n改造+workflow添加--legacy-peer-deps+package-lock.json同步",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v12-multi-language-多语言切换/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "小墨于2026-05-03验收通过"
-        },
-        {
-          "id": "P-20260504-001",
-          "name": "pixelpal-v13-高级记忆系统-v2",
-          "description": "记忆搜索(关键词+时间范围+重要性过滤)+重要性评分算法(memoryScoring.ts:类型权重+访问加成+时间衰减)+JSON导出/导入+Timeline时间轴+词云(wordcloud包)+memoryTypes.ts改为0-100分数体系+CI#25295747284通过",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v13-高级记忆系统-v2/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-002",
-          "name": "pixelpal-v14-webhook-插件生态",
-          "description": "PixelPal V14 — Webhook + 插件生态",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v14-webhook-插件生态/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "2026-04-16",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-003",
-          "name": "pixel-pal-web",
-          "description": "Desktop Electron 打包 — exe 安装包 + 系统托盘 + 开机自启 + 原生通知; electron/tray.ts(托盘+右键菜单+通知); electron/main.ts已重构; .github/workflows/build-electron.yml已添加; npm run build成功(exit code 0); dist/main/main.js + preload.js已生成; v15-desktop-electron分支已push; CI构建Windows exe workflow就绪; P0全部完成; P1(自启/最小化到托盘/原生通知)已实现",
-          "type": "web",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
-          "tags": [
-            "Windows"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-005",
-          "name": "pixelpal-v17-数据分析面板",
-          "description": "AnalyticsPanel(交互热力图+情绪趋势LineChart+记忆活跃度BarChart+习惯分析)+recharts图表库+Sidebar新增Analytics入口+CI#25297967195通过",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixelpal-v17-数据分析面板/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260504-006",
-          "name": "pixel-pal-web",
-          "description": "PixelPal V17 — 对话式语音",
-          "type": "web",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-007",
-          "name": "pixel-pal-web",
-          "description": "插件架构核心 + 天气/新闻/Webhook 三个官方插件 + PluginHub 管理界面",
-          "type": "web",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
-          "tags": [
-            "Web"
-          ],
-          "createdAt": "2026-05-04",
-          "updatedAt": "2026-05-04",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260504-008",
-          "name": "pixel-pal-web",
-          "description": "P0—人格创建(名称/头像/简介/语气标签)、人格切换(Selector)、人格独立记忆(personaId隔离)、人格独立对话上下文；P1—预设人格模板(朋友/老师/教练/恋人)、人格删除、人格拖拽排序",
-          "type": "web",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
       "id": "PRJ-20260417-002",
       "name": "android-hello",
       "description": "Android Kotlin Hello World；包名 com.hello.android；minSdk 24, targetSdk 36；APK 已上传 GitHub Releases (v1.0.0)",
@@ -3526,7 +3226,7 @@
     {
       "id": "PRJ-20260412-008",
       "name": "ai-subscription",
-      "description": "commit 0572d8b - API Key管理+REST端点+DeveloperPanel+apiDB",
+      "description": "规则引擎：触发器(keyword/sentiment/source)+动作(add_tag/Telegram/Webhook/星标)，WorkflowEngine异步执行",
       "url": "",
       "gitRepo": "https://github.com/YeLuo45/ai-subscription",
       "createdAt": "2026-05-05",
@@ -3854,6 +3554,42 @@
           "createdAt": "2026-05-06",
           "updatedAt": "2026-05-06",
           "prdConfirmation": "boss-selected-P2",
+          "techExpectations": "pending",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-008",
+          "name": "ai-subscription",
+          "description": "结构化摘要：生成标题+3关键点+情感标签，ArticleCard UI升级，IndexedDB字段扩展",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "pending",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-009",
+          "name": "ai-subscription",
+          "description": "规则引擎：触发器(keyword/sentiment/source)+动作(add_tag/Telegram/Webhook/星标)，WorkflowEngine异步执行",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "Web"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "confirmed",
           "techExpectations": "pending",
           "acceptance": "accepted"
         }
