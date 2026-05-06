@@ -1013,11 +1013,11 @@ function App() {
                           ))}
                         </div>
 
-                        <div className="flex gap-2">
-   {(project.githubPages || project.url) && (
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                          {(project.githubPages || project.url) && (
                             <button
                               onClick={() => window.open(project.githubPages || project.url, '_blank')}
-                              className="flex-1 bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 text-sm"
+                              className="bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 text-sm"
                             >
                               访问
                             </button>
@@ -1025,7 +1025,7 @@ function App() {
                           {project.gitRepo && (
                             <button
                               onClick={() => window.open(project.gitRepo, '_blank')}
-                              className="flex-1 bg-gray-700 dark:bg-gray-600 text-white py-1.5 rounded hover:bg-gray-800 dark:hover:bg-gray-500 text-sm"
+                              className="bg-gray-700 dark:bg-gray-600 text-white py-1.5 rounded hover:bg-gray-800 dark:hover:bg-gray-500 text-sm"
                             >
                               仓库
                             </button>
@@ -1035,7 +1035,7 @@ function App() {
                               setEditingProposal(project.proposals[0]);
                               setShowForm(true);
                             }}
-                            className="flex-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 py-1.5 rounded hover:bg-gray-200 dark:hover:bg-gray-600 text-sm"
+                            className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 py-1.5 rounded hover:bg-gray-200 dark:hover:bg-gray-600 text-sm"
                           >
                             {hasMore ? `查看全部 (${project.proposals?.length || 0})` : '编辑'}
                           </button>

@@ -179,58 +179,57 @@ function ProposalCard({ proposal, onEdit, onDelete, onCopyUrl, searchQuery, sele
         {t('proposalCard.createdAt')}: {proposal.createdAt} | {t('proposalCard.updatedAt')}: {proposal.updatedAt}
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-2">
-        <button
-          onClick={() => {
-            navigator.clipboard.writeText(proposal.id);
-            alert(`${t('proposalCard.idCopied') || 'ID'} ${proposal.id} ${t('proposalCard.copied') || 'copied'}`);
-          }}
-          className="flex-1 bg-blue-500 text-white py-2 rounded hover:bg-blue-600 text-sm"
-        >
-          {t('proposalCard.copyId') || '复制编号'}
-        </button>
-        <button
-          onClick={() => {
-            navigator.clipboard.writeText(proposal.name);
-            alert(`${t('proposalCard.nameCopied') || 'Name'} ${proposal.name} ${t('proposalCard.copied') || 'copied'}`);
-          }}
-          className="flex-1 bg-green-500 text-white py-2 rounded hover:bg-green-600 text-sm"
-        >
-          {t('proposalCard.copyName') || '复制名称'}
-        </button>
-      </div>
-      <div className="flex flex-col sm:flex-row gap-2 mt-2">
-        {proposal.url && (
+      <div className="flex flex-col gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           <button
-            onClick={() => window.open(proposal.url, '_blank')}
-            className="flex-1 bg-blue-500 text-white py-2 rounded hover:bg-blue-600 text-sm"
+            onClick={() => {
+              navigator.clipboard.writeText(proposal.id);
+              alert(`${t('proposalCard.idCopied') || 'ID'} ${proposal.id} ${t('proposalCard.copied') || 'copied'}`);
+            }}
+            className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 text-sm"
           >
-            {t('proposalCard.visit') || '访问'}
+            {t('proposalCard.copyId') || '复制编号'}
           </button>
-        )}
-        {proposal.gitRepo && (
           <button
-            onClick={() => window.open(proposal.gitRepo, '_blank')}
-            className="flex-1 bg-purple-500 text-white py-2 rounded hover:bg-purple-600 text-sm"
+            onClick={() => {
+              navigator.clipboard.writeText(proposal.name);
+              alert(`${t('proposalCard.nameCopied') || 'Name'} ${proposal.name} ${t('proposalCard.copied') || 'copied'}`);
+            }}
+            className="bg-green-500 text-white py-2 rounded hover:bg-green-600 text-sm"
           >
-            {t('proposalCard.repo') || '仓库'}
+            {t('proposalCard.copyName') || '复制名称'}
           </button>
-        )}
-      </div>
-
-      <div className="flex flex-col sm:flex-row gap-2 mt-2">
-        <button
-          onClick={onEdit}
-          className="flex-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600 text-sm"
-        >
-          {t('common.edit') || '编辑'}
-        </button>
-        <button
-          onClick={onDelete}
-          className="flex-1 bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 py-2 rounded hover:bg-red-100 dark:hover:bg-red-900/50 text-sm"
-        >
-          {t('common.delete') || '删除'}
-        </button>
+          {proposal.url && (
+            <button
+              onClick={() => window.open(proposal.url, '_blank')}
+              className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 text-sm"
+            >
+              {t('proposalCard.visit') || '访问'}
+            </button>
+          )}
+          {proposal.gitRepo && (
+            <button
+              onClick={() => window.open(proposal.gitRepo, '_blank')}
+              className="bg-purple-500 text-white py-2 rounded hover:bg-purple-600 text-sm"
+            >
+              {t('proposalCard.repo') || '仓库'}
+            </button>
+          )}
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          <button
+            onClick={onEdit}
+            className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600 text-sm"
+          >
+            {t('common.edit') || '编辑'}
+          </button>
+          <button
+            onClick={onDelete}
+            className="bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 py-2 rounded hover:bg-red-100 dark:hover:bg-red-900/50 text-sm"
+          >
+            {t('common.delete') || '删除'}
+          </button>
+        </div>
       </div>
     </div>
   );
