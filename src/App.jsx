@@ -915,6 +915,8 @@ function App() {
             projectId={advancedFilters.projectId}
             tags={advancedFilters.tags}
             onApplyTemplate={setFiltersFromTemplate}
+            showAdvanced={showAdvanced}
+            onToggleAdvanced={() => setShowAdvanced(!showAdvanced)}
           />
         </div>
 
