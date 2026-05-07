@@ -1,0 +1,2735 @@
+{
+  "todos": [
+    {
+      "id": "P-20260502-002",
+      "title": "TodoList 迭代增强（轻量化+看板视图）",
+      "column": "todo",
+      "projectId": "PRJ-20250416-001",
+      "projectName": "TodoList",
+      "proposalId": "P-20260502-002",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "TodoList 迭代增强（轻量化+看板视图）",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-023",
+      "title": "TodoList V15 — PWA离线支持 + 周视图日历",
+      "column": "todo",
+      "projectId": "PRJ-20250416-001",
+      "projectName": "TodoList",
+      "proposalId": "P-20260503-023",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "TodoList V15 — PWA离线支持 + 周视图日历",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-027",
+      "title": "TodoList V19 — 甘特图资源负载图 + 看板泳道按项目分组",
+      "column": "todo",
+      "projectId": "PRJ-20250416-001",
+      "projectName": "TodoList",
+      "proposalId": "P-20260503-027",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "TodoList V19 — 甘特图资源负载图 + 看板泳道按项目分组",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-021",
+      "title": "TodoList V13 — 仪表板首页 + 泳道甘特图",
+      "column": "todo",
+      "projectId": "PRJ-20250416-001",
+      "projectName": "TodoList",
+      "proposalId": "P-20260503-021",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "TodoList V13 — 仪表板首页 + 泳道甘特图",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-020",
+      "title": "TodoList V12 — 任务评分 + Gist 多设备同步",
+      "column": "todo",
+      "projectId": "PRJ-20250416-001",
+      "projectName": "TodoList",
+      "proposalId": "P-20260503-020",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "TodoList V12 — 任务评分 + Gist 多设备同步",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-019",
+      "title": "TodoList V11 — 甘特图 + 循环提醒",
+      "column": "todo",
+      "projectId": "PRJ-20250416-001",
+      "projectName": "TodoList",
+      "proposalId": "P-20260502-019",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "TodoList V11 — 甘特图 + 循环提醒",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250416-002",
+      "title": "game-1024",
+      "column": "todo",
+      "projectId": "PRJ-20250416-002",
+      "projectName": "game-1024",
+      "proposalId": "P-20250416-002",
+      "proposalUrl": "https://yeluo45.github.io/game-1024/",
+      "type": "package",
+      "status": "active",
+      "description": "经典1024玩法（4×4滑动合并，目标1024）+ PWA可安装到安卓主屏幕 + 存档/继续游戏 + 皮肤系统；V2迭代(2048模式/无限模式/每日挑战/成就系统)已交付部署",
+      "tags": [
+        "Web",
+        "PWA",
+        "游戏"
+      ],
+      "createdAt": "20-25-04",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-007",
+      "title": "game-1024 V2 — 2048/无限模式切换",
+      "column": "todo",
+      "projectId": "PRJ-20250416-002",
+      "projectName": "game-1024",
+      "proposalId": "P-20260502-007",
+      "proposalUrl": "https://yeluo45.github.io/game-1024/",
+      "type": "package",
+      "status": "active",
+      "description": "game-1024 V2 — 2048/无限模式切换",
+      "tags": [
+        "Game"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-008",
+      "title": "game-1024 V2 — 每日挑战+成就系统",
+      "column": "todo",
+      "projectId": "PRJ-20250416-002",
+      "projectName": "game-1024",
+      "proposalId": "P-20260502-008",
+      "proposalUrl": "https://yeluo45.github.io/game-1024/",
+      "type": "package",
+      "status": "active",
+      "description": "game-1024 V2 — 每日挑战+成就系统",
+      "tags": [
+        "Game"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-009",
+      "title": "game-1024 V3 — 视觉动画增强",
+      "column": "todo",
+      "projectId": "PRJ-20250416-002",
+      "projectName": "game-1024",
+      "proposalId": "P-20260502-009",
+      "proposalUrl": "https://yeluo45.github.io/game-1024/",
+      "type": "package",
+      "status": "active",
+      "description": "game-1024 V3 — 视觉动画增强",
+      "tags": [
+        "Game"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-010",
+      "title": "game-1024 V3 — 音效系统",
+      "column": "todo",
+      "projectId": "PRJ-20250416-002",
+      "projectName": "game-1024",
+      "proposalId": "P-20260502-010",
+      "proposalUrl": "https://yeluo45.github.io/game-1024/",
+      "type": "package",
+      "status": "active",
+      "description": "game-1024 V3 — 音效系统",
+      "tags": [
+        "Game"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-011",
+      "title": "game-1024 V4 — 悔棋/重试功能",
+      "column": "todo",
+      "projectId": "PRJ-20250416-002",
+      "projectName": "game-1024",
+      "proposalId": "P-20260502-011",
+      "proposalUrl": "https://yeluo45.github.io/game-1024/",
+      "type": "package",
+      "status": "active",
+      "description": "game-1024 V4 — 悔棋/重试功能",
+      "tags": [
+        "Game"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-014",
+      "title": "game-1024 V5 — 自定义棋盘",
+      "column": "todo",
+      "projectId": "PRJ-20250416-002",
+      "projectName": "game-1024",
+      "proposalId": "P-20260502-014",
+      "proposalUrl": "https://yeluo45.github.io/game-1024/",
+      "type": "package",
+      "status": "active",
+      "description": "game-1024 V5 — 自定义棋盘",
+      "tags": [
+        "Game"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-001",
+      "title": "proposals-manager — 项目管理增强",
+      "column": "todo",
+      "projectId": "PRJ-20250417-001",
+      "projectName": "prj-proposal-management",
+      "proposalId": "P-20260502-001",
+      "proposalUrl": "https://yeluo45.github.io/prj-proposal-management/",
+      "type": "package",
+      "status": "active",
+      "description": "proposals-manager — 项目管理增强",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250417-001",
+      "title": "proposals-manager",
+      "column": "todo",
+      "projectId": "PRJ-20250417-001",
+      "projectName": "prj-proposal-management",
+      "proposalId": "P-20250417-001",
+      "proposalUrl": "https://yeluo45.github.io/prj-proposal-management/",
+      "type": "package",
+      "status": "active",
+      "description": "proposals-manager",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-25-04",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250418-003",
+      "title": "harness-desktop",
+      "column": "todo",
+      "projectId": "PRJ-20250418-003",
+      "projectName": "harness-desktop",
+      "proposalId": "P-20250418-003",
+      "proposalUrl": "https://github.com/YeLuo45/harness-desktop/releases/tag/v1.0.1",
+      "type": "package",
+      "status": "active",
+      "description": "Electron + React + Vite + TypeScript 桌面应用；二进制包已上传 GitHub Releases (v1.0.0)",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-25-04",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250421-002",
+      "title": "ai-novel-assistant",
+      "column": "todo",
+      "projectId": "PRJ-20250421-002",
+      "projectName": "ai-novel-assistant",
+      "proposalId": "P-20250421-002",
+      "proposalUrl": "https://yeluo45.github.io/ai-novel-assistant/",
+      "type": "package",
+      "status": "active",
+      "description": "AI小说助手；React + Vite + Dexie (IndexedDB) + Zustand + react-beautiful-dnd + react-router-dom；功能待确认",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-25-04",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-001",
+      "title": "ai-novel-assistant",
+      "column": "todo",
+      "projectId": "PRJ-20250421-002",
+      "projectName": "ai-novel-assistant",
+      "proposalId": "P-20260502-001",
+      "proposalUrl": "https://yeluo45.github.io/ai-novel-assistant/",
+      "type": "package",
+      "status": "active",
+      "description": "WritingEditor + AIAssistBar + WordCountBar + OutlineTree 双向联动；交付完毕",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-002",
+      "title": "ai-novel-assistant",
+      "column": "todo",
+      "projectId": "PRJ-20250421-002",
+      "projectName": "ai-novel-assistant",
+      "proposalId": "P-20260502-002",
+      "proposalUrl": "https://yeluo45.github.io/ai-novel-assistant/",
+      "type": "package",
+      "status": "active",
+      "description": "素材卡CRUD + MaterialPanel + CardReference阅读态 + PDF导出；交付完毕",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-003",
+      "title": "ai-novel-assistant",
+      "column": "todo",
+      "projectId": "PRJ-20250421-002",
+      "projectName": "ai-novel-assistant",
+      "proposalId": "P-20260502-003",
+      "proposalUrl": "https://yeluo45.github.io/ai-novel-assistant/",
+      "type": "package",
+      "status": "active",
+      "description": "Provider架构(ai/providers.ts) + callLLM/streamLLM(ai/llm.ts) + 重试(ai/retry.ts) + Thinking适配(ai/thinking.ts) + 流式JSON解析(ai/parsers.ts) + AIAssistBar流式输出改造；M4 EPUB核心逻辑已实现（EpubExportService.ts + ExportPanel.tsx）；master已重建(28adee2)触发Actions构建，但deploy步骤持续失败，gh-pages未更新(仍a4397d4)；网络阻塞导致无法git push和API上传2.3MB vendor-misc blob；当前部署SHA: a4397d4(旧) | master SHA: 28adee2(新)",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260412-008",
+      "title": "ai-subscription",
+      "column": "todo",
+      "projectId": "PRJ-20260412-008",
+      "projectName": "ai-subscription",
+      "proposalId": "P-20260412-008",
+      "proposalUrl": "https://yeluo45.github.io/ai-subscription/",
+      "type": "package",
+      "status": "active",
+      "description": "多端独立应用（Web + 小程序 + PC + Android）；Web 已部署 GitHub Pages；AI 摘要、RSS订阅、GitHub Trending 爬取",
+      "tags": [
+        "Web",
+        "Android"
+      ],
+      "createdAt": "20-26-04",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-017",
+      "title": "ai-subscription — 大模型调用层升级 (llm-design-dev)",
+      "column": "todo",
+      "projectId": "PRJ-20260412-008",
+      "projectName": "ai-subscription",
+      "proposalId": "P-20260502-017",
+      "proposalUrl": "https://yeluo45.github.io/ai-subscription/",
+      "type": "package",
+      "status": "active",
+      "description": "ai-subscription — 大模型调用层升级 (llm-design-dev)",
+      "tags": [
+        "AI"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260412-009",
+      "title": "ai-stock-simulation",
+      "column": "todo",
+      "projectId": "PRJ-20260412-009",
+      "projectName": "ai-stock-simulation",
+      "proposalId": "P-20260412-009",
+      "proposalUrl": "https://yeluo45.github.io/ai-stock-simulation/",
+      "type": "package",
+      "status": "active",
+      "description": "全栈FastAPI+React项目；前端端口3100，后端端口8000；需本地启动后端服务",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-04",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260419-005",
+      "title": "hermes-agent-collab",
+      "column": "todo",
+      "projectId": "PRJ-20260419-216",
+      "projectName": "hermes-agent-collab",
+      "proposalId": "P-20260419-005",
+      "proposalUrl": "https://yeluo45.github.io/hermes-agent-collab/",
+      "type": "package",
+      "status": "active",
+      "description": "Phase 1-4 全部功能已验收通过。Phase 4 UI（任务Agent选择/对话UI/工作区CRUD/技能编辑）已部署 gh-pages: https://yeluo45.github.io/hermes-agent-collab/。注：Web UI 为纯静态前端，需后端 `collab server` 启动才能完整使用。",
+      "tags": [
+        "Web"
+      ],
+      "createdAt": "20-26-04",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260419-004",
+      "title": "TradingAgents-CN",
+      "column": "todo",
+      "projectId": "PRJ-20260419-217",
+      "projectName": "TradingAgents-CN",
+      "proposalId": "P-20260419-004",
+      "proposalUrl": "https://yeluo45.github.io/TradingAgents-CN/",
+      "type": "package",
+      "status": "active",
+      "description": "AI 量化交易代理系统；Python 3.10+；混合许可证（Apache 2.0 开源 + 专有前端后端需商业授权）；包含 FastAPI 后端 + Vue 前端 + Docker 部署；基于 TauricResearch/TradingAgents",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-04",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250421-001",
+      "title": "card-game-prototype",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20250421-001",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "DBG类卡牌（杀戮尖塔-like）；原型验证核心战斗循环+卡牌构筑；本地化中文；已交付",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-25-04",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-003",
+      "title": "card-game-prototype",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260502-003",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "V2迭代：13张初始牌（4打击+4防御+2硬撑+2连续打击+1痛击）+12张新卡牌+5种debuff+5敌人+1Boss+战斗日志+胜利选牌",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-012",
+      "title": "DBG卡牌游戏 V5 — 战斗奖励卡牌选择系统",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260502-012",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "archived",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-013",
+      "title": "DBG卡牌游戏 V6 — 遗物/神器系统",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260502-013",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-015",
+      "title": "DBG卡牌游戏 V7 — 敌人与Boss扩充",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260502-015",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-016",
+      "title": "DBG卡牌游戏 V8 — 卡牌升级系统",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260502-016",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-001",
+      "title": "DBG卡牌游戏 V9 — 成就系统",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-001",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-002",
+      "title": "DBG卡牌游戏 V10 — 章节扩展",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-002",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-003",
+      "title": "DBG卡牌游戏 V11 — 更多遗物效果",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-003",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-004",
+      "title": "DBG卡牌游戏 V12 — 音效与特效",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-004",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-005",
+      "title": "DBG卡牌游戏 V13 — 牌组构建核心（Critical Bugfix）",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-005",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-006",
+      "title": "DBG卡牌游戏 V14 — 卡牌商店重做",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-006",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-007",
+      "title": "DBG卡牌游戏 V15 — 更多卡牌",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-007",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-008",
+      "title": "DBG卡牌游戏 V16 — 卡组辅助系统",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-008",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "",
+      "tags": [
+        "DBG卡牌游戏"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-009",
+      "title": "card-game-prototype",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-009",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "牌组管理（浏览/移除/规模限制）+ 卡牌升级扩展（100%覆盖）；文件5396行",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-010",
+      "title": "DBG卡牌游戏 V18 — 随机事件系统",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-010",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V18 — 随机事件系统",
+      "tags": [
+        "Game"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-011",
+      "title": "DBG卡牌游戏 V19 — 多槽位存档系统",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-011",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V19 — 多槽位存档系统",
+      "tags": [
+        "Game"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-012",
+      "title": "DBG卡牌游戏 V20 — 章节扩展 + Boss战设计",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-012",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V20 — 章节扩展 + Boss战设计",
+      "tags": [
+        "Game"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-013",
+      "title": "DBG卡牌游戏 V21 — 移动端适配 + 触屏支持",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260503-013",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V21 — 移动端适配 + 触屏支持",
+      "tags": [
+        "Game"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260508-001",
+      "title": "card-game-prototype",
+      "column": "todo",
+      "projectId": "PRJ-20260421-001",
+      "projectName": "card-game-prototype",
+      "proposalId": "P-20260508-001",
+      "proposalUrl": "https://yeluo45.github.io/card-game-prototype/",
+      "type": "package",
+      "status": "active",
+      "description": "终局结算(统计/卡组评价/隐藏结局徽章)+新游戏+(继承宠物/遗物)+4难度(hard/hell/extreme)+6隐藏结局+统计面板+图鉴；文件8654行",
+      "tags": [
+        "游戏"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260422-002",
+      "title": "ash-echoes",
+      "column": "todo",
+      "projectId": "PRJ-20260422-201",
+      "projectName": "ash-echoes",
+      "proposalId": "P-20260422-002",
+      "proposalUrl": "https://yeluo45.github.io/ash-echoes/",
+      "type": "package",
+      "status": "active",
+      "description": "街机快节奏射击；枪/近战/技能+弹药+翻滚+格挡+弹反+跳跃+蹬墙；1关卡+多敌人+存档点+Boss；像素风2D+程序化场景；WSL网络受限，HTML5版用纯JS实现；PRD超时默认通过",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-04",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260427-001",
+      "title": "flight-chess-3d",
+      "column": "todo",
+      "projectId": "PRJ-20260427-001",
+      "projectName": "flight-chess-3d",
+      "proposalId": "P-20260427-001",
+      "proposalUrl": "https://yeluo45.github.io/flight-chess-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "3D卡通飞行棋；React Three Fiber 3D渲染；传统模式+事件模式(幸运/厄运/传送/交换)；2-4人本地对战；Roblox风格卡通渲染；60FPS目标；workflow修复id-token权限后部署成功",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-04",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-004",
+      "title": "flight-chess-3d",
+      "column": "todo",
+      "projectId": "PRJ-20260427-001",
+      "projectName": "flight-chess-3d",
+      "proposalId": "P-20260502-004",
+      "proposalUrl": "https://yeluo45.github.io/flight-chess-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "AI三种难度（Easy随机/Medium策略/Hard最优）；自动投骰+选子；可选纯AI对战或混合模式；原人类模式不受影响；已实现难度选择UI和AI Thinking动画",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-005",
+      "title": "3D飞行棋 — 玩家颜色选择+战绩统计",
+      "column": "todo",
+      "projectId": "PRJ-20260427-001",
+      "projectName": "flight-chess-3d",
+      "proposalId": "P-20260502-005",
+      "proposalUrl": "https://yeluo45.github.io/flight-chess-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "3D飞行棋 — 玩家颜色选择+战绩统计",
+      "tags": [
+        "Game"
+      ],
+      "createdAt": "20-26-05",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260428-001",
+      "title": "whack-a-mole-3d",
+      "column": "todo",
+      "projectId": "PRJ-20260428-001",
+      "projectName": "whack-a-mole-3d",
+      "proposalId": "P-20260428-001",
+      "proposalUrl": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "3D打地鼠；Three.js WebGL场景；3x3地洞矩阵；可爱地鼠模型（程序化生成）；弹性动画；射线检测击中；准星+30秒倒计时",
+      "tags": [
+        "Web"
+      ],
+      "createdAt": "2026-04-28",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260429-001",
+      "title": "whack-a-mole-3d",
+      "column": "todo",
+      "projectId": "PRJ-20260428-001",
+      "projectName": "whack-a-mole-3d",
+      "proposalId": "P-20260429-001",
+      "proposalUrl": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "V2迭代已完成交付；M1关卡系统(3世界×10关+星级)+M2道具系统(3即时+3被动+金币体力)+M3皮肤系统(5地鼠+4锤子+盲盒)；index.html 1490→2545行；合并远程master冲突已解决；分支feature/v2-progression已合并到master；localStorage存档key: whackamole_v2_save",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-29",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260430-001",
+      "title": "whack-a-mole-3d",
+      "column": "todo",
+      "projectId": "PRJ-20260428-001",
+      "projectName": "whack-a-mole-3d",
+      "proposalId": "P-20260430-001",
+      "proposalUrl": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "每日签到(7天循环)+每日任务(5个)+每周任务(2个)+体力上限15+火焰护盾/熔岩冻结道具",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-30",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260430-002",
+      "title": "whack-a-mole-3d",
+      "column": "todo",
+      "projectId": "PRJ-20260428-001",
+      "projectName": "whack-a-mole-3d",
+      "proposalId": "P-20260430-002",
+      "proposalUrl": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "世界4熔岩(第31-40关)+火焰Boss巨人(血条+连续击中机制)+熔岩视觉效果",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-30",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260430-003",
+      "title": "whack-a-mole-3d",
+      "column": "todo",
+      "projectId": "PRJ-20260428-001",
+      "projectName": "whack-a-mole-3d",
+      "proposalId": "P-20260430-003",
+      "proposalUrl": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "无尽模式+60秒倒计时+难度递进+连击加成+本地Top5排行榜；技术方案联合P-004/P-005；已验收通过（README.md记录）。无尽模式入口+60秒倒计时+难度递进（间隔/停留/双鼠）+连击加分+Top5排行榜+localStorage存档已实现。",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-01",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260430-004",
+      "title": "whack-a-mole-3d",
+      "column": "todo",
+      "projectId": "PRJ-20260428-001",
+      "projectName": "whack-a-mole-3d",
+      "proposalId": "P-20260430-004",
+      "proposalUrl": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "成就系统+13个成就+解锁提示+金币奖励；技术方案联合P-003/P-005；已验收通过（README.md记录）。13个成就（first_hit/combo/score/皮肤收集/签到/无尽/Boss/通关）+ 检测点散布各节点 + 成就按钮/列表/解锁提示已实现。",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-01",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260430-005",
+      "title": "whack-a-mole-3d",
+      "column": "todo",
+      "projectId": "PRJ-20260428-001",
+      "projectName": "whack-a-mole-3d",
+      "proposalId": "P-20260430-005",
+      "proposalUrl": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "Web Audio API合成音效+震动反馈+音效开关；技术方案联合P-003/P-004；已验收通过（README.md记录）。AudioManager（10种Web Audio API合成音效）+ Navigator.vibrate + 音效开关 + 音效调用链路（beat/miss/click/levelup）已全部接入。",
+      "tags": [
+        "Web"
+      ],
+      "createdAt": "2026-05-01",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260412-007",
+      "title": "ai-creator-h5 (H5)",
+      "column": "todo",
+      "projectId": "PRJ-20260412-203",
+      "projectName": "ai-creator-h5",
+      "proposalId": "P-20260412-007",
+      "proposalUrl": "https://yeluo45.github.io/ai-creator-h5/",
+      "type": "package",
+      "status": "active",
+      "description": "AI Creator H5创作工具",
+      "tags": [
+        "Web"
+      ],
+      "createdAt": "2026-04-12",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-014",
+      "title": "p-20260502-014",
+      "column": "todo",
+      "projectId": "PRJ-20260416-014",
+      "projectName": "p-20260502-014",
+      "proposalId": "P-20260502-014",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "archived",
+      "description": "P-20260502-014",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-16",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-013",
+      "title": "p-20260502-013",
+      "column": "todo",
+      "projectId": "PRJ-20260416-013",
+      "projectName": "p-20260502-013",
+      "proposalId": "P-20260502-013",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "archived",
+      "description": "P-20260502-013",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-16",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250417-001",
+      "title": "proposals-manager",
+      "column": "todo",
+      "projectId": "PRJ-20260417-001",
+      "projectName": "proposals-manager",
+      "proposalId": "P-20250417-001",
+      "proposalUrl": "https://yeluo45.github.io/proposals-manager/",
+      "type": "package",
+      "status": "active",
+      "description": "提案管理系统；完整CRUD；GitHub API操作JSON数据；已与提案管理系统单向同步",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-17",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260412-007",
+      "title": "ai-creator-h5 (H5)",
+      "column": "todo",
+      "projectId": "PRJ-20260419-007",
+      "projectName": "ai-creator-h5 (H5)",
+      "proposalId": "P-20260412-007",
+      "proposalUrl": "https://yeluo45.github.io/ai-creator-h5/",
+      "type": "package",
+      "status": "active",
+      "description": "微信小程序 Phase 1 MVP 骨架 + H5 版本已完成并部署；H5 采用 Vite + Hash SPA 架构；4页面：首页/生成/历史/我的；支持图片生成、音乐生成、TTS 语音合成；修复仓库描述乱码（GitHub API TLS超时导致）",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-19",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260422-001",
+      "title": "room-escape-puzzle",
+      "column": "todo",
+      "projectId": "PRJ-20260422-200",
+      "projectName": "room-escape-puzzle",
+      "proposalId": "P-20260422-001",
+      "proposalUrl": "https://resonant-frangipane-46af83.netlify.app/",
+      "type": "package",
+      "status": "active",
+      "description": "解谜游戏原型验证；目标平台PC+移动+浏览器；Godot 4 HTML5导出；因SharedArrayBuffer依赖改用Netlify部署",
+      "tags": [
+        "游戏"
+      ],
+      "createdAt": "2026-04-22",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260422-004",
+      "title": "animal-forest",
+      "column": "todo",
+      "projectId": "PRJ-20260422-218",
+      "projectName": "animal-forest",
+      "proposalId": "P-20260422-004",
+      "proposalUrl": "https://yeluo45.github.io/animal-forest/",
+      "type": "package",
+      "status": "active",
+      "description": "教育类/动物森林主题/卡通风格/双模式(3-6岁幼儿+7-12岁儿童)/家长面板；纯HTML5单文件，浏览器直接运行",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-22",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260422-005",
+      "title": "little-garden",
+      "column": "todo",
+      "projectId": "PRJ-20260422-219",
+      "projectName": "little-garden",
+      "proposalId": "P-20260422-005",
+      "proposalUrl": "https://yeluo45.github.io/little-garden/",
+      "type": "package",
+      "status": "active",
+      "description": "育儿游戏（3-12岁）；养成照顾类（宠物+种植）；纯HTML5/JS；完整GDD + 可运行游戏",
+      "tags": [
+        "游戏"
+      ],
+      "createdAt": "2026-04-22",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260424-001",
+      "title": "OpenMAIC",
+      "column": "todo",
+      "projectId": "PRJ-20260424-220",
+      "projectName": "OpenMAIC",
+      "proposalId": "P-20260424-001",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "Open Multi-Agent Interactive Classroom — 开放式多智能体交互课堂；forked from THU-MAIC/OpenMAIC (16311 stars)；pnpm + Next.js 16；需配置 LLM API Key 使用",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-24",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260424-002",
+      "title": "hermes-协作服务器消息转发机制重构",
+      "column": "todo",
+      "projectId": "PRJ-20260424-002",
+      "projectName": "hermes-协作服务器消息转发机制重构",
+      "proposalId": "P-20260424-002",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "协作服务器消息转发机制重构；通过 DirectAgentClient (subprocess) 调用 Hermes AIAgent，显式传递 ANTHROPIC_API_KEY 环境变量解决凭证问题；3次连续测试100%成功响应；修复了 .env 加载问题和 API key 传递问题（commit 74469db → 51ef8f8）",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-24",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260426-001",
+      "title": "preschool-puzzle",
+      "column": "todo",
+      "projectId": "PRJ-20260426-221",
+      "projectName": "preschool-puzzle",
+      "proposalId": "P-20260426-001",
+      "proposalUrl": "https://yeluo45.github.io/preschool-puzzle/ (gh-pages)",
+      "type": "package",
+      "status": "active",
+      "description": "益智解谜；纯HTML5 Canvas+JS；3-6岁幼儿；形状匹配+颜色分类+简单迷宫3种独立玩法；卡通彩色美术风格；背景音乐+操作音效；localStorage进度保存",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-26",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250416-003",
+      "title": "calculator-app.git",
+      "column": "todo",
+      "projectId": "PRJ-20260426-003",
+      "projectName": "calculator-app.git",
+      "proposalId": "P-20250416-003",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "面向大众市场 APK；功能：科学计算 + 单位转换 + 汇率换算（Web 已交付，APK 因 NDK 损坏阻塞）",
+      "tags": [
+        "Web"
+      ],
+      "createdAt": "2026-04-26",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260430-007",
+      "title": "doc-editor",
+      "column": "todo",
+      "projectId": "PRJ-20260430-007",
+      "projectName": "doc-editor",
+      "proposalId": "P-20260430-007",
+      "proposalUrl": "https://yeluo45.github.io/doc-editor/",
+      "type": "package",
+      "status": "active",
+      "description": "富文本编辑器(加粗/斜体/下划线/删除线/标题/列表/引用/代码块/链接/图片)+文档管理(侧边栏列表/新建/删除/重命名)+自动保存(2秒防抖)+历史版本(30秒快照)+导出(MD/HTML/打印PDF)+主题切换(亮/暗)+本地化中文；IndexedDB持久化；网络故障用GitHub API直接推送源码",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-30",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-001",
+      "title": "proposals-manager-项目管理增强",
+      "column": "inProgress",
+      "projectId": "PRJ-20260502-001",
+      "projectName": "proposals-manager-项目管理增强",
+      "proposalId": "P-20260502-001",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "in_dev",
+      "description": "项目详情页（独立路由 /project/:id）+ 里程碑管理（CRUD + 时间线 + 提案关联）; PRD 倒计时到期(2026-05-02)，默认通过处理; 技术期望倒计时到期(2026-05-02)，默认通过处理",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-002",
+      "title": "todolist-迭代增强-轻量化-看板视图",
+      "column": "todo",
+      "projectId": "PRJ-20260502-002",
+      "projectName": "todolist-迭代增强-轻量化-看板视图",
+      "proposalId": "P-20260502-002",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "V2轻量化增强已完成（优先级P0/P1/P2+标签筛选+截止日期排序+搜索过滤），部署于 https://yeluo45.github.io/todo-list/；V3看板视图已集成到todo-list项目（列表/看板视图切换，三列看板+原生拖拽），URL不变；看板使用HTML5原生Drag and Drop API实现，不需要额外依赖",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-015",
+      "title": "dbg卡牌游戏-v7-敌人与boss扩充",
+      "column": "todo",
+      "projectId": "PRJ-20260502-015",
+      "projectName": "dbg卡牌游戏-v7-敌人与boss扩充",
+      "proposalId": "P-20260502-015",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V7 — 敌人与Boss扩充",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-001",
+      "title": "dbg卡牌游戏-v9-成就系统",
+      "column": "todo",
+      "projectId": "PRJ-20260502-001",
+      "projectName": "dbg卡牌游戏-v9-成就系统",
+      "proposalId": "P-20260503-001",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V9 — 成就系统",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-016",
+      "title": "dbg卡牌游戏-v8-卡牌升级系统",
+      "column": "todo",
+      "projectId": "PRJ-20260502-016",
+      "projectName": "dbg卡牌游戏-v8-卡牌升级系统",
+      "proposalId": "P-20260502-016",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V8 — 卡牌升级系统",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-013",
+      "title": "dbg卡牌游戏-v6-遗物-神器系统",
+      "column": "todo",
+      "projectId": "PRJ-20260502-013",
+      "projectName": "dbg卡牌游戏-v6-遗物-神器系统",
+      "proposalId": "P-20260502-013",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V6 — 遗物/神器系统",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-005",
+      "title": "3d飞行棋-玩家颜色选择-战绩统计",
+      "column": "todo",
+      "projectId": "PRJ-20260502-005",
+      "projectName": "3d飞行棋-玩家颜色选择-战绩统计",
+      "proposalId": "P-20260502-005",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "玩家可选颜色；战绩统计（胜率/连胜）；localStorage持久化",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-007",
+      "title": "game-1024-v2-2048-无限模式切换",
+      "column": "todo",
+      "projectId": "PRJ-20260502-007",
+      "projectName": "game-1024-v2-2048-无限模式切换",
+      "proposalId": "P-20260502-007",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "2048模式+无限模式切换；各自独立存档；无限模式不设目标上限；npm run build成功；已部署至gh-pages",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-009",
+      "title": "game-1024-v3-视觉动画增强",
+      "column": "todo",
+      "projectId": "PRJ-20260502-009",
+      "projectName": "game-1024-v3-视觉动画增强",
+      "proposalId": "P-20260502-009",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "方块移动动画(150ms ease-out)+合并动画(scale爆开)+新方块出现动画(scale放大)+分数飘字",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-010",
+      "title": "game-1024-v3-音效系统",
+      "column": "todo",
+      "projectId": "PRJ-20260502-010",
+      "projectName": "game-1024-v3-音效系统",
+      "proposalId": "P-20260502-010",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "Web Audio API合成音效(滑动/合并/胜利/失败)+音效开关+AudioManager封装",
+      "tags": [
+        "Web"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-011",
+      "title": "game-1024-v4-悔棋-重试功能",
+      "column": "todo",
+      "projectId": "PRJ-20260502-011",
+      "projectName": "game-1024-v4-悔棋-重试功能",
+      "proposalId": "P-20260502-011",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "历史快照栈(最多10步)+撤销按钮+重试按钮；每日挑战撤销不影响seed状态",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-012",
+      "title": "game-1024-v4-数据统计面板",
+      "column": "todo",
+      "projectId": "PRJ-20260502-012",
+      "projectName": "game-1024-v4-数据统计面板",
+      "proposalId": "P-20260502-012",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "成就页面Tab切换(成就/统计)+各模式分别统计(场次/胜率/最高分/平均分)+localStorage持久化",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-013",
+      "title": "game-1024-v5-更多皮肤",
+      "column": "inProgress",
+      "projectId": "PRJ-20260502-013",
+      "projectName": "game-1024-v5-更多皮肤",
+      "proposalId": "P-20260502-013",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "in_dev",
+      "description": "节日皮肤(春节/圣诞/万圣节)+暗黑模式+成就解锁皮肤(彩虹/钻石/星空/复古)",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-014",
+      "title": "game-1024-v5-自定义棋盘",
+      "column": "inProgress",
+      "projectId": "PRJ-20260502-014",
+      "projectName": "game-1024-v5-自定义棋盘",
+      "proposalId": "P-20260502-014",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "in_dev",
+      "description": "棋盘尺寸切换(4×4/5×5/6×6)+进阶/地狱难度+初始方块数递增+每日挑战仅支持4×4",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-008",
+      "title": "game-1024-v2-每日挑战-成就系统",
+      "column": "todo",
+      "projectId": "PRJ-20260502-008",
+      "projectName": "game-1024-v2-每日挑战-成就系统",
+      "proposalId": "P-20260502-008",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "每日挑战(固定初始盘面+得分排名)+10个成就(解锁弹窗+奖励)；参考3D打地鼠V4实现",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-003",
+      "title": "harness-desktop-v2-sub-agent-verification-hooks-更多工具",
+      "column": "todo",
+      "projectId": "PRJ-20260502-003",
+      "projectName": "harness-desktop-v2-sub-agent-verification-hooks-更多工具",
+      "proposalId": "P-20260502-003",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "v2 迭代已完成交付：①Sub Agent（共享KV Cache + 任务队列 + 依赖管理）②Verification Hooks后台分类器（strict/loose/disabled三档 + auto-retry）③4个新工具（edit_code/project_tree/web_search/task_plan）；llmBridge.ts MVP_TOOLS→V2_TOOLS 已修复；Vite build成功；electron-builder打包受限WSL环境（需Windows本机执行）",
+      "tags": [
+        "Windows"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-012",
+      "title": "todolist-v3-云同步-导入导出",
+      "column": "inProgress",
+      "projectId": "PRJ-20260502-012",
+      "projectName": "todolist-v3-云同步-导入导出",
+      "proposalId": "P-20260502-012",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "in_dev",
+      "description": "GitHub云同步（PAT认证，数据存data/todos.json，自动push/pull）+ CSV/JSON导入导出",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-014",
+      "title": "todolist-v5-搜索增强-快捷键",
+      "column": "todo",
+      "projectId": "PRJ-20260502-014",
+      "projectName": "todolist-v5-搜索增强-快捷键",
+      "proposalId": "P-20260502-014",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "TodoList V5 — 搜索增强 + 快捷键",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-015",
+      "title": "todolist-v7-批量操作",
+      "column": "todo",
+      "projectId": "PRJ-20260502-015",
+      "projectName": "todolist-v7-批量操作",
+      "proposalId": "P-20260502-015",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "TodoList V7 — 批量操作",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-016",
+      "title": "todolist-v8-暗色模式-看板泳道-增强导出",
+      "column": "todo",
+      "projectId": "PRJ-20260502-016",
+      "projectName": "todolist-v8-暗色模式-看板泳道-增强导出",
+      "proposalId": "P-20260502-016",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "暗色模式 + 看板泳道 + CSV/iCal 导出",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-019",
+      "title": "todolist-v11-甘特图-循环提醒",
+      "column": "todo",
+      "projectId": "PRJ-20260502-019",
+      "projectName": "todolist-v11-甘特图-循环提醒",
+      "proposalId": "P-20260502-019",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "甘特图时间线视图 + 循环任务自动生成下一周期",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-02",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260430-006",
+      "title": "tower-baby-guard",
+      "column": "todo",
+      "projectId": "PRJ-20260525",
+      "projectName": "tower-baby-guard",
+      "proposalId": "P-20260430-006",
+      "proposalUrl": "https://yeluo45.github.io/tower-baby-guard/",
+      "type": "package",
+      "status": "active",
+      "description": "育儿主题塔防；5种防御塔(Mom/Dad/Grandma/Doctor/Chef)+4种敌人(Tantrum/Bedtime/Veggie/ScreenTime)+10波次；Godot 4 HTML5导出",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-30",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-324",
+      "title": "A parenting-themed tower defense game for kids",
+      "column": "todo",
+      "projectId": "PRJ-20260525",
+      "projectName": "tower-baby-guard",
+      "proposalId": "P-20260503-324",
+      "proposalUrl": "https://yeluo45.github.io/tower-baby-guard/",
+      "type": "package",
+      "status": "active",
+      "description": "A parenting-themed tower defense game for kids - 育儿主题塔防游戏",
+      "tags": [
+        "Game",
+        "Game"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-300",
+      "title": "AI Creator 微信小程序",
+      "column": "todo",
+      "projectId": "PRJ-20260501",
+      "projectName": "ai-creator-miniprogram",
+      "proposalId": "P-20260503-300",
+      "proposalUrl": "https://yeluo45.github.io/ai-creator-miniprogram/",
+      "type": "package",
+      "status": "active",
+      "description": "AI Creator 微信小程序 - AI图片/音乐/语音生成(MiniMax API)",
+      "tags": [
+        "AI",
+        "MiniApp",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-301",
+      "title": "AI Skills",
+      "column": "todo",
+      "projectId": "PRJ-20260502",
+      "projectName": "ai-skills",
+      "proposalId": "P-20260503-301",
+      "proposalUrl": "https://yeluo45.github.io/ai-skills/",
+      "type": "package",
+      "status": "active",
+      "description": "AI Skills - 提示词与技能库",
+      "tags": [
+        "AI",
+        "Tool",
+        "Tool"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-302",
+      "title": "弱视训练Web应用",
+      "column": "todo",
+      "projectId": "PRJ-20260503",
+      "projectName": "amblyopia-training",
+      "proposalId": "P-20260503-302",
+      "proposalUrl": "https://yeluo45.github.io/amblyopia-training/",
+      "type": "package",
+      "status": "active",
+      "description": "弱视训练Web应用 - 面向家庭的医学级弱视训练平台",
+      "tags": [
+        "Web",
+        "AI",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250417-002",
+      "title": "android-hello",
+      "column": "todo",
+      "projectId": "PRJ-20260504",
+      "projectName": "android-hello",
+      "proposalId": "P-20250417-002",
+      "proposalUrl": "https://github.com/YeLuo45/android-hello/releases/download/v1.1.0/v1.6.0.apk",
+      "type": "app",
+      "status": "active",
+      "description": "Android Kotlin Hello World；包名 com.hello.android；minSdk 24, targetSdk 36；APK 已上传 GitHub Releases (v1.0.0)",
+      "tags": [
+        "Android"
+      ],
+      "createdAt": "2026-04-17",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-303",
+      "title": "Android Hello World 示例应用",
+      "column": "todo",
+      "projectId": "PRJ-20260504",
+      "projectName": "android-hello",
+      "proposalId": "P-20260503-303",
+      "proposalUrl": "https://yeluo45.github.io/android-hello/",
+      "type": "package",
+      "status": "active",
+      "description": "Android Hello World 示例应用",
+      "tags": [
+        "Mobile",
+        "Mobile"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-304",
+      "title": "计算器应用",
+      "column": "todo",
+      "projectId": "PRJ-20260505",
+      "projectName": "calculator-app",
+      "proposalId": "P-20260503-304",
+      "proposalUrl": "https://yeluo45.github.io/calculator-app/",
+      "type": "package",
+      "status": "active",
+      "description": "计算器应用 - React Native",
+      "tags": [
+        "Web",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250418-002",
+      "title": "creative-drawing-board",
+      "column": "todo",
+      "projectId": "PRJ-20260506",
+      "projectName": "creative-drawing-board",
+      "proposalId": "P-20250418-002",
+      "proposalUrl": "https://yeluo45.github.io/creative-drawing-board/",
+      "type": "package",
+      "status": "active",
+      "description": "儿童创意画板；纯HTML5单文件(745行)；自由画画/10色配色盘/3种笔刷/橡皮擦/泡泡游戏/音效反馈；完全离线可用",
+      "tags": [
+        "游戏"
+      ],
+      "createdAt": "2026-04-18",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-305",
+      "title": "儿童创意画板",
+      "column": "todo",
+      "projectId": "PRJ-20260506",
+      "projectName": "creative-drawing-board",
+      "proposalId": "P-20260503-305",
+      "proposalUrl": "https://yeluo45.github.io/creative-drawing-board/",
+      "type": "package",
+      "status": "active",
+      "description": "儿童创意画板 - 面向3-6岁幼儿的HTML5绘画游戏",
+      "tags": [
+        "Game",
+        "Web",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260419-003",
+      "title": "dont-step-white",
+      "column": "inProgress",
+      "projectId": "PRJ-20260507",
+      "projectName": "dont-step-white",
+      "proposalId": "P-20260419-003",
+      "proposalUrl": "https://yeluo45.github.io/dont-step-white/ (gh-pages)",
+      "type": "package",
+      "status": "in_dev",
+      "description": "经典钢琴块玩法；4列8行网格；←→移动+点击踩黑块；失败条件：踩白块/漏踩黑块；React 18 + Vite 5 + PWA；分数/速度递增/历史最高分/PWA离线/音效；已部署 gh-pages",
+      "tags": [
+        "Web",
+        "PWA"
+      ],
+      "createdAt": "2026-04-19",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-306",
+      "title": "经典钢琴块游戏 Web + PWA 版本",
+      "column": "todo",
+      "projectId": "PRJ-20260507",
+      "projectName": "dont-step-white",
+      "proposalId": "P-20260503-306",
+      "proposalUrl": "https://yeluo45.github.io/dont-step-white/",
+      "type": "package",
+      "status": "active",
+      "description": "经典钢琴块游戏 Web + PWA 版本",
+      "tags": [
+        "Game",
+        "Web",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250418-004",
+      "title": "future-little-leaders",
+      "column": "todo",
+      "projectId": "PRJ-20260508",
+      "projectName": "future-little-leaders",
+      "proposalId": "P-20250418-004",
+      "proposalUrl": "https://yeluo45.github.io/future-little-leaders/",
+      "type": "package",
+      "status": "active",
+      "description": "uni-app 多平台项目（H5 构建）；GitHub Actions workflow 部署改用 Git Data API 直接推送 dist 到 gh-pages",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-18",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-307",
+      "title": "未来小领袖",
+      "column": "todo",
+      "projectId": "PRJ-20260508",
+      "projectName": "future-little-leaders",
+      "proposalId": "P-20260503-307",
+      "proposalUrl": "https://yeluo45.github.io/future-little-leaders/",
+      "type": "package",
+      "status": "active",
+      "description": "未来小领袖",
+      "tags": [
+        "Web",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-308",
+      "title": "Hermes Agent 团队协作 Web UI",
+      "column": "todo",
+      "projectId": "PRJ-20260509",
+      "projectName": "hermes-collab-web",
+      "proposalId": "P-20260503-308",
+      "proposalUrl": "https://yeluo45.github.io/hermes-collab-web/",
+      "type": "package",
+      "status": "active",
+      "description": "Hermes Agent 团队协作 Web UI",
+      "tags": [
+        "Web",
+        "AI",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-309",
+      "title": "Hermes的PC控制平台",
+      "column": "todo",
+      "projectId": "PRJ-20260510",
+      "projectName": "hermes-control-platform",
+      "proposalId": "P-20260503-309",
+      "proposalUrl": "https://yeluo45.github.io/hermes-control-platform/",
+      "type": "package",
+      "status": "active",
+      "description": "Hermes的PC控制平台",
+      "tags": [
+        "Other"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260422-003",
+      "title": "match3-puzzle",
+      "column": "todo",
+      "projectId": "PRJ-20260511",
+      "projectName": "match3-puzzle",
+      "proposalId": "P-20260422-003",
+      "proposalUrl": "https://yeluo45.github.io/match3-puzzle/",
+      "type": "package",
+      "status": "active",
+      "description": "8x8三消游戏原型验证，纯HTML5 Canvas；5种颜色圆块、点击交换、3+连消、下落填补、分数系统、游戏结束判定",
+      "tags": [
+        "游戏"
+      ],
+      "createdAt": "2026-04-24",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-310",
+      "title": "休闲益智三消游戏原型",
+      "column": "todo",
+      "projectId": "PRJ-20260511",
+      "projectName": "match3-puzzle",
+      "proposalId": "P-20260503-310",
+      "proposalUrl": "https://yeluo45.github.io/match3-puzzle/",
+      "type": "package",
+      "status": "active",
+      "description": "休闲益智三消游戏原型",
+      "tags": [
+        "Game",
+        "Web",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250418-001",
+      "title": "monopoly3d",
+      "column": "todo",
+      "projectId": "PRJ-20260512",
+      "projectName": "monopoly3d",
+      "proposalId": "P-20250418-001",
+      "proposalUrl": "https://YeLuo45.github.io/monopoly3d/",
+      "type": "package",
+      "status": "active",
+      "description": "Vite + React + Three.js + @react-three/fiber + Tailwind CSS 3；3D 大富翁桌游；Node 18 兼容性问题修复（Tailwind v4→v3，Vite v8→v5）；已部署 GitHub Pages；项目文件（含构建产物）推送至 gh-pages 分支",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-18",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-311",
+      "title": "Monopoly3D",
+      "column": "todo",
+      "projectId": "PRJ-20260512",
+      "projectName": "monopoly3d",
+      "proposalId": "P-20260503-311",
+      "proposalUrl": "https://yeluo45.github.io/monopoly3d/",
+      "type": "package",
+      "status": "active",
+      "description": "Monopoly3D - 3D 大富翁在线游戏",
+      "tags": [
+        "Game",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-312",
+      "title": "PaywallRadar",
+      "column": "todo",
+      "projectId": "PRJ-20260513",
+      "projectName": "paywall-radar",
+      "proposalId": "P-20260503-312",
+      "proposalUrl": "https://yeluo45.github.io/paywall-radar/",
+      "type": "package",
+      "status": "active",
+      "description": "PaywallRadar - Competitive Research Tool",
+      "tags": [
+        "Other",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250421-003",
+      "title": "personalClaw",
+      "column": "todo",
+      "projectId": "PRJ-20260514",
+      "projectName": "personalClaw",
+      "proposalId": "P-20250421-003",
+      "proposalUrl": "https://yeluo45.github.io/personalClaw/",
+      "type": "package",
+      "status": "active",
+      "description": "OpenClaw PC控制平台；Electron + React 18 + Ant Design + node-cron；桌面管理功能",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-21",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-313",
+      "title": "私人定制openclaw控制平台",
+      "column": "todo",
+      "projectId": "PRJ-20260514",
+      "projectName": "personalClaw",
+      "proposalId": "P-20260503-313",
+      "proposalUrl": "https://yeluo45.github.io/personalClaw/",
+      "type": "package",
+      "status": "active",
+      "description": "私人定制openclaw控制平台",
+      "tags": [
+        "Other",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-314",
+      "title": "PixelPal",
+      "column": "todo",
+      "projectId": "PRJ-20260515",
+      "projectName": "pixel-pal",
+      "proposalId": "P-20260503-314",
+      "proposalUrl": "https://yeluo45.github.io/pixel-pal/",
+      "type": "package",
+      "status": "active",
+      "description": "PixelPal - AI Desktop Pet & Work Assistant",
+      "tags": [
+        "Desktop",
+        "AI",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250420-002",
+      "title": "pixel-pal-web",
+      "column": "todo",
+      "projectId": "PRJ-20260516",
+      "projectName": "pixel-pal-web",
+      "proposalId": "P-20250420-002",
+      "proposalUrl": "https://YeLuo45.github.io/pixel-pal-web",
+      "type": "web",
+      "status": "active",
+      "description": "AI伴侣桌面应用；Electron + React 19 + MUI + Zustand；PDF解析(xlsx/pdfjs)+文档导入(mammoth)+笔记管理；需打包Windows exe",
+      "tags": [
+        "Windows"
+      ],
+      "createdAt": "2026-04-20",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-315",
+      "title": "PixelPal",
+      "column": "todo",
+      "projectId": "PRJ-20260516",
+      "projectName": "pixel-pal-web",
+      "proposalId": "P-20260503-315",
+      "proposalUrl": "https://yeluo45.github.io/pixel-pal-web/",
+      "type": "package",
+      "status": "active",
+      "description": "PixelPal - AI 桌面宠物与工作助手",
+      "tags": [
+        "Web",
+        "AI",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-316",
+      "title": "提案管理系统",
+      "column": "todo",
+      "projectId": "PRJ-20260517",
+      "projectName": "proposals-document",
+      "proposalId": "P-20260503-316",
+      "proposalUrl": "https://yeluo45.github.io/proposals-document/",
+      "type": "package",
+      "status": "active",
+      "description": "提案管理系统 - 提案文档与版本管理",
+      "tags": [
+        "Tool",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250420-001",
+      "title": "snake-battle",
+      "column": "todo",
+      "projectId": "PRJ-20260518",
+      "projectName": "snake-battle",
+      "proposalId": "P-20250420-001",
+      "proposalUrl": "https://yeluo45.github.io/snake-battle/",
+      "type": "package",
+      "status": "active",
+      "description": "贪吃蛇大作战；经典模式(单蛇吃食物)+AI对战(1玩家+3AI蛇,3分钟倒计时)；3套皮肤(Classic/Neon/Candy)；localStorage存档",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-20",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-317",
+      "title": "贪吃蛇大作战",
+      "column": "todo",
+      "projectId": "PRJ-20260518",
+      "projectName": "snake-battle",
+      "proposalId": "P-20260503-317",
+      "proposalUrl": "https://yeluo45.github.io/snake-battle/",
+      "type": "package",
+      "status": "active",
+      "description": "贪吃蛇大作战 - Web + PWA 版，支持经典模式和AI对战",
+      "tags": [
+        "Web",
+        "AI",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-318",
+      "title": "2.5D 侧视角射击游戏",
+      "column": "todo",
+      "projectId": "PRJ-20260519",
+      "projectName": "soulshooter",
+      "proposalId": "P-20260503-318",
+      "proposalUrl": "https://yeluo45.github.io/soulshooter/",
+      "type": "package",
+      "status": "active",
+      "description": "2.5D 侧视角射击游戏 - 街机快节奏射击游戏",
+      "tags": [
+        "Game",
+        "Web",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-319",
+      "title": "3D版超级玛丽",
+      "column": "todo",
+      "projectId": "PRJ-20260520",
+      "projectName": "super-mario-3d",
+      "proposalId": "P-20260503-319",
+      "proposalUrl": "https://yeluo45.github.io/super-mario-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "3D版超级玛丽 - Three.js HTML5平台跳跃游戏",
+      "tags": [
+        "Game",
+        "Web",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250419-002",
+      "title": "tank-battle",
+      "column": "todo",
+      "projectId": "PRJ-20260521",
+      "projectName": "tank-battle",
+      "proposalId": "P-20250419-002",
+      "proposalUrl": "https://yeluo45.github.io/tank-battle/",
+      "type": "package",
+      "status": "active",
+      "description": "坦克大战；13x13网格；WASD/方向键移动+空格射击；4种地形(砖块/钢铁/草丛/河流)；AI巡逻+追击；保护老鹰基地；3分钟倒计时",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-04-19",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-320",
+      "title": "坦克大作战",
+      "column": "todo",
+      "projectId": "PRJ-20260521",
+      "projectName": "tank-battle",
+      "proposalId": "P-20260503-320",
+      "proposalUrl": "https://yeluo45.github.io/tank-battle/",
+      "type": "package",
+      "status": "active",
+      "description": "坦克大作战 - 经典4399坦克大战Web+PWA游戏",
+      "tags": [
+        "Game",
+        "Web",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260419-001",
+      "title": "temple-run",
+      "column": "todo",
+      "projectId": "PRJ-20260522",
+      "projectName": "temple-run",
+      "proposalId": "P-20260419-001",
+      "proposalUrl": "https://yeluo45.github.io/temple-run/",
+      "type": "package",
+      "status": "active",
+      "description": "类Temple Run无尽跑酷；2.5D侧视角；3条跑道左右切换；跳跃/下滑操作；金币收集；React 18 + Vite 5 + PWA；Web版已部署",
+      "tags": [
+        "Web",
+        "PWA"
+      ],
+      "createdAt": "2026-04-19",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-321",
+      "title": "神庙大逃亡",
+      "column": "todo",
+      "projectId": "PRJ-20260522",
+      "projectName": "temple-run",
+      "proposalId": "P-20260503-321",
+      "proposalUrl": "https://yeluo45.github.io/temple-run/",
+      "type": "package",
+      "status": "active",
+      "description": "神庙大逃亡 - 无尽跑酷游戏 PWA",
+      "tags": [
+        "Game",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250418-005",
+      "title": "todo-app",
+      "column": "todo",
+      "projectId": "PRJ-20260523",
+      "projectName": "todo-app",
+      "proposalId": "P-20250418-005",
+      "proposalUrl": "https://yeluo45.github.io/todo-app/",
+      "type": "package",
+      "status": "active",
+      "description": "Todo应用；Web版+Vite构建+Electron桌面客户端(electron-builder打包)；NSIS安装包+便携版",
+      "tags": [
+        "Web"
+      ],
+      "createdAt": "2026-04-18",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-322",
+      "title": "TodoList Android App(Flutter)",
+      "column": "todo",
+      "projectId": "PRJ-20260523",
+      "projectName": "todo-app",
+      "proposalId": "P-20260503-322",
+      "proposalUrl": "https://yeluo45.github.io/todo-app/",
+      "type": "package",
+      "status": "active",
+      "description": "TodoList Android App(Flutter)",
+      "tags": [
+        "Mobile",
+        "Mobile"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20250416-001",
+      "title": "todo-list",
+      "column": "todo",
+      "projectId": "PRJ-20260524",
+      "projectName": "todo-list",
+      "proposalId": "P-20250416-001",
+      "proposalUrl": "https://yeluo45.github.io/todo-list/",
+      "type": "package",
+      "status": "active",
+      "description": "Web + Windows扩展；Windows客户端（Electron）；本地部署",
+      "tags": [
+        "Web",
+        "Windows"
+      ],
+      "createdAt": "2026-04-16",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-323",
+      "title": "Web TodoList 应用",
+      "column": "todo",
+      "projectId": "PRJ-20260524",
+      "projectName": "todo-list",
+      "proposalId": "P-20260503-323",
+      "proposalUrl": "https://yeluo45.github.io/todo-list/",
+      "type": "package",
+      "status": "active",
+      "description": "Web TodoList 应用",
+      "tags": [
+        "Web",
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-325",
+      "title": "UltraMan vs Monsters 3D",
+      "column": "todo",
+      "projectId": "PRJ-20260526",
+      "projectName": "ultraman-vs-monsters-3d",
+      "proposalId": "P-20260503-325",
+      "proposalUrl": "https://yeluo45.github.io/ultraman-vs-monsters-3d/",
+      "type": "package",
+      "status": "active",
+      "description": "UltraMan vs Monsters 3D - 奥特曼打怪兽3D游戏",
+      "tags": [
+        "Game",
+        "Game"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-008",
+      "title": "dbg卡牌游戏-v16-卡组辅助系统",
+      "column": "todo",
+      "projectId": "PRJ-20260503-008",
+      "projectName": "dbg卡牌游戏-v16-卡组辅助系统",
+      "proposalId": "P-20260503-008",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V16 — 卡组辅助系统",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-015",
+      "title": "dbg卡牌游戏-v23-pwa-应用化",
+      "column": "todo",
+      "projectId": "PRJ-20260503-015",
+      "projectName": "dbg卡牌游戏-v23-pwa-应用化",
+      "proposalId": "P-20260503-015",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "manifest.json；sw.js；离线缓存；apple-mobile-web-app标签；文件7295行",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-016",
+      "title": "dbg卡牌游戏-v24-成就系统",
+      "column": "todo",
+      "projectId": "PRJ-20260503-016",
+      "projectName": "dbg卡牌游戏-v24-成就系统",
+      "proposalId": "P-20260503-016",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "18个成就；成就检查/解锁函数；触发点绑定；成就面板；持久化；文件7295行",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-017",
+      "title": "dbg卡牌游戏-v25-宠物-同伴系统",
+      "column": "todo",
+      "projectId": "PRJ-20260503-017",
+      "projectName": "dbg卡牌游戏-v25-宠物-同伴系统",
+      "proposalId": "P-20260503-017",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "8种宠物；宠物效果函数；宠物商店UI；装备/卸下；保存加载；文件7748行",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-019",
+      "title": "dbg卡牌游戏-v27-更多章节与boss扩展",
+      "column": "todo",
+      "projectId": "PRJ-20260503-019",
+      "projectName": "dbg卡牌游戏-v27-更多章节与boss扩展",
+      "proposalId": "P-20260503-019",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "第5-7章（天空/遗迹/混沌）；3新Boss（archangel/azmodan/chaosGod）；多阶段机制；章节奖励；文件8136行",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-018",
+      "title": "dbg卡牌游戏-v26-更多卡牌设计",
+      "column": "todo",
+      "projectId": "PRJ-20260503-018",
+      "projectName": "dbg卡牌游戏-v26-更多卡牌设计",
+      "proposalId": "P-20260503-018",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "15张新卡牌；斩杀/狂暴/连锁等攻击牌；强化防御/闪避等技能牌；激怒/荆棘等光环；文件7950行",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-014",
+      "title": "dbg卡牌游戏-v22-音效与音乐扩展",
+      "column": "todo",
+      "projectId": "PRJ-20260503-014",
+      "projectName": "dbg卡牌游戏-v22-音效与音乐扩展",
+      "proposalId": "P-20260503-014",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "AudioManager新增音效；触发点绑定；静音开关；Web Audio API；文件7165行",
+      "tags": [
+        "Web"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-013",
+      "title": "dbg卡牌游戏-v21-移动端适配-触屏支持",
+      "column": "todo",
+      "projectId": "PRJ-20260503-013",
+      "projectName": "dbg卡牌游戏-v21-移动端适配-触屏支持",
+      "proposalId": "P-20260503-013",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "viewport配置；Canvas响应式缩放；触屏事件；横屏提示；移动端媒体查询；文件7055行",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-012",
+      "title": "dbg卡牌游戏-v20-章节扩展-boss战设计",
+      "column": "todo",
+      "projectId": "PRJ-20260503-012",
+      "projectName": "dbg卡牌游戏-v20-章节扩展-boss战设计",
+      "proposalId": "P-20260503-012",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "第3/4章敌人+深渊领主/虚无之主Boss战；3阶段Boss机制；章节奖励系统；7层地图；文件6882行",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-011",
+      "title": "dbg卡牌游戏-v19-多槽位存档系统",
+      "column": "todo",
+      "projectId": "PRJ-20260503-011",
+      "projectName": "dbg卡牌游戏-v19-多槽位存档系统",
+      "proposalId": "P-20260503-011",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "3槽位存档系统；存档/加载/删除；自动存档；主菜单存档入口；文件6299行",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-010",
+      "title": "dbg卡牌游戏-v18-随机事件系统",
+      "column": "todo",
+      "projectId": "PRJ-20260503-010",
+      "projectName": "dbg卡牌游戏-v18-随机事件系统",
+      "proposalId": "P-20260503-010",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "6种事件类型：休息/商店/宝箱/精英/随机/篝火；EVENTS数据 + showEvent + 事件遮罩；地图节点扩展；文件5858行",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-007",
+      "title": "dbg卡牌游戏-v15-更多卡牌",
+      "column": "todo",
+      "projectId": "PRJ-20260503-007",
+      "projectName": "dbg卡牌游戏-v15-更多卡牌",
+      "proposalId": "P-20260503-007",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V15 — 更多卡牌",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-006",
+      "title": "dbg卡牌游戏-v14-卡牌商店重做",
+      "column": "todo",
+      "projectId": "PRJ-20260503-006",
+      "projectName": "dbg卡牌游戏-v14-卡牌商店重做",
+      "proposalId": "P-20260503-006",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V14 — 卡牌商店重做",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-005",
+      "title": "dbg卡牌游戏-v13-牌组构建核心-critical-bugfix",
+      "column": "todo",
+      "projectId": "PRJ-20260503-005",
+      "projectName": "dbg卡牌游戏-v13-牌组构建核心-critical-bugfix",
+      "proposalId": "P-20260503-005",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V13 — 牌组构建核心（Critical Bugfix）",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-004",
+      "title": "dbg卡牌游戏-v12-音效与特效",
+      "column": "todo",
+      "projectId": "PRJ-20260503-004",
+      "projectName": "dbg卡牌游戏-v12-音效与特效",
+      "proposalId": "P-20260503-004",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V12 — 音效与特效",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-003",
+      "title": "dbg卡牌游戏-v11-更多遗物效果",
+      "column": "todo",
+      "projectId": "PRJ-20260503-003",
+      "projectName": "dbg卡牌游戏-v11-更多遗物效果",
+      "proposalId": "P-20260503-003",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V11 — 更多遗物效果",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-002",
+      "title": "dbg卡牌游戏-v10-章节扩展",
+      "column": "todo",
+      "projectId": "PRJ-20260503-002",
+      "projectName": "dbg卡牌游戏-v10-章节扩展",
+      "proposalId": "P-20260503-002",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "DBG卡牌游戏 V10 — 章节扩展",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-012",
+      "title": "dbg卡牌游戏-v5-战斗奖励卡牌选择系统",
+      "column": "todo",
+      "projectId": "PRJ-20260503-012",
+      "projectName": "dbg卡牌游戏-v5-战斗奖励卡牌选择系统",
+      "proposalId": "P-20260502-012",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "archived",
+      "description": "DBG卡牌游戏 V5 — 战斗奖励卡牌选择系统",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-017",
+      "title": "ai-subscription-大模型调用层升级-llm-design-dev",
+      "column": "inProgress",
+      "projectId": "PRJ-20260503-017",
+      "projectName": "ai-subscription-大模型调用层升级-llm-design-dev",
+      "proposalId": "P-20260502-017",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "in_dev",
+      "description": "Provider架构升级 + AI SDK集成 + 流式摘要 + Thinking配置；技术栈：ai SDK + @ai-sdk/openai + @ai-sdk/anthropic + @ai-sdk/google + partial-json + jsonrepair；技术期望倒计时(2026-05-02)已触发，当前进入 in_dev 阶段",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260502-004",
+      "title": "harness-desktop-v3-多模型路由",
+      "column": "inProgress",
+      "projectId": "PRJ-20260503-004",
+      "projectName": "harness-desktop-v3-多模型路由",
+      "proposalId": "P-20260502-004",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "in_dev",
+      "description": "TDD 测试用例已生成（src/__tests__/modelRouting.test.ts + llmBridge.test.ts）；Vitest 1.x 需要 Node 20+，当前环境 Node 18.19.1；测试文件语法正确，待升级 Node 后可运行；建议后续开发环境升级 Node 20+",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-023",
+      "title": "todolist-v15-pwa离线支持-周视图日历",
+      "column": "todo",
+      "projectId": "PRJ-20260503-023",
+      "projectName": "todolist-v15-pwa离线支持-周视图日历",
+      "proposalId": "P-20260503-023",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "PWA manifest+ServiceWorker离线缓存 + 甘特图周/月视图切换(7天/30天时间轴)",
+      "tags": [
+        "Web",
+        "PWA"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-027",
+      "title": "todolist-v19-甘特图资源负载图-看板泳道按项目分组",
+      "column": "todo",
+      "projectId": "PRJ-20260503-027",
+      "projectName": "todolist-v19-甘特图资源负载图-看板泳道按项目分组",
+      "proposalId": "P-20260503-027",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "资源负载图(条形高度=任务数,悬停tooltip) + 看板泳道按项目分组(颜色+独立WIP)",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-026",
+      "title": "todolist-v18-标签管理增强-甘特图资源视图",
+      "column": "todo",
+      "projectId": "PRJ-20260503-026",
+      "projectName": "todolist-v18-标签管理增强-甘特图资源视图",
+      "proposalId": "P-20260503-026",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "标签组CRUD+颜色+统计(N)+批量重命名(3种模式) + 甘特图资源视图(按项目分组+项目颜色)",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-025",
+      "title": "todolist-v17-标签管理增强-项目分组",
+      "column": "todo",
+      "projectId": "PRJ-20260503-025",
+      "projectName": "todolist-v17-标签管理增强-项目分组",
+      "proposalId": "P-20260503-025",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "项目分组ProjectSidebar(嵌套树形+颜色)+标签颜色8色预设+多选过滤",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-024",
+      "title": "todolist-v16-定时自动备份到-gist-一键恢复",
+      "column": "todo",
+      "projectId": "PRJ-20260503-024",
+      "projectName": "todolist-v16-定时自动备份到-gist-一键恢复",
+      "proposalId": "P-20260503-024",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "自动备份开关+间隔配置+备份历史列表 + 一键恢复预览确认",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-022",
+      "title": "todolist-v14-看板wip优化-数据导入增强",
+      "column": "todo",
+      "projectId": "PRJ-20260503-022",
+      "projectName": "todolist-v14-看板wip优化-数据导入增强",
+      "proposalId": "P-20260503-022",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "泳道独立WIP限制+看板设置弹窗+逾期高亮角标 + Todoist/Notion/CSV智能导入",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-021",
+      "title": "todolist-v13-仪表板首页-泳道甘特图",
+      "column": "todo",
+      "projectId": "PRJ-20260503-021",
+      "projectName": "todolist-v13-仪表板首页-泳道甘特图",
+      "proposalId": "P-20260503-021",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "仪表板首页(KPI卡片+今日到期+四象限分布) + 甘特图泳道分组(按状态/优先级)",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    },
+    {
+      "id": "P-20260503-020",
+      "title": "todolist-v12-任务评分-gist-多设备同步",
+      "column": "todo",
+      "projectId": "PRJ-20260503-020",
+      "projectName": "todolist-v12-任务评分-gist-多设备同步",
+      "proposalId": "P-20260503-020",
+      "proposalUrl": "",
+      "type": "package",
+      "status": "active",
+      "description": "重要性×紧急度评分+四象限徽章 + GitHub Gist多设备同步",
+      "tags": [
+        "提案"
+      ],
+      "createdAt": "2026-05-03",
+      "source": "proposal"
+    }
+  ]
+}
