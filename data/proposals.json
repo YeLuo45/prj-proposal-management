@@ -3576,6 +3576,51 @@
           "acceptance": "accepted"
         }
       ]
+    },
+    {
+      "id": "PRJ-20260516",
+      "name": "pixel-pal-web",
+      "description": "PixelPal - AI 桌面宠物与工作助手",
+      "url": "https://yeluo45.github.io/pixel-pal-web/",
+      "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
+      "createdAt": "2026-04-20",
+      "updatedAt": "2026-05-03",
+      "proposals": [
+        {
+          "id": "P-20250420-002",
+          "name": "pixel-pal-web",
+          "description": "AI伴侣桌面应用；Electron + React 19 + MUI + Zustand；PDF解析(xlsx/pdfjs)+文档导入(mammoth)+笔记管理；需打包Windows exe",
+          "type": "web",
+          "status": "active",
+          "url": "https://YeLuo45.github.io/pixel-pal-web",
+          "tags": [
+            "Windows"
+          ],
+          "createdAt": "2026-04-20",
+          "updatedAt": "2026-04-20",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        },
+        {
+          "id": "P-20260503-315",
+          "name": "PixelPal",
+          "description": "PixelPal - AI 桌面宠物与工作助手",
+          "type": "package",
+          "status": "active",
+          "url": "https://yeluo45.github.io/pixel-pal-web/",
+          "tags": [
+            "Web",
+            "AI"
+          ],
+          "createdAt": "2026-05-03",
+          "updatedAt": "2026-05-03",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ],
+      "milestones": []
     }
   ]
 }
