@@ -105,11 +105,11 @@
     {
       "id": "PRJ-20260417-002",
       "name": "android-hello",
-      "description": "Android Kotlin Hello World；包名 com.hello.android；minSdk 24, targetSdk 36；APK 已上传 GitHub Releases (v1.0.0)",
+      "description": "Android Kotlin MVVM+Compose+Hilt；minSdk 24, targetSdk 34；V2.0.0(Compose/Hilt/Room/Retrofit) -> V3.6.0(Splash/Analytics/WorkManager/R8)",
       "url": "https://github.com/YeLuo45/android-hello/releases/download/v1.0.0/app-debug.apk",
       "gitRepo": "https://github.com/YeLuo45/android-hello",
       "createdAt": "2026-04-17",
-      "updatedAt": "2026-05-05",
+      "updatedAt": "2026-05-07",
       "proposals": [
         {
           "id": "P-20250417-002",
@@ -129,8 +129,315 @@
           "techExpectations": "",
           "acceptance": "accepted",
           "version": "v1.6.0"
+        },
+        {
+          "id": "P-20260505-014",
+          "name": "android-hello Unit Tests",
+          "description": "V2.1.0: JUnit 5/MockK/Turbine unit tests for ViewModel and Repository",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260505-015",
+          "name": "android-hello Settings",
+          "description": "V2.2.0: Settings + BottomNavigation with theme selection",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260505-016",
+          "name": "android-hello Room",
+          "description": "V2.3.0: Room database persistence for counter and preferences",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260505-017",
+          "name": "android-hello Retrofit",
+          "description": "V2.4.0: Retrofit + OkHttp + Kotlin Serialization for API calls",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-018",
+          "name": "android-hello SavedStateHandle",
+          "description": "V2.5.0: Hilt ViewModel + SavedStateHandle for state persistence",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-019",
+          "name": "android-hello Dark Mode",
+          "description": "V2.6.0: Full Material3 dark mode with dynamic color support",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-020",
+          "name": "android-hello Compose UI Testing",
+          "description": "V2.7.0: Compose UI testing with HiltAndroidTest and createAndroidComposeRule",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-021",
+          "name": "android-hello i18n",
+          "description": "V2.8.0: Internationalization (English/Chinese) with AppLanguage enum and LocaleHelper",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-022",
+          "name": "android-hello CI/CD",
+          "description": "V2.9.0: GitHub Actions CI/CD pipeline with build and build-release jobs",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260506-023",
+          "name": "android-hello APK Release",
+          "description": "V2.9.0: APK build and release to GitHub Releases on tag push",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260507-024",
+          "name": "android-hello Widget",
+          "description": "V3.0.0: App Shortcuts + Home Screen Widget with DataStore counter persistence",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260507-025",
+          "name": "android-hello Push Notifications",
+          "description": "V3.1.0: Local notifications for counter milestones (10, 100, 1000...)",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260507-026",
+          "name": "android-hello Analytics",
+          "description": "V3.2.0: LocalAnalytics for event tracking (counter_increment, theme_changed, etc.)",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260507-027",
+          "name": "android-hello WorkManager",
+          "description": "V3.3.0: WorkManager periodic post refresh (15 min) with HiltWorker",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260507-028",
+          "name": "android-hello DataStore",
+          "description": "V3.4.0: DataStore替代SharedPreferences for widget counter persistence",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260507-029",
+          "name": "android-hello R8",
+          "description": "V3.5.0: R8 minification + ProGuard rules, APK 26M->8.2M (68% reduction)",
+          "type": "app",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260507-030",
+          "name": "android-hello Splash Screen",
+          "description": "V3.6.0: Android 12+ Splash Screen API with core-splashscreen:1.0.1",
+          "type": "app",
+          "status": "active",
+          "url": "https://github.com/YeLuo45/android-hello/releases/tag/v3.6.0",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/YeLuo45/android-hello",
+          "tags": [
+            "Android"
+          ],
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
         }
-      ]
+      ],
+      "version": "v3.6.0"
     },
     {
       "id": "PRJ-20260418-001",
