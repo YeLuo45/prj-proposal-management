@@ -105,8 +105,8 @@
     {
       "id": "PRJ-20260417-002",
       "name": "android-hello",
-      "description": "Android Kotlin MVVM+Compose+Hilt；minSdk 24, targetSdk 34；V2.0.0(Compose/Hilt/Room/Retrofit) -> V3.6.0(Splash/Analytics/WorkManager/R8)",
-      "url": "https://github.com/YeLuo45/android-hello/releases/download/v1.0.0/app-debug.apk",
+      "description": "Android Kotlin MVVM+Compose+Hilt；minSdk 24, targetSdk 34；V2.0.0 -> V3.6.0；R8压缩APK 8.2MB",
+      "url": "https://github.com/YeLuo45/android-hello/releases/download/v3.6.0/app-prod-release-v36.apk",
       "gitRepo": "https://github.com/YeLuo45/android-hello",
       "createdAt": "2026-04-17",
       "updatedAt": "2026-05-07",
@@ -424,7 +424,7 @@
           "description": "V3.6.0: Android 12+ Splash Screen API with core-splashscreen:1.0.1",
           "type": "app",
           "status": "active",
-          "url": "https://github.com/YeLuo45/android-hello/releases/tag/v3.6.0",
+          "url": "https://github.com/YeLuo45/android-hello/releases/download/v3.6.0/app-prod-release-v36.apk",
           "packageUrl": "",
           "gitRepo": "https://github.com/YeLuo45/android-hello",
           "tags": [
