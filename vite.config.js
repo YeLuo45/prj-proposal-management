@@ -18,12 +18,6 @@ function getBuildTime() {
 
 export default defineConfig({
   plugins: [react()],
-  // inject version constants via define (replaced at build time)
-  define: {
-    'import.meta.env.VITE_APP_VERSION': JSON.stringify('1.0.1'),
-    'import.meta.env.VITE_BUILD_TIME': JSON.stringify(getBuildTime()),
-    'import.meta.env.VITE_GIT_COMMIT': JSON.stringify(getGitCommit()),
-  },
   base: './',
   build: {
     rollupOptions: {

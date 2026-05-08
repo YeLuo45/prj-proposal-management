@@ -147,15 +147,15 @@ function SettingsPage() {
           <div className="space-y-2 text-sm">
             <div className="flex items-center gap-2">
               <span className="text-gray-600 dark:text-gray-400 w-20">版本：</span>
-              <span className="font-mono text-gray-800 dark:text-gray-200">{import.meta.env.VITE_APP_VERSION || '1.0.0'}</span>
+              <span className="font-mono text-gray-800 dark:text-gray-200">{window.__APP_VERSION__}</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-gray-600 dark:text-gray-400 w-20">构建：</span>
-              <span className="font-mono text-gray-800 dark:text-gray-200">{import.meta.env.VITE_BUILD_TIME || 'unknown'}</span>
+              <span className="font-mono text-gray-800 dark:text-gray-200">{window.__BUILD_TIME__}</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-gray-600 dark:text-gray-400 w-20">Commit：</span>
-              <span className="font-mono text-gray-800 dark:text-gray-200">{import.meta.env.VITE_GIT_COMMIT || 'unknown'}</span>
+              <span className="font-mono text-gray-800 dark:text-gray-200">{window.__GIT_COMMIT__}</span>
             </div>
           </div>
         </section>

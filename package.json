@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp -r data dist/",
+    "build": "vite build && cp -r data dist/ && node scripts/inject-version.js",
     "preview": "vite preview"
   },
   "dependencies": {
