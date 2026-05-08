@@ -3497,6 +3497,17 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260508-001",
+          "name": "Tool Call Loop 完善",
+          "description": "实现规划-执行完整闭环：生成方案 → 用户确认 → 逐步执行 → 结果汇报；长任务自动进入规划模式，短任务直接执行",
+          "type": "feature",
+          "status": "approved_for_dev",
+          "prdConfirmation": "2026-05-09",
+          "techExpectations": "",
+          "acceptance": "",
+          "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260508-001-tool-call-loop.md"
         }
       ]
     },
