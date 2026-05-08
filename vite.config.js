@@ -1,8 +1,29 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { execSync } from 'child_process'
+
+// 获取当前 git commit hash
+function getGitCommit() {
+  try {
+    return execSync('git rev-parse --short HEAD').toString().trim()
+  } catch {
+    return 'unknown'
+  }
+}
+
+// 获取构建时间
+function getBuildTime() {
+  return new Date().toISOString().replace('T', ' ').slice(0, 19)
+}
 
 export default defineConfig({
   plugins: [react()],
+  // inject version constants via define (replaced at build time)
+  define: {
+    __APP_VERSION__: JSON.stringify('1.0.1'),
+    __BUILD_TIME__: JSON.stringify(getBuildTime()),
+    __GIT_COMMIT__: JSON.stringify(getGitCommit()),
+  },
   base: './',
   build: {
     rollupOptions: {

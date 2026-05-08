@@ -139,6 +139,27 @@ function SettingsPage() {
           <LanguageSwitcher />
         </section>
 
+        {/* Version Info */}
+        <section className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+          <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">
+            版本信息
+          </h2>
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2">
+              <span className="text-gray-600 dark:text-gray-400 w-20">版本：</span>
+              <span className="font-mono text-gray-800 dark:text-gray-200">{__APP_VERSION__}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-gray-600 dark:text-gray-400 w-20">构建：</span>
+              <span className="font-mono text-gray-800 dark:text-gray-200">{__BUILD_TIME__}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-gray-600 dark:text-gray-400 w-20">Commit：</span>
+              <span className="font-mono text-gray-800 dark:text-gray-200">{__GIT_COMMIT__}</span>
+            </div>
+          </div>
+        </section>
+
         {/* Keyboard Shortcuts */}
         <section className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
           <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">
