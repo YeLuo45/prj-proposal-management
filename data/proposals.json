@@ -436,8 +436,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "version": "v3.6.0"
+      ]
     },
     {
       "id": "PRJ-20260418-001",
@@ -512,6 +511,24 @@
           "prdConfirmation": "confirmed",
           "techExpectations": "pending",
           "acceptance": ""
+        },
+        {
+          "id": "P-20260505-012",
+          "name": "future-little-leaders",
+          "description": "家庭成员角色系统 + 任务归属 + 家庭共享任务池 + 宝宝头像优化 + 家庭数据概览",
+          "type": "package",
+          "status": "in_dev",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/future-little-leaders/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "pending",
+          "acceptance": ""
         }
       ]
     },
@@ -541,35 +558,6 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260419-007",
-      "name": "ai-creator-h5 (H5)",
-      "description": "微信小程序 Phase 1 MVP 骨架 + H5 版本已完成并部署；H5 采用 Vite + Hash SPA 架构；4页面：首页/生成/历史/我的；支持图片生成、音乐生成、TTS 语音合成；修复仓库描述乱码（GitHub API TLS超时导致）",
-      "url": "https://yeluo45.github.io/ai-creator-h5/",
-      "gitRepo": "https://github.com/YeLuo45/ai-creator-miniprogram (小程序) / https://github.com/YeLuo45/ai-creator-h5 (H5)",
-      "createdAt": "2026-04-19",
-      "updatedAt": "2026-04-19",
-      "proposals": [
-        {
-          "id": "P-20260412-007",
-          "name": "ai-creator-h5 (H5)",
-          "description": "微信小程序 Phase 1 MVP 骨架 + H5 版本已完成并部署；H5 采用 Vite + Hash SPA 架构；4页面：首页/生成/历史/我的；支持图片生成、音乐生成、TTS 语音合成；修复仓库描述乱码（GitHub API TLS超时导致）",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/ai-creator-h5/",
-          "packageUrl": "https://github.com/YeLuo45/ai-creator-h5 (H5)/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/ai-creator-miniprogram (小程序) / https://github.com/YeLuo45/ai-creator-h5 (H5)",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-19",
-          "updatedAt": "2026-04-19",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
         }
       ]
     },
@@ -3885,49 +3873,152 @@
       ]
     },
     {
-      "id": "PRJ-20260516",
-      "name": "pixel-pal-web",
-      "description": "PixelPal - AI 桌面宠物与工作助手",
-      "url": "https://yeluo45.github.io/pixel-pal-web/",
-      "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
-      "createdAt": "2026-04-20",
-      "updatedAt": "2026-05-03",
+      "id": "proposals",
+      "name": "proposals",
+      "description": "倒计时到期(2026-05-02)，默认通过处理",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-05",
+      "updatedAt": "2026-05-05",
       "proposals": [
         {
-          "id": "P-20250420-002",
-          "name": "pixel-pal-web",
-          "description": "AI伴侣桌面应用；Electron + React 19 + MUI + Zustand；PDF解析(xlsx/pdfjs)+文档导入(mammoth)+笔记管理；需打包Windows exe",
-          "type": "web",
-          "status": "active",
-          "url": "https://YeLuo45.github.io/pixel-pal-web",
+          "id": "P-20260502-017",
+          "name": "proposals",
+          "description": "倒计时到期(2026-05-02)，默认通过处理",
+          "type": "package",
+          "status": "in_dev",
+          "url": "(待部署)",
+          "packageUrl": "https://github.com/YeLuo45/proposals/archive/refs/heads/main.zip",
+          "gitRepo": "",
           "tags": [
-            "Windows"
+            "提案"
           ],
-          "createdAt": "2026-04-20",
-          "updatedAt": "2026-04-20",
-          "prdConfirmation": "",
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "timeout-approved",
+          "techExpectations": "timeout-approved",
+          "acceptance": "-"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260420-002",
+      "name": "pixel-pal-web",
+      "description": "新增 MiniMax 浅色主题与 V50 深色并存：DM Sans+Outfit字体 / 品牌蓝#1456f0 / 纯白主背景+浅灰次级 / Near Black文字+Gray次级 / Settings主题切换UI(Dark/Light/MiniMax/System)；commit d79449f，PR#17 已合并",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-06",
+      "updatedAt": "2026-05-08",
+      "proposals": [
+        {
+          "id": "P-20260506-010",
+          "name": "pixel-pal-web",
+          "description": "V23 移动端适配 - manifest/theme-color/sw路径/Drawer优化/消息长按菜单/触摸优化",
+          "type": "web",
+          "status": "in_dev",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "confirmed",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "pending"
         },
         {
-          "id": "P-20260503-315",
-          "name": "PixelPal",
-          "description": "PixelPal - AI 桌面宠物与工作助手",
-          "type": "package",
+          "id": "P-20260507-001",
+          "name": "pixel-pal-web",
+          "description": "V41协作模式深化完成：CollaborationChat+TaskBreakdown+ResultSummary+CollaborationControls，3-tab集成（分工/对话/汇总），commit 45c7883。注意：npm run build在本地exit 2（既有TS错误），但GitHub Actions用vite build正常通过。",
+          "type": "web",
           "status": "active",
-          "url": "https://yeluo45.github.io/pixel-pal-web/",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
           "tags": [
-            "Web",
-            "AI"
+            "提案"
           ],
-          "createdAt": "2026-05-03",
-          "updatedAt": "2026-05-03",
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "pending"
+        },
+        {
+          "id": "P-20260507-002",
+          "name": "pixel-pal-web",
+          "description": "设置页VersionInfo组件显示版本+构建时间，vite.config.ts define注入；commit cc0c1d5",
+          "type": "web",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260507-003",
+          "name": "pixel-pal-web",
+          "description": "V42协作系统深度化完成：CollabHistory(10条历史)+CollabHistoryDetail(详情)+store持久化+4-tab集成；commit cc0c1d5",
+          "type": "web",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260508-003",
+          "name": "pixel-pal-web",
+          "description": "基于 Linear.app 设计系统全面重构 UI：#08090a/#0f1011/#191a1b 深色层次 + 品牌indigo #5e6ad2 + accent violet #7170ff + Inter Variable 字体 + 侧边栏/ChatPanel/Settings 全深色化；commit c961502，部署到 https://YeLuo45.github.io/pixel-pal-web；GitHub PR#16 已合并",
+          "type": "web",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-08",
+          "updatedAt": "2026-05-08",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "delivered"
+        },
+        {
+          "id": "P-20260508-004",
+          "name": "pixel-pal-web",
+          "description": "新增 MiniMax 浅色主题与 V50 深色并存：DM Sans+Outfit字体 / 品牌蓝#1456f0 / 纯白主背景+浅灰次级 / Near Black文字+Gray次级 / Settings主题切换UI(Dark/Light/MiniMax/System)；commit d79449f，PR#17 已合并",
+          "type": "web",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-08",
+          "updatedAt": "2026-05-08",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "delivered"
         }
-      ],
-      "milestones": []
+      ]
     }
   ]
 }
