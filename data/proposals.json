@@ -3503,11 +3503,33 @@
           "name": "Tool Call Loop 完善",
           "description": "实现规划-执行完整闭环：生成方案 → 用户确认 → 逐步执行 → 结果汇报；长任务自动进入规划模式，短任务直接执行",
           "type": "feature",
-          "status": "approved_for_dev",
+          "status": "delivered",
           "prdConfirmation": "2026-05-09",
           "techExpectations": "",
-          "acceptance": "",
+          "acceptance": "accepted",
           "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260508-001-tool-call-loop.md"
+        },
+        {
+          "id": "P-20260509-001",
+          "name": "Verification Hooks × Tool Call Loop 联动",
+          "description": "规划阶段风险预测 + 执行阶段实时验证反馈 + 验证报告",
+          "type": "feature",
+          "status": "delivered",
+          "prdConfirmation": "2026-05-09",
+          "techExpectations": "",
+          "acceptance": "accepted",
+          "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260509-001-verification-hook-integration.md"
+        },
+        {
+          "id": "P-20260510-001",
+          "name": "多Agent协作引擎",
+          "description": "Orchestrator + CodeReviewer + TestGenerator + Refactorer 分工协作",
+          "type": "feature",
+          "status": "approved_for_dev",
+          "prdConfirmation": "timeout-approved",
+          "techExpectations": "",
+          "acceptance": "",
+          "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260510-001-multi-agent-engine.md"
         }
       ]
     },
