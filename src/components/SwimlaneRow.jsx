@@ -190,7 +190,7 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick,
   );
 }
 
-function DroppableColumn({ column, proposals, droppableId, onCardClick, isDropTarget, isCollapsed, onToggleCollapse }) {
+function DroppableColumn({ column, proposals, droppableId, onCardClick, isDropTarget, isCollapsed, onToggleCollapse, selectedProposalIds, onToggleSelectProposal }) {
   const { setNodeRef, isOver } = useDroppable({
     id: droppableId,
   });
