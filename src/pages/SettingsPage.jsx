@@ -8,20 +8,10 @@ import ExportPanel from '../components/ExportPanel';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import KeyboardShortcutsModal from '../components/KeyboardShortcutsModal';
+import VersionInfo from '../components/VersionInfo';
 
 function SettingsPage() {
   const { t } = useTranslation();
-
-  // Version info — read from window globals injected by inject-version.js
-  // Using useState/useEffect ensures Rollup cannot tree-shake these reads
-  const [versionInfo, setVersionInfo] = useState({ version: '', build: '', commit: '' });
-  useEffect(() => {
-    setVersionInfo({
-      version: window.__APP_VERSION__ || 'unknown',
-      build: window.__BUILD_TIME__ || 'unknown',
-      commit: window.__GIT_COMMIT__ || 'unknown',
-    });
-  }, []);
 
   // Get projects from localStorage if available
   const [localProjects, setLocalProjects] = useState([]);
@@ -150,26 +140,7 @@ function SettingsPage() {
           <LanguageSwitcher />
         </section>
 
-        {/* Version Info */}
-        <section className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-          <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">
-            版本信息
-          </h2>
-          <div className="space-y-2 text-sm">
-            <div className="flex items-center gap-2">
-              <span className="text-gray-600 dark:text-gray-400 w-20">版本：</span>
-              <span className="font-mono text-gray-800 dark:text-gray-200">{versionInfo.version}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-gray-600 dark:text-gray-400 w-20">构建：</span>
-              <span className="font-mono text-gray-800 dark:text-gray-200">{versionInfo.build}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-gray-600 dark:text-gray-400 w-20">Commit：</span>
-              <span className="font-mono text-gray-800 dark:text-gray-200">{versionInfo.commit}</span>
-            </div>
-          </div>
-        </section>
+        <VersionInfo />
 
         {/* Keyboard Shortcuts */}
         <section className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
