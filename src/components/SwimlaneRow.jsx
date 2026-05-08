@@ -179,6 +179,8 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick,
                 isDropTarget={overId === droppableId && activeId !== droppableId}
                 isCollapsed={isColumnCollapsed ? isColumnCollapsed(project.id, column.id) : false}
                 onToggleCollapse={() => onToggleColumnCollapse(project.id, column.id)}
+                selectedProposalIds={selectedProposalIds}
+                onToggleSelectProposal={onToggleSelectProposal}
               />
             );
           })}
