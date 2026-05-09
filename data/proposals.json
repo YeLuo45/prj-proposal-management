@@ -103,6 +103,151 @@
       ]
     },
     {
+      "id": "p-20260509-002",
+      "name": "p-20260509-002",
+      "description": "P-20260509-002",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-04-16",
+      "updatedAt": "",
+      "proposals": [
+        {
+          "id": "P-20260509-002",
+          "name": "p-20260509-002",
+          "description": "P-20260509-002",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/p-20260509-002/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-16",
+          "updatedAt": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
+      "id": "p-20260509-005",
+      "name": "p-20260509-005",
+      "description": "P-20260509-005",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-04-16",
+      "updatedAt": "",
+      "proposals": [
+        {
+          "id": "P-20260509-005",
+          "name": "p-20260509-005",
+          "description": "P-20260509-005",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/p-20260509-005/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-16",
+          "updatedAt": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
+      "id": "p-20260509-006",
+      "name": "p-20260509-006",
+      "description": "P-20260509-006",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-04-16",
+      "updatedAt": "",
+      "proposals": [
+        {
+          "id": "P-20260509-006",
+          "name": "p-20260509-006",
+          "description": "P-20260509-006",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/p-20260509-006/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-16",
+          "updatedAt": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
+      "id": "p-20260509-007",
+      "name": "p-20260509-007",
+      "description": "P-20260509-007",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-04-16",
+      "updatedAt": "",
+      "proposals": [
+        {
+          "id": "P-20260509-007",
+          "name": "p-20260509-007",
+          "description": "P-20260509-007",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/p-20260509-007/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-16",
+          "updatedAt": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
+      "id": "p-20260508-004",
+      "name": "p-20260508-004",
+      "description": "P-20260508-004",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-04-16",
+      "updatedAt": "",
+      "proposals": [
+        {
+          "id": "P-20260508-004",
+          "name": "p-20260508-004",
+          "description": "P-20260508-004",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/p-20260508-004/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-04-16",
+          "updatedAt": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": ""
+        }
+      ]
+    },
+    {
       "id": "PRJ-20260417-002",
       "name": "android-hello",
       "description": "Android Kotlin MVVM+Compose+Hilt；minSdk 24, targetSdk 34；V2.0.0 -> V3.6.0；R8压缩APK 8.2MB",
@@ -3935,22 +4080,40 @@
       ]
     },
     {
-      "id": "PRJ-20260419-007",
-      "name": "ai-creator-h5",
-      "description": "PWA离线支持增强完成：SW v1.6.0缓存更新+全局离线状态栏+生成页离线禁用+版本更新toast；commit caccf7a，部署到 https://yeluo45.github.io/ai-creator-h5/",
+      "id": "PRJ-20260420-002",
+      "name": "pixel-pal-web",
+      "description": "V64 agentExecutor: LLM任务分解+步骤执行+回调；AgentPanel绑定executor；TaskQueue IndexedDB持久化恢复；Sidebar导航已接入；build ✓, master已push ✓",
       "url": "",
       "gitRepo": "",
-      "createdAt": "2026-05-07",
-      "updatedAt": "2026-05-08",
+      "createdAt": "2026-05-06",
+      "updatedAt": "2026-05-09",
       "proposals": [
         {
-          "id": "P-20260507-006",
-          "name": "ai-creator-h5",
-          "description": "API额度管理完成：usageService.js(用量追踪/成本估算/预警)+额度卡片+弹窗面板+每月1日自动重置；commit f1febad，部署到 https://yeluo45.github.io/ai-creator-h5/",
-          "type": "package",
+          "id": "P-20260506-010",
+          "name": "pixel-pal-web",
+          "description": "V23 移动端适配 - manifest/theme-color/sw路径/Drawer优化/消息长按菜单/触摸优化",
+          "type": "web",
+          "status": "in_dev",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "",
+          "acceptance": "pending"
+        },
+        {
+          "id": "P-20260507-001",
+          "name": "pixel-pal-web",
+          "description": "V41协作模式深化完成：CollaborationChat+TaskBreakdown+ResultSummary+CollaborationControls，3-tab集成（分工/对话/汇总），commit 45c7883。注意：npm run build在本地exit 2（既有TS错误），但GitHub Actions用vite build正常通过。",
+          "type": "web",
           "status": "active",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-creator-h5/archive/refs/heads/main.zip",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
             "提案"
@@ -3959,16 +4122,52 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "delivered"
+          "acceptance": "accepted"
         },
         {
-          "id": "P-20260508-001",
-          "name": "ai-creator-h5",
-          "description": "创作者中心完成：creator.html(作品集/资料/分享)+creatorService.js(核心服务)+Canvas分享卡片；commit a5d4923，部署到 https://yeluo45.github.io/ai-creator-h5/",
-          "type": "package",
+          "id": "P-20260507-002",
+          "name": "pixel-pal-web",
+          "description": "设置页VersionInfo组件显示版本+构建时间，vite.config.ts define注入；commit cc0c1d5",
+          "type": "web",
           "status": "active",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-creator-h5/archive/refs/heads/main.zip",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260507-003",
+          "name": "pixel-pal-web",
+          "description": "V42协作系统深度化完成：CollabHistory(10条历史)+CollabHistoryDetail(详情)+store持久化+4-tab集成；commit cc0c1d5",
+          "type": "web",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-07",
+          "updatedAt": "2026-05-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260508-003",
+          "name": "pixel-pal-web",
+          "description": "基于 Linear.app 设计系统全面重构 UI：#08090a/#0f1011/#191a1b 深色层次 + 品牌indigo #5e6ad2 + accent violet #7170ff + Inter Variable 字体 + 侧边栏/ChatPanel/Settings 全深色化；commit c961502，部署到 https://YeLuo45.github.io/pixel-pal-web；GitHub PR#16 已合并",
+          "type": "web",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
             "提案"
@@ -3980,23 +4179,40 @@
           "acceptance": "delivered"
         },
         {
-          "id": "P-20260508-002",
-          "name": "ai-creator-h5",
-          "description": "PWA离线支持增强完成：SW v1.6.0缓存更新+全局离线状态栏+生成页离线禁用+版本更新toast；commit caccf7a，部署到 https://yeluo45.github.io/ai-creator-h5/",
-          "type": "package",
+          "id": "P-20260508-004",
+          "name": "pixel-pal-web",
+          "description": "新增 MiniMax 浅色主题与 V50 深色并存：DM Sans+Outfit字体 / 品牌蓝#1456f0 / 纯白主背景+浅灰次级 / Near Black文字+Gray次级 / Settings主题切换UI(Dark/Light/MiniMax/System)；commit d79449f，PR#17 已合并",
+          "type": "web",
           "status": "active",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-creator-h5/archive/refs/heads/main.zip",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
-            "Web",
-            "PWA"
+            "提案"
           ],
           "createdAt": "2026-05-08",
           "updatedAt": "2026-05-08",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "delivered"
+        },
+        {
+          "id": "P-20260509-001",
+          "name": "pixel-pal-web",
+          "description": "V64 agentExecutor: LLM任务分解+步骤执行+回调；AgentPanel绑定executor；TaskQueue IndexedDB持久化恢复；Sidebar导航已接入；build ✓, master已push ✓",
+          "type": "web",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-09",
+          "updatedAt": "2026-05-09",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "",
+          "acceptance": "accepted"
         }
       ]
     }
