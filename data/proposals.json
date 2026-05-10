@@ -104,7 +104,7 @@
           "id": "P-20260509-024",
           "name": "position-analytics",
           "description": "position-analytics",
-          "type": "proposal",
+          "type": "web",
           "status": "active",
           "url": "",
           "gitRepo": "https://github.com/YeLuo45/ai-stock-simulation",
@@ -139,7 +139,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -168,7 +168,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -197,7 +197,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -226,7 +226,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -255,7 +255,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -284,7 +284,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -313,7 +313,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -342,7 +342,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -371,7 +371,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -400,7 +400,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -429,7 +429,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -458,7 +458,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -487,7 +487,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -516,7 +516,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -545,7 +545,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -574,7 +574,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -603,7 +603,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -632,7 +632,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -661,7 +661,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -690,7 +690,7 @@
             "提案"
           ],
           "createdAt": "2026-04-16",
-          "updatedAt": "",
+          "updatedAt": "2026-05-08",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": ""
@@ -1035,8 +1035,8 @@
           "id": "P-20260509-003",
           "name": "android-hello V3.10.0 深色模式优化",
           "description": "android-hello V3.10.0 深色模式优化",
-          "type": "proposal",
-          "status": "delivered",
+          "type": "web",
+          "status": "active",
           "url": "",
           "gitRepo": "https://github.com/YeLuo45/android-hello",
           "tags": [],
@@ -1050,8 +1050,8 @@
           "id": "P-20260509-004",
           "name": "android-hello V3.11.0 通知与提醒功能",
           "description": "android-hello V3.11.0 通知与提醒功能",
-          "type": "proposal",
-          "status": "delivered",
+          "type": "web",
+          "status": "active",
           "url": "",
           "gitRepo": "https://github.com/YeLuo45/android-hello",
           "tags": [],
@@ -3266,35 +3266,41 @@
           "id": "P-20260508-001",
           "name": "Tool Call Loop 完善",
           "description": "实现规划-执行完整闭环：生成方案 → 用户确认 → 逐步执行 → 结果汇报；长任务自动进入规划模式，短任务直接执行",
-          "type": "feature",
-          "status": "delivered",
+          "type": "web",
+          "status": "active",
           "prdConfirmation": "2026-05-09",
           "techExpectations": "",
           "acceptance": "accepted",
-          "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260508-001-tool-call-loop.md"
+          "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260508-001-tool-call-loop.md",
+          "createdAt": "2026-05-08",
+          "updatedAt": "2026-05-08"
         },
         {
           "id": "P-20260509-001",
           "name": "Verification Hooks × Tool Call Loop 联动",
           "description": "规划阶段风险预测 + 执行阶段实时验证反馈 + 验证报告",
-          "type": "feature",
-          "status": "delivered",
+          "type": "web",
+          "status": "active",
           "prdConfirmation": "2026-05-09",
           "techExpectations": "",
           "acceptance": "accepted",
-          "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260509-001-verification-hook-integration.md"
+          "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260509-001-verification-hook-integration.md",
+          "createdAt": "2026-05-09",
+          "updatedAt": "2026-05-09"
         },
         {
           "id": "P-20260510-001",
           "name": "多Agent协作引擎",
           "description": "Orchestrator + CodeReviewer + TestGenerator + Refactorer 分工协作",
-          "type": "feature",
-          "status": "delivered",
+          "type": "web",
+          "status": "active",
           "prdConfirmation": "timeout-approved",
           "techExpectations": "",
           "acceptance": "",
           "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260510-001-multi-agent-engine.md",
-          "commit": "11c7393fcdd802074047c963ffae80355ca6cfee"
+          "commit": "11c7393fcdd802074047c963ffae80355ca6cfee",
+          "createdAt": "2026-05-10",
+          "updatedAt": "2026-05-10"
         }
       ]
     },
