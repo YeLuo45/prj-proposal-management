@@ -4216,6 +4216,36 @@
           "acceptance": "pending"
         }
       ]
+    },
+    {
+      "id": "PRJ-20260511-005",
+      "name": "bmad-method-design",
+      "description": "BMAD-METHOD 设计文档项目，基于 agent-assisted 软件交付框架；包含 AGENTS.md 开发规范、Skill 验证机制、评估框架分析",
+      "url": "",
+      "gitRepo": "https://github.com/BMAD/BMAD-METHOD",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-003",
+          "name": "bmad-method-design",
+          "description": "BMAD-METHOD 设计文档项目，基于 agent-assisted 软件交付框架；包含 AGENTS.md 开发规范、Skill 验证机制、评估框架分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/BMAD/BMAD-METHOD",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending"
+        }
+      ]
     }
   ]
 }
