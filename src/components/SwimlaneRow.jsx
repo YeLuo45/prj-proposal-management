@@ -59,6 +59,17 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick,
 
   const hasActiveFilter = laneFilter.query || laneFilter.type;
 
+  // Enrich proposals with computed selection state before passing to columns
+  // This avoids Rollup's tree-shaking bug with destructured + optional-chaining params
+  const enrichProposals = (proposals) =>
+    proposals.map(p => ({
+      ...p,
+      _selected: selectedProposalIds
+        ? selectedProposalIds.includes(p.id)
+        : false,
+      _onToggleSelect: onToggleSelectProposal,
+    }));
+
   return (
     <div className="border-b border-gray-200 dark:border-gray-700 last:border-b-0">
       {/* Swimlane Header - Clickable to collapse/expand */}
@@ -167,20 +178,19 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick,
         <div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-gray-200 dark:divide-gray-700 kanban-scroll-container">
           {STATUS_COLUMNS.map(column => {
             const columnProposals = getProposalsByStatus(column.id);
+            const enrichedProposals = enrichProposals(columnProposals);
             const droppableId = `${project.id}:${column.id}`;
 
             return (
               <DroppableColumn
                 key={column.id}
                 column={column}
-                proposals={columnProposals}
+                proposals={enrichedProposals}
                 droppableId={droppableId}
                 onCardClick={onCardClick}
                 isDropTarget={overId === droppableId && activeId !== droppableId}
                 isCollapsed={isColumnCollapsed ? isColumnCollapsed(project.id, column.id) : false}
                 onToggleCollapse={() => onToggleColumnCollapse(project.id, column.id)}
-                selectedProposalIds={selectedProposalIds}
-                onToggleSelectProposal={onToggleSelectProposal}
               />
             );
           })}
@@ -190,7 +200,7 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick,
   );
 }
 
-function DroppableColumn({ column, proposals, droppableId, onCardClick, isDropTarget, isCollapsed, onToggleCollapse, selectedProposalIds, onToggleSelectProposal }) {
+function DroppableColumn({ column, proposals, droppableId, onCardClick, isDropTarget, isCollapsed, onToggleCollapse }) {
   const { setNodeRef, isOver } = useDroppable({
     id: droppableId,
   });
@@ -247,8 +257,8 @@ function DroppableColumn({ column, proposals, droppableId, onCardClick, isDropTa
               key={proposal.id}
               proposal={proposal}
               onClick={() => onCardClick(proposal)}
-              selected={selectedProposalIds?.includes(proposal.id)}
-              onToggleSelect={onToggleSelectProposal}
+              selected={proposal._selected}
+              onToggleSelect={proposal._onToggleSelect}
             />
           ))}
         </div>
