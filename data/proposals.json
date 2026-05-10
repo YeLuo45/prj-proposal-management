@@ -4246,6 +4246,36 @@
           "acceptance": "pending"
         }
       ]
+    },
+    {
+      "id": "PRJ-20260511-006",
+      "name": "chatdev-design",
+      "description": "ChatDev 设计文档项目，基于 OpenBMB/ChatDev 虚拟软件公司多Agent框架；包含角色定义、工作流、可视化等模块分析",
+      "url": "",
+      "gitRepo": "https://github.com/OpenBMB/ChatDev",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-004",
+          "name": "chatdev-design",
+          "description": "ChatDev 设计文档项目，基于 OpenBMB/ChatDev 虚拟软件公司多Agent框架；包含角色定义、工作流、可视化等模块分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/OpenBMB/ChatDev",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending"
+        }
+      ]
     }
   ]
 }
