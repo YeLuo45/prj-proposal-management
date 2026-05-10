@@ -2972,97 +2972,6 @@
       ]
     },
     {
-      "id": "PRJ-20260420-002",
-      "name": "pixel-pal-web",
-      "description": "PixelPal AI companion - React 19 + Vite Web应用，带人格系统和情感引擎",
-      "url": "https://yeluo45.github.io/pixel-pal-web/",
-      "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
-      "createdAt": "2026-04-20",
-      "updatedAt": "2026-05-10",
-      "proposals": [
-        {
-          "id": "P-20260506-010",
-          "name": "pixel-pal-web",
-          "description": "PixelPal V21 Emotion Engine 集成",
-          "type": "package",
-          "status": "in_dev",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-06",
-          "updatedAt": "2026-05-06",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "",
-          "acceptance": "pending",
-          "projectId": "PRJ-20260420-002",
-          "projectName": "pixel-pal-web"
-        },
-        {
-          "id": "P-20260507-001",
-          "name": "pixel-pal-web",
-          "description": "PixelPal V21 人格系统扩展 - sessionStorage同步",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-07",
-          "updatedAt": "2026-05-07",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted",
-          "projectId": "PRJ-20260420-002",
-          "projectName": "pixel-pal-web"
-        },
-        {
-          "id": "P-20260507-002",
-          "name": "pixel-pal-web",
-          "description": "PixelPal V21 ChatPanel 集成",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-07",
-          "updatedAt": "2026-05-07",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted",
-          "projectId": "PRJ-20260420-002",
-          "projectName": "pixel-pal-web"
-        },
-        {
-          "id": "P-20260507-003",
-          "name": "pixel-pal-web",
-          "description": "PixelPal V21 GitHub部署",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-07",
-          "updatedAt": "2026-05-07",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted",
-          "projectId": "PRJ-20260420-002",
-          "projectName": "pixel-pal-web"
-        }
-      ]
-    },
-    {
       "id": "PRJ-20260421-001",
       "name": "card-game-prototype",
       "description": "卡牌等级升级(Lv1-Lv5倍率：1.15/1.30/1.50/1.75x)+星级升级(1-3星解锁效果)；⚡强化按钮入口；等级费用(2/3/5/8张同名卡)；星级费用(3/5张同名卡)；UI显示星级符号(★☆)和等级(Lv.N)；边框颜色按等级变化；升级数据持久化到localStorage",
@@ -4575,162 +4484,35 @@
       ]
     },
     {
-      "id": "PRJ-20260511-003",
-      "name": "astrbot-design",
-      "description": "AstrBot 设计文档项目，基于 Sonic-Yoda/AstrBot 源码；包含 AGENTS.md 开发规范、架构分析与功能设计",
+      "id": "proposals",
+      "name": "proposals",
+      "description": "倒计时到期(2026-05-02)，默认通过处理",
       "url": "",
-      "gitRepo": "https://github.com/Sonic-Yoda/AstrBot",
-      "createdAt": "2026-05-11",
-      "updatedAt": "2026-05-11",
+      "gitRepo": "",
+      "createdAt": "2026-05-05",
+      "updatedAt": "2026-05-05",
       "proposals": [
         {
-          "id": "P-20260511-001",
-          "name": "astrbot-design",
-          "description": "AstrBot 设计文档项目，基于 Sonic-Yoda/AstrBot 源码；包含 AGENTS.md 开发规范、架构分析与功能设计",
+          "id": "P-20260502-017",
+          "name": "proposals",
+          "description": "倒计时到期(2026-05-02)，默认通过处理",
           "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "https://github.com/Sonic-Yoda/AstrBot",
+          "status": "in_dev",
+          "url": "(待部署)",
+          "packageUrl": "https://github.com/YeLuo45/proposals/archive/refs/heads/main.zip",
+          "gitRepo": "",
           "tags": [
-            "设计",
-            "文档"
+            "提案"
           ],
-          "createdAt": "2026-05-11",
-          "updatedAt": "2026-05-11",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "pending",
-          "projectId": "PRJ-20260511-003",
-          "projectName": "astrbot-design"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260511-004",
-      "name": "autoagent-design",
-      "description": "AutoAgent 设计文档项目，基于 SINOG2/AutoAgent 源码；包含多Agent通信、工具调用、评估框架等模块分析",
-      "url": "",
-      "gitRepo": "https://github.com/SINOG2/AutoAgent",
-      "createdAt": "2026-05-11",
-      "updatedAt": "2026-05-11",
-      "proposals": [
-        {
-          "id": "P-20260511-002",
-          "name": "autoagent-design",
-          "description": "AutoAgent 设计文档项目，基于 SINOG2/AutoAgent 源码；包含多Agent通信、工具调用、评估框架等模块分析",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "https://github.com/SINOG2/AutoAgent",
-          "tags": [
-            "设计",
-            "文档"
-          ],
-          "createdAt": "2026-05-11",
-          "updatedAt": "2026-05-11",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "pending",
-          "projectId": "PRJ-20260511-004",
-          "projectName": "autoagent-design"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260511-005",
-      "name": "bmad-method-design",
-      "description": "BMAD-METHOD 设计文档项目，基于 agent-assisted 软件交付框架；包含 AGENTS.md 开发规范、Skill 验证机制、评估框架分析",
-      "url": "",
-      "gitRepo": "https://github.com/BMAD/BMAD-METHOD",
-      "createdAt": "2026-05-11",
-      "updatedAt": "2026-05-11",
-      "proposals": [
-        {
-          "id": "P-20260511-003",
-          "name": "bmad-method-design",
-          "description": "BMAD-METHOD 设计文档项目，基于 agent-assisted 软件交付框架；包含 AGENTS.md 开发规范、Skill 验证机制、评估框架分析",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "https://github.com/BMAD/BMAD-METHOD",
-          "tags": [
-            "设计",
-            "文档"
-          ],
-          "createdAt": "2026-05-11",
-          "updatedAt": "2026-05-11",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "pending",
-          "projectId": "PRJ-20260511-005",
-          "projectName": "bmad-method-design"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260511-006",
-      "name": "chatdev-design",
-      "description": "ChatDev 设计文档项目，基于 OpenBMB/ChatDev 虚拟软件公司多Agent框架；包含角色定义、工作流、可视化等模块分析",
-      "url": "",
-      "gitRepo": "https://github.com/OpenBMB/ChatDev",
-      "createdAt": "2026-05-11",
-      "updatedAt": "2026-05-11",
-      "proposals": [
-        {
-          "id": "P-20260511-004",
-          "name": "chatdev-design",
-          "description": "ChatDev 设计文档项目，基于 OpenBMB/ChatDev 虚拟软件公司多Agent框架；包含角色定义、工作流、可视化等模块分析",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "https://github.com/OpenBMB/ChatDev",
-          "tags": [
-            "设计",
-            "文档"
-          ],
-          "createdAt": "2026-05-11",
-          "updatedAt": "2026-05-11",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "pending"
-        }
-      ]
-    },
-    {
-      "id": "PRJ-20260511-007",
-      "name": "deepcode-design",
-      "description": "DeepCode 设计文档项目，基于 DeepSeek-Coder/DeepCode 代码智能分析框架；包含代码补全、漏洞检测、代码优化等模块分析",
-      "url": "",
-      "gitRepo": "https://github.com/DeepSeek-Coder/DeepCode",
-      "createdAt": "2026-05-11",
-      "updatedAt": "2026-05-11",
-      "proposals": [
-        {
-          "id": "P-20260511-005",
-          "name": "deepcode-design",
-          "description": "DeepCode 设计文档项目，基于 DeepSeek-Coder/DeepCode 代码智能分析框架；包含代码补全、漏洞检测、代码优化等模块分析",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "",
-          "gitRepo": "https://github.com/DeepSeek-Coder/DeepCode",
-          "tags": [
-            "设计",
-            "文档"
-          ],
-          "createdAt": "2026-05-11",
-          "updatedAt": "2026-05-11",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "pending"
+          "createdAt": "2026-05-05",
+          "updatedAt": "2026-05-05",
+          "prdConfirmation": "timeout-approved",
+          "techExpectations": "timeout-approved",
+          "acceptance": "-",
+          "projectId": "proposals",
+          "projectName": "proposals"
         }
       ]
     }
-  ]
-}
   ]
 }
