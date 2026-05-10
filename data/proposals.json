@@ -4515,6 +4515,126 @@
       ]
     },
     {
+      "id": "PRJ-20260511-003",
+      "name": "astrbot-design",
+      "description": "AstrBot 设计文档项目，基于 Sonic-Yoda/AstrBot 多功能机器人框架；包含LLM集成、插件系统、任务调度等模块分析",
+      "url": "",
+      "gitRepo": "https://github.com/Sonic-Yoda/AstrBot",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-001",
+          "name": "astrbot-design",
+          "description": "AstrBot 设计文档项目，基于 Sonic-Yoda/AstrBot 多功能机器人框架；包含LLM集成、插件系统、任务调度等模块分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/Sonic-Yoda/AstrBot",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260511-004",
+      "name": "autoagent-design",
+      "description": "AutoAgent 设计文档项目，基于 SINOG2/AutoAgent 自动Agent框架；包含规划引擎、工具调用、多Agent协作等模块分析",
+      "url": "",
+      "gitRepo": "https://github.com/SINOG2/AutoAgent",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-002",
+          "name": "autoagent-design",
+          "description": "AutoAgent 设计文档项目，基于 SINOG2/AutoAgent 自动Agent框架；包含规划引擎、工具调用、多Agent协作等模块分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/SINOG2/AutoAgent",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260511-005",
+      "name": "bmad-method-design",
+      "description": "BMAD-METHOD 设计文档项目，基于 BMAD/BMAD-METHOD AI学习框架；包含主动学习、人机协作、模型优化等模块分析",
+      "url": "",
+      "gitRepo": "https://github.com/BMAD/BMAD-METHOD",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-003",
+          "name": "bmad-method-design",
+          "description": "BMAD-METHOD 设计文档项目，基于 BMAD/BMAD-METHOD AI学习框架；包含主动学习、人机协作、模型优化等模块分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/BMAD/BMAD-METHOD",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260511-006",
+      "name": "chatdev-design",
+      "description": "ChatDev 设计文档项目，基于 OpenBMB/ChatDev 虚拟软件公司框架；包含多Agent角色、流程管理、协作引擎等模块分析",
+      "url": "",
+      "gitRepo": "https://github.com/OpenBMB/ChatDev",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-004",
+          "name": "chatdev-design",
+          "description": "ChatDev 设计文档项目，基于 OpenBMB/ChatDev 虚拟软件公司框架；包含多Agent角色、流程管理、协作引擎等模块分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/OpenBMB/ChatDev",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending"
+        }
+      ]
+    },
+    {
       "id": "PRJ-20260511-007",
       "name": "deepcode-design",
       "description": "DeepCode 设计文档项目，基于 HKUDS/DeepCode 多Agent代码生成框架；包含代码补全、漏洞检测、代码优化等模块分析",
