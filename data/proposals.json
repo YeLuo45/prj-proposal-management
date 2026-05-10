@@ -4513,6 +4513,66 @@
           "projectName": "proposals"
         }
       ]
+    },
+    {
+      "id": "PRJ-20260511-007",
+      "name": "deepcode-design",
+      "description": "DeepCode 设计文档项目，基于 HKUDS/DeepCode 多Agent代码生成框架；包含代码补全、漏洞检测、代码优化等模块分析",
+      "url": "",
+      "gitRepo": "https://github.com/HKUDS/DeepCode",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-005",
+          "name": "deepcode-design",
+          "description": "DeepCode 设计文档项目，基于 HKUDS/DeepCode 多Agent代码生成框架；包含代码补全、漏洞检测、代码优化等模块分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/HKUDS/DeepCode",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260511-008",
+      "name": "deepseek-coder-design",
+      "description": "DeepSeek-Coder 设计文档项目，基于 deepseek-ai/DeepSeek-Coder 代码生成模型；包含模型架构、训练方法、海量数据等模块分析",
+      "url": "",
+      "gitRepo": "https://github.com/deepseek-ai/DeepSeek-Coder",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-006",
+          "name": "deepseek-coder-design",
+          "description": "DeepSeek-Coder 设计文档项目，基于 deepseek-ai/DeepSeek-Coder 代码生成模型；包含模型架构、训练方法、海量数据等模块分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/deepseek-ai/DeepSeek-Coder",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending"
+        }
+      ]
     }
   ]
 }
