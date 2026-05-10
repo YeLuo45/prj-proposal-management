@@ -27,7 +27,9 @@
           "updatedAt": "2026-04-16",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-001",
+          "projectName": "todolist"
         },
         {
           "id": "P-20260502-012",
@@ -45,7 +47,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "timeout-approved（5分钟）",
           "techExpectations": "confirmed",
-          "acceptance": "pending"
+          "acceptance": "pending",
+          "projectId": "PRJ-20250416-001",
+          "projectName": "todolist"
         },
         {
           "id": "P-20260502-014",
@@ -63,7 +67,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-001",
+          "projectName": "todolist"
         },
         {
           "id": "P-20260502-015",
@@ -81,7 +87,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-001",
+          "projectName": "todolist"
         },
         {
           "id": "P-20260502-016",
@@ -99,7 +107,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-001",
+          "projectName": "todolist"
         },
         {
           "id": "P-20260502-019",
@@ -117,7 +127,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-001",
+          "projectName": "todolist"
         },
         {
           "id": "P-20260503-020",
@@ -135,7 +147,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "timeout-approved",
           "techExpectations": "",
-          "acceptance": "pending"
+          "acceptance": "pending",
+          "projectId": "PRJ-20250416-001",
+          "projectName": "todolist"
         },
         {
           "id": "P-20260503-024",
@@ -153,7 +167,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-001",
+          "projectName": "todolist"
         },
         {
           "id": "P-20260503-025",
@@ -171,7 +187,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-001",
+          "projectName": "todolist"
         },
         {
           "id": "P-20260503-026",
@@ -189,7 +207,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-001",
+          "projectName": "todolist"
         },
         {
           "id": "P-20260503-027",
@@ -207,7 +227,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-001",
+          "projectName": "todolist"
         }
       ]
     },
@@ -238,7 +260,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-002",
+          "projectName": "game-1024"
         },
         {
           "id": "P-20260502-007",
@@ -256,7 +280,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-002",
+          "projectName": "game-1024"
         },
         {
           "id": "P-20260502-008",
@@ -274,7 +300,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-002",
+          "projectName": "game-1024"
         },
         {
           "id": "P-20260502-009",
@@ -292,7 +320,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-002",
+          "projectName": "game-1024"
         },
         {
           "id": "P-20260502-010",
@@ -310,7 +340,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-002",
+          "projectName": "game-1024"
         },
         {
           "id": "P-20260502-011",
@@ -328,7 +360,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250416-002",
+          "projectName": "game-1024"
         }
       ]
     },
@@ -357,7 +391,9 @@
           "updatedAt": "2026-04-18",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20250418-003",
+          "projectName": "harness-desktop"
         },
         {
           "id": "P-20260508-001",
@@ -368,7 +404,9 @@
           "prdConfirmation": "2026-05-09",
           "techExpectations": "",
           "acceptance": "accepted",
-          "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260508-001-tool-call-loop.md"
+          "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260508-001-tool-call-loop.md",
+          "projectId": "PRJ-20250418-003",
+          "projectName": "harness-desktop"
         },
         {
           "id": "P-20260509-001",
@@ -379,7 +417,9 @@
           "prdConfirmation": "2026-05-09",
           "techExpectations": "",
           "acceptance": "accepted",
-          "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260509-001-verification-hook-integration.md"
+          "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260509-001-verification-hook-integration.md",
+          "projectId": "PRJ-20250418-003",
+          "projectName": "harness-desktop"
         },
         {
           "id": "P-20260510-001",
@@ -391,7 +431,9 @@
           "techExpectations": "",
           "acceptance": "",
           "prdUrl": "/home/hermes/proposals/workspace-pm/proposals/harness-desktop/P-20260510-001-multi-agent-engine.md",
-          "commit": "11c7393fcdd802074047c963ffae80355ca6cfee"
+          "commit": "11c7393fcdd802074047c963ffae80355ca6cfee",
+          "projectId": "PRJ-20250418-003",
+          "projectName": "harness-desktop"
         }
       ]
     },
@@ -421,7 +463,9 @@
           "updatedAt": "2026-04-12",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260502-017",
@@ -439,7 +483,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "timeout-approved",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260505-005",
@@ -457,7 +503,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260505-006",
@@ -475,7 +523,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260505-007",
@@ -493,7 +543,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260505-008",
@@ -511,7 +563,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260505-009",
@@ -529,7 +583,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260505-010",
@@ -547,7 +603,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260505-011",
@@ -565,7 +623,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260505-012",
@@ -583,7 +643,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260505-013",
@@ -601,7 +663,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "timeout-approved",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260506-001",
@@ -619,7 +683,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "boss-selected-P0",
           "techExpectations": "pending",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260506-002",
@@ -637,7 +703,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "boss-selected-P0",
           "techExpectations": "pending",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260506-003",
@@ -655,7 +723,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "boss-selected-P0",
           "techExpectations": "pending",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260506-004",
@@ -673,7 +743,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "boss-selected-P1",
           "techExpectations": "pending",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260506-005",
@@ -691,7 +763,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "boss-selected-P2",
           "techExpectations": "pending",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260506-006",
@@ -709,7 +783,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "boss-selected-P2",
           "techExpectations": "pending",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260506-007",
@@ -727,7 +803,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "boss-selected-P2",
           "techExpectations": "pending",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260506-008",
@@ -745,7 +823,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "confirmed",
           "techExpectations": "pending",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         },
         {
           "id": "P-20260506-009",
@@ -763,7 +843,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "confirmed",
           "techExpectations": "pending",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-008",
+          "projectName": "ai-subscription"
         }
       ]
     },
@@ -792,7 +874,9 @@
           "updatedAt": "2026-04-12",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-009",
+          "projectName": "ai-stock-simulation"
         },
         {
           "id": "P-20260505-001",
@@ -810,7 +894,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-009",
+          "projectName": "ai-stock-simulation"
         },
         {
           "id": "P-20260505-002",
@@ -828,7 +914,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-009",
+          "projectName": "ai-stock-simulation"
         },
         {
           "id": "P-20260505-003",
@@ -846,7 +934,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "confirmed",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-009",
+          "projectName": "ai-stock-simulation"
         },
         {
           "id": "P-20260505-004",
@@ -864,7 +954,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "confirmed",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260412-009",
+          "projectName": "ai-stock-simulation"
         },
         {
           "id": "P-20260509-024",
@@ -879,7 +971,9 @@
           "updatedAt": "0260509024",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "delivered"
+          "acceptance": "delivered",
+          "projectId": "PRJ-20260412-009",
+          "projectName": "ai-stock-simulation"
         }
       ]
     },
@@ -908,7 +1002,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-001",
+          "projectName": "prj-proposals-manager"
         },
         {
           "id": "P-20260505-077",
@@ -926,7 +1022,9 @@
           "updatedAt": "2026-04-16",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260417-001",
+          "projectName": "prj-proposals-manager"
         }
       ]
     },
@@ -956,7 +1054,9 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted",
-          "version": "v1.6.0"
+          "version": "v1.6.0",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260505-014",
@@ -974,7 +1074,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260505-015",
@@ -992,7 +1094,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260505-016",
@@ -1010,7 +1114,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260505-017",
@@ -1028,7 +1134,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260506-018",
@@ -1046,7 +1154,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260506-019",
@@ -1064,7 +1174,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260506-020",
@@ -1082,7 +1194,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260506-021",
@@ -1100,7 +1214,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260506-022",
@@ -1118,7 +1234,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260506-023",
@@ -1136,7 +1254,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260507-024",
@@ -1154,7 +1274,9 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260507-025",
@@ -1172,7 +1294,9 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260507-026",
@@ -1190,7 +1314,9 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260507-027",
@@ -1208,7 +1334,9 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260507-028",
@@ -1226,7 +1354,9 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260507-029",
@@ -1244,7 +1374,9 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260507-030",
@@ -1262,7 +1394,9 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260509-003",
@@ -1277,7 +1411,9 @@
           "updatedAt": "0260509003",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "delivered"
+          "acceptance": "delivered",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         },
         {
           "id": "P-20260509-004",
@@ -1292,7 +1428,9 @@
           "updatedAt": "0260509004",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "delivered"
+          "acceptance": "delivered",
+          "projectId": "PRJ-20260417-002",
+          "projectName": "android-hello"
         }
       ]
     },
@@ -1321,7 +1459,9 @@
           "updatedAt": "2026-04-18",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260418-001",
+          "projectName": "monopoly3d"
         }
       ]
     },
@@ -1350,7 +1490,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "pending",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260503-038",
@@ -1368,7 +1510,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260503-039",
@@ -1386,7 +1530,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260503-040",
@@ -1404,7 +1550,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260503-041",
@@ -1422,7 +1570,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260503-042",
@@ -1440,7 +1590,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260503-043",
@@ -1458,7 +1610,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260503-044",
@@ -1476,7 +1630,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260503-045",
@@ -1494,7 +1650,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260503-046",
@@ -1512,7 +1670,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260503-047",
@@ -1530,7 +1690,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260503-048",
@@ -1548,7 +1710,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-049",
@@ -1566,7 +1730,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-050",
@@ -1584,7 +1750,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-051",
@@ -1602,7 +1770,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-052",
@@ -1620,7 +1790,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-053",
@@ -1638,7 +1810,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-054",
@@ -1656,7 +1830,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-055",
@@ -1674,7 +1850,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-056",
@@ -1692,7 +1870,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-057",
@@ -1710,7 +1890,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-058",
@@ -1728,7 +1910,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-059",
@@ -1746,7 +1930,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-060",
@@ -1764,7 +1950,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-061",
@@ -1782,7 +1970,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-062",
@@ -1800,7 +1990,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-04自行验收通过"
+          "acceptance": "小墨于2026-05-04自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-063",
@@ -1818,7 +2010,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-04自行验收通过"
+          "acceptance": "小墨于2026-05-04自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-064",
@@ -1836,7 +2030,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-04自行验收通过"
+          "acceptance": "小墨于2026-05-04自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-065",
@@ -1854,7 +2050,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-04自行验收通过"
+          "acceptance": "小墨于2026-05-04自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-066",
@@ -1872,7 +2070,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-04自行验收通过"
+          "acceptance": "小墨于2026-05-04自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-067",
@@ -1890,7 +2090,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-04自行验收通过"
+          "acceptance": "小墨于2026-05-04自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-068",
@@ -1908,7 +2110,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-04自行验收通过"
+          "acceptance": "小墨于2026-05-04自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260504-069",
@@ -1926,7 +2130,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-04自行验收通过"
+          "acceptance": "小墨于2026-05-04自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260505-078",
@@ -1944,7 +2150,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-05自行验收通过"
+          "acceptance": "小墨于2026-05-05自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260506-079",
@@ -1962,7 +2170,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-06自行验收通过"
+          "acceptance": "小墨于2026-05-06自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260506-080",
@@ -1980,7 +2190,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-06自行验收通过"
+          "acceptance": "小墨于2026-05-06自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260506-081",
@@ -1998,7 +2210,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-06自行验收通过"
+          "acceptance": "小墨于2026-05-06自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260506-082",
@@ -2016,7 +2230,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-06自行验收通过"
+          "acceptance": "小墨于2026-05-06自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260506-083",
@@ -2034,7 +2250,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-06自行验收通过"
+          "acceptance": "小墨于2026-05-06自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         },
         {
           "id": "P-20260506-084",
@@ -2052,7 +2270,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-06自行验收通过"
+          "acceptance": "小墨于2026-05-06自行验收通过",
+          "projectId": "PRJ-20260418-002",
+          "projectName": "creative-drawing-board"
         }
       ]
     },
@@ -2081,7 +2301,9 @@
           "updatedAt": "2026-04-18",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260418-004",
+          "projectName": "future-little-leaders"
         },
         {
           "id": "P-20260504-3009",
@@ -2099,7 +2321,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "confirmed",
           "techExpectations": "pending",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-004",
+          "projectName": "future-little-leaders"
         },
         {
           "id": "P-20260505-012",
@@ -2117,7 +2341,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "confirmed",
           "techExpectations": "pending",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-004",
+          "projectName": "future-little-leaders"
         }
       ]
     },
@@ -2146,7 +2372,9 @@
           "updatedAt": "2026-04-18",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260418-005",
+          "projectName": "todo-app"
         }
       ]
     },
@@ -2177,7 +2405,9 @@
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
           "acceptance": "accepted",
-          "notes": "2026-05-05 验收通过：障碍物系统(4类型)+碰撞检测+GameOver+localStorage 均已实现并正常工作。V1部署版满足P-20260505-001 PRD要求。"
+          "notes": "2026-05-05 验收通过：障碍物系统(4类型)+碰撞检测+GameOver+localStorage 均已实现并正常工作。V1部署版满足P-20260505-001 PRD要求。",
+          "projectId": "PRJ-20260419-001",
+          "projectName": "temple-run"
         },
         {
           "id": "P-20260505-081",
@@ -2197,7 +2427,9 @@
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
           "acceptance": "accepted",
-          "notes": "验收通过：npm run build成功，GitHub Actions部署成功(1m14s)，代码逻辑完整，HUD距离+金币显示，皮肤商店购买/选择，localStorage持久化。"
+          "notes": "验收通过：npm run build成功，GitHub Actions部署成功(1m14s)，代码逻辑完整，HUD距离+金币显示，皮肤商店购买/选择，localStorage持久化。",
+          "projectId": "PRJ-20260419-001",
+          "projectName": "temple-run"
         },
         {
           "id": "P-20260504-070",
@@ -2215,7 +2447,9 @@
           "updatedAt": "2026-04-16",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260419-001",
+          "projectName": "temple-run"
         }
       ]
     },
@@ -2244,7 +2478,9 @@
           "updatedAt": "2026-04-19",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260419-002",
+          "projectName": "tank-battle"
         }
       ]
     },
@@ -2274,7 +2510,9 @@
           "updatedAt": "2026-04-19",
           "prdConfirmation": "timeout-approved",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-004",
@@ -2293,7 +2531,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-009",
@@ -2311,7 +2551,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-010",
@@ -2329,7 +2571,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-011",
@@ -2347,7 +2591,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-012",
@@ -2365,7 +2611,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-013",
@@ -2383,7 +2631,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-014",
@@ -2401,7 +2651,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-015",
@@ -2419,7 +2671,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-016",
@@ -2437,7 +2691,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-018",
@@ -2455,7 +2711,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "confirmed",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-3024",
@@ -2473,7 +2731,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         },
         {
           "id": "P-20260504-3027",
@@ -2491,7 +2751,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260419-003",
+          "projectName": "dont-step-white"
         }
       ]
     },
@@ -2521,7 +2783,8 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted",
-          "projectId": "PRJ-20260419-005"
+          "projectId": "PRJ-20260419-005",
+          "projectName": "TradingAgents-CN"
         },
         {
           "id": "P-20260504-3046",
@@ -2540,7 +2803,8 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted",
-          "projectId": "PRJ-20260419-005"
+          "projectId": "PRJ-20260419-005",
+          "projectName": "TradingAgents-CN"
         }
       ]
     },
@@ -2569,7 +2833,9 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "delivered"
+          "acceptance": "delivered",
+          "projectId": "PRJ-20260419-007",
+          "projectName": "ai-creator-h5"
         },
         {
           "id": "P-20260508-001",
@@ -2587,7 +2853,9 @@
           "updatedAt": "2026-05-08",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "delivered"
+          "acceptance": "delivered",
+          "projectId": "PRJ-20260419-007",
+          "projectName": "ai-creator-h5"
         },
         {
           "id": "P-20260508-002",
@@ -2606,7 +2874,9 @@
           "updatedAt": "2026-05-08",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "delivered"
+          "acceptance": "delivered",
+          "projectId": "PRJ-20260419-007",
+          "projectName": "ai-creator-h5"
         }
       ]
     },
@@ -2635,7 +2905,9 @@
           "updatedAt": "2026-04-20",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260420-001",
+          "projectName": "snake-battle"
         },
         {
           "id": "P-20260503-021",
@@ -2653,7 +2925,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260420-001",
+          "projectName": "snake-battle"
         },
         {
           "id": "P-20260503-022",
@@ -2671,7 +2945,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "confirmed",
           "techExpectations": "timeout-approved（技术栈继承 V1：HTML5 Canvas + Vanilla JS 单文件，零外部依赖）",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260420-001",
+          "projectName": "snake-battle"
         },
         {
           "id": "P-20260503-023",
@@ -2689,7 +2965,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "timeout-approved",
           "techExpectations": "timeout-approved（技术栈继承V1-V3：Canvas + Vanilla JS + React/Vite，localStorage持久化）",
-          "acceptance": "pending"
+          "acceptance": "pending",
+          "projectId": "PRJ-20260420-001",
+          "projectName": "snake-battle"
         }
       ]
     },
@@ -2718,7 +2996,9 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "confirmed",
           "techExpectations": "",
-          "acceptance": "pending"
+          "acceptance": "pending",
+          "projectId": "PRJ-20260420-002",
+          "projectName": "pixel-pal-web"
         },
         {
           "id": "P-20260507-001",
@@ -2736,7 +3016,9 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260420-002",
+          "projectName": "pixel-pal-web"
         },
         {
           "id": "P-20260507-002",
@@ -2754,7 +3036,9 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260420-002",
+          "projectName": "pixel-pal-web"
         },
         {
           "id": "P-20260507-003",
@@ -2772,7 +3056,9 @@
           "updatedAt": "2026-05-07",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260420-002",
+          "projectName": "pixel-pal-web"
         }
       ]
     },
@@ -2801,7 +3087,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "boss于2026-05-02验收通过"
+          "acceptance": "boss于2026-05-02验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-001",
@@ -2819,7 +3107,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "boss于2026-05-02验收通过"
+          "acceptance": "boss于2026-05-02验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-002",
@@ -2837,7 +3127,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "boss于2026-05-03验收通过"
+          "acceptance": "boss于2026-05-03验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-003",
@@ -2855,7 +3147,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "boss于2026-05-03验收通过"
+          "acceptance": "boss于2026-05-03验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-004",
@@ -2873,7 +3167,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "boss于2026-05-03验收通过"
+          "acceptance": "boss于2026-05-03验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-005",
@@ -2891,7 +3187,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-006",
@@ -2909,7 +3207,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-007",
@@ -2927,7 +3227,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-008",
@@ -2945,7 +3247,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-009",
@@ -2963,7 +3267,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-010",
@@ -2981,7 +3287,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-011",
@@ -2999,7 +3307,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-012",
@@ -3017,7 +3327,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-013",
@@ -3035,7 +3347,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-014",
@@ -3053,7 +3367,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-015",
@@ -3071,7 +3387,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-016",
@@ -3089,7 +3407,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-017",
@@ -3107,7 +3427,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-018",
@@ -3125,7 +3447,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260503-019",
@@ -3143,7 +3467,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "小墨于2026-05-03自行验收通过"
+          "acceptance": "小墨于2026-05-03自行验收通过",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260508-001",
@@ -3161,7 +3487,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "delivered"
+          "acceptance": "delivered",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260508-002",
@@ -3179,7 +3507,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "delivered"
+          "acceptance": "delivered",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260508-003",
@@ -3197,7 +3527,9 @@
           "updatedAt": "2026-05-03",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "delivered"
+          "acceptance": "delivered",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260508-004",
@@ -3215,7 +3547,9 @@
           "updatedAt": "2026-05-08",
           "prdConfirmation": "confirmed",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260508-005",
@@ -3233,7 +3567,9 @@
           "updatedAt": "2026-05-08",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260508-006",
@@ -3251,7 +3587,9 @@
           "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260509-008",
@@ -3269,7 +3607,9 @@
           "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260509-009",
@@ -3287,7 +3627,9 @@
           "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260509-010",
@@ -3305,7 +3647,9 @@
           "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260509-011",
@@ -3323,7 +3667,9 @@
           "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260509-012",
@@ -3341,7 +3687,9 @@
           "updatedAt": "2026-05-09",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         },
         {
           "id": "P-20260509-013",
@@ -3359,7 +3707,9 @@
           "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260421-001",
+          "projectName": "card-game-prototype"
         }
       ]
     },
@@ -3388,7 +3738,9 @@
           "updatedAt": "2026-04-21",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260421-003",
+          "projectName": "personalClaw"
         }
       ]
     },
@@ -3417,7 +3769,9 @@
           "updatedAt": "2026-04-22",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260422-001",
+          "projectName": "ai-novel-assistant"
         },
         {
           "id": "P-20260502-001",
@@ -3435,7 +3789,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260422-001",
+          "projectName": "ai-novel-assistant"
         },
         {
           "id": "P-20260502-002",
@@ -3453,7 +3809,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260422-001",
+          "projectName": "ai-novel-assistant"
         },
         {
           "id": "P-20260502-003",
@@ -3471,7 +3829,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "confirmed",
           "techExpectations": "pending",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260422-001",
+          "projectName": "ai-novel-assistant"
         },
         {
           "id": "P-20260504-3001",
@@ -3489,7 +3849,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260422-001",
+          "projectName": "ai-novel-assistant"
         },
         {
           "id": "P-20260504-3054",
@@ -3507,7 +3869,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "confirmed",
           "techExpectations": "pending",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260422-001",
+          "projectName": "ai-novel-assistant"
         }
       ]
     },
@@ -3536,7 +3900,9 @@
           "updatedAt": "2026-04-23",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260423-001",
+          "projectName": "room-escape-puzzle"
         }
       ]
     },
@@ -3565,7 +3931,9 @@
           "updatedAt": "2026-04-23",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260423-002",
+          "projectName": "little-garden"
         }
       ]
     },
@@ -3594,7 +3962,9 @@
           "updatedAt": "2026-04-23",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260423-005",
+          "projectName": "hermes-agent-collab"
         },
         {
           "id": "P-20260504-3055",
@@ -3609,7 +3979,9 @@
             "提案"
           ],
           "createdAt": "2026-05-02",
-          "updatedAt": "2026-05-02"
+          "updatedAt": "2026-05-02",
+          "projectId": "PRJ-20260423-005",
+          "projectName": "hermes-agent-collab"
         },
         {
           "id": "P-20260424-002",
@@ -3627,7 +3999,9 @@
           "updatedAt": "2026-04-24",
           "prdConfirmation": "timeout-approved",
           "techExpectations": "",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260423-005",
+          "projectName": "hermes-agent-collab"
         }
       ]
     },
@@ -3656,7 +4030,9 @@
           "updatedAt": "2026-04-24",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260424-001",
+          "projectName": "OpenMAIC"
         }
       ]
     },
@@ -3685,7 +4061,9 @@
           "updatedAt": "2026-04-24",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260424-004",
+          "projectName": "match3-puzzle"
         }
       ]
     },
@@ -3714,7 +4092,9 @@
           "updatedAt": "2026-04-26",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted (2026-04-26)"
+          "acceptance": "accepted (2026-04-26)",
+          "projectId": "PRJ-20260426-003",
+          "projectName": "calculator-app"
         }
       ]
     },
@@ -3744,7 +4124,8 @@
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
           "acceptance": "accepted",
-          "projectId": "PRJ-20260427-001"
+          "projectId": "PRJ-20260427-001",
+          "projectName": "preschool-puzzle"
         },
         {
           "id": "P-20260504-3096",
@@ -3763,7 +4144,8 @@
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
           "acceptance": "accepted",
-          "projectId": "PRJ-20260427-001"
+          "projectId": "PRJ-20260427-001",
+          "projectName": "preschool-puzzle"
         }
       ]
     },
@@ -3792,7 +4174,9 @@
           "updatedAt": "2026-04-29",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260428-001",
+          "projectName": "whack-a-mole-3d"
         },
         {
           "id": "P-20260430-001",
@@ -3810,7 +4194,9 @@
           "updatedAt": "2026-04-30",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260428-001",
+          "projectName": "whack-a-mole-3d"
         },
         {
           "id": "P-20260430-002",
@@ -3828,7 +4214,9 @@
           "updatedAt": "2026-04-30",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260428-001",
+          "projectName": "whack-a-mole-3d"
         },
         {
           "id": "P-20260430-003",
@@ -3846,7 +4234,9 @@
           "updatedAt": "2026-05-01",
           "prdConfirmation": "timeout-approved",
           "techExpectations": "timeout-approved（技术栈继承V3：Three.js 0.160.0 CDN + Vanilla JS 单文件）",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260428-001",
+          "projectName": "whack-a-mole-3d"
         },
         {
           "id": "P-20260430-004",
@@ -3864,7 +4254,9 @@
           "updatedAt": "2026-05-01",
           "prdConfirmation": "timeout-approved",
           "techExpectations": "timeout-approved（技术栈继承V3：Three.js 0.160.0 CDN + Vanilla JS 单文件）",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260428-001",
+          "projectName": "whack-a-mole-3d"
         },
         {
           "id": "P-20260430-005",
@@ -3882,7 +4274,9 @@
           "updatedAt": "2026-05-01",
           "prdConfirmation": "timeout-approved",
           "techExpectations": "timeout-approved（技术栈继承V3：Three.js 0.160.0 CDN + Vanilla JS 单文件）",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260428-001",
+          "projectName": "whack-a-mole-3d"
         }
       ]
     },
@@ -3911,7 +4305,9 @@
           "updatedAt": "2026-04-28",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260428-002",
+          "projectName": "flight-chess-3d"
         },
         {
           "id": "P-20260502-004",
@@ -3929,7 +4325,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260428-002",
+          "projectName": "flight-chess-3d"
         },
         {
           "id": "P-20260502-005",
@@ -3947,7 +4345,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260428-002",
+          "projectName": "flight-chess-3d"
         },
         {
           "id": "P-20260504-3032",
@@ -3965,7 +4365,9 @@
           "updatedAt": "2026-05-02",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260428-002",
+          "projectName": "flight-chess-3d"
         },
         {
           "id": "P-20260504-3035",
@@ -3983,7 +4385,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260428-002",
+          "projectName": "flight-chess-3d"
         },
         {
           "id": "P-20260504-3040",
@@ -4001,7 +4405,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "confirmed",
           "techExpectations": "timeout-approved（继承V1技术栈）",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260428-002",
+          "projectName": "flight-chess-3d"
         },
         {
           "id": "P-20260504-3041",
@@ -4019,7 +4425,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "confirmed",
           "techExpectations": "timeout-approved（继承V1技术栈）",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260428-002",
+          "projectName": "flight-chess-3d"
         },
         {
           "id": "P-20260504-3043",
@@ -4037,7 +4445,9 @@
           "updatedAt": "2026-05-04",
           "prdConfirmation": "confirmed",
           "techExpectations": "timeout-approved（继承V1技术栈）",
-          "acceptance": ""
+          "acceptance": "",
+          "projectId": "PRJ-20260428-002",
+          "projectName": "flight-chess-3d"
         }
       ]
     },
@@ -4066,7 +4476,9 @@
           "updatedAt": "2026-04-30",
           "prdConfirmation": "N/A (direct to dev)",
           "techExpectations": "N/A (direct to dev)",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260430-001",
+          "projectName": "tower-baby-guard"
         }
       ]
     },
@@ -4096,7 +4508,8 @@
           "prdConfirmation": "timeout-approved (快速启动)",
           "techExpectations": "confirmed (默认最优)",
           "acceptance": "accepted",
-          "projectId": "PRJ-20260430-002"
+          "projectId": "PRJ-20260430-002",
+          "projectName": "doc-editor"
         }
       ]
     },
@@ -4124,7 +4537,9 @@
           "updatedAt": "20260509",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "accepted"
+          "acceptance": "accepted",
+          "projectId": "PRJ-20260509-001",
+          "projectName": "trading-agents-design"
         }
       ]
     },
@@ -4153,9 +4568,169 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted",
-          "packageUrl": "https://github.com/YeLuo45/trending-dashboard/archive/refs/heads/main.zip"
+          "packageUrl": "https://github.com/YeLuo45/trending-dashboard/archive/refs/heads/main.zip",
+          "projectId": "PRJ-20260509-002",
+          "projectName": "trending-dashboard"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260511-003",
+      "name": "astrbot-design",
+      "description": "AstrBot 设计文档项目，基于 Sonic-Yoda/AstrBot 源码；包含 AGENTS.md 开发规范、架构分析与功能设计",
+      "url": "",
+      "gitRepo": "https://github.com/Sonic-Yoda/AstrBot",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-001",
+          "name": "astrbot-design",
+          "description": "AstrBot 设计文档项目，基于 Sonic-Yoda/AstrBot 源码；包含 AGENTS.md 开发规范、架构分析与功能设计",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/Sonic-Yoda/AstrBot",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending",
+          "projectId": "PRJ-20260511-003",
+          "projectName": "astrbot-design"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260511-004",
+      "name": "autoagent-design",
+      "description": "AutoAgent 设计文档项目，基于 SINOG2/AutoAgent 源码；包含多Agent通信、工具调用、评估框架等模块分析",
+      "url": "",
+      "gitRepo": "https://github.com/SINOG2/AutoAgent",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-002",
+          "name": "autoagent-design",
+          "description": "AutoAgent 设计文档项目，基于 SINOG2/AutoAgent 源码；包含多Agent通信、工具调用、评估框架等模块分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/SINOG2/AutoAgent",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending",
+          "projectId": "PRJ-20260511-004",
+          "projectName": "autoagent-design"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260511-005",
+      "name": "bmad-method-design",
+      "description": "BMAD-METHOD 设计文档项目，基于 agent-assisted 软件交付框架；包含 AGENTS.md 开发规范、Skill 验证机制、评估框架分析",
+      "url": "",
+      "gitRepo": "https://github.com/BMAD/BMAD-METHOD",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-003",
+          "name": "bmad-method-design",
+          "description": "BMAD-METHOD 设计文档项目，基于 agent-assisted 软件交付框架；包含 AGENTS.md 开发规范、Skill 验证机制、评估框架分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/BMAD/BMAD-METHOD",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending",
+          "projectId": "PRJ-20260511-005",
+          "projectName": "bmad-method-design"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260511-006",
+      "name": "chatdev-design",
+      "description": "ChatDev 设计文档项目，基于 OpenBMB/ChatDev 虚拟软件公司多Agent框架；包含角色定义、工作流、可视化等模块分析",
+      "url": "",
+      "gitRepo": "https://github.com/OpenBMB/ChatDev",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-004",
+          "name": "chatdev-design",
+          "description": "ChatDev 设计文档项目，基于 OpenBMB/ChatDev 虚拟软件公司多Agent框架；包含角色定义、工作流、可视化等模块分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/OpenBMB/ChatDev",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260511-007",
+      "name": "deepcode-design",
+      "description": "DeepCode 设计文档项目，基于 DeepSeek-Coder/DeepCode 代码智能分析框架；包含代码补全、漏洞检测、代码优化等模块分析",
+      "url": "",
+      "gitRepo": "https://github.com/DeepSeek-Coder/DeepCode",
+      "createdAt": "2026-05-11",
+      "updatedAt": "2026-05-11",
+      "proposals": [
+        {
+          "id": "P-20260511-005",
+          "name": "deepcode-design",
+          "description": "DeepCode 设计文档项目，基于 DeepSeek-Coder/DeepCode 代码智能分析框架；包含代码补全、漏洞检测、代码优化等模块分析",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "",
+          "gitRepo": "https://github.com/DeepSeek-Coder/DeepCode",
+          "tags": [
+            "设计",
+            "文档"
+          ],
+          "createdAt": "2026-05-11",
+          "updatedAt": "2026-05-11",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending"
         }
       ]
     }
+  ]
+}
   ]
 }
