@@ -85,6 +85,9 @@ function App() {
   const [showSavedFilters, setShowSavedFilters] = useState(false);
   const [filterLogic, setFilterLogic] = useState('OR');
 
+  // Favorites view state
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+
   // V10: AI 功能状态
   const [aiRecommendations, setAiRecommendations] = useState({ type: null, tags: [] });
   const [duplicateWarnings, setDuplicateWarnings] = useState([]);
@@ -459,6 +462,17 @@ function App() {
     })).filter(p => p.proposals.length > 0);
   }, [filteredProjects, focusMode]);
 
+  // Favorites filtered projects
+  const favoritesFilteredProjects = useMemo(() => {
+    if (!showFavoritesOnly) return focusFilteredProjects;
+    return focusFilteredProjects
+      .map(project => ({
+        ...project,
+        proposals: project.proposals.filter(p => favorites.includes(p.projectId))
+      }))
+      .filter(p => p.proposals.length > 0);
+  }, [focusFilteredProjects, favorites, showFavoritesOnly]);
+
   // M3: Focus mode flat proposals
   const focusFilteredProposals = useMemo(() => {
     return focusFilteredProjects.flatMap(project =>
@@ -473,16 +487,23 @@ function App() {
     );
   }, [focusFilteredProjects]);
 
-  const paginatedProposals = useMemo(() => {
-    const start = (currentPage - 1) * ITEMS_PER_PAGE;
-    return dateFiltered.slice(start, start + ITEMS_PER_PAGE);
-  }, [dateFiltered, currentPage]);
+  // Favorites filtered proposals
+  const favoritesFilteredProposals = useMemo(() => {
+    if (!showFavoritesOnly) return focusFilteredProposals;
+    return focusFilteredProposals.filter(p => favorites.includes(p.projectId));
+  }, [focusFilteredProposals, favorites, showFavoritesOnly]);
 
-  const totalPages = Math.ceil(dateFiltered.length / ITEMS_PER_PAGE);
+  const paginatedProposals = useMemo(() => {
+    const source = showFavoritesOnly ? favoritesFilteredProposals : dateFiltered;
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return source.slice(start, start + ITEMS_PER_PAGE);
+  }, [dateFiltered, favoritesFilteredProposals, showFavoritesOnly, currentPage]);
+
+  const totalPages = Math.ceil((showFavoritesOnly ? favoritesFilteredProposals.length : dateFiltered.length) / ITEMS_PER_PAGE);
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, advancedFilters, dateRange, tagLogic]);
+  }, [searchQuery, advancedFilters, dateRange, tagLogic, showFavoritesOnly]);
 
   const handleAdvancedApply = () => {
     updateUrl(advancedFilters);
@@ -920,6 +941,9 @@ function App() {
             onApplyTemplate={setFiltersFromTemplate}
             showAdvanced={showAdvanced}
             onToggleAdvanced={() => setShowAdvanced(!showAdvanced)}
+            showFavoritesOnly={showFavoritesOnly}
+            onToggleFavorites={() => setShowFavoritesOnly(!showFavoritesOnly)}
+            favoritesCount={favorites.length}
           />
         </div>
 
@@ -948,12 +972,14 @@ function App() {
             {viewMode === 'projects' && (
               <>
                 <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-                  {searchQuery || advancedFilters.statuses.length > 0 || advancedFilters.types.length > 0 || dateRange.start || dateRange.end
+                  {showFavoritesOnly
+                    ? (favoritesFilteredProjects.length === 0 ? '暂无收藏的项目' : `已收藏 ${favoritesFilteredProjects.length} 个项目`)
+                    : (searchQuery || advancedFilters.statuses.length > 0 || advancedFilters.types.length > 0 || dateRange.start || dateRange.end
                     ? `找到 ${dateFiltered.length} 个提案`
-                    : `共 ${filteredProjects.length} 个项目，${dateFiltered.length} 个提案`}
+                    : `共 ${filteredProjects.length} 个项目，${dateFiltered.length} 个提案`)}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {filteredProjects.map((project) => {
+                  {favoritesFilteredProjects.map((project) => {
                     const recentProposals = project.proposals
                       .filter(p => {
                         if (advancedFilters.statuses.length > 0 && !advancedFilters.statuses.includes(p.status)) return false;
@@ -987,9 +1013,9 @@ function App() {
                   })}
                 </div>
 
-                {filteredProjects.length === 0 && (
+                {favoritesFilteredProjects.length === 0 && (
                   <div className="text-center py-12 text-gray-500 dark:text-gray-400">
-                    没有找到匹配的项目
+                    {showFavoritesOnly ? '还没有收藏任何项目 ⭐' : '没有找到匹配的项目'}
                   </div>
                 )}
               </>
@@ -998,7 +1024,9 @@ function App() {
             {viewMode === 'card' && (
               <>
                 <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-                  找到 <span className="font-semibold text-blue-500">{dateFiltered.length}</span> 个提案
+                  {showFavoritesOnly
+                    ? (favoritesFilteredProposals.length === 0 ? '暂无收藏的提案' : `已收藏 ${favoritesFilteredProposals.length} 个提案`)
+                    : `找到 <span className="font-semibold text-blue-500">${dateFiltered.length}</span> 个提案`}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {paginatedProposals.map((proposal) => (
@@ -1040,9 +1068,9 @@ function App() {
                   </div>
                 )}
 
-                {dateFiltered.length === 0 && (
+                {(showFavoritesOnly ? favoritesFilteredProposals.length : dateFiltered.length) === 0 && (
                   <div className="text-center py-12 text-gray-500 dark:text-gray-400">
-                    没有找到匹配的提案
+                    {showFavoritesOnly ? '还没有收藏任何提案 ⭐' : '没有找到匹配的提案'}
                   </div>
                 )}
               </>
@@ -1050,8 +1078,8 @@ function App() {
 
             {viewMode === 'swimlane' && (
               <KanbanSwimlanes
-                projects={focusFilteredProjects}
-                proposals={focusFilteredProposals}
+                projects={favoritesFilteredProjects}
+                proposals={favoritesFilteredProposals}
                 onUpdateProposal={handleEditProposal}
                 focusMode={focusMode}
               />

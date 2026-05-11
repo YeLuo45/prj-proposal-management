@@ -22,6 +22,9 @@ function FilterBar({
   onApplyTemplate,
   showAdvanced,
   onToggleAdvanced,
+  showFavoritesOnly,
+  onToggleFavorites,
+  favoritesCount,
 }) {
   const { t } = useTranslation();
   const [showFocusDropdown, setShowFocusDropdown] = useState(false);
@@ -132,6 +135,19 @@ function FilterBar({
             {t('filterBar.table')}
           </button>
         </div>
+
+        {/* 我的收藏按钮 */}
+        <button
+          onClick={onToggleFavorites}
+          className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 ${showFavoritesOnly ? 'bg-yellow-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'}`}
+        >
+          ⭐ 我的收藏
+          {favoritesCount > 0 && (
+            <span className={`px-1.5 py-0.5 rounded-full text-xs ${showFavoritesOnly ? 'bg-white text-yellow-600' : 'bg-yellow-500 text-white'}`}>
+              {favoritesCount}
+            </span>
+          )}
+        </button>
 
         <div className="flex items-center gap-1">
           {/* 专注模式 */}
