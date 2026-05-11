@@ -130,586 +130,6 @@
       ]
     },
     {
-      "id": "p-20260509-002",
-      "name": "p-20260509-002",
-      "description": "P-20260509-002",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-002",
-          "name": "p-20260509-002",
-          "description": "P-20260509-002",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-002/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-005",
-      "name": "p-20260509-005",
-      "description": "P-20260509-005",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-005",
-          "name": "p-20260509-005",
-          "description": "P-20260509-005",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-005/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-006",
-      "name": "p-20260509-006",
-      "description": "P-20260509-006",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-006",
-          "name": "p-20260509-006",
-          "description": "P-20260509-006",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-006/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-007",
-      "name": "p-20260509-007",
-      "description": "P-20260509-007",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-007",
-          "name": "p-20260509-007",
-          "description": "P-20260509-007",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-007/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-008",
-      "name": "p-20260509-008",
-      "description": "P-20260509-008",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-008",
-          "name": "p-20260509-008",
-          "description": "P-20260509-008",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-008/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-009",
-      "name": "p-20260509-009",
-      "description": "P-20260509-009",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-009",
-          "name": "p-20260509-009",
-          "description": "P-20260509-009",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-009/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-010",
-      "name": "p-20260509-010",
-      "description": "P-20260509-010",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-010",
-          "name": "p-20260509-010",
-          "description": "P-20260509-010",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-010/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-011",
-      "name": "p-20260509-011",
-      "description": "P-20260509-011",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-011",
-          "name": "p-20260509-011",
-          "description": "P-20260509-011",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-011/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-012",
-      "name": "p-20260509-012",
-      "description": "P-20260509-012",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-012",
-          "name": "p-20260509-012",
-          "description": "P-20260509-012",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-012/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-013",
-      "name": "p-20260509-013",
-      "description": "P-20260509-013",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-013",
-          "name": "p-20260509-013",
-          "description": "P-20260509-013",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-013/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-014",
-      "name": "p-20260509-014",
-      "description": "P-20260509-014",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-014",
-          "name": "p-20260509-014",
-          "description": "P-20260509-014",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-014/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-015",
-      "name": "p-20260509-015",
-      "description": "P-20260509-015",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-015",
-          "name": "p-20260509-015",
-          "description": "P-20260509-015",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-015/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-016",
-      "name": "p-20260509-016",
-      "description": "P-20260509-016",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-016",
-          "name": "p-20260509-016",
-          "description": "P-20260509-016",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-016/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-017",
-      "name": "p-20260509-017",
-      "description": "P-20260509-017",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-017",
-          "name": "p-20260509-017",
-          "description": "P-20260509-017",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-017/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-018",
-      "name": "p-20260509-018",
-      "description": "P-20260509-018",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-018",
-          "name": "p-20260509-018",
-          "description": "P-20260509-018",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-018/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-019",
-      "name": "p-20260509-019",
-      "description": "P-20260509-019",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-019",
-          "name": "p-20260509-019",
-          "description": "P-20260509-019",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-019/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-020",
-      "name": "p-20260509-020",
-      "description": "P-20260509-020",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-020",
-          "name": "p-20260509-020",
-          "description": "P-20260509-020",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-020/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-021",
-      "name": "p-20260509-021",
-      "description": "P-20260509-021",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-021",
-          "name": "p-20260509-021",
-          "description": "P-20260509-021",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-021/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260509-022",
-      "name": "p-20260509-022",
-      "description": "P-20260509-022",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260509-022",
-          "name": "p-20260509-022",
-          "description": "P-20260509-022",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260509-022/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "p-20260508-004",
-      "name": "p-20260508-004",
-      "description": "P-20260508-004",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-04-16",
-      "updatedAt": "",
-      "proposals": [
-        {
-          "id": "P-20260508-004",
-          "name": "p-20260508-004",
-          "description": "P-20260508-004",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260508-004/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-04-16",
-          "updatedAt": "",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        }
-      ]
-    },
-    {
       "id": "PRJ-20260417-002",
       "name": "android-hello",
       "description": "Android Kotlin MVVM+Compose+Hilt；minSdk 24, targetSdk 34；V2.0.0 -> V3.6.0；R8压缩APK 8.2MB",
@@ -3313,26 +2733,6 @@
           "projectName": "card-game-prototype"
         },
         {
-          "id": "P-20260508-004",
-          "name": "pvz-视觉增强-a-b-c-walkinganimator启用-子弹命中粒子-植物受伤抖动",
-          "description": "A=行走动画(手臂摆动+身体上下); B=子弹命中冲击波粒子; C=植物被啃左右抖动0.3s",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-08",
-          "updatedAt": "2026-05-08",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "",
-          "acceptance": "accepted",
-          "projectId": "PRJ-20260421-001",
-          "projectName": "card-game-prototype"
-        },
-        {
           "id": "P-20260508-005",
           "name": "pvz-视觉增强-d-e-屏幕震动-僵尸啃咬特效",
           "description": "D=屏幕震动(爆炸时shake); E=僵尸啃咬特效(碎片粒子); V3 commit 72596f6, exe 33MB",
@@ -3375,15 +2775,11 @@
         {
           "id": "P-20260509-008",
           "name": "pvz-p2-植物-僵尸全暴露-卡牌翻页-squash-wintermelon-iceshroom-hypnoshroom-scaredyshroom-football-newspaper-miner-ladder",
-          "description": "卡牌栏扩展到13个植物，翻页箭头像标，左右翻页；commit cd80a20",
-          "type": "package",
+          "type": "feature",
           "status": "active",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pvz-p2-植物-僵尸全暴露-卡牌翻页-squash-wintermelon-iceshroom-hypnoshroom-scaredyshroom-football-newspaper-miner-ladder/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
+          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
+          "tags": [],
           "createdAt": "2026-05-09",
           "updatedAt": "2026-05-09",
           "prdConfirmation": "",
@@ -3395,15 +2791,11 @@
         {
           "id": "P-20260509-009",
           "name": "pvz-endless-mode-计分榜-本地-json-存储-game-over-界面显示-排行榜-破纪录提示",
-          "description": "LeaderboardManager 管理 ~/.pvz_endless_scores.json，Game Over 显示 Waves/Kills/Plants/Time+NEW RECORD，X按钮关闭排行榜；commit 387765c",
-          "type": "package",
+          "type": "feature",
           "status": "active",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pvz-endless-mode-计分榜-本地-json-存储-game-over-界面显示-排行榜-破纪录提示/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
+          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
+          "tags": [],
           "createdAt": "2026-05-09",
           "updatedAt": "2026-05-09",
           "prdConfirmation": "",
@@ -3415,15 +2807,11 @@
         {
           "id": "P-20260509-010",
           "name": "pvz-僵尸专属机制-newspaper愤怒变身纸片特效-football头盔hp分阶段视觉-ladder架梯逻辑",
-          "description": "Newspaper被击毁报纸时触发NewspaperShredEffect纸片飞舞+咆哮音效；Football helmet HP 200独立计算，50%HP以下出现裂纹；Ladder逻辑已存在(架梯后plant.laddered=True减速啃咬)；take_damage改为返回(dead, shred)元组；commit 5bbbafe",
-          "type": "package",
+          "type": "feature",
           "status": "active",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pvz-僵尸专属机制-newspaper愤怒变身纸片特效-football头盔hp分阶段视觉-ladder架梯逻辑/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
+          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
+          "tags": [],
           "createdAt": "2026-05-09",
           "updatedAt": "2026-05-09",
           "prdConfirmation": "",
@@ -3435,15 +2823,11 @@
         {
           "id": "P-20260509-011",
           "name": "pvz-新植物-h-zapricot-电弧群攻-cattail-全屏跟踪-gloom-shroom-毒雾",
-          "description": "Zapricot 150阳光3x3范围电弧攻击；Cattail 225阳光全屏锁定最右侧僵尸必定命中；Gloom Shroom 150阳光毒雾爆炸单次使用，中毒DoT每0.5秒10伤害持续2秒；commit 8332563",
-          "type": "package",
+          "type": "feature",
           "status": "active",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pvz-新植物-h-zapricot-电弧群攻-cattail-全屏跟踪-gloom-shroom-毒雾/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
+          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
+          "tags": [],
           "createdAt": "2026-05-09",
           "updatedAt": "2026-05-09",
           "prdConfirmation": "",
@@ -3455,37 +2839,13 @@
         {
           "id": "P-20260509-012",
           "name": "pvz-成就系统-ui-统计面板-achievementpanel-statspanel-statsmanager",
-          "description": "AchievementPanel 2列网格+金色解锁/灰色未解锁+时间戳+滚动支持；StatsPanel显示游戏时长/僵尸击杀/植物种植等；StatsManager单例持久化到~/.hermes/prj-plants-vs-zombies/stats.json；主菜单A/J打开成就S打开统计，ESC关闭；commit a732f90",
-          "type": "package",
+          "type": "feature",
           "status": "active",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pvz-成就系统-ui-统计面板-achievementpanel-statspanel-statsmanager/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "游戏"
-          ],
+          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
+          "tags": [],
           "createdAt": "2026-05-09",
           "updatedAt": "2026-05-09",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted",
-          "projectId": "PRJ-20260421-001",
-          "projectName": "card-game-prototype"
-        },
-        {
-          "id": "P-20260509-013",
-          "name": "card-game-prototype",
-          "description": "卡牌等级升级(Lv1-Lv5倍率：1.15/1.30/1.50/1.75x)+星级升级(1-3星解锁效果)；⚡强化按钮入口；等级费用(2/3/5/8张同名卡)；星级费用(3/5张同名卡)；UI显示星级符号(★☆)和等级(Lv.N)；边框颜色按等级变化；升级数据持久化到localStorage",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
-          "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-05",
-          "updatedAt": "2026-05-05",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted",
@@ -5061,24 +4421,6 @@
           "acceptance": "active"
         },
         {
-          "id": "P-20260508-004",
-          "name": "pixel-pal-web",
-          "description": "新增 MiniMax 浅色主题与 V50 深色并存：DM Sans+Outfit字体 / 品牌蓝#1456f0 / 纯白主背景+浅灰次级 / Near Black文字+Gray次级 / Settings主题切换UI(Dark/Light/MiniMax/System)；commit d79449f，PR#17 已合并",
-          "type": "web",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-08",
-          "updatedAt": "2026-05-08",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "active"
-        },
-        {
           "id": "P-20260509-001",
           "name": "pixel-pal-web",
           "description": "V64 agentExecutor: LLM任务分解+步骤执行+回调；AgentPanel绑定executor；TaskQueue IndexedDB持久化恢复；Sidebar导航已接入；build ✓, master已push ✓",
@@ -5316,28 +4658,7 @@
       "gitRepo": "https://github.com/YeLuo45/trending-dashboard",
       "createdAt": "20260509002",
       "updatedAt": "2026-05-10",
-      "proposals": [
-        {
-          "id": "P-20260509-002",
-          "name": "trending-dashboard",
-          "description": "GitHub Trending 热点项目展示 Dashboard，React+Vite+TailwindCSS",
-          "type": "package",
-          "status": "active",
-          "url": "https://yeluo45.github.io/trending-dashboard/",
-          "gitRepo": "https://github.com/YeLuo45/trending-dashboard",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "20260509",
-          "updatedAt": "2026-05-10",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted",
-          "packageUrl": "https://github.com/YeLuo45/trending-dashboard/archive/refs/heads/main.zip",
-          "projectId": "PRJ-20260509-002",
-          "projectName": "trending-dashboard"
-        }
-      ]
+      "proposals": []
     }
   ]
 }
