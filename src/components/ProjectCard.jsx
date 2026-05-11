@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 function ProjectCard({ project, recentProposals, hasMore, favorites, onToggleFavorite }) {
   const { t } = useTranslation();
-  const isFavorite = favorites.includes(project.id);
+  const isFavorite = !!favorites[project.id];
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-700 relative">

@@ -108,7 +108,7 @@ function App() {
   const exportRef = useRef(null);
 
   const { loading, error, fetchProposals, saveProposals } = useGitHub();
-  const { favorites, toggleFavorite } = useFavorites();
+  const { favorites, favoritesList, toggleFavorite } = useFavorites();
   const { history, pushRecord, updateRecord, undoLast, canUndo, refreshHistory } = useOperationHistory();
   const { errors: validatorErrors, warnings: validatorWarnings } = useValidation(projects, milestones);
 
@@ -462,15 +462,18 @@ function App() {
     })).filter(p => p.proposals.length > 0);
   }, [filteredProjects, focusMode]);
 
-  // Favorites filtered projects
+  // Favorites filtered projects (sorted by most recent first)
   const favoritesFilteredProjects = useMemo(() => {
     if (!showFavoritesOnly) return focusFilteredProjects;
-    return focusFilteredProjects
-      .map(project => ({
-        ...project,
-        proposals: project.proposals.filter(p => favorites.includes(p.projectId))
-      }))
-      .filter(p => p.proposals.length > 0);
+    const favIds = new Set(Object.keys(favorites));
+    const sortedFavProjects = focusFilteredProjects
+      .filter(p => favIds.has(p.id))
+      .sort((a, b) => {
+        const timeA = favorites[a.id] || '';
+        const timeB = favorites[b.id] || '';
+        return timeB.localeCompare(timeA);
+      });
+    return sortedFavProjects;
   }, [focusFilteredProjects, favorites, showFavoritesOnly]);
 
   // M3: Focus mode flat proposals
@@ -490,7 +493,14 @@ function App() {
   // Favorites filtered proposals
   const favoritesFilteredProposals = useMemo(() => {
     if (!showFavoritesOnly) return focusFilteredProposals;
-    return focusFilteredProposals.filter(p => favorites.includes(p.projectId));
+    const favIds = new Set(Object.keys(favorites));
+    return focusFilteredProposals
+      .filter(p => favIds.has(p.projectId))
+      .sort((a, b) => {
+        const timeA = favorites[a.projectId] || '';
+        const timeB = favorites[b.projectId] || '';
+        return timeB.localeCompare(timeA);
+      });
   }, [focusFilteredProposals, favorites, showFavoritesOnly]);
 
   const paginatedProposals = useMemo(() => {
@@ -943,7 +953,7 @@ function App() {
             onToggleAdvanced={() => setShowAdvanced(!showAdvanced)}
             showFavoritesOnly={showFavoritesOnly}
             onToggleFavorites={() => setShowFavoritesOnly(!showFavoritesOnly)}
-            favoritesCount={favorites.length}
+            favoritesCount={Object.keys(favorites).length}
           />
         </div>
 

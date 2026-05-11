@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { toast } from './useToast';
 
 const FAVORITES_URL = 'https://raw.githubusercontent.com/YeLuo45/prj-proposals-manager/master/data/favorites.json';
@@ -8,8 +8,15 @@ const REPO = 'prj-proposals-manager';
 const BRANCH = 'master';
 
 export function useFavorites() {
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState({});
   const [loading, setLoading] = useState(false);
+
+  // Derived list of {id, timestamp} for convenience
+  const favoritesList = useMemo(() => {
+    return Object.entries(favorites)
+      .map(([id, timestamp]) => ({ id, timestamp }))
+      .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  }, [favorites]);
 
   // Fetch favorites from GitHub raw URL
   const fetchFavorites = useCallback(async () => {
@@ -25,11 +32,11 @@ export function useFavorites() {
         throw new Error('Failed to fetch favorites');
       }
       const data = await response.json();
-      setFavorites(data.favorites || []);
+      setFavorites(data.favorites || {});
     } catch (err) {
       console.error('Failed to fetch favorites:', err);
-      // Initialize with empty array on error
-      setFavorites([]);
+      // Initialize with empty object on error
+      setFavorites({});
     }
   }, []);
 
@@ -69,10 +76,11 @@ export function useFavorites() {
       const fileData = await getResponse.json();
       const sha = fileData.sha;
 
-      // Update favorites list
-      const newFavorites = favorites.includes(projectId)
-        ? favorites.filter(id => id !== projectId)
-        : [...favorites, projectId];
+      // Update favorites list (object format: { [projectId]: timestamp })
+      const isFav = !!favorites[projectId];
+      const newFavorites = isFav
+        ? Object.fromEntries(Object.entries(favorites).filter(([id]) => id !== projectId))
+        : { ...favorites, [projectId]: new Date().toISOString() };
 
       // Prepare updated content
       const content = btoa(unescape(encodeURIComponent(JSON.stringify({
@@ -87,7 +95,7 @@ export function useFavorites() {
           method: 'PUT',
           headers,
           body: JSON.stringify({
-            message: `Update favorites: ${projectId} ${favorites.includes(projectId) ? 'removed' : 'added'}`,
+            message: `Update favorites: ${projectId} ${isFav ? 'removed' : 'added'}`,
             content,
             sha,
             branch: BRANCH,
@@ -101,7 +109,7 @@ export function useFavorites() {
 
       // Update local state
       setFavorites(newFavorites);
-      toast.success(newFavorites.includes(projectId) ? '已添加到收藏' : '已从收藏移除');
+      toast.success(isFav ? '已从收藏移除' : '已添加到收藏');
     } catch (err) {
       console.error('Failed to update favorites:', err);
       toast.error('同步收藏失败: ' + err.message);
@@ -112,6 +120,7 @@ export function useFavorites() {
 
   return {
     favorites,
+    favoritesList,
     loading,
     toggleFavorite,
     refreshFavorites: fetchFavorites,

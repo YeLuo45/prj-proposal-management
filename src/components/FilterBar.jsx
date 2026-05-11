@@ -142,9 +142,9 @@ function FilterBar({
           className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 ${showFavoritesOnly ? 'bg-yellow-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'}`}
         >
           ⭐ 我的收藏
-          {favoritesCount > 0 && (
+          {Object.keys(favorites).length > 0 && (
             <span className={`px-1.5 py-0.5 rounded-full text-xs ${showFavoritesOnly ? 'bg-white text-yellow-600' : 'bg-yellow-500 text-white'}`}>
-              {favoritesCount}
+              {Object.keys(favorites).length}
             </span>
           )}
         </button>
