@@ -110,7 +110,7 @@ function App() {
   const exportRef = useRef(null);
 
   const { loading, error, fetchProposals, saveProposals } = useGitHub();
-  const { favorites, favoritesList, toggleFavorite } = useFavorites();
+  const { favorites, favoritesList, toggleFavorite, pinFavorite } = useFavorites();
   const { history, pushRecord, updateRecord, undoLast, canUndo, refreshHistory } = useOperationHistory();
   const { errors: validatorErrors, warnings: validatorWarnings } = useValidation(projects, milestones);
 
@@ -1049,6 +1049,7 @@ function App() {
                         hasMore={hasMore}
                         favorites={favorites}
                         onToggleFavorite={toggleFavorite}
+                        onPinFavorite={pinFavorite}
                         favoritesMultiSelect={favoritesMultiSelect}
                         selectedFavorites={selectedFavorites}
                         onToggleFavoriteSelect={handleToggleFavoriteSelect}

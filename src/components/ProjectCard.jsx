@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-function ProjectCard({ project, recentProposals, hasMore, favorites, onToggleFavorite, favoritesMultiSelect, selectedFavorites, onToggleFavoriteSelect }) {
+function ProjectCard({ project, recentProposals, hasMore, favorites, onToggleFavorite, onPinFavorite, favoritesMultiSelect, selectedFavorites, onToggleFavoriteSelect }) {
   const { t } = useTranslation();
   const isFavorite = !!favorites[project.id];
+  const isPinned = isFavorite && typeof favorites[project.id] === 'object' && favorites[project.id].pinned;
   const isSelected = selectedFavorites.includes(project.id);
 
   return (
@@ -11,11 +12,22 @@ function ProjectCard({ project, recentProposals, hasMore, favorites, onToggleFav
       {/* Star button - top right corner */}
       <button
         onClick={() => onToggleFavorite(project.id)}
-        className="absolute top-3 right-3 text-xl hover:scale-110 transition-transform"
+        className="absolute top-3 right-8 text-xl hover:scale-110 transition-transform"
         title={isFavorite ? '从收藏移除' : '添加到收藏'}
       >
         {isFavorite ? '⭐' : '☆'}
       </button>
+
+      {/* Pin button - pin icon top right */}
+      {isFavorite && (
+        <button
+          onClick={() => onPinFavorite(project.id)}
+          className={`absolute top-3 right-3 text-xl hover:scale-110 transition-transform ${isPinned ? 'text-red-500' : 'text-gray-400'}`}
+          title={isPinned ? '取消置顶' : '置顶'}
+        >
+          {isPinned ? '📌' : '📍'}
+        </button>
+      )}
 
       {/* Selection checkbox - top left corner */}
       {favoritesMultiSelect && (

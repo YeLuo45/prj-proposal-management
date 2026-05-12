@@ -13,11 +13,19 @@ export function useFavorites() {
   const [favorites, setFavorites] = useState({});
   const [loading, setLoading] = useState(false);
 
-  // Derived list of {id, timestamp} for convenience
+  // Derived list of {id, timestamp, pinned} for convenience
   const favoritesList = useMemo(() => {
     return Object.entries(favorites)
-      .map(([id, timestamp]) => ({ id, timestamp }))
-      .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      .map(([id, value]) => ({
+        id,
+        timestamp: typeof value === 'string' ? value : value.timestamp,
+        pinned: typeof value === 'object' ? !!value.pinned : false
+      }))
+      .sort((a, b) => {
+        // Pinned first, then by timestamp
+        if (a.pinned !== b.pinned) return b.pinned - a.pinned;
+        return new Date(b.timestamp) - new Date(a.timestamp);
+      });
   }, [favorites]);
 
   // Cache helpers
@@ -100,9 +108,10 @@ export function useFavorites() {
 
     // Optimistic update
     const isFav = !!favorites[projectId];
+    const existing = favorites[projectId] || {};
     const newFavorites = isFav
       ? Object.fromEntries(Object.entries(favorites).filter(([id]) => id !== projectId))
-      : { ...favorites, [projectId]: new Date().toISOString() };
+      : { ...favorites, [projectId]: { timestamp: new Date().toISOString(), pinned: existing.pinned || false } };
 
     setFavorites(newFavorites);
     setCache(newFavorites);
@@ -163,11 +172,71 @@ export function useFavorites() {
     }
   }, [favorites, getCache, setCache]);
 
+  // Pin/unpin a favorite
+  const pinFavorite = useCallback(async (projectId) => {
+    const current = favorites[projectId];
+    if (!current) return;
+
+    const isPinned = current.pinned;
+    const newFavorites = {
+      ...favorites,
+      [projectId]: {
+        ...(typeof current === 'string' ? { timestamp: current } : current),
+        pinned: !isPinned
+      }
+    };
+
+    // Optimistic update
+    setFavorites(newFavorites);
+    setCache(newFavorites);
+
+    // Sync to GitHub
+    const token = import.meta.env.VITE_GH_TOKEN || localStorage.getItem('github_token');
+    if (!token) return;
+
+    try {
+      const headers = {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/vnd.github+json',
+      };
+
+      const getResponse = await fetch(
+        `${GITHUB_API}/repos/${OWNER}/${REPO}/contents/data/favorites.json?ref=${BRANCH}`,
+        { headers }
+      );
+
+      if (!getResponse.ok) throw new Error('获取文件信息失败');
+      const { sha } = await getResponse.json();
+
+      const content = btoa(unescape(encodeURIComponent(JSON.stringify({
+        favorites: newFavorites,
+        updatedAt: new Date().toISOString(),
+      }, null, 2))));
+
+      const putResponse = await fetch(
+        `${GITHUB_API}/repos/${OWNER}/${REPO}/contents/data/favorites.json`,
+        {
+          method: 'PUT',
+          headers,
+          body: JSON.stringify({ message: `Pin/unpin: ${projectId}`, content, sha, branch: BRANCH }),
+        }
+      );
+
+      if (!putResponse.ok) throw new Error('保存失败');
+      toast.success(isPinned ? '已取消置顶' : '已置顶');
+    } catch (err) {
+      setFavorites(favorites); // revert
+      toast.error('同步失败');
+    }
+  }, [favorites, getCache, setCache]);
+
   return {
     favorites,
     favoritesList,
     loading,
     toggleFavorite,
+    pinFavorite,
     refreshFavorites: fetchFavorites,
   };
 }
