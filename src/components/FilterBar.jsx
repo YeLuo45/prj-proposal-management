@@ -25,6 +25,10 @@ function FilterBar({
   showFavoritesOnly,
   onToggleFavorites,
   favoritesCount,
+  favoritesMultiSelect,
+  onToggleFavoritesMultiSelect,
+  selectedFavorites,
+  onBatchRemoveFavorites,
 }) {
   const { t } = useTranslation();
   const [showFocusDropdown, setShowFocusDropdown] = useState(false);
@@ -148,6 +152,26 @@ function FilterBar({
             </span>
           )}
         </button>
+
+        {/* 批量管理按钮 */}
+        {showFavoritesOnly && Object.keys(favorites).length > 0 && (
+          <button
+            onClick={onToggleFavoritesMultiSelect}
+            className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 ${favoritesMultiSelect ? 'bg-red-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'}`}
+          >
+            {favoritesMultiSelect ? '✓ 完成选择' : '☑ 选择'}
+          </button>
+        )}
+
+        {/* 批量删除按钮 */}
+        {favoritesMultiSelect && selectedFavorites.length > 0 && (
+          <button
+            onClick={onBatchRemoveFavorites}
+            className="px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 bg-red-500 text-white hover:bg-red-600"
+          >
+            🗑 移除 ({selectedFavorites.length})
+          </button>
+        )}
 
         <div className="flex items-center gap-1">
           {/* 专注模式 */}

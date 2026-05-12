@@ -87,6 +87,8 @@ function App() {
 
   // Favorites view state
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+  const [favoritesMultiSelect, setFavoritesMultiSelect] = useState(false);
+  const [selectedFavorites, setSelectedFavorites] = useState([]);
 
   // V10: AI 功能状态
   const [aiRecommendations, setAiRecommendations] = useState({ type: null, tags: [] });
@@ -573,6 +575,31 @@ function App() {
     }
   };
 
+  // Favorites batch management
+  const handleToggleFavoritesMultiSelect = () => {
+    setFavoritesMultiSelect(!favoritesMultiSelect);
+    if (favoritesMultiSelect) {
+      setSelectedFavorites([]); // Clear selection when exiting multi-select mode
+    }
+  };
+
+  const handleToggleFavoriteSelect = (projectId) => {
+    setSelectedFavorites(prev =>
+      prev.includes(projectId)
+        ? prev.filter(id => id !== projectId)
+        : [...prev, projectId]
+    );
+  };
+
+  const handleBatchRemoveFavorites = async () => {
+    if (!confirm(`确定要从收藏中移除 ${selectedFavorites.length} 个项目吗？`)) return;
+    for (const id of selectedFavorites) {
+      await toggleFavorite(id);
+    }
+    setSelectedFavorites([]);
+    setFavoritesMultiSelect(false);
+  };
+
   const handleDuplicateCheck = (proposal) => {
     const dupes = findDuplicates(proposal, flatProposals);
     setDuplicateWarnings(dupes);
@@ -954,6 +981,10 @@ function App() {
             showFavoritesOnly={showFavoritesOnly}
             onToggleFavorites={() => setShowFavoritesOnly(!showFavoritesOnly)}
             favoritesCount={Object.keys(favorites).length}
+            favoritesMultiSelect={favoritesMultiSelect}
+            onToggleFavoritesMultiSelect={handleToggleFavoritesMultiSelect}
+            selectedFavorites={selectedFavorites}
+            onBatchRemoveFavorites={handleBatchRemoveFavorites}
           />
         </div>
 
@@ -1018,6 +1049,9 @@ function App() {
                         hasMore={hasMore}
                         favorites={favorites}
                         onToggleFavorite={toggleFavorite}
+                        favoritesMultiSelect={favoritesMultiSelect}
+                        selectedFavorites={selectedFavorites}
+                        onToggleFavoriteSelect={handleToggleFavoriteSelect}
                       />
                     );
                   })}

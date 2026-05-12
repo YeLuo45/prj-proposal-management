@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-function ProjectCard({ project, recentProposals, hasMore, favorites, onToggleFavorite }) {
+function ProjectCard({ project, recentProposals, hasMore, favorites, onToggleFavorite, favoritesMultiSelect, selectedFavorites, onToggleFavoriteSelect }) {
   const { t } = useTranslation();
   const isFavorite = !!favorites[project.id];
+  const isSelected = selectedFavorites.includes(project.id);
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-700 relative">
@@ -15,6 +16,16 @@ function ProjectCard({ project, recentProposals, hasMore, favorites, onToggleFav
       >
         {isFavorite ? '⭐' : '☆'}
       </button>
+
+      {/* Selection checkbox - top left corner */}
+      {favoritesMultiSelect && (
+        <button
+          onClick={() => onToggleFavoriteSelect(project.id)}
+          className={`absolute top-3 left-3 text-xl hover:scale-110 transition-transform ${isSelected ? 'text-blue-500' : 'text-gray-300'}`}
+        >
+          {isSelected ? '☑️' : '⬜'}
+        </button>
+      )}
 
       <div className="flex justify-between items-start mb-3 pr-8">
         <div className="flex-1 min-w-0">
