@@ -4563,13 +4563,6 @@
       "gitRepo": "https://github.com/YeLuo45/hermes-agent-design",
       "deploymentUrl": "https://yeluo45.github.io/hermes-agent-design/",
       "proposals": []
-    },
-    {
-      "name": "hermes-agent-design",
-      "description": "Hermes Agent 架构设计文档站",
-      "gitRepo": "https://github.com/YeLuo45/hermes-agent-design",
-      "deploymentUrl": "https://yeluo45.github.io/hermes-agent-design/",
-      "proposals": []
     }
   ]
 }
