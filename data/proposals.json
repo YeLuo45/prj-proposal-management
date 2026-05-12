@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "projects": [
     {
       "id": "PRJ-20260412-009",
@@ -127,7 +127,8 @@
           "projectId": "PRJ-20260412-009",
           "projectName": "ai-stock-simulation"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-002",
@@ -156,7 +157,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-005",
@@ -185,7 +187,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-006",
@@ -214,7 +217,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-007",
@@ -243,7 +247,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-008",
@@ -272,7 +277,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-009",
@@ -301,7 +307,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-010",
@@ -330,7 +337,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-011",
@@ -359,7 +367,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-012",
@@ -388,7 +397,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-013",
@@ -417,7 +427,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-014",
@@ -446,7 +457,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-015",
@@ -475,7 +487,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-016",
@@ -504,7 +517,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-017",
@@ -533,7 +547,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-018",
@@ -562,7 +577,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-019",
@@ -591,7 +607,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-020",
@@ -620,7 +637,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-021",
@@ -649,7 +667,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260509-022",
@@ -678,7 +697,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260512-001",
@@ -707,7 +727,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260512-002",
@@ -736,7 +757,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260512-004",
@@ -765,7 +787,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260512-005",
@@ -794,7 +817,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260512-006",
@@ -823,7 +847,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260512-007",
@@ -852,7 +877,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260512-008",
@@ -881,7 +907,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260512-009",
@@ -910,7 +937,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "p-20260508-004",
@@ -939,7 +967,8 @@
           "techExpectations": "",
           "acceptance": ""
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260417-002",
@@ -1345,7 +1374,8 @@
           "projectId": "PRJ-20260417-002",
           "projectName": "android-hello"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-001",
@@ -1376,7 +1406,8 @@
           "projectId": "PRJ-20260418-001",
           "projectName": "monopoly3d"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-004",
@@ -1447,7 +1478,8 @@
           "projectId": "PRJ-20260418-004",
           "projectName": "future-little-leaders"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-005",
@@ -1478,7 +1510,8 @@
           "projectId": "PRJ-20260418-005",
           "projectName": "todo-app"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-001",
@@ -1553,7 +1586,8 @@
           "projectId": "PRJ-20260419-001",
           "projectName": "temple-run"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-002",
@@ -1584,7 +1618,8 @@
           "projectId": "PRJ-20260419-002",
           "projectName": "tank-battle"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-003",
@@ -1857,7 +1892,8 @@
           "projectId": "PRJ-20260419-003",
           "projectName": "dont-step-white"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-005",
@@ -1908,7 +1944,8 @@
           "projectId": "PRJ-20260419-005",
           "projectName": "TradingAgents-CN"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260421-003",
@@ -1939,7 +1976,8 @@
           "projectId": "PRJ-20260421-003",
           "projectName": "personalClaw"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260422-001",
@@ -2070,7 +2108,8 @@
           "projectId": "PRJ-20260422-001",
           "projectName": "ai-novel-assistant"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-001",
@@ -2101,7 +2140,8 @@
           "projectId": "PRJ-20260423-001",
           "projectName": "room-escape-puzzle"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-002",
@@ -2132,7 +2172,8 @@
           "projectId": "PRJ-20260423-002",
           "projectName": "little-garden"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-005",
@@ -2200,7 +2241,8 @@
           "projectId": "PRJ-20260423-005",
           "projectName": "hermes-agent-collab"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-001",
@@ -2231,7 +2273,8 @@
           "projectId": "PRJ-20260424-001",
           "projectName": "OpenMAIC"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-004",
@@ -2262,7 +2305,8 @@
           "projectId": "PRJ-20260424-004",
           "projectName": "match3-puzzle"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260426-003",
@@ -2293,7 +2337,8 @@
           "projectId": "PRJ-20260426-003",
           "projectName": "calculator-app"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260427-001",
@@ -2344,7 +2389,8 @@
           "projectId": "PRJ-20260427-001",
           "projectName": "preschool-puzzle"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260428-002",
@@ -2515,7 +2561,8 @@
           "projectId": "PRJ-20260428-002",
           "projectName": "flight-chess-3d"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260428-001",
@@ -2646,7 +2693,8 @@
           "projectId": "PRJ-20260428-001",
           "projectName": "whack-a-mole-3d"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260430-001",
@@ -2677,7 +2725,8 @@
           "projectId": "PRJ-20260430-001",
           "projectName": "tower-baby-guard"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260430-002",
@@ -2708,7 +2757,8 @@
           "projectId": "PRJ-20260430-002",
           "projectName": "doc-editor"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250416-001",
@@ -2940,7 +2990,8 @@
           "projectId": "PRJ-20250416-001",
           "projectName": "todolist"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250416-002",
@@ -3073,7 +3124,8 @@
           "projectId": "PRJ-20250416-002",
           "projectName": "game-1024"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260421-001",
@@ -3664,7 +3716,8 @@
           "projectId": "PRJ-20260421-001",
           "projectName": "card-game-prototype"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20250418-003",
@@ -3735,7 +3788,8 @@
           "projectId": "PRJ-20250418-003",
           "projectName": "harness-desktop"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260417-001",
@@ -3840,7 +3894,8 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-002",
@@ -4651,7 +4706,8 @@
           "projectId": "PRJ-20260418-002",
           "projectName": "creative-drawing-board"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260420-001",
@@ -4742,7 +4798,8 @@
           "projectId": "PRJ-20260420-001",
           "projectName": "snake-battle"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260412-008",
@@ -5154,7 +5211,8 @@
           "projectId": "PRJ-20260412-008",
           "projectName": "ai-subscription"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "proposals",
@@ -5185,7 +5243,8 @@
           "projectId": "proposals",
           "projectName": "proposals"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-007",
@@ -5251,7 +5310,8 @@
           "techExpectations": "",
           "acceptance": "active"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-003",
@@ -5281,7 +5341,8 @@
           "techExpectations": "",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-004",
@@ -5311,7 +5372,8 @@
           "techExpectations": "",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-005",
@@ -5341,7 +5403,8 @@
           "techExpectations": "",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-006",
@@ -5371,7 +5434,8 @@
           "techExpectations": "",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-007",
@@ -5401,7 +5465,8 @@
           "techExpectations": "",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-008",
@@ -5431,7 +5496,8 @@
           "techExpectations": "",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "cultivation-simulator",
@@ -5460,7 +5526,8 @@
           "techExpectations": "pending",
           "acceptance": "pending"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260509-001",
@@ -5490,7 +5557,8 @@
           "projectId": "PRJ-20260509-001",
           "projectName": "trading-agents-design"
         }
-      ]
+      ],
+      "milestones": []
     },
     {
       "id": "PRJ-20260509-002",
@@ -5500,7 +5568,8 @@
       "gitRepo": "https://github.com/YeLuo45/trending-dashboard",
       "createdAt": "20260509002",
       "updatedAt": "2026-05-10",
-      "proposals": []
+      "proposals": [],
+      "milestones": []
     }
   ]
 }
