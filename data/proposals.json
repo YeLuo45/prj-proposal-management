@@ -4556,6 +4556,13 @@
       "createdAt": "20260509002",
       "updatedAt": "2026-05-10",
       "proposals": []
+    },
+    {
+      "name": "hermes-agent-design",
+      "description": "Hermes Agent 架构设计文档站",
+      "gitRepo": "https://github.com/YeLuo45/hermes-agent-design",
+      "deploymentUrl": "https://yeluo45.github.io/hermes-agent-design/",
+      "proposals": []
     }
   ]
 }
