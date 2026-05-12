@@ -166,3 +166,26 @@ function csvEscape(str) {
   }
   return s;
 }
+
+/**
+ * 导出收藏项目 CSV
+ */
+export function exportFavoritesToCSV(favorites, projects) {
+  const headers = ['id', 'name', 'description', 'url', 'gitRepo', 'pinned', 'favoritedAt'];
+  const rows = Object.entries(favorites).map(([projectId, value]) => {
+    const project = projects.find(p => p.id === projectId);
+    const pinned = typeof value === 'object' ? !!value.pinned : false;
+    const favoritedAt = typeof value === 'string' ? value : (value?.timestamp || '');
+    return [
+      projectId,
+      csvEscape(project?.name || ''),
+      csvEscape(project?.description || ''),
+      csvEscape(project?.url || ''),
+      csvEscape(project?.gitRepo || ''),
+      pinned ? 'true' : 'false',
+      favoritedAt
+    ].join(',');
+  });
+  if (rows.length === 0) return '';
+  return [headers.join(','), ...rows].join('\n');
+}

@@ -37,7 +37,7 @@ import KeyboardShortcutsModal from './components/KeyboardShortcutsModal';
 import GlobalSearch from './components/GlobalSearch';
 import { useGlobalSearch } from './hooks/useGlobalSearch';
 import { validateProjects } from './utils/dataValidator';
-import { downloadAllCSVs, downloadFilteredCSVs, downloadFile } from './utils/csvExporter';
+import { downloadAllCSVs, downloadFilteredCSVs, downloadFile, exportFavoritesToCSV } from './utils/csvExporter';
 import { parseCSV, validateCSVImport, executeCSVImport } from './utils/csvImporter';
 import { generateBackup, restoreFromBackup, downloadJSONBackup } from './utils/jsonBackup';
 import { classifyProposal, generateSummary, getAPIKey } from './utils/aiService';
@@ -600,6 +600,15 @@ function App() {
     setFavoritesMultiSelect(false);
   };
 
+  const handleExportFavorites = () => {
+    const csv = exportFavoritesToCSV(favorites, projects);
+    if (!csv) {
+      alert('没有可导出的收藏');
+      return;
+    }
+    downloadFile(csv, `favorites-${Date.now()}.csv`, 'text/csv');
+  };
+
   const handleDuplicateCheck = (proposal) => {
     const dupes = findDuplicates(proposal, flatProposals);
     setDuplicateWarnings(dupes);
@@ -985,6 +994,7 @@ function App() {
             onToggleFavoritesMultiSelect={handleToggleFavoritesMultiSelect}
             selectedFavorites={selectedFavorites}
             onBatchRemoveFavorites={handleBatchRemoveFavorites}
+            onExportFavorites={handleExportFavorites}
           />
         </div>
 

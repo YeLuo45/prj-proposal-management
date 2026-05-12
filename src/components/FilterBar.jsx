@@ -29,6 +29,7 @@ function FilterBar({
   onToggleFavoritesMultiSelect,
   selectedFavorites,
   onBatchRemoveFavorites,
+  onExportFavorites,
 }) {
   const { t } = useTranslation();
   const [showFocusDropdown, setShowFocusDropdown] = useState(false);
@@ -170,6 +171,16 @@ function FilterBar({
             className="px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 bg-red-500 text-white hover:bg-red-600"
           >
             🗑 移除 ({selectedFavorites.length})
+          </button>
+        )}
+
+        {/* 导出收藏按钮 */}
+        {showFavoritesOnly && Object.keys(favorites).length > 0 && (
+          <button
+            onClick={onExportFavorites}
+            className="px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 bg-green-500 text-white hover:bg-green-600"
+          >
+            📥 导出收藏
           </button>
         )}
 
