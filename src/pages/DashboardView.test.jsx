@@ -40,7 +40,7 @@ describe('groupProposalsByProject', () => {
   it('should use projectId as key, falling back to name', () => {
     const single = [{ id: 'P-1', name: 'my-project', projectId: '', status: 'active' }];
     const result = groupProposalsByProject(single);
-    expect(result[0].id).toBe('');
+    expect(result[0].id).toBe('unknown'); // empty projectId falls back to 'unknown'
     expect(result[0].name).toBe('my-project');
   });
 
@@ -180,8 +180,10 @@ describe('DashboardView rendering', () => {
     
     await waitFor(() => {
       expect(screen.getByText('总提案数')).toBeInTheDocument();
-      expect(screen.getByText('0')).toBeInTheDocument();
     });
+    // All 4 stat cards show 0 - use getAllByText to match all of them
+    expect(screen.getAllByText('0')).toHaveLength(4);
+    expect(screen.getByText('暂无提案')).toBeInTheDocument();
   });
 
   it('should handle proposals in flat array format', async () => {
