@@ -11,6 +11,7 @@ const CUSTOM_TEMPLATES_KEY = 'custom_marketplace_templates';
 const FAVORITES_KEY = 'template_favorites';
 const USER_RATINGS_KEY = 'template_user_ratings';
 const USAGE_STATS_KEY = 'template_usage_stats';
+const COMMENTS_KEY = 'template_comments';
 
 /**
  * Get all templates (builtin + custom)
@@ -256,6 +257,118 @@ function calculateAverageRating(templateId) {
   }
   
   return Math.round((stats.totalRating / stats.count) * 10) / 10;
+}
+
+// ============ Comments ============
+
+/**
+ * Get all comments for a template
+ */
+export function getComments(templateId) {
+  try {
+    const stored = localStorage.getItem(COMMENTS_KEY);
+    const allComments = stored ? JSON.parse(stored) : {};
+    return allComments[templateId] || [];
+  } catch (e) {
+    return [];
+  }
+}
+
+/**
+ * Add a comment to a template
+ */
+export function addComment(templateId, text, rating = null) {
+  try {
+    const stored = localStorage.getItem(COMMENTS_KEY);
+    const allComments = stored ? JSON.parse(stored) : {};
+    
+    if (!allComments[templateId]) {
+      allComments[templateId] = [];
+    }
+    
+    const comment = {
+      id: `comment_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+      text: text.trim(),
+      rating,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+    
+    allComments[templateId].unshift(comment); // newest first
+    localStorage.setItem(COMMENTS_KEY, JSON.stringify(allComments));
+    
+    // If rating is provided, also update the template rating
+    if (rating !== null) {
+      rateTemplate(templateId, rating);
+    }
+    
+    return { success: true, comment };
+  } catch (e) {
+    console.error('Failed to add comment:', e);
+    return { success: false, error: e.message };
+  }
+}
+
+/**
+ * Update a comment
+ */
+export function updateComment(templateId, commentId, text) {
+  try {
+    const stored = localStorage.getItem(COMMENTS_KEY);
+    const allComments = stored ? JSON.parse(stored) : {};
+    
+    if (!allComments[templateId]) {
+      return { success: false, error: 'Template not found' };
+    }
+    
+    const commentIndex = allComments[templateId].findIndex(c => c.id === commentId);
+    if (commentIndex === -1) {
+      return { success: false, error: 'Comment not found' };
+    }
+    
+    allComments[templateId][commentIndex] = {
+      ...allComments[templateId][commentIndex],
+      text: text.trim(),
+      updatedAt: new Date().toISOString(),
+    };
+    
+    localStorage.setItem(COMMENTS_KEY, JSON.stringify(allComments));
+    return { success: true, comment: allComments[templateId][commentIndex] };
+  } catch (e) {
+    return { success: false, error: e.message };
+  }
+}
+
+/**
+ * Delete a comment
+ */
+export function deleteComment(templateId, commentId) {
+  try {
+    const stored = localStorage.getItem(COMMENTS_KEY);
+    const allComments = stored ? JSON.parse(stored) : {};
+    
+    if (!allComments[templateId]) {
+      return { success: false, error: 'Template not found' };
+    }
+    
+    allComments[templateId] = allComments[templateId].filter(c => c.id !== commentId);
+    
+    if (allComments[templateId].length === 0) {
+      delete allComments[templateId];
+    }
+    
+    localStorage.setItem(COMMENTS_KEY, JSON.stringify(allComments));
+    return { success: true };
+  } catch (e) {
+    return { success: false, error: e.message };
+  }
+}
+
+/**
+ * Get total comment count for a template
+ */
+export function getCommentCount(templateId) {
+  return getComments(templateId).length;
 }
 
 // ============ Favorites ============
@@ -646,4 +759,10 @@ export default {
   downloadTemplates,
   parseTemplateFile,
   getMarketplaceStats,
+  // Comments
+  getComments,
+  addComment,
+  updateComment,
+  deleteComment,
+  getCommentCount,
 };
