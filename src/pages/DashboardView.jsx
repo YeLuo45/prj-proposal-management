@@ -20,10 +20,27 @@ ChartJS.register(
   BarElement, ArcElement, Title, Tooltip, Legend
 );
 
+// Helper: group proposals by projectId
+function groupProposalsByProject(flatProposals) {
+  const groups = {};
+  flatProposals.forEach(p => {
+    const key = p.projectId || 'unknown';
+    if (!groups[key]) {
+      groups[key] = {
+        id: key,
+        name: p.name || key,
+        proposals: [],
+      };
+    }
+    groups[key].proposals.push(p);
+  });
+  return Object.values(groups);
+}
+
 function DashboardView() {
   const { themeId } = useTheme();
   const isDark = themeId === 'dark' || themeId === 'forest' || themeId === 'sunset';
-  const [projects, setProjects] = useState([]);
+  const [allProposals, setAllProposals] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -35,12 +52,11 @@ function DashboardView() {
         return res.json();
       })
       .then(data => {
-        // Normalize data structure
+        // proposals.json has { version, projects: [...] } where projects is flat array of proposals
         if (data.projects && Array.isArray(data.projects)) {
-          setProjects(data.projects);
+          setAllProposals(data.projects);
         } else if (data.proposals && Array.isArray(data.proposals)) {
-          // If flat proposals, wrap in projects structure
-          setProjects([{ id: 'all', name: 'All Proposals', proposals: data.proposals }]);
+          setAllProposals(data.proposals);
         }
         setLoading(false);
       })
@@ -56,39 +72,32 @@ function DashboardView() {
     ChartJS.defaults.borderColor = isDark ? '#374151' : '#e5e7eb';
   }, [isDark]);
 
-  // Compute flatProposals from projects
-  const flatProposals = useMemo(() => {
-    if (!projects || projects.length === 0) return [];
-    return projects.flatMap(p =>
-      (p.proposals || []).map(pr => ({
-        ...pr,
-        projectName: p.name,
-        projectId: p.id,
-      }))
-    );
-  }, [projects]);
+  // Derive projects grouping from flat proposals
+  const projects = useMemo(() => {
+    return groupProposalsByProject(allProposals);
+  }, [allProposals]);
 
-  // Calculate statistics
+  // Compute statistics
   const stats = useMemo(() => {
-    const totalCount = flatProposals.length;
+    const totalCount = allProposals.length;
     const now = new Date();
     const thisMonth = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
-    const thisMonthCount = flatProposals.filter(p => {
+    const thisMonthCount = allProposals.filter(p => {
       const created = p.createdAt || '';
       return created.startsWith(thisMonth);
     }).length;
-    const activeCount = flatProposals.filter(p => p.status === 'active').length;
-    const inDevCount = flatProposals.filter(p => p.status === 'in_dev').length;
+    const activeCount = allProposals.filter(p => p.status === 'active').length;
+    const inDevCount = allProposals.filter(p => p.status === 'in_dev').length;
 
     return { totalCount, thisMonthCount, activeCount, inDevCount };
-  }, [flatProposals]);
+  }, [allProposals]);
 
   // Status distribution (horizontal bar chart data)
   const statusData = useMemo(() => {
-    const active = flatProposals.filter(p => p.status === 'active').length;
-    const inDev = flatProposals.filter(p => p.status === 'in_dev').length;
-    const archived = flatProposals.filter(p => p.status === 'archived').length;
-    const delivered = flatProposals.filter(p => p.status === 'delivered').length;
+    const active = allProposals.filter(p => p.status === 'active').length;
+    const inDev = allProposals.filter(p => p.status === 'in_dev').length;
+    const archived = allProposals.filter(p => p.status === 'archived').length;
+    const delivered = allProposals.filter(p => p.status === 'delivered').length;
     return {
       labels: ['Active', 'In Dev', 'Archived', 'Delivered'],
       datasets: [{
@@ -103,21 +112,21 @@ function DashboardView() {
         borderWidth: 0,
       }]
     };
-  }, [flatProposals]);
+  }, [allProposals]);
 
   // Project distribution (pie/doughnut chart - top 10)
   const projectDistributionData = useMemo(() => {
     const projectCounts = {};
-    flatProposals.forEach(p => {
-      const name = p.projectName || '未分类';
+    allProposals.forEach(p => {
+      const name = p.name || p.projectId || '未分类';
       projectCounts[name] = (projectCounts[name] || 0) + 1;
     });
-    
+
     // Sort by count and take top 10
     const sorted = Object.entries(projectCounts)
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10);
-    
+
     const colors = [
       'rgba(59, 130, 246, 0.8)',
       'rgba(34, 197, 94, 0.8)',
@@ -130,7 +139,7 @@ function DashboardView() {
       'rgba(99, 102, 241, 0.8)',
       'rgba(163, 163, 163, 0.8)',
     ];
-    
+
     return {
       labels: sorted.map(([name]) => name),
       datasets: [{
@@ -139,26 +148,26 @@ function DashboardView() {
         borderWidth: 0,
       }]
     };
-  }, [flatProposals]);
+  }, [allProposals]);
 
   // Monthly trend (line chart - last 6 months)
   const monthlyTrendData = useMemo(() => {
     const now = new Date();
     const months = [];
     const counts = [];
-    
+
     for (let i = 5; i >= 0; i--) {
       const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
       const monthKey = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
       months.push(d.toLocaleDateString('zh-CN', { month: 'short' }));
-      
-      const count = flatProposals.filter(p => {
+
+      const count = allProposals.filter(p => {
         const created = p.createdAt || '';
         return created.startsWith(monthKey);
       }).length;
       counts.push(count);
     }
-    
+
     return {
       labels: months,
       datasets: [{
@@ -170,15 +179,15 @@ function DashboardView() {
         tension: 0.3,
       }]
     };
-  }, [flatProposals]);
+  }, [allProposals]);
 
   // Recent active proposals (last 10 by updatedAt)
   const recentProposals = useMemo(() => {
-    return [...flatProposals]
+    return [...allProposals]
       .filter(p => p.updatedAt)
       .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt))
       .slice(0, 10);
-  }, [flatProposals]);
+  }, [allProposals]);
 
   // Chart options
   const barOptions = {
@@ -370,7 +379,7 @@ function DashboardView() {
                     >
                       <td className="px-4 py-2 text-sm text-blue-500">{proposal.id}</td>
                       <td className="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 truncate max-w-xs">{proposal.name}</td>
-                      <td className="px-4 py-2 text-sm text-gray-600 dark:text-gray-400">{proposal.projectName}</td>
+                      <td className="px-4 py-2 text-sm text-gray-600 dark:text-gray-400">{proposal.name}</td>
                       <td className="px-4 py-2">
                         <span className={getStatusBadge(proposal.status)}>{proposal.status}</span>
                       </td>
@@ -388,3 +397,4 @@ function DashboardView() {
 }
 
 export default DashboardView;
+export { groupProposalsByProject };
