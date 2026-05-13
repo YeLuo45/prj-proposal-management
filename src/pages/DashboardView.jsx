@@ -13,7 +13,6 @@ import {
   Legend,
 } from 'chart.js';
 import { Line, Doughnut, Bar } from 'react-chartjs-2';
-import { useStatsData } from '../hooks/useStatsData';
 import { useTheme } from '../contexts/ThemeContext';
 
 ChartJS.register(
@@ -22,17 +21,40 @@ ChartJS.register(
 );
 
 function DashboardView() {
-  const { themeId, setThemeId } = useTheme();
-  const [timeRange, setTimeRange] = useState('30d');
+  const { themeId } = useTheme();
   const isDark = themeId === 'dark' || themeId === 'forest' || themeId === 'sunset';
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const {
-    loading,
-    error,
-    stats,
-    projects,
-    refetch,
-  } = useStatsData();
+  // Fetch data from local proposals.json
+  useEffect(() => {
+    fetch('/data/proposals.json')
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load proposals data');
+        return res.json();
+      })
+      .then(data => {
+        // Normalize data structure
+        if (data.projects && Array.isArray(data.projects)) {
+          setProjects(data.projects);
+        } else if (data.proposals && Array.isArray(data.proposals)) {
+          // If flat proposals, wrap in projects structure
+          setProjects([{ id: 'all', name: 'All Proposals', proposals: data.proposals }]);
+        }
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, []);
+
+  // Dark mode effect for Chart.js
+  useEffect(() => {
+    ChartJS.defaults.color = isDark ? '#9ca3af' : '#374151';
+    ChartJS.defaults.borderColor = isDark ? '#374151' : '#e5e7eb';
+  }, [isDark]);
 
   // Compute flatProposals from projects
   const flatProposals = useMemo(() => {
@@ -46,106 +68,154 @@ function DashboardView() {
     );
   }, [projects]);
 
-  // Dark mode effect for Chart.js
-  useEffect(() => {
-    ChartJS.defaults.color = isDark ? '#9ca3af' : '#374151';
-    ChartJS.defaults.borderColor = isDark ? '#374151' : '#e5e7eb';
-  }, [isDark]);
-
-  const toggleDarkMode = () => {
-    setThemeId(isDark ? 'light' : 'dark');
-  };
-
-  // time-filtered proposals
-  const filteredProposals = useMemo(() => {
-    if (timeRange === 'all') return flatProposals;
+  // Calculate statistics
+  const stats = useMemo(() => {
+    const totalCount = flatProposals.length;
     const now = new Date();
-    const cutoff = new Date();
-    if (timeRange === '7d') cutoff.setDate(now.getDate() - 7);
-    else if (timeRange === '30d') cutoff.setDate(now.getDate() - 30);
-    else if (timeRange === '3m') cutoff.setMonth(now.getMonth() - 3);
-    return flatProposals.filter(p => new Date(p.createdAt) >= cutoff);
-  }, [flatProposals, timeRange]);
+    const thisMonth = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
+    const thisMonthCount = flatProposals.filter(p => {
+      const created = p.createdAt || '';
+      return created.startsWith(thisMonth);
+    }).length;
+    const activeCount = flatProposals.filter(p => p.status === 'active').length;
+    const inDevCount = flatProposals.filter(p => p.status === 'in_dev').length;
 
-  // trend data (6 months line chart)
-  const trendData = useMemo(() => {
+    return { totalCount, thisMonthCount, activeCount, inDevCount };
+  }, [flatProposals]);
+
+  // Status distribution (horizontal bar chart data)
+  const statusData = useMemo(() => {
+    const active = flatProposals.filter(p => p.status === 'active').length;
+    const inDev = flatProposals.filter(p => p.status === 'in_dev').length;
+    const archived = flatProposals.filter(p => p.status === 'archived').length;
+    const delivered = flatProposals.filter(p => p.status === 'delivered').length;
+    return {
+      labels: ['Active', 'In Dev', 'Archived', 'Delivered'],
+      datasets: [{
+        label: '提案数量',
+        data: [active, inDev, archived, delivered],
+        backgroundColor: [
+          'rgba(34, 197, 94, 0.8)',
+          'rgba(234, 179, 8, 0.8)',
+          'rgba(107, 114, 128, 0.8)',
+          'rgba(59, 130, 246, 0.8)',
+        ],
+        borderWidth: 0,
+      }]
+    };
+  }, [flatProposals]);
+
+  // Project distribution (pie/doughnut chart - top 10)
+  const projectDistributionData = useMemo(() => {
+    const projectCounts = {};
+    flatProposals.forEach(p => {
+      const name = p.projectName || '未分类';
+      projectCounts[name] = (projectCounts[name] || 0) + 1;
+    });
+    
+    // Sort by count and take top 10
+    const sorted = Object.entries(projectCounts)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10);
+    
+    const colors = [
+      'rgba(59, 130, 246, 0.8)',
+      'rgba(34, 197, 94, 0.8)',
+      'rgba(234, 179, 8, 0.8)',
+      'rgba(239, 68, 68, 0.8)',
+      'rgba(139, 92, 246, 0.8)',
+      'rgba(236, 72, 153, 0.8)',
+      'rgba(20, 184, 166, 0.8)',
+      'rgba(251, 146, 60, 0.8)',
+      'rgba(99, 102, 241, 0.8)',
+      'rgba(163, 163, 163, 0.8)',
+    ];
+    
+    return {
+      labels: sorted.map(([name]) => name),
+      datasets: [{
+        data: sorted.map(([, count]) => count),
+        backgroundColor: colors.slice(0, sorted.length),
+        borderWidth: 0,
+      }]
+    };
+  }, [flatProposals]);
+
+  // Monthly trend (line chart - last 6 months)
+  const monthlyTrendData = useMemo(() => {
     const now = new Date();
     const months = [];
+    const counts = [];
+    
     for (let i = 5; i >= 0; i--) {
       const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
-      months.push(d.toISOString().slice(0, 7));
+      const monthKey = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
+      months.push(d.toLocaleDateString('zh-CN', { month: 'short' }));
+      
+      const count = flatProposals.filter(p => {
+        const created = p.createdAt || '';
+        return created.startsWith(monthKey);
+      }).length;
+      counts.push(count);
     }
+    
     return {
-      labels: months.map(m => {
-        const [y, mo] = m.split('-');
-        return `${parseInt(mo)}月`;
-      }),
+      labels: months,
       datasets: [{
         label: '新增提案',
-        data: months.map(month => filteredProposals.filter(p => p.createdAt?.startsWith(month)).length),
+        data: counts,
         borderColor: 'rgb(59, 130, 246)',
         backgroundColor: 'rgba(59, 130, 246, 0.1)',
         fill: true,
         tension: 0.3,
       }]
     };
-  }, [filteredProposals]);
+  }, [flatProposals]);
 
-  // status distribution (donut chart)
-  const statusData = useMemo(() => ({
-    labels: ['待办', '进行中', '已完成'],
-    datasets: [{
-      data: [
-        filteredProposals.filter(p => p.status === 'active').length,
-        filteredProposals.filter(p => p.status === 'in_dev').length,
-        filteredProposals.filter(p => p.status === 'archived').length,
-      ],
-      backgroundColor: [
-        'rgba(34, 197, 94, 0.8)',
-        'rgba(234, 179, 8, 0.8)',
-        'rgba(107, 114, 128, 0.8)',
-      ],
-      borderWidth: 0,
-    }]
-  }), [filteredProposals]);
+  // Recent active proposals (last 10 by updatedAt)
+  const recentProposals = useMemo(() => {
+    return [...flatProposals]
+      .filter(p => p.updatedAt)
+      .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt))
+      .slice(0, 10);
+  }, [flatProposals]);
 
-  // project progress (horizontal bar chart)
-  const projectProgressData = useMemo(() => {
-    const progress = projects.map(p => {
-      const total = p.proposals?.length || 0;
-      const done = p.proposals?.filter(pr => pr.status === 'archived').length || 0;
-      const inProgress = p.proposals?.filter(pr => pr.status === 'in_dev').length || 0;
-      return { name: p.name, total, done, inProgress, rate: total ? Math.round(done/total*100) : 0 };
-    }).sort((a, b) => b.rate - a.rate);
-    return {
-      labels: progress.map(p => p.name),
-      datasets: [
-        { label: '已完成', data: progress.map(p => p.done), backgroundColor: 'rgba(34, 197, 94, 0.8)' },
-        { label: '进行中', data: progress.map(p => p.inProgress), backgroundColor: 'rgba(234, 179, 8, 0.8)' },
-      ]
-    };
-  }, [projects]);
-
-  const lineOptions = {
+  // Chart options
+  const barOptions = {
     responsive: true,
     maintainAspectRatio: false,
+    indexAxis: 'y',
     plugins: { legend: { display: false } },
-    scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } }
+    scales: {
+      x: { beginAtZero: true, ticks: { stepSize: 1 } },
+      y: { ticks: { color: isDark ? '#9ca3af' : '#374151' } }
+    }
   };
 
   const doughnutOptions = {
     responsive: true,
     maintainAspectRatio: false,
-    cutout: '65%',
-    plugins: { legend: { position: 'bottom', labels: { padding: 20 } } }
+    cutout: '60%',
+    plugins: { legend: { position: 'bottom', labels: { padding: 15 } } }
   };
 
-  const barOptions = {
+  const lineOptions = {
     responsive: true,
     maintainAspectRatio: false,
-    indexAxis: 'y',
-    plugins: { legend: { position: 'top' } },
-    scales: { x: { stacked: true, max: 100 }, y: { stacked: true } }
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { beginAtZero: true, ticks: { stepSize: 1 } }
+    }
+  };
+
+  const getStatusBadge = (status) => {
+    const styles = {
+      active: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+      in_dev: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300',
+      archived: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300',
+      delivered: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+    };
+    return `px-2 py-1 rounded text-xs ${styles[status] || styles.active}`;
   };
 
   if (loading) {
@@ -167,121 +237,150 @@ function DashboardView() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors pb-16 md:pb-0">
       {/* Header */}
       <header className="bg-white dark:bg-gray-800 shadow">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">数据统计</h1>
-          <div className="flex gap-4 items-center">
-            <button
-              onClick={toggleDarkMode}
-              className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 flex items-center gap-2"
-              title={isDark ? '切换到亮色模式' : '切换到暗色模式'}
-            >
-              {isDark ? (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-              )}
-            </button>
-            <Link
-              to="/"
-              className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600"
-            >
-              返回列表
-            </Link>
-          </div>
+        <div className="container mx-auto px-4 py-4">
+          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">个人数据仪表盘</h1>
         </div>
       </header>
 
-      {/* Dashboard Content */}
-      <div className="max-w-7xl mx-auto p-4 space-y-6">
-        {/* Metric Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+      <div className="max-w-7xl mx-auto p-4">
+        {/* 4 Stat Cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-500 dark:text-gray-400 text-sm">总提案数</p>
                 <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">{stats.totalCount}</p>
               </div>
-              <span className="text-3xl">📋</span>
+              <span className="text-2xl">📋</span>
             </div>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">进行中</p>
-                <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">{stats.inProgressCount}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">Active</p>
+                <p className="text-2xl font-bold text-green-600 dark:text-green-400">{stats.activeCount}</p>
               </div>
-              <span className="text-3xl">🔄</span>
+              <span className="text-2xl">✅</span>
             </div>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">已完成</p>
-                <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">{stats.completedCount}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">In Dev</p>
+                <p className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">{stats.inDevCount}</p>
               </div>
-              <span className="text-3xl">✅</span>
+              <span className="text-2xl">🔄</span>
             </div>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-500 dark:text-gray-400 text-sm">本月新增</p>
-                <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">{stats.thisMonthCount}</p>
+                <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.thisMonthCount}</p>
               </div>
-              <span className="text-3xl">🆕</span>
+              <span className="text-2xl">🆕</span>
             </div>
           </div>
         </div>
 
-        {/* Time Range Filter */}
-        <div className="flex gap-2 justify-center">
-          {['7d', '30d', '3m', 'all'].map(range => (
-            <button
-              key={range}
-              onClick={() => setTimeRange(range)}
-              className={`px-4 py-2 rounded-lg transition-colors ${
-                timeRange === range
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
-              }`}
-            >
-              {range === '7d' ? '7天' : range === '30d' ? '30天' : range === '3m' ? '3个月' : '全部'}
-            </button>
-          ))}
-        </div>
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+          {/* Charts Column - 2/3 width */}
+          <div className="lg:col-span-2 space-y-6">
+            {/* Status Distribution Bar Chart */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">状态分布</h3>
+              <div className="h-48">
+                <Bar data={statusData} options={barOptions} />
+              </div>
+            </div>
 
-        {/* Charts Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Trend Chart */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">提案趋势</h3>
-            <div className="h-64">
-              <Line data={trendData} options={lineOptions} />
+            {/* Monthly Trend Line Chart */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">月度趋势（近6个月）</h3>
+              <div className="h-48">
+                <Line data={monthlyTrendData} options={lineOptions} />
+              </div>
             </div>
           </div>
 
-          {/* Status Distribution */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">状态分布</h3>
-            <div className="h-64">
-              <Doughnut data={statusData} options={doughnutOptions} />
+          {/* Right Sidebar - 1/3 width */}
+          <div className="space-y-6">
+            {/* Project Distribution Doughnut */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">项目分布（Top 10）</h3>
+              <div className="h-64">
+                <Doughnut data={projectDistributionData} options={doughnutOptions} />
+              </div>
+            </div>
+
+            {/* Quick Actions */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">快捷入口</h3>
+              <div className="space-y-2">
+                <button
+                  onClick={() => window.location.href = '/?action=new'}
+                  className="w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                  </svg>
+                  新建提案
+                </button>
+                <button
+                  onClick={() => window.location.href = '/?action=import'}
+                  className="w-full bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors flex items-center justify-center gap-2"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                  </svg>
+                  导入CSV
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Project Progress */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">项目进度</h3>
-          <div className="h-64">
-            <Bar data={projectProgressData} options={barOptions} />
-          </div>
+        {/* Recent Active Proposals */}
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">最近活跃提案</h3>
+          {recentProposals.length === 0 ? (
+            <div className="text-center text-gray-500 dark:text-gray-400 py-8">暂无提案</div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="min-w-full">
+                <thead className="bg-gray-50 dark:bg-gray-700">
+                  <tr>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">ID</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">标题</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">项目</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">状态</th>
+                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">更新时间</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                  {recentProposals.map((proposal) => (
+                    <tr
+                      key={proposal.id}
+                      className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
+                      onClick={() => window.location.href = `/?project=${proposal.projectId}&proposal=${proposal.id}`}
+                    >
+                      <td className="px-4 py-2 text-sm text-blue-500">{proposal.id}</td>
+                      <td className="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 truncate max-w-xs">{proposal.name}</td>
+                      <td className="px-4 py-2 text-sm text-gray-600 dark:text-gray-400">{proposal.projectName}</td>
+                      <td className="px-4 py-2">
+                        <span className={getStatusBadge(proposal.status)}>{proposal.status}</span>
+                      </td>
+                      <td className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">{proposal.updatedAt}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
       </div>
     </div>
