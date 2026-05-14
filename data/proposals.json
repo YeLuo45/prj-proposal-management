@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-15 02:36:33",
+  "generated": "2026-05-15 02:40:15",
   "projects": [
     {
       "id": "PRJ-20250416-001",
@@ -5196,6 +5196,336 @@
       "proposals": []
     },
     {
+      "id": "PRJ-20260515-004",
+      "name": "generic-agent-design",
+      "gitRepo": "https://github.com/yeluo45/generic-agent-design",
+      "localPath": "/home/hermes/opensource/generic-agent-design",
+      "description": "GenericAgent 开源代码的 VitePress 设计文档站点",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-002",
+          "title": "generic-agent-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/generic-agent-design",
+          "gitRepo": "https://github.com/yeluo45/generic-agent-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260515-005",
+      "name": "open-space-design",
+      "gitRepo": "https://github.com/yeluo45/open-space-design",
+      "localPath": "/home/hermes/opensource/open-space-design",
+      "description": "open-space 开源代码的 VitePress 设计文档站点",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-003",
+          "title": "open-space-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/open-space-design",
+          "gitRepo": "https://github.com/yeluo45/open-space-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260515-006",
+      "name": "scrapling-design",
+      "gitRepo": "https://github.com/yeluo45/scrapling-design",
+      "localPath": "/home/hermes/opensource/scrapling-design",
+      "description": "scrapling 开源代码的 VitePress 设计文档站点",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-004",
+          "title": "scrapling-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/scrapling-design",
+          "gitRepo": "https://github.com/yeluo45/scrapling-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260515-007",
+      "name": "claude-code-design",
+      "gitRepo": "https://github.com/yeluo45/claude-code-design",
+      "localPath": "/home/hermes/opensource/claude-code-design",
+      "description": "claude-code 开源代码的 VitePress 设计文档站点",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-005",
+          "title": "claude-code-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/claude-code-design",
+          "gitRepo": "https://github.com/yeluo45/claude-code-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260515-008",
+      "name": "claudecodesrc-design",
+      "gitRepo": "https://github.com/yeluo45/claudecodesrc-design",
+      "localPath": "/home/hermes/opensource/claudecodesrc-design",
+      "description": "claudecodesrc 开源代码的 VitePress 设计文档站点",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-006",
+          "title": "claudecodesrc-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/claudecodesrc-design",
+          "gitRepo": "https://github.com/yeluo45/claudecodesrc-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260515-009",
+      "name": "freqtrade-develop-design",
+      "gitRepo": "https://github.com/yeluo45/freqtrade-develop-design",
+      "localPath": "/home/hermes/opensource/freqtrade-develop-design",
+      "description": "freqtrade-develop 开源代码的 VitePress 设计文档站点",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-007",
+          "title": "freqtrade-develop-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/freqtrade-develop-design",
+          "gitRepo": "https://github.com/yeluo45/freqtrade-develop-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260515-010",
+      "name": "langcli-design",
+      "gitRepo": "https://github.com/yeluo45/langcli-design",
+      "localPath": "/home/hermes/opensource/langcli-design",
+      "description": "langcli 开源代码的 VitePress 设计文档站点",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-008",
+          "title": "langcli-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/langcli-design",
+          "gitRepo": "https://github.com/yeluo45/langcli-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260515-011",
+      "name": "ohmypi-design",
+      "gitRepo": "https://github.com/yeluo45/ohmypi-design",
+      "localPath": "/home/hermes/opensource/ohmypi-design",
+      "description": "ohmypi 开源代码的 VitePress 设计文档站点",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-009",
+          "title": "ohmypi-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/ohmypi-design",
+          "gitRepo": "https://github.com/yeluo45/ohmypi-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260515-012",
+      "name": "opencode-dev-design",
+      "gitRepo": "https://github.com/yeluo45/opencode-dev-design",
+      "localPath": "/home/hermes/opensource/opencode-dev-design",
+      "description": "opencode-dev 开源代码的 VitePress 设计文档站点",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-010",
+          "title": "opencode-dev-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/opencode-dev-design",
+          "gitRepo": "https://github.com/yeluo45/opencode-dev-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "PRJ-20260515-013",
+      "name": "ruflo-design",
+      "gitRepo": "https://github.com/yeluo45/ruflo-design",
+      "localPath": "/home/hermes/opensource/ruflo-design",
+      "description": "ruflo 开源代码的 VitePress 设计文档站点",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-011",
+          "title": "ruflo-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/ruflo-design",
+          "gitRepo": "https://github.com/yeluo45/ruflo-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
       "id": "agent-记忆系统-跨-session-llm-决策记忆",
       "name": "agent-记忆系统-跨-session-llm-决策记忆",
       "gitRepo": "",
@@ -5315,6 +5645,6 @@
       "proposals": []
     }
   ],
-  "total_proposals": 215,
-  "total_projects": 54
+  "total_proposals": 225,
+  "total_projects": 64
 }
