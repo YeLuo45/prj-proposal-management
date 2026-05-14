@@ -40,27 +40,9 @@
       "updatedAt": "2026-05-14",
       "proposals": [
         {
-          "id": "P-20260506-001",
+          "id": "P-20260513-003",
           "name": "ai-subscription",
-          "description": "commit 1da65a8 - TagBadge/TagManager/TagFilterSidebar + IndexedDB tags表 + AI生成标签 + 多维筛选",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-06",
-          "updatedAt": "2026-05-06",
-          "prdConfirmation": "boss-selected-P0",
-          "techExpectations": "pending",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260506-002",
-          "name": "ai-subscription",
-          "description": "commit 43b7fa5 - Readwise API同步 + Instapaper一键保存 + syncIndexedDB",
+          "description": "commit 43b7fa5 - Rea",
           "type": "package",
           "status": "active",
           "url": "",
@@ -87,8 +69,8 @@
           "tags": [
             "提案"
           ],
-          "createdAt": "2026-05-06",
-          "updatedAt": "2026-05-06",
+          "createdAt": "2026-05-",
+          "updatedAt": "2026-05-",
           "prdConfirmation": "boss-selected-P0",
           "techExpectations": "pending",
           "acceptance": "accepted"
@@ -125,7 +107,7 @@
           ],
           "createdAt": "2026-05-06",
           "updatedAt": "2026-05-06",
-          "prdConfirmation": "boss-selected-P2",
+          "prdConfirmation": "`boss-sele",
           "techExpectations": "pending",
           "acceptance": "accepted"
         },
@@ -145,25 +127,7 @@
           "updatedAt": "2026-05-06",
           "prdConfirmation": "boss-selected-P2",
           "techExpectations": "pending",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260506-007",
-          "name": "ai-subscription",
-          "description": "commit 0572d8b - API Key管理+REST端点+DeveloperPanel+apiDB",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-06",
-          "updatedAt": "2026-05-06",
-          "prdConfirmation": "boss-selected-P2",
-          "techExpectations": "pending",
-          "acceptance": "accepted"
+          "acceptance": "`accept"
         },
         {
           "id": "P-20260506-008",
@@ -253,6 +217,35 @@
           "updatedAt": "2026-05-14",
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
+          "acceptance": "accepted"
+        }
+      ]
+    },
+    {
+      "id": "ai-subscripti",
+      "name": "ai-subscripti",
+      "description": "commit 0572d8b - API Key管理+REST端点+DeveloperPanel+apiDB",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-06",
+      "updatedAt": "2026-05-06",
+      "proposals": [
+        {
+          "id": "P-20260506-007",
+          "name": "ai-subscripti",
+          "description": "commit 0572d8b - API Key管理+REST端点+DeveloperPanel+apiDB",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscripti/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-06",
+          "updatedAt": "2026-05-06",
+          "prdConfirmation": "boss-selected-P2",
+          "techExpectations": "pending",
           "acceptance": "accepted"
         }
       ]
@@ -652,8 +645,8 @@
       ]
     },
     {
-      "id": "cultivation-simulator",
-      "name": "cultivation-simulator",
+      "id": "cult",
+      "name": "cult",
       "description": "V28成就系统重制：30+成就/稀有度/赛季挑战/头像框气泡",
       "url": "",
       "gitRepo": "",
@@ -662,12 +655,12 @@
       "proposals": [
         {
           "id": "P-20260512-003",
-          "name": "cultivation-simulator",
+          "name": "cult",
           "description": "V28成就系统重制：30+成就/稀有度/赛季挑战/头像框气泡",
           "type": "package",
           "status": "archived",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "packageUrl": "https://github.com/YeLuo45/cult/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
             "提案"
@@ -712,7 +705,7 @@
     {
       "id": "astrbot-design",
       "name": "astrbot-design",
-      "description": "已交付：14文件，Python语法验证通过，git push成功。Hybrid Search/Reranker/Query Expander/Notion-Obsidian-Confluence/Episodic Memory",
+      "description": "已交付：13文件，Python语法验证通过，git push成功。MessageQueue/ContextPool/Agent基类/内置Teams/Dashboard/API",
       "url": "",
       "gitRepo": "",
       "createdAt": "2026-05-13",
@@ -753,24 +746,6 @@
           "prdConfirmation": "`confirmed` (boss selected: b=async event-driven)",
           "techExpectations": "confirmed",
           "acceptance": "pending"
-        },
-        {
-          "id": "P-20260513-003",
-          "name": "astrbot-design",
-          "description": "已交付：14文件，Python语法验证通过，git push成功。Hybrid Search/Reranker/Query Expander/Notion-Obsidian-Confluence/Episodic Memory",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/astrbot-design/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-13",
-          "updatedAt": "2026-05-13",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "`confirmed` (boss selected: a/b = 本地模型 + LRU缓存)",
-          "acceptance": "accepted"
         }
       ]
     },
@@ -860,7 +835,7 @@
           "name": "card-game-prototype",
           "description": "V65已部署到 https://yeluo45.github.io/card-game-prototype/ — EnemyAI类(5种策略)/Boss第二阶段/精英敌人标识/enemy-ai.js(5,644字节)",
           "type": "package",
-          "status": "active",
+          "status": "archived",
           "url": "",
           "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
           "gitRepo": "",
@@ -878,7 +853,7 @@
           "name": "card-game-prototype",
           "description": "V66已部署到 https://yeluo45.github.io/card-game-prototype/ — 伤害飘字(damageFloat)+卡牌飞行动画(card-fly-to-enemy)+状态pulse(statusPulse)+AudioManager(Web Audio API)+敌人攻击闪红",
           "type": "package",
-          "status": "active",
+          "status": "archived",
           "url": "",
           "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
           "gitRepo": "",
@@ -971,7 +946,7 @@
           "createdAt": "2026-05-13",
           "updatedAt": "2026-05-13",
           "prdConfirmation": "",
-          "techExpectations": "timeout-approved",
+          "techExpectations": "",
           "acceptance": "accepted"
         }
       ]
@@ -1327,7 +1302,7 @@
     {
       "id": "ai-subscription-错误处理增强-重试机制",
       "name": "ai-subscription-错误处理增强-重试机制",
-      "description": "交付完成；commit 314e8954；错误类层次（AISubscriptionError/LLMError/RateLimitError/CircuitBreakerError等）；retry.ts指数退避+抖动+CircuitBreaker；pipeline.ts集成withRetry；llm.ts集成per-provider熔断器；build成功(13.8s)",
+      "description": "交付完成；commit 314e8954；错误类层次（AISubscriptionError/LLMError/RateLimitError/CircuitBreakerError等）；retry.ts指数退避+抖动+CircuitBreaker；pipeline",
       "url": "",
       "gitRepo": "",
       "createdAt": "2026-05-14",
@@ -1336,7 +1311,7 @@
         {
           "id": "P-20260514-009",
           "name": "ai-subscription-错误处理增强-重试机制",
-          "description": "交付完成；commit 314e8954；错误类层次（AISubscriptionError/LLMError/RateLimitError/CircuitBreakerError等）；retry.ts指数退避+抖动+CircuitBreaker；pipeline.ts集成withRetry；llm.ts集成per-provider熔断器；build成功(13.8s)",
+          "description": "交付完成；commit 314e8954；错误类层次（AISubscriptionError/LLMError/RateLimitError/CircuitBreakerError等）；retry.ts指数退避+抖动+CircuitBreaker；pipeline",
           "type": "package",
           "status": "active",
           "url": "",
@@ -1356,7 +1331,7 @@
     {
       "id": "ai-subscription-数据分析面板",
       "name": "ai-subscription-数据分析面板",
-      "description": "交付完成；commit d5653af4；AnalyticsDashboard组件（订阅统计/AI成本/模型排行/任务类型分布）；CostTrendChart折线图+ModelCostRanking+CostRecordsTable；FeedList.tsx导航集成；build成功(15.4s)",
+      "description": "交付完成；commit d5653af4；AnalyticsDashboard组件（订阅统计/AI成本/模型排行/任务类型分布）；CostTrendChart折线图+ModelCostRanking+CostRecordsTable；",
       "url": "",
       "gitRepo": "",
       "createdAt": "2026-05-14",
@@ -1365,7 +1340,7 @@
         {
           "id": "P-20260514-010",
           "name": "ai-subscription-数据分析面板",
-          "description": "交付完成；commit d5653af4；AnalyticsDashboard组件（订阅统计/AI成本/模型排行/任务类型分布）；CostTrendChart折线图+ModelCostRanking+CostRecordsTable；FeedList.tsx导航集成；build成功(15.4s)",
+          "description": "交付完成；commit d5653af4；AnalyticsDashboard组件（订阅统计/AI成本/模型排行/任务类型分布）；CostTrendChart折线图+ModelCostRanking+CostRecordsTable；",
           "type": "package",
           "status": "active",
           "url": "",
@@ -1385,7 +1360,7 @@
     {
       "id": "ai-subscription-离线支持-pwa增强",
       "name": "ai-subscription-离线支持-pwa增强",
-      "description": "交付完成；commit 9f94283c；Service Worker（CacheFirst/NetworkFirst/StaleWhileRevalidate策略）；manifest.json配置+shortcuts；OfflineIndicator离线指示器+usePWAUpdate；main.tsx SW注册；offlineCache.ts；build成功(23.6s)",
+      "description": "交付完成；commit 9f94283c；S",
       "url": "",
       "gitRepo": "",
       "createdAt": "2026-05-14",
@@ -1394,15 +1369,14 @@
         {
           "id": "P-20260514-011",
           "name": "ai-subscription-离线支持-pwa增强",
-          "description": "交付完成；commit 9f94283c；Service Worker（CacheFirst/NetworkFirst/StaleWhileRevalidate策略）；manifest.json配置+shortcuts；OfflineIndicator离线指示器+usePWAUpdate；main.tsx SW注册；offlineCache.ts；build成功(23.6s)",
+          "description": "交付完成；commit 9f94283c；S",
           "type": "package",
           "status": "active",
           "url": "",
           "packageUrl": "https://github.com/YeLuo45/ai-subscription-离线支持-pwa增强/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
-            "Web",
-            "PWA"
+            "提案"
           ],
           "createdAt": "2026-05-14",
           "updatedAt": "2026-05-14",
