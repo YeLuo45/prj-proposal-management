@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-15 02:00:00",
+  "generated": "2026-05-15 02:22:10",
   "projects": [
     {
       "id": "PRJ-20250416-001",
@@ -5233,8 +5233,28 @@
           "notes": ""
         }
       ]
+    },
+    {
+      "id": "PRJ-20260515-002",
+      "name": "media-crawler-design",
+      "gitRepo": "https://github.com/NanmiCoder/MediaCrawler",
+      "localPath": "",
+      "description": "MediaCrawler 自媒体平台爬虫设计文档站，基于 NanmiCoder/MediaCrawler；支持小红书/抖音/快手/微博/哔哩哔哩/知乎/公众号等平台；Python 爬虫 + 异步架构 + 多代理设计",
+      "proposalCount": 0,
+      "lastUpdate": "2026-05-15",
+      "proposals": []
+    },
+    {
+      "id": "PRJ-20260515-003",
+      "name": "claude-howto-design",
+      "gitRepo": "https://github.com/YeLuo45/claude-howto-design",
+      "localPath": "",
+      "description": "Claude How To Design 设计文档站，基于 luongnv89/claude-howto；10大模块/99+内置功能/47个模板；VitePress + GitHub Actions workflow mode；中文文档",
+      "proposalCount": 0,
+      "lastUpdate": "2026-05-15",
+      "proposals": []
     }
   ],
   "total_proposals": 214,
-  "total_projects": 46
+  "total_projects": 48
 }
