@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-function ProjectCard({ project, recentProposals, hasMore, favorites, onToggleFavorite, onPinFavorite, favoritesMultiSelect, selectedFavorites, onToggleFavoriteSelect }) {
+function ProjectCard({ project, recentProposals, hasMore, favorites, onToggleFavorite, onPinFavorite, favoritesMultiSelect, selectedFavorites, onToggleFavoriteSelect, onEdit }) {
   const { t } = useTranslation();
   const isFavorite = !!favorites[project.id];
   const isPinned = isFavorite && typeof favorites[project.id] === 'object' && favorites[project.id].pinned;
@@ -98,8 +98,13 @@ function ProjectCard({ project, recentProposals, hasMore, favorites, onToggleFav
         )}
         <button
           onClick={() => {
-            // Navigate to project (this would typically trigger edit mode)
-            window.location.href = `/project/${project.id}`;
+            if (hasMore) {
+              window.location.href = `/project/${project.id}`;
+            } else if (onEdit) {
+              onEdit(project);
+            } else {
+              window.location.href = `/project/${project.id}`;
+            }
           }}
           className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 py-1.5 rounded hover:bg-gray-200 dark:hover:bg-gray-600 text-sm"
         >

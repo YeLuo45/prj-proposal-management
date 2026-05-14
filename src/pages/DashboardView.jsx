@@ -20,31 +20,17 @@ ChartJS.register(
   BarElement, ArcElement, Title, Tooltip, Legend
 );
 
-// Helper: group proposals by projectId
-function groupProposalsByProject(flatProposals) {
-  const groups = {};
-  flatProposals.forEach(p => {
-    const key = p.projectId || 'unknown';
-    if (!groups[key]) {
-      groups[key] = {
-        id: key,
-        name: p.name || key,
-        proposals: [],
-      };
-    }
-    groups[key].proposals.push(p);
-  });
-  return Object.values(groups);
-}
-
 function DashboardView() {
   const { themeId } = useTheme();
   const isDark = themeId === 'dark' || themeId === 'forest' || themeId === 'sunset';
   const [allProposals, setAllProposals] = useState([]);
+  const [projectList, setProjectList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   // Fetch data from local proposals.json
+  // Detects tree format (v2: projects=[{id, name, proposals:[...]}])
+  // vs flat format (v3: projects=[proposal, proposal, ...])
   useEffect(() => {
     fetch('/data/proposals.json')
       .then(res => {
@@ -52,10 +38,22 @@ function DashboardView() {
         return res.json();
       })
       .then(data => {
-        // proposals.json has { version, projects: [...] } where projects is flat array of proposals
         if (data.projects && Array.isArray(data.projects)) {
-          setAllProposals(data.projects);
+          const first = data.projects[0];
+          if (first && 'proposals' in first) {
+            // Tree format: each entry is a project with nested proposals
+            setProjectList(data.projects);
+            const flat = data.projects.flatMap(project =>
+              (project.proposals || []).map(p => ({ ...p, _projectName: project.name, _projectId: project.id }))
+            );
+            setAllProposals(flat);
+          } else {
+            // Flat format: data.projects is a flat array of proposals (each has projectId)
+            setProjectList([]);
+            setAllProposals(data.projects);
+          }
         } else if (data.proposals && Array.isArray(data.proposals)) {
+          setProjectList([]);
           setAllProposals(data.proposals);
         }
         setLoading(false);
@@ -66,16 +64,45 @@ function DashboardView() {
       });
   }, []);
 
+  // Projects for chart distribution: use projectList (tree) or group flat proposals
+  const projects = useMemo(() => {
+    if (projectList.length > 0) {
+      // Tree format: expose project-level data
+      return projectList.map(p => ({
+        id: p.id,
+        name: p.name,
+        proposals: p.proposals || [],
+        description: p.description || '',
+        url: p.url || '',
+        gitRepo: p.gitRepo || '',
+        deploymentUrl: p.deploymentUrl || '',
+      }));
+    }
+    // Flat format: group by projectId
+    const realProjectIds = new Set(
+      allProposals.map(p => p.projectId).filter(pid => pid && pid.startsWith('PRJ-'))
+    );
+    const groups = {};
+    allProposals.forEach(p => {
+      const pid = p.projectId;
+      const key = (!pid || !realProjectIds.has(pid)) ? '__ORPHAN__' : pid;
+      if (!groups[key]) {
+        groups[key] = { id: key, name: pid && realProjectIds.has(pid) ? pid : '未分类', proposals: [], description: '', url: '', gitRepo: '', deploymentUrl: '' };
+      }
+      groups[key].proposals.push(p);
+      if (!groups[key].gitRepo && p.gitRepo) groups[key].gitRepo = p.gitRepo;
+      if (!groups[key].deploymentUrl && p.deploymentUrl) groups[key].deploymentUrl = p.deploymentUrl;
+      if (!groups[key].url && p.url) groups[key].url = p.url;
+      if (!groups[key].description && p.description) groups[key].description = p.description;
+    });
+    return Object.values(groups);
+  }, [allProposals, projectList]);
+
   // Dark mode effect for Chart.js
   useEffect(() => {
     ChartJS.defaults.color = isDark ? '#9ca3af' : '#374151';
     ChartJS.defaults.borderColor = isDark ? '#374151' : '#e5e7eb';
   }, [isDark]);
-
-  // Derive projects grouping from flat proposals
-  const projects = useMemo(() => {
-    return groupProposalsByProject(allProposals);
-  }, [allProposals]);
 
   // Compute statistics
   const stats = useMemo(() => {
@@ -88,7 +115,6 @@ function DashboardView() {
     }).length;
     const activeCount = allProposals.filter(p => p.status === 'active').length;
     const inDevCount = allProposals.filter(p => p.status === 'in_dev').length;
-
     return { totalCount, thisMonthCount, activeCount, inDevCount };
   }, [allProposals]);
 
@@ -114,15 +140,13 @@ function DashboardView() {
     };
   }, [allProposals]);
 
-  // Project distribution (pie/doughnut chart - top 10)
+  // Project distribution (doughnut chart - top 10 projects by proposal count)
   const projectDistributionData = useMemo(() => {
     const projectCounts = {};
-    allProposals.forEach(p => {
-      const name = p.name || p.projectId || '未分类';
-      projectCounts[name] = (projectCounts[name] || 0) + 1;
+    projects.forEach(p => {
+      const name = p.name;
+      projectCounts[name] = (projectCounts[name] || 0) + p.proposals.length;
     });
-
-    // Sort by count and take top 10
     const sorted = Object.entries(projectCounts)
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10);
@@ -148,7 +172,7 @@ function DashboardView() {
         borderWidth: 0,
       }]
     };
-  }, [allProposals]);
+  }, [projects]);
 
   // Monthly trend (line chart - last 6 months)
   const monthlyTrendData = useMemo(() => {
@@ -375,11 +399,11 @@ function DashboardView() {
                     <tr
                       key={proposal.id}
                       className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                      onClick={() => window.location.href = `/?project=${proposal.projectId}&proposal=${proposal.id}`}
+                      onClick={() => window.location.href = `/?project=${proposal._projectId || proposal.projectId}&proposal=${proposal.id}`}
                     >
                       <td className="px-4 py-2 text-sm text-blue-500">{proposal.id}</td>
                       <td className="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 truncate max-w-xs">{proposal.name}</td>
-                      <td className="px-4 py-2 text-sm text-gray-600 dark:text-gray-400">{proposal.name}</td>
+                      <td className="px-4 py-2 text-sm text-gray-600 dark:text-gray-400">{proposal._projectName || '未分类'}</td>
                       <td className="px-4 py-2">
                         <span className={getStatusBadge(proposal.status)}>{proposal.status}</span>
                       </td>
@@ -397,4 +421,3 @@ function DashboardView() {
 }
 
 export default DashboardView;
-export { groupProposalsByProject };
