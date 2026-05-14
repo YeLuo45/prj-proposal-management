@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-15 02:52:49",
+  "generated": "2026-05-15 07:48:11",
   "projects": [
     {
       "id": "PRJ-20250416-001",
@@ -5526,6 +5526,39 @@
       ]
     },
     {
+      "id": "PRJ-20260515-014",
+      "name": "nodeskclaw-design",
+      "gitRepo": "https://github.com/yeluo45/nodeskclaw-design",
+      "localPath": "/home/hermes/opensource/nodeskclaw-design",
+      "description": "NoDeskClaw DeskClaw 实例可视化管理系统设计文档 — Vue 3 + FastAPI + K8s",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-012",
+          "title": "nodeskclaw-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/nodeskclaw-design",
+          "gitRepo": "https://github.com/yeluo45/nodeskclaw-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
       "id": "agent-记忆系统-跨-session-llm-决策记忆",
       "name": "agent-记忆系统-跨-session-llm-决策记忆",
       "gitRepo": "",
@@ -5645,6 +5678,6 @@
       "proposals": []
     }
   ],
-  "total_proposals": 225,
-  "total_projects": 64
+  "total_proposals": 226,
+  "total_projects": 65
 }
