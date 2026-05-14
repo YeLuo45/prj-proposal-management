@@ -223,8 +223,10 @@ function App() {
     try {
       const data = await fetchProposals();
       if (data.projects && Array.isArray(data.projects)) {
-        setProjects(data.projects);
-        const flat = data.projects.flatMap(project =>
+        // Filter out orphan projects (p-* format) before storing
+        const realProjects = data.projects.filter(p => !p.id.startsWith('p-'));
+        setProjects(realProjects);
+        const flat = realProjects.flatMap(project =>
           (project.proposals || []).map(p => ({
             ...p,
             projectName: project.name,
