@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-15 02:40:15",
+  "generated": "2026-05-15 02:52:49",
   "projects": [
     {
       "id": "PRJ-20250416-001",
@@ -5155,7 +5155,7 @@
           "id": "P-20260515-001",
           "title": "thunderbolt-design",
           "owner": "",
-          "status": "active",
+          "status": "approved_for_dev",
           "stage": "proposal",
           "prdPath": "",
           "techSolutionPath": "",
@@ -5164,8 +5164,8 @@
           "deploymentUrl": "",
           "deploymentBranch": "",
           "prdConfirmation": "confirmed",
-          "techExpectations": "accepted",
-          "acceptance": "accepted",
+          "techExpectations": "timeout-approved",
+          "acceptance": "pending",
           "researchDirection": "",
           "lastUpdate": "2026-05-15",
           "engine": "",
