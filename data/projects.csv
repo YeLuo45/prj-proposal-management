@@ -53,3 +53,13 @@ PRJ-20260514-003,ai-hedge-fund-design,0,https://github.com/YeLuo45/ai-hedge-fund
 PRJ-20260514-004,crawl4ai-design,0,https://github.com/YeLuo45/crawl4ai-design,https://yeluo45.github.io/crawl4ai-design,Crawl4AI 设计文档站，基于 YeLuo45/crawl4ai；LLM 友好型爬虫；Playwright 浏览器自动化 + CSS/XPath 提取,2026-05-14
 PRJ-20260514-005,n8n-design,0,https://github.com/YeLuo45/n8n-design,https://yeluo45.github.io/n8n-design,n8n 设计文档站，基于 n8n-io/n8n；工作流自动化平台；8个包 monorepo + LangGraph 编排,2026-05-14
 PRJ-20260514-006,nanobot-design,0,https://github.com/YeLuo45/nanobot-design,https://yeluo45.github.io/nanobot-design,nanobot 设计文档站，基于 yeLuo45/nanobot；多渠道 AI 助手；Provider 抽象 + Channel 架构 + 工具注册表,2026-05-14
+PRJ-20260515-004,generic-agent-design,1,https://github.com/yeluo45/generic-agent-design,/home/hermes/opensource/generic-agent-design,GenericAgent 开源代码的 VitePress 设计文档站点,2026-05-15
+PRJ-20260515-005,open-space-design,1,https://github.com/yeluo45/open-space-design,/home/hermes/opensource/open-space-design,open-space 开源代码的 VitePress 设计文档站点,2026-05-15
+PRJ-20260515-006,scrapling-design,1,https://github.com/yeluo45/scrapling-design,/home/hermes/opensource/scrapling-design,scrapling 开源代码的 VitePress 设计文档站点,2026-05-15
+PRJ-20260515-007,claude-code-design,1,https://github.com/yeluo45/claude-code-design,/home/hermes/opensource/claude-code-design,claude-code 开源代码的 VitePress 设计文档站点,2026-05-15
+PRJ-20260515-008,claudecodesrc-design,1,https://github.com/yeluo45/claudecodesrc-design,/home/hermes/opensource/claudecodesrc-design,claudecodesrc 开源代码的 VitePress 设计文档站点,2026-05-15
+PRJ-20260515-009,freqtrade-develop-design,1,https://github.com/yeluo45/freqtrade-develop-design,/home/hermes/opensource/freqtrade-develop-design,freqtrade-develop 开源代码的 VitePress 设计文档站点,2026-05-15
+PRJ-20260515-010,langcli-design,1,https://github.com/yeluo45/langcli-design,/home/hermes/opensource/langcli-design,langcli 开源代码的 VitePress 设计文档站点,2026-05-15
+PRJ-20260515-011,ohmypi-design,1,https://github.com/yeluo45/ohmypi-design,/home/hermes/opensource/ohmypi-design,ohmypi 开源代码的 VitePress 设计文档站点,2026-05-15
+PRJ-20260515-012,opencode-dev-design,1,https://github.com/yeluo45/opencode-dev-design,/home/hermes/opensource/opencode-dev-design,opencode-dev 开源代码的 VitePress 设计文档站点,2026-05-15
+PRJ-20260515-013,ruflo-design,1,https://github.com/yeluo45/ruflo-design,/home/hermes/opensource/ruflo-design,ruflo 开源代码的 VitePress 设计文档站点,2026-05-15
