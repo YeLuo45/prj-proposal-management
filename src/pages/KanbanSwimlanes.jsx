@@ -19,6 +19,7 @@ import { useGitHub } from '../hooks/useGitHub';
 import SwimlaneRow from '../components/SwimlaneRow';
 import SwimlaneCard from '../components/SwimlaneCard';
 import ProposalForm from '../components/ProposalForm';
+import ProjectEditForm from '../components/ProjectEditForm';
 import BatchActionBar from '../components/BatchActionBar';
 
 const STATUS_COLUMNS = [
@@ -85,6 +86,7 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
   const [selectedProposalIds, setSelectedProposalIds] = useState([]);
   const [showTokenInput, setShowTokenInput] = useState(false);
   const [editingProposal, setEditingProposal] = useState(null);
+  const [editingProject, setEditingProject] = useState(null);
   const [showForm, setShowForm] = useState(false);
 
   const { loading: ghLoading, fetchProposals, saveProposals } = useGitHub();
@@ -571,6 +573,23 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
     setShowForm(true);
   };
 
+  const handleEditProject = async (project) => {
+    setEditingProject(project);
+  };
+
+  const handleSaveProject = async (updatedProject) => {
+    const today = new Date().toISOString().split('T')[0];
+    const newProjects = projects.map(p =>
+      p.id === updatedProject.id ? { ...p, ...updatedProject, updatedAt: today } : p
+    );
+    await saveProposals({ version: 2, projects: newProjects });
+    setProjects(newProjects);
+    setFlatProposals(prev => prev.map(p =>
+      p.projectId === updatedProject.id ? { ...p, projectName: updatedProject.name, projectUrl: updatedProject.url, projectGitRepo: updatedProject.gitRepo } : p
+    ));
+    setEditingProject(null);
+  };
+
   // V7: 快速创建提案
   const handleQuickCreate = (projectId, projectName, status = 'active') => {
     setQuickCreateData({ projectId, projectName, status });
@@ -755,6 +774,7 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
                     onToggleCollapse={handleToggleCollapse}
                     onCardClick={handleCardClick}
                     onQuickCreate={handleQuickCreate}
+                    onEditProject={handleEditProject}
                     overId={overId}
                     activeId={activeId}
                     isColumnCollapsed={isColumnCollapsed}
@@ -798,6 +818,22 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
               setQuickCreateData(null);
             }}
           />
+        )}
+
+        {/* Project Edit Modal */}
+        {editingProject && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 w-full max-w-md">
+              <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">
+                编辑项目
+              </h3>
+              <ProjectEditForm
+                project={editingProject}
+                onSave={handleSaveProject}
+                onClose={() => setEditingProject(null)}
+              />
+            </div>
+          </div>
         )}
 
         {/* Batch Action Bar */}

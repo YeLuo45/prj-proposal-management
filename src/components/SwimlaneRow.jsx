@@ -9,7 +9,7 @@ const STATUS_COLUMNS = [
   { id: 'done', title: '已完成 (Done)', color: 'bg-green-500' },
 ];
 
-function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick, onQuickCreate, overId, activeId, isColumnCollapsed, onToggleColumnCollapse, selectedProposalIds, onToggleSelectProposal, filteredColumns }) {
+function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick, onQuickCreate, onEditProject, overId, activeId, isColumnCollapsed, onToggleColumnCollapse, selectedProposalIds, onToggleSelectProposal, filteredColumns }) {
   const isCollapsed = collapsedLaneIds.has(project.id);
   
   // V7: Double-click to toggle collapse
@@ -137,6 +137,35 @@ function SwimlaneRow({ project, collapsedLaneIds, onToggleCollapse, onCardClick,
         >
           🔍 筛选
         </button>
+        {/* URL and GitRepo links */}
+        {project.url && (
+          <button
+            onClick={(e) => { e.stopPropagation(); window.open(project.url, '_blank'); }}
+            className="text-blue-500 hover:text-blue-600 text-sm px-1"
+            title="访问"
+          >
+            🔗
+          </button>
+        )}
+        {project.gitRepo && (
+          <button
+            onClick={(e) => { e.stopPropagation(); window.open(project.gitRepo, '_blank'); }}
+            className="text-purple-500 hover:text-purple-600 text-sm px-1"
+            title="仓库"
+          >
+            📦
+          </button>
+        )}
+        {/* Edit project button */}
+        {onEditProject && (
+          <button
+            onClick={(e) => { e.stopPropagation(); onEditProject(project); }}
+            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-sm px-1"
+            title="编辑项目"
+          >
+            ✏️
+          </button>
+        )}
       </div>
 
       {/* M2: Lane filter panel */}
