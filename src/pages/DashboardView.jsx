@@ -67,8 +67,9 @@ function DashboardView() {
   // Projects for chart distribution: use projectList (tree) or group flat proposals
   const projects = useMemo(() => {
     if (projectList.length > 0) {
-      // Tree format: expose project-level data
-      return projectList.map(p => ({
+      // Tree format: filter out orphan projects (p-*), only keep real projects
+      const realProjects = projectList.filter(p => !p.id.startsWith('p-'));
+      return realProjects.map(p => ({
         id: p.id,
         name: p.name,
         proposals: p.proposals || [],
