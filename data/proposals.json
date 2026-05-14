@@ -254,6 +254,151 @@
           "prdConfirmation": "confirmed",
           "techExpectations": "confirmed",
           "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260514-006",
+          "name": "ai-subscription-条件路由",
+          "description": "交付完成；commit b496af33；Conditional Routing路由条件（minContentLength/maxContentLength/requiresVision/preference）；RouterModelInfo增强；findModelForTask评分路由；routeTaskWithConditions；build成功(23.8s)",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription-条件路由/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-14",
+          "updatedAt": "2026-05-14",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260514-007",
+          "name": "ai-subscription-订阅源智能分类",
+          "description": "交付完成；commit 78cf0677；集成 feed-category 模块到订阅流程；scheduler.ts 自动触发AI分类；FeedList.tsx增加智能分类菜单和FeedCategoryPanel；build成功(21s)",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription-订阅源智能分类/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-14",
+          "updatedAt": "2026-05-14",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260514-008",
+          "name": "ai-subscription-智能订阅源推荐",
+          "description": "交付完成；commit fc08a7d8；集成已有feed-recommend模块（similarity-engine+interest-analyzer+recommend-service）；FeedList.tsx导航集成FeedRecommendPanel；build成功(19.4s)",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription-智能订阅源推荐/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-14",
+          "updatedAt": "2026-05-14",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260514-009",
+          "name": "ai-subscription-错误处理增强-重试机制",
+          "description": "交付完成；commit 314e8954；错误类层次（AISubscriptionError/LLMError/RateLimitError/CircuitBreakerError等）；retry.ts指数退避+抖动+CircuitBreaker；pipeline.ts集成withRetry；llm.ts集成per-provider熔断器；build成功(13.8s)",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription-错误处理增强-重试机制/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-14",
+          "updatedAt": "2026-05-14",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260514-010",
+          "name": "ai-subscription-数据分析面板",
+          "description": "交付完成；commit d5653af4；AnalyticsDashboard组件（订阅统计/AI成本/模型排行/任务类型分布）；CostTrendChart折线图+ModelCostRanking+CostRecordsTable；FeedList.tsx导航集成；build成功(15.4s)",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription-数据分析面板/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-14",
+          "updatedAt": "2026-05-14",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260514-011",
+          "name": "ai-subscription-离线支持-pwa增强",
+          "description": "交付完成；commit 9f94283c；Service Worker（CacheFirst/NetworkFirst/StaleWhileRevalidate策略）；manifest.json配置+shortcuts；OfflineIndicator离线指示器+usePWAUpdate；main.tsx SW注册；offlineCache.ts；build成功(23.6s)",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription-离线支持-pwa增强/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "Web",
+            "PWA"
+          ],
+          "createdAt": "2026-05-14",
+          "updatedAt": "2026-05-14",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260514-012",
+          "name": "ai-subscription-多语言ui-i18n支持",
+          "description": "交付完成；commit 5793a742；i18n/en.ts+zh.ts翻译文件；FeedList.tsx使用i18n翻译；build成功(18.1s)；ja/ko翻译待后续迭代添加",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription-多语言ui-i18n支持/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-14",
+          "updatedAt": "2026-05-14",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260514-013",
+          "name": "ai-subscription-阅读历史导出",
+          "description": "交付完成；commit 22dd34d1；storage.ts添加exportPushHistory函数；ImportExportPanel阅读历史导出；JSON格式导出；build成功(15.3s)",
+          "type": "package",
+          "status": "active",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-subscription-阅读历史导出/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-14",
+          "updatedAt": "2026-05-14",
+          "prdConfirmation": "confirmed",
+          "techExpectations": "confirmed",
+          "acceptance": "accepted"
         }
       ]
     },
@@ -1035,13 +1180,9 @@
       ]
     },
     {
-      "id": "trending-dashboard-社交协作功能",
-      "name": "trending-dashboard-社交协作功能",
-      "description": "社交协作功能已完成（收藏夹/精选分享/作者关注）；commit de95798 via API；GitHub Pages 已部署",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
+      "id": "trending-dashboard",
+      "name": "trending-dashboard",
+      "description": "Trending Dashboard Project",
       "proposals": [
         {
           "id": "P-20260514-002",
@@ -1060,18 +1201,7 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "trending-dashboard-数据增强",
-      "name": "trending-dashboard-数据增强",
-      "description": "数据增强已完成（RisingBadge / SortControls / ProjectDetailPanel）；commit 2726406；GitHub Pages 已部署",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
+        },
         {
           "id": "P-20260514-005",
           "name": "trending-dashboard-数据增强",
@@ -1089,18 +1219,7 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "trending-dashboard-个性化智能",
-      "name": "trending-dashboard-个性化智能",
-      "description": "个性化智能已完成（RecommendationsPanel / TopicTrackingPanel / ReportsPanel）；commit 2a1ef15；GitHub Pages 已部署",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
+        },
         {
           "id": "P-20260514-006",
           "name": "trending-dashboard-个性化智能",
@@ -1118,18 +1237,7 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "trending-dashboard-社交深化",
-      "name": "trending-dashboard-社交深化",
-      "description": "社交深化已完成（CommentsPanel / SharePoster / NotificationCenter）；commit 8118396；GitHub Pages 已部署",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
+        },
         {
           "id": "P-20260514-007",
           "name": "trending-dashboard-社交深化",
@@ -1147,18 +1255,7 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "trending-dashboard-高级筛选",
-      "name": "trending-dashboard-高级筛选",
-      "description": "高级筛选已完成（AdvancedFilterBar / TopicTrendingView / 关键词高亮）；commit 8270834；GitHub Pages 已部署",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
+        },
         {
           "id": "P-20260514-008",
           "name": "trending-dashboard-高级筛选",
@@ -1176,18 +1273,7 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "trending-dashboard-体验优化",
-      "name": "trending-dashboard-体验优化",
-      "description": "体验优化已完成（ThemeProvider暗黑模式 / MobileDrawer / I18nProvider中英 / ExportPanel）；commit 7ba6981；GitHub Pages 已部署",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
+        },
         {
           "id": "P-20260514-009",
           "name": "trending-dashboard-体验优化",
@@ -1205,18 +1291,7 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "trending-dashboard-性能与扩展",
-      "name": "trending-dashboard-性能与扩展",
-      "description": "trending-dashboard 性能与扩展",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
+        },
         {
           "id": "P-20260514-010",
           "name": "trending-dashboard-性能与扩展",
@@ -1234,239 +1309,6 @@
           "prdConfirmation": "pending",
           "techExpectations": "pending",
           "acceptance": ""
-        }
-      ]
-    },
-    {
-      "id": "ai-subscription-条件路由",
-      "name": "ai-subscription-条件路由",
-      "description": "交付完成；commit b496af33；Conditional Routing路由条件（minContentLength/maxContentLength/requiresVision/preference）；RouterModelInfo增强；findModelForTask评分路由；routeTaskWithConditions；build成功(23.8s)",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
-        {
-          "id": "P-20260514-006",
-          "name": "ai-subscription-条件路由",
-          "description": "交付完成；commit b496af33；Conditional Routing路由条件（minContentLength/maxContentLength/requiresVision/preference）；RouterModelInfo增强；findModelForTask评分路由；routeTaskWithConditions；build成功(23.8s)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-条件路由/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-14",
-          "updatedAt": "2026-05-14",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "confirmed",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "ai-subscription-订阅源智能分类",
-      "name": "ai-subscription-订阅源智能分类",
-      "description": "交付完成；commit 78cf0677；集成 feed-category 模块到订阅流程；scheduler.ts 自动触发AI分类；FeedList.tsx增加智能分类菜单和FeedCategoryPanel；build成功(21s)",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
-        {
-          "id": "P-20260514-007",
-          "name": "ai-subscription-订阅源智能分类",
-          "description": "交付完成；commit 78cf0677；集成 feed-category 模块到订阅流程；scheduler.ts 自动触发AI分类；FeedList.tsx增加智能分类菜单和FeedCategoryPanel；build成功(21s)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-订阅源智能分类/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-14",
-          "updatedAt": "2026-05-14",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "confirmed",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "ai-subscription-智能订阅源推荐",
-      "name": "ai-subscription-智能订阅源推荐",
-      "description": "交付完成；commit fc08a7d8；集成已有feed-recommend模块（similarity-engine+interest-analyzer+recommend-service）；FeedList.tsx导航集成FeedRecommendPanel；build成功(19.4s)",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
-        {
-          "id": "P-20260514-008",
-          "name": "ai-subscription-智能订阅源推荐",
-          "description": "交付完成；commit fc08a7d8；集成已有feed-recommend模块（similarity-engine+interest-analyzer+recommend-service）；FeedList.tsx导航集成FeedRecommendPanel；build成功(19.4s)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-智能订阅源推荐/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-14",
-          "updatedAt": "2026-05-14",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "confirmed",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "ai-subscription-错误处理增强-重试机制",
-      "name": "ai-subscription-错误处理增强-重试机制",
-      "description": "交付完成；commit 314e8954；错误类层次（AISubscriptionError/LLMError/RateLimitError/CircuitBreakerError等）；retry.ts指数退避+抖动+CircuitBreaker；pipeline.ts集成withRetry；llm.ts集成per-provider熔断器；build成功(13.8s)",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
-        {
-          "id": "P-20260514-009",
-          "name": "ai-subscription-错误处理增强-重试机制",
-          "description": "交付完成；commit 314e8954；错误类层次（AISubscriptionError/LLMError/RateLimitError/CircuitBreakerError等）；retry.ts指数退避+抖动+CircuitBreaker；pipeline.ts集成withRetry；llm.ts集成per-provider熔断器；build成功(13.8s)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-错误处理增强-重试机制/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-14",
-          "updatedAt": "2026-05-14",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "confirmed",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "ai-subscription-数据分析面板",
-      "name": "ai-subscription-数据分析面板",
-      "description": "交付完成；commit d5653af4；AnalyticsDashboard组件（订阅统计/AI成本/模型排行/任务类型分布）；CostTrendChart折线图+ModelCostRanking+CostRecordsTable；FeedList.tsx导航集成；build成功(15.4s)",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
-        {
-          "id": "P-20260514-010",
-          "name": "ai-subscription-数据分析面板",
-          "description": "交付完成；commit d5653af4；AnalyticsDashboard组件（订阅统计/AI成本/模型排行/任务类型分布）；CostTrendChart折线图+ModelCostRanking+CostRecordsTable；FeedList.tsx导航集成；build成功(15.4s)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-数据分析面板/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-14",
-          "updatedAt": "2026-05-14",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "confirmed",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "ai-subscription-离线支持-pwa增强",
-      "name": "ai-subscription-离线支持-pwa增强",
-      "description": "交付完成；commit 9f94283c；Service Worker（CacheFirst/NetworkFirst/StaleWhileRevalidate策略）；manifest.json配置+shortcuts；OfflineIndicator离线指示器+usePWAUpdate；main.tsx SW注册；offlineCache.ts；build成功(23.6s)",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
-        {
-          "id": "P-20260514-011",
-          "name": "ai-subscription-离线支持-pwa增强",
-          "description": "交付完成；commit 9f94283c；Service Worker（CacheFirst/NetworkFirst/StaleWhileRevalidate策略）；manifest.json配置+shortcuts；OfflineIndicator离线指示器+usePWAUpdate；main.tsx SW注册；offlineCache.ts；build成功(23.6s)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-离线支持-pwa增强/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "Web",
-            "PWA"
-          ],
-          "createdAt": "2026-05-14",
-          "updatedAt": "2026-05-14",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "confirmed",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "ai-subscription-多语言ui-i18n支持",
-      "name": "ai-subscription-多语言ui-i18n支持",
-      "description": "交付完成；commit 5793a742；i18n/en.ts+zh.ts翻译文件；FeedList.tsx使用i18n翻译；build成功(18.1s)；ja/ko翻译待后续迭代添加",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
-        {
-          "id": "P-20260514-012",
-          "name": "ai-subscription-多语言ui-i18n支持",
-          "description": "交付完成；commit 5793a742；i18n/en.ts+zh.ts翻译文件；FeedList.tsx使用i18n翻译；build成功(18.1s)；ja/ko翻译待后续迭代添加",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-多语言ui-i18n支持/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-14",
-          "updatedAt": "2026-05-14",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "confirmed",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "ai-subscription-阅读历史导出",
-      "name": "ai-subscription-阅读历史导出",
-      "description": "交付完成；commit 22dd34d1；storage.ts添加exportPushHistory函数；ImportExportPanel阅读历史导出；JSON格式导出；build成功(15.3s)",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-14",
-      "updatedAt": "2026-05-14",
-      "proposals": [
-        {
-          "id": "P-20260514-013",
-          "name": "ai-subscription-阅读历史导出",
-          "description": "交付完成；commit 22dd34d1；storage.ts添加exportPushHistory函数；ImportExportPanel阅读历史导出；JSON格式导出；build成功(15.3s)",
-          "type": "package",
-          "status": "active",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription-阅读历史导出/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-14",
-          "updatedAt": "2026-05-14",
-          "prdConfirmation": "confirmed",
-          "techExpectations": "confirmed",
-          "acceptance": "accepted"
         }
       ]
     }
