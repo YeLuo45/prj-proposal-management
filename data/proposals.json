@@ -5083,7 +5083,7 @@
       ]
     },
     {
-      "id": "agent-记忆系统-跨-session-llm-决策记忆",
+      "id": "PRJ-20260417-003",
       "name": "agent-记忆系统-跨-session-llm-决策记忆",
       "gitRepo": "",
       "localPath": "",
@@ -5116,7 +5116,7 @@
       ]
     },
     {
-      "id": "cultivation-simulator",
+      "id": "PRJ-20260421-002",
       "name": "cultivation-simulator",
       "gitRepo": "https://github.com/YeLuo45/cultivation-simulator",
       "localPath": "",
@@ -5149,7 +5149,7 @@
       ]
     },
     {
-      "id": "github-repo-manager",
+      "id": "PRJ-20260417-004",
       "name": "github-repo-manager",
       "gitRepo": "https://github.com/YeLuo45/github-repo-manager",
       "localPath": "",
@@ -5182,7 +5182,7 @@
       ]
     },
     {
-      "id": "hermes-agent-design",
+      "id": "PRJ-20260421-003",
       "name": "hermes-agent-design",
       "gitRepo": "https://github.com/YeLuo45/hermes-agent-design",
       "localPath": "",
@@ -5192,7 +5192,7 @@
       "proposals": []
     },
     {
-      "id": "proposals",
+      "id": "PRJ-20260417-005",
       "name": "proposals",
       "gitRepo": "",
       "localPath": "",
@@ -5253,8 +5253,57 @@
       "proposalCount": 0,
       "lastUpdate": "2026-05-15",
       "proposals": []
+    },
+    {
+      "id": "PRJ-20260514-001",
+      "name": "deepseek-tui-design",
+      "proposal_count": 0,
+      "gitRepo": "https://github.com/YeLuo45/deepseek-tui-design",
+      "url": "https://yeluo45.github.io/deepseek-tui-design/",
+      "description": "DeepSeek-TUI 设计文档站，基于 hermes-agent/DeepSeek-TUI；终端 AI 对话界面；Electron + React + TypeScript"
+    },
+    {
+      "id": "PRJ-20260514-002",
+      "name": "openspec-design",
+      "proposal_count": 0,
+      "gitRepo": "https://github.com/YeLuo45/openspec-design",
+      "url": "https://yeluo45.github.io/openspec-design/",
+      "description": "OpenSpec 设计文档站，基于 OpenSpec/OpenSpec；多智能体协作规范；VitePress + GitHub Actions workflow mode"
+    },
+    {
+      "id": "PRJ-20260514-003",
+      "name": "ai-hedge-fund-design",
+      "proposal_count": 0,
+      "gitRepo": "https://github.com/YeLuo45/ai-hedge-fund-design",
+      "url": "https://yeluo45.github.io/ai-hedge-fund-design/",
+      "description": "AI Hedge Fund 设计文档站，基于 YeLuo45/ai-hedge-fund；14+4 Agent 投资系统；LangGraph StateGraph + 4 信号引擎"
+    },
+    {
+      "id": "PRJ-20260514-004",
+      "name": "crawl4ai-design",
+      "proposal_count": 0,
+      "gitRepo": "https://github.com/YeLuo45/crawl4ai-design",
+      "url": "https://yeluo45.github.io/crawl4ai-design/",
+      "description": "Crawl4AI 设计文档站，基于 YeLuo45/crawl4ai；LLM 友好型爬虫；Playwright 浏览器自动化 + CSS/XPath 提取"
+    },
+    {
+      "id": "PRJ-20260514-005",
+      "name": "n8n-design",
+      "proposal_count": 0,
+      "gitRepo": "https://github.com/YeLuo45/n8n-design",
+      "url": "https://yeluo45.github.io/n8n-design/",
+      "description": "n8n 设计文档站，基于 n8n-io/n8n；工作流自动化平台；8个包 monorepo + LangGraph 编排"
+    },
+    {
+      "id": "PRJ-20260514-006",
+      "name": "nanobot-design",
+      "proposal_count": 0,
+      "gitRepo": "https://github.com/YeLuo45/nanobot-design",
+      "url": "https://yeluo45.github.io/nanobot-design/",
+      "description": "nanobot 设计文档站，基于 yeLuo45/nanobot；多渠道 AI 助手；Provider 抽象 + Channel 架构 + 工具注册表"
     }
   ],
   "total_proposals": 214,
-  "total_projects": 48
+  "total_projects": 48,
+  "version": 4
 }
