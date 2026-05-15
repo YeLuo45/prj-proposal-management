@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-15 08:03:03",
+  "version": 2,
   "projects": [
     {
       "id": "PRJ-20250416-001",
@@ -5710,7 +5710,5 @@
       "lastUpdate": "2026-05-10",
       "proposals": []
     }
-  ],
-  "total_proposals": 227,
-  "total_projects": 66
+  ]
 }
