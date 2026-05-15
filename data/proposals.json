@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-15 07:48:11",
+  "generated": "2026-05-15 08:03:03",
   "projects": [
     {
       "id": "PRJ-20250416-001",
@@ -5559,6 +5559,39 @@
       ]
     },
     {
+      "id": "PRJ-20260515-015",
+      "name": "spec-kit-design",
+      "gitRepo": "https://github.com/yeluo45/spec-kit-design",
+      "localPath": "/home/hermes/opensource/spec-kit-design",
+      "description": "Spec Kit & Specify CLI — Spec-Driven Development 工具包设计文档",
+      "proposalCount": 1,
+      "lastUpdate": "2026-05-15",
+      "proposals": [
+        {
+          "id": "P-20260515-013",
+          "title": "spec-kit-design V1",
+          "owner": "coordinator",
+          "status": "deployed",
+          "stage": "proposal",
+          "prdPath": "",
+          "techSolutionPath": "",
+          "projectPath": "/home/hermes/opensource/spec-kit-design",
+          "gitRepo": "https://github.com/yeluo45/spec-kit-design",
+          "deploymentUrl": "",
+          "deploymentBranch": "",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "",
+          "researchDirection": "",
+          "lastUpdate": "2026-05-15",
+          "engine": "",
+          "target": "",
+          "gameType": "",
+          "notes": ""
+        }
+      ]
+    },
+    {
       "id": "agent-记忆系统-跨-session-llm-决策记忆",
       "name": "agent-记忆系统-跨-session-llm-决策记忆",
       "gitRepo": "",
@@ -5678,6 +5711,6 @@
       "proposals": []
     }
   ],
-  "total_proposals": 226,
-  "total_projects": 65
+  "total_proposals": 227,
+  "total_projects": 66
 }
