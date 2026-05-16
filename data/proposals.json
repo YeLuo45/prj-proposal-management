@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-16 14:15:57",
+  "generated": "2026-05-16 14:20:09",
   "projects": [
     {
       "id": "PRJ-20250416-001",
@@ -5347,8 +5347,78 @@
           "notes": ""
         }
       ]
+    },
+    {
+      "id": "PRJ-20260516-014",
+      "name": "ai-creator-miniprogram",
+      "gitRepo": "https://github.com/YeLuo45/ai-creator-miniprogram",
+      "prjUrl": "",
+      "description": "微信小程序项目",
+      "proposalCount": 0,
+      "lastUpdate": "",
+      "proposals": []
+    },
+    {
+      "id": "PRJ-20260516-015",
+      "name": "amblyopia-training",
+      "gitRepo": "https://github.com/YeLuo45/amblyopia-training",
+      "prjUrl": "",
+      "description": "弱视训练项目",
+      "proposalCount": 0,
+      "lastUpdate": "",
+      "proposals": []
+    },
+    {
+      "id": "PRJ-20260516-016",
+      "name": "animal-forest",
+      "gitRepo": "https://github.com/YeLuo45/animal-forest",
+      "prjUrl": "",
+      "description": "动物森林项目",
+      "proposalCount": 0,
+      "lastUpdate": "",
+      "proposals": []
+    },
+    {
+      "id": "PRJ-20260516-017",
+      "name": "ash-echoes",
+      "gitRepo": "https://github.com/YeLuo45/ash-echoes",
+      "prjUrl": "",
+      "description": "Ash Echoes 项目",
+      "proposalCount": 0,
+      "lastUpdate": "",
+      "proposals": []
+    },
+    {
+      "id": "PRJ-20260516-018",
+      "name": "soulshooter",
+      "gitRepo": "https://github.com/YeLuo45/soulshooter",
+      "prjUrl": "",
+      "description": "灵魂射手项目",
+      "proposalCount": 0,
+      "lastUpdate": "",
+      "proposals": []
+    },
+    {
+      "id": "PRJ-20260516-019",
+      "name": "super-mario-3d",
+      "gitRepo": "https://github.com/YeLuo45/super-mario-3d",
+      "prjUrl": "",
+      "description": "超级马里奥3D项目",
+      "proposalCount": 0,
+      "lastUpdate": "",
+      "proposals": []
+    },
+    {
+      "id": "PRJ-20260516-020",
+      "name": "whack-a-mole-3d-git",
+      "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+      "prjUrl": "",
+      "description": "打地鼠3D git版本",
+      "proposalCount": 0,
+      "lastUpdate": "",
+      "proposals": []
     }
   ],
   "total_proposals": 213,
-  "total_projects": 62
+  "total_projects": 69
 }
