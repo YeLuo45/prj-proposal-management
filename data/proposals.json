@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-16 16:14:34",
+  "version": 2,
   "projects": [
     {
       "id": "PRJ-20250416-001",
@@ -5363,18 +5363,6 @@
       "proposalCount": 0,
       "lastUpdate": "2026-05-01",
       "proposals": []
-    },
-    {
-      "id": "PRJ-20260516-020",
-      "name": "whack-a-mole-3d-git",
-      "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
-      "prjUrl": "https://yeluo45.github.io/whack-a-mole-3d/",
-      "description": "打地鼠3D git版本",
-      "proposalCount": 0,
-      "lastUpdate": "2026-04-29",
-      "proposals": []
     }
-  ],
-  "total_proposals": 211,
-  "total_projects": 69
+  ]
 }
