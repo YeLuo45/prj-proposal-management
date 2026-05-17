@@ -87,6 +87,7 @@ function App() {
 
   // Favorites view state
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+  const [favoritesTab, setFavoritesTab] = useState('proposals'); // 'projects' | 'proposals'
   const [favoritesMultiSelect, setFavoritesMultiSelect] = useState(false);
   const [selectedFavorites, setSelectedFavorites] = useState([]);
 
@@ -1002,6 +1003,8 @@ function App() {
             selectedFavorites={selectedFavorites}
             onBatchRemoveFavorites={handleBatchRemoveFavorites}
             onExportFavorites={handleExportFavorites}
+            favoritesTab={favoritesTab}
+            onFavoritesTabChange={setFavoritesTab}
           />
         </div>
 
@@ -1031,11 +1034,28 @@ function App() {
               <>
                 <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
                   {showFavoritesOnly
-                    ? (favoritesFilteredProjects.length === 0 ? '暂无收藏的项目' : `已收藏 ${favoritesFilteredProjects.length} 个项目`)
+                    ? (favoritesTab === 'projects'
+                      ? (favoritesFilteredProjects.length === 0 ? '暂无收藏的项目' : `已收藏 ${favoritesFilteredProjects.length} 个项目`)
+                      : (favoritesFilteredProposals.length === 0 ? '暂无收藏的提案' : `已收藏 ${favoritesFilteredProposals.length} 个提案`))
                     : (searchQuery || advancedFilters.statuses.length > 0 || advancedFilters.types.length > 0 || dateRange.start || dateRange.end
                     ? `找到 ${dateFiltered.length} 个提案`
                     : `共 ${filteredProjects.length} 个项目，${dateFiltered.length} 个提案`)}
                 </div>
+
+                {/* 当收藏Tab=项目时显示项目卡片，收藏Tab=提案时显示提案卡片 */}
+                {showFavoritesOnly && favoritesTab === 'proposals' ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {favoritesFilteredProposals.map((proposal) => (
+                      <ProposalCard
+                        key={proposal.id}
+                        proposal={proposal}
+                        searchQuery={searchQuery}
+                        selectedIds={selectedFavorites}
+                        onToggleSelect={handleToggleFavoriteSelect}
+                      />
+                    ))}
+                  </div>
+                ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {favoritesFilteredProjects.map((project) => {
                     const recentProposals = project.proposals
@@ -1075,9 +1095,19 @@ function App() {
                   })}
                 </div>
 
-                {favoritesFilteredProjects.length === 0 && (
+                {favoritesFilteredProjects.length === 0 && !showFavoritesOnly && (
                   <div className="text-center py-12 text-gray-500 dark:text-gray-400">
-                    {showFavoritesOnly ? '还没有收藏任何项目 ⭐' : '没有找到匹配的项目'}
+                    没有找到匹配的项目
+                  </div>
+                )}
+                {showFavoritesOnly && favoritesTab === 'projects' && favoritesFilteredProjects.length === 0 && (
+                  <div className="text-center py-12 text-gray-500 dark:text-gray-400">
+                    还没有收藏任何项目 ⭐
+                  </div>
+                )}
+                {showFavoritesOnly && favoritesTab === 'proposals' && favoritesFilteredProposals.length === 0 && (
+                  <div className="text-center py-12 text-gray-500 dark:text-gray-400">
+                    还没有收藏任何提案 ⭐
                   </div>
                 )}
               </>

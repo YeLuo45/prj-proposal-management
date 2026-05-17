@@ -30,6 +30,8 @@ function FilterBar({
   selectedFavorites,
   onBatchRemoveFavorites,
   onExportFavorites,
+  favoritesTab,
+  onFavoritesTabChange,
 }) {
   const { t } = useTranslation();
   const [showFocusDropdown, setShowFocusDropdown] = useState(false);
@@ -172,6 +174,24 @@ function FilterBar({
           >
             🗑 移除 ({selectedFavorites.length})
           </button>
+        )}
+
+        {/* 收藏 Tab 切换 */}
+        {showFavoritesOnly && (
+          <div className="flex items-center gap-1 ml-2 pl-2 border-l border-gray-300 dark:border-gray-600">
+            <button
+              onClick={() => onFavoritesTabChange('projects')}
+              className={`px-3 py-1.5 rounded-lg text-sm ${favoritesTab === 'projects' ? 'bg-blue-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'}`}
+            >
+              📁 项目 ({favoritesCount?.projects || 0})
+            </button>
+            <button
+              onClick={() => onFavoritesTabChange('proposals')}
+              className={`px-3 py-1.5 rounded-lg text-sm ${favoritesTab === 'proposals' ? 'bg-blue-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'}`}
+            >
+              📋 提案 ({favoritesCount?.proposals || 0})
+            </button>
+          </div>
         )}
 
         {/* 导出收藏按钮 */}
