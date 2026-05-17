@@ -495,6 +495,16 @@ function App() {
     );
   }, [focusFilteredProjects]);
 
+  // Favorites count by type
+  const favoritesCount = useMemo(() => {
+    const keys = Object.keys(favorites);
+    return {
+      projects: keys.filter(k => k.startsWith('PRJ-')).length,
+      proposals: keys.filter(k => k.startsWith('P-')).length,
+      total: keys.length,
+    };
+  }, [favorites]);
+
   // Favorites filtered proposals
   const favoritesFilteredProposals = useMemo(() => {
     if (!showFavoritesOnly) return focusFilteredProposals;
@@ -997,7 +1007,7 @@ function App() {
             onToggleAdvanced={() => setShowAdvanced(!showAdvanced)}
             showFavoritesOnly={showFavoritesOnly}
             onToggleFavorites={() => setShowFavoritesOnly(!showFavoritesOnly)}
-            favoritesCount={Object.keys(favorites).length}
+            favoritesCount={favoritesCount}
             favoritesMultiSelect={favoritesMultiSelect}
             onToggleFavoritesMultiSelect={handleToggleFavoritesMultiSelect}
             selectedFavorites={selectedFavorites}
