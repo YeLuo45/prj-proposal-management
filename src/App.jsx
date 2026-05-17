@@ -499,10 +499,15 @@ function App() {
     if (!showFavoritesOnly) return focusFilteredProposals;
     const favIds = new Set(Object.keys(favorites));
     return focusFilteredProposals
-      .filter(p => favIds.has(p.projectId))
+      .filter(p => favIds.has(p.id))
       .sort((a, b) => {
-        const timeA = favorites[a.projectId] || '';
-        const timeB = favorites[b.projectId] || '';
+        const favA = favorites[a.id] || {};
+        const favB = favorites[b.id] || {};
+        const pinnedA = favA.pinned || false;
+        const pinnedB = favB.pinned || false;
+        if (pinnedA !== pinnedB) return pinnedB - pinnedA;
+        const timeA = typeof favA === 'string' ? favA : (favA.timestamp || '');
+        const timeB = typeof favB === 'string' ? favB : (favB.timestamp || '');
         return timeB.localeCompare(timeA);
       });
   }, [focusFilteredProposals, favorites, showFavoritesOnly]);
