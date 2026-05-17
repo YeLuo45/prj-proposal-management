@@ -7,6 +7,7 @@ import FilterBar from './components/FilterBar';
 import AdvancedFilter from './components/AdvancedFilter';
 import SavedFilters from './components/SavedFilters';
 import ProposalCard from './components/ProposalCard';
+import ProjectCard from './components/ProjectCard';
 import ProposalForm from './components/ProposalForm';
 import BatchActionBar from './components/BatchActionBar';
 import MilestoneSelectModal from './components/MilestoneSelectModal';
@@ -19,6 +20,7 @@ import ExportPanel from './components/ExportPanel';
 import ExportBackupModal from './components/ExportBackupModal';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import { useGitHub } from './hooks/useGitHub';
+import { useFavorites } from './hooks/useFavorites';
 import { githubApi } from './services/githubApi';
 import { useOperationHistory } from './hooks/useOperationHistory';
 import { useValidation } from './hooks/useDataValidator';
@@ -35,7 +37,7 @@ import KeyboardShortcutsModal from './components/KeyboardShortcutsModal';
 import GlobalSearch from './components/GlobalSearch';
 import { useGlobalSearch } from './hooks/useGlobalSearch';
 import { validateProjects } from './utils/dataValidator';
-import { downloadAllCSVs, downloadFilteredCSVs, downloadFile } from './utils/csvExporter';
+import { downloadAllCSVs, downloadFilteredCSVs, downloadFile, exportFavoritesToCSV } from './utils/csvExporter';
 import { parseCSV, validateCSVImport, executeCSVImport } from './utils/csvImporter';
 import { generateBackup, restoreFromBackup, downloadJSONBackup } from './utils/jsonBackup';
 import { classifyProposal, generateSummary, getAPIKey } from './utils/aiService';
@@ -83,6 +85,12 @@ function App() {
   const [showSavedFilters, setShowSavedFilters] = useState(false);
   const [filterLogic, setFilterLogic] = useState('OR');
 
+  // Favorites view state
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+  const [favoritesTab, setFavoritesTab] = useState('proposals'); // 'projects' | 'proposals'
+  const [favoritesMultiSelect, setFavoritesMultiSelect] = useState(false);
+  const [selectedFavorites, setSelectedFavorites] = useState([]);
+
   // V10: AI 功能状态
   const [aiRecommendations, setAiRecommendations] = useState({ type: null, tags: [] });
   const [duplicateWarnings, setDuplicateWarnings] = useState([]);
@@ -103,6 +111,7 @@ function App() {
   const exportRef = useRef(null);
 
   const { loading, error, fetchProposals, saveProposals } = useGitHub();
+  const { favorites, favoritesList, toggleFavorite, pinFavorite } = useFavorites();
   const { history, pushRecord, updateRecord, undoLast, canUndo, refreshHistory } = useOperationHistory();
   const { errors: validatorErrors, warnings: validatorWarnings } = useValidation(projects, milestones);
 
@@ -215,12 +224,14 @@ function App() {
     try {
       const data = await fetchProposals();
       if (data.projects && Array.isArray(data.projects)) {
-        setProjects(data.projects);
-        const flat = data.projects.flatMap(project =>
+        // Filter out orphan projects (p-* format) before storing
+        const realProjects = data.projects.filter(p => !p.id.startsWith('p-'));
+        setProjects(realProjects);
+        const flat = realProjects.flatMap(project =>
           (project.proposals || []).map(p => ({
             ...p,
             projectName: project.name,
-            projectUrl: project.prj_url,
+            projectUrl: project.url,
             projectGitRepo: project.gitRepo,
             projectGitPages: project.githubPages,
             projectId: project.id,
@@ -259,7 +270,7 @@ function App() {
       (project.proposals || []).map(p => ({
         ...p,
         projectName: project.name,
-        projectUrl: project.prj_url,
+        projectUrl: project.url,
         projectGitRepo: project.gitRepo,
             projectGitPages: project.githubPages,
         projectId: project.id,
@@ -456,13 +467,42 @@ function App() {
     })).filter(p => p.proposals.length > 0);
   }, [filteredProjects, focusMode]);
 
+  // Favorites filtered projects (sorted by most recent first)
+  const favoritesFilteredProjects = useMemo(() => {
+    if (!showFavoritesOnly) return focusFilteredProjects;
+    const favIds = new Set(Object.keys(favorites));
+    const favProjects = focusFilteredProjects
+      .filter(p => favIds.has(p.id));
+    // Apply searchQuery filter to favorites when in favorites view
+    if (!searchQuery) return favProjects.sort(sortByFavProjects);
+    const q = searchQuery.toLowerCase();
+    return favProjects
+      .filter(p =>
+        p.id.toLowerCase().includes(q) ||
+        p.name.toLowerCase().includes(q) ||
+        (p.description && p.description.toLowerCase().includes(q)) ||
+        (p.tags && p.tags.some(t => t.toLowerCase().includes(q))) ||
+        (p.gitRepo && p.gitRepo.toLowerCase().includes(q)) ||
+        (p.url && p.url.toLowerCase().includes(q)) ||
+        (p.owner && p.owner.toLowerCase().includes(q))
+      )
+      .sort(sortByFavProjects);
+  }, [focusFilteredProjects, favorites, showFavoritesOnly, searchQuery]);
+
+  // Sort helper for project favorites (by timestamp)
+  const sortByFavProjects = (a, b) => {
+    const timeA = favorites[a.id] || '';
+    const timeB = favorites[b.id] || '';
+    return timeB.localeCompare(timeA);
+  };
+
   // M3: Focus mode flat proposals
   const focusFilteredProposals = useMemo(() => {
     return focusFilteredProjects.flatMap(project =>
       project.proposals.map(p => ({
         ...p,
         projectName: project.name,
-        projectUrl: project.prj_url,
+        projectUrl: project.url,
         projectGitRepo: project.gitRepo,
             projectGitPages: project.githubPages,
         projectId: project.id,
@@ -470,16 +510,68 @@ function App() {
     );
   }, [focusFilteredProjects]);
 
-  const paginatedProposals = useMemo(() => {
-    const start = (currentPage - 1) * ITEMS_PER_PAGE;
-    return dateFiltered.slice(start, start + ITEMS_PER_PAGE);
-  }, [dateFiltered, currentPage]);
+  // Favorites count by type
+  const favoritesCount = useMemo(() => {
+    const keys = Object.keys(favorites);
+    return {
+      projects: keys.filter(k => k.startsWith('PRJ-')).length,
+      proposals: keys.filter(k => k.startsWith('P-')).length,
+      total: keys.length,
+    };
+  }, [favorites]);
 
-  const totalPages = Math.ceil(dateFiltered.length / ITEMS_PER_PAGE);
+  // Favorites filtered proposals
+  const favoritesFilteredProposals = useMemo(() => {
+    if (!showFavoritesOnly) return focusFilteredProposals;
+    const favIds = new Set(Object.keys(favorites));
+    const favProposals = focusFilteredProposals
+      .filter(p => favIds.has(p.id));
+    // Apply searchQuery filter to favorites when in favorites view
+    if (!searchQuery) return favProposals.sort(sortByFavorites);
+    const q = searchQuery.toLowerCase();
+    return favProposals
+      .filter(p =>
+        p.id.toLowerCase().includes(q) ||
+        p.name.toLowerCase().includes(q) ||
+        (p.description && p.description.toLowerCase().includes(q)) ||
+        (p.tags && p.tags.some(t => t.toLowerCase().includes(q))) ||
+        (p.gitRepo && p.gitRepo.toLowerCase().includes(q)) ||
+        (p.url && p.url.toLowerCase().includes(q)) ||
+        (p.projectName && p.projectName.toLowerCase().includes(q))
+      )
+      .sort(sortByFavorites);
+  }, [focusFilteredProposals, favorites, showFavoritesOnly, searchQuery]);
+
+  // Sort helper for favorites (pinned first, then by timestamp)
+  const sortByFavorites = (a, b) => {
+    const favA = favorites[a.id] || {};
+    const favB = favorites[b.id] || {};
+    const pinnedA = favA.pinned || false;
+    const pinnedB = favB.pinned || false;
+    if (pinnedA !== pinnedB) return pinnedB - pinnedA;
+    const timeA = typeof favA === 'string' ? favA : (favA.timestamp || '');
+    const timeB = typeof favB === 'string' ? favB : (favB.timestamp || '');
+    return timeB.localeCompare(timeA);
+  };
+
+  const paginatedProposals = useMemo(() => {
+    const source = showFavoritesOnly ? favoritesFilteredProposals : dateFiltered;
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return source.slice(start, start + ITEMS_PER_PAGE);
+  }, [dateFiltered, favoritesFilteredProposals, showFavoritesOnly, currentPage]);
+
+  const projectsPageSize = 12;
+  const totalPages = Math.ceil(
+    (showFavoritesOnly && favoritesTab === 'projects'
+      ? favoritesFilteredProjects.length
+      : showFavoritesOnly
+        ? favoritesFilteredProposals.length
+        : dateFiltered.length) / ITEMS_PER_PAGE
+  );
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, advancedFilters, dateRange, tagLogic]);
+  }, [searchQuery, advancedFilters, dateRange, tagLogic, showFavoritesOnly, favoritesTab]);
 
   const handleAdvancedApply = () => {
     updateUrl(advancedFilters);
@@ -537,6 +629,40 @@ function App() {
     } finally {
       setLoadingAI(false);
     }
+  };
+
+  // Favorites batch management
+  const handleToggleFavoritesMultiSelect = () => {
+    setFavoritesMultiSelect(!favoritesMultiSelect);
+    if (favoritesMultiSelect) {
+      setSelectedFavorites([]); // Clear selection when exiting multi-select mode
+    }
+  };
+
+  const handleToggleFavoriteSelect = (projectId) => {
+    setSelectedFavorites(prev =>
+      prev.includes(projectId)
+        ? prev.filter(id => id !== projectId)
+        : [...prev, projectId]
+    );
+  };
+
+  const handleBatchRemoveFavorites = async () => {
+    if (!confirm(`确定要从收藏中移除 ${selectedFavorites.length} 个项目吗？`)) return;
+    for (const id of selectedFavorites) {
+      await toggleFavorite(id);
+    }
+    setSelectedFavorites([]);
+    setFavoritesMultiSelect(false);
+  };
+
+  const handleExportFavorites = () => {
+    const csv = exportFavoritesToCSV(favorites, projects);
+    if (!csv) {
+      alert('没有可导出的收藏');
+      return;
+    }
+    downloadFile(csv, `favorites-${Date.now()}.csv`, 'text/csv');
   };
 
   const handleDuplicateCheck = (proposal) => {
@@ -917,6 +1043,16 @@ function App() {
             onApplyTemplate={setFiltersFromTemplate}
             showAdvanced={showAdvanced}
             onToggleAdvanced={() => setShowAdvanced(!showAdvanced)}
+            showFavoritesOnly={showFavoritesOnly}
+            onToggleFavorites={() => setShowFavoritesOnly(!showFavoritesOnly)}
+            favoritesCount={favoritesCount}
+            favoritesMultiSelect={favoritesMultiSelect}
+            onToggleFavoritesMultiSelect={handleToggleFavoritesMultiSelect}
+            selectedFavorites={selectedFavorites}
+            onBatchRemoveFavorites={handleBatchRemoveFavorites}
+            onExportFavorites={handleExportFavorites}
+            favoritesTab={favoritesTab}
+            onFavoritesTabChange={setFavoritesTab}
           />
         </div>
 
@@ -945,12 +1081,31 @@ function App() {
             {viewMode === 'projects' && (
               <>
                 <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-                  {searchQuery || advancedFilters.statuses.length > 0 || advancedFilters.types.length > 0 || dateRange.start || dateRange.end
+                  {showFavoritesOnly
+                    ? (favoritesTab === 'projects'
+                      ? (favoritesFilteredProjects.length === 0 ? '暂无收藏的项目' : `已收藏 ${favoritesFilteredProjects.length} 个项目`)
+                      : (favoritesFilteredProposals.length === 0 ? '暂无收藏的提案' : `已收藏 ${favoritesFilteredProposals.length} 个提案`))
+                    : (searchQuery || advancedFilters.statuses.length > 0 || advancedFilters.types.length > 0 || dateRange.start || dateRange.end
                     ? `找到 ${dateFiltered.length} 个提案`
-                    : `共 ${filteredProjects.length} 个项目，${dateFiltered.length} 个提案`}
+                    : `共 ${filteredProjects.length} 个项目，${dateFiltered.length} 个提案`)}
                 </div>
+
+                {/* 当收藏Tab=项目时显示项目卡片，收藏Tab=提案时显示提案卡片 */}
+                {showFavoritesOnly && favoritesTab === 'proposals' ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {favoritesFilteredProposals.map((proposal) => (
+                      <ProposalCard
+                        key={proposal.id}
+                        proposal={proposal}
+                        searchQuery={searchQuery}
+                        selectedIds={selectedFavorites}
+                        onToggleSelect={handleToggleFavoriteSelect}
+                      />
+                    ))}
+                  </div>
+                ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {filteredProjects.map((project) => {
+                  {favoritesFilteredProjects.map((project) => {
                     const recentProposals = project.proposals
                       .filter(p => {
                         if (advancedFilters.statuses.length > 0 && !advancedFilters.statuses.includes(p.status)) return false;
@@ -972,82 +1127,35 @@ function App() {
                     const hasMore = (project.proposals?.length || 0) > RECENT_PROPOSALS_PER_PROJECT;
 
                     return (
-                      <div key={project.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-700">
-                        <div className="flex justify-between items-start mb-3">
-                          <div className="flex-1 min-w-0">
-                            <span className="text-xs text-gray-400 dark:text-gray-500">{project.id}</span>
-                            <Link to={`/project/${project.id}`} className="block">
-                              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 truncate hover:text-blue-500 dark:hover:text-blue-400">{project.name}</h3>
-                            </Link>
-                          </div>
-                          <span className="ml-2 px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded text-xs whitespace-nowrap">
-                            {project.proposals?.length || 0} 提案
-                          </span>
-                        </div>
-
-                        {project.description && (
-                          <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 line-clamp-2">
-                            {project.description}
-                          </p>
-                        )}
-
-                        <div className="space-y-2 mb-3">
-                          {recentProposals.map((proposal) => (
-                            <div key={proposal.id} className="flex items-center gap-2 text-sm">
-                              <span className={`px-1.5 py-0.5 rounded text-xs ${
-                                proposal.status === 'active' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
-                                proposal.status === 'in_dev' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
-                                'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
-                              }`}>
-                                {proposal.status}
-                              </span>
-                              <span className="text-gray-700 dark:text-gray-200 truncate flex-1">{proposal.name}</span>
-                              <span className={`px-1.5 py-0.5 rounded text-xs ${
-                                proposal.type === 'web' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' :
-                                proposal.type === 'app' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
-                                'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300'
-                              }`}>
-                                {proposal.type}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                          {(project.githubPages || project.prj_url) && (
-                            <button
-                              onClick={() => window.open(project.githubPages || project.prj_url, '_blank')}
-                              className="bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 text-sm"
-                            >
-                              访问
-                            </button>
-                          )}
-                          {project.gitRepo && (
-                            <button
-                              onClick={() => window.open(project.gitRepo, '_blank')}
-                              className="bg-gray-700 dark:bg-gray-600 text-white py-1.5 rounded hover:bg-gray-800 dark:hover:bg-gray-500 text-sm"
-                            >
-                              仓库
-                            </button>
-                          )}
-                          <button
-                            onClick={() => {
-                              setEditingProposal(project.proposals[0]);
-                              setShowForm(true);
-                            }}
-                            className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 py-1.5 rounded hover:bg-gray-200 dark:hover:bg-gray-600 text-sm"
-                          >
-                            {hasMore ? `查看全部 (${project.proposals?.length || 0})` : '编辑'}
-                          </button>
-                        </div>
-                      </div>
+                      <ProjectCard
+                        key={project.id}
+                        project={project}
+                        recentProposals={recentProposals}
+                        hasMore={hasMore}
+                        favorites={favorites}
+                        onToggleFavorite={toggleFavorite}
+                        onPinFavorite={pinFavorite}
+                        favoritesMultiSelect={favoritesMultiSelect}
+                        selectedFavorites={selectedFavorites}
+                        onToggleFavoriteSelect={handleToggleFavoriteSelect}
+                      />
                     );
                   })}
                 </div>
 
-                {filteredProjects.length === 0 && (
+                {favoritesFilteredProjects.length === 0 && !showFavoritesOnly && (
                   <div className="text-center py-12 text-gray-500 dark:text-gray-400">
                     没有找到匹配的项目
+                  </div>
+                )}
+                {showFavoritesOnly && favoritesTab === 'projects' && favoritesFilteredProjects.length === 0 && (
+                  <div className="text-center py-12 text-gray-500 dark:text-gray-400">
+                    还没有收藏任何项目 ⭐
+                  </div>
+                )}
+                {showFavoritesOnly && favoritesTab === 'proposals' && favoritesFilteredProposals.length === 0 && (
+                  <div className="text-center py-12 text-gray-500 dark:text-gray-400">
+                    还没有收藏任何提案 ⭐
                   </div>
                 )}
               </>
@@ -1056,25 +1164,45 @@ function App() {
             {viewMode === 'card' && (
               <>
                 <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-                  找到 <span className="font-semibold text-blue-500">{dateFiltered.length}</span> 个提案
+                  {showFavoritesOnly
+                    ? (favoritesTab === 'projects'
+                      ? (favoritesFilteredProjects.length === 0 ? '暂无收藏的项目' : `已收藏 ${favoritesFilteredProjects.length} 个项目`)
+                      : (favoritesFilteredProposals.length === 0 ? '暂无收藏的提案' : `已收藏 ${favoritesFilteredProposals.length} 个提案`))
+                    : `找到 <span className="font-semibold text-blue-500">${dateFiltered.length}</span> 个提案`}
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {paginatedProposals.map((proposal) => (
-                    <ProposalCard
-                      key={proposal.id}
-                      proposal={proposal}
-                      searchQuery={searchQuery}
-                      selectedIds={selectedIds}
-                      onToggleSelect={handleToggleSelect}
-                      onEdit={() => {
-                        setEditingProposal(proposal);
-                        setShowForm(true);
-                      }}
-                      onDelete={() => handleDeleteProposal(proposal.id)}
-                      onCopyUrl={handleCopyUrl}
-                    />
-                  ))}
-                </div>
+
+                {/* 收藏Tab=项目时显示项目卡片，收藏Tab=提案时显示提案卡片 */}
+                {showFavoritesOnly && favoritesTab === 'projects' ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {favoritesFilteredProjects.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE).map((project) => (
+                      <ProjectCard
+                        key={project.id}
+                        project={project}
+                        searchQuery={searchQuery}
+                        onToggleFavorite={() => toggleFavorite(project.id)}
+                        isFavorited={!!favorites[project.id]}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {paginatedProposals.map((proposal) => (
+                      <ProposalCard
+                        key={proposal.id}
+                        proposal={proposal}
+                        searchQuery={searchQuery}
+                        selectedIds={selectedIds}
+                        onToggleSelect={handleToggleSelect}
+                        onEdit={() => {
+                          setEditingProposal(proposal);
+                          setShowForm(true);
+                        }}
+                        onDelete={() => handleDeleteProposal(proposal.id)}
+                        onCopyUrl={handleCopyUrl}
+                      />
+                    ))}
+                  </div>
+                )}
 
                 {totalPages > 1 && (
                   <div className="flex justify-center gap-2 mt-6">
@@ -1098,9 +1226,13 @@ function App() {
                   </div>
                 )}
 
-                {dateFiltered.length === 0 && (
+                {(showFavoritesOnly
+                  ? (favoritesTab === 'projects' ? favoritesFilteredProjects.length : favoritesFilteredProposals.length)
+                  : dateFiltered.length) === 0 && (
                   <div className="text-center py-12 text-gray-500 dark:text-gray-400">
-                    没有找到匹配的提案
+                    {showFavoritesOnly
+                      ? (favoritesTab === 'projects' ? '还没有收藏任何项目 ⭐' : '还没有收藏任何提案 ⭐')
+                      : '没有找到匹配的提案'}
                   </div>
                 )}
               </>
@@ -1108,8 +1240,8 @@ function App() {
 
             {viewMode === 'swimlane' && (
               <KanbanSwimlanes
-                projects={focusFilteredProjects}
-                proposals={focusFilteredProposals}
+                projects={favoritesFilteredProjects}
+                proposals={favoritesFilteredProposals}
                 onUpdateProposal={handleEditProposal}
                 focusMode={focusMode}
               />

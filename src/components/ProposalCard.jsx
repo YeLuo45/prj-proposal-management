@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import ProposalDeadlineBadge from './ProposalDeadlineBadge';
 import { useRef, useState, useCallback } from 'react';
 import { isRTL } from '../i18n';
+import { useFavorites } from '../hooks/useFavorites';
 
 const SWIPE_THRESHOLD = 60;
 const ACTION_WIDTH = 70;
@@ -17,6 +18,7 @@ function highlightText(text, query) {
 
 function ProposalCard({ proposal, onEdit, onDelete, onCopyUrl, searchQuery, selectedIds, onToggleSelect }) {
   const { t, i18n } = useTranslation();
+  const { favorites, toggleFavorite, pinFavorite } = useFavorites();
   const typeColors = {
     web: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
     app: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
@@ -89,6 +91,11 @@ function ProposalCard({ proposal, onEdit, onDelete, onCopyUrl, searchQuery, sele
   const isSelected = selectedIds?.has(proposal.id);
   const rtl = isRTL(i18n.language);
 
+  // Favorite state
+  const isFavorite = !!favorites[proposal.id];
+  const favoriteData = favorites[proposal.id];
+  const isPinned = favoriteData?.pinned || false;
+
   // Get localized content based on current language
   const getLocalizedName = () => {
     const lang = i18n.language?.split('-')[0];
@@ -141,6 +148,25 @@ function ProposalCard({ proposal, onEdit, onDelete, onCopyUrl, searchQuery, sele
           </span>
           {proposal.deadline && (
             <ProposalDeadlineBadge deadline={proposal.deadline} variant="chip" />
+          )}
+        </div>
+        {/* Favorite buttons */}
+        <div className="flex items-center gap-1">
+          <button
+            onClick={(e) => { e.stopPropagation(); toggleFavorite(proposal.id); }}
+            className="text-xl hover:scale-110 transition-transform"
+            title={isFavorite ? '取消收藏' : '添加收藏'}
+          >
+            {isFavorite ? '⭐' : '☆'}
+          </button>
+          {isFavorite && (
+            <button
+              onClick={(e) => { e.stopPropagation(); pinFavorite(proposal.id); }}
+              className={`text-xl hover:scale-110 transition-transform ${isPinned ? 'text-red-500' : ''}`}
+              title={isPinned ? '取消置顶' : '置顶'}
+            >
+              {isPinned ? '📌' : '📍'}
+            </button>
           )}
         </div>
       </div>
