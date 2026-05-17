@@ -96,7 +96,7 @@ export function detectCSVColumnMapping(headers) {
     projectId: ['projectid', 'project_id', '项目id', '项目编号', 'project'],
     tags: ['tags', '标签', 'keywords', '关键字'],
     milestoneId: ['milestoneid', 'milestone_id', '里程碑id', 'milestone'],
-    url: ['url', '链接', '网址', '地址', 'prj_url'],
+    url: ['prj_url', 'prjurl', 'url', '链接', '网址', '地址'],
     gitRepo: ['gitrepo', 'git_repo', 'git仓库', '仓库地址'],
     createdAt: ['createdat', 'created_at', '创建时间', '创建日期', '创建日'],
     updatedAt: ['updatedat', 'updated_at', '更新时间', '更新日期', '更新日']
@@ -147,7 +147,7 @@ export function transformCSVRows(rows, mapping) {
       projectId: getVal('projectId') || '',
       tags,
       milestoneId: getVal('milestoneId') || null,
-      url: getVal('url') || '',
+      prj_url: getVal('prj_url') || getVal('url') || '',
       gitRepo: getVal('gitRepo') || '',
       createdAt: getVal('createdAt') || new Date().toISOString().split('T')[0],
       updatedAt: getVal('updatedAt') || new Date().toISOString().split('T')[0]
