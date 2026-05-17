@@ -471,15 +471,30 @@ function App() {
   const favoritesFilteredProjects = useMemo(() => {
     if (!showFavoritesOnly) return focusFilteredProjects;
     const favIds = new Set(Object.keys(favorites));
-    const sortedFavProjects = focusFilteredProjects
-      .filter(p => favIds.has(p.id))
-      .sort((a, b) => {
-        const timeA = favorites[a.id] || '';
-        const timeB = favorites[b.id] || '';
-        return timeB.localeCompare(timeA);
-      });
-    return sortedFavProjects;
-  }, [focusFilteredProjects, favorites, showFavoritesOnly]);
+    const favProjects = focusFilteredProjects
+      .filter(p => favIds.has(p.id));
+    // Apply searchQuery filter to favorites when in favorites view
+    if (!searchQuery) return favProjects.sort(sortByFavProjects);
+    const q = searchQuery.toLowerCase();
+    return favProjects
+      .filter(p =>
+        p.id.toLowerCase().includes(q) ||
+        p.name.toLowerCase().includes(q) ||
+        (p.description && p.description.toLowerCase().includes(q)) ||
+        (p.tags && p.tags.some(t => t.toLowerCase().includes(q))) ||
+        (p.gitRepo && p.gitRepo.toLowerCase().includes(q)) ||
+        (p.url && p.url.toLowerCase().includes(q)) ||
+        (p.owner && p.owner.toLowerCase().includes(q))
+      )
+      .sort(sortByFavProjects);
+  }, [focusFilteredProjects, favorites, showFavoritesOnly, searchQuery]);
+
+  // Sort helper for project favorites (by timestamp)
+  const sortByFavProjects = (a, b) => {
+    const timeA = favorites[a.id] || '';
+    const timeB = favorites[b.id] || '';
+    return timeB.localeCompare(timeA);
+  };
 
   // M3: Focus mode flat proposals
   const focusFilteredProposals = useMemo(() => {
@@ -509,19 +524,35 @@ function App() {
   const favoritesFilteredProposals = useMemo(() => {
     if (!showFavoritesOnly) return focusFilteredProposals;
     const favIds = new Set(Object.keys(favorites));
-    return focusFilteredProposals
-      .filter(p => favIds.has(p.id))
-      .sort((a, b) => {
-        const favA = favorites[a.id] || {};
-        const favB = favorites[b.id] || {};
-        const pinnedA = favA.pinned || false;
-        const pinnedB = favB.pinned || false;
-        if (pinnedA !== pinnedB) return pinnedB - pinnedA;
-        const timeA = typeof favA === 'string' ? favA : (favA.timestamp || '');
-        const timeB = typeof favB === 'string' ? favB : (favB.timestamp || '');
-        return timeB.localeCompare(timeA);
-      });
-  }, [focusFilteredProposals, favorites, showFavoritesOnly]);
+    const favProposals = focusFilteredProposals
+      .filter(p => favIds.has(p.id));
+    // Apply searchQuery filter to favorites when in favorites view
+    if (!searchQuery) return favProposals.sort(sortByFavorites);
+    const q = searchQuery.toLowerCase();
+    return favProposals
+      .filter(p =>
+        p.id.toLowerCase().includes(q) ||
+        p.name.toLowerCase().includes(q) ||
+        (p.description && p.description.toLowerCase().includes(q)) ||
+        (p.tags && p.tags.some(t => t.toLowerCase().includes(q))) ||
+        (p.gitRepo && p.gitRepo.toLowerCase().includes(q)) ||
+        (p.url && p.url.toLowerCase().includes(q)) ||
+        (p.projectName && p.projectName.toLowerCase().includes(q))
+      )
+      .sort(sortByFavorites);
+  }, [focusFilteredProposals, favorites, showFavoritesOnly, searchQuery]);
+
+  // Sort helper for favorites (pinned first, then by timestamp)
+  const sortByFavorites = (a, b) => {
+    const favA = favorites[a.id] || {};
+    const favB = favorites[b.id] || {};
+    const pinnedA = favA.pinned || false;
+    const pinnedB = favB.pinned || false;
+    if (pinnedA !== pinnedB) return pinnedB - pinnedA;
+    const timeA = typeof favA === 'string' ? favA : (favA.timestamp || '');
+    const timeB = typeof favB === 'string' ? favB : (favB.timestamp || '');
+    return timeB.localeCompare(timeA);
+  };
 
   const paginatedProposals = useMemo(() => {
     const source = showFavoritesOnly ? favoritesFilteredProposals : dateFiltered;
