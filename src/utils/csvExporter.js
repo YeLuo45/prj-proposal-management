@@ -9,14 +9,14 @@
  */
 export function exportProjectsToCSV(projects) {
   const headers = [
-    'id', 'name', 'description', 'url', 'gitRepo', 'createdAt', 'updatedAt'
+    'id', 'name', 'description', 'prj_url', 'gitRepo', 'createdAt', 'updatedAt'
   ];
 
   const rows = projects.map(project => [
     project.id,
     csvEscape(project.name),
     csvEscape(project.description || ''),
-    csvEscape(project.url || ''),
+    csvEscape(project.prj_url || ''),
     csvEscape(project.gitRepo || ''),
     project.createdAt || '',
     project.updatedAt || ''

@@ -220,7 +220,7 @@ function App() {
           (project.proposals || []).map(p => ({
             ...p,
             projectName: project.name,
-            projectUrl: project.url,
+            projectUrl: project.prj_url,
             projectGitRepo: project.gitRepo,
             projectGitPages: project.githubPages,
             projectId: project.id,
@@ -259,7 +259,7 @@ function App() {
       (project.proposals || []).map(p => ({
         ...p,
         projectName: project.name,
-        projectUrl: project.url,
+        projectUrl: project.prj_url,
         projectGitRepo: project.gitRepo,
             projectGitPages: project.githubPages,
         projectId: project.id,
@@ -462,7 +462,7 @@ function App() {
       project.proposals.map(p => ({
         ...p,
         projectName: project.name,
-        projectUrl: project.url,
+        projectUrl: project.prj_url,
         projectGitRepo: project.gitRepo,
             projectGitPages: project.githubPages,
         projectId: project.id,
@@ -1014,9 +1014,9 @@ function App() {
                         </div>
 
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                          {(project.githubPages || project.url) && (
+                          {(project.githubPages || project.prj_url) && (
                             <button
-                              onClick={() => window.open(project.githubPages || project.url, '_blank')}
+                              onClick={() => window.open(project.githubPages || project.prj_url, '_blank')}
                               className="bg-blue-500 text-white py-1.5 rounded hover:bg-blue-600 text-sm"
                             >
                               访问

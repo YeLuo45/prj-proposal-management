@@ -270,7 +270,7 @@ export function generateProjectReport(project, milestones = [], filename = 'proj
     ['ID', project.id],
     ['Name', project.name],
     ['Description', project.description || 'N/A'],
-    ['URL', project.url || 'N/A'],
+    ['URL', project.prj_url || 'N/A'],
     ['Git Repository', project.gitRepo || 'N/A'],
     ['Created', project.createdAt],
     ['Updated', project.updatedAt]

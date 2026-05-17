@@ -5,7 +5,7 @@ function ProjectInfo({ project, onEdit }) {
   const [formData, setFormData] = useState({
     name: project.name,
     description: project.description || '',
-    url: project.url || '',
+    url: project.prj_url || '',
     gitRepo: project.gitRepo || '',
   });
 
@@ -34,7 +34,7 @@ function ProjectInfo({ project, onEdit }) {
             setFormData({
               name: project.name,
               description: project.description || '',
-              url: project.url || '',
+              url: project.prj_url || '',
               gitRepo: project.gitRepo || '',
             });
             setShowForm(true);
@@ -53,11 +53,11 @@ function ProjectInfo({ project, onEdit }) {
         <span>创建: {project.createdAt}</span>
         <span>|</span>
         <span>更新: {project.updatedAt}</span>
-        {project.url && (
+        {project.prj_url && (
           <>
             <span>|</span>
             <button
-              onClick={() => window.open(project.url, '_blank')}
+              onClick={() => window.open(project.prj_url, '_blank')}
               className="text-blue-500 hover:text-blue-600"
             >
               访问

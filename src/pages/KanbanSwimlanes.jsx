@@ -118,7 +118,7 @@ function KanbanSwimlanes({ projects: propProjects, proposals: propProposals, onU
           (project.proposals || []).map(p => ({
             ...p,
             projectName: project.name,
-            projectUrl: project.url,
+            projectUrl: project.prj_url,
             projectGitRepo: project.gitRepo,
             projectId: project.id,
           }))
