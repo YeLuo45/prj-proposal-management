@@ -59,7 +59,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/ai-stock-simulation/",
+      "gitRepo": "https://github.com/YeLuo45/ai-stock-simulation",
+      "description": "AI股票模拟交易平台，提供虚拟交易和回测功能",
+      "localPath": "/home/hermes/ai-stock-simulation"
     },
     {
       "id": "PRJ-20260417-002",
@@ -262,7 +266,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/monopoly3d/",
+      "gitRepo": "https://github.com/YeLuo45/monopoly3d",
+      "description": "3D大富翁游戏，支持多人联机对战",
+      "localPath": "/home/hermes/monopoly3d"
     },
     {
       "id": "PRJ-20260418-004",
@@ -296,7 +304,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/future-little-leaders/",
+      "gitRepo": "https://github.com/YeLuo45/future-little-leaders",
+      "description": "儿童领导力培养互动游戏",
+      "localPath": "/home/hermes/future-little-leaders"
     },
     {
       "id": "PRJ-20260418-005",
@@ -346,7 +358,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/temple-run/",
+      "gitRepo": "https://github.com/YeLuo45/temple-run",
+      "description": "神庙逃亡类跑酷游戏",
+      "localPath": "/home/hermes/temple-run"
     },
     {
       "id": "PRJ-20260419-002",
@@ -362,7 +378,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/tank-battle/",
+      "gitRepo": "https://github.com/YeLuo45/tank-battle",
+      "description": "坦克大战射击游戏",
+      "localPath": "/home/hermes/tank-battle"
     },
     {
       "id": "PRJ-20260419-003",
@@ -486,7 +506,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/dont-step-white/",
+      "gitRepo": "https://github.com/YeLuo45/dont-step-white",
+      "description": "别踩白块节奏游戏",
+      "localPath": "/home/hermes/dont-step-white"
     },
     {
       "id": "PRJ-20260419-005",
@@ -588,7 +612,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/ai-novel-assistant/",
+      "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
+      "description": "AI小说创作助手，提供故事生成和写作辅助",
+      "localPath": "/home/hermes/ai-novel-assistant"
     },
     {
       "id": "PRJ-20260423-001",
@@ -604,7 +632,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/room-escape-puzzle/",
+      "gitRepo": "https://github.com/YeLuo45/room-escape-puzzle",
+      "description": "密室逃脱解谜游戏",
+      "localPath": "/home/hermes/room-escape-puzzle"
     },
     {
       "id": "PRJ-20260423-002",
@@ -620,7 +652,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/little-garden/",
+      "gitRepo": "https://github.com/YeLuo45/little-garden",
+      "description": "小型花园养成游戏",
+      "localPath": "/home/hermes/little-garden"
     },
     {
       "id": "PRJ-20260423-005",
@@ -867,7 +903,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/whack-a-mole-3d/",
+      "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
+      "description": "3D打地鼠游戏",
+      "localPath": "/home/hermes/whack-a-mole-3d"
     },
     {
       "id": "PRJ-20260430-001",
@@ -883,7 +923,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/tower-baby-guard/",
+      "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
+      "description": "塔防宝宝监护游戏",
+      "localPath": "/home/hermes/tower-baby-guard"
     },
     {
       "id": "PRJ-20260430-002",
@@ -1066,7 +1110,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/game-1024/",
+      "gitRepo": "https://github.com/YeLuo45/game-1024",
+      "description": "2048类益智游戏",
+      "localPath": "/home/hermes/game-1024"
     },
     {
       "id": "PRJ-20260421-001",
@@ -1343,7 +1391,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/card-game-prototype/",
+      "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
+      "description": "卡牌游戏原型，支持多种卡牌规则和战斗系统",
+      "localPath": "/home/hermes/card-game-prototype"
     },
     {
       "id": "PRJ-20250418-003",
@@ -1368,7 +1420,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/harness-desktop/",
+      "gitRepo": "https://github.com/YeLuo45/harness-desktop",
+      "description": "Electron桌面应用，用于AI Agent协作管理",
+      "localPath": "/home/hermes/harness-desktop"
     },
     {
       "id": "PRJ-20260417-001",
@@ -1393,7 +1449,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/prj-proposals-manager/",
+      "gitRepo": "https://github.com/YeLuo45/prj-proposals-manager",
+      "description": "提案管理系统，用于跟踪和管理项目提案生命周期",
+      "localPath": "/home/hermes/workspace-dev/proposals/prj-proposals-manager"
     },
     {
       "id": "PRJ-20260418-002",
@@ -1760,7 +1820,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/creative-drawing-board/",
+      "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
+      "description": "在线创意画板，支持多种绘画工具和分享功能",
+      "localPath": "/home/hermes/creative-drawing-board"
     },
     {
       "id": "PRJ-20260420-001",
@@ -1803,7 +1867,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/snake-battle/",
+      "gitRepo": "https://github.com/YeLuo45/snake-battle",
+      "description": "贪吃蛇对战游戏",
+      "localPath": "/home/hermes/snake-battle"
     },
     {
       "id": "PRJ-20260412-008",
@@ -1981,7 +2049,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/ai-subscription/",
+      "gitRepo": "https://github.com/YeLuo45/ai-subscription",
+      "description": "AI内容订阅聚合平台，支持多源订阅和智能推荐",
+      "localPath": "/home/hermes/ai-subscription"
     },
     {
       "id": "PRJ-20260420-002",
@@ -2024,7 +2096,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/pixel-pal-web/",
+      "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
+      "description": "像素风格AI伙伴Web应用，支持人格定制和情感交互",
+      "localPath": "/home/hermes/pixel-pal-web"
     },
     {
       "id": "PRJ-20260511-003",
@@ -2142,7 +2218,11 @@
       "id": "PRJ-20260509-002",
       "name": "trending-dashboard",
       "proposalCount": 0,
-      "proposals": []
+      "proposals": [],
+      "url": "https://yeluo45.github.io/trending-dashboard/",
+      "gitRepo": "https://github.com/YeLuo45/trending-dashboard",
+      "description": "GitHub Trending数据仪表板，实时展示热门项目",
+      "localPath": "/home/hermes/trending-dashboard"
     },
     {
       "id": "PRJ-20260516-001",
@@ -2198,7 +2278,11 @@
           "updated": "",
           "assignee": ""
         }
-      ]
+      ],
+      "url": "https://yeluo45.github.io/cultivation-simulator/",
+      "gitRepo": "https://github.com/YeLuo45/cultivation-simulator",
+      "description": "修仙模拟器游戏，支持角色养成和境界突破",
+      "localPath": "/home/hermes/cultivation-simulator"
     },
     {
       "id": "PRJ-20260516-003",
