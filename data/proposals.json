@@ -63,7 +63,8 @@
       "url": "https://yeluo45.github.io/ai-stock-simulation/",
       "gitRepo": "https://github.com/YeLuo45/ai-stock-simulation",
       "description": "AI股票模拟交易平台，提供虚拟交易和回测功能",
-      "localPath": "/home/hermes/ai-stock-simulation"
+      "localPath": "/home/hermes/ai-stock-simulation",
+      "milestones": []
     },
     {
       "id": "PRJ-20260417-002",
@@ -254,7 +255,8 @@
       "url": "https://yeluo45.github.io/android-hello/",
       "gitRepo": "https://github.com/YeLuo45/android-hello",
       "description": "Android入门示例应用",
-      "localPath": "/home/hermes/android-hello"
+      "localPath": "/home/hermes/android-hello",
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-001",
@@ -274,7 +276,8 @@
       "url": "https://yeluo45.github.io/monopoly3d/",
       "gitRepo": "https://github.com/YeLuo45/monopoly3d",
       "description": "3D大富翁游戏，支持多人联机对战",
-      "localPath": "/home/hermes/monopoly3d"
+      "localPath": "/home/hermes/monopoly3d",
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-004",
@@ -312,7 +315,8 @@
       "url": "https://yeluo45.github.io/future-little-leaders/",
       "gitRepo": "https://github.com/YeLuo45/future-little-leaders",
       "description": "儿童领导力培养互动游戏",
-      "localPath": "/home/hermes/future-little-leaders"
+      "localPath": "/home/hermes/future-little-leaders",
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-005",
@@ -332,7 +336,8 @@
       "url": "https://yeluo45.github.io/todo-app/",
       "gitRepo": "https://github.com/YeLuo45/todo-app",
       "description": "待办事项应用",
-      "localPath": "/home/hermes/todolist-app"
+      "localPath": "/home/hermes/todolist-app",
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-001",
@@ -370,7 +375,8 @@
       "url": "https://yeluo45.github.io/temple-run/",
       "gitRepo": "https://github.com/YeLuo45/temple-run",
       "description": "神庙逃亡类跑酷游戏",
-      "localPath": "/home/hermes/temple-run"
+      "localPath": "/home/hermes/temple-run",
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-002",
@@ -390,7 +396,8 @@
       "url": "https://yeluo45.github.io/tank-battle/",
       "gitRepo": "https://github.com/YeLuo45/tank-battle",
       "description": "坦克大战射击游戏",
-      "localPath": "/home/hermes/tank-battle"
+      "localPath": "/home/hermes/tank-battle",
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-003",
@@ -518,7 +525,8 @@
       "url": "https://yeluo45.github.io/dont-step-white/",
       "gitRepo": "https://github.com/YeLuo45/dont-step-white",
       "description": "别踩白块节奏游戏",
-      "localPath": "/home/hermes/dont-step-white"
+      "localPath": "/home/hermes/dont-step-white",
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-005",
@@ -547,7 +555,8 @@
       "url": "https://yeluo45.github.io/TradingAgents-CN/",
       "gitRepo": "https://github.com/YeLuo45/TradingAgents-CN",
       "description": "交易Agent中文设计文档项目",
-      "localPath": "/home/hermes/TradingAgents-CN"
+      "localPath": "/home/hermes/TradingAgents-CN",
+      "milestones": []
     },
     {
       "id": "PRJ-20260421-003",
@@ -567,7 +576,8 @@
       "url": "https://yeluo45.github.io/personalClaw/",
       "gitRepo": "https://github.com/YeLuo45/personalClaw",
       "description": "个人工具项目",
-      "localPath": "/home/hermes/personalClaw"
+      "localPath": "/home/hermes/personalClaw",
+      "milestones": []
     },
     {
       "id": "PRJ-20260422-001",
@@ -632,7 +642,8 @@
       "url": "https://yeluo45.github.io/ai-novel-assistant/",
       "gitRepo": "https://github.com/YeLuo45/ai-novel-assistant",
       "description": "AI小说创作助手，提供故事生成和写作辅助",
-      "localPath": "/home/hermes/ai-novel-assistant"
+      "localPath": "/home/hermes/ai-novel-assistant",
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-001",
@@ -652,7 +663,8 @@
       "url": "https://yeluo45.github.io/room-escape-puzzle/",
       "gitRepo": "https://github.com/YeLuo45/room-escape-puzzle",
       "description": "密室逃脱解谜游戏",
-      "localPath": "/home/hermes/room-escape-puzzle"
+      "localPath": "/home/hermes/room-escape-puzzle",
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-002",
@@ -672,7 +684,8 @@
       "url": "https://yeluo45.github.io/little-garden/",
       "gitRepo": "https://github.com/YeLuo45/little-garden",
       "description": "小型花园养成游戏",
-      "localPath": "/home/hermes/little-garden"
+      "localPath": "/home/hermes/little-garden",
+      "milestones": []
     },
     {
       "id": "PRJ-20260423-005",
@@ -710,7 +723,8 @@
       "url": "https://yeluo45.github.io/hermes-agent-collab/",
       "gitRepo": "https://github.com/YeLuo45/hermes-agent-collab",
       "description": "Hermes Agent协作系统，用于多Agent任务协调",
-      "localPath": "/home/hermes/hermes-agent-collab"
+      "localPath": "/home/hermes/hermes-agent-collab",
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-001",
@@ -730,7 +744,8 @@
       "url": "https://yeluo45.github.io/OpenMAIC/",
       "gitRepo": "https://github.com/YeLuo45/OpenMAIC",
       "description": "多智能体交互课堂设计项目",
-      "localPath": "/home/hermes/opensource/OpenMAIC"
+      "localPath": "/home/hermes/opensource/OpenMAIC",
+      "milestones": []
     },
     {
       "id": "PRJ-20260424-004",
@@ -750,7 +765,8 @@
       "url": "https://yeluo45.github.io/match3-puzzle/",
       "gitRepo": "https://github.com/YeLuo45/match3-puzzle",
       "description": "三消益智游戏",
-      "localPath": "/home/hermes/match3-puzzle"
+      "localPath": "/home/hermes/match3-puzzle",
+      "milestones": []
     },
     {
       "id": "PRJ-20260426-003",
@@ -770,7 +786,8 @@
       "url": "https://yeluo45.github.io/calculator-app/",
       "gitRepo": "https://github.com/YeLuo45/calculator-app",
       "description": "计算器应用",
-      "localPath": "/home/hermes/calculator-app"
+      "localPath": "/home/hermes/calculator-app",
+      "milestones": []
     },
     {
       "id": "PRJ-20260427-001",
@@ -799,7 +816,8 @@
       "url": "https://yeluo45.github.io/preschool-puzzle/",
       "gitRepo": "https://github.com/YeLuo45/preschool-puzzle",
       "description": "学龄前儿童拼图游戏",
-      "localPath": "/home/hermes/preschool-puzzle"
+      "localPath": "/home/hermes/preschool-puzzle",
+      "milestones": []
     },
     {
       "id": "PRJ-20260428-002",
@@ -882,7 +900,8 @@
       "url": "https://yeluo45.github.io/flight-chess-3d/",
       "gitRepo": "https://github.com/YeLuo45/flight-chess-3d",
       "description": "3D飞行棋游戏",
-      "localPath": "/home/hermes/flight-chess-3d"
+      "localPath": "/home/hermes/flight-chess-3d",
+      "milestones": []
     },
     {
       "id": "PRJ-20260428-001",
@@ -947,7 +966,8 @@
       "url": "https://yeluo45.github.io/whack-a-mole-3d/",
       "gitRepo": "https://github.com/YeLuo45/whack-a-mole-3d",
       "description": "3D打地鼠游戏",
-      "localPath": "/home/hermes/whack-a-mole-3d"
+      "localPath": "/home/hermes/whack-a-mole-3d",
+      "milestones": []
     },
     {
       "id": "PRJ-20260430-001",
@@ -967,7 +987,8 @@
       "url": "https://yeluo45.github.io/tower-baby-guard/",
       "gitRepo": "https://github.com/YeLuo45/tower-baby-guard",
       "description": "塔防宝宝监护游戏",
-      "localPath": "/home/hermes/tower-baby-guard"
+      "localPath": "/home/hermes/tower-baby-guard",
+      "milestones": []
     },
     {
       "id": "PRJ-20260430-002",
@@ -987,7 +1008,8 @@
       "url": "https://yeluo45.github.io/doc-editor/",
       "gitRepo": "https://github.com/YeLuo45/doc-editor",
       "description": "文档编辑器，支持多人协作编辑",
-      "localPath": "/home/hermes/tower-baby-guard/doc-editor"
+      "localPath": "/home/hermes/tower-baby-guard/doc-editor",
+      "milestones": []
     },
     {
       "id": "PRJ-20250416-001",
@@ -1097,7 +1119,8 @@
       "url": "https://yeluo45.github.io/todo-list/",
       "gitRepo": "https://github.com/YeLuo45/todo-list",
       "description": "Todo/任务管理Web应用",
-      "localPath": "/home/hermes/todo-list"
+      "localPath": "/home/hermes/todo-list",
+      "milestones": []
     },
     {
       "id": "PRJ-20250416-002",
@@ -1162,7 +1185,8 @@
       "url": "https://yeluo45.github.io/game-1024/",
       "gitRepo": "https://github.com/YeLuo45/game-1024",
       "description": "2048类益智游戏",
-      "localPath": "/home/hermes/game-1024"
+      "localPath": "/home/hermes/game-1024",
+      "milestones": []
     },
     {
       "id": "PRJ-20260421-001",
@@ -1443,7 +1467,8 @@
       "url": "https://yeluo45.github.io/card-game-prototype/",
       "gitRepo": "https://github.com/YeLuo45/card-game-prototype",
       "description": "卡牌游戏原型，支持多种卡牌规则和战斗系统",
-      "localPath": "/home/hermes/card-game-prototype"
+      "localPath": "/home/hermes/card-game-prototype",
+      "milestones": []
     },
     {
       "id": "PRJ-20250418-003",
@@ -1472,7 +1497,8 @@
       "url": "https://yeluo45.github.io/harness-desktop/",
       "gitRepo": "https://github.com/YeLuo45/harness-desktop",
       "description": "Electron桌面应用，用于AI Agent协作管理",
-      "localPath": "/home/hermes/harness-desktop"
+      "localPath": "/home/hermes/harness-desktop",
+      "milestones": []
     },
     {
       "id": "PRJ-20260417-001",
@@ -1501,7 +1527,8 @@
       "url": "https://yeluo45.github.io/prj-proposals-manager/",
       "gitRepo": "https://github.com/YeLuo45/prj-proposals-manager",
       "description": "提案管理系统，用于跟踪和管理项目提案生命周期",
-      "localPath": "/home/hermes/workspace-dev/proposals/prj-proposals-manager"
+      "localPath": "/home/hermes/workspace-dev/proposals/prj-proposals-manager",
+      "milestones": []
     },
     {
       "id": "PRJ-20260418-002",
@@ -1872,7 +1899,8 @@
       "url": "https://yeluo45.github.io/creative-drawing-board/",
       "gitRepo": "https://github.com/YeLuo45/creative-drawing-board",
       "description": "在线创意画板，支持多种绘画工具和分享功能",
-      "localPath": "/home/hermes/creative-drawing-board"
+      "localPath": "/home/hermes/creative-drawing-board",
+      "milestones": []
     },
     {
       "id": "PRJ-20260420-001",
@@ -1919,7 +1947,8 @@
       "url": "https://yeluo45.github.io/snake-battle/",
       "gitRepo": "https://github.com/YeLuo45/snake-battle",
       "description": "贪吃蛇对战游戏",
-      "localPath": "/home/hermes/snake-battle"
+      "localPath": "/home/hermes/snake-battle",
+      "milestones": []
     },
     {
       "id": "PRJ-20260412-008",
@@ -2101,7 +2130,8 @@
       "url": "https://yeluo45.github.io/ai-subscription/",
       "gitRepo": "https://github.com/YeLuo45/ai-subscription",
       "description": "AI内容订阅聚合平台，支持多源订阅和智能推荐",
-      "localPath": "/home/hermes/ai-subscription"
+      "localPath": "/home/hermes/ai-subscription",
+      "milestones": []
     },
     {
       "id": "PRJ-20260420-002",
@@ -2148,7 +2178,8 @@
       "url": "https://yeluo45.github.io/pixel-pal-web/",
       "gitRepo": "https://github.com/YeLuo45/pixel-pal-web",
       "description": "像素风格AI伙伴Web应用，支持人格定制和情感交互",
-      "localPath": "/home/hermes/pixel-pal-web"
+      "localPath": "/home/hermes/pixel-pal-web",
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-003",
@@ -2168,7 +2199,8 @@
       "url": "https://yeluo45.github.io/AstrBot/",
       "gitRepo": "https://github.com/YeLuo45/AstrBot",
       "description": "AstrBot机器人设计文档",
-      "localPath": "/home/hermes/opensource/AstrBot"
+      "localPath": "/home/hermes/opensource/AstrBot",
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-004",
@@ -2188,7 +2220,8 @@
       "url": "https://yeluo45.github.io/AutoAgent/",
       "gitRepo": "https://github.com/YeLuo45/AutoAgent",
       "description": "AutoAgent自动化Agent设计文档",
-      "localPath": "/home/hermes/opensource/AutoAgent"
+      "localPath": "/home/hermes/opensource/AutoAgent",
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-005",
@@ -2208,7 +2241,8 @@
       "url": "https://yeluo45.github.io/BMAD-METHOD/",
       "gitRepo": "https://github.com/YeLuo45/BMAD-METHOD",
       "description": "BMAD方法论设计文档",
-      "localPath": "/home/hermes/opensource/BMAD-METHOD"
+      "localPath": "/home/hermes/opensource/BMAD-METHOD",
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-006",
@@ -2228,7 +2262,8 @@
       "url": "https://yeluo45.github.io/ChatDev/",
       "gitRepo": "https://github.com/YeLuo45/ChatDev",
       "description": "ChatDev团队协作设计文档",
-      "localPath": "/home/hermes/opensource/ChatDev"
+      "localPath": "/home/hermes/opensource/ChatDev",
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-007",
@@ -2248,7 +2283,8 @@
       "url": "https://yeluo45.github.io/DeepCode/",
       "gitRepo": "https://github.com/YeLuo45/DeepCode",
       "description": "DeepCode代码分析设计文档",
-      "localPath": "/home/hermes/opensource/DeepCode"
+      "localPath": "/home/hermes/opensource/DeepCode",
+      "milestones": []
     },
     {
       "id": "PRJ-20260511-008",
@@ -2268,7 +2304,8 @@
       "url": "https://yeluo45.github.io/DeepSeek-Coder/",
       "gitRepo": "https://github.com/YeLuo45/DeepSeek-Coder",
       "description": "DeepSeek Coder编程助手设计文档",
-      "localPath": "/home/hermes/opensource/DeepSeek-Coder"
+      "localPath": "/home/hermes/opensource/DeepSeek-Coder",
+      "milestones": []
     },
     {
       "id": "PRJ-20260509-001",
@@ -2288,7 +2325,8 @@
       "url": "https://yeluo45.github.io/trading-agents-design/",
       "gitRepo": "https://github.com/YeLuo45/trading-agents-design",
       "description": "交易Agent设计规范文档",
-      "localPath": "/home/hermes/trading-agents-design"
+      "localPath": "/home/hermes/trading-agents-design",
+      "milestones": []
     },
     {
       "id": "PRJ-20260509-002",
@@ -2298,7 +2336,8 @@
       "url": "https://yeluo45.github.io/trending-dashboard/",
       "gitRepo": "https://github.com/YeLuo45/trending-dashboard",
       "description": "GitHub Trending数据仪表板，实时展示热门项目",
-      "localPath": "/home/hermes/trending-dashboard"
+      "localPath": "/home/hermes/trending-dashboard",
+      "milestones": []
     },
     {
       "id": "PRJ-20260516-001",
@@ -2308,7 +2347,8 @@
       "url": "https://yeluo45.github.io/hermes-agent-design/",
       "gitRepo": "https://github.com/YeLuo45/hermes-agent-design",
       "description": "Hermes Agent核心框架设计文档",
-      "localPath": "/home/hermes/hermes-agent-design"
+      "localPath": "/home/hermes/hermes-agent-design",
+      "milestones": []
     },
     {
       "id": "PRJ-20260419-007",
@@ -2346,7 +2386,8 @@
       "url": "https://yeluo45.github.io/ai-creator-h5/",
       "gitRepo": "https://github.com/YeLuo45/ai-creator-h5",
       "description": "AI创作助手H5应用",
-      "localPath": "/home/hermes/ai-creator-h5"
+      "localPath": "/home/hermes/ai-creator-h5",
+      "milestones": []
     },
     {
       "id": "PRJ-20260516-002",
@@ -2366,7 +2407,8 @@
       "url": "https://yeluo45.github.io/cultivation-simulator/",
       "gitRepo": "https://github.com/YeLuo45/cultivation-simulator",
       "description": "修仙模拟器游戏，支持角色养成和境界突破",
-      "localPath": "/home/hermes/cultivation-simulator"
+      "localPath": "/home/hermes/cultivation-simulator",
+      "milestones": []
     },
     {
       "id": "PRJ-20260516-003",
@@ -2386,7 +2428,8 @@
       "url": "https://yeluo45.github.io/github-repo-manager/",
       "gitRepo": "https://github.com/YeLuo45/github-repo-manager",
       "description": "GitHub仓库管理器，Electron桌面应用",
-      "localPath": "/home/hermes/github-repo-manager"
+      "localPath": "/home/hermes/github-repo-manager",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-001",
@@ -2396,7 +2439,8 @@
       "url": "https://yeluo45.github.io/thunderbolt-design/",
       "gitRepo": "https://github.com/YeLuo45/thunderbolt-design",
       "description": "Thunderbolt性能优化设计文档",
-      "localPath": "/home/hermes/opensource/thunderbolt"
+      "localPath": "/home/hermes/opensource/thunderbolt",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-002",
@@ -2406,7 +2450,8 @@
       "url": "https://yeluo45.github.io/MediaCrawler/",
       "gitRepo": "https://github.com/YeLuo45/MediaCrawler",
       "description": "媒体爬虫设计文档",
-      "localPath": "/home/hermes/opensource/MediaCrawler"
+      "localPath": "/home/hermes/opensource/MediaCrawler",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-003",
@@ -2416,7 +2461,8 @@
       "url": "https://yeluo45.github.io/claude-howto-design/",
       "gitRepo": "https://github.com/YeLuo45/claude-howto-design",
       "description": "Claude使用指南设计文档",
-      "localPath": "/home/hermes/opensource/claude-howto"
+      "localPath": "/home/hermes/opensource/claude-howto",
+      "milestones": []
     },
     {
       "id": "PRJ-20260514-001",
@@ -2426,7 +2472,8 @@
       "url": "https://yeluo45.github.io/deepseek-tui-design/",
       "gitRepo": "https://github.com/YeLuo45/deepseek-tui-design",
       "description": "DeepSeek TUI终端界面设计文档",
-      "localPath": "/home/hermes/projects/deepseek-tui-design"
+      "localPath": "/home/hermes/projects/deepseek-tui-design",
+      "milestones": []
     },
     {
       "id": "PRJ-20260514-002",
@@ -2436,7 +2483,8 @@
       "url": "https://yeluo45.github.io/crawl4ai-design/",
       "gitRepo": "https://github.com/YeLuo45/openspec-design",
       "description": "OpenSpec规范设计文档",
-      "localPath": "/home/hermes/opensource/OpenSpec"
+      "localPath": "/home/hermes/opensource/OpenSpec",
+      "milestones": []
     },
     {
       "id": "PRJ-20260514-003",
@@ -2446,7 +2494,8 @@
       "url": "https://yeluo45.github.io/ai-hedge-fund-design/",
       "gitRepo": "https://github.com/YeLuo45/ai-hedge-fund-design",
       "description": "AI对冲基金设计文档",
-      "localPath": "/home/hermes/projects/ai-hedge-fund-design"
+      "localPath": "/home/hermes/projects/ai-hedge-fund-design",
+      "milestones": []
     },
     {
       "id": "PRJ-20260514-004",
@@ -2456,7 +2505,8 @@
       "url": "https://yeluo45.github.io/crawl4ai-design/",
       "gitRepo": "https://github.com/YeLuo45/crawl4ai-design",
       "description": "Crawl4ai网页抓取引擎设计文档",
-      "localPath": "/home/hermes/projects/crawl4ai-design"
+      "localPath": "/home/hermes/projects/crawl4ai-design",
+      "milestones": []
     },
     {
       "id": "PRJ-20260514-005",
@@ -2466,7 +2516,8 @@
       "url": "https://yeluo45.github.io/n8n-design/",
       "gitRepo": "https://github.com/YeLuo45/n8n-design",
       "description": "n8n工作流自动化设计文档",
-      "localPath": "/home/hermes/projects/n8n-design"
+      "localPath": "/home/hermes/projects/n8n-design",
+      "milestones": []
     },
     {
       "id": "PRJ-20260514-006",
@@ -2476,7 +2527,8 @@
       "url": "https://yeluo45.github.io/nanobot-design/",
       "gitRepo": "https://github.com/YeLuo45/nanobot-design",
       "description": "Nanobot纳米机器人设计文档",
-      "localPath": "/home/hermes/projects/nanobot-design"
+      "localPath": "/home/hermes/projects/nanobot-design",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-004",
@@ -2486,7 +2538,8 @@
       "url": "https://yeluo45.github.io/generic-agent-design/",
       "gitRepo": "https://github.com/YeLuo45/generic-agent-design",
       "description": "通用Agent架构设计文档",
-      "localPath": "/home/hermes/opensource/GenericAgent"
+      "localPath": "/home/hermes/opensource/GenericAgent",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-005",
@@ -2496,7 +2549,8 @@
       "url": "https://yeluo45.github.io/open-space-design/",
       "gitRepo": "https://github.com/YeLuo45/open-space-design",
       "description": "开放空间设计文档",
-      "localPath": "/home/hermes/opensource/OpenSpace"
+      "localPath": "/home/hermes/opensource/OpenSpace",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-006",
@@ -2506,7 +2560,8 @@
       "url": "https://yeluo45.github.io/scrapling-design/",
       "gitRepo": "https://github.com/YeLuo45/scrapling-design",
       "description": "Scrapling网页抓取设计文档",
-      "localPath": "/home/hermes/opensource/Scrapling"
+      "localPath": "/home/hermes/opensource/Scrapling",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-007",
@@ -2516,7 +2571,8 @@
       "url": "https://yeluo45.github.io/claude-code-design/",
       "gitRepo": "https://github.com/YeLuo45/claude-code-design",
       "description": "Claude Code编程工具设计文档",
-      "localPath": "/home/hermes/opensource/claude-code"
+      "localPath": "/home/hermes/opensource/claude-code",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-008",
@@ -2526,7 +2582,8 @@
       "url": "https://yeluo45.github.io/claudecodesrc-design/",
       "gitRepo": "https://github.com/YeLuo45/claudecodesrc-design",
       "description": "Claude Code源码分析设计文档",
-      "localPath": "/home/hermes/opensource/collection-claude-code-source-code"
+      "localPath": "/home/hermes/opensource/collection-claude-code-source-code",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-009",
@@ -2536,7 +2593,8 @@
       "url": "https://yeluo45.github.io/freqtrade-develop-design/",
       "gitRepo": "https://github.com/YeLuo45/freqtrade-develop-design",
       "description": "Freqtrade量化交易开发设计文档",
-      "localPath": "/home/hermes/opensource/freqtrade-develop"
+      "localPath": "/home/hermes/opensource/freqtrade-develop",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-010",
@@ -2546,7 +2604,8 @@
       "url": "https://yeluo45.github.io/langcli-design/",
       "gitRepo": "https://github.com/YeLuo45/langcli-design",
       "description": "命令行语言工具设计文档",
-      "localPath": "/home/hermes/opensource/langcli"
+      "localPath": "/home/hermes/opensource/langcli",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-011",
@@ -2556,7 +2615,8 @@
       "url": "https://yeluo45.github.io/ohmypi-design/",
       "gitRepo": "https://github.com/YeLuo45/ohmypi-design",
       "description": "树莓派物联网设计文档",
-      "localPath": "/home/hermes/opensource/oh-my-pi"
+      "localPath": "/home/hermes/opensource/oh-my-pi",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-012",
@@ -2566,7 +2626,8 @@
       "url": "https://yeluo45.github.io/opencode-dev-design/",
       "gitRepo": "https://github.com/YeLuo45/opencode-dev-design",
       "description": "OpenCode开发环境设计文档",
-      "localPath": "/home/hermes/opensource/opencode-dev"
+      "localPath": "/home/hermes/opensource/opencode-dev",
+      "milestones": []
     },
     {
       "id": "PRJ-20260515-013",
@@ -2576,8 +2637,10 @@
       "url": "https://yeluo45.github.io/ruflo-design/",
       "gitRepo": "https://github.com/YeLuo45/ruflo-design",
       "description": "Ruflo设计文档",
-      "localPath": "/home/hermes/opensource/ruflo"
+      "localPath": "/home/hermes/opensource/ruflo",
+      "milestones": []
     }
   ],
-  "lastUpdate": "2026-05-16T13:45:00+08:00"
+  "lastUpdate": "2026-05-16T13:45:00+08:00",
+  "version": 3
 }
