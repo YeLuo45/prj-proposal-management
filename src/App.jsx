@@ -529,11 +529,18 @@ function App() {
     return source.slice(start, start + ITEMS_PER_PAGE);
   }, [dateFiltered, favoritesFilteredProposals, showFavoritesOnly, currentPage]);
 
-  const totalPages = Math.ceil((showFavoritesOnly ? favoritesFilteredProposals.length : dateFiltered.length) / ITEMS_PER_PAGE);
+  const projectsPageSize = 12;
+  const totalPages = Math.ceil(
+    (showFavoritesOnly && favoritesTab === 'projects'
+      ? favoritesFilteredProjects.length
+      : showFavoritesOnly
+        ? favoritesFilteredProposals.length
+        : dateFiltered.length) / ITEMS_PER_PAGE
+  );
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, advancedFilters, dateRange, tagLogic, showFavoritesOnly]);
+  }, [searchQuery, advancedFilters, dateRange, tagLogic, showFavoritesOnly, favoritesTab]);
 
   const handleAdvancedApply = () => {
     updateUrl(advancedFilters);
@@ -1127,26 +1134,44 @@ function App() {
               <>
                 <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
                   {showFavoritesOnly
-                    ? (favoritesFilteredProposals.length === 0 ? '暂无收藏的提案' : `已收藏 ${favoritesFilteredProposals.length} 个提案`)
+                    ? (favoritesTab === 'projects'
+                      ? (favoritesFilteredProjects.length === 0 ? '暂无收藏的项目' : `已收藏 ${favoritesFilteredProjects.length} 个项目`)
+                      : (favoritesFilteredProposals.length === 0 ? '暂无收藏的提案' : `已收藏 ${favoritesFilteredProposals.length} 个提案`))
                     : `找到 <span className="font-semibold text-blue-500">${dateFiltered.length}</span> 个提案`}
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {paginatedProposals.map((proposal) => (
-                    <ProposalCard
-                      key={proposal.id}
-                      proposal={proposal}
-                      searchQuery={searchQuery}
-                      selectedIds={selectedIds}
-                      onToggleSelect={handleToggleSelect}
-                      onEdit={() => {
-                        setEditingProposal(proposal);
-                        setShowForm(true);
-                      }}
-                      onDelete={() => handleDeleteProposal(proposal.id)}
-                      onCopyUrl={handleCopyUrl}
-                    />
-                  ))}
-                </div>
+
+                {/* 收藏Tab=项目时显示项目卡片，收藏Tab=提案时显示提案卡片 */}
+                {showFavoritesOnly && favoritesTab === 'projects' ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {favoritesFilteredProjects.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE).map((project) => (
+                      <ProjectCard
+                        key={project.id}
+                        project={project}
+                        searchQuery={searchQuery}
+                        onToggleFavorite={() => toggleFavorite(project.id)}
+                        isFavorited={!!favorites[project.id]}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {paginatedProposals.map((proposal) => (
+                      <ProposalCard
+                        key={proposal.id}
+                        proposal={proposal}
+                        searchQuery={searchQuery}
+                        selectedIds={selectedIds}
+                        onToggleSelect={handleToggleSelect}
+                        onEdit={() => {
+                          setEditingProposal(proposal);
+                          setShowForm(true);
+                        }}
+                        onDelete={() => handleDeleteProposal(proposal.id)}
+                        onCopyUrl={handleCopyUrl}
+                      />
+                    ))}
+                  </div>
+                )}
 
                 {totalPages > 1 && (
                   <div className="flex justify-center gap-2 mt-6">
@@ -1170,9 +1195,13 @@ function App() {
                   </div>
                 )}
 
-                {(showFavoritesOnly ? favoritesFilteredProposals.length : dateFiltered.length) === 0 && (
+                {(showFavoritesOnly
+                  ? (favoritesTab === 'projects' ? favoritesFilteredProjects.length : favoritesFilteredProposals.length)
+                  : dateFiltered.length) === 0 && (
                   <div className="text-center py-12 text-gray-500 dark:text-gray-400">
-                    {showFavoritesOnly ? '还没有收藏任何提案 ⭐' : '没有找到匹配的提案'}
+                    {showFavoritesOnly
+                      ? (favoritesTab === 'projects' ? '还没有收藏任何项目 ⭐' : '还没有收藏任何提案 ⭐')
+                      : '没有找到匹配的提案'}
                   </div>
                 )}
               </>
